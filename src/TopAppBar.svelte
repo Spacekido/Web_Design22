@@ -7,7 +7,7 @@
   <Row>
     <Section>
       <IconButton class="material-icons">menu</IconButton>
-      <Title>Flex Static</Title>
+      <Title>Gruppo 10 - Website Template</Title>
     </Section>
     <Section align="end" toolbar>
       <IconButton class="material-icons" aria-label="Download">file_download</IconButton>

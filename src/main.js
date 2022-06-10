@@ -11,4 +11,4 @@ const app = new App({
   props: {},
 });
 
-// export default app, topAppBar;
+export { app, topAppBar };

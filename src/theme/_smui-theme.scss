@@ -1,8 +1,9 @@
 @use "sass:color";
 
+// material color palette
 @use "@material/theme/color-palette";
 
-// Svelte Colors!
+// custom defined colors
 @use "@material/theme/index" as theme with (
   $primary: color-palette.$green-700,
   $secondary: color-palette.$light-green-300,
@@ -11,11 +12,16 @@
   $error: color-palette.$red-900
 );
 
+// material typography
+@use "@material/typography/mdc-typography";
+
+// other global properties
 html,
 body {
   background-color: theme.$surface;
   color: theme.$on-surface;
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -23,4 +29,8 @@ a {
 }
 a:visited {
   color: color.scale(#40b3ff, $lightness: -35%);
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
