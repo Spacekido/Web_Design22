@@ -3,9 +3,6 @@
   import IconButton from "@smui/icon-button";
 </script>
 
-<!-- Material Icons -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-
 <TopAppBar variant="static">
   <Row>
     <Section>
@@ -19,10 +16,3 @@
     </Section>
   </Row>
 </TopAppBar>
-
-<style>
-  :global(body) {
-    margin: 0;
-    padding: 0;
-  }
-</style>

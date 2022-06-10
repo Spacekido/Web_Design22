@@ -6,8 +6,6 @@
   import Card, { Content } from "@smui/card";
 </script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/svelte-material-ui@6.0.0-beta.16/bare.css" />
-
 <main>
   <TopAppBar />
   <h1>Template web design 2022</h1>
@@ -19,6 +17,9 @@
   </Button>
 
   <pre class="status">Clicked: {counter}</pre>
+
+  <Button color="primary">Colore Primario</Button>
+  <Button color="secondary">Colore Secondario</Button>
 
   <!-- <div class="card-display">
     <div class="card-container">
