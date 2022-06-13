@@ -9,6 +9,7 @@
     "prepare": "smui-theme compile public/smui.css -i src/theme"
   },
   "devDependencies": {
+    "@material/elevation": "^13.0.0",
     "@material/typography": "^13.0.0",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",

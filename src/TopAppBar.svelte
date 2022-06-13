@@ -4,7 +4,7 @@
 </script>
 
 <TopAppBar variant="static">
-  <Row>
+  <Row class="mdc-elevation--z4">
     <Section>
       <IconButton class="material-icons">menu</IconButton>
       <Title>Gruppo 10 - Website Template</Title>

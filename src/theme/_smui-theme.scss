@@ -10,9 +10,14 @@
   $background: #fff,
   $error: color-palette.$red-900);
 
+
+// @use 'smui-theme';
+
 // material typography
 @use "@material/typography/mdc-typography";
 
+
+@use "@material/elevation/mdc-elevation";
 
 // import custom fonts 
 // @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600&display=swap');
