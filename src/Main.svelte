@@ -1,14 +1,13 @@
 <script>
-  import TopAppBar from "@smui/top-app-bar";
+  import TopAppBar from "./TopAppBar.svelte";
+  import Card from "./Card.svelte";
   import Button, { Label } from "@smui/button";
   import IconButton from "@smui/icon-button";
   var counter = 0;
-
-  import Card, { Content } from "@smui/card";
 </script>
 
+<TopAppBar />
 <main>
-  <TopAppBar />
   <div class="mdc-typography--headline2 uppercase">Introduzione all'amianto</div>
 
   <IconButton class="material-icons" on:click={() => counter++}>add</IconButton>
@@ -16,8 +15,8 @@
 
   <div class="mdc-typography--body1">Clicked: {counter}</div>
 
-  <Button color="primary"><Label>Colore Primario</Label></Button>
-  <Button color="secondary"><Label>Colore Secondario</Label></Button>
+  <Card />
+  <Card />
 </main>
 
 <style>

@@ -10,9 +10,7 @@
       <Title>Gruppo 10 - Website Template</Title>
     </Section>
     <Section align="end" toolbar>
-      <IconButton class="material-icons" aria-label="Download">file_download</IconButton>
-      <IconButton class="material-icons" aria-label="Print this page">print</IconButton>
-      <IconButton class="material-icons" aria-label="Bookmark this page">bookmark</IconButton>
+      <IconButton class="material-icons" aria-label="Options">settings</IconButton>
     </Section>
   </Row>
 </TopAppBar>

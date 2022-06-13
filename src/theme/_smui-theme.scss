@@ -15,17 +15,17 @@
 
 
 // import custom fonts 
-@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap');
 
 // apply custom fonts to specific classes 
 div[class^="mdc-typography--headline"] {
-  font-family: 'Saira Extra Condensed', sans-serif;
+  font-family: 'Saira Extra Condensed', sans-serif !important;
   color: theme.$primary;
   letter-spacing: 2px;
 }
 
-// div[class^="mdc-typography--body"],
+// div[class^="mdc-"],
 // Label {
 //   font-family: 'Saira Semi Condensed', sans-serif;
 // }
@@ -34,6 +34,7 @@ div[class^="mdc-typography--headline"] {
 // other global properties
 html,
 body {
+  // font-family: 'Saira Semi Condensed', sans-serif !important;
   background-color: theme.$surface;
   color: theme.$on-surface;
   margin: 0;
