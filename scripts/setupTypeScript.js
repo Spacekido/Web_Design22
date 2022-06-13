@@ -3,7 +3,7 @@
 /** This script modifies the project to support TS code in .svelte files like:
 
   <script lang="ts">
-  	export let name: string;
+    export let name: string;
   </script>
  
   As well as validating the code for CI.
@@ -44,7 +44,7 @@ const afterMainTSPath = path.join(projectRoot, "src", "main.ts")
 fs.renameSync(beforeMainJSPath, afterMainTSPath)
 
 // Switch the app.svelte file to use TS
-const appSveltePath = path.join(projectRoot, "src", "App.svelte")
+const appSveltePath = path.join(projectRoot, "src", "Main.svelte")
 let appFile = fs.readFileSync(appSveltePath, "utf8")
 appFile = appFile.replace("<script>", '<script lang="ts">')
 appFile = appFile.replace("export let name;", 'export let name: string;')
@@ -82,11 +82,11 @@ const tsconfig = `{
   "include": ["src/**/*"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
 }`
-const tsconfigPath =  path.join(projectRoot, "tsconfig.json")
+const tsconfigPath = path.join(projectRoot, "tsconfig.json")
 fs.writeFileSync(tsconfigPath, tsconfig)
 
 // Add global.d.ts
-const dtsPath =  path.join(projectRoot, "src", "global.d.ts")
+const dtsPath = path.join(projectRoot, "src", "global.d.ts")
 fs.writeFileSync(dtsPath, `/// <reference types="svelte" />`)
 
 // Delete this script, but not during testing

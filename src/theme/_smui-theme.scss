@@ -4,16 +4,32 @@
 @use "@material/theme/color-palette";
 
 // custom defined colors
-@use "@material/theme/index" as theme with (
-  $primary: color-palette.$green-700,
-  $secondary: color-palette.$light-green-300,
+@use "@material/theme/index" as theme with ($primary: #008036,
+  $secondary: #8BE283,
   $surface: #fff,
   $background: #fff,
-  $error: color-palette.$red-900
-);
+  $error: color-palette.$red-900);
 
 // material typography
 @use "@material/typography/mdc-typography";
+
+
+// import custom fonts 
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap');
+
+// apply custom fonts to specific classes 
+div[class^="mdc-typography--headline"] {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  color: theme.$primary;
+  letter-spacing: 2px;
+}
+
+// div[class^="mdc-typography--body"],
+// Label {
+//   font-family: 'Saira Semi Condensed', sans-serif;
+// }
+
 
 // other global properties
 html,
@@ -27,6 +43,7 @@ body {
 a {
   color: #40b3ff;
 }
+
 a:visited {
   color: color.scale(#40b3ff, $lightness: -35%);
 }

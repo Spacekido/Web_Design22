@@ -1,12 +1,12 @@
 import TopAppBar from "./TopAppBar.svelte";
-import App from "./App.svelte";
+import Main from "./Main.svelte";
 
 const topAppBar = new TopAppBar({
   target: document.body,
   props: {},
 });
 
-const app = new App({
+const app = new Main({
   target: document.body,
   props: {},
 });

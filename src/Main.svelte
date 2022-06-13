@@ -9,7 +9,7 @@
 
 <main>
   <TopAppBar />
-  <div class="mdc-typography--headline4 uppercase">Template web design 2022</div>
+  <div class="mdc-typography--headline2 uppercase">Introduzione all'amianto</div>
 
   <IconButton class="material-icons" on:click={() => counter++}>add</IconButton>
   <IconButton class="material-icons" on:click={() => counter--}>remove</IconButton>
