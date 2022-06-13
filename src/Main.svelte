@@ -3,6 +3,7 @@
   import Card from "./Card.svelte";
   // import Button, { Label } from "@smui/button";
   import IconButton from "@smui/icon-button";
+  import LayoutGrid, { Cell } from "@smui/layout-grid";
   var counter = 0;
 </script>
 
@@ -15,8 +16,14 @@
 
   <div class="mdc-typography--body1">Clicked: {counter}</div>
 
-  <Card />
-  <Card />
+  <LayoutGrid>
+    <Cell>
+      <Card />
+    </Cell>
+    <Cell>
+      <Card />
+    </Cell>
+  </LayoutGrid>
 </main>
 
 <style>
