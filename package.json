@@ -26,6 +26,7 @@
     "sass": "^1.52.3",
     "smui-theme": "^6.0.0-beta.16",
     "svelte": "^3.0.0",
+    "svelte-link": "^1.4.0",
     "svelte-preprocess": "^4.10.7"
   },
   "dependencies": {
