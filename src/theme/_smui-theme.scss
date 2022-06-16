@@ -40,7 +40,10 @@ div[class^="mdc-typography--headline"] {
 html,
 body {
   // font-family: 'Saira Semi Condensed', sans-serif !important;
+  background-image: url("img/blue-waves.svg");
   background-color: theme.$surface;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: theme.$on-surface;
   margin: 0;
   padding: 0;
@@ -56,4 +59,8 @@ a:visited {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.transparent {
+  background-color: rgba(0, 0, 0, 0) !important;
 }

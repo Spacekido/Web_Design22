@@ -7,7 +7,6 @@
 <TopAppBar />
 <main>
   <div class="mdc-typography--headline2 uppercase">Introduzione all'amianto</div>
-
   <LayoutGrid>
     <Cell>
       <Card />
@@ -23,7 +22,7 @@
     padding: 1em;
     text-align: center;
     max-width: 240px;
-    margin: 0 auto;
+    margin-top: 130px;
   }
 
   /* TODO aggiungere altri media breakpoint */
