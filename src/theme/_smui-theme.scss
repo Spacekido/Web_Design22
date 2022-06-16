@@ -1,10 +1,10 @@
-@use "sass:color";
+// @use "sass:color";
 
 // material color palette
 @use "@material/theme/color-palette";
 
 // custom defined colors
-@use "@material/theme/index" as theme with ($primary: #008036,
+@use "@material/theme/index" as theme with ($primary: #109405,
   $secondary: #8BE283,
   $surface: #fff,
   $background: #fff,
@@ -30,10 +30,9 @@ div[class^="mdc-typography--headline"] {
   letter-spacing: 2px;
 }
 
-// div[class^="mdc-"],
-// Label {
-//   font-family: 'Saira Semi Condensed', sans-serif;
-// }
+div[class^="mdc-typography"] {
+  font-family: 'Saira Semi Condensed', sans-serif !important;
+}
 
 
 // other global properties
@@ -63,4 +62,17 @@ a:visited {
 
 .transparent {
   background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.bold {
+  color: theme.$primary;
+  font-weight: bold;
+}
+
+.primary {
+  color: theme.$primary;
+}
+
+.secondary {
+  color: theme.$secondary;
 }
