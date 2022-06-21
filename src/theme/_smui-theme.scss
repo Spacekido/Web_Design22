@@ -1,4 +1,4 @@
-@use "sass:color";
+// @use "sass:color";
 
 // material color palette
 @use "@material/theme/color-palette";
@@ -40,17 +40,15 @@ div[class^="mdc-typography--subtitle"] {
   letter-spacing: 0px;
 }
 
-
 .mdc-typography--body1 {
   font-size: 18px;
 }
 
-
-// other global properties
+// altre properties globali per elementi e classi
 html,
 body {
-  // font-family: 'Saira Semi Condensed', sans-serif !important;
   // TODO unire tutti i colori dello sfondo in un'immagine sola
+  // TODO fixare immagine che neanche si vede
   background-image: url("img/blue-waves.svg");
   background-color: theme.$surface;
   background-repeat: no-repeat;
@@ -64,10 +62,6 @@ a {
   color: #000;
   text-decoration: none;
 }
-
-// a:visited {
-//   color: color.scale(#40b3ff, $lightness: -35%);
-// }
 
 .uppercase {
   text-transform: uppercase;

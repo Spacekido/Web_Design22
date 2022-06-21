@@ -2,6 +2,10 @@
   import Fab from "@smui/fab";
 </script>
 
+<div class="mdc-typography--headline4 uppercase primary">
+  DOVE L'AMIANTO HA AVUTO LE PEGGIORI CONSEGUENZE?
+  <!-- DOVE L'AMIANTO HA AVUTO LE <span class="primary"></span>PEGGIORI CONSEGUENZE?</span> -->
+</div>
 <div class="container">
   <Fab href="#section3">
     <img src="img/balangero-round.svg" alt="Miniera di Balangero" />

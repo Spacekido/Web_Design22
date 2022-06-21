@@ -3,6 +3,10 @@
   // import Fab from "@smui/fab";
 </script>
 
+<div class="mdc-typography--headline4 uppercase primary">
+  DOVE L'AMIANTO HA AVUTO LE PEGGIORI CONSEGUENZE?
+  <!-- DOVE L'AMIANTO HA AVUTO LE <span class="primary"></span>PEGGIORI CONSEGUENZE?</span> -->
+</div>
 <div class="container">
   <!-- TODO aggiungere immagini e testo dei posti giusti -->
   <!-- TODO aggiungere link a sezioni della pagine piú in basso -->
