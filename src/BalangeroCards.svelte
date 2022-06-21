@@ -31,8 +31,4 @@
     margin-left: 50px;
     transition: all 0.5s;
   }
-  .hidden {
-    visibility: hidden;
-    opacity: 0;
-  }
 </style>

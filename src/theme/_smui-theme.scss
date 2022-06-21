@@ -61,15 +61,21 @@ body {
 }
 
 a {
-  color: #40b3ff;
+  color: #000;
+  text-decoration: none;
 }
 
-a:visited {
-  color: color.scale(#40b3ff, $lightness: -35%);
-}
+// a:visited {
+//   color: color.scale(#40b3ff, $lightness: -35%);
+// }
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .transparent {

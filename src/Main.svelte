@@ -3,9 +3,9 @@
   import Card from "./Card.svelte";
   // import LayoutGrid, { Cell } from "@smui/layout-grid";
   import FAB from "./FAB.svelte";
-  // import ImageButton from "./ImageButton.svelte";
-  import ImageCard from "./ImageCard.svelte";
-  import CardBalangero from "./CardBalangero.svelte";
+  import LuoghiButtons from "./LuoghiButtons.svelte";
+  import LuoghiCards from "./LuoghiCards.svelte";
+  import BalangeroCards from "./BalangeroCards.svelte";
 </script>
 
 <TopAppBar />
@@ -20,7 +20,7 @@
   </div>
 
   <!-- TODO decide il testo finale a cui applicare la classe bold -->
-  <div class="section1">
+  <div class="section1" id="section1">
     <div class="subsection1-1">
       <div class="mdc-typography--headline4 uppercase">COS'É L'AMIANTO E PERCHÉ VIENE SCAVATO?</div>
       <div class="mdc-typography--body1">
@@ -48,17 +48,12 @@
       DOVE L'AMIANTO HA AVUTO LE PEGGIORI CONSEGUENZE?
       <!-- DOVE L'AMIANTO HA AVUTO LE <span class="primary"></span>PEGGIORI CONSEGUENZE?</span> -->
     </div>
-
-    <!-- TODO possibile usare anche imagebutton rotondi, problema con robina verde sotto 
-      <div class="subsection2-1">
-      <ImageButton /> -->
-
-    <div class="subsection2-1">
-      <ImageCard />
-    </div>
+    <!-- TODO scegliere tra imagebutton rotondi e card quadrate -->
+    <LuoghiCards />
+    <LuoghiButtons />
   </div>
 
-  <div class="section3">
+  <div class="section3" id="section3">
     <div class="mdc-typography--headline2 uppercase">Balangero, Italia</div>
 
     <div class="subsection3-1">
@@ -83,7 +78,7 @@
 
     <div class="subsection3-3">
       <div class="mdc-typography--headline4 uppercase">TESTIMONIANZE DELLE PERSONE</div>
-      <CardBalangero />
+      <BalangeroCards />
     </div>
   </div>
 </main>
@@ -118,13 +113,6 @@
     padding-top: 50px;
     text-align: right;
     margin-left: 500px;
-  }
-  .subsection2-1 {
-    margin: 60px 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 60px;
   }
   .subsection3-3 {
     display: flex;

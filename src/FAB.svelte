@@ -3,14 +3,11 @@
 </script>
 
 <div class="margins">
-  <Fab color="primary" extended>
+  <Fab color="primary" extended href="#section1">
     <Icon class="material-icons">arrow_downward</Icon>
     <Label>Comincia il viaggio</Label>
   </Fab>
 </div>
 
 <style>
-  .margins {
-    margin-top: 30px;
-  }
 </style>

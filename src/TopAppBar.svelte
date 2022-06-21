@@ -9,7 +9,6 @@
   <Row>
     <!-- <Row class="mdc-elevation--z4"> -->
     <Section>
-      <!-- link a pagina esterna con immagine, TODO estrarre in un componente -->
       <Link href="http://www.unige.it">
         <Image src="img/unige-logo.svg" alt="Logo di UniGe" width="24" height="24" />
       </Link>
