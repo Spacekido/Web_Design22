@@ -1,4 +1,4 @@
-// @use "sass:color";
+@use "sass:color";
 
 // material color palette
 @use "@material/theme/color-palette";
@@ -27,13 +27,21 @@
 div[class^="mdc-typography--headline"] {
   font-family: 'Saira Extra Condensed', sans-serif !important;
   color: theme.$primary;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
 }
 
-div[class^="mdc-typography"] {
+.mdc-typography--headline4 {
+  font-size: 30px;
+}
+
+div[class^="mdc-typography--body"] {
   font-family: 'Saira Semi Condensed', sans-serif !important;
+  letter-spacing: 0px;
 }
 
+.mdc-typography--body1 {
+  font-size: 18px;
+}
 
 // other global properties
 html,
