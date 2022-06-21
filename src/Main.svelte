@@ -82,7 +82,7 @@
     </div>
 
     <div class="subsection3-3">
-      <div class="mdc-typography--headline4 uppercase">TESTIMONIANZE SULLE PERSONE</div>
+      <div class="mdc-typography--headline4 uppercase">TESTIMONIANZE DELLE PERSONE</div>
       <CardBalangero />
     </div>
   </div>
