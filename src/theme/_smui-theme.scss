@@ -34,19 +34,23 @@ div[class^="mdc-typography--headline"] {
   font-size: 30px;
 }
 
-div[class^="mdc-typography--body"] {
+div[class^="mdc-typography--body"],
+div[class^="mdc-typography--subtitle"] {
   font-family: 'Saira Semi Condensed', sans-serif !important;
   letter-spacing: 0px;
 }
+
 
 .mdc-typography--body1 {
   font-size: 18px;
 }
 
+
 // other global properties
 html,
 body {
   // font-family: 'Saira Semi Condensed', sans-serif !important;
+  // TODO unire tutti i colori dello sfondo in un'immagine sola
   background-image: url("img/blue-waves.svg");
   background-color: theme.$surface;
   background-repeat: no-repeat;
