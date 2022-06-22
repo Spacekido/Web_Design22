@@ -1,7 +1,8 @@
 <script>
   import TopAppBar from "./TopAppBar.svelte";
   import IntroTitle from "./Introduzione/Title.svelte";
-  import IntroFAB from "./Introduzione/FAB.svelte";
+  import IntroFAB from "./Introduzione/IntroFAB.svelte";
+  import ContinueFAB from "./Introduzione/ContinueFAB.svelte";
   import IntroAmianto from "./Introduzione/Amianto.svelte";
   import LuoghiButtons from "./Introduzione/LuoghiButtons.svelte";
   import LuoghiCards from "./Introduzione/LuoghiCards.svelte";
@@ -12,22 +13,26 @@
 
 <TopAppBar />
 <main>
-  <div class="section0">
+  <div id="section0">
+    <!-- TODO il titolo deve occupare l'intera schermata di spazio -->
     <IntroTitle />
+    <!-- TODO il FAB deve portare a sezioni graficamente complete, senza tagliare quelle sotto -->
     <IntroFAB />
   </div>
 
-  <div class="section1" id="section1">
+  <div id="section1">
     <IntroAmianto />
+    <ContinueFAB />
   </div>
 
-  <div class="section2">
+  <div id="section2">
     <!-- TODO scegliere tra imagebutton rotondi e card quadrate -->
     <LuoghiCards />
-    <LuoghiButtons />
+    <!-- <LuoghiButtons /> -->
+    <ContinueFAB target={"section2"} answer={42} />
   </div>
 
-  <div class="section3" id="section3">
+  <div id="section3">
     <BalangeroIntro />
     <BalangeroCards />
     <BalangeroStats />
@@ -41,18 +46,22 @@
     max-width: 240px;
     margin: 100px 0;
   }
-  .section0 {
+  #section0 {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 200px;
+    padding-top: 200px;
   }
-  .section1,
-  .section3 {
-    margin: 300px 200px 100px;
+  #section1,
+  #section2,
+  #section3 {
+    height: 100vh;
+    padding-block: 60px;
+    margin-inline: 200px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 200px;
   }
   /* TODO aggiungere altri media breakpoint */
   @media (min-width: 640px) {
