@@ -17,3 +17,9 @@ I comandi da eseguire sono:
 - `npm install` per installare le dipendenze (librerie di svelte, di material...), serve soltanto la prima volta
 - `npm run prepare` per compilare il CSS del tema di material design, serve ogni volta che si modifica il file o una sua dipendenza
 - `npm run dev` per hostare il sito in locale in modalitá debug, si consiglia di avviarlo in un terminale separato, aggiorna automaticamente i cambiamenti nel browser
+
+### Istruzioni per deployare il sito su Github Pages (forse)
+
+I comandi da eseguire sono:
+- `npm run build` che genera i file nella cartella `docs/`
+- `push` dei cambiamenti su git, dovrebbero aggiornarsi da soli
