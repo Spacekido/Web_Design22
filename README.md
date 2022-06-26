@@ -22,5 +22,5 @@ I comandi da eseguire sono:
 
 I comandi da eseguire sono:
 - `npm run build` che genera i file nella cartella `docs/`
+- `push` dei cambiamenti su git
 - `npm run deploy` pubblica i cambiamenti sulla branch `gh-pages` e quindi sul sito hostato online
-- `push` dei cambiamenti su git, dovrebbero aggiornarsi da soli
