@@ -9,7 +9,7 @@ Nella cartella `src/` si trovano i file sorgente da modificare:
 - `main.js` raccoglie i componenti usati e li esporta sulla pagina 
 - `theme/_smui-theme.scss` contiene lo stile del tema di material (colori, CSS globale...) 
 
-Nella cartella `public/` si trovano gli elementi generati visualizzati dall'utente.
+Nella cartella `docs/` si trovano gli elementi generati visualizzati dall'utente.
 
 ### Istruzioni per sviluppare in Svelte
 

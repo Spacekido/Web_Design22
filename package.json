@@ -5,8 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear",
-    "prepare": "smui-theme compile public/smui.css -i src/theme",
+    "start": "sirv docs --no-clear",
+    "prepare": "smui-theme compile docs/smui.css -i src/theme",
     "deploy": "node ./gh-pages.js"
   },
   "devDependencies": {

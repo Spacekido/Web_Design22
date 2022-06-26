@@ -24,7 +24,7 @@
 // @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap');
 
 // apply custom fonts to specific classes 
-div[class^="mdc-typography--headline"] {
+[class^="mdc-typography--headline"] {
   font-family: 'Saira Extra Condensed', sans-serif !important;
   color: theme.$primary;
   letter-spacing: 0.5px;
@@ -34,8 +34,9 @@ div[class^="mdc-typography--headline"] {
   font-size: 30px;
 }
 
-div[class^="mdc-typography--body"],
-div[class^="mdc-typography--subtitle"] {
+[class^="mdc-typography--body"],
+[class^="mdc-typography--button"],
+[class^="mdc-typography--subtitle"] {
   font-family: 'Saira Semi Condensed', sans-serif !important;
   letter-spacing: 0px;
 }
@@ -47,16 +48,18 @@ div[class^="mdc-typography--subtitle"] {
 // altre properties globali per elementi e classi
 html,
 body {
-  // TODO unire tutti i colori dello sfondo in un'immagine sola
-  // TODO fixare immagine che neanche si vede
-  background-image: url("img/blue-waves.svg");
   background-color: theme.$surface;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: theme.$on-surface;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+}
+
+body {
+  // TODO unire tutti i colori dello sfondo in un'immagine sola
+  background-image: url("img/background.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
 }
 
 a {
@@ -66,6 +69,10 @@ a {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .hidden {
@@ -82,7 +89,6 @@ a {
 }
 
 .bold {
-  color: theme.$primary;
   font-weight: bold;
 }
 

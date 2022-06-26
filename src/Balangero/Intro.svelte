@@ -26,7 +26,6 @@
     margin-right: 500px;
   }
   .right {
-    padding-top: 50px;
     text-align: right;
     margin-left: 500px;
   }
