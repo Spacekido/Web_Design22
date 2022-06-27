@@ -4,13 +4,19 @@
   import FAB from "./Introduzione/FAB.svelte";
   import FABExtended from "./Introduzione/FABExtended.svelte";
   import IntroAmianto from "./Introduzione/Amianto.svelte";
-  import LuoghiCards from "./Introduzione/LuoghiCards.svelte";
+  import IntroCards from "./Introduzione/Cards.svelte";
   import BalangeroIntro from "./Balangero/Intro.svelte";
   import BalangeroCards from "./Balangero/Cards.svelte";
   import BalangeroStats from "./Balangero/Stats.svelte";
   import LibbyIntro from "./Libby/Intro.svelte";
   import LibbyCards from "./Libby/Cards.svelte";
   import LibbyStats from "./Libby/Stats.svelte";
+  import MinacuIntro from "./Minacu/Intro.svelte";
+  import MinacuCards from "./Minacu/Cards.svelte";
+  import MinacuStats from "./Minacu/Stats.svelte";
+  import AsbestIntro from "./Asbest/Intro.svelte";
+  import AsbestCards from "./Asbest/Cards.svelte";
+  import AsbestStats from "./Asbest/Stats.svelte";
 </script>
 
 <TopAppBar />
@@ -26,7 +32,7 @@
   </div>
 
   <div id="section2">
-    <LuoghiCards />
+    <IntroCards />
     <FAB target={"section3"} />
   </div>
 
@@ -40,6 +46,18 @@
     <LibbyIntro />
     <LibbyCards />
     <LibbyStats />
+  </div>
+
+  <div id="section5">
+    <MinacuIntro />
+    <MinacuCards />
+    <MinacuStats />
+  </div>
+
+  <div id="section6">
+    <AsbestIntro />
+    <AsbestCards />
+    <AsbestStats />
   </div>
 </main>
 

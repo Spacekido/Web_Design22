@@ -3,15 +3,14 @@
   import CustomCard from "../Components/CustomCard.svelte";
 </script>
 
-<!-- TODO aggiungere immagini e testo dei posti giusti -->
-<div class="mdc-typography--headline4 uppercase">TESTIMONIANZE DELLE PERSONE / CONSEGUENZE sull'ambiente</div>
+<div class="mdc-typography--headline4 uppercase">Si puó tornare indietro da questo disastro?</div>
 <div class="flex-column" style="gap: 50px">
   <div class="flex-row">
     <CustomCard
       contentId={"body-libby1"}
       src={"img/ralph-hutt.jpg"}
       title={"Ralph Hutt"}
-      subtitle={"Ex-operaio presso l'azienda mineraria W.R. Grace & Company."}
+      subtitle={"La testimonianza di un ex-operaio presso l'azienda mineraria W.R. Grace & Company."}
       buttonLabel={"Scopri la sua storia"}
     />
 
@@ -33,10 +32,13 @@
   <div class="flex-row">
     <div class="mdc-typography--body1 hidden left flex-column" id="body-libby2">
       Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono morti per
-      malattie correlate all'amianto, e circa 1 su 10 abitanti é attualmente malato.
+      malattie correlate all'amianto, e circa 1 su 10 tra tutti abitanti é attualmente malato.
       <br /><br />
-      Libby è ancora un sito contaminato. Da quando la pulizia è iniziata nel 2000, più di 2.600 luoghi contaminati come cantieri, cumuli di avanzi minerari e parchi
-      pubblici sono stati sanificati, inserendo terreno pulito e portando via quello contaminato.
+      L’Agenzia per la Protezione Ambientale Americana ha effettuato sopralluoghi in circa 8200 proprietà, di cui piú di 2400 siti sono stati risanificati completamente.
+      Tra questi rientravano attività commerciali, giardini, abitazioni private, parchi pubblici e altri spazi pubblici frequentati.
+      <br /><br />
+      Ad oggi, per la decontaminazione e il risanamento della città di Libby, sono stati rimossi e rimpiazzati complessivamente più di 750’000 metri cubi di rifiuti
+      e materiali da costruzione, causando una spesa di oltre 600 milioni di dollari statali.
       <CustomButton align={"right"} label={"Leggi lo studio"} href={"https://www.nature.com/articles/jes201618"} />
     </div>
     <CustomCard

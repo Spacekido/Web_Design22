@@ -10,7 +10,7 @@
   <a class="link-to-section" href="#section3">
     <Card>
       <PrimaryAction>
-        <img src="img/balangero.svg" alt="Miniera di Balangero" />
+        <img src="img/balangero.svg" alt="Miniera di Balangero, Italia" />
         <Content>
           <div class="mdc-typography--subtitle1 uppercase bold primary">Balangero, Italia</div>
           <div class="mdc-typography--subtitle2">La miniera di amianto piú grande d'Europa. Rimasta attiva nella provincia di Torino fino al 1990.</div>
@@ -34,9 +34,9 @@
   <a class="link-to-section" href="#section5">
     <Card>
       <PrimaryAction>
-        <img src="img/placeholder.png" alt="Miniera di Balangero" />
+        <img src="img/placeholder.png" alt="Miniera di Minaçu, Brasile" />
         <Content>
-          <div class="mdc-typography--subtitle1 uppercase bold primary">Altro posto</div>
+          <div class="mdc-typography--subtitle1 uppercase bold primary">Minaçu, Brasile</div>
           <div class="mdc-typography--subtitle2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</div>
         </Content>
       </PrimaryAction>
@@ -46,9 +46,9 @@
   <a class="link-to-section" href="#section6">
     <Card>
       <PrimaryAction>
-        <img src="img/placeholder.png" alt="Miniera di Balangero" />
+        <img src="img/placeholder.png" alt="Miniera di Asbest, Russia" />
         <Content>
-          <div class="mdc-typography--subtitle1 uppercase bold primary">Altro posto</div>
+          <div class="mdc-typography--subtitle1 uppercase bold primary">Asbest, Russia</div>
           <div class="mdc-typography--subtitle2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</div>
         </Content>
       </PrimaryAction>

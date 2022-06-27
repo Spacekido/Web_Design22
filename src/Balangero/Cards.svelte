@@ -10,14 +10,14 @@
     <CustomCard
       contentId={"body-balangero1"}
       src={"img/franco-berrino.jpg"}
-      title={"Dottor Franco Berrino"}
+      title={"Dott. Franco Berrino"}
       subtitle={"Laureatosi in medicina all'Università di Torino nel 1969 e specializzatosi in anatomia patologica, si è poi dedicato all'epidemiologia dei tumori."}
       buttonLabel={"Scopri la sua testimonianza"}
     />
 
     <div class="mdc-typography--body1 hidden right flex-column" id="body-balangero1">
-      Testimonianza diretta ci arriva dal medico epidemiologo ed esperto di tumori Franco Berrino, cresciuto proprio a Balangero dove il padre lavorava nella
-      miniera di amianto.
+      Una testimonianza diretta della tragedia che l'amianto ha causato ci arriva dal medico epidemiologo ed esperto di tumori Franco Berrino, cresciuto proprio
+      a Balangero dove il padre lavorava nella miniera.
       <div class="italic">
         "Non c’era alcuna prevenzione: mio padre fu invitato a dimettersi perché ai padroni non piacevano i suoi investimenti per mettere i filtri, delle
         maniche di cotone. Alla fine è morto di amianto: tumore al polmone a 72 anni senza mai aver fumato una sigaretta. Stesso destino per mio fratello:
