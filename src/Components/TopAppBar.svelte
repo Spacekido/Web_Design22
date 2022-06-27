@@ -13,10 +13,10 @@
         <Image src="img/unige-logo.svg" alt="Logo di UniGe" width="24" height="24" />
       </Link>
     </Section>
-    <Section>
-      <!-- <IconButton class="material-icons">menu</IconButton> -->
-      <!-- <Title>Gruppo 10 - Website Template</Title> -->
-    </Section>
+    <!-- <Section> -->
+    <!-- <IconButton class="material-icons">menu</IconButton> -->
+    <!-- <Title>Gruppo 10 - Website Template</Title> -->
+    <!-- </Section> -->
     <!-- <Section align="end" toolbar>
       <IconButton class="material-icons" aria-label="Options">settings</IconButton>
     </Section> -->

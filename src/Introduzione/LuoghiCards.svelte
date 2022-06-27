@@ -2,10 +2,7 @@
   import Card, { Content, PrimaryAction } from "@smui/card";
 </script>
 
-<div class="mdc-typography--headline3 uppercase primary">
-  DOVE L'AMIANTO HA AVUTO LE PEGGIORI CONSEGUENZE?
-  <!-- DOVE L'AMIANTO HA AVUTO LE <span class="primary"></span>PEGGIORI CONSEGUENZE?</span> -->
-</div>
+<div class="mdc-typography--headline3 uppercase primary">Quali luoghi hanno subito le peggiori conseguenze?</div>
 <div class="container">
   <!-- TODO aggiungere immagini e testo dei posti giusti -->
   <!-- TODO aggiungere link a sezioni della pagine piú in basso -->
@@ -27,7 +24,7 @@
       <PrimaryAction>
         <img src="img/libby.jpg" alt="Miniera di Libby, Montana" />
         <Content>
-          <div class="mdc-typography--subtitle1 uppercase bold primary">Libby, Montana (USA)</div>
+          <div class="mdc-typography--subtitle1 uppercase bold primary">Libby, Montana</div>
           <div class="mdc-typography--subtitle2">Cittá statunitense che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite.</div>
         </Content>
       </PrimaryAction>

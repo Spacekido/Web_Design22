@@ -10,18 +10,11 @@
   $background: #fff,
   $error: color-palette.$red-900);
 
-
-// @use 'smui-theme';
-
 // material typography
 @use "@material/typography/mdc-typography";
 
 
 @use "@material/elevation/mdc-elevation";
-
-// import custom fonts 
-// @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap');
 
 // apply custom fonts to specific classes 
 [class^="mdc-typography--headline"] {
@@ -56,10 +49,9 @@ body {
 }
 
 body {
-  // TODO unire tutti i colori dello sfondo in un'immagine sola
   background-image: url("img/background.svg");
   background-repeat: no-repeat;
-  background-size: 100vw auto;
+  background-size: contain;
 }
 
 a {
@@ -89,7 +81,7 @@ a {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .primary {
@@ -98,4 +90,18 @@ a {
 
 .secondary {
   color: theme.$secondary;
+}
+
+.error {
+  color: theme.$error;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
