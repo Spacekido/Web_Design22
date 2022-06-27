@@ -1,7 +1,6 @@
-<div class="mdc-typography--headline4 uppercase">Percentuali di vittime e inquinamento</div>
+<div class="mdc-typography--headline4 uppercase flex-row">Percentuali di vittime e inquinamento</div>
 <div
-  style="display: flex;
-flex-direction: row;
+  style="
 justify-content: center;
 align-items: center;"
   class=""

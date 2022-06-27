@@ -3,20 +3,27 @@
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">Storia del passato</div>
   <div class="mdc-typography--body1">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-    passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    L’Amiantifera di Balangero, situata sul Monte San Vittore nella provincia di Torino, oltre ad essere stata per decenni la più grande cava d'amianto
+    dell'Occidente, è stata in primo luogo un'immensa fonte di lavoro e ricchezza per la comunità balangerese e i paesi limitrofi.
+    <br /><br />
+    Le prime attività di estrazione vennero avviate nel 1918 mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare
+    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione tanto da raggiungere il picco di produzione di 36000 tonnellate annue.
+    <br /><br />
+    In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta dalla Eternit e dalle Manifatture Colombo ai fratelli Puccini di Roma, ma
+    nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne chiusa per fallimento e i dipendenti licenziati.
   </div>
 </div>
 
 <div class="right">
   <div class="mdc-typography--headline4 uppercase primary">Conseguenze sul presente</div>
   <div class="mdc-typography--body1">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-    passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    Con la chiusura della miniera e le leggi sulla pericolosità dell’amianto, è partito un progetto di messa in sicurezza del luogo a causa delle numerose
+    vittime e malati accertati tra gli ex lavoratori e le loro famiglie. Gli specialisti hanno esaminato le storie sanitarie di 1.966 ex addetti
+    all’Amiantifera. Su questo totale, emerge un risultato sconcertante: fra essi ci sono 214 casi riferibili proprio al contatto con la fibra killer.
+    <br /><br />
+    Non solo, negli anni si sono susseguite una serie di inchieste a favore degli operai, indagini che si conclusero con delle condanne per gli ex dirigenti della
+    cava. Nel 2012 furono quaranta i casi sotto esame: venticinque morti e quindici malati, tra i quali anche casi di normali cittadini e non solo di lavoratori
+    della cava.
   </div>
 </div>
 

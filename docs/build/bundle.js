@@ -10662,11 +10662,22 @@
     	let div1;
     	let t3;
     	let div2;
+    	let t4;
+    	let br0;
+    	let br1;
     	let t5;
+    	let br2;
+    	let br3;
+    	let t6;
+    	let t7;
     	let div6;
     	let div4;
-    	let t7;
+    	let t9;
     	let div5;
+    	let t10;
+    	let br4;
+    	let br5;
+    	let t11;
 
     	const block = {
     		c: function create() {
@@ -10678,28 +10689,43 @@
     			div1.textContent = "Storia del passato";
     			t3 = space();
     			div2 = element("div");
-    			div2.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\r\n    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into\r\n    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum\r\n    passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-    			t5 = space();
+    			t4 = text("L’Amiantifera di Balangero, situata sul Monte San Vittore nella provincia di Torino, oltre ad essere stata per decenni la più grande cava d'amianto\r\n    dell'Occidente, è stata in primo luogo un'immensa fonte di lavoro e ricchezza per la comunità balangerese e i paesi limitrofi.\r\n    ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t5 = text("\r\n    Le prime attività di estrazione vennero avviate nel 1918 mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare\r\n    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione tanto da raggiungere il picco di produzione di 36000 tonnellate annue.\r\n    ");
+    			br2 = element("br");
+    			br3 = element("br");
+    			t6 = text("\r\n    In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta dalla Eternit e dalle Manifatture Colombo ai fratelli Puccini di Roma, ma\r\n    nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne chiusa per fallimento e i dipendenti licenziati.");
+    			t7 = space();
     			div6 = element("div");
     			div4 = element("div");
     			div4.textContent = "Conseguenze sul presente";
-    			t7 = space();
+    			t9 = space();
     			div5 = element("div");
-    			div5.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\r\n    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into\r\n    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum\r\n    passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+    			t10 = text("Con la chiusura della miniera e le leggi sulla pericolosità dell’amianto, è partito un progetto di messa in sicurezza del luogo a causa delle numerose\r\n    vittime e malati accertati tra gli ex lavoratori e le loro famiglie. Gli specialisti hanno esaminato le storie sanitarie di 1.966 ex addetti\r\n    all’Amiantifera. Su questo totale, emerge un risultato sconcertante: fra essi ci sono 214 casi riferibili proprio al contatto con la fibra killer.\r\n    ");
+    			br4 = element("br");
+    			br5 = element("br");
+    			t11 = text("\r\n    Non solo, negli anni si sono susseguite una serie di inchieste a favore degli operai, indagini che si conclusero con delle condanne per gli ex dirigenti della\r\n    cava. Nel 2012 furono quaranta i casi sotto esame: venticinque morti e quindici malati, tra i quali anche casi di normali cittadini e non solo di lavoratori\r\n    della cava.");
     			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
     			add_location(div0, file$8, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
     			add_location(div1, file$8, 3, 2, 98);
+    			add_location(br0, file$8, 7, 4, 501);
+    			add_location(br1, file$8, 7, 10, 507);
+    			add_location(br2, file$8, 10, 4, 849);
+    			add_location(br3, file$8, 10, 10, 855);
     			attr_dev(div2, "class", "mdc-typography--body1");
     			add_location(div2, file$8, 4, 2, 175);
     			attr_dev(div3, "class", "left svelte-p8jv7c");
     			add_location(div3, file$8, 2, 0, 76);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$8, 13, 2, 850);
+    			add_location(div4, file$8, 17, 2, 1198);
+    			add_location(br4, file$8, 22, 4, 1784);
+    			add_location(br5, file$8, 22, 10, 1790);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$8, 14, 2, 941);
+    			add_location(div5, file$8, 18, 2, 1289);
     			attr_dev(div6, "class", "right svelte-p8jv7c");
-    			add_location(div6, file$8, 12, 0, 827);
+    			add_location(div6, file$8, 16, 0, 1175);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10711,11 +10737,22 @@
     			append_dev(div3, div1);
     			append_dev(div3, t3);
     			append_dev(div3, div2);
-    			insert_dev(target, t5, anchor);
+    			append_dev(div2, t4);
+    			append_dev(div2, br0);
+    			append_dev(div2, br1);
+    			append_dev(div2, t5);
+    			append_dev(div2, br2);
+    			append_dev(div2, br3);
+    			append_dev(div2, t6);
+    			insert_dev(target, t7, anchor);
     			insert_dev(target, div6, anchor);
     			append_dev(div6, div4);
-    			append_dev(div6, t7);
+    			append_dev(div6, t9);
     			append_dev(div6, div5);
+    			append_dev(div5, t10);
+    			append_dev(div5, br4);
+    			append_dev(div5, br5);
+    			append_dev(div5, t11);
     		},
     		p: noop,
     		i: noop,
@@ -10724,7 +10761,7 @@
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div3);
-    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(t7);
     			if (detaching) detach_dev(div6);
     		}
     	};
@@ -12265,7 +12302,13 @@
     	let t6;
     	let div5;
     	let div4;
+    	let t7;
+    	let br0;
+    	let br1;
     	let t8;
+    	let br2;
+    	let t9;
+    	let t10;
     	let customcard1;
     	let current;
 
@@ -12275,7 +12318,7 @@
     				src: "img/franco-berrino.jpg",
     				title: "Dottor Franco Berrino",
     				subtitle: "Laureatosi in medicina all'Università di Torino nel 1969 e specializzatosi in anatomia patologica, si è poi dedicato all'epidemiologia dei tumori.",
-    				buttonLabel: "Approfondisci"
+    				buttonLabel: "Scopri la sua testimonianza"
     			},
     			$$inline: true
     		});
@@ -12292,10 +12335,10 @@
     	customcard1 = new CustomCard({
     			props: {
     				contentId: "body-balangero2",
-    				src: "img/placeholder.png",
-    				title: "Altro contenuto",
-    				subtitle: "Sottotitolo",
-    				buttonLabel: "Approfondisci",
+    				src: "img/levi-calvino.jpg",
+    				title: "Primo Levi e Italo Calvino",
+    				subtitle: "L'Amiantifera di Balangero viene denunciata anche dalla letteratura italiana del Novecento",
+    				buttonLabel: "Scopri i loro racconti",
     				direction: "mirrored"
     			},
     			$$inline: true
@@ -12319,23 +12362,31 @@
     			t6 = space();
     			div5 = element("div");
     			div4 = element("div");
-    			div4.textContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\r\n      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap\r\n      into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum\r\n      passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
-    			t8 = space();
+    			t7 = text("Nel novembre del 1941 Primo Levi, neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche sull’estrazione del prezioso nichel\r\n      dalla roccia di serpentino. Levi descrive la cava paragonandola alla rappresentazione dantesca dei gironi infernali, con fibre di amianto onnipresenti,\r\n      raffigurate come un demone, asfissiante e ostile. Celebre é diventata la sua frase “C’era amianto dappertutto, come una neve cenerina.”\r\n      ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t8 = text("\r\n      Nel 1954 Italo Calvino arriva nella miniera piemontese come redattore del quotidiano “L’Unità” occupandosi del rischio amianto e della sorte degli operai della\r\n      cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo ");
+    			br2 = element("br");
+    			t9 = text("“Il grigio polverone d’asbesto della cava che dove arriva\r\n      brucia, foglie e polmoni”.");
+    			t10 = space();
     			create_component(customcard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
     			add_location(div0, file$5, 6, 0, 219);
     			attr_dev(div1, "class", "italic");
-    			add_location(div1, file$5, 20, 6, 1026);
+    			add_location(div1, file$5, 20, 6, 1040);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right flex-column svelte-vk4j5r");
     			attr_dev(div2, "id", "body-balangero1");
-    			add_location(div2, file$5, 17, 4, 751);
+    			add_location(div2, file$5, 17, 4, 765);
     			attr_dev(div3, "class", "flex-row");
     			add_location(div3, file$5, 8, 2, 378);
+    			add_location(br0, file$5, 38, 6, 2279);
+    			add_location(br1, file$5, 38, 12, 2285);
+    			add_location(br2, file$5, 40, 97, 2557);
     			attr_dev(div4, "class", "mdc-typography--body1 hidden left flex-column svelte-vk4j5r");
     			attr_dev(div4, "id", "body-balangero2");
-    			add_location(div4, file$5, 34, 4, 1717);
+    			add_location(div4, file$5, 34, 4, 1731);
     			attr_dev(div5, "class", "flex-row");
-    			add_location(div5, file$5, 33, 2, 1689);
+    			add_location(div5, file$5, 33, 2, 1703);
     			attr_dev(div6, "class", "flex-column");
     			set_style(div6, "gap", "50px");
     			add_location(div6, file$5, 7, 0, 331);
@@ -12358,7 +12409,13 @@
     			append_dev(div6, t6);
     			append_dev(div6, div5);
     			append_dev(div5, div4);
-    			append_dev(div5, t8);
+    			append_dev(div4, t7);
+    			append_dev(div4, br0);
+    			append_dev(div4, br1);
+    			append_dev(div4, t8);
+    			append_dev(div4, br2);
+    			append_dev(div4, t9);
+    			append_dev(div5, t10);
     			mount_component(customcard1, div5, null);
     			current = true;
     		},
@@ -12453,22 +12510,20 @@
     			t3 = space();
     			figcaption = element("figcaption");
     			figcaption.textContent = "Descrizione del grafico";
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
+    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase flex-row");
     			add_location(div0, file$4, 0, 0, 0);
-    			set_style(div1, "display", "flex");
-    			set_style(div1, "flex-direction", "row");
     			set_style(div1, "justify-content", "center");
     			set_style(div1, "align-items", "center");
     			attr_dev(div1, "class", "");
-    			add_location(div1, file$4, 1, 0, 94);
+    			add_location(div1, file$4, 1, 0, 103);
     			if (!src_url_equal(img.src, img_src_value = "img/statistica.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Percentuali");
-    			add_location(img, file$4, 10, 4, 258);
+    			add_location(img, file$4, 9, 4, 231);
     			attr_dev(figcaption, "class", "mdc-typography--subtitle1 uppercase primary bold");
-    			add_location(figcaption, file$4, 11, 4, 314);
-    			add_location(figure, file$4, 9, 2, 244);
+    			add_location(figcaption, file$4, 10, 4, 287);
+    			add_location(figure, file$4, 8, 2, 217);
     			attr_dev(div2, "class", "image-and-text");
-    			add_location(div2, file$4, 8, 0, 212);
+    			add_location(div2, file$4, 7, 0, 185);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12929,22 +12984,20 @@
     			t3 = space();
     			figcaption = element("figcaption");
     			figcaption.textContent = "Descrizione del grafico";
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
+    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase flex-row");
     			add_location(div0, file$1, 0, 0, 0);
-    			set_style(div1, "display", "flex");
-    			set_style(div1, "flex-direction", "row");
     			set_style(div1, "justify-content", "center");
     			set_style(div1, "align-items", "center");
     			attr_dev(div1, "class", "");
-    			add_location(div1, file$1, 1, 0, 94);
+    			add_location(div1, file$1, 1, 0, 103);
     			if (!src_url_equal(img.src, img_src_value = "img/statistica.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Percentuali");
-    			add_location(img, file$1, 10, 4, 258);
+    			add_location(img, file$1, 9, 4, 231);
     			attr_dev(figcaption, "class", "mdc-typography--subtitle1 uppercase primary bold");
-    			add_location(figcaption, file$1, 11, 4, 314);
-    			add_location(figure, file$1, 9, 2, 244);
+    			add_location(figcaption, file$1, 10, 4, 287);
+    			add_location(figure, file$1, 8, 2, 217);
     			attr_dev(div2, "class", "image-and-text");
-    			add_location(div2, file$1, 8, 0, 212);
+    			add_location(div2, file$1, 7, 0, 185);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
