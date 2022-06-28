@@ -1,59 +1,45 @@
 <script lang="ts">
-  import Card, { Content, PrimaryAction } from "@smui/card";
+  import LinkCard from "../Components/LinkCard.svelte";
 </script>
 
-<div class="mdc-typography--headline3 uppercase primary">Quali luoghi hanno subito le peggiori conseguenze?</div>
+<div>
+  <div class="mdc-typography--headline3 uppercase primary">Quali luoghi ti attendono nell'Inferno dell'Amianto?</div>
+  <div class="mdc-typography--body1" style="padding-top: 2%;">
+    Lasciati guidare nel viaggio attraverso i quattro <span class="highlight">gironi</span> infernali.
+    <br />Le <span class="highlight">cittá</span> che incontrerai ti mostreranno quanta influenza abbia avuto l'amianto in tutto il mondo.
+    <br />Ad accompagnarti troverai gli <span class="highlight">uomini</span> che di piú hanno sofferto, e potrai ascoltare le loro storie.
+  </div>
+</div>
 <div class="container">
   <!-- TODO aggiungere immagini e testo dei posti giusti -->
-  <!-- TODO aggiungere link a sezioni della pagine piú in basso -->
   <!-- TODO fix dimensioni delle card cambiano con la lunghezza del testo, devono essere fisse tutte uguali -->
-  <a class="link-to-section" href="#section3">
-    <Card>
-      <PrimaryAction>
-        <img src="img/balangero.svg" alt="Miniera di Balangero, Italia" />
-        <Content>
-          <div class="mdc-typography--subtitle1 uppercase bold primary">Balangero, Italia</div>
-          <div class="mdc-typography--subtitle2">La miniera di amianto piú grande d'Europa. Rimasta attiva nella provincia di Torino fino al 1990.</div>
-        </Content>
-      </PrimaryAction>
-    </Card>
-  </a>
+  <LinkCard
+    href="#section3"
+    src="img/balangero.svg"
+    title="Balangero, Italia"
+    subtitle="La miniera di amianto piú grande d'Europa. Rimasta attiva nella provincia di Torino fino al 1990."
+  />
 
-  <a class="link-to-section" href="#section4">
-    <Card>
-      <PrimaryAction>
-        <img src="img/libby.jpg" alt="Miniera di Libby, Montana" />
-        <Content>
-          <div class="mdc-typography--subtitle1 uppercase bold primary">Libby, Montana</div>
-          <div class="mdc-typography--subtitle2">Cittá statunitense che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite.</div>
-        </Content>
-      </PrimaryAction>
-    </Card>
-  </a>
+  <LinkCard
+    href="#section4"
+    src="img/libby.jpg"
+    title="Libby, Montana"
+    subtitle="Cittá statunitense che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite."
+  />
 
-  <a class="link-to-section" href="#section5">
-    <Card>
-      <PrimaryAction>
-        <img src="img/placeholder.png" alt="Miniera di Minaçu, Brasile" />
-        <Content>
-          <div class="mdc-typography--subtitle1 uppercase bold primary">Minaçu, Brasile</div>
-          <div class="mdc-typography--subtitle2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</div>
-        </Content>
-      </PrimaryAction>
-    </Card>
-  </a>
+  <LinkCard
+    href="#section5"
+    src="img/placeholder.png"
+    title="Minaçu, Brasile"
+    subtitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the."
+  />
 
-  <a class="link-to-section" href="#section6">
-    <Card>
-      <PrimaryAction>
-        <img src="img/placeholder.png" alt="Miniera di Asbest, Russia" />
-        <Content>
-          <div class="mdc-typography--subtitle1 uppercase bold primary">Asbest, Russia</div>
-          <div class="mdc-typography--subtitle2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</div>
-        </Content>
-      </PrimaryAction>
-    </Card>
-  </a>
+  <LinkCard
+    href="#section6"
+    src="img/placeholder.png"
+    title="Asbest, Russia"
+    subtitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the."
+  />
 </div>
 
 <style>
@@ -61,6 +47,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 60px;
+    gap: 4%;
   }
 </style>

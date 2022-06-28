@@ -28,12 +28,13 @@
 </div>
 
 <style>
+  /* TODO breakpoint sul margine */
   .left {
     text-align: left;
-    margin-right: 500px;
+    margin-right: 40%;
   }
   .right {
     text-align: right;
-    margin-left: 500px;
+    margin-left: 40%;
   }
 </style>

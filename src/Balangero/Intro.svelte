@@ -3,8 +3,10 @@
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">Storia del passato</div>
   <div class="mdc-typography--body1">
-    L’Amiantifera di Balangero, situata sul Monte San Vittore nella provincia di Torino, oltre ad essere stata per decenni la più grande cava d'amianto
-    dell'Occidente, è stata in primo luogo un'immensa fonte di lavoro e ricchezza per la comunità balangerese e i paesi limitrofi.
+    L’Amiantifera di Balangero, situata sul Monte San Vittore nella provincia di Torino, oltre ad essere stata per decenni la <span class="highlight"
+      >più grande</span
+    >
+    cava d'amianto dell'Occidente, è stata in primo luogo un'immensa fonte di lavoro e ricchezza per la comunità balangerese e i paesi limitrofi.
     <br /><br />
     Le prime attività di estrazione vennero avviate nel 1918 mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare
     degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione tanto da raggiungere il picco di produzione di 36000 tonnellate annue.
@@ -28,12 +30,13 @@
 </div>
 
 <style>
+  /* TODO breakpoint sul margine */
   .left {
     text-align: left;
-    margin-right: 500px;
+    margin-right: 40%;
   }
   .right {
     text-align: right;
-    margin-left: 500px;
+    margin-left: 40%;
   }
 </style>

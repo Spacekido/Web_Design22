@@ -8,7 +8,7 @@ align-items: center;"
 <div class="image-and-text">
   <figure>
     <img src="img/statistica.png" alt="Percentuali" />
-    <figcaption class="mdc-typography--subtitle1 uppercase primary bold">Descrizione del grafico</figcaption>
+    <figcaption class="mdc-typography--subtitle1 highlight">Descrizione del grafico</figcaption>
   </figure>
 </div>
 

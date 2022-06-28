@@ -16,15 +16,14 @@
 
 @use "@material/elevation/mdc-elevation";
 
-// apply custom fonts to specific classes 
+@use '@material/linear-progress/index' as linear-progress;
+
+
+// font custom applicati agli stili material 
 [class^="mdc-typography--headline"] {
   font-family: 'Saira Extra Condensed', sans-serif !important;
   color: theme.$primary;
   letter-spacing: 0.5px;
-}
-
-.mdc-typography--headline4 {
-  font-size: 30px;
 }
 
 [class^="mdc-typography--body"],
@@ -34,9 +33,26 @@
   letter-spacing: 0px;
 }
 
+// override della grandezza dei testi
+
 .mdc-typography--body1 {
+  font-size: 20px;
+}
+
+.mdc-typography--subtitle1 {
   font-size: 18px;
 }
+
+.mdc-typography--subtitle2 {
+  font-size: 16px;
+}
+
+
+// custom progress bar color
+// .gradient-bar {
+//   // @include linear-progress.bar-color(linear-gradient(to right, red, yellow));
+//   @include linear-progress.bar-color(red);
+// }
 
 // altre properties globali per elementi e classi
 html,
@@ -48,15 +64,14 @@ body {
   scroll-behavior: smooth;
 }
 
-body {
-  background-image: url("img/background.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 a {
   color: #000;
   text-decoration: none;
+}
+
+div[id^="content-"] {
+  justify-content: center;
+  transition: all 0.5s;
 }
 
 .uppercase {
@@ -80,6 +95,13 @@ a {
   transform: rotateY(180deg);
 }
 
+.highlight {
+  font-weight: bolder;
+  color: theme.$primary;
+  text-transform: uppercase;
+
+}
+
 .bold {
   font-weight: bolder;
 }
@@ -96,12 +118,22 @@ a {
   color: theme.$error;
 }
 
-.flex-row {
+.flex-row,
+.flex-row-8 {
   display: flex;
   flex-direction: row;
 }
 
-.flex-column {
+.flex-row-8 {
+  gap: 8vw;
+}
+
+.flex-column,
+.flex-column-4 {
   display: flex;
   flex-direction: column;
+}
+
+.flex-column-4 {
+  gap: 4vh;
 }
