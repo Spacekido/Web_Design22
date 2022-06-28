@@ -13662,11 +13662,30 @@
     	let div1;
     	let t3;
     	let div2;
-    	let t5;
+    	let t4;
+    	let span0;
+    	let t6;
+    	let span1;
+    	let t8;
+    	let br0;
+    	let br1;
+    	let t9;
+    	let br2;
+    	let br3;
+    	let t10;
+    	let t11;
     	let div6;
     	let div4;
-    	let t7;
+    	let t13;
     	let div5;
+    	let t14;
+    	let br4;
+    	let t15;
+    	let br5;
+    	let br6;
+    	let t16;
+    	let span2;
+    	let t18;
 
     	const block = {
     		c: function create() {
@@ -13678,28 +13697,61 @@
     			div1.textContent = "Storia del passato";
     			t3 = space();
     			div2 = element("div");
-    			div2.textContent = "...";
-    			t5 = space();
+    			t4 = text("Ci troviamo in Russia, più precisamente ad Asbest, una piccola città chiamata così proprio per la presenza del \r\n    ");
+    			span0 = element("span");
+    			span0.textContent = "più grande giacimento";
+    			t6 = text(" a cielo aperto ");
+    			span1 = element("span");
+    			span1.textContent = "di amianto nel mondo";
+    			t8 = text(":\r\n    quasi mezzo milione di tonnellate di amianto vengono scavate ogni anno nella miniera di Uralasbest.\r\n    ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t9 = text("\r\n    Nonostante il divieto di estrazione e distribuzione dell'amianto da parte degli altri paesi, l'azienda locale \r\n    ha cercato di eliminare le associazioni dell'amianto con il cancro ai polmoni e altre malattie rinominando il suo prodotto come \"crisotilo\", \r\n    il nome blando e tecnico del tipo specifico di minerale che estrae principalmente.\r\n    ");
+    			br2 = element("br");
+    			br3 = element("br");
+    			t10 = text("\r\n    Settantamila persone vivono ad Asbest, un tempo conosciuta come \"la città che muore\" per i suoi altissimi tassi di cancro ai polmoni.");
+    			t11 = space();
     			div6 = element("div");
     			div4 = element("div");
     			div4.textContent = "Conseguenze sul presente";
-    			t7 = space();
+    			t13 = space();
     			div5 = element("div");
-    			div5.textContent = "...";
+    			t14 = text("Tutt'oggi i produttori russi operano incuranti dei pericoli sostenuti dal governo, il quale\r\n    fa leva sugli abitanti sapendo che la miniera è l’unica importante fonte economica della città.");
+    			br4 = element("br");
+    			t15 = text("\r\n    Asbest, dopo oltre 130 anni di estrazione mineraria intensiva, ha ancora abbastanza amianto crisotilo sepolto nel terreno\r\n    per mantenere Uralasbest in attività per almeno un altro secolo.\r\n    ");
+    			br5 = element("br");
+    			br6 = element("br");
+    			t16 = text("\r\n    L'opinione di molti residenti di Asbest è che ci sono così tante altre cose di cui preoccuparsi nella loro regione fortemente industrializzata,\r\n    inclusa una centrale nucleare a poche miglia di distanza e una centrale elettrica a carbone ancora più vicina,\r\n    che l'amianto è probabilmente ");
+    			span2 = element("span");
+    			span2.textContent = "l'ultimo delle loro preoccupazioni";
+    			t18 = text(".");
     			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
     			add_location(div0, file$3, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
     			add_location(div1, file$3, 3, 2, 95);
+    			attr_dev(span0, "class", "highlight");
+    			add_location(span0, file$3, 6, 4, 330);
+    			attr_dev(span1, "class", "highlight");
+    			add_location(span1, file$3, 6, 72, 398);
+    			add_location(br0, file$3, 8, 4, 562);
+    			add_location(br1, file$3, 8, 9, 567);
+    			add_location(br2, file$3, 12, 4, 929);
+    			add_location(br3, file$3, 12, 9, 934);
     			attr_dev(div2, "class", "mdc-typography--body1");
     			add_location(div2, file$3, 4, 2, 172);
     			attr_dev(div3, "class", "left svelte-703flg");
     			add_location(div3, file$3, 2, 0, 73);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$3, 8, 2, 251);
+    			add_location(div4, file$3, 18, 2, 1123);
+    			add_location(br4, file$3, 21, 99, 1447);
+    			add_location(br5, file$3, 24, 4, 1655);
+    			add_location(br6, file$3, 24, 9, 1660);
+    			attr_dev(span2, "class", "highlight");
+    			add_location(span2, file$3, 27, 34, 1966);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$3, 9, 2, 342);
+    			add_location(div5, file$3, 19, 2, 1214);
     			attr_dev(div6, "class", "right svelte-703flg");
-    			add_location(div6, file$3, 7, 0, 228);
+    			add_location(div6, file$3, 17, 0, 1100);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13711,11 +13763,30 @@
     			append_dev(div3, div1);
     			append_dev(div3, t3);
     			append_dev(div3, div2);
-    			insert_dev(target, t5, anchor);
+    			append_dev(div2, t4);
+    			append_dev(div2, span0);
+    			append_dev(div2, t6);
+    			append_dev(div2, span1);
+    			append_dev(div2, t8);
+    			append_dev(div2, br0);
+    			append_dev(div2, br1);
+    			append_dev(div2, t9);
+    			append_dev(div2, br2);
+    			append_dev(div2, br3);
+    			append_dev(div2, t10);
+    			insert_dev(target, t11, anchor);
     			insert_dev(target, div6, anchor);
     			append_dev(div6, div4);
-    			append_dev(div6, t7);
+    			append_dev(div6, t13);
     			append_dev(div6, div5);
+    			append_dev(div5, t14);
+    			append_dev(div5, br4);
+    			append_dev(div5, t15);
+    			append_dev(div5, br5);
+    			append_dev(div5, br6);
+    			append_dev(div5, t16);
+    			append_dev(div5, span2);
+    			append_dev(div5, t18);
     		},
     		p: noop,
     		i: noop,
@@ -13724,7 +13795,7 @@
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div3);
-    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(t11);
     			if (detaching) detach_dev(div6);
     		}
     	};
@@ -13777,41 +13848,29 @@
     	let t2;
     	let div1;
     	let t3;
-    	let custombutton0;
+    	let br0;
+    	let br1;
     	let t4;
+    	let t5;
     	let div4;
     	let div3;
-    	let t5;
-    	let custombutton1;
     	let t6;
+    	let br2;
+    	let t7;
+    	let br3;
+    	let br4;
+    	let t8;
+    	let t9;
     	let contentcard1;
     	let current;
 
     	contentcard0 = new ContentCard({
     			props: {
     				contentId: "content-asbest1",
-    				src: "img/placeholder.png",
-    				title: "Fonte 1",
-    				subtitle: "Ex-operaio presso l'azienda mineraria W.R. Grace & Company.",
-    				buttonLabel: "Scopri la sua storia"
-    			},
-    			$$inline: true
-    		});
-
-    	custombutton0 = new CustomButton({
-    			props: {
-    				align: "right",
-    				label: "Guarda l'intervista",
-    				href: "https://youtu.be/ILklSy6QLbI"
-    			},
-    			$$inline: true
-    		});
-
-    	custombutton1 = new CustomButton({
-    			props: {
-    				align: "right",
-    				label: "Leggi lo studio",
-    				href: "https://www.nature.com/articles/jes201618"
+    				src: "img/asbest-russia.jpg",
+    				title: "Igor Bragin",
+    				subtitle: "Medico capo del complesso ospedaliero Asbest City Hospital",
+    				buttonLabel: "Scopri la sua opinione"
     			},
     			$$inline: true
     		});
@@ -13819,10 +13878,11 @@
     	contentcard1 = new ContentCard({
     			props: {
     				contentId: "content-asbest2",
-    				src: "img/placeholder.png",
-    				title: "Fonte 2",
-    				subtitle: "Come le attivitá di sanificazione hanno provato a rimediare al disastro causato dalla miniera.",
-    				buttonLabel: "Esplora"
+    				src: "img/viktor-stepanov.jpg",
+    				title: "Viktor Stepanov",
+    				subtitle: "Ex lavoratore della fabbrica di amianto",
+    				buttonLabel: "Scopri la sua testimonianza",
+    				direction: "mirrored"
     			},
     			$$inline: true
     		});
@@ -13830,33 +13890,44 @@
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			div0.textContent = "TESTIMONIANZE DELLE PERSONE / CONSEGUENZE sull'ambiente";
+    			div0.textContent = "Perché preoccuparsi così tanto dell'amianto?";
     			t1 = space();
     			div2 = element("div");
     			create_component(contentcard0.$$.fragment);
     			t2 = space();
     			div1 = element("div");
-    			t3 = text("...\r\n    ");
-    			create_component(custombutton0.$$.fragment);
-    			t4 = space();
+    			t3 = text("Ha liquidato come \"non corrispondente alla realtà\" uno studio scientifico del 2016 che mostrava tassi elevati di cancro ai polmoni lì.\r\n    ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t4 = text("\r\n    Lo studio, una revisione comparativa dei tassi di mortalità ad Asbest e nella regione circostante di Sverdlovsk,\r\n    ha rilevato che \"i tassi di mortalità per tumori del polmone, dello stomaco e del colon erano statisticamente significativamente più alti nella città di Asbest\".\r\n    L'incidenza del mesotelioma, una malattia polmonare ampiamente attribuita all'amianto in Occidente, non è stata studiata\r\n    perché la Russia non registra questa malattia separatamente.");
+    			t5 = space();
     			div4 = element("div");
     			div3 = element("div");
-    			t5 = text("...\r\n    ");
-    			create_component(custombutton1.$$.fragment);
-    			t6 = space();
+    			t6 = text("\"Sono un pensionato di 88 che ha trascorso decenni a lavorare nella fabbrica di amianto, la mia stessa età\r\n      avanzata e il mantenimento di una buona salute sono la prova che tutta l'\"isteria\" sull'amianto non poteva essere vera.");
+    			br2 = element("br");
+    			t7 = text("\r\n      Mentre lavoravo bevevo una bottiglia di latte al giorno, l'azienda le forniva gratuitamente per aiutare i lavoratori a difendersi dalle malattie.\"\r\n      ");
+    			br3 = element("br");
+    			br4 = element("br");
+    			t8 = text("\r\n      \"Tutto è pericoloso in una certa misura. Il cento per cento garantisce che qualcosa non è dannoso non esiste.\"");
+    			t9 = space();
     			create_component(contentcard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
     			add_location(div0, file$2, 6, 0, 221);
-    			attr_dev(div1, "class", "mdc-typography--body1 hidden right flex-column-8 svelte-c5hhtw");
+    			add_location(br0, file$2, 18, 4, 821);
+    			add_location(br1, file$2, 18, 9, 826);
+    			attr_dev(div1, "class", "mdc-typography--body1 hidden right flex-column-4 svelte-c5hhtw");
     			attr_dev(div1, "id", "content-asbest1");
-    			add_location(div1, file$2, 16, 2, 596);
+    			add_location(div1, file$2, 16, 2, 592);
     			attr_dev(div2, "class", "flex-row-8");
-    			add_location(div2, file$2, 7, 0, 333);
-    			attr_dev(div3, "class", "mdc-typography--body1 hidden left flex-column-8 svelte-c5hhtw");
+    			add_location(div2, file$2, 7, 0, 322);
+    			add_location(br2, file$2, 29, 125, 1688);
+    			add_location(br3, file$2, 31, 6, 1855);
+    			add_location(br4, file$2, 31, 11, 1860);
+    			attr_dev(div3, "class", "mdc-typography--body1 hidden left flex-column-4 italic svelte-c5hhtw");
     			attr_dev(div3, "id", "content-asbest2");
-    			add_location(div3, file$2, 23, 2, 844);
+    			add_location(div3, file$2, 27, 2, 1358);
     			attr_dev(div4, "class", "flex-row-8");
-    			add_location(div4, file$2, 22, 0, 816);
+    			add_location(div4, file$2, 26, 0, 1330);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13869,13 +13940,19 @@
     			append_dev(div2, t2);
     			append_dev(div2, div1);
     			append_dev(div1, t3);
-    			mount_component(custombutton0, div1, null);
-    			insert_dev(target, t4, anchor);
+    			append_dev(div1, br0);
+    			append_dev(div1, br1);
+    			append_dev(div1, t4);
+    			insert_dev(target, t5, anchor);
     			insert_dev(target, div4, anchor);
     			append_dev(div4, div3);
-    			append_dev(div3, t5);
-    			mount_component(custombutton1, div3, null);
-    			append_dev(div4, t6);
+    			append_dev(div3, t6);
+    			append_dev(div3, br2);
+    			append_dev(div3, t7);
+    			append_dev(div3, br3);
+    			append_dev(div3, br4);
+    			append_dev(div3, t8);
+    			append_dev(div4, t9);
     			mount_component(contentcard1, div4, null);
     			current = true;
     		},
@@ -13883,15 +13960,11 @@
     		i: function intro(local) {
     			if (current) return;
     			transition_in(contentcard0.$$.fragment, local);
-    			transition_in(custombutton0.$$.fragment, local);
-    			transition_in(custombutton1.$$.fragment, local);
     			transition_in(contentcard1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(contentcard0.$$.fragment, local);
-    			transition_out(custombutton0.$$.fragment, local);
-    			transition_out(custombutton1.$$.fragment, local);
     			transition_out(contentcard1.$$.fragment, local);
     			current = false;
     		},
@@ -13900,10 +13973,8 @@
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div2);
     			destroy_component(contentcard0);
-    			destroy_component(custombutton0);
-    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(t5);
     			if (detaching) detach_dev(div4);
-    			destroy_component(custombutton1);
     			destroy_component(contentcard1);
     		}
     	};
