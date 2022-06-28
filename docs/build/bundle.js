@@ -13673,19 +13673,22 @@
     	let br2;
     	let br3;
     	let t10;
+    	let br4;
     	let t11;
+    	let a;
+    	let t13;
     	let div6;
     	let div4;
-    	let t13;
-    	let div5;
-    	let t14;
-    	let br4;
     	let t15;
-    	let br5;
-    	let br6;
+    	let div5;
     	let t16;
-    	let span2;
+    	let br5;
+    	let t17;
+    	let br6;
+    	let br7;
     	let t18;
+    	let span2;
+    	let t20;
 
     	const block = {
     		c: function create() {
@@ -13706,25 +13709,29 @@
     			t8 = text(":\r\n    quasi mezzo milione di tonnellate di amianto vengono scavate ogni anno nella miniera di Uralasbest.\r\n    ");
     			br0 = element("br");
     			br1 = element("br");
-    			t9 = text("\r\n    Nonostante il divieto di estrazione e distribuzione dell'amianto da parte degli altri paesi, l'azienda locale \r\n    ha cercato di eliminare le associazioni dell'amianto con il cancro ai polmoni e altre malattie rinominando il suo prodotto come \"crisotilo\", \r\n    il nome blando e tecnico del tipo specifico di minerale che estrae principalmente.\r\n    ");
+    			t9 = text("\r\n    Settantamila persone vivono ad Asbest, un tempo conosciuta come \"la città che muore\" per i suoi altissimi tassi di cancro ai polmoni e \r\n    nonostante il divieto di estrazione e distribuzione dell'amianto da parte degli altri paesi, l'azienda locale \r\n    ha cercato di eliminare le associazioni dell'amianto con il cancro ai polmoni e altre malattie rinominando il suo prodotto come \"crisotilo\", \r\n    il nome blando e tecnico del tipo specifico di minerale che estrae principalmente.\r\n    ");
     			br2 = element("br");
     			br3 = element("br");
-    			t10 = text("\r\n    Settantamila persone vivono ad Asbest, un tempo conosciuta come \"la città che muore\" per i suoi altissimi tassi di cancro ai polmoni.");
+    			t10 = text("\r\n    Attaccato per decenni dai difensori della salute, l'ostinatamente provocatorio produttore russo di amianto pensa di aver forse \r\n    finalmente trovato la figura perfetta per una campagna per riabilitare l'immagine profondamente macchiata del prodotto: Presidente Trump.\r\n    ");
+    			br4 = element("br");
     			t11 = space();
+    			a = element("a");
+    			a.textContent = "Leggi l'articolo";
+    			t13 = space();
     			div6 = element("div");
     			div4 = element("div");
     			div4.textContent = "Conseguenze sul presente";
-    			t13 = space();
+    			t15 = space();
     			div5 = element("div");
-    			t14 = text("Tutt'oggi i produttori russi operano incuranti dei pericoli sostenuti dal governo, il quale\r\n    fa leva sugli abitanti sapendo che la miniera è l’unica importante fonte economica della città.");
-    			br4 = element("br");
-    			t15 = text("\r\n    Asbest, dopo oltre 130 anni di estrazione mineraria intensiva, ha ancora abbastanza amianto crisotilo sepolto nel terreno\r\n    per mantenere Uralasbest in attività per almeno un altro secolo.\r\n    ");
+    			t16 = text("Tutt'oggi i produttori russi operano incuranti dei pericoli sostenuti dal governo, il quale\r\n    fa leva sugli abitanti sapendo che la miniera è l’unica importante fonte economica della città.");
     			br5 = element("br");
+    			t17 = text("\r\n    Asbest, dopo oltre 130 anni di estrazione mineraria intensiva, ha ancora abbastanza amianto crisotilo sepolto nel terreno\r\n    per mantenere Uralasbest in attività per almeno un altro secolo.\r\n    ");
     			br6 = element("br");
-    			t16 = text("\r\n    L'opinione di molti residenti di Asbest è che ci sono così tante altre cose di cui preoccuparsi nella loro regione fortemente industrializzata,\r\n    inclusa una centrale nucleare a poche miglia di distanza e una centrale elettrica a carbone ancora più vicina,\r\n    che l'amianto è probabilmente ");
+    			br7 = element("br");
+    			t18 = text("\r\n    L'opinione di molti residenti di Asbest è che ci sono così tante altre cose di cui preoccuparsi nella loro regione fortemente industrializzata,\r\n    inclusa una centrale nucleare a poche miglia di distanza e una centrale elettrica a carbone ancora più vicina,\r\n    che l'amianto è probabilmente ");
     			span2 = element("span");
     			span2.textContent = "l'ultimo delle loro preoccupazioni";
-    			t18 = text(".");
+    			t20 = text(".");
     			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
     			add_location(div0, file$3, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
@@ -13735,23 +13742,28 @@
     			add_location(span1, file$3, 6, 72, 398);
     			add_location(br0, file$3, 8, 4, 562);
     			add_location(br1, file$3, 8, 9, 567);
-    			add_location(br2, file$3, 12, 4, 929);
-    			add_location(br3, file$3, 12, 9, 934);
+    			add_location(br2, file$3, 13, 4, 1070);
+    			add_location(br3, file$3, 13, 9, 1075);
+    			add_location(br4, file$3, 16, 4, 1362);
+    			attr_dev(a, "class", "right highlight svelte-703flg");
+    			set_style(a, "text-decoration", "underline");
+    			attr_dev(a, "href", "https://www.nytimes.com/2019/04/07/world/europe/asbestos-russia-mine.html");
+    			add_location(a, file$3, 17, 4, 1373);
     			attr_dev(div2, "class", "mdc-typography--body1");
     			add_location(div2, file$3, 4, 2, 172);
     			attr_dev(div3, "class", "left svelte-703flg");
     			add_location(div3, file$3, 2, 0, 73);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$3, 18, 2, 1123);
-    			add_location(br4, file$3, 21, 99, 1447);
-    			add_location(br5, file$3, 24, 4, 1655);
-    			add_location(br6, file$3, 24, 9, 1660);
+    			add_location(div4, file$3, 22, 2, 1582);
+    			add_location(br5, file$3, 25, 99, 1906);
+    			add_location(br6, file$3, 28, 4, 2114);
+    			add_location(br7, file$3, 28, 9, 2119);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$3, 27, 34, 1966);
+    			add_location(span2, file$3, 31, 34, 2425);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$3, 19, 2, 1214);
+    			add_location(div5, file$3, 23, 2, 1673);
     			attr_dev(div6, "class", "right svelte-703flg");
-    			add_location(div6, file$3, 17, 0, 1100);
+    			add_location(div6, file$3, 21, 0, 1559);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13774,19 +13786,22 @@
     			append_dev(div2, br2);
     			append_dev(div2, br3);
     			append_dev(div2, t10);
-    			insert_dev(target, t11, anchor);
+    			append_dev(div2, br4);
+    			append_dev(div2, t11);
+    			append_dev(div2, a);
+    			insert_dev(target, t13, anchor);
     			insert_dev(target, div6, anchor);
     			append_dev(div6, div4);
-    			append_dev(div6, t13);
+    			append_dev(div6, t15);
     			append_dev(div6, div5);
-    			append_dev(div5, t14);
-    			append_dev(div5, br4);
-    			append_dev(div5, t15);
-    			append_dev(div5, br5);
-    			append_dev(div5, br6);
     			append_dev(div5, t16);
-    			append_dev(div5, span2);
+    			append_dev(div5, br5);
+    			append_dev(div5, t17);
+    			append_dev(div5, br6);
+    			append_dev(div5, br7);
     			append_dev(div5, t18);
+    			append_dev(div5, span2);
+    			append_dev(div5, t20);
     		},
     		p: noop,
     		i: noop,
@@ -13795,7 +13810,7 @@
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div3);
-    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(t13);
     			if (detaching) detach_dev(div6);
     		}
     	};

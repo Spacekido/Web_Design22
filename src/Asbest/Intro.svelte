@@ -7,11 +7,15 @@
     <span class="highlight">più grande giacimento</span> a cielo aperto <span class="highlight"> di amianto nel mondo</span>:
     quasi mezzo milione di tonnellate di amianto vengono scavate ogni anno nella miniera di Uralasbest.
     <br/><br/>
-    Nonostante il divieto di estrazione e distribuzione dell'amianto da parte degli altri paesi, l'azienda locale 
+    Settantamila persone vivono ad Asbest, un tempo conosciuta come "la città che muore" per i suoi altissimi tassi di cancro ai polmoni e 
+    nonostante il divieto di estrazione e distribuzione dell'amianto da parte degli altri paesi, l'azienda locale 
     ha cercato di eliminare le associazioni dell'amianto con il cancro ai polmoni e altre malattie rinominando il suo prodotto come "crisotilo", 
     il nome blando e tecnico del tipo specifico di minerale che estrae principalmente.
     <br/><br/>
-    Settantamila persone vivono ad Asbest, un tempo conosciuta come "la città che muore" per i suoi altissimi tassi di cancro ai polmoni.
+    Attaccato per decenni dai difensori della salute, l'ostinatamente provocatorio produttore russo di amianto pensa di aver forse 
+    finalmente trovato la figura perfetta per una campagna per riabilitare l'immagine profondamente macchiata del prodotto: Presidente Trump.
+    <br/>
+    <a class="right highlight" style="text-decoration: underline;" href="https://www.nytimes.com/2019/04/07/world/europe/asbestos-russia-mine.html">Leggi l'articolo</a>
   </div>
 </div>
 
