@@ -46,6 +46,7 @@
     title={"La situazione a Libby oggi"}
     subtitle={"Come le attivitá di sanificazione hanno provato a rimediare al disastro causato dalla miniera."}
     buttonLabel={"Esplora"}
+    direction={"mirrored"}
   />
 </div>
 

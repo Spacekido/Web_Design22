@@ -12584,7 +12584,7 @@
     	let span1;
     	let t9;
     	let t10;
-    	let custombutton;
+    	let custombutton0;
     	let t11;
     	let div6;
     	let div5;
@@ -12594,16 +12594,21 @@
     	let t14;
     	let span4;
     	let t16;
+    	let span5;
+    	let t18;
     	let br2;
     	let br3;
-    	let t17;
-    	let span5;
     	let t19;
-    	let br4;
-    	let t20;
     	let span6;
+    	let t21;
+    	let span8;
     	let t22;
-    	let t23;
+    	let span7;
+    	let t24;
+    	let t25;
+    	let t26;
+    	let custombutton1;
+    	let t27;
     	let contentcard1;
     	let current;
 
@@ -12618,11 +12623,20 @@
     			$$inline: true
     		});
 
-    	custombutton = new CustomButton({
+    	custombutton0 = new CustomButton({
     			props: {
     				align: "right",
     				label: "Leggi l'intervista",
     				href: "https://www.corriere.it/cook/news/21_maggio_10/franco-berrino-vivo-solitudine-la-morte-mia-moglie-jo-b48c0c7c-a78d-11eb-b37e-07dee681b819.shtml"
+    			},
+    			$$inline: true
+    		});
+
+    	custombutton1 = new CustomButton({
+    			props: {
+    				align: "right",
+    				label: "Leggi l'articolo",
+    				href: "https://www.inail.it/cs/internet/comunicazione/news-ed-eventi/news/ucm_106891_amianto_a_balangero_la_minier.html"
     			},
     			$$inline: true
     		});
@@ -12663,7 +12677,7 @@
     			span1.textContent = "tumore al polmone";
     			t9 = text(" a 72 anni senza mai aver fumato una sigaretta. Stesso\r\n          destino per mio fratello: mesotelioma, a 67 anni.\"");
     			t10 = space();
-    			create_component(custombutton.$$.fragment);
+    			create_component(custombutton0.$$.fragment);
     			t11 = space();
     			div6 = element("div");
     			div5 = element("div");
@@ -12674,19 +12688,25 @@
     			t14 = text(", neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche\r\n        sull’estrazione del prezioso nichel dalla roccia di serpentino. Levi descrive la cava paragonandola alla rappresentazione dantesca dei\r\n        ");
     			span4 = element("span");
     			span4.textContent = "gironi infernali";
-    			t16 = text(", con fibre di amianto onnipresenti, raffigurate come un demone, asfissiante e ostile. Celebre é\r\n        diventata la sua frase “C’era amianto dappertutto, come una neve cenerina.”\r\n        ");
+    			t16 = text(", con fibre di amianto onnipresenti, raffigurate come un demone, asfissiante e ostile. Celebre é\r\n        diventata la sua frase ");
+    			span5 = element("span");
+    			span5.textContent = "“C’era amianto dappertutto, come una neve cenerina”";
+    			t18 = text(".\r\n        ");
     			br2 = element("br");
     			br3 = element("br");
-    			t17 = text("\r\n        Nel 1954 ");
-    			span5 = element("span");
-    			span5.textContent = "Italo Calvino";
-    			t19 = text(" arriva nella miniera piemontese come redattore del quotidiano “L’Unità” occupandosi del rischio\r\n        amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo ");
-    			br4 = element("br");
-    			t20 = text("“Il grigio\r\n        polverone d’asbesto della cava che dove arriva\r\n        ");
+    			t19 = text("\r\n        Nel 1954 ");
     			span6 = element("span");
-    			span6.textContent = "brucia, foglie e polmoni";
-    			t22 = text("”.");
-    			t23 = space();
+    			span6.textContent = "Italo Calvino";
+    			t21 = text(" arriva nella miniera piemontese come redattore del quotidiano “L’Unità” occupandosi del rischio\r\n        amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo \r\n        ");
+    			span8 = element("span");
+    			t22 = text("“Il grigio polverone d’asbesto della cava che dove arriva ");
+    			span7 = element("span");
+    			span7.textContent = "brucia, foglie e polmoni";
+    			t24 = text("”");
+    			t25 = text(".");
+    			t26 = space();
+    			create_component(custombutton1.$$.fragment);
+    			t27 = space();
     			create_component(contentcard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			add_location(div0, file$b, 6, 2, 192);
@@ -12708,13 +12728,16 @@
     			add_location(span3, file$b, 38, 30, 1955);
     			attr_dev(span4, "class", "highlight");
     			add_location(span4, file$b, 40, 8, 2232);
-    			add_location(br2, file$b, 42, 8, 2470);
-    			add_location(br3, file$b, 42, 14, 2476);
-    			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$b, 43, 17, 2501);
-    			add_location(br4, file$b, 44, 140, 2783);
+    			attr_dev(span5, "class", "italic");
+    			add_location(span5, file$b, 41, 31, 2408);
+    			add_location(br2, file$b, 42, 8, 2498);
+    			add_location(br3, file$b, 42, 14, 2504);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$b, 46, 8, 2865);
+    			add_location(span6, file$b, 43, 17, 2529);
+    			attr_dev(span7, "class", "highlight");
+    			add_location(span7, file$b, 45, 87, 2900);
+    			attr_dev(span8, "class", "italic");
+    			add_location(span8, file$b, 45, 8, 2821);
     			add_location(div4, file$b, 37, 6, 1918);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left flex-column-4 svelte-c5hhtw");
     			attr_dev(div5, "id", "content-balangero2");
@@ -12747,7 +12770,7 @@
     			append_dev(span2, span1);
     			append_dev(span2, t9);
     			append_dev(div2, t10);
-    			mount_component(custombutton, div2, null);
+    			mount_component(custombutton0, div2, null);
     			append_dev(div7, t11);
     			append_dev(div7, div6);
     			append_dev(div6, div5);
@@ -12757,16 +12780,21 @@
     			append_dev(div4, t14);
     			append_dev(div4, span4);
     			append_dev(div4, t16);
+    			append_dev(div4, span5);
+    			append_dev(div4, t18);
     			append_dev(div4, br2);
     			append_dev(div4, br3);
-    			append_dev(div4, t17);
-    			append_dev(div4, span5);
     			append_dev(div4, t19);
-    			append_dev(div4, br4);
-    			append_dev(div4, t20);
     			append_dev(div4, span6);
-    			append_dev(div4, t22);
-    			append_dev(div6, t23);
+    			append_dev(div4, t21);
+    			append_dev(div4, span8);
+    			append_dev(span8, t22);
+    			append_dev(span8, span7);
+    			append_dev(span8, t24);
+    			append_dev(div4, t25);
+    			append_dev(div5, t26);
+    			mount_component(custombutton1, div5, null);
+    			append_dev(div6, t27);
     			mount_component(contentcard1, div6, null);
     			current = true;
     		},
@@ -12774,20 +12802,23 @@
     		i: function intro(local) {
     			if (current) return;
     			transition_in(contentcard0.$$.fragment, local);
-    			transition_in(custombutton.$$.fragment, local);
+    			transition_in(custombutton0.$$.fragment, local);
+    			transition_in(custombutton1.$$.fragment, local);
     			transition_in(contentcard1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(contentcard0.$$.fragment, local);
-    			transition_out(custombutton.$$.fragment, local);
+    			transition_out(custombutton0.$$.fragment, local);
+    			transition_out(custombutton1.$$.fragment, local);
     			transition_out(contentcard1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div7);
     			destroy_component(contentcard0);
-    			destroy_component(custombutton);
+    			destroy_component(custombutton0);
+    			destroy_component(custombutton1);
     			destroy_component(contentcard1);
     		}
     	};
@@ -13156,7 +13187,8 @@
     				src: "img/libby2.jpg",
     				title: "La situazione a Libby oggi",
     				subtitle: "Come le attivitá di sanificazione hanno provato a rimediare al disastro causato dalla miniera.",
-    				buttonLabel: "Esplora"
+    				buttonLabel: "Esplora",
+    				direction: "mirrored"
     			},
     			$$inline: true
     		});
@@ -13881,22 +13913,20 @@
     	let br2;
     	let br3;
     	let t10;
-    	let br4;
-    	let t11;
     	let a;
-    	let t13;
+    	let t12;
     	let div6;
     	let div4;
-    	let t15;
+    	let t14;
     	let div5;
+    	let t15;
+    	let br4;
     	let t16;
     	let br5;
-    	let t17;
     	let br6;
-    	let br7;
-    	let t18;
+    	let t17;
     	let span2;
-    	let t20;
+    	let t19;
 
     	const block = {
     		c: function create() {
@@ -13914,32 +13944,30 @@
     			t6 = text(" a cielo aperto ");
     			span1 = element("span");
     			span1.textContent = "di amianto nel mondo";
-    			t8 = text(":\r\n    quasi mezzo milione di tonnellate di amianto vengono scavate ogni anno nella miniera di Uralasbest.\r\n    ");
+    			t8 = text(":\r\n    quasi mezzo milione di tonnellate di amianto vengono scavate ogni anno nella miniera dall'impresa Uralasbest.\r\n    ");
     			br0 = element("br");
     			br1 = element("br");
     			t9 = text("\r\n    Settantamila persone vivono ad Asbest, un tempo conosciuta come \"la città che muore\" per i suoi altissimi tassi di cancro ai polmoni e \r\n    nonostante il divieto di estrazione e distribuzione dell'amianto da parte degli altri paesi, l'azienda locale \r\n    ha cercato di eliminare le associazioni dell'amianto con il cancro ai polmoni e altre malattie rinominando il suo prodotto come \"crisotilo\", \r\n    il nome blando e tecnico del tipo specifico di minerale che estrae principalmente.\r\n    ");
     			br2 = element("br");
     			br3 = element("br");
-    			t10 = text("\r\n    Attaccato per decenni dai difensori della salute, l'ostinatamente provocatorio produttore russo di amianto pensa di aver forse \r\n    finalmente trovato la figura perfetta per una campagna per riabilitare l'immagine profondamente macchiata del prodotto: Presidente Trump.\r\n    ");
-    			br4 = element("br");
-    			t11 = space();
+    			t10 = space();
     			a = element("a");
-    			a.textContent = "Leggi l'articolo";
-    			t13 = space();
+    			a.textContent = "Scopri Uralasbest";
+    			t12 = space();
     			div6 = element("div");
     			div4 = element("div");
     			div4.textContent = "Conseguenze sul presente";
-    			t15 = space();
+    			t14 = space();
     			div5 = element("div");
-    			t16 = text("Tutt'oggi i produttori russi operano incuranti dei pericoli sostenuti dal governo, il quale\r\n    fa leva sugli abitanti sapendo che la miniera è l’unica importante fonte economica della città.");
+    			t15 = text("Tutt'oggi i produttori russi operano incuranti dei pericoli sostenuti dal governo, il quale\r\n    fa leva sugli abitanti sapendo che la miniera è l’unica importante fonte economica della città.");
+    			br4 = element("br");
+    			t16 = text("\r\n    Asbest, dopo oltre 130 anni di estrazione mineraria intensiva, ha ancora abbastanza amianto crisotilo sepolto nel terreno\r\n    per mantenere Uralasbest in attività per almeno un altro secolo.\r\n    ");
     			br5 = element("br");
-    			t17 = text("\r\n    Asbest, dopo oltre 130 anni di estrazione mineraria intensiva, ha ancora abbastanza amianto crisotilo sepolto nel terreno\r\n    per mantenere Uralasbest in attività per almeno un altro secolo.\r\n    ");
     			br6 = element("br");
-    			br7 = element("br");
-    			t18 = text("\r\n    L'opinione di molti residenti di Asbest è che ci sono così tante altre cose di cui preoccuparsi nella loro regione fortemente industrializzata,\r\n    inclusa una centrale nucleare a poche miglia di distanza e una centrale elettrica a carbone ancora più vicina,\r\n    che l'amianto è probabilmente ");
+    			t17 = text("\r\n    L'opinione di molti residenti di Asbest è che ci sono così tante altre cose di cui preoccuparsi nella loro regione fortemente industrializzata,\r\n    inclusa una centrale nucleare a poche miglia di distanza e una centrale elettrica a carbone ancora più vicina,\r\n    che l'amianto è probabilmente ");
     			span2 = element("span");
     			span2.textContent = "l'ultimo delle loro preoccupazioni";
-    			t20 = text(".");
+    			t19 = text(".");
     			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
     			add_location(div0, file$3, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
@@ -13948,30 +13976,29 @@
     			add_location(span0, file$3, 6, 4, 330);
     			attr_dev(span1, "class", "highlight");
     			add_location(span1, file$3, 6, 72, 398);
-    			add_location(br0, file$3, 8, 4, 562);
-    			add_location(br1, file$3, 8, 9, 567);
-    			add_location(br2, file$3, 13, 4, 1070);
-    			add_location(br3, file$3, 13, 9, 1075);
-    			add_location(br4, file$3, 16, 4, 1362);
-    			attr_dev(a, "class", "right highlight svelte-703flg");
+    			add_location(br0, file$3, 8, 4, 572);
+    			add_location(br1, file$3, 8, 9, 577);
+    			add_location(br2, file$3, 13, 4, 1080);
+    			add_location(br3, file$3, 13, 9, 1085);
+    			attr_dev(a, "class", "highlight");
     			set_style(a, "text-decoration", "underline");
-    			attr_dev(a, "href", "https://www.nytimes.com/2019/04/07/world/europe/asbestos-russia-mine.html");
-    			add_location(a, file$3, 17, 4, 1373);
+    			attr_dev(a, "href", "https://www.uralasbest.ru/en/about-company");
+    			add_location(a, file$3, 14, 4, 1096);
     			attr_dev(div2, "class", "mdc-typography--body1");
     			add_location(div2, file$3, 4, 2, 172);
     			attr_dev(div3, "class", "left svelte-703flg");
     			add_location(div3, file$3, 2, 0, 73);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$3, 22, 2, 1582);
-    			add_location(br5, file$3, 25, 99, 1906);
-    			add_location(br6, file$3, 28, 4, 2114);
-    			add_location(br7, file$3, 28, 9, 2119);
+    			add_location(div4, file$3, 19, 2, 1269);
+    			add_location(br4, file$3, 22, 99, 1593);
+    			add_location(br5, file$3, 25, 4, 1801);
+    			add_location(br6, file$3, 25, 9, 1806);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$3, 31, 34, 2425);
+    			add_location(span2, file$3, 28, 34, 2112);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$3, 23, 2, 1673);
+    			add_location(div5, file$3, 20, 2, 1360);
     			attr_dev(div6, "class", "right svelte-703flg");
-    			add_location(div6, file$3, 21, 0, 1559);
+    			add_location(div6, file$3, 18, 0, 1246);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13994,22 +14021,20 @@
     			append_dev(div2, br2);
     			append_dev(div2, br3);
     			append_dev(div2, t10);
-    			append_dev(div2, br4);
-    			append_dev(div2, t11);
     			append_dev(div2, a);
-    			insert_dev(target, t13, anchor);
+    			insert_dev(target, t12, anchor);
     			insert_dev(target, div6, anchor);
     			append_dev(div6, div4);
-    			append_dev(div6, t15);
+    			append_dev(div6, t14);
     			append_dev(div6, div5);
+    			append_dev(div5, t15);
+    			append_dev(div5, br4);
     			append_dev(div5, t16);
     			append_dev(div5, br5);
-    			append_dev(div5, t17);
     			append_dev(div5, br6);
-    			append_dev(div5, br7);
-    			append_dev(div5, t18);
+    			append_dev(div5, t17);
     			append_dev(div5, span2);
-    			append_dev(div5, t20);
+    			append_dev(div5, t19);
     		},
     		p: noop,
     		i: noop,
@@ -14018,7 +14043,7 @@
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div3);
-    			if (detaching) detach_dev(t13);
+    			if (detaching) detach_dev(t12);
     			if (detaching) detach_dev(div6);
     		}
     	};
@@ -14066,30 +14091,64 @@
     function create_fragment$2(ctx) {
     	let div0;
     	let t1;
-    	let div2;
+    	let div3;
     	let contentcard0;
     	let t2;
+    	let div2;
     	let div1;
     	let t3;
     	let br0;
     	let br1;
     	let t4;
-    	let t5;
-    	let div4;
-    	let div3;
+    	let span;
     	let t6;
-    	let br2;
+    	let custombutton0;
     	let t7;
-    	let br3;
-    	let br4;
+    	let div5;
+    	let div4;
     	let t8;
+    	let br2;
+    	let br3;
     	let t9;
+    	let t10;
     	let contentcard1;
+    	let t11;
+    	let div7;
+    	let contentcard2;
+    	let t12;
+    	let div6;
+    	let t13;
+    	let br4;
+    	let t14;
+    	let br5;
+    	let br6;
+    	let t15;
+    	let custombutton1;
     	let current;
 
     	contentcard0 = new ContentCard({
     			props: {
     				contentId: "content-asbest1",
+    				src: "img/asbest-trump.jpeg",
+    				title: "Donald Trump",
+    				subtitle: "45° presidente degli Stati Uniti",
+    				buttonLabel: "Scopri le sue azioni"
+    			},
+    			$$inline: true
+    		});
+
+    	custombutton0 = new CustomButton({
+    			props: {
+    				align: "right",
+    				label: "Leggi l'articolo",
+    				href: "https://www.washingtonpost.com/news/business/wp/2018/07/11/approved-by-donald-trump-asbestos-sold-by-russian-company-is-branded-with-the-presidents-face/"
+    			},
+    			$$inline: true
+    		});
+
+    	contentcard1 = new ContentCard({
+    			props: {
+    				contentId: "content-asbest2",
     				src: "img/asbest-russia.jpg",
     				title: "Igor Bragin",
     				subtitle: "Medico capo del complesso ospedaliero Asbest City Hospital",
@@ -14098,9 +14157,9 @@
     			$$inline: true
     		});
 
-    	contentcard1 = new ContentCard({
+    	contentcard2 = new ContentCard({
     			props: {
-    				contentId: "content-asbest2",
+    				contentId: "content-asbest3",
     				src: "img/viktor-stepanov.jpg",
     				title: "Viktor Stepanov",
     				subtitle: "Ex lavoratore della fabbrica di amianto",
@@ -14110,47 +14169,81 @@
     			$$inline: true
     		});
 
+    	custombutton1 = new CustomButton({
+    			props: {
+    				align: "right",
+    				label: "Leggi l'articolo",
+    				href: "https://www.nytimes.com/2019/04/07/world/europe/asbestos-russia-mine.html"
+    			},
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
     			div0 = element("div");
     			div0.textContent = "Perché preoccuparsi così tanto dell'amianto?";
     			t1 = space();
-    			div2 = element("div");
+    			div3 = element("div");
     			create_component(contentcard0.$$.fragment);
     			t2 = space();
+    			div2 = element("div");
     			div1 = element("div");
-    			t3 = text("Ha liquidato come \"non corrispondente alla realtà\" uno studio scientifico del 2016 che mostrava tassi elevati di cancro ai polmoni lì.\r\n    ");
+    			t3 = text("Attaccato per decenni dai difensori della salute, l'ostinatamente provocatorio produttore russo di amianto pensa di aver forse \r\n      finalmente trovato la figura perfetta per una campagna per riabilitare l'immagine profondamente macchiata del prodotto: Presidente Trump.\r\n      ");
     			br0 = element("br");
     			br1 = element("br");
-    			t4 = text("\r\n    Lo studio, una revisione comparativa dei tassi di mortalità ad Asbest e nella regione circostante di Sverdlovsk, ha rilevato che \"i tassi di mortalità per tumori\r\n    del polmone, dello stomaco e del colon erano statisticamente significativamente più alti nella città di Asbest\". L'incidenza del mesotelioma, una malattia polmonare\r\n    ampiamente attribuita all'amianto in Occidente, non è stata studiata perché la Russia non registra questa malattia separatamente.");
-    			t5 = space();
+    			t4 = text("\r\n      Nel 2018 la socieà Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffiguarnte la faccia di Trump\r\n      e recitante la seguente frase ");
+    			span = element("span");
+    			span.textContent = "\"Approvato da Donald Trump, 45° presidente degli Stati Uniti\"";
+    			t6 = space();
+    			create_component(custombutton0.$$.fragment);
+    			t7 = space();
+    			div5 = element("div");
     			div4 = element("div");
-    			div3 = element("div");
-    			t6 = text("\"Sono un pensionato di 88 che ha trascorso decenni a lavorare nella fabbrica di amianto, la mia stessa età avanzata e il mantenimento di una buona salute\r\n    sono la prova che tutta l'\"isteria\" sull'amianto non poteva essere vera.");
+    			t8 = text("Ha liquidato come \"non corrispondente alla realtà\" uno studio scientifico del 2016 che mostrava tassi elevati di cancro ai polmoni lì.\r\n    ");
     			br2 = element("br");
-    			t7 = text("\r\n    Mentre lavoravo bevevo una bottiglia di latte al giorno, l'azienda le forniva gratuitamente per aiutare i lavoratori a difendersi dalle malattie.\"\r\n    ");
     			br3 = element("br");
-    			br4 = element("br");
-    			t8 = text("\r\n    \"Tutto è pericoloso in una certa misura. Il cento per cento garantisce che qualcosa non è dannoso non esiste.\"");
-    			t9 = space();
+    			t9 = text("\r\n    Lo studio, una revisione comparativa dei tassi di mortalità ad Asbest e nella regione circostante di Sverdlovsk, ha rilevato che \"i tassi di mortalità per tumori\r\n    del polmone, dello stomaco e del colon erano statisticamente significativamente più alti nella città di Asbest\". L'incidenza del mesotelioma, una malattia polmonare\r\n    ampiamente attribuita all'amianto in Occidente, non è stata studiata perché la Russia non registra questa malattia separatamente.");
+    			t10 = space();
     			create_component(contentcard1.$$.fragment);
+    			t11 = space();
+    			div7 = element("div");
+    			create_component(contentcard2.$$.fragment);
+    			t12 = space();
+    			div6 = element("div");
+    			t13 = text("\"Sono un pensionato di 88 che ha trascorso decenni a lavorare nella fabbrica di amianto, la mia stessa età avanzata e il mantenimento di una buona salute\r\n    sono la prova che tutta l'\"isteria\" sull'amianto non poteva essere vera.");
+    			br4 = element("br");
+    			t14 = text("\r\n    Mentre lavoravo bevevo una bottiglia di latte al giorno, l'azienda le forniva gratuitamente per aiutare i lavoratori a difendersi dalle malattie.\"\r\n    ");
+    			br5 = element("br");
+    			br6 = element("br");
+    			t15 = text("\r\n    \"Tutto è pericoloso in una certa misura. Il cento per cento garantisce che qualcosa non è dannoso non esiste.\"\r\n    ");
+    			create_component(custombutton1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
     			add_location(div0, file$2, 6, 0, 221);
-    			add_location(br0, file$2, 18, 4, 821);
-    			add_location(br1, file$2, 18, 10, 827);
-    			attr_dev(div1, "class", "mdc-typography--body1 hidden right flex-column-4 svelte-c5hhtw");
-    			attr_dev(div1, "id", "content-asbest1");
-    			add_location(div1, file$2, 16, 2, 592);
-    			attr_dev(div2, "class", "flex-row-8");
-    			add_location(div2, file$2, 7, 0, 322);
-    			add_location(br2, file$2, 28, 76, 1681);
-    			add_location(br3, file$2, 30, 4, 1845);
-    			add_location(br4, file$2, 30, 10, 1851);
-    			attr_dev(div3, "class", "mdc-typography--body1 hidden left flex-column-4 italic svelte-c5hhtw");
-    			attr_dev(div3, "id", "content-asbest2");
-    			add_location(div3, file$2, 26, 2, 1355);
-    			attr_dev(div4, "class", "flex-row-8");
-    			add_location(div4, file$2, 25, 0, 1327);
+    			add_location(br0, file$2, 20, 6, 947);
+    			add_location(br1, file$2, 20, 11, 952);
+    			attr_dev(span, "class", "italic");
+    			add_location(span, file$2, 22, 36, 1136);
+    			add_location(div1, file$2, 17, 4, 654);
+    			attr_dev(div2, "class", "mdc-typography--body1 hidden right flex-column-4 svelte-c5hhtw");
+    			attr_dev(div2, "id", "content-asbest1");
+    			add_location(div2, file$2, 16, 2, 565);
+    			attr_dev(div3, "class", "flex-row-8");
+    			add_location(div3, file$2, 7, 0, 322);
+    			add_location(br2, file$2, 35, 4, 1770);
+    			add_location(br3, file$2, 35, 10, 1776);
+    			attr_dev(div4, "class", "mdc-typography--body1 hidden right flex-column-4 svelte-c5hhtw");
+    			attr_dev(div4, "id", "content-asbest2");
+    			add_location(div4, file$2, 33, 2, 1541);
+    			attr_dev(div5, "class", "flex-row-8");
+    			add_location(div5, file$2, 32, 0, 1513);
+    			add_location(br4, file$2, 60, 76, 3122);
+    			add_location(br5, file$2, 62, 4, 3286);
+    			add_location(br6, file$2, 62, 10, 3292);
+    			attr_dev(div6, "class", "mdc-typography--body1 hidden left flex-column-4 italic svelte-c5hhtw");
+    			attr_dev(div6, "id", "content-asbest3");
+    			add_location(div6, file$2, 58, 2, 2796);
+    			attr_dev(div7, "class", "flex-row-8");
+    			add_location(div7, file$2, 49, 0, 2516);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14158,47 +14251,72 @@
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, div2, anchor);
-    			mount_component(contentcard0, div2, null);
-    			append_dev(div2, t2);
+    			insert_dev(target, div3, anchor);
+    			mount_component(contentcard0, div3, null);
+    			append_dev(div3, t2);
+    			append_dev(div3, div2);
     			append_dev(div2, div1);
     			append_dev(div1, t3);
     			append_dev(div1, br0);
     			append_dev(div1, br1);
     			append_dev(div1, t4);
-    			insert_dev(target, t5, anchor);
-    			insert_dev(target, div4, anchor);
-    			append_dev(div4, div3);
-    			append_dev(div3, t6);
-    			append_dev(div3, br2);
-    			append_dev(div3, t7);
-    			append_dev(div3, br3);
-    			append_dev(div3, br4);
-    			append_dev(div3, t8);
+    			append_dev(div1, span);
+    			append_dev(div2, t6);
+    			mount_component(custombutton0, div2, null);
+    			insert_dev(target, t7, anchor);
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div4);
+    			append_dev(div4, t8);
+    			append_dev(div4, br2);
+    			append_dev(div4, br3);
     			append_dev(div4, t9);
-    			mount_component(contentcard1, div4, null);
+    			append_dev(div5, t10);
+    			mount_component(contentcard1, div5, null);
+    			insert_dev(target, t11, anchor);
+    			insert_dev(target, div7, anchor);
+    			mount_component(contentcard2, div7, null);
+    			append_dev(div7, t12);
+    			append_dev(div7, div6);
+    			append_dev(div6, t13);
+    			append_dev(div6, br4);
+    			append_dev(div6, t14);
+    			append_dev(div6, br5);
+    			append_dev(div6, br6);
+    			append_dev(div6, t15);
+    			mount_component(custombutton1, div6, null);
     			current = true;
     		},
     		p: noop,
     		i: function intro(local) {
     			if (current) return;
     			transition_in(contentcard0.$$.fragment, local);
+    			transition_in(custombutton0.$$.fragment, local);
     			transition_in(contentcard1.$$.fragment, local);
+    			transition_in(contentcard2.$$.fragment, local);
+    			transition_in(custombutton1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(contentcard0.$$.fragment, local);
+    			transition_out(custombutton0.$$.fragment, local);
     			transition_out(contentcard1.$$.fragment, local);
+    			transition_out(contentcard2.$$.fragment, local);
+    			transition_out(custombutton1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(div3);
     			destroy_component(contentcard0);
-    			if (detaching) detach_dev(t5);
-    			if (detaching) detach_dev(div4);
+    			destroy_component(custombutton0);
+    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(div5);
     			destroy_component(contentcard1);
+    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(div7);
+    			destroy_component(contentcard2);
+    			destroy_component(custombutton1);
     		}
     	};
 

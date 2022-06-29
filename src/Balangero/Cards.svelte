@@ -39,13 +39,13 @@
         Nel novembre del 1941 <span class="highlight">Primo Levi</span>, neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche
         sull’estrazione del prezioso nichel dalla roccia di serpentino. Levi descrive la cava paragonandola alla rappresentazione dantesca dei
         <span class="highlight">gironi infernali</span>, con fibre di amianto onnipresenti, raffigurate come un demone, asfissiante e ostile. Celebre é
-        diventata la sua frase “C’era amianto dappertutto, come una neve cenerina.”
+        diventata la sua frase <span class="italic">“C’era amianto dappertutto, come una neve cenerina”</span>.
         <br /><br />
         Nel 1954 <span class="highlight">Italo Calvino</span> arriva nella miniera piemontese come redattore del quotidiano “L’Unità” occupandosi del rischio
-        amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo <br />“Il grigio
-        polverone d’asbesto della cava che dove arriva
-        <span class="highlight">brucia, foglie e polmoni</span>”.
+        amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo 
+        <span class="italic">“Il grigio polverone d’asbesto della cava che dove arriva <span class="highlight">brucia, foglie e polmoni</span>”</span>.
       </div>
+      <CustomButton align={"right"} label={"Leggi l'articolo"} href={"https://www.inail.it/cs/internet/comunicazione/news-ed-eventi/news/ucm_106891_amianto_a_balangero_la_minier.html"} />
     </div>
     <ContentCard
       contentId={"content-balangero2"}
