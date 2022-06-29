@@ -106,26 +106,26 @@
     justify-content: center;
     align-items: center;
     min-width: fit-content;
+    padding-inline: 10%;
     position: absolute;
     z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-inline: 10%;
   }
-  #content0 {
-    gap: 20px;
-  }
-  #content1 {
+  #content0,
+  #content1,
+  #content2 {
+    gap: 24px;
   }
   #content2 {
-    gap: 8vh;
+    padding: 0;
   }
   #content3,
   #content4,
   #content5,
   #content6 {
-    gap: 14vh;
+    gap: 64px;
   }
   /* TODO aggiungere altri media breakpoint */
   @media (min-width: 640px) {

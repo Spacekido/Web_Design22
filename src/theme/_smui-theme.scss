@@ -129,11 +129,16 @@ div[id^="content-"] {
 }
 
 .flex-column,
-.flex-column-4 {
+.flex-column-4,
+.flex-column-8 {
   display: flex;
   flex-direction: column;
 }
 
 .flex-column-4 {
   gap: 4vh;
+}
+
+.flex-column-8 {
+  gap: 8vh;
 }

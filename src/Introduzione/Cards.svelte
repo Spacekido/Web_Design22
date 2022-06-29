@@ -11,34 +11,32 @@
   </div>
 </div>
 <div class="container">
-  <!-- TODO aggiungere immagini e testo dei posti giusti -->
-  <!-- TODO fix dimensioni delle card cambiano con la lunghezza del testo, devono essere fisse tutte uguali -->
   <LinkCard
     href="#section3"
-    src="img/balangero.svg"
+    src="img/balangero-mine.png"
     title="Balangero, Italia"
     subtitle="La miniera di amianto piú grande d'Europa. Rimasta attiva nella provincia di Torino fino al 1990."
   />
 
   <LinkCard
     href="#section4"
-    src="img/libby.jpg"
+    src="img/libby-mine.png"
     title="Libby, Montana"
-    subtitle="Cittá statunitense che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite."
+    subtitle="La cittá statunitense che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite."
   />
 
   <LinkCard
     href="#section5"
-    src="img/placeholder.png"
+    src="img/minacu-mine.png"
     title="Minaçu, Brasile"
-    subtitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the."
+    subtitle="L'ultima miniera di amianto del Brasile ancora attiva, nonstante il divieto legale imposto dallo stato."
   />
 
   <LinkCard
     href="#section6"
-    src="img/placeholder.png"
+    src="img/asbest-mine.png"
     title="Asbest, Russia"
-    subtitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the."
+    subtitle="La miniera con la maggiore produzione annua di amianto di tutto il mondo."
   />
 </div>
 
@@ -47,6 +45,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 4%;
+    gap: 4vw;
   }
 </style>

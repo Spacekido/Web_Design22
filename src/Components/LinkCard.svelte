@@ -15,3 +15,9 @@
     </PrimaryAction>
   </Card>
 </a>
+
+<style>
+  a {
+    width: 20vw;
+  }
+</style>
