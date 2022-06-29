@@ -44,6 +44,7 @@
     title={"Igor Bragin"}
     subtitle={"Medico capo del complesso ospedaliero Asbest City Hospital"}
     buttonLabel={"Scopri la sua opinione"}
+    direction={"mirrored"}
   />
 </div>
 
@@ -54,7 +55,6 @@
     title={"Viktor Stepanov"}
     subtitle={"Ex lavoratore della fabbrica di amianto"}
     buttonLabel={"Leggi le sua parole"}
-    direction={"mirrored"}
   />
   <div class="mdc-typography--body1 hidden left flex-column-4 italic" id="content-asbest3">
     "Sono un pensionato di 88 che ha trascorso decenni a lavorare nella fabbrica di amianto, la mia stessa età avanzata e il mantenimento di una buona salute

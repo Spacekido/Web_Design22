@@ -14152,7 +14152,8 @@
     				src: "img/asbest-russia.jpg",
     				title: "Igor Bragin",
     				subtitle: "Medico capo del complesso ospedaliero Asbest City Hospital",
-    				buttonLabel: "Scopri la sua opinione"
+    				buttonLabel: "Scopri la sua opinione",
+    				direction: "mirrored"
     			},
     			$$inline: true
     		});
@@ -14163,8 +14164,7 @@
     				src: "img/viktor-stepanov.jpg",
     				title: "Viktor Stepanov",
     				subtitle: "Ex lavoratore della fabbrica di amianto",
-    				buttonLabel: "Leggi le sua parole",
-    				direction: "mirrored"
+    				buttonLabel: "Leggi le sua parole"
     			},
     			$$inline: true
     		});
@@ -14243,7 +14243,7 @@
     			attr_dev(div6, "id", "content-asbest3");
     			add_location(div6, file$2, 58, 2, 2796);
     			attr_dev(div7, "class", "flex-row-8");
-    			add_location(div7, file$2, 49, 0, 2516);
+    			add_location(div7, file$2, 50, 0, 2544);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
