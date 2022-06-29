@@ -21,6 +21,5 @@ I comandi da eseguire sono:
 ### Istruzioni per deployare il sito su Github Pages (forse)
 
 I comandi da eseguire sono:
-- `npm run build` che genera i file nella cartella `docs/`
-- `push` dei cambiamenti su git
+- `npm run build` genera i file servibili nella cartella `docs/`
 - `npm run deploy` pubblica i cambiamenti sulla branch `gh-pages` e quindi sul sito hostato online
