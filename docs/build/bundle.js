@@ -8950,7 +8950,7 @@
     	return block;
     }
 
-    // (12:4) <Label class="mdc-typography--subtitle1 bold">
+    // (12:4) <Label class="mdc-typography--button bold">
     function create_default_slot_1$3(ctx) {
     	let t;
 
@@ -8973,7 +8973,7 @@
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(12:4) <Label class=\\\"mdc-typography--subtitle1 bold\\\">",
+    		source: "(12:4) <Label class=\\\"mdc-typography--button bold\\\">",
     		ctx
     	});
 
@@ -8998,7 +8998,7 @@
 
     	label_1 = new Label({
     			props: {
-    				class: "mdc-typography--subtitle1 bold",
+    				class: "mdc-typography--button bold",
     				$$slots: { default: [create_default_slot_1$3] },
     				$$scope: { ctx }
     			},
@@ -9289,13 +9289,13 @@
     			t21 = text(" di amianto.\r\n    ");
     			br2 = element("br");
     			br3 = element("br");
-    			t22 = text("\r\n    Infatti, l'estrazione di amianto rimane ancora oggi uno dei maggiori argomenti di discussione, sul campo legislativo e su quello etico. Attraverso questo viaggio\r\n    nei ");
+    			t22 = text("\r\n    Infatti, l'estrazione di amianto rimane ancora oggi uno dei maggiori argomenti di discussione, sul campo legislativo e su quello etico. Attraverso questo viaggio\r\n    metaforico nell'");
     			span7 = element("span");
-    			span7.textContent = "gironi";
-    			t24 = text(" avrai modo di scoprire l'impatto che l'amianto ha avuto in tutto il mondo, dal suo\r\n    ");
+    			span7.textContent = "Inferno";
+    			t24 = text(", avrai modo di scoprire l'impatto che questo minerale ha avuto in tutto il mondo, dal suo controverso\r\n    ");
     			span8 = element("span");
     			span8.textContent = "passato";
-    			t26 = text(" controverso alle sue conseguenze letali sul ");
+    			t26 = text(" alle sue conseguenze letali sul ");
     			span9 = element("span");
     			span9.textContent = "presente";
     			t28 = text(".");
@@ -9326,11 +9326,11 @@
     			add_location(br2, file$k, 21, 4, 1640);
     			add_location(br3, file$k, 21, 10, 1646);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$k, 23, 8, 1829);
+    			add_location(span7, file$k, 23, 20, 1841);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$k, 24, 4, 1955);
+    			add_location(span8, file$k, 24, 4, 1987);
     			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$k, 24, 87, 2038);
+    			add_location(span9, file$k, 24, 75, 2058);
     			attr_dev(div4, "class", "mdc-typography--body1");
     			add_location(div4, file$k, 16, 2, 1080);
     			attr_dev(div5, "class", "right svelte-11bwrgo");
@@ -10727,7 +10727,7 @@
     				href: "#section6",
     				src: "img/asbest-mine.png",
     				title: "Asbest, Russia",
-    				subtitle: "La miniera con la maggiore produzione annua di amianto di tutto il mondo."
+    				subtitle: "La miniera con l'attuale maggiore produzione annuale di amianto di tutto il mondo."
     			},
     			$$inline: true
     		});

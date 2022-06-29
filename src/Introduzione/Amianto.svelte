@@ -21,8 +21,8 @@
     <span class="highlight">PRODUTTORI</span> di amianto.
     <br /><br />
     Infatti, l'estrazione di amianto rimane ancora oggi uno dei maggiori argomenti di discussione, sul campo legislativo e su quello etico. Attraverso questo viaggio
-    nei <span class="highlight">gironi</span> avrai modo di scoprire l'impatto che l'amianto ha avuto in tutto il mondo, dal suo
-    <span class="highlight">passato</span> controverso alle sue conseguenze letali sul <span class="highlight">presente</span>.
+    metaforico nell'<span class="highlight">Inferno</span>, avrai modo di scoprire l'impatto che questo minerale ha avuto in tutto il mondo, dal suo controverso
+    <span class="highlight">passato</span> alle sue conseguenze letali sul <span class="highlight">presente</span>.
   </div>
 </div>
 

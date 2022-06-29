@@ -23,28 +23,37 @@
 [class^="mdc-typography--headline"] {
   font-family: 'Saira Extra Condensed', sans-serif !important;
   color: theme.$primary;
-  letter-spacing: 0.5px;
 }
 
 [class^="mdc-typography--body"],
 [class^="mdc-typography--button"],
 [class^="mdc-typography--subtitle"] {
   font-family: 'Saira Semi Condensed', sans-serif !important;
-  letter-spacing: 0px;
 }
 
 // override della grandezza dei testi
+// TODO correggere le grandezze dei font (mettere in em al posto di px)
+.mdc-typography--headline4 {
+  line-height: 1.5em;
+}
 
 .mdc-typography--body1 {
   font-size: 20px;
+  line-height: 1.52em;
 }
 
 .mdc-typography--subtitle1 {
   font-size: 18px;
+  line-height: 1.4em;
 }
 
 .mdc-typography--subtitle2 {
   font-size: 16px;
+}
+
+.mdc-typography--button {
+  font-size: 1.2em;
+  letter-spacing: 0.03em;
 }
 
 

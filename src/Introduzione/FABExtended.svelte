@@ -9,7 +9,7 @@
 <div class="margins">
   <Fab color="primary" href="#{target}" extended>
     <Icon class="material-icons">{icon}</Icon>
-    <Label class="mdc-typography--subtitle1 bold">{label}</Label>
+    <Label class="mdc-typography--button bold">{label}</Label>
   </Fab>
 </div>
 

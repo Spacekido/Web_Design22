@@ -36,7 +36,7 @@
     href="#section6"
     src="img/asbest-mine.png"
     title="Asbest, Russia"
-    subtitle="La miniera con la maggiore produzione annua di amianto di tutto il mondo."
+    subtitle="La miniera con l'attuale maggiore produzione annuale di amianto di tutto il mondo."
   />
 </div>
 
