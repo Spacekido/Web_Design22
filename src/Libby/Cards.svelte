@@ -11,9 +11,10 @@
     title={"Ralph Hutt"}
     subtitle={"La testimonianza di un ex-operaio presso l'azienda mineraria W.R. Grace & Company."}
     buttonLabel={"Scopri la sua storia"}
+    direction={"left-card"}
   />
 
-  <div class="mdc-typography--body1 hidden right flex-column-4" id="content-libby1">
+  <div class="mdc-typography--body1 hidden right-align flex-column-4" id="content-libby1">
     Il signor Ralph Hutt ha lavorato a contatto con l'amianto soltanto per 18 mesi e gli è stata diagnosticata l'asbestosi polmonare nel 2002. Ai tempi, le
     uniche precauzioni fornite ai lavoratori dall'azienda erano mascherine di carta. Quando ha chiesto al suo supervisore una maggiore protezione, gli fu detto
     di non preoccuparsi poiché ció che respiravano era solo polvere.
@@ -24,12 +25,12 @@
       "Questo non è il modo in cui me ne voglio andare," ha detto. "Lasciate che qualcuno mi spari. Non voglio essere schiacciato sott'acqua o strangolato. È
       così che ci si sente."
     </div>
-    <CustomButton align={"right"} label={"Guarda l'intervista"} href={"https://youtu.be/ILklSy6QLbI"} />
+    <CustomButton direction={"right-button"} label={"Guarda l'intervista"} href={"https://youtu.be/ILklSy6QLbI"} />
   </div>
 </div>
 
 <div class="flex-row-8">
-  <div class="mdc-typography--body1 hidden left flex-column-4" id="content-libby2">
+  <div class="mdc-typography--body1 hidden left-align flex-column-4" id="content-libby2">
     Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono morti per malattie
     correlate all'amianto, e circa 1 su 10 tra tutti abitanti é attualmente malato.
     <br /><br />
@@ -38,7 +39,7 @@
     <br /><br />
     Ad oggi, per la decontaminazione e il risanamento della città di Libby, sono stati rimossi e rimpiazzati complessivamente più di 750’000 metri cubi di rifiuti
     e materiali da costruzione, causando una spesa di oltre 600 milioni di dollari statali.
-    <CustomButton align={"right"} label={"Leggi lo studio"} href={"https://www.nature.com/articles/jes201618"} />
+    <CustomButton direction={"left-button"} label={"Leggi lo studio"} href={"https://www.nature.com/articles/jes201618"} />
   </div>
   <ContentCard
     contentId={"content-libby2"}
@@ -46,17 +47,9 @@
     title={"La situazione a Libby oggi"}
     subtitle={"Come le attivitá di sanificazione hanno provato a rimediare al disastro causato dalla miniera."}
     buttonLabel={"Esplora"}
-    direction={"mirrored"}
+    direction={"right-card"}
   />
 </div>
 
 <style>
-  .left {
-    text-align: left;
-    align-items: start;
-  }
-  .right {
-    text-align: right;
-    align-items: end;
-  }
 </style>

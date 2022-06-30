@@ -49,27 +49,27 @@
   <div id="section3">
     <img id="background3" src="img/background-full-3.png" alt="" />
     <div id="content3">
-      <BalangeroIntro />
-      <BalangeroCards />
-      <BalangeroStats />
+      <MinacuIntro />
+      <MinacuCards />
+      <MinacuStats />
     </div>
   </div>
 
   <div id="section4">
     <img id="background4" src="img/background-full-3.png" alt="" />
     <div id="content4">
-      <LibbyIntro />
-      <LibbyCards />
-      <LibbyStats />
+      <BalangeroIntro />
+      <BalangeroCards />
+      <BalangeroStats />
     </div>
   </div>
 
   <div id="section5">
     <img id="background5" src="img/background-full-3.png" alt="" />
     <div id="content5">
-      <MinacuIntro />
-      <MinacuCards />
-      <MinacuStats />
+      <LibbyIntro />
+      <LibbyCards />
+      <LibbyStats />
     </div>
   </div>
 
