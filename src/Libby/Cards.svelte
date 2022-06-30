@@ -7,7 +7,7 @@
 <div class="flex-row-8">
   <ContentCard
     contentId={"content-libby1"}
-    src={"img/ralph-hutt.jpg"}
+    src={"img/libby-hutt.jpg"}
     title={"Ralph Hutt"}
     subtitle={"La testimonianza di un ex-operaio presso l'azienda mineraria W.R. Grace & Company."}
     buttonLabel={"Scopri la sua storia"}
@@ -43,7 +43,7 @@
   </div>
   <ContentCard
     contentId={"content-libby2"}
-    src={"img/libby2.jpg"}
+    src={"img/libby-today.jpg"}
     title={"La situazione a Libby oggi"}
     subtitle={"Come le attivitá di sanificazione hanno provato a rimediare al disastro causato dalla miniera."}
     buttonLabel={"Esplora"}

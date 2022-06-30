@@ -43,7 +43,7 @@
   </div>
   <ContentCard
     contentId={"content-asbest2"}
-    src={"img/asbest-russia.jpg"}
+    src={"img/asbest-city.jpg"}
     title={"Igor Bragin"}
     subtitle={"Medico capo del complesso ospedaliero Asbest City Hospital"}
     buttonLabel={"Scopri la sua opinione"}
@@ -54,7 +54,7 @@
 <div class="flex-row-8">
   <ContentCard
     contentId={"content-asbest3"}
-    src={"img/viktor-stepanov.jpg"}
+    src={"img/asbest-stepanov.jpg"}
     title={"Viktor Stepanov"}
     subtitle={"Ex lavoratore della fabbrica di amianto"}
     buttonLabel={"Leggi le sua parole"}

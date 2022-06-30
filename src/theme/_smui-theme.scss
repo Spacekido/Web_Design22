@@ -73,11 +73,6 @@ div[id^="content-"] {
   transition: all 0.5s;
 }
 
-.stats-card {
-  @include shape.radius(30px);
-}
-
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -160,4 +155,8 @@ div[id^="content-"] {
 .right-align {
   text-align: right;
   align-items: end;
+}
+
+.stats-card {
+  border-radius: 2em;
 }

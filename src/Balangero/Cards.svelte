@@ -8,7 +8,7 @@
   <div class="flex-row-8">
     <ContentCard
       contentId={"content-balangero1"}
-      src={"img/franco-berrino.jpg"}
+      src={"img/balangero-berrino.jpg"}
       title={"Dott. Franco Berrino"}
       subtitle={"Laureatosi in medicina all'Università di Torino nel 1969 e specializzatosi in anatomia patologica, si è poi dedicato all'epidemiologia dei tumori."}
       buttonLabel={"Scopri la sua testimonianza"}
@@ -18,7 +18,8 @@
     <div class="mdc-typography--body1 hidden right-align flex-column-4" id="content-balangero1">
       <div>
         Una testimonianza diretta della tragedia causata dall'amianto ci arriva dal medico epidemiologo ed esperto di tumori
-        <span class="highlight">Franco Berrino</span>, cresciuto proprio a Balangero dove il padre lavorava nella miniera.
+        <span class="highlight">Franco Berrino</span>, cresciuto proprio a Balangero dove il padre, l'ingegnere Giovanni Berrino, era stato nominato direttore
+        tecnico della miniera.
         <br /><br />
         <span class="italic">
           "Non c’era alcuna prevenzione: mio padre fu invitato a dimettersi perché ai padroni non piacevano i suoi investimenti per mettere i filtri, delle
@@ -54,7 +55,7 @@
     </div>
     <ContentCard
       contentId={"content-balangero2"}
-      src={"img/levi-calvino.jpg"}
+      src={"img/balangero-levi-calvino.jpg"}
       title={"Primo Levi e Italo Calvino"}
       subtitle={"L'Amiantifera di Balangero viene denunciata anche dalla letteratura italiana del Novecento"}
       buttonLabel={"Scopri i loro racconti"}

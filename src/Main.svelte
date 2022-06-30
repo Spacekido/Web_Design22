@@ -20,6 +20,7 @@
 </script>
 
 <!-- TODO correggere i link in modo che si arrivi sul testo -->
+<!-- TODO aggiungere immagine di sfondo definitiva -->
 <TopAppBar />
 <main>
   <div id="section0">
