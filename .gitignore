@@ -3,3 +3,6 @@
 
 .DS_Store
 .vscode/
+docs/build/bundle.css
+docs/build/bundle.js
+docs/build/bundle.js.map

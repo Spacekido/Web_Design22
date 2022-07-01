@@ -10,7 +10,7 @@
     direction = "";
 </script>
 
-<Card class="custom-card ">
+<Card class="custom-card {direction}">
   <PrimaryAction on:click={() => document.getElementById(contentId).classList.toggle("hidden")}>
     <img {src} alt={title} />
     <Content>
@@ -19,8 +19,13 @@
     </Content>
     <Actions fullBleed>
       <Button>
-        <Label class="mdc-typography--subtitle1 bold">{buttonLabel}</Label>
-        <i class="material-icons {direction}" aria-hidden="true">arrow_forward</i>
+        {#if direction === "left-card"}
+          <Label class="mdc-typography--subtitle1 bold">{buttonLabel}</Label>
+          <i class="material-icons" aria-hidden="true">arrow_forward</i>
+        {:else if direction === "right-card"}
+          <i class="material-icons" aria-hidden="true">arrow_back</i>
+          <Label class="mdc-typography--subtitle1 bold">{buttonLabel}</Label>
+        {/if}
       </Button>
     </Actions>
   </PrimaryAction>
@@ -28,6 +33,15 @@
 
 <style>
   :global(.custom-card) {
-    width: 400px;
+    min-width: 30vw;
+    max-width: 30vw;
+  }
+  :global(.left-card) {
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+  }
+  :global(.right-card) {
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
   }
 </style>

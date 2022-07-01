@@ -1,16 +1,11 @@
-<div class="mdc-typography--headline4 uppercase flex-row">Percentuali di vittime e inquinamento</div>
-<div
-  style="
-justify-content: center;
-align-items: center;"
-  class=""
-/>
-<div class="image-and-text">
-  <figure>
-    <img src="img/statistica.png" alt="Percentuali" />
-    <figcaption class="mdc-typography--subtitle1 highlight">Descrizione del grafico</figcaption>
-  </figure>
-</div>
+<script lang="ts">
+  import StatsCard from "../Components/StatsCard.svelte";
+</script>
 
-<style>
-</style>
+<div class="mdc-typography--headline4 uppercase">Percentuali di vittime e inquinamento</div>
+<div class="flex-row-4" style="justify-content: center; align-items: center;">
+  <div class="mdc-typography--subtitle1 highlight" />
+  <StatsCard value="1919-1990" caption="Periodo di attivitá" />
+  <StatsCard value="2,400+" caption="Pazienti diagnosticati" />
+  <StatsCard value="400+" caption="Vittime accertate" />
+</div>

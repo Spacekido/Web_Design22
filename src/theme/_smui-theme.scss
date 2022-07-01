@@ -1,6 +1,4 @@
-// @use "sass:color";
-
-// material color palette
+// material libraries
 @use "@material/theme/color-palette";
 
 // custom defined colors
@@ -10,14 +8,13 @@
   $background: #fff,
   $error: color-palette.$red-900);
 
-// material typography
 @use "@material/typography/mdc-typography";
-
 
 @use "@material/elevation/mdc-elevation";
 
 @use '@material/linear-progress/index' as linear-progress;
 
+@use "@material/shape";
 
 // font custom applicati agli stili material 
 [class^="mdc-typography--headline"] {
@@ -55,13 +52,6 @@
   font-size: 1.2em;
   letter-spacing: 0.03em;
 }
-
-
-// custom progress bar color
-// .gradient-bar {
-//   // @include linear-progress.bar-color(linear-gradient(to right, red, yellow));
-//   @include linear-progress.bar-color(red);
-// }
 
 // altre properties globali per elementi e classi
 html,
@@ -128,9 +118,14 @@ div[id^="content-"] {
 }
 
 .flex-row,
-.flex-row-8 {
+.flex-row-8,
+.flex-row-4 {
   display: flex;
   flex-direction: row;
+}
+
+.flex-row-4 {
+  gap: 4vw;
 }
 
 .flex-row-8 {
@@ -150,4 +145,18 @@ div[id^="content-"] {
 
 .flex-column-8 {
   gap: 8vh;
+}
+
+.left-align {
+  text-align: left;
+  align-items: start;
+}
+
+.right-align {
+  text-align: right;
+  align-items: end;
+}
+
+.stats-card {
+  border-radius: 2em;
 }

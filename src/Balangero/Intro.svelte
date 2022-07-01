@@ -23,7 +23,7 @@
     Con la chiusura della miniera e le leggi sulla pericolosità dell’amianto, è stato avviato un progetto di messa in sicurezza del luogo a causa delle numerose
     <span class="highlight">vittime e malati</span> accertati tra gli ex lavoratori e le loro famiglie. Gli specialisti hanno esaminato le storie sanitarie di
     1.966 ex addetti all’Amiantifera. Su questo totale, emerge un risultato sconcertante: fra essi ci sono
-    <span class="highlight">214 casi</span> riferibili proprio al contatto con la fibra killer.
+    <span class="highlight">214 vittime</span> riferibili proprio al contatto con la fibra killer.
     <br /><br />
     Non solo, negli anni si sono susseguite una serie di inchieste a favore degli operai, indagini che si conclusero con delle
     <span class="highlight">condanne</span> per gli ex dirigenti della cava. Nel 2012 furono quaranta i casi sotto esame: venticinque morti e quindici malati, tra

@@ -32,14 +32,13 @@
       <IconButton class="material-icons" aria-label="Options">settings</IconButton>
     </Section> -->
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#section0">L'Amianto</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content3">Balangero, Italia</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content4">Libby, USA</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content5">Minaçu, Brasile</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content3">Minaçu, Brasile</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content4">Balangero, Italia</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content5">Libby, USA</Link></Section>
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content6">Asbest, Russia</Link></Section>
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#">???</Link></Section>
   </Row>
   <LinearProgress {progress} />
-  <!-- <LinearProgress {progress} class="gradient-bar" /> -->
 </TopAppBar>
 
 <style>
