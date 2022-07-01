@@ -18,8 +18,7 @@ I comandi da eseguire sono:
 - `npm run prepare` per compilare il CSS del tema di material design, serve ogni volta che si modifica il file o una sua dipendenza
 - `npm run dev` per hostare il sito in locale in modalitá debug, si consiglia di avviarlo in un terminale separato, aggiorna automaticamente i cambiamenti nel browser
 
-### Istruzioni per deployare il sito su Github Pages (forse)
+### Istruzioni per deployare il sito su Github Pages
 
-I comandi da eseguire sono:
-- `npm run build` genera i file servibili nella cartella `docs/`
-- `npm run deploy` pubblica i cambiamenti sulla branch `gh-pages` e quindi sul sito hostato online
+Basta eseguire il comando:
+- `npm run deploy` che genera i file servibili nella cartella `docs/`, pubblica i cambiamenti sulla branch `gh-pages` e quindi sul sito hostato online
