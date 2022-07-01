@@ -9,3 +9,9 @@
     <div class="mdc-typography--body1 bold">{caption}</div>
   </Content>
 </Card>
+
+<style>
+  :global(.stats-card) {
+    border-radius: 2em !important;
+  }
+</style>

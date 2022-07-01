@@ -30,17 +30,3 @@
     </Actions>
   </PrimaryAction>
 </Card>
-
-<style>
-  :global(.custom-card) {
-    max-width: 400px;
-  }
-  :global(.left-card) {
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-  }
-  :global(.right-card) {
-    border-top-right-radius: 2em;
-    border-bottom-left-radius: 2em;
-  }
-</style>

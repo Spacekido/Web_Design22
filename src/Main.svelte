@@ -23,42 +23,55 @@
 <!-- TODO aggiungere immagine di sfondo definitiva -->
 <TopAppBar />
 <main>
-  <div id="section0">
-    <img id="background0" src="img/background-0.png" alt="" />
-    <div id="content0">
+  <div id="section1-1">
+    <img class="background" src="img/background-1-1.png" alt="" />
+    <div id="content1-1">
       <IntroTitle />
-      <FABExtended target={"section1"} label={"Comincia il viaggio"} />
+      <FABExtended target={"section1-2"} label={"Comincia il viaggio"} />
     </div>
   </div>
 
-  <div id="section1">
-    <img id="background1" src="img/background-1.png" alt="" />
-    <div id="content1">
+  <div id="section1-2">
+    <img class="background" src="img/background-1-2.png" alt="" />
+    <div id="content1-2">
       <IntroAmianto />
       <!-- <FAB target={"section2"} style="margin-top: 96px" /> -->
     </div>
   </div>
 
-  <div id="section2">
-    <img id="background2" src="img/background-2.png" alt="" />
-    <div id="content2">
+  <div id="section1-3">
+    <img class="background" src="img/background-1-3.png" alt="" />
+    <div id="content1-3">
       <IntroCards />
       <div style="margin-top: 4%;">
-        <FABExtended target={"content3"} label={"Entra nella miniera"} />
+        <FABExtended target={"content2-1"} label={"Entra nella miniera"} />
       </div>
     </div>
   </div>
 
-  <div id="section3">
-    <img id="background3" src="img/background-3.png" alt="" />
-    <div id="content3">
+  <div id="section2-1">
+    <img class="background" src="img/background-2-1.png" alt="" />
+    <div id="content2-1">
       <MinacuIntro />
-      <MinacuCards />
-      <MinacuStats />
     </div>
   </div>
 
-  <div id="section4">
+  <div id="section2-2">
+    <img class="background" src="img/background-2-2.png" alt="" />
+    <div id="content2-2">
+      <MinacuCards />
+    </div>
+  </div>
+
+  <div id="section2-3">
+    <img class="background" src="img/background-2-3.png" alt="" />
+    <div id="content2-3">
+      <MinacuStats />
+    </div>
+  </div>
+  TODO - RESTO DELLE IMMAGINI DELLO SFONDO ANCORA DA TAGLIARE
+
+  <!-- <div id="section4">
     <img id="background4" src="img/background-full-3.png" alt="" />
     <div id="content4">
       <BalangeroIntro />
@@ -83,25 +96,22 @@
       <AsbestCards />
       <AsbestStats />
     </div>
-  </div>
+  </div> -->
 </main>
 
 <style>
   main {
-    padding: 64px 0 0 0;
+    padding-top: 64px;
     margin: 0;
     text-align: center;
   }
   [id^="section"] {
     position: relative;
     display: flex;
-    /* 
     justify-content: center;
-    align-items: center; */
   }
-  [id^="background"] {
+  .background {
     z-index: 1;
-    /* min-height: 100%; */
     width: 100%;
   }
   [id^="content"] {
@@ -113,29 +123,20 @@
     padding-inline: 10%;
     position: absolute;
     z-index: 2;
-    /* left: 50%; */
-    /* top: 50%; */
-    /* transform: translate(-50%); */
   }
-  #content0,
-  #content2 {
+  #content1-1 {
     gap: 24px;
-  }
-  #content0 {
     top: 30%;
   }
-  #content1 {
+  #content1-2 {
     padding-top: 6%;
+    gap: 24px;
     gap: 4em;
   }
-  #content2 {
-    padding: 8% 0 0 0;
+  #content1-3 {
+    padding-top: 8%;
   }
-  #section3 {
-    flex-direction: column;
-    justify-content: center;
-  }
-  #content3 {
+  #content2-1 {
     padding-block: 160px;
     top: 250px;
   }
