@@ -4,7 +4,7 @@
 </script>
 
 <div class="mdc-typography--headline4 uppercase">Si puó tornare indietro da questo disastro?</div>
-<div class="flex-row-8">
+<div class="flex-row-32">
   <ContentCard
     contentId={"content-libby1"}
     src={"img/libby-hutt.jpg"}
@@ -14,7 +14,7 @@
     direction={"left-card"}
   />
 
-  <div class="mdc-typography--body1 hidden right-align flex-column-4" id="content-libby1">
+  <div class="mdc-typography--body1 hidden right-align flex-column-16" id="content-libby1">
     Il signor Ralph Hutt ha lavorato a contatto con l'amianto soltanto per 18 mesi e gli è stata diagnosticata l'asbestosi polmonare nel 2002. Ai tempi, le
     uniche precauzioni fornite ai lavoratori dall'azienda erano mascherine di carta. Quando ha chiesto al suo supervisore una maggiore protezione, gli fu detto
     di non preoccuparsi poiché ció che respiravano era solo polvere.
@@ -29,8 +29,8 @@
   </div>
 </div>
 
-<div class="flex-row-8">
-  <div class="mdc-typography--body1 hidden left-align flex-column-4" id="content-libby2">
+<div class="flex-row-32">
+  <div class="mdc-typography--body1 hidden left-align flex-column-16" id="content-libby2">
     Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono morti per malattie
     correlate all'amianto, e circa 1 su 10 tra tutti abitanti é attualmente malato.
     <br /><br />

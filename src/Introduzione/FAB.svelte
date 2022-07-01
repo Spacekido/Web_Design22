@@ -5,11 +5,9 @@
     icon = "arrow_downward";
 </script>
 
-<div class="margins">
-  <Fab color="primary" href="#{target}">
-    <Icon class="material-icons">{icon}</Icon>
-  </Fab>
-</div>
+<Fab color="primary" href="#{target}">
+  <Icon class="material-icons">{icon}</Icon>
+</Fab>
 
 <style>
 </style>

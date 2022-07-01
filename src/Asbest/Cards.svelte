@@ -5,16 +5,16 @@
 
 <!-- TODO aggiungere immagini e testo dei posti giusti -->
 <div class="mdc-typography--headline4 uppercase">Perché preoccuparsi così tanto dell'amianto?</div>
-<div class="flex-row-8">
+<div class="flex-row-32">
   <ContentCard
     contentId={"content-asbest1"}
     src={"img/asbest-trump.jpeg"}
     title={"Donald Trump"}
-    subtitle={"45° presidente degli Stati Uniti"}
-    buttonLabel={"Scopri le sue azioni"}
+    subtitle={"Come il 45° presidente degli Stati Uniti viene usato nella propaganda a favore dell'amianto"}
+    buttonLabel={"Approfondisci la storia"}
     direction={"left-card"}
   />
-  <div class="mdc-typography--body1 hidden right-align flex-column-4" id="content-asbest1">
+  <div class="mdc-typography--body1 hidden right-align flex-column-16" id="content-asbest1">
     <div>
       Attaccato per decenni dai difensori della salute, l'ostinatamente provocatorio produttore russo di amianto pensa di aver forse finalmente trovato la
       figura perfetta per una campagna per riabilitare l'immagine profondamente macchiata del prodotto: Presidente Trump.
@@ -31,8 +31,8 @@
 </div>
 
 <!-- TODO si potrebbe togliere questa card o trovare fonte migliore -->
-<div class="flex-row-8">
-  <div class="mdc-typography--body1 hidden left-align flex-column-4" id="content-asbest2">
+<div class="flex-row-32">
+  <div class="mdc-typography--body1 hidden left-align flex-column-16" id="content-asbest2">
     <div>
       Ha liquidato come "non corrispondente alla realtà" uno studio scientifico del 2016 che mostrava tassi elevati di cancro ai polmoni lì.
       <br /><br />
@@ -51,7 +51,7 @@
   />
 </div>
 
-<div class="flex-row-8">
+<div class="flex-row-32">
   <ContentCard
     contentId={"content-asbest3"}
     src={"img/asbest-stepanov.jpg"}
@@ -60,7 +60,7 @@
     buttonLabel={"Leggi le sua parole"}
     direction={"left-card"}
   />
-  <div class="mdc-typography--body1 hidden right-align flex-column-4 italic" id="content-asbest3">
+  <div class="mdc-typography--body1 hidden right-align flex-column-16 italic" id="content-asbest3">
     <div>
       "Sono un pensionato di 88 che ha trascorso decenni a lavorare nella fabbrica di amianto, la mia stessa età avanzata e il mantenimento di una buona salute
       sono la prova che tutta l'"isteria" sull'amianto non poteva essere vera.<br />

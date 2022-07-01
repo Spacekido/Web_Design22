@@ -29,10 +29,10 @@
 <style>
   .left {
     text-align: left;
-    margin-right: 50%;
+    margin-right: 10%;
   }
   .right {
     text-align: right;
-    margin-left: 50%;
+    margin-left: 10%;
   }
 </style>

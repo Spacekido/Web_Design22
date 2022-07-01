@@ -28,30 +28,66 @@
   font-family: 'Saira Semi Condensed', sans-serif !important;
 }
 
+
+@media (min-width: 1300px) {
+  .mdc-typography--headline4 {
+    font-size: 2.2em;
+    line-height: 1.5em;
+  }
+
+  .mdc-typography--headline6 {
+    font-size: 1.1em;
+  }
+
+  .mdc-typography--body1 {
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+
+  .mdc-typography--subtitle1 {
+    font-size: 1.1em;
+    line-height: 1.4em;
+  }
+
+  .mdc-typography--button {
+    font-size: 1.2em;
+    letter-spacing: 0.03em;
+  }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1299px) {
+  .mdc-typography--headline4 {
+    font-size: 2em;
+    line-height: 1.3em;
+  }
+
+  .mdc-typography--headline6 {
+    font-size: 0.9em;
+  }
+
+  .mdc-typography--body1 {
+    font-size: 1em;
+    line-height: 1.3em;
+  }
+
+  .mdc-typography--subtitle1 {
+    font-size: 0.9em;
+    line-height: 1.2em;
+  }
+
+  .mdc-typography--button {
+    font-size: 1em;
+    letter-spacing: 0.01em;
+  }
+}
+
+
+
 // override della grandezza dei testi
+
 // TODO correggere le grandezze dei font (mettere in em al posto di px)
-.mdc-typography--headline4 {
-  line-height: 1.5em;
-}
 
-.mdc-typography--body1 {
-  font-size: 20px;
-  line-height: 1.52em;
-}
-
-.mdc-typography--subtitle1 {
-  font-size: 18px;
-  line-height: 1.4em;
-}
-
-.mdc-typography--subtitle2 {
-  font-size: 16px;
-}
-
-.mdc-typography--button {
-  font-size: 1.2em;
-  letter-spacing: 0.03em;
-}
 
 // altre properties globali per elementi e classi
 html,
@@ -118,43 +154,45 @@ div[id^="content-"] {
 }
 
 .flex-row,
-.flex-row-8,
-.flex-row-4 {
+.flex-row-32,
+.flex-row-16 {
   display: flex;
   flex-direction: row;
 }
 
-.flex-row-4 {
-  gap: 4vw;
+.flex-row-16 {
+  gap: 16px;
 }
 
-.flex-row-8 {
-  gap: 8vw;
+.flex-row-32 {
+  gap: 32px;
 }
 
 .flex-column,
-.flex-column-4,
-.flex-column-8 {
+.flex-column-16,
+.flex-column-32 {
   display: flex;
   flex-direction: column;
 }
 
-.flex-column-4 {
-  gap: 4vh;
+.flex-column-16 {
+  gap: 16px;
 }
 
-.flex-column-8 {
-  gap: 8vh;
+.flex-column-32 {
+  gap: 32px;
 }
 
 .left-align {
   text-align: left;
   align-items: start;
+  margin-left: 30px;
 }
 
 .right-align {
   text-align: right;
   align-items: end;
+  margin-right: 30px;
 }
 
 .stats-card {

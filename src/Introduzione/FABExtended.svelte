@@ -6,12 +6,10 @@
     label = "";
 </script>
 
-<div class="margins">
-  <Fab color="primary" href="#{target}" extended>
-    <Icon class="material-icons">{icon}</Icon>
-    <Label class="mdc-typography--button bold">{label}</Label>
-  </Fab>
-</div>
+<Fab color="primary" href="#{target}" extended>
+  <Icon class="material-icons">{icon}</Icon>
+  <Label class="mdc-typography--button bold">{label}</Label>
+</Fab>
 
 <style>
 </style>

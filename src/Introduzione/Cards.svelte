@@ -3,14 +3,14 @@
 </script>
 
 <div>
-  <div class="mdc-typography--headline3 uppercase primary">Quali luoghi ti attendono nell'Inferno dell'Amianto?</div>
+  <div class="mdc-typography--headline4 uppercase primary">Quali luoghi ti attendono nell'Inferno dell'Amianto?</div>
   <div class="mdc-typography--body1" style="padding-top: 2%;">
     Lasciati guidare nel viaggio attraverso i quattro <span class="highlight">gironi</span> infernali.
     <br />Le <span class="highlight">cittá</span> che incontrerai ti mostreranno quanta influenza abbia avuto l'amianto in tutto il mondo.
     <br />Ad accompagnarti troverai gli <span class="highlight">uomini</span> che di piú hanno sofferto, e potrai ascoltare le loro storie.
   </div>
 </div>
-<div class="flex-row-4 container" style="justify-content: center;">
+<div class="flex-row-16" style="justify-content: center; gap: 2vw">
   <LinkCard
     href="#section3"
     src="img/minacu-mine.png"

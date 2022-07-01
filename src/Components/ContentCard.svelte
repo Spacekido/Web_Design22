@@ -33,8 +33,7 @@
 
 <style>
   :global(.custom-card) {
-    min-width: 30vw;
-    max-width: 30vw;
+    max-width: 400px;
   }
   :global(.left-card) {
     border-top-left-radius: 2em;

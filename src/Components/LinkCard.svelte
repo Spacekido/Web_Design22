@@ -18,6 +18,6 @@
 
 <style>
   a {
-    width: 20vw;
+    width: 16vw;
   }
 </style>

@@ -4,8 +4,8 @@
 </script>
 
 <!-- TODO aggiungere immagini e testo dei posti giusti -->
-<div class="mdc-typography--headline4 uppercase">Come si sono schierati i cittadini con ideologie differenti?</div>
-<div class="flex-row-8">
+<div class="mdc-typography--headline4 uppercase" style="margin-block: 230px;">Come si sono schierati i cittadini con ideologie differenti?</div>
+<div class="flex-row-32">
   <ContentCard
     contentId={"content-minacu1"}
     src={"img/minacu-court.png"}
@@ -14,7 +14,7 @@
     buttonLabel={"Scopri di più"}
     direction={"left-card"}
   />
-  <div class="mdc-typography--body1 hidden right-align flex-column-4" id="content-minacu1">
+  <div class="mdc-typography--body1 hidden right-align flex-column-16" id="content-minacu1">
     <div>
       Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore politico,
       scegliendo sindaci, consiglieri e sacerdoti schierati a <span class="highlight">difesa dell'amianto</span>. Denigrare pubblicamente SAMA può essere
@@ -34,8 +34,8 @@
   </div>
 </div>
 
-<div class="flex-row-8">
-  <div class="mdc-typography--body1 hidden left-align flex-column-4" id="content-minacu2">
+<div class="flex-row-32" style="margin-top: 70px;">
+  <div class="mdc-typography--body1 hidden left-align flex-column-16" id="content-minacu2">
     <div>
       Nel cosiddetto "letto di polvere", dove il minerale si separava, gli operai, tra i tanti donne, erano coperti di polvere.<br />
       <span class="highlight">Evandra Vieira Brito</span>, che ha perso il marito (un ex dipendente Sama) a causa di un cancro nel 2009, ricorda:
@@ -43,10 +43,9 @@
       <br /><br />
       Nonostante questo tipo di testimonianze, gruppi favorevoli alla miniera hanno dichiarato che
       <span class="italic">"il modo in cui viene estratto l'amianto a Minaçu non è dannoso per la salute"</span> e che
-      <span class="italic">"l'azienda rispetta tutte le leggi relative alla <span class="highlight">salute sul lavoro</span>"</span>.
-      <br /><br />
-      Affermano anche che le persone che si ammalano in miniera in questo momento è perché si sono ammalate in una miniera precedente e sono successivamente emigrate
-      per lavoro a Cana Brava.
+      <span class="italic">"l'azienda rispetta tutte le leggi relative alla <span class="highlight">salute sul lavoro</span>"</span>. Affermano anche che le
+      persone che si ammalano in miniera in questo momento è perché si sono ammalate in una miniera precedente e sono successivamente emigrate per lavoro a Cana
+      Brava.
     </div>
     <CustomButton direction={"left-button"} label={"Leggi l'articolo"} href={"https://ejatlas.org/conflict/amianto-mining-in-minacu-goias"} />
   </div>
