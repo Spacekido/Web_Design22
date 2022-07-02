@@ -10,7 +10,7 @@
       <img {src} alt={title} />
       <Content>
         <div class="mdc-typography--body1 highlight">{title}</div>
-        <div class="mdc-typography--subtitle1">{subtitle}</div>
+        <div class="mdc-typography--body1">{subtitle}</div>
       </Content>
     </PrimaryAction>
   </Card>
