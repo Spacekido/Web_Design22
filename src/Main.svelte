@@ -137,8 +137,8 @@
     padding-top: 8%;
   }
   #content2-1 {
-    padding-block: 160px;
-    top: 250px;
+    padding-block: 10vw;
+    top: 15vw;
   }
   /* #content3,
   #content4,

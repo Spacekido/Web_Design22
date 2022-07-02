@@ -5,7 +5,7 @@
 </script>
 
 <Button class={direction} variant="raised" {href}>
-  <Label class="mdc-typography--subtitle1 bold">{label}</Label>
+  <Label class="mdc-typography--body1 bold">{label}</Label>
 </Button>
 
 <style>

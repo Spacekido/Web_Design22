@@ -10,7 +10,7 @@
     <br />Ad accompagnarti troverai gli <span class="highlight">uomini</span> che di piú hanno sofferto, e potrai ascoltare le loro storie.
   </div>
 </div>
-<div class="flex-row-16" style="justify-content: center; gap: 2vw">
+<div class="flex-row-2" style="justify-content: center; gap: 2vw">
   <LinkCard
     href="#section3"
     src="img/minacu-mine.png"

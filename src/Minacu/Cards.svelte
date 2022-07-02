@@ -4,7 +4,7 @@
 </script>
 
 <!-- TODO aggiungere immagini e testo dei posti giusti -->
-<div class="mdc-typography--headline4 uppercase" style="margin-block: 230px;">Come si sono schierati i cittadini con ideologie differenti?</div>
+<div class="mdc-typography--headline4 uppercase" style="padding-block: 8vw;">Come si sono schierati i cittadini con ideologie differenti?</div>
 <div class="flex-row-32">
   <ContentCard
     contentId={"content-minacu1"}
@@ -34,7 +34,7 @@
   </div>
 </div>
 
-<div class="flex-row-32" style="margin-top: 70px;">
+<div class="flex-row-32" style="margin-top: 2vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-16" id="content-minacu2">
     <div>
       Nel cosiddetto "letto di polvere", dove il minerale si separava, gli operai, tra i tanti donne, erano coperti di polvere.<br />

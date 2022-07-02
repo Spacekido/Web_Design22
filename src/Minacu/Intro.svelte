@@ -36,10 +36,10 @@
   /* TODO breakpoint sul margine */
   .left {
     text-align: left;
-    margin: 100px 25vw 0 0;
+    margin: 8vw 25vw 0 0;
   }
   .right {
     text-align: right;
-    margin: 20px 30px 0 15vw;
+    margin: 1.5vw 2vw 0 18vw;
   }
 </style>
