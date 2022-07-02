@@ -4,13 +4,13 @@
 
 <div>
   <div class="mdc-typography--headline4 uppercase primary">Quali luoghi ti attendono nell'Inferno dell'Amianto?</div>
-  <div class="mdc-typography--body1" style="padding-top: 2%;">
+  <div class="mdc-typography--body1" style="padding-top: 1vw; padding-bottom: 1.8vw;">
     Lasciati guidare nel viaggio attraverso i quattro <span class="highlight">gironi</span> infernali.
     <br />Le <span class="highlight">cittá</span> che incontrerai ti mostreranno quanta influenza abbia avuto l'amianto in tutto il mondo.
     <br />Ad accompagnarti troverai gli <span class="highlight">uomini</span> che di piú hanno sofferto, e potrai ascoltare le loro storie.
   </div>
 </div>
-<div class="flex-row-2" style="justify-content: center; gap: 2vw">
+<div class="flex-row-2" style="">
   <LinkCard
     href="#section3"
     src="img/minacu-mine.png"
@@ -29,7 +29,7 @@
     href="#section5"
     src="img/libby-mine.png"
     title="Libby, Montana"
-    subtitle="La cittá statunitense che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite."
+    subtitle="La cittá che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite."
   />
 
   <LinkCard

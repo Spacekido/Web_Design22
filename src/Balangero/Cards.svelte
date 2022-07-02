@@ -3,9 +3,9 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<div class="flex-column-32" style="margin-top: 4%;">
+<div class="flex-column-4" style="margin-top: 4%;">
   <div class="mdc-typography--headline4 uppercase">La miniera raccontata direttamente dai suoi testimoni</div>
-  <div class="flex-row-32">
+  <div class="flex-row-4">
     <ContentCard
       contentId={"content-balangero1"}
       src={"img/balangero-berrino.jpg"}
@@ -15,7 +15,7 @@
       direction={"left-card"}
     />
 
-    <div class="mdc-typography--body1 hidden right-align flex-column-16" id="content-balangero1">
+    <div class="mdc-typography--body1 hidden right-align flex-column-2" id="content-balangero1">
       <div>
         Una testimonianza diretta della tragedia causata dall'amianto ci arriva dal medico epidemiologo ed esperto di tumori
         <span class="highlight">Franco Berrino</span>, cresciuto proprio a Balangero dove il padre, l'ingegnere Giovanni Berrino, era stato nominato direttore
@@ -35,8 +35,8 @@
     </div>
   </div>
 
-  <div class="flex-row-32">
-    <div class="mdc-typography--body1 hidden left-align flex-column-16" id="content-balangero2">
+  <div class="flex-row-4">
+    <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-balangero2">
       <div>
         Nel novembre del 1941 <span class="highlight">Primo Levi</span>, neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche
         sull’estrazione del prezioso nichel dalla roccia di serpentino. Levi descrive la cava paragonandola alla rappresentazione dantesca dei

@@ -5,7 +5,7 @@
 
 <!-- TODO aggiungere immagini e testo dei posti giusti -->
 <div class="mdc-typography--headline4 uppercase" style="padding-block: 8vw;">Come si sono schierati i cittadini con ideologie differenti?</div>
-<div class="flex-row-32">
+<div class="flex-row-4" style="margin-top: 4vw;">
   <ContentCard
     contentId={"content-minacu1"}
     src={"img/minacu-court.png"}
@@ -14,7 +14,7 @@
     buttonLabel={"Scopri di più"}
     direction={"left-card"}
   />
-  <div class="mdc-typography--body1 hidden right-align flex-column-16" id="content-minacu1">
+  <div class="mdc-typography--body1 hidden right-align flex-column-2" id="content-minacu1">
     <div>
       Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore politico,
       scegliendo sindaci, consiglieri e sacerdoti schierati a <span class="highlight">difesa dell'amianto</span>. Denigrare pubblicamente SAMA può essere
@@ -34,8 +34,8 @@
   </div>
 </div>
 
-<div class="flex-row-32" style="margin-top: 2vw;">
-  <div class="mdc-typography--body1 hidden left-align flex-column-16" id="content-minacu2">
+<div class="flex-row-4" style="margin-top: 6vw;">
+  <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-minacu2">
     <div>
       Nel cosiddetto "letto di polvere", dove il minerale si separava, gli operai, tra i tanti donne, erano coperti di polvere.<br />
       <span class="highlight">Evandra Vieira Brito</span>, che ha perso il marito (un ex dipendente Sama) a causa di un cancro nel 2009, ricorda:

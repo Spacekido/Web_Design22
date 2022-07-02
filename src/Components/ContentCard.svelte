@@ -14,12 +14,12 @@
 <Card class="custom-card {direction}">
   <PrimaryAction on:click={() => document.getElementById(contentId).classList.toggle("hidden")}>
     <img {src} alt={title} />
-    <Content>
+    <Content style="padding: 1vw;">
       <div class="mdc-typography--body1 highlight">{title}</div>
       <div class="mdc-typography--body1">{subtitle}</div>
     </Content>
-    <Actions fullBleed>
-      <Button>
+    <Actions fullBleed style="min-height: 0;">
+      <Button style="padding: 0 1.6vw 0.8vw 1.6vw;">
         {#if direction === "left-card"}
           <Label class="mdc-typography--body1 bold">{buttonLabel}</Label>
           <i class="material-icons" aria-hidden="true">arrow_forward</i>
@@ -37,16 +37,19 @@
     width: 20vw;
     height: 12vw;
   }
+  i {
+    font-size: 1.5vw;
+  }
   :global(.custom-card) {
     max-width: 25vw;
     max-height: 30vw;
   }
   :global(.left-card) {
-    border-top-left-radius: 2em;
-    border-bottom-right-radius: 2em;
+    border-top-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
   }
   :global(.right-card) {
-    border-top-right-radius: 2em;
-    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
   }
 </style>

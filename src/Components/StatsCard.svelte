@@ -5,7 +5,7 @@
 
 <!-- TODO mettere dimensioni dinamiche vw su componenti della card (content) -->
 <Card class="stats-card" padded>
-  <Content>
+  <Content style="padding: 1vw;">
     <div class="mdc-typography--headline4 highlight">{value}</div>
     <div class="mdc-typography--body1 bold">{caption}</div>
   </Content>
@@ -13,6 +13,7 @@
 
 <style>
   :global(.stats-card) {
-    border-radius: 2em !important;
+    padding: 1vw;
+    border-radius: 3vw !important;
   }
 </style>

@@ -4,20 +4,14 @@
   export var href, src, title, subtitle;
 </script>
 
-<a {href}>
-  <Card>
+<a {href} style="width: 16vw;">
+  <Card style="max-height: 20vw;">
     <PrimaryAction>
       <img {src} alt={title} />
-      <Content>
+      <Content style="padding: 1vw;">
         <div class="mdc-typography--body1 highlight">{title}</div>
         <div class="mdc-typography--body1">{subtitle}</div>
       </Content>
     </PrimaryAction>
   </Card>
 </a>
-
-<style>
-  a {
-    width: 16vw;
-  }
-</style>

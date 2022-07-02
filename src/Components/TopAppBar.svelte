@@ -18,7 +18,7 @@
 </script>
 
 <TopAppBar variant="fixed" class="transparent">
-  <Row class="mdc-elevation--z4" style="background-color: white">
+  <Row class="mdc-elevation--z4" style="background-color: white; height: 5vw;">
     <!-- <Section>
       <Link href="http://www.unige.it">
         <Image src="img/unige-logo.svg" alt="Logo di UniGe" width="24" height="24" />
@@ -31,11 +31,11 @@
     <!-- <Section align="end" toolbar>
       <IconButton class="material-icons" aria-label="Options">settings</IconButton>
     </Section> -->
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#section0">L'Amianto</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content3">Minaçu, Brasile</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content4">Balangero, Italia</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content5">Libby, USA</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content6">Asbest, Russia</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#section1-2">L'Amianto</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content2-1">Minaçu, Brasile</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content3-1">Balangero, Italia</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content4-1">Libby, USA</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content5-1">Asbest, Russia</Link></Section>
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#">???</Link></Section>
   </Row>
   <LinearProgress {progress} />

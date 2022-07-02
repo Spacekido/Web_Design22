@@ -1,10 +1,9 @@
 <script>
   import TopAppBar from "./Components/TopAppBar.svelte";
-  import IntroTitle from "./Introduzione/Title.svelte";
-  import FAB from "./Introduzione/FAB.svelte";
-  import FABExtended from "./Introduzione/FABExtended.svelte";
-  import IntroAmianto from "./Introduzione/Amianto.svelte";
-  import IntroCards from "./Introduzione/Cards.svelte";
+  import FAB from "./Components/CustomFAB.svelte";
+  import IntroTitle from "./Amianto/Title.svelte";
+  import IntroIntro from "./Amianto/Intro.svelte";
+  import IntroCards from "./Amianto/Cards.svelte";
   import BalangeroIntro from "./Balangero/Intro.svelte";
   import BalangeroCards from "./Balangero/Cards.svelte";
   import BalangeroStats from "./Balangero/Stats.svelte";
@@ -27,15 +26,14 @@
     <img class="background" src="img/background-1-1.png" alt="" />
     <div id="content1-1">
       <IntroTitle />
-      <FABExtended target={"section1-2"} label={"Comincia il viaggio"} />
+      <FAB target={"section1-2"} label={"Comincia il viaggio"} />
     </div>
   </div>
 
   <div id="section1-2">
     <img class="background" src="img/background-1-2.png" alt="" />
     <div id="content1-2">
-      <IntroAmianto />
-      <!-- <FAB target={"section2"} style="margin-top: 96px" /> -->
+      <IntroIntro />
     </div>
   </div>
 
@@ -43,8 +41,8 @@
     <img class="background" src="img/background-1-3.png" alt="" />
     <div id="content1-3">
       <IntroCards />
-      <div style="margin-top: 4%;">
-        <FABExtended target={"content2-1"} label={"Entra nella miniera"} />
+      <div style="margin-top: 2vw;">
+        <FAB target={"content2-1"} label={"Entra nella miniera"} />
       </div>
     </div>
   </div>
@@ -69,39 +67,74 @@
       <MinacuStats />
     </div>
   </div>
-  TODO - RESTO DELLE IMMAGINI DELLO SFONDO ANCORA DA TAGLIARE
 
-  <!-- <div id="section4">
-    <img id="background4" src="img/background-full-3.png" alt="" />
-    <div id="content4">
+  <div id="section3-1">
+    <img class="background" src="img/background-3-1.png" alt="" />
+    <div id="content3-1">
       <BalangeroIntro />
+    </div>
+  </div>
+
+  <div id="section3-2">
+    <img class="background" src="img/background-3-2.png" alt="" />
+    <div id="content3-2">
       <BalangeroCards />
+    </div>
+  </div>
+
+  <div id="section3-3">
+    <img class="background" src="img/background-3-3.png" alt="" />
+    <div id="content3-3">
       <BalangeroStats />
     </div>
   </div>
 
-  <div id="section5">
-    <img id="background5" src="img/background-full-3.png" alt="" />
-    <div id="content5">
+  <div id="section4-1">
+    <img class="background" src="img/background-4-1.png" alt="" />
+    <div id="content4-1">
       <LibbyIntro />
+    </div>
+  </div>
+
+  <div id="section4-2">
+    <img class="background" src="img/background-4-2.png" alt="" />
+    <div id="content4-2">
       <LibbyCards />
+    </div>
+  </div>
+
+  <div id="section4-3">
+    <img class="background" src="img/background-4-3.png" alt="" />
+    <div id="content4-3">
       <LibbyStats />
     </div>
   </div>
 
-  <div id="section6">
-    <img id="background6" src="img/background-full-3.png" alt="" />
-    <div id="content6">
+  <div id="section5-1">
+    <img class="background" src="img/background-5-1.png" alt="" />
+    <div id="content5-1">
       <AsbestIntro />
+    </div>
+  </div>
+
+  <div id="section5-2">
+    <img class="background" src="img/background-5-2.png" alt="" />
+    <div id="content5-2">
       <AsbestCards />
+    </div>
+  </div>
+
+  <div id="section5-3">
+    <img class="background" src="img/background-5-3.png" alt="" />
+    <div id="content5-3">
       <AsbestStats />
     </div>
-  </div> -->
+  </div>
 </main>
 
 <style>
   main {
-    padding-top: 64px;
+    padding-top: 5vw;
     margin: 0;
     text-align: center;
   }
@@ -125,31 +158,25 @@
     z-index: 2;
   }
   #content1-1 {
-    gap: 24px;
-    top: 30%;
+    top: 16vw;
+    gap: 0.8vw;
   }
   #content1-2 {
-    padding-top: 6%;
-    gap: 24px;
-    gap: 4em;
+    padding-top: 8vw;
+    gap: 8vw;
   }
   #content1-3 {
-    padding-top: 8%;
+    padding-top: 6vw;
   }
   #content2-1 {
-    padding-block: 10vw;
-    top: 15vw;
+    padding-top: 25vw;
+    padding-bottom: 10vw;
   }
-  /* #content3,
-  #content4,
-  #content5,
-  #content6 {
-    gap: 64px;
-  } */
+
   /* TODO aggiungere altri media breakpoint */
-  @media (min-width: 640px) {
+  /* @media (min-width: 640px) {
     main {
       max-width: none;
     }
-  }
+  } */
 </style>

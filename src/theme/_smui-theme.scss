@@ -35,11 +35,11 @@
 
 .mdc-typography--headline4 {
   font-size: 2.1vw;
-  line-height: 4vw;
+  line-height: 3vw;
 }
 
 .mdc-typography--headline6 {
-  font-size: 1.1em;
+  font-size: 1.2vw;
 }
 
 .mdc-typography--body1 {
@@ -47,15 +47,6 @@
   line-height: 1.5vw;
 }
 
-// .mdc-typography--subtitle1 {
-//   font-size: 1.1em;
-//   line-height: 1.4em;
-// }
-
-.mdc-typography--button {
-  font-size: 1.2em;
-  letter-spacing: 0.03em;
-}
 
 
 
@@ -130,7 +121,7 @@ div[id^="content-"] {
 }
 
 .flex-row,
-.flex-row-32,
+.flex-row-4,
 .flex-row-2 {
   display: flex;
   flex-direction: row;
@@ -140,33 +131,33 @@ div[id^="content-"] {
   gap: 2vw;
 }
 
-.flex-row-32 {
-  gap: 32px;
+.flex-row-4 {
+  gap: 4vw;
 }
 
 .flex-column,
-.flex-column-16,
-.flex-column-32 {
+.flex-column-2,
+.flex-column-4 {
   display: flex;
   flex-direction: column;
 }
 
-.flex-column-16 {
-  gap: 16px;
+.flex-column-2 {
+  gap: 2vw;
 }
 
-.flex-column-32 {
-  gap: 32px;
+.flex-column-4 {
+  gap: 4vw;
 }
 
 .left-align {
   text-align: left;
   align-items: start;
-  margin-left: 30px;
+  margin-left: 6vw;
 }
 
 .right-align {
   text-align: right;
   align-items: end;
-  margin-right: 30px;
+  margin-right: 6vw;
 }
