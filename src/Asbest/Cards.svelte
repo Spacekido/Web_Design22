@@ -3,9 +3,9 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<!-- TODO aggiungere immagini e testo dei posti giusti -->
-<div class="mdc-typography--headline4 uppercase">Perché preoccuparsi così tanto dell'amianto?</div>
-<div class="flex-row-4">
+<!-- TODO rivedere il testo con versione finale -->
+<div class="mdc-typography--headline4 uppercase" style="margin-top: 2vw;">Perché preoccuparsi così tanto dell'amianto?</div>
+<div class="flex-row-4" style="margin-top: 10vw;">
   <ContentCard
     contentId={"content-asbest1"}
     src={"img/asbest-trump.jpeg"}
@@ -19,7 +19,7 @@
       Attaccato per decenni dai difensori della salute, l'ostinatamente provocatorio produttore russo di amianto pensa di aver forse finalmente trovato la
       figura perfetta per una campagna per riabilitare l'immagine profondamente macchiata del prodotto: Presidente Trump.
       <br /><br />
-      Nel 2018 la socieà Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffiguarnte la faccia di Trump e recitante la seguente
+      Nel 2018 la società Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffiguarnte la faccia di Trump e recitante la seguente
       frase <span class="italic">"Approvato da Donald Trump, 45° presidente degli Stati Uniti"</span>
     </div>
     <CustomButton
@@ -31,7 +31,7 @@
 </div>
 
 <!-- TODO si potrebbe togliere questa card o trovare fonte migliore -->
-<div class="flex-row-4">
+<div class="flex-row-4" style="margin-top: 16vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-asbest2">
     <div>
       Ha liquidato come "non corrispondente alla realtà" uno studio scientifico del 2016 che mostrava tassi elevati di cancro ai polmoni lì.
@@ -51,7 +51,7 @@
   />
 </div>
 
-<div class="flex-row-4">
+<div class="flex-row-4" style="margin-top: 12vw;">
   <ContentCard
     contentId={"content-asbest3"}
     src={"img/asbest-stepanov.jpg"}
@@ -71,6 +71,3 @@
     <CustomButton direction={"right-button"} label={"Leggi l'articolo"} href={"https://www.nytimes.com/2019/04/07/world/europe/asbestos-russia-mine.html"} />
   </div>
 </div>
-
-<style>
-</style>

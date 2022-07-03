@@ -134,7 +134,7 @@
 
 <style>
   main {
-    padding-top: 5vw;
+    padding-top: 3.5vw;
     margin: 0;
     text-align: center;
   }
@@ -169,14 +169,20 @@
     padding-top: 6vw;
   }
   #content2-1 {
-    padding-top: 25vw;
+    margin-top: 10vw;
+    padding-top: 15vw;
     padding-bottom: 10vw;
   }
-
-  /* TODO aggiungere altri media breakpoint */
-  /* @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  } */
+  #content3-1 {
+    margin-top: 15vw;
+    padding-top: 15vw;
+  }
+  #content4-1 {
+    margin-top: 15vw;
+    padding-top: 15vw;
+  }
+  #content5-1 {
+    margin-top: 10vw;
+    padding-top: 15vw;
+  }
 </style>

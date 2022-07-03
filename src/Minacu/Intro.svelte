@@ -33,7 +33,6 @@
 </div>
 
 <style>
-  /* TODO breakpoint sul margine */
   .left {
     text-align: left;
     margin: 8vw 25vw 0 0;

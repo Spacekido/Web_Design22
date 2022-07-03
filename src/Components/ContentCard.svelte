@@ -34,8 +34,7 @@
 
 <style>
   img {
-    width: 20vw;
-    height: 12vw;
+    max-height: 14vw;
   }
   i {
     font-size: 1.5vw;

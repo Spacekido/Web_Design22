@@ -8,9 +8,9 @@
     cava d'amianto dell'Occidente, è stata in primo luogo un'immensa fonte di lavoro e ricchezza per la comunità balangerese e i paesi limitrofi.
     <br /><br />
     Le prime attività di estrazione vennero avviate nel 1918 mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare
-    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione tanto da raggiungere il picco di produzione di
-    <span class="highlight">36000 tonnellate</span>
-    annue.
+    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione tanto da raggiungere il
+    <span class="highlight">picco di produzione</span>
+    di 36000 tonnellate annue.
     <br /><br />
     In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta dalla Eternit e dalle Manifatture Colombo ai fratelli Puccini di Roma, ma
     nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne <span class="highlight">chiusa per fallimento</span> e i dipendenti licenziati.
@@ -18,7 +18,7 @@
 </div>
 
 <div class="right">
-  <div class="mdc-typography--headline4 uppercase primary">In quanti hanno dovuto soffrire?</div>
+  <div class="mdc-typography--headline4 uppercase primary">Quanta sofferenza ha causato?</div>
   <div class="mdc-typography--body1">
     Con la chiusura della miniera e le leggi sulla pericolosità dell’amianto, è stato avviato un progetto di messa in sicurezza del luogo a causa delle numerose
     <span class="highlight">vittime e malati</span> accertati tra gli ex lavoratori e le loro famiglie. Gli specialisti hanno esaminato le storie sanitarie di
@@ -32,13 +32,12 @@
 </div>
 
 <style>
-  /* TODO breakpoint sul margine */
   .left {
     text-align: left;
-    margin-right: 40%;
+    margin: 8vw 25vw 0 0;
   }
   .right {
     text-align: right;
-    margin-left: 40%;
+    margin: 23vw 0 0 26vw;
   }
 </style>

@@ -3,8 +3,7 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<!-- TODO aggiungere immagini e testo dei posti giusti -->
-<div class="mdc-typography--headline4 uppercase" style="padding-block: 8vw;">Come si sono schierati i cittadini con ideologie differenti?</div>
+<div class="mdc-typography--headline4 uppercase" style="margin-block: 8vw;">Come si sono schierati i cittadini con ideologie differenti?</div>
 <div class="flex-row-4" style="margin-top: 4vw;">
   <ContentCard
     contentId={"content-minacu1"}
@@ -58,6 +57,3 @@
     direction={"right-card"}
   />
 </div>
-
-<style>
-</style>

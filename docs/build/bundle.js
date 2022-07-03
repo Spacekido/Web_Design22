@@ -7490,7 +7490,7 @@
     	return block;
     }
 
-    // (21:2) <Row class="mdc-elevation--z4" style="background-color: white; height: 5vw;">
+    // (21:2) <Row class="mdc-elevation--z4" style="background-color: white; height: 3.5vw;">
     function create_default_slot_1$5(ctx) {
     	let section0;
     	let t0;
@@ -7675,7 +7675,7 @@
     		block,
     		id: create_default_slot_1$5.name,
     		type: "slot",
-    		source: "(21:2) <Row class=\\\"mdc-elevation--z4\\\" style=\\\"background-color: white; height: 5vw;\\\">",
+    		source: "(21:2) <Row class=\\\"mdc-elevation--z4\\\" style=\\\"background-color: white; height: 3.5vw;\\\">",
     		ctx
     	});
 
@@ -7692,7 +7692,7 @@
     	row = new Row({
     			props: {
     				class: "mdc-elevation--z4",
-    				style: "background-color: white; height: 5vw;",
+    				style: "background-color: white; height: 3.5vw;",
     				$$slots: { default: [create_default_slot_1$5] },
     				$$scope: { ctx }
     			},
@@ -10708,10 +10708,10 @@
     			t6 = text("\r\n    cava d'amianto dell'Occidente, è stata in primo luogo un'immensa fonte di lavoro e ricchezza per la comunità balangerese e i paesi limitrofi.\r\n    ");
     			br0 = element("br");
     			br1 = element("br");
-    			t7 = text("\r\n    Le prime attività di estrazione vennero avviate nel 1918 mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare\r\n    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione tanto da raggiungere il picco di produzione di\r\n    ");
+    			t7 = text("\r\n    Le prime attività di estrazione vennero avviate nel 1918 mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare\r\n    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione tanto da raggiungere il\r\n    ");
     			span1 = element("span");
-    			span1.textContent = "36000 tonnellate";
-    			t9 = text("\r\n    annue.\r\n    ");
+    			span1.textContent = "picco di produzione";
+    			t9 = text("\r\n    di 36000 tonnellate annue.\r\n    ");
     			br2 = element("br");
     			br3 = element("br");
     			t10 = text("\r\n    In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta dalla Eternit e dalle Manifatture Colombo ai fratelli Puccini di Roma, ma\r\n    nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne ");
@@ -10721,7 +10721,7 @@
     			t13 = space();
     			div6 = element("div");
     			div4 = element("div");
-    			div4.textContent = "In quanti hanno dovuto soffrire?";
+    			div4.textContent = "Quanta sofferenza ha causato?";
     			t15 = space();
     			div5 = element("div");
     			t16 = text("Con la chiusura della miniera e le leggi sulla pericolosità dell’amianto, è stato avviato un progetto di messa in sicurezza del luogo a causa delle numerose\r\n    ");
@@ -10746,28 +10746,28 @@
     			add_location(br0, file$f, 8, 4, 542);
     			add_location(br1, file$f, 8, 10, 548);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$f, 11, 4, 866);
+    			add_location(span1, file$f, 11, 4, 843);
     			add_location(br2, file$f, 13, 4, 931);
     			add_location(br3, file$f, 13, 10, 937);
     			attr_dev(span2, "class", "highlight");
     			add_location(span2, file$f, 15, 78, 1187);
     			attr_dev(div2, "class", "mdc-typography--body1");
     			add_location(div2, file$f, 4, 2, 180);
-    			attr_dev(div3, "class", "left svelte-703flg");
+    			attr_dev(div3, "class", "left svelte-1mkfja3");
     			add_location(div3, file$f, 2, 0, 76);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
     			add_location(div4, file$f, 20, 2, 1311);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$f, 23, 4, 1613);
+    			add_location(span3, file$f, 23, 4, 1610);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$f, 25, 4, 1881);
-    			add_location(br4, file$f, 26, 4, 1981);
-    			add_location(br5, file$f, 26, 10, 1987);
+    			add_location(span4, file$f, 25, 4, 1878);
+    			add_location(br4, file$f, 26, 4, 1978);
+    			add_location(br5, file$f, 26, 10, 1984);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$f, 28, 4, 2127);
+    			add_location(span5, file$f, 28, 4, 2124);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$f, 21, 2, 1410);
-    			attr_dev(div6, "class", "right svelte-703flg");
+    			add_location(div5, file$f, 21, 2, 1407);
+    			attr_dev(div6, "class", "right svelte-1mkfja3");
     			add_location(div6, file$f, 19, 0, 1288);
     		},
     		l: function claim(nodes) {
@@ -11841,7 +11841,7 @@
     			i.textContent = "arrow_back";
     			t1 = space();
     			create_component(label.$$.fragment);
-    			attr_dev(i, "class", "material-icons svelte-1fgha7m");
+    			attr_dev(i, "class", "material-icons svelte-701s29");
     			attr_dev(i, "aria-hidden", "true");
     			add_location(i, file$d, 26, 10, 1045);
     		},
@@ -11909,7 +11909,7 @@
     			t0 = space();
     			i = element("i");
     			i.textContent = "arrow_forward";
-    			attr_dev(i, "class", "material-icons svelte-1fgha7m");
+    			attr_dev(i, "class", "material-icons svelte-701s29");
     			attr_dev(i, "aria-hidden", "true");
     			add_location(i, file$d, 24, 10, 924);
     		},
@@ -12206,7 +12206,7 @@
     			create_component(actions.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = /*src*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*title*/ ctx[2]);
-    			attr_dev(img, "class", "svelte-1fgha7m");
+    			attr_dev(img, "class", "svelte-701s29");
     			add_location(img, file$d, 15, 4, 491);
     		},
     		m: function mount(target, anchor) {
@@ -12537,7 +12537,6 @@
     const file$c = "src\\Balangero\\Cards.svelte";
 
     function create_fragment$c(ctx) {
-    	let div7;
     	let div0;
     	let t1;
     	let div3;
@@ -12628,7 +12627,6 @@
 
     	const block = {
     		c: function create() {
-    			div7 = element("div");
     			div0 = element("div");
     			div0.textContent = "La miniera raccontata direttamente dai suoi testimoni";
     			t1 = space();
@@ -12637,18 +12635,18 @@
     			t2 = space();
     			div2 = element("div");
     			div1 = element("div");
-    			t3 = text("Una testimonianza diretta della tragedia causata dall'amianto ci arriva dal medico epidemiologo ed esperto di tumori\r\n        ");
+    			t3 = text("Una testimonianza diretta della tragedia causata dall'amianto ci arriva dal medico epidemiologo ed esperto di tumori\r\n      ");
     			span0 = element("span");
     			span0.textContent = "Franco Berrino";
-    			t5 = text(", cresciuto proprio a Balangero dove il padre, l'ingegnere Giovanni Berrino, era stato nominato direttore\r\n        tecnico della miniera.\r\n        ");
+    			t5 = text(", cresciuto proprio a Balangero dove il padre, l'ingegnere Giovanni Berrino, era stato nominato direttore\r\n      tecnico della miniera.\r\n      ");
     			br0 = element("br");
     			br1 = element("br");
     			t6 = space();
     			span2 = element("span");
-    			t7 = text("\"Non c’era alcuna prevenzione: mio padre fu invitato a dimettersi perché ai padroni non piacevano i suoi investimenti per mettere i filtri, delle\r\n          maniche di cotone. Alla fine è morto di amianto: ");
+    			t7 = text("\"Non c’era alcuna prevenzione: mio padre fu invitato a dimettersi perché ai padroni non piacevano i suoi investimenti per mettere i filtri, delle\r\n        maniche di cotone. Alla fine è morto di amianto: ");
     			span1 = element("span");
     			span1.textContent = "tumore al polmone";
-    			t9 = text(" a 72 anni senza mai aver fumato una sigaretta. Stesso\r\n          destino per mio fratello: mesotelioma, a 67 anni.\"");
+    			t9 = text(" a 72 anni senza mai aver fumato una sigaretta. Stesso destino\r\n        per mio fratello: mesotelioma, a 67 anni.\"");
     			t10 = space();
     			create_component(custombutton0.$$.fragment);
     			t11 = space();
@@ -12658,19 +12656,19 @@
     			t12 = text("Nel novembre del 1941 ");
     			span3 = element("span");
     			span3.textContent = "Primo Levi";
-    			t14 = text(", neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche\r\n        sull’estrazione del prezioso nichel dalla roccia di serpentino. Levi descrive la cava paragonandola alla rappresentazione dantesca dei\r\n        ");
+    			t14 = text(", neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche\r\n      sull’estrazione del prezioso nichel dalla roccia di serpentino. Levi descrive la cava paragonandola alla rappresentazione dantesca dei\r\n      ");
     			span4 = element("span");
     			span4.textContent = "gironi infernali";
-    			t16 = text(", con fibre di amianto onnipresenti, raffigurate come un demone, asfissiante e ostile. Celebre é\r\n        diventata la sua frase ");
+    			t16 = text(", con fibre di amianto onnipresenti, raffigurate come un demone, asfissiante e ostile. Celebre é diventata\r\n      la sua frase ");
     			span5 = element("span");
     			span5.textContent = "“C’era amianto dappertutto, come una neve cenerina”";
-    			t18 = text(".\r\n        ");
+    			t18 = text(".\r\n      ");
     			br2 = element("br");
     			br3 = element("br");
-    			t19 = text("\r\n        Nel 1954 ");
+    			t19 = text("\r\n      Nel 1954 ");
     			span6 = element("span");
     			span6.textContent = "Italo Calvino";
-    			t21 = text(" arriva nella miniera piemontese come redattore del quotidiano “L’Unità” occupandosi del rischio\r\n        amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo\r\n        ");
+    			t21 = text(" arriva nella miniera piemontese come redattore del quotidiano “L’Unità” occupandosi del rischio\r\n      amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo\r\n      ");
     			span8 = element("span");
     			t22 = text("“Il grigio polverone d’asbesto della cava che dove arriva ");
     			span7 = element("span");
@@ -12682,53 +12680,52 @@
     			t27 = space();
     			create_component(contentcard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div0, file$c, 6, 2, 216);
+    			set_style(div0, "margin-block", "10vw");
+    			add_location(div0, file$c, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$c, 20, 8, 995);
-    			add_location(br0, file$c, 22, 8, 1187);
-    			add_location(br1, file$c, 22, 14, 1193);
+    			add_location(span0, file$c, 19, 6, 967);
+    			add_location(br0, file$c, 21, 6, 1155);
+    			add_location(br1, file$c, 21, 12, 1161);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$c, 25, 59, 1448);
+    			add_location(span1, file$c, 24, 57, 1410);
     			attr_dev(span2, "class", "italic");
-    			add_location(span2, file$c, 23, 8, 1209);
-    			add_location(div1, file$c, 18, 6, 854);
+    			add_location(span2, file$c, 22, 6, 1175);
+    			add_location(div1, file$c, 17, 4, 830);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div2, "id", "content-balangero1");
-    			add_location(div2, file$c, 17, 4, 754);
+    			add_location(div2, file$c, 16, 2, 732);
     			attr_dev(div3, "class", "flex-row-4");
-    			add_location(div3, file$c, 7, 2, 328);
+    			set_style(div3, "margin-top", "4vw");
+    			add_location(div3, file$c, 6, 0, 299);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$c, 40, 30, 2104);
+    			add_location(span3, file$c, 39, 28, 2063);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$c, 42, 8, 2381);
+    			add_location(span4, file$c, 41, 6, 2336);
     			attr_dev(span5, "class", "italic");
-    			add_location(span5, file$c, 43, 31, 2557);
-    			add_location(br2, file$c, 44, 8, 2647);
-    			add_location(br3, file$c, 44, 14, 2653);
+    			add_location(span5, file$c, 42, 19, 2510);
+    			add_location(br2, file$c, 43, 6, 2598);
+    			add_location(br3, file$c, 43, 12, 2604);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$c, 45, 17, 2678);
+    			add_location(span6, file$c, 44, 15, 2627);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$c, 47, 87, 3048);
+    			add_location(span7, file$c, 46, 85, 2993);
     			attr_dev(span8, "class", "italic");
-    			add_location(span8, file$c, 47, 8, 2969);
-    			add_location(div4, file$c, 39, 6, 2067);
+    			add_location(span8, file$c, 46, 6, 2914);
+    			add_location(div4, file$c, 38, 4, 2028);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div5, "id", "content-balangero2");
-    			add_location(div5, file$c, 38, 4, 1968);
+    			add_location(div5, file$c, 37, 2, 1931);
     			attr_dev(div6, "class", "flex-row-4");
-    			add_location(div6, file$c, 37, 2, 1938);
-    			attr_dev(div7, "class", "flex-column-4");
-    			set_style(div7, "margin-top", "4%");
-    			add_location(div7, file$c, 5, 0, 161);
+    			set_style(div6, "margin-top", "6vw");
+    			add_location(div6, file$c, 36, 0, 1878);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div7, anchor);
-    			append_dev(div7, div0);
-    			append_dev(div7, t1);
-    			append_dev(div7, div3);
+    			insert_dev(target, div0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div3, anchor);
     			mount_component(contentcard0, div3, null);
     			append_dev(div3, t2);
     			append_dev(div3, div2);
@@ -12745,8 +12742,8 @@
     			append_dev(span2, t9);
     			append_dev(div2, t10);
     			mount_component(custombutton0, div2, null);
-    			append_dev(div7, t11);
-    			append_dev(div7, div6);
+    			insert_dev(target, t11, anchor);
+    			insert_dev(target, div6, anchor);
     			append_dev(div6, div5);
     			append_dev(div5, div4);
     			append_dev(div4, t12);
@@ -12789,9 +12786,13 @@
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div7);
+    			if (detaching) detach_dev(div0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div3);
     			destroy_component(contentcard0);
     			destroy_component(custombutton0);
+    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(div6);
     			destroy_component(custombutton1);
     			destroy_component(contentcard1);
     		}
@@ -13078,13 +13079,11 @@
     function create_fragment$a(ctx) {
     	let div0;
     	let t1;
-    	let div2;
     	let div1;
-    	let t2;
     	let statscard0;
-    	let t3;
+    	let t2;
     	let statscard1;
-    	let t4;
+    	let t3;
     	let statscard2;
     	let current;
 
@@ -13117,22 +13116,18 @@
     			div0 = element("div");
     			div0.textContent = "Percentuali di vittime e inquinamento";
     			t1 = space();
-    			div2 = element("div");
     			div1 = element("div");
-    			t2 = space();
     			create_component(statscard0.$$.fragment);
-    			t3 = space();
+    			t2 = space();
     			create_component(statscard1.$$.fragment);
-    			t4 = space();
+    			t3 = space();
     			create_component(statscard2.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div0, file$a, 4, 0, 92);
-    			attr_dev(div1, "class", "mdc-typography--subtitle1 highlight");
-    			add_location(div1, file$a, 6, 2, 268);
-    			attr_dev(div2, "class", "flex-row-2");
-    			set_style(div2, "justify-content", "center");
-    			set_style(div2, "align-items", "center");
-    			add_location(div2, file$a, 5, 0, 186);
+    			set_style(div0, "margin-top", "8vw");
+    			add_location(div0, file$a, 5, 0, 140);
+    			attr_dev(div1, "class", "flex-row-2");
+    			set_style(div1, "margin-top", "6vw");
+    			add_location(div1, file$a, 6, 0, 259);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13140,14 +13135,12 @@
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, div1);
-    			append_dev(div2, t2);
-    			mount_component(statscard0, div2, null);
-    			append_dev(div2, t3);
-    			mount_component(statscard1, div2, null);
-    			append_dev(div2, t4);
-    			mount_component(statscard2, div2, null);
+    			insert_dev(target, div1, anchor);
+    			mount_component(statscard0, div1, null);
+    			append_dev(div1, t2);
+    			mount_component(statscard1, div1, null);
+    			append_dev(div1, t3);
+    			mount_component(statscard2, div1, null);
     			current = true;
     		},
     		p: noop,
@@ -13167,7 +13160,7 @@
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(div1);
     			destroy_component(statscard0);
     			destroy_component(statscard1);
     			destroy_component(statscard2);
@@ -13224,21 +13217,35 @@
     	let t3;
     	let div2;
     	let t4;
+    	let span0;
+    	let t6;
     	let br0;
     	let br1;
-    	let t5;
+    	let t7;
+    	let span1;
+    	let t9;
+    	let span2;
+    	let t11;
     	let br2;
     	let br3;
-    	let t6;
-    	let t7;
+    	let t12;
+    	let span3;
+    	let t14;
+    	let span4;
+    	let t16;
+    	let t17;
     	let div6;
     	let div4;
-    	let t9;
+    	let t19;
     	let div5;
-    	let t10;
+    	let t20;
+    	let span5;
+    	let t22;
     	let br4;
     	let br5;
-    	let t11;
+    	let t23;
+    	let span6;
+    	let t25;
 
     	const block = {
     		c: function create() {
@@ -13250,43 +13257,78 @@
     			div1.textContent = "Storia del passato";
     			t3 = space();
     			div2 = element("div");
-    			t4 = text("La cittadina di Libby in Montana è il sito di uno dei peggiori disastri ambientali causati dall'uomo. La polvere di amianto tossico proveniente dalle\r\n    miniere di vermiculite ha ucciso centinaia di residenti, ammalandone altre migliaia.\r\n    ");
+    			t4 = text("La cittadina di Libby in Montana è il sito di uno dei peggiori ");
+    			span0 = element("span");
+    			span0.textContent = "disastri ambientali";
+    			t6 = text(" causati dall'uomo. La polvere di amianto\r\n    tossico proveniente dalle miniere di vermiculite ha ucciso centinaia di residenti, ammalandone altre migliaia.\r\n    ");
     			br0 = element("br");
     			br1 = element("br");
-    			t5 = text("\r\n    Nel 1963, la W.R. Grace & Company, iniziò a scavare un deposito di vermiculite su una cima boschiva vicino a Libby. Il minerale, relativamente innocuo, è stato\r\n    utilizzato come isolamento delle soffitte fino agli anni 1980. Ma nello stesso deposito è stato trovato un tipo naturale di amianto mortale.\r\n    ");
+    			t7 = text("\r\n    Nel 1963, la W.R. Grace & Company, iniziò a scavare un deposito di ");
+    			span1 = element("span");
+    			span1.textContent = "vermiculite";
+    			t9 = text(" su una cima boschiva vicino a Libby. Il\r\n    minerale, relativamente innocuo, è stato utilizzato come isolamento delle soffitte fino agli anni 1980. Ma nello stesso deposito è stato trovato un tipo\r\n    naturale di ");
+    			span2 = element("span");
+    			span2.textContent = "amianto mortale";
+    			t11 = text(".\r\n    ");
     			br2 = element("br");
     			br3 = element("br");
-    			t6 = text("\r\n    Per decenni, la miniera ha prodotto tonnellate di polvere al giorno, che non solo fluttuava ovunque negli stabilimenti, ma inondava l'aria respirabile di gran\r\n    parte della città. L'azienda sapeva che la vermiculite era contaminata dall'amianto e che causava complicazioni per la salute. La società non avvertì nessuno\r\n    dell'esposizione all'amianto e l'attività mineraria continuò fino al 1990.");
-    			t7 = space();
+    			t12 = text("\r\n    Per decenni, la miniera ha prodotto ");
+    			span3 = element("span");
+    			span3.textContent = "tonnellate di polvere";
+    			t14 = text(" al giorno, che non solo fluttuava ovunque negli stabilimenti, ma\r\n    inondava l'aria respirabile di gran parte della città. L'azienda sapeva che la vermiculite era ");
+    			span4 = element("span");
+    			span4.textContent = "contaminata";
+    			t16 = text(" dall'amianto e che\r\n    causava complicazioni per la salute. La società non avvertì nessuno dell'esposizione all'amianto e l'attività mineraria continuò fino al 1990.");
+    			t17 = space();
     			div6 = element("div");
     			div4 = element("div");
     			div4.textContent = "Conseguenze sul presente";
-    			t9 = space();
+    			t19 = space();
     			div5 = element("div");
-    			t10 = text("Quando l'azienda venne chiusa, gli operai del governo chiamati per il risanamento hanno trovato l'amianto quasi dappertutto: nei polmoni degli operai e\r\n    delle loro famiglie, sul campo da baseball e sulle piste da corsa del liceo a cui l'azienda aveva donato il materiale per la copertura.\r\n    ");
+    			t20 = text("Quando l'azienda venne chiusa, gli operai del governo chiamati per il risanamento hanno trovato l'amianto quasi ");
+    			span5 = element("span");
+    			span5.textContent = "dappertutto";
+    			t22 = text(":\r\n    nei polmoni degli operai e delle loro famiglie, sul campo da baseball e sulle piste da corsa del liceo a cui l'azienda aveva donato il materiale per la\r\n    copertura.\r\n    ");
     			br4 = element("br");
     			br5 = element("br");
-    			t11 = text("\r\n    Gli effetti dolorosi continuano a svolgersi lentamente: infatti ci vogliono decenni perchè i sintomi delle malattie da amianto si manifestino, e i bambini che\r\n    hanno giocato a baseball o corso sulle piste a contatto con l'amianto stanno iniziando ad ammalarsi solo ora.");
+    			t23 = text("\r\n    Gli effetti dolorosi delle polveri continuano ");
+    			span6 = element("span");
+    			span6.textContent = "lenti ma inesorabili";
+    			t25 = text(": difatti ci vogliono decenni perchè i sintomi delle\r\n    malattie da amianto si manifestino, e i bambini che hanno giocato a baseball o corso sulle piste a contatto con l'amianto anni fa stanno iniziando ad\r\n    ammalarsi solo ora.");
     			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
     			add_location(div0, file$9, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
     			add_location(div1, file$9, 3, 2, 101);
-    			add_location(br0, file$9, 7, 4, 464);
-    			add_location(br1, file$9, 7, 10, 470);
-    			add_location(br2, file$9, 10, 4, 793);
-    			add_location(br3, file$9, 10, 10, 799);
+    			attr_dev(span0, "class", "highlight");
+    			add_location(span0, file$9, 5, 67, 282);
+    			add_location(br0, file$9, 7, 4, 495);
+    			add_location(br1, file$9, 7, 10, 501);
+    			attr_dev(span1, "class", "highlight");
+    			add_location(span1, file$9, 8, 71, 580);
+    			attr_dev(span2, "class", "highlight");
+    			add_location(span2, file$9, 10, 16, 838);
+    			add_location(br2, file$9, 11, 4, 891);
+    			add_location(br3, file$9, 11, 10, 897);
+    			attr_dev(span3, "class", "highlight");
+    			add_location(span3, file$9, 12, 40, 945);
+    			attr_dev(span4, "class", "highlight");
+    			add_location(span4, file$9, 13, 99, 1163);
     			attr_dev(div2, "class", "mdc-typography--body1");
     			add_location(div2, file$9, 4, 2, 178);
-    			attr_dev(div3, "class", "left svelte-703flg");
+    			attr_dev(div3, "class", "left svelte-85ztut");
     			add_location(div3, file$9, 2, 0, 79);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$9, 18, 2, 1257);
-    			add_location(br4, file$9, 22, 4, 1687);
-    			add_location(br5, file$9, 22, 10, 1693);
+    			add_location(div4, file$9, 19, 2, 1417);
+    			attr_dev(span5, "class", "highlight");
+    			add_location(span5, file$9, 21, 116, 1661);
+    			add_location(br4, file$9, 24, 4, 1883);
+    			add_location(br5, file$9, 24, 10, 1889);
+    			attr_dev(span6, "class", "highlight");
+    			add_location(span6, file$9, 25, 50, 1947);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$9, 19, 2, 1348);
-    			attr_dev(div6, "class", "right svelte-703flg");
-    			add_location(div6, file$9, 17, 0, 1234);
+    			add_location(div5, file$9, 20, 2, 1508);
+    			attr_dev(div6, "class", "right svelte-85ztut");
+    			add_location(div6, file$9, 18, 0, 1394);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13299,21 +13341,35 @@
     			append_dev(div3, t3);
     			append_dev(div3, div2);
     			append_dev(div2, t4);
+    			append_dev(div2, span0);
+    			append_dev(div2, t6);
     			append_dev(div2, br0);
     			append_dev(div2, br1);
-    			append_dev(div2, t5);
+    			append_dev(div2, t7);
+    			append_dev(div2, span1);
+    			append_dev(div2, t9);
+    			append_dev(div2, span2);
+    			append_dev(div2, t11);
     			append_dev(div2, br2);
     			append_dev(div2, br3);
-    			append_dev(div2, t6);
-    			insert_dev(target, t7, anchor);
+    			append_dev(div2, t12);
+    			append_dev(div2, span3);
+    			append_dev(div2, t14);
+    			append_dev(div2, span4);
+    			append_dev(div2, t16);
+    			insert_dev(target, t17, anchor);
     			insert_dev(target, div6, anchor);
     			append_dev(div6, div4);
-    			append_dev(div6, t9);
+    			append_dev(div6, t19);
     			append_dev(div6, div5);
-    			append_dev(div5, t10);
+    			append_dev(div5, t20);
+    			append_dev(div5, span5);
+    			append_dev(div5, t22);
     			append_dev(div5, br4);
     			append_dev(div5, br5);
-    			append_dev(div5, t11);
+    			append_dev(div5, t23);
+    			append_dev(div5, span6);
+    			append_dev(div5, t25);
     		},
     		p: noop,
     		i: noop,
@@ -13322,7 +13378,7 @@
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div3);
-    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(t17);
     			if (detaching) detach_dev(div6);
     		}
     	};
@@ -13370,29 +13426,56 @@
     function create_fragment$8(ctx) {
     	let div0;
     	let t1;
-    	let div3;
+    	let div4;
     	let contentcard0;
     	let t2;
+    	let div3;
     	let div2;
     	let t3;
+    	let span0;
+    	let t5;
+    	let span1;
+    	let t7;
+    	let span2;
+    	let t9;
     	let br0;
     	let br1;
-    	let t4;
-    	let div1;
-    	let t6;
-    	let custombutton0;
-    	let t7;
-    	let div5;
-    	let div4;
-    	let t8;
+    	let t10;
+    	let span3;
+    	let t12;
     	let br2;
     	let br3;
-    	let t9;
+    	let t13;
+    	let div1;
+    	let t14;
+    	let span4;
+    	let t16;
+    	let t17;
+    	let custombutton0;
+    	let t18;
+    	let div7;
+    	let div6;
+    	let div5;
+    	let t19;
+    	let span5;
+    	let t21;
+    	let span6;
+    	let t23;
     	let br4;
     	let br5;
-    	let t10;
+    	let t24;
+    	let span7;
+    	let t26;
+    	let span8;
+    	let t28;
+    	let br6;
+    	let br7;
+    	let t29;
+    	let span9;
+    	let t31;
+    	let t32;
     	let custombutton1;
-    	let t11;
+    	let t33;
     	let contentcard1;
     	let current;
 
@@ -13443,51 +13526,114 @@
     			div0 = element("div");
     			div0.textContent = "Si puó tornare indietro da questo disastro?";
     			t1 = space();
-    			div3 = element("div");
+    			div4 = element("div");
     			create_component(contentcard0.$$.fragment);
     			t2 = space();
+    			div3 = element("div");
     			div2 = element("div");
-    			t3 = text("Il signor Ralph Hutt ha lavorato a contatto con l'amianto soltanto per 18 mesi e gli è stata diagnosticata l'asbestosi polmonare nel 2002. Ai tempi, le\r\n    uniche precauzioni fornite ai lavoratori dall'azienda erano mascherine di carta. Quando ha chiesto al suo supervisore una maggiore protezione, gli fu detto\r\n    di non preoccuparsi poiché ció che respiravano era solo polvere.\r\n    ");
+    			t3 = text("Il signor ");
+    			span0 = element("span");
+    			span0.textContent = "Ralph Hutt";
+    			t5 = text(" ha lavorato a contatto con l'amianto soltanto per ");
+    			span1 = element("span");
+    			span1.textContent = "18 mesi";
+    			t7 = text(" e gli è stata\r\n      diagnosticata l'asbestosi polmonare nel 2002. Ai tempi, le uniche precauzioni fornite ai lavoratori dall'azienda erano\r\n      ");
+    			span2 = element("span");
+    			span2.textContent = "mascherine di carta";
+    			t9 = text(". Quando ha chiesto al suo supervisore una maggiore protezione, gli fu detto di non preoccuparsi poiché\r\n      ció che respiravano era solo polvere.\r\n      ");
     			br0 = element("br");
     			br1 = element("br");
-    			t4 = text("\r\n    Giá da allora le sue radiografie mostravano segni dei danni da amianto ai polmoni, tra cui la graduale perdita della capacità di respirare. I dirigenti dell'azienda\r\n    erano al corrente della presenza di amianto nello stabilimento, ma decisero di tenere tutti i lavoratori, tra cui Ralph, all'oscuro.\r\n    ");
-    			div1 = element("div");
-    			div1.textContent = "\"Questo non è il modo in cui me ne voglio andare,\" ha detto. \"Lasciate che qualcuno mi spari. Non voglio essere schiacciato sott'acqua o strangolato. È\r\n      così che ci si sente.\"";
-    			t6 = space();
-    			create_component(custombutton0.$$.fragment);
-    			t7 = space();
-    			div5 = element("div");
-    			div4 = element("div");
-    			t8 = text("Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono morti per malattie\r\n    correlate all'amianto, e circa 1 su 10 tra tutti abitanti é attualmente malato.\r\n    ");
+    			t10 = text("\r\n      Giá da allora le sue radiografie mostravano segni dei danni da amianto ai polmoni, tra cui la graduale perdita della\r\n      ");
+    			span3 = element("span");
+    			span3.textContent = "capacità di respirare";
+    			t12 = text(". I dirigenti dell'azienda erano al corrente della presenza di amianto nello stabilimento, ma decisero\r\n      di tenere tutti i lavoratori, tra cui Ralph, all'oscuro.\r\n      ");
     			br2 = element("br");
     			br3 = element("br");
-    			t9 = text("\r\n    L’Agenzia per la Protezione Ambientale Americana ha effettuato sopralluoghi in circa 8200 proprietà, di cui piú di 2400 siti sono stati risanificati completamente.\r\n    Tra questi rientravano attività commerciali, giardini, abitazioni private, parchi pubblici e altri spazi pubblici frequentati.\r\n    ");
+    			t13 = space();
+    			div1 = element("div");
+    			t14 = text("\"Questo non è il modo in cui me ne voglio andare,\" ha detto. \"Lasciate che qualcuno mi spari. Non voglio essere schiacciato sott'acqua o ");
+    			span4 = element("span");
+    			span4.textContent = "strangolato";
+    			t16 = text(". È così che ci si sente.\"");
+    			t17 = space();
+    			create_component(custombutton0.$$.fragment);
+    			t18 = space();
+    			div7 = element("div");
+    			div6 = element("div");
+    			div5 = element("div");
+    			t19 = text("Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono ");
+    			span5 = element("span");
+    			span5.textContent = "morti";
+    			t21 = text("\r\n      per malattie correlate all'amianto, e circa 1 su 10 tra tutti abitanti é ");
+    			span6 = element("span");
+    			span6.textContent = "attualmente malato";
+    			t23 = text(".\r\n      ");
     			br4 = element("br");
     			br5 = element("br");
-    			t10 = text("\r\n    Ad oggi, per la decontaminazione e il risanamento della città di Libby, sono stati rimossi e rimpiazzati complessivamente più di 750’000 metri cubi di rifiuti\r\n    e materiali da costruzione, causando una spesa di oltre 600 milioni di dollari statali.\r\n    ");
+    			t24 = text("\r\n      L’Agenzia per la Protezione Ambientale Americana ha effettuato sopralluoghi in circa ");
+    			span7 = element("span");
+    			span7.textContent = "8200 proprietà";
+    			t26 = text(", di cui piú di 2400\r\n      siti sono stati risanificati completamente. Tra questi rientravano attività commerciali, giardini, abitazioni private, parchi pubblici e altri\r\n      ");
+    			span8 = element("span");
+    			span8.textContent = "spazi pubblici";
+    			t28 = text(" frequentati.\r\n      ");
+    			br6 = element("br");
+    			br7 = element("br");
+    			t29 = text("\r\n      Ad oggi, per la decontaminazione e il ");
+    			span9 = element("span");
+    			span9.textContent = "risanamento";
+    			t31 = text(" della città di Libby, sono stati rimossi e rimpiazzati complessivamente più\r\n      di 750’000 metri cubi di rifiuti e materiali da costruzione, causando una spesa di oltre 600 milioni di dollari statali.");
+    			t32 = space();
     			create_component(custombutton1.$$.fragment);
-    			t11 = space();
+    			t33 = space();
     			create_component(contentcard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
+    			set_style(div0, "margin-block", "10vw");
     			add_location(div0, file$8, 5, 0, 161);
-    			add_location(br0, file$8, 20, 4, 1059);
-    			add_location(br1, file$8, 20, 10, 1065);
+    			attr_dev(span0, "class", "highlight");
+    			add_location(span0, file$8, 17, 16, 746);
+    			attr_dev(span1, "class", "highlight");
+    			add_location(span1, file$8, 17, 108, 838);
+    			attr_dev(span2, "class", "highlight");
+    			add_location(span2, file$8, 19, 6, 1024);
+    			add_location(br0, file$8, 21, 6, 1230);
+    			add_location(br1, file$8, 21, 12, 1236);
+    			attr_dev(span3, "class", "highlight");
+    			add_location(span3, file$8, 23, 6, 1374);
+    			add_location(br2, file$8, 25, 6, 1600);
+    			add_location(br3, file$8, 25, 12, 1606);
+    			attr_dev(span4, "class", "highlight");
+    			add_location(span4, file$8, 27, 145, 1787);
     			attr_dev(div1, "class", "italic");
-    			add_location(div1, file$8, 23, 4, 1385);
-    			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
-    			attr_dev(div2, "id", "content-libby1");
-    			add_location(div2, file$8, 16, 2, 577);
-    			attr_dev(div3, "class", "flex-row-4");
-    			add_location(div3, file$8, 6, 0, 261);
-    			add_location(br2, file$8, 35, 4, 2112);
-    			add_location(br3, file$8, 35, 10, 2118);
-    			add_location(br4, file$8, 38, 4, 2431);
-    			add_location(br5, file$8, 38, 10, 2437);
-    			attr_dev(div4, "class", "mdc-typography--body1 hidden left-align flex-column-2");
-    			attr_dev(div4, "id", "content-libby2");
-    			add_location(div4, file$8, 32, 2, 1773);
-    			attr_dev(div5, "class", "flex-row-4");
-    			add_location(div5, file$8, 31, 0, 1745);
+    			add_location(div1, file$8, 26, 6, 1620);
+    			add_location(div2, file$8, 16, 4, 723);
+    			attr_dev(div3, "class", "mdc-typography--body1 hidden right-align flex-column-2");
+    			attr_dev(div3, "id", "content-libby1");
+    			add_location(div3, file$8, 15, 2, 629);
+    			attr_dev(div4, "class", "flex-row-4");
+    			set_style(div4, "margin-left", "2vw");
+    			add_location(div4, file$8, 6, 0, 289);
+    			attr_dev(span5, "class", "highlight");
+    			add_location(span5, file$8, 39, 143, 2337);
+    			attr_dev(span6, "class", "highlight");
+    			add_location(span6, file$8, 42, 79, 2471);
+    			add_location(br4, file$8, 43, 6, 2529);
+    			add_location(br5, file$8, 43, 12, 2535);
+    			attr_dev(span7, "class", "highlight");
+    			add_location(span7, file$8, 44, 91, 2634);
+    			attr_dev(span8, "class", "highlight");
+    			add_location(span8, file$8, 46, 6, 2857);
+    			add_location(br6, file$8, 47, 6, 2923);
+    			add_location(br7, file$8, 47, 12, 2929);
+    			attr_dev(span9, "class", "highlight");
+    			add_location(span9, file$8, 48, 44, 2981);
+    			add_location(div5, file$8, 38, 4, 2187);
+    			attr_dev(div6, "class", "mdc-typography--body1 hidden left-align flex-column-2");
+    			attr_dev(div6, "id", "content-libby2");
+    			add_location(div6, file$8, 37, 2, 2094);
+    			attr_dev(div7, "class", "flex-row-4");
+    			set_style(div7, "margin-top", "8vw");
+    			add_location(div7, file$8, 36, 0, 2041);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13495,30 +13641,57 @@
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, div3, anchor);
-    			mount_component(contentcard0, div3, null);
-    			append_dev(div3, t2);
+    			insert_dev(target, div4, anchor);
+    			mount_component(contentcard0, div4, null);
+    			append_dev(div4, t2);
+    			append_dev(div4, div3);
     			append_dev(div3, div2);
     			append_dev(div2, t3);
+    			append_dev(div2, span0);
+    			append_dev(div2, t5);
+    			append_dev(div2, span1);
+    			append_dev(div2, t7);
+    			append_dev(div2, span2);
+    			append_dev(div2, t9);
     			append_dev(div2, br0);
     			append_dev(div2, br1);
-    			append_dev(div2, t4);
+    			append_dev(div2, t10);
+    			append_dev(div2, span3);
+    			append_dev(div2, t12);
+    			append_dev(div2, br2);
+    			append_dev(div2, br3);
+    			append_dev(div2, t13);
     			append_dev(div2, div1);
-    			append_dev(div2, t6);
-    			mount_component(custombutton0, div2, null);
-    			insert_dev(target, t7, anchor);
-    			insert_dev(target, div5, anchor);
-    			append_dev(div5, div4);
-    			append_dev(div4, t8);
-    			append_dev(div4, br2);
-    			append_dev(div4, br3);
-    			append_dev(div4, t9);
-    			append_dev(div4, br4);
-    			append_dev(div4, br5);
-    			append_dev(div4, t10);
-    			mount_component(custombutton1, div4, null);
-    			append_dev(div5, t11);
-    			mount_component(contentcard1, div5, null);
+    			append_dev(div1, t14);
+    			append_dev(div1, span4);
+    			append_dev(div1, t16);
+    			append_dev(div3, t17);
+    			mount_component(custombutton0, div3, null);
+    			insert_dev(target, t18, anchor);
+    			insert_dev(target, div7, anchor);
+    			append_dev(div7, div6);
+    			append_dev(div6, div5);
+    			append_dev(div5, t19);
+    			append_dev(div5, span5);
+    			append_dev(div5, t21);
+    			append_dev(div5, span6);
+    			append_dev(div5, t23);
+    			append_dev(div5, br4);
+    			append_dev(div5, br5);
+    			append_dev(div5, t24);
+    			append_dev(div5, span7);
+    			append_dev(div5, t26);
+    			append_dev(div5, span8);
+    			append_dev(div5, t28);
+    			append_dev(div5, br6);
+    			append_dev(div5, br7);
+    			append_dev(div5, t29);
+    			append_dev(div5, span9);
+    			append_dev(div5, t31);
+    			append_dev(div6, t32);
+    			mount_component(custombutton1, div6, null);
+    			append_dev(div7, t33);
+    			mount_component(contentcard1, div7, null);
     			current = true;
     		},
     		p: noop,
@@ -13540,11 +13713,11 @@
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div3);
+    			if (detaching) detach_dev(div4);
     			destroy_component(contentcard0);
     			destroy_component(custombutton0);
-    			if (detaching) detach_dev(t7);
-    			if (detaching) detach_dev(div5);
+    			if (detaching) detach_dev(t18);
+    			if (detaching) detach_dev(div7);
     			destroy_component(custombutton1);
     			destroy_component(contentcard1);
     		}
@@ -13594,13 +13767,11 @@
     function create_fragment$7(ctx) {
     	let div0;
     	let t1;
-    	let div2;
     	let div1;
-    	let t2;
     	let statscard0;
-    	let t3;
+    	let t2;
     	let statscard1;
-    	let t4;
+    	let t3;
     	let statscard2;
     	let current;
 
@@ -13615,14 +13786,14 @@
     	statscard1 = new StatsCard({
     			props: {
     				value: "2,400+",
-    				caption: "Pazienti diagnosticati"
+    				caption: "Tumori diagnosticati"
     			},
     			$$inline: true
     		});
 
     	statscard2 = new StatsCard({
     			props: {
-    				value: "400+",
+    				value: "694",
     				caption: "Vittime accertate"
     			},
     			$$inline: true
@@ -13633,22 +13804,18 @@
     			div0 = element("div");
     			div0.textContent = "Percentuali di vittime e inquinamento";
     			t1 = space();
-    			div2 = element("div");
     			div1 = element("div");
-    			t2 = space();
     			create_component(statscard0.$$.fragment);
-    			t3 = space();
+    			t2 = space();
     			create_component(statscard1.$$.fragment);
-    			t4 = space();
+    			t3 = space();
     			create_component(statscard2.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div0, file$7, 4, 0, 92);
-    			attr_dev(div1, "class", "mdc-typography--subtitle1 highlight");
-    			add_location(div1, file$7, 6, 2, 268);
-    			attr_dev(div2, "class", "flex-row-2");
-    			set_style(div2, "justify-content", "center");
-    			set_style(div2, "align-items", "center");
-    			add_location(div2, file$7, 5, 0, 186);
+    			set_style(div0, "margin-top", "6vw");
+    			add_location(div0, file$7, 5, 0, 140);
+    			attr_dev(div1, "class", "flex-row-2");
+    			set_style(div1, "margin-top", "4vw");
+    			add_location(div1, file$7, 6, 0, 259);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13656,14 +13823,12 @@
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, div1);
-    			append_dev(div2, t2);
-    			mount_component(statscard0, div2, null);
-    			append_dev(div2, t3);
-    			mount_component(statscard1, div2, null);
-    			append_dev(div2, t4);
-    			mount_component(statscard2, div2, null);
+    			insert_dev(target, div1, anchor);
+    			mount_component(statscard0, div1, null);
+    			append_dev(div1, t2);
+    			mount_component(statscard1, div1, null);
+    			append_dev(div1, t3);
+    			mount_component(statscard2, div1, null);
     			current = true;
     		},
     		p: noop,
@@ -13683,7 +13848,7 @@
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(div1);
     			destroy_component(statscard0);
     			destroy_component(statscard1);
     			destroy_component(statscard2);
@@ -13863,7 +14028,7 @@
     			add_location(span3, file$6, 12, 62, 992);
     			attr_dev(div2, "class", "mdc-typography--body1");
     			add_location(div2, file$6, 4, 2, 177);
-    			attr_dev(div3, "class", "left svelte-1o4943g");
+    			attr_dev(div3, "class", "left svelte-h660k8");
     			add_location(div3, file$6, 2, 0, 74);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
     			add_location(div4, file$6, 19, 2, 1438);
@@ -13887,7 +14052,7 @@
     			add_location(span10, file$6, 30, 4, 2406);
     			attr_dev(div5, "class", "mdc-typography--body1");
     			add_location(div5, file$6, 20, 2, 1530);
-    			attr_dev(div6, "class", "right svelte-1o4943g");
+    			attr_dev(div6, "class", "right svelte-h660k8");
     			add_location(div6, file$6, 18, 0, 1415);
     		},
     		l: function claim(nodes) {
@@ -14150,47 +14315,47 @@
     			t31 = space();
     			create_component(contentcard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			set_style(div0, "padding-block", "8vw");
-    			add_location(div0, file$5, 6, 0, 221);
+    			set_style(div0, "margin-block", "8vw");
+    			add_location(div0, file$5, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$5, 19, 62, 1031);
+    			add_location(span0, file$5, 18, 62, 970);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$5, 21, 6, 1225);
-    			add_location(br0, file$5, 23, 6, 1344);
-    			add_location(br1, file$5, 23, 12, 1350);
+    			add_location(span1, file$5, 20, 6, 1164);
+    			add_location(br0, file$5, 22, 6, 1283);
+    			add_location(br1, file$5, 22, 12, 1289);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$5, 24, 47, 1405);
+    			add_location(span2, file$5, 23, 47, 1344);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$5, 26, 6, 1648);
-    			add_location(div1, file$5, 17, 4, 800);
+    			add_location(span3, file$5, 25, 6, 1587);
+    			add_location(div1, file$5, 16, 4, 739);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div2, "id", "content-minacu1");
-    			add_location(div2, file$5, 16, 2, 705);
+    			add_location(div2, file$5, 15, 2, 644);
     			attr_dev(div3, "class", "flex-row-4");
     			set_style(div3, "margin-top", "4vw");
-    			add_location(div3, file$5, 7, 0, 366);
-    			add_location(br2, file$5, 39, 127, 2322);
+    			add_location(div3, file$5, 6, 0, 305);
+    			add_location(br2, file$5, 38, 127, 2261);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$5, 40, 6, 2336);
+    			add_location(span4, file$5, 39, 6, 2275);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$5, 41, 81, 2558);
+    			add_location(span5, file$5, 40, 81, 2497);
     			attr_dev(span6, "class", "italic");
-    			add_location(span6, file$5, 41, 6, 2483);
-    			add_location(br3, file$5, 42, 6, 2642);
-    			add_location(br4, file$5, 42, 12, 2648);
+    			add_location(span6, file$5, 40, 6, 2422);
+    			add_location(br3, file$5, 41, 6, 2581);
+    			add_location(br4, file$5, 41, 12, 2587);
     			attr_dev(span7, "class", "italic");
-    			add_location(span7, file$5, 44, 6, 2762);
+    			add_location(span7, file$5, 43, 6, 2701);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$5, 45, 76, 2952);
+    			add_location(span8, file$5, 44, 76, 2891);
     			attr_dev(span9, "class", "italic");
-    			add_location(span9, file$5, 45, 6, 2882);
-    			add_location(div4, file$5, 38, 4, 2188);
+    			add_location(span9, file$5, 44, 6, 2821);
+    			add_location(div4, file$5, 37, 4, 2127);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div5, "id", "content-minacu2");
-    			add_location(div5, file$5, 37, 2, 2094);
+    			add_location(div5, file$5, 36, 2, 2033);
     			attr_dev(div6, "class", "flex-row-4");
     			set_style(div6, "margin-top", "6vw");
-    			add_location(div6, file$5, 36, 0, 2041);
+    			add_location(div6, file$5, 35, 0, 1980);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14353,10 +14518,10 @@
     			create_component(statscard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
     			set_style(div0, "margin-top", "8vw");
-    			add_location(div0, file$4, 4, 0, 92);
+    			add_location(div0, file$4, 5, 0, 140);
     			attr_dev(div1, "class", "flex-row-2");
     			set_style(div1, "margin-top", "6vw");
-    			add_location(div1, file$4, 5, 0, 211);
+    			add_location(div1, file$4, 6, 0, 259);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14509,34 +14674,34 @@
     			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
     			add_location(div0, file$3, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div1, file$3, 3, 2, 95);
+    			add_location(div1, file$3, 3, 2, 170);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$3, 6, 4, 329);
+    			add_location(span0, file$3, 6, 4, 404);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$3, 6, 72, 397);
-    			add_location(br0, file$3, 8, 4, 571);
-    			add_location(br1, file$3, 8, 10, 577);
-    			add_location(br2, file$3, 12, 4, 1073);
-    			add_location(br3, file$3, 12, 10, 1079);
+    			add_location(span1, file$3, 6, 72, 472);
+    			add_location(br0, file$3, 8, 4, 646);
+    			add_location(br1, file$3, 8, 10, 652);
+    			add_location(br2, file$3, 12, 4, 1148);
+    			add_location(br3, file$3, 12, 10, 1154);
     			attr_dev(a, "class", "highlight");
     			set_style(a, "text-decoration", "underline");
     			attr_dev(a, "href", "https://www.uralasbest.ru/en/about-company");
-    			add_location(a, file$3, 13, 4, 1091);
+    			add_location(a, file$3, 13, 4, 1166);
     			attr_dev(div2, "class", "mdc-typography--body1");
-    			add_location(div2, file$3, 4, 2, 172);
-    			attr_dev(div3, "class", "left svelte-703flg");
-    			add_location(div3, file$3, 2, 0, 73);
+    			add_location(div2, file$3, 4, 2, 247);
+    			attr_dev(div3, "class", "left svelte-1hgnd73");
+    			add_location(div3, file$3, 2, 0, 148);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$3, 18, 2, 1264);
-    			add_location(br4, file$3, 21, 43, 1588);
-    			add_location(br5, file$3, 24, 4, 1797);
-    			add_location(br6, file$3, 24, 10, 1803);
+    			add_location(div4, file$3, 18, 2, 1339);
+    			add_location(br4, file$3, 21, 43, 1663);
+    			add_location(br5, file$3, 24, 4, 1872);
+    			add_location(br6, file$3, 24, 10, 1878);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$3, 27, 4, 2110);
+    			add_location(span2, file$3, 27, 4, 2185);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$3, 19, 2, 1355);
-    			attr_dev(div6, "class", "right svelte-703flg");
-    			add_location(div6, file$3, 17, 0, 1241);
+    			add_location(div5, file$3, 19, 2, 1430);
+    			attr_dev(div6, "class", "right svelte-1hgnd73");
+    			add_location(div6, file$3, 17, 0, 1316);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14734,7 +14899,7 @@
     			t3 = text("Attaccato per decenni dai difensori della salute, l'ostinatamente provocatorio produttore russo di amianto pensa di aver forse finalmente trovato la\r\n      figura perfetta per una campagna per riabilitare l'immagine profondamente macchiata del prodotto: Presidente Trump.\r\n      ");
     			br0 = element("br");
     			br1 = element("br");
-    			t4 = text("\r\n      Nel 2018 la socieà Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffiguarnte la faccia di Trump e recitante la seguente\r\n      frase ");
+    			t4 = text("\r\n      Nel 2018 la società Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffiguarnte la faccia di Trump e recitante la seguente\r\n      frase ");
     			span = element("span");
     			span.textContent = "\"Approvato da Donald Trump, 45° presidente degli Stati Uniti\"";
     			t6 = space();
@@ -14764,34 +14929,38 @@
     			t16 = space();
     			create_component(custombutton1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div0, file$2, 6, 0, 221);
-    			add_location(br0, file$2, 20, 6, 1041);
-    			add_location(br1, file$2, 20, 12, 1047);
+    			set_style(div0, "margin-top", "2vw");
+    			add_location(div0, file$2, 6, 0, 214);
+    			add_location(br0, file$2, 20, 6, 1085);
+    			add_location(br1, file$2, 20, 12, 1091);
     			attr_dev(span, "class", "italic");
-    			add_location(span, file$2, 22, 12, 1232);
-    			add_location(div1, file$2, 17, 4, 749);
+    			add_location(span, file$2, 22, 12, 1277);
+    			add_location(div1, file$2, 17, 4, 793);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div2, "id", "content-asbest1");
-    			add_location(div2, file$2, 16, 2, 654);
+    			add_location(div2, file$2, 16, 2, 698);
     			attr_dev(div3, "class", "flex-row-4");
-    			add_location(div3, file$2, 7, 0, 322);
-    			add_location(br2, file$2, 37, 6, 1970);
-    			add_location(br3, file$2, 37, 12, 1976);
-    			add_location(div4, file$2, 35, 4, 1815);
+    			set_style(div3, "margin-top", "10vw");
+    			add_location(div3, file$2, 7, 0, 340);
+    			add_location(br2, file$2, 37, 6, 2041);
+    			add_location(br3, file$2, 37, 12, 2047);
+    			add_location(div4, file$2, 35, 4, 1886);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div5, "id", "content-asbest2");
-    			add_location(div5, file$2, 34, 2, 1721);
+    			add_location(div5, file$2, 34, 2, 1792);
     			attr_dev(div6, "class", "flex-row-4");
-    			add_location(div6, file$2, 33, 0, 1693);
-    			add_location(br4, file$2, 65, 78, 3391);
-    			add_location(br5, file$2, 67, 6, 3559);
-    			add_location(br6, file$2, 67, 12, 3565);
-    			add_location(div7, file$2, 63, 4, 3145);
+    			set_style(div6, "margin-top", "16vw");
+    			add_location(div6, file$2, 33, 0, 1738);
+    			add_location(br4, file$2, 65, 78, 3488);
+    			add_location(br5, file$2, 67, 6, 3656);
+    			add_location(br6, file$2, 67, 12, 3662);
+    			add_location(div7, file$2, 63, 4, 3242);
     			attr_dev(div8, "class", "mdc-typography--body1 hidden right-align flex-column-2 italic");
     			attr_dev(div8, "id", "content-asbest3");
-    			add_location(div8, file$2, 62, 2, 3043);
+    			add_location(div8, file$2, 62, 2, 3140);
     			attr_dev(div9, "class", "flex-row-4");
-    			add_location(div9, file$2, 53, 0, 2762);
+    			set_style(div9, "margin-top", "12vw");
+    			add_location(div9, file$2, 53, 0, 2833);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14915,13 +15084,11 @@
     function create_fragment$1(ctx) {
     	let div0;
     	let t1;
-    	let div2;
     	let div1;
-    	let t2;
     	let statscard0;
-    	let t3;
+    	let t2;
     	let statscard1;
-    	let t4;
+    	let t3;
     	let statscard2;
     	let current;
 
@@ -14954,22 +15121,18 @@
     			div0 = element("div");
     			div0.textContent = "Percentuali di vittime e inquinamento";
     			t1 = space();
-    			div2 = element("div");
     			div1 = element("div");
-    			t2 = space();
     			create_component(statscard0.$$.fragment);
-    			t3 = space();
+    			t2 = space();
     			create_component(statscard1.$$.fragment);
-    			t4 = space();
+    			t3 = space();
     			create_component(statscard2.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div0, file$1, 4, 0, 92);
-    			attr_dev(div1, "class", "mdc-typography--subtitle1 highlight");
-    			add_location(div1, file$1, 6, 2, 268);
-    			attr_dev(div2, "class", "flex-row-2");
-    			set_style(div2, "justify-content", "center");
-    			set_style(div2, "align-items", "center");
-    			add_location(div2, file$1, 5, 0, 186);
+    			set_style(div0, "margin-top", "4vw");
+    			add_location(div0, file$1, 5, 0, 140);
+    			attr_dev(div1, "class", "flex-row-2");
+    			set_style(div1, "margin-top", "8vw");
+    			add_location(div1, file$1, 6, 0, 259);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14977,14 +15140,12 @@
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, div1);
-    			append_dev(div2, t2);
-    			mount_component(statscard0, div2, null);
-    			append_dev(div2, t3);
-    			mount_component(statscard1, div2, null);
-    			append_dev(div2, t4);
-    			mount_component(statscard2, div2, null);
+    			insert_dev(target, div1, anchor);
+    			mount_component(statscard0, div1, null);
+    			append_dev(div1, t2);
+    			mount_component(statscard1, div1, null);
+    			append_dev(div1, t3);
+    			mount_component(statscard2, div1, null);
     			current = true;
     		},
     		p: noop,
@@ -15004,7 +15165,7 @@
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(div1);
     			destroy_component(statscard0);
     			destroy_component(statscard1);
     			destroy_component(statscard2);
@@ -15300,159 +15461,159 @@
     			t31 = space();
     			div29 = element("div");
     			create_component(asbeststats.$$.fragment);
-    			attr_dev(img0, "class", "background svelte-wtn8ba");
+    			attr_dev(img0, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img0.src, img0_src_value = "img/background-1-1.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
     			add_location(img0, file, 25, 4, 1098);
     			attr_dev(div0, "id", "content1-1");
-    			attr_dev(div0, "class", "svelte-wtn8ba");
+    			attr_dev(div0, "class", "svelte-1k5l1bp");
     			add_location(div0, file, 26, 4, 1166);
     			attr_dev(div1, "id", "section1-1");
-    			attr_dev(div1, "class", "svelte-wtn8ba");
+    			attr_dev(div1, "class", "svelte-1k5l1bp");
     			add_location(div1, file, 24, 2, 1071);
-    			attr_dev(img1, "class", "background svelte-wtn8ba");
+    			attr_dev(img1, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img1.src, img1_src_value = "img/background-1-2.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
     			add_location(img1, file, 33, 4, 1331);
     			attr_dev(div2, "id", "content1-2");
-    			attr_dev(div2, "class", "svelte-wtn8ba");
+    			attr_dev(div2, "class", "svelte-1k5l1bp");
     			add_location(div2, file, 34, 4, 1399);
     			attr_dev(div3, "id", "section1-2");
-    			attr_dev(div3, "class", "svelte-wtn8ba");
+    			attr_dev(div3, "class", "svelte-1k5l1bp");
     			add_location(div3, file, 32, 2, 1304);
-    			attr_dev(img2, "class", "background svelte-wtn8ba");
+    			attr_dev(img2, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img2.src, img2_src_value = "img/background-1-3.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "");
     			add_location(img2, file, 40, 4, 1497);
     			set_style(div4, "margin-top", "2vw");
     			add_location(div4, file, 43, 6, 1616);
     			attr_dev(div5, "id", "content1-3");
-    			attr_dev(div5, "class", "svelte-wtn8ba");
+    			attr_dev(div5, "class", "svelte-1k5l1bp");
     			add_location(div5, file, 41, 4, 1565);
     			attr_dev(div6, "id", "section1-3");
-    			attr_dev(div6, "class", "svelte-wtn8ba");
+    			attr_dev(div6, "class", "svelte-1k5l1bp");
     			add_location(div6, file, 39, 2, 1470);
-    			attr_dev(img3, "class", "background svelte-wtn8ba");
+    			attr_dev(img3, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img3.src, img3_src_value = "img/background-2-1.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "");
     			add_location(img3, file, 50, 4, 1784);
     			attr_dev(div7, "id", "content2-1");
-    			attr_dev(div7, "class", "svelte-wtn8ba");
+    			attr_dev(div7, "class", "svelte-1k5l1bp");
     			add_location(div7, file, 51, 4, 1852);
     			attr_dev(div8, "id", "section2-1");
-    			attr_dev(div8, "class", "svelte-wtn8ba");
+    			attr_dev(div8, "class", "svelte-1k5l1bp");
     			add_location(div8, file, 49, 2, 1757);
-    			attr_dev(img4, "class", "background svelte-wtn8ba");
+    			attr_dev(img4, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img4.src, img4_src_value = "img/background-2-2.png")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "");
     			add_location(img4, file, 57, 4, 1951);
     			attr_dev(div9, "id", "content2-2");
-    			attr_dev(div9, "class", "svelte-wtn8ba");
+    			attr_dev(div9, "class", "svelte-1k5l1bp");
     			add_location(div9, file, 58, 4, 2019);
     			attr_dev(div10, "id", "section2-2");
-    			attr_dev(div10, "class", "svelte-wtn8ba");
+    			attr_dev(div10, "class", "svelte-1k5l1bp");
     			add_location(div10, file, 56, 2, 1924);
-    			attr_dev(img5, "class", "background svelte-wtn8ba");
+    			attr_dev(img5, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img5.src, img5_src_value = "img/background-2-3.png")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "alt", "");
     			add_location(img5, file, 64, 4, 2118);
     			attr_dev(div11, "id", "content2-3");
-    			attr_dev(div11, "class", "svelte-wtn8ba");
+    			attr_dev(div11, "class", "svelte-1k5l1bp");
     			add_location(div11, file, 65, 4, 2186);
     			attr_dev(div12, "id", "section2-3");
-    			attr_dev(div12, "class", "svelte-wtn8ba");
+    			attr_dev(div12, "class", "svelte-1k5l1bp");
     			add_location(div12, file, 63, 2, 2091);
-    			attr_dev(img6, "class", "background svelte-wtn8ba");
+    			attr_dev(img6, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img6.src, img6_src_value = "img/background-3-1.png")) attr_dev(img6, "src", img6_src_value);
     			attr_dev(img6, "alt", "");
     			add_location(img6, file, 71, 4, 2285);
     			attr_dev(div13, "id", "content3-1");
-    			attr_dev(div13, "class", "svelte-wtn8ba");
+    			attr_dev(div13, "class", "svelte-1k5l1bp");
     			add_location(div13, file, 72, 4, 2353);
     			attr_dev(div14, "id", "section3-1");
-    			attr_dev(div14, "class", "svelte-wtn8ba");
+    			attr_dev(div14, "class", "svelte-1k5l1bp");
     			add_location(div14, file, 70, 2, 2258);
-    			attr_dev(img7, "class", "background svelte-wtn8ba");
+    			attr_dev(img7, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img7.src, img7_src_value = "img/background-3-2.png")) attr_dev(img7, "src", img7_src_value);
     			attr_dev(img7, "alt", "");
     			add_location(img7, file, 78, 4, 2455);
     			attr_dev(div15, "id", "content3-2");
-    			attr_dev(div15, "class", "svelte-wtn8ba");
+    			attr_dev(div15, "class", "svelte-1k5l1bp");
     			add_location(div15, file, 79, 4, 2523);
     			attr_dev(div16, "id", "section3-2");
-    			attr_dev(div16, "class", "svelte-wtn8ba");
+    			attr_dev(div16, "class", "svelte-1k5l1bp");
     			add_location(div16, file, 77, 2, 2428);
-    			attr_dev(img8, "class", "background svelte-wtn8ba");
+    			attr_dev(img8, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img8.src, img8_src_value = "img/background-3-3.png")) attr_dev(img8, "src", img8_src_value);
     			attr_dev(img8, "alt", "");
     			add_location(img8, file, 85, 4, 2625);
     			attr_dev(div17, "id", "content3-3");
-    			attr_dev(div17, "class", "svelte-wtn8ba");
+    			attr_dev(div17, "class", "svelte-1k5l1bp");
     			add_location(div17, file, 86, 4, 2693);
     			attr_dev(div18, "id", "section3-3");
-    			attr_dev(div18, "class", "svelte-wtn8ba");
+    			attr_dev(div18, "class", "svelte-1k5l1bp");
     			add_location(div18, file, 84, 2, 2598);
-    			attr_dev(img9, "class", "background svelte-wtn8ba");
+    			attr_dev(img9, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img9.src, img9_src_value = "img/background-4-1.png")) attr_dev(img9, "src", img9_src_value);
     			attr_dev(img9, "alt", "");
     			add_location(img9, file, 92, 4, 2795);
     			attr_dev(div19, "id", "content4-1");
-    			attr_dev(div19, "class", "svelte-wtn8ba");
+    			attr_dev(div19, "class", "svelte-1k5l1bp");
     			add_location(div19, file, 93, 4, 2863);
     			attr_dev(div20, "id", "section4-1");
-    			attr_dev(div20, "class", "svelte-wtn8ba");
+    			attr_dev(div20, "class", "svelte-1k5l1bp");
     			add_location(div20, file, 91, 2, 2768);
-    			attr_dev(img10, "class", "background svelte-wtn8ba");
+    			attr_dev(img10, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img10.src, img10_src_value = "img/background-4-2.png")) attr_dev(img10, "src", img10_src_value);
     			attr_dev(img10, "alt", "");
     			add_location(img10, file, 99, 4, 2961);
     			attr_dev(div21, "id", "content4-2");
-    			attr_dev(div21, "class", "svelte-wtn8ba");
+    			attr_dev(div21, "class", "svelte-1k5l1bp");
     			add_location(div21, file, 100, 4, 3029);
     			attr_dev(div22, "id", "section4-2");
-    			attr_dev(div22, "class", "svelte-wtn8ba");
+    			attr_dev(div22, "class", "svelte-1k5l1bp");
     			add_location(div22, file, 98, 2, 2934);
-    			attr_dev(img11, "class", "background svelte-wtn8ba");
+    			attr_dev(img11, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img11.src, img11_src_value = "img/background-4-3.png")) attr_dev(img11, "src", img11_src_value);
     			attr_dev(img11, "alt", "");
     			add_location(img11, file, 106, 4, 3127);
     			attr_dev(div23, "id", "content4-3");
-    			attr_dev(div23, "class", "svelte-wtn8ba");
+    			attr_dev(div23, "class", "svelte-1k5l1bp");
     			add_location(div23, file, 107, 4, 3195);
     			attr_dev(div24, "id", "section4-3");
-    			attr_dev(div24, "class", "svelte-wtn8ba");
+    			attr_dev(div24, "class", "svelte-1k5l1bp");
     			add_location(div24, file, 105, 2, 3100);
-    			attr_dev(img12, "class", "background svelte-wtn8ba");
+    			attr_dev(img12, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img12.src, img12_src_value = "img/background-5-1.png")) attr_dev(img12, "src", img12_src_value);
     			attr_dev(img12, "alt", "");
     			add_location(img12, file, 113, 4, 3293);
     			attr_dev(div25, "id", "content5-1");
-    			attr_dev(div25, "class", "svelte-wtn8ba");
+    			attr_dev(div25, "class", "svelte-1k5l1bp");
     			add_location(div25, file, 114, 4, 3361);
     			attr_dev(div26, "id", "section5-1");
-    			attr_dev(div26, "class", "svelte-wtn8ba");
+    			attr_dev(div26, "class", "svelte-1k5l1bp");
     			add_location(div26, file, 112, 2, 3266);
-    			attr_dev(img13, "class", "background svelte-wtn8ba");
+    			attr_dev(img13, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img13.src, img13_src_value = "img/background-5-2.png")) attr_dev(img13, "src", img13_src_value);
     			attr_dev(img13, "alt", "");
     			add_location(img13, file, 120, 4, 3460);
     			attr_dev(div27, "id", "content5-2");
-    			attr_dev(div27, "class", "svelte-wtn8ba");
+    			attr_dev(div27, "class", "svelte-1k5l1bp");
     			add_location(div27, file, 121, 4, 3528);
     			attr_dev(div28, "id", "section5-2");
-    			attr_dev(div28, "class", "svelte-wtn8ba");
+    			attr_dev(div28, "class", "svelte-1k5l1bp");
     			add_location(div28, file, 119, 2, 3433);
-    			attr_dev(img14, "class", "background svelte-wtn8ba");
+    			attr_dev(img14, "class", "background svelte-1k5l1bp");
     			if (!src_url_equal(img14.src, img14_src_value = "img/background-5-3.png")) attr_dev(img14, "src", img14_src_value);
     			attr_dev(img14, "alt", "");
     			add_location(img14, file, 127, 4, 3627);
     			attr_dev(div29, "id", "content5-3");
-    			attr_dev(div29, "class", "svelte-wtn8ba");
+    			attr_dev(div29, "class", "svelte-1k5l1bp");
     			add_location(div29, file, 128, 4, 3695);
     			attr_dev(div30, "id", "section5-3");
-    			attr_dev(div30, "class", "svelte-wtn8ba");
+    			attr_dev(div30, "class", "svelte-1k5l1bp");
     			add_location(div30, file, 126, 2, 3600);
-    			attr_dev(main, "class", "svelte-wtn8ba");
+    			attr_dev(main, "class", "svelte-1k5l1bp");
     			add_location(main, file, 23, 0, 1061);
     		},
     		l: function claim(nodes) {

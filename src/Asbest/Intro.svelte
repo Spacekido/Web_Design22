@@ -1,5 +1,5 @@
 <div class="mdc-typography--headline2 uppercase">Asbest, Russia</div>
-
+<!-- TODO sistemare impaginazione bene dopo aver scelto il testo finale -->
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">Storia del passato</div>
   <div class="mdc-typography--body1">
@@ -30,13 +30,12 @@
 </div>
 
 <style>
-  /* TODO breakpoint sul margine */
   .left {
     text-align: left;
-    margin-right: 40%;
+    margin: 12vw 25vw 0 2vw;
   }
   .right {
     text-align: right;
-    margin-left: 40%;
+    margin: 10vw 0 0 20vw;
   }
 </style>

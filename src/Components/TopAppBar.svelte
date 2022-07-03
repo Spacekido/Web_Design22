@@ -18,7 +18,7 @@
 </script>
 
 <TopAppBar variant="fixed" class="transparent">
-  <Row class="mdc-elevation--z4" style="background-color: white; height: 5vw;">
+  <Row class="mdc-elevation--z4" style="background-color: white; height: 3.5vw;">
     <!-- <Section>
       <Link href="http://www.unige.it">
         <Image src="img/unige-logo.svg" alt="Logo di UniGe" width="24" height="24" />
@@ -40,6 +40,3 @@
   </Row>
   <LinearProgress {progress} />
 </TopAppBar>
-
-<style>
-</style>
