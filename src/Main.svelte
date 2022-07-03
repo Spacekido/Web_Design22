@@ -16,6 +16,8 @@
   import AsbestIntro from "./Asbest/Intro.svelte";
   import AsbestCards from "./Asbest/Cards.svelte";
   import AsbestStats from "./Asbest/Stats.svelte";
+  import BeiguaIntro from "./Beigua/Intro.svelte";
+  import BeiguaCards from "./Beigua/Cards.svelte";
 </script>
 
 <!-- TODO correggere i link in modo che si arrivi sul testo -->
@@ -128,6 +130,20 @@
     <img class="background" src="img/background-5-3.png" alt="" />
     <div id="content5-3">
       <AsbestStats />
+    </div>
+  </div>
+
+  <div id="section6-1">
+    <img class="background" src="img/background-1-1.png" alt="" />
+    <div id="content6-1">
+      <BeiguaIntro />
+    </div>
+  </div>
+
+  <div id="section6-2">
+    <img class="background" src="img/background-1-2.png" alt="" />
+    <div id="content6-2">
+      <BeiguaCards />
     </div>
   </div>
 </main>
