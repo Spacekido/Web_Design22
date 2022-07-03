@@ -1,3 +1,7 @@
+<script>
+  import CustomButton from "../Components/CustomButton.svelte";
+</script>
+
 <div class="mdc-typography--headline2 uppercase">Libby, Montana (USA)</div>
 
 <div class="left">
@@ -26,6 +30,8 @@
     Gli effetti dolorosi delle polveri continuano <span class="highlight">lenti ma inesorabili</span>: difatti ci vogliono decenni perchè i sintomi delle
     malattie da amianto si manifestino, e i bambini che hanno giocato a baseball o corso sulle piste a contatto con l'amianto anni fa stanno iniziando ad
     ammalarsi solo ora.
+    <br /><br />
+    <CustomButton label="Guarda il documentario" href="https://youtu.be/cy3piCUPIkc?t=492" direction="right-button" />
   </div>
   <!-- TODO aggiungere ancora uno o due paragrafi per riempire spazio vuoto -->
 </div>

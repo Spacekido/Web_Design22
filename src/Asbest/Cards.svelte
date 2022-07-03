@@ -4,8 +4,8 @@
 </script>
 
 <!-- TODO rivedere il testo con versione finale -->
-<div class="mdc-typography--headline4 uppercase" style="margin-top: 2vw;">Perché preoccuparsi così tanto dell'amianto?</div>
-<div class="flex-row-4" style="margin-top: 10vw;">
+<div class="mdc-typography--headline4 uppercase" style="margin-top: 4vw;">Perché preoccuparsi così tanto dell'amianto?</div>
+<div class="flex-row-4" style="margin-top: 6vw;">
   <ContentCard
     contentId={"content-asbest1"}
     src={"img/asbest-trump.jpeg"}
@@ -16,11 +16,12 @@
   />
   <div class="mdc-typography--body1 hidden right-align flex-column-2" id="content-asbest1">
     <div>
-      Attaccato per decenni dai difensori della salute, l'ostinatamente provocatorio produttore russo di amianto pensa di aver forse finalmente trovato la
-      figura perfetta per una campagna per riabilitare l'immagine profondamente macchiata del prodotto: Presidente Trump.
+      Attaccato per decenni dai difensori della salute, l'ostinatamente <span class="highlight">provocatoria</span> azienda russa produttrice di amianto pensa
+      di aver forse finalmente trovato la figura perfetta per una <span class="highlight">campagna per riabilitare</span> l'immagine profondamente macchiata del
+      prodotto: l'ex presidente statunitense Donald Trump.
       <br /><br />
-      Nel 2018 la società Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffiguarnte la faccia di Trump e recitante la seguente
-      frase <span class="italic">"Approvato da Donald Trump, 45° presidente degli Stati Uniti"</span>
+      Nel 2018 la società Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffigurante la faccia di Trump e recitante la seguente
+      frase <span class="italic">"Approvato da <span class="highlight">Donald Trump</span>, 45° presidente degli Stati Uniti"</span>
     </div>
     <CustomButton
       direction={"right-button"}
@@ -30,15 +31,20 @@
   </div>
 </div>
 
-<!-- TODO si potrebbe togliere questa card o trovare fonte migliore -->
-<div class="flex-row-4" style="margin-top: 16vw;">
+<div class="flex-row-4" style="margin-top: 6vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-asbest2">
     <div>
-      Ha liquidato come "non corrispondente alla realtà" uno studio scientifico del 2016 che mostrava tassi elevati di cancro ai polmoni lì.
+      Il dottor <span class="highlight">Igor Bragin</span> ha liquidato come "non corrispondente alla realtà" uno studio scientifico del 2016 che mostrava tassi
+      elevati di cancro ai polmoni nei pressi della miniera.
       <br /><br />
-      Lo studio, una revisione comparativa dei tassi di mortalità ad Asbest e nella regione circostante di Sverdlovsk, ha rilevato che "i tassi di mortalità per
-      tumori del polmone, dello stomaco e del colon erano statisticamente significativamente più alti nella città di Asbest". L'incidenza del mesotelioma, una malattia
-      polmonare ampiamente attribuita all'amianto in Occidente, non è stata studiata perché la Russia non registra questa malattia separatamente.
+      Lo studio, una revisione comparativa dei <span class="highlight">tassi di mortalità</span> ad Asbest e nella regione circostante di Sverdlovsk, ha
+      rilevato che "i tassi di mortalità per tumori del polmone, dello stomaco e del colon erano statisticamente e significativamente
+      <span class="highlight">più alti</span>
+      nella città di Asbest".
+      <br /><br />
+      L'incidenza del <span class="highlight">mesotelioma</span>, una malattia polmonare ampiamente attribuita all'amianto in Occidente,
+      <span class="highlight">non è stata studiata</span>
+      perché la Russia non registra questa malattia separatamente.
     </div>
   </div>
   <ContentCard
@@ -51,23 +57,54 @@
   />
 </div>
 
-<div class="flex-row-4" style="margin-top: 12vw;">
+<div class="flex-row-4" style="margin-top: 6vw;">
   <ContentCard
     contentId={"content-asbest3"}
     src={"img/asbest-stepanov.jpg"}
     title={"Viktor Stepanov"}
-    subtitle={"Ex lavoratore della fabbrica di amianto"}
+    subtitle={"Ex lavoratore della fabbrica di Uralasbest"}
     buttonLabel={"Leggi le sua parole"}
     direction={"left-card"}
   />
   <div class="mdc-typography--body1 hidden right-align flex-column-2 italic" id="content-asbest3">
     <div>
-      "Sono un pensionato di 88 che ha trascorso decenni a lavorare nella fabbrica di amianto, la mia stessa età avanzata e il mantenimento di una buona salute
-      sono la prova che tutta l'"isteria" sull'amianto non poteva essere vera.<br />
-      Mentre lavoravo bevevo una bottiglia di latte al giorno, l'azienda le forniva gratuitamente per aiutare i lavoratori a difendersi dalle malattie."
+      "Sono un pensionato di 88 anni che ha trascorso decenni a lavorare nella fabbrica di amianto. La mia stessa età avanzata e il mantenimento di una buona
+      salute sono la prova che tutta l'<span class="highlight">isteria sull'amianto</span> non poteva essere vera.
       <br /><br />
-      "Tutto è pericoloso in una certa misura. Il cento per cento garantisce che qualcosa non è dannoso non esiste."
+      Mentre lavoravo bevevo una <span class="highlight">bottiglia di latte</span> al giorno, l'azienda le forniva gratuitamente per aiutare i lavoratori a difendersi
+      dalle malattie. Tutto è pericoloso in una certa misura. Il cento per cento di certezza che qualcosa non sia dannoso non puó esistere".
     </div>
     <CustomButton direction={"right-button"} label={"Leggi l'articolo"} href={"https://www.nytimes.com/2019/04/07/world/europe/asbestos-russia-mine.html"} />
   </div>
+</div>
+
+<div class="flex-row-4" style="margin-top: 6vw;">
+  <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-asbest4">
+    <div>
+      <span class="highlight">Valentin K. Zemskov</span>, 82 anni, ha lavorato nella miniera per 40 anni e ha sviluppato l'asbestosi, causata dall’inalazione
+      delle fibre di amianto.
+      <br /><br />
+      <span class="italic">"C'era così tanta polvere che non potevi vedere un uomo in piedi accanto a te"</span>, dice ricordando gli anni di lavoro.<br />
+      Per la disabilità, la fabbrica aggiunge <span class="highlight">4.500 rubli</span> al suo assegno mensile per la pensione, una cifra ridicola sufficiente
+      a coprire solo pochi pasti.
+      <br /><br />
+      Tuttavia, è convinto che la città non abbia altra scelta.
+      <span class="italic">"Se non avessimo la fabbrica, <span class="highlight">come vivremmo?</span>"</span>, afferma senza fiato mentre parla nel cortile di
+      una casa di riposo.
+      <span class="italic">"Dobbiamo continuare a tenerla aperta in modo da avere <span class="highlight">posti di lavoro</span> per tutti"</span>.
+    </div>
+    <CustomButton
+      direction={"left-button"}
+      label={"Leggi l'articolo"}
+      href={"https://www.nytimes.com/2013/07/14/business/global/city-in-russia-unable-to-kick-asbestos-habit.html"}
+    />
+  </div>
+  <ContentCard
+    contentId={"content-asbest4"}
+    src={"img/asbest-miner.png"}
+    title={"Valentin K. Zemskov"}
+    subtitle={"Ex lavoratore della miniera"}
+    buttonLabel={"Scopri la testimonianza"}
+    direction={"right-card"}
+  />
 </div>

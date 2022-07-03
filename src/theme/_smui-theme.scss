@@ -2,7 +2,7 @@
 @use "@material/theme/color-palette";
 
 // custom defined colors
-@use "@material/theme/index" as theme with ($primary: #109405,
+@use "@material/theme/index" as theme with ($primary: #333333,
   $secondary: #8BE283,
   $surface: #fff,
   $background: #fff,
@@ -27,7 +27,6 @@
 [class^="mdc-typography--subtitle"] {
   font-family: 'Saira Semi Condensed', sans-serif !important;
 }
-
 
 .mdc-typography--headline2 {
   font-size: 3.6vw;

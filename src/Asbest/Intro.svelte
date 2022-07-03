@@ -1,31 +1,46 @@
+<script>
+  import CustomButton from "../Components/CustomButton.svelte";
+</script>
+
 <div class="mdc-typography--headline2 uppercase">Asbest, Russia</div>
 <!-- TODO sistemare impaginazione bene dopo aver scelto il testo finale -->
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">Storia del passato</div>
   <div class="mdc-typography--body1">
     Ci troviamo in Russia, più precisamente ad Asbest, una piccola città chiamata così proprio per la presenza del
-    <span class="highlight">più grande giacimento</span> a cielo aperto <span class="highlight"> di amianto nel mondo</span>: quasi mezzo milione di tonnellate
-    di amianto vengono scavate ogni anno nella miniera dall'impresa Uralasbest.
+    <span class="highlight">più grande</span> giacimento a cielo aperto di amianto <span class="highlight">nel mondo</span>: quasi mezzo milione di tonnellate
+    di amianto vengono scavate ogni anno nella miniera dall'impresa <span class="highlight">Uralasbest</span>.
     <br /><br />
-    Settantamila persone vivono ad Asbest, un tempo conosciuta come "la città che muore" per i suoi altissimi tassi di cancro ai polmoni e nonostante il divieto
-    di estrazione e distribuzione dell'amianto da parte degli altri paesi, l'azienda locale ha cercato di eliminare le associazioni dell'amianto con il cancro ai
-    polmoni e altre malattie rinominando il suo prodotto come "crisotilo", il nome blando e tecnico del tipo specifico di minerale che estrae principalmente.
+    Circa settantamila persone vivono ad Asbest, un tempo conosciuta come <span class="highlight">"la città che muore"</span> per i suoi altissimi tassi di
+    cancro ai polmoni.
     <br /><br />
-    <a class="highlight" style="text-decoration: underline;" href="https://www.uralasbest.ru/en/about-company">Scopri Uralasbest</a>
+    Nonostante il <span class="highlight">divieto</span> di estrazione e distribuzione dell'amianto da parte degli altri paesi, l'azienda locale ha cercato di
+    eliminare l'associazione popolare tra amianto e cancro ai polmoni e altre malattie, <span class="highlight">rinominando</span> il suo prodotto come
+    <span class="highlight">"crisotilo"</span>, il nome blando e tecnico del tipo specifico del minerale estratto.
+    <br /><br />
+    <CustomButton label="L'azienda Uralasbest" href="https://www.uralasbest.ru/en/about-company" direction="left-button" />
   </div>
 </div>
 
 <div class="right">
   <div class="mdc-typography--headline4 uppercase primary">Conseguenze sul presente</div>
   <div class="mdc-typography--body1">
-    Tutt'oggi i produttori russi operano incuranti dei pericoli sostenuti dal governo, il quale fa leva sugli abitanti sapendo che la miniera è l’unica
-    importante fonte economica della città.<br />
-    Asbest, dopo oltre 130 anni di estrazione mineraria intensiva, ha ancora abbastanza amianto crisotilo sepolto nel terreno per mantenere Uralasbest in attività
-    per almeno un altro secolo.
+    Tutt'oggi i produttori russi operano incuranti dei pericoli e <span class="highlight">sostenuti dal governo</span>, il quale fa leva sugli abitanti sapendo
+    che la miniera è l’unica importante fonte economica della città.<br />
+    Asbest, dopo un secolo di estrazione mineraria intensiva, ha ancora abbastanza amianto crisotilo sepolto nel terreno per mantenere Uralasbest in attività per
+    almeno <span class="highlight">un altro secolo</span>.
     <br /><br />
-    L'opinione di molti residenti di Asbest è che ci sono così tante altre cose di cui preoccuparsi nella loro regione fortemente industrializzata, inclusa una centrale
-    nucleare a poche miglia di distanza e una centrale elettrica a carbone ancora più vicina, che l'amianto è probabilmente
-    <span class="highlight">l'ultimo delle loro preoccupazioni</span>.
+    L'opinione di molti residenti di Asbest è che ci sono così tante <span class="highlight">altre questioni</span> di cui preoccuparsi nella loro regione
+    fortemente industrializzata, inclusa una centrale nucleare a poche miglia di distanza e una centrale elettrica a carbone ancora più vicina, che l'amianto è
+    probabilmente
+    <span class="highlight">l'ultima delle loro preoccupazioni</span>.
+    <br /><br />
+    La vita dei cittadini è fortemente intrecciata con quella della miniera, tanto che la città possiede un <span class="highlight">inno municipale</span>
+    chiamato
+    <span class="italic">"Amianto, la mia città e il mio destino"</span>. Dal 2002 il Consiglio Comunale ha adottato perfino una nuova
+    <span class="highlight">bandiera</span>: le linee bianche, che simboleggiano le fibre di amianto, passano attraverso un anello di fiamme. Un cartellone
+    affisso da Uralasbest proclama
+    <span class="italic">"L'amianto è il nostro futuro"</span>.
   </div>
 </div>
 
