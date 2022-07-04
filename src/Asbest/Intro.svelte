@@ -3,7 +3,6 @@
 </script>
 
 <div class="mdc-typography--headline2 uppercase">Asbest, Russia</div>
-<!-- TODO sistemare impaginazione bene dopo aver scelto il testo finale -->
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">Storia del passato</div>
   <div class="mdc-typography--body1">
@@ -47,7 +46,7 @@
 <style>
   .left {
     text-align: left;
-    margin: 12vw 25vw 0 2vw;
+    margin: 2vw 24vw 0 4vw;
   }
   .right {
     text-align: right;

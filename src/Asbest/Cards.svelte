@@ -3,9 +3,8 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<!-- TODO rivedere il testo con versione finale -->
-<div class="mdc-typography--headline4 uppercase" style="margin-top: 4vw;">Perché preoccuparsi così tanto dell'amianto?</div>
-<div class="flex-row-4" style="margin-top: 6vw;">
+<div class="mdc-typography--headline3 uppercase" style="margin-top: 14vw;">Perché preoccuparsi così tanto dell'amianto?</div>
+<div class="flex-row-4" style="margin-top: 3vw;">
   <ContentCard
     contentId={"content-asbest1"}
     src={"img/asbest-trump.jpeg"}
@@ -31,7 +30,7 @@
   </div>
 </div>
 
-<div class="flex-row-4" style="margin-top: 6vw;">
+<div class="flex-row-4" style="margin-top: 3vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-asbest2">
     <div>
       Il dottor <span class="highlight">Igor Bragin</span> ha liquidato come "non corrispondente alla realtà" uno studio scientifico del 2016 che mostrava tassi
@@ -57,7 +56,7 @@
   />
 </div>
 
-<div class="flex-row-4" style="margin-top: 6vw;">
+<div class="flex-row-4" style="margin-top: 3vw;">
   <ContentCard
     contentId={"content-asbest3"}
     src={"img/asbest-stepanov.jpg"}
@@ -78,7 +77,7 @@
   </div>
 </div>
 
-<div class="flex-row-4" style="margin-top: 6vw;">
+<div class="flex-row-4" style="margin-top: 3vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-asbest4">
     <div>
       <span class="highlight">Valentin K. Zemskov</span>, 82 anni, ha lavorato nella miniera per 40 anni e ha sviluppato l'asbestosi, causata dall’inalazione
@@ -89,9 +88,10 @@
       a coprire solo pochi pasti.
       <br /><br />
       Tuttavia, è convinto che la città non abbia altra scelta.
-      <span class="italic">"Se non avessimo la fabbrica, <span class="highlight">come vivremmo?</span>"</span>, afferma senza fiato mentre parla nel cortile di
-      una casa di riposo.
-      <span class="italic">"Dobbiamo continuare a tenerla aperta in modo da avere <span class="highlight">posti di lavoro</span> per tutti"</span>.
+      <span class="italic"
+        >"Se non avessimo la fabbrica, <span class="highlight">come vivremmo?</span>
+        Dobbiamo continuare a tenerla aperta in modo da avere <span class="highlight">posti di lavoro</span> per tutti"</span
+      >, afferma senza fiato mentre parla nel cortile di una casa di riposo.
     </div>
     <CustomButton
       direction={"left-button"}

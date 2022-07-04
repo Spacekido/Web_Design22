@@ -3,7 +3,7 @@
 </script>
 
 <div>
-  <div class="mdc-typography--headline4 uppercase primary">Quali luoghi ti attendono nell'Inferno dell'Amianto?</div>
+  <div class="mdc-typography--headline3 uppercase primary">Quali luoghi ti attendono nell'Inferno dell'Amianto?</div>
   <div class="mdc-typography--body1" style="padding-top: 1vw; padding-bottom: 1.8vw;">
     Lasciati guidare nel viaggio attraverso i quattro <span class="highlight">gironi</span> infernali.
     <br />Le <span class="highlight">cittá</span> che incontrerai ti mostreranno quanta influenza abbia avuto l'amianto in tutto il mondo.

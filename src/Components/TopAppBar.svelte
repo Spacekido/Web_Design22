@@ -32,10 +32,10 @@
       <IconButton class="material-icons" aria-label="Options">settings</IconButton>
     </Section> -->
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#section1-2">L'Amianto</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content2-1">Minaçu, Brasile</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content3-1">Balangero, Italia</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content4-1">Libby, USA</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content5-1">Asbest, Russia</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content2-1">Minaçu</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content3-1">Balangero</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content4-1">Libby</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content5-1">Asbest</Link></Section>
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#section6-1">Il futuro</Link></Section>
   </Row>
   <LinearProgress {progress} />

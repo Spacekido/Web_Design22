@@ -3,7 +3,7 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<div class="mdc-typography--headline4 uppercase" style="margin-block: 10vw;">Altro da dire sul beigua</div>
+<div class="mdc-typography--headline3 uppercase" style="margin-block: 10vw;">Altro da dire sul beigua</div>
 <div class="flex-row-4" style="margin-top: 4vw;">
   <ContentCard
     contentId={"content-balangero1"}

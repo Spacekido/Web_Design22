@@ -3,14 +3,14 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<div class="mdc-typography--headline4 uppercase" style="margin-block: 10vw;">Si puó tornare indietro da questo disastro?</div>
-<div class="flex-row-4" style="margin-left: 2vw;">
+<div class="mdc-typography--headline3 uppercase" style="margin-top: 16vw;">Si puó tornare indietro da questo disastro?</div>
+<div class="flex-row-4" style="margin: 4vw 0 0 2vw;">
   <ContentCard
     contentId={"content-libby1"}
     src={"img/libby-hutt.jpg"}
     title={"Ralph Hutt"}
     subtitle={"La testimonianza di un ex-operaio presso l'azienda mineraria W.R. Grace & Company."}
-    buttonLabel={"Scopri la sua storia"}
+    buttonLabel={"Ascolta la sua storia"}
     direction={"left-card"}
   />
   <div class="mdc-typography--body1 hidden right-align flex-column-2" id="content-libby1">
@@ -34,13 +34,12 @@
   </div>
 </div>
 
-<div class="flex-row-4" style="margin-top: 8vw;">
+<div class="flex-row-4" style="margin-top: 6vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-libby2">
     <div>
-      Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono <span
-        class="highlight">morti</span
-      >
-      per malattie correlate all'amianto, e circa 1 su 10 tra tutti abitanti é <span class="highlight">attualmente malato</span>.
+      Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono
+      <span class="highlight">morti</span> per malattie correlate all'amianto, e circa 1 su 10 tra tutti abitanti é
+      <span class="highlight">attualmente malato</span>.
       <br /><br />
       L’Agenzia per la Protezione Ambientale Americana ha effettuato sopralluoghi in circa <span class="highlight">8200 proprietà</span>, di cui piú di 2400
       siti sono stati risanificati completamente. Tra questi rientravano attività commerciali, giardini, abitazioni private, parchi pubblici e altri
@@ -56,7 +55,7 @@
     src={"img/libby-today.jpg"}
     title={"La situazione a Libby oggi"}
     subtitle={"Come le attivitá di sanificazione hanno provato a rimediare al disastro causato dalla miniera."}
-    buttonLabel={"Esplora"}
+    buttonLabel={"Scopri di piú"}
     direction={"right-card"}
   />
 </div>

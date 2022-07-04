@@ -28,8 +28,16 @@
   font-family: 'Saira Semi Condensed', sans-serif !important;
 }
 
+.mdc-typography--headline1 {
+  font-size: 4.5vw;
+}
+
 .mdc-typography--headline2 {
   font-size: 3.6vw;
+}
+
+.mdc-typography--headline3 {
+  font-size: 2.8vw;
 }
 
 .mdc-typography--headline4 {
@@ -42,6 +50,11 @@
 }
 
 .mdc-typography--body1 {
+  font-size: 1.3vw;
+  line-height: 1.6vw;
+}
+
+.mdc-typography--body2 {
   font-size: 1.1vw;
   line-height: 1.5vw;
 }
@@ -51,9 +64,6 @@
 
 
 // override della grandezza dei testi
-
-// TODO correggere le grandezze dei font (mettere in em al posto di px)
-
 
 // altre properties globali per elementi e classi
 html,

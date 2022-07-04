@@ -9,9 +9,15 @@
     <PrimaryAction>
       <img {src} alt={title} />
       <Content style="padding: 1vw;">
-        <div class="mdc-typography--body1 highlight">{title}</div>
-        <div class="mdc-typography--body1">{subtitle}</div>
+        <div class="mdc-typography--body2 highlight">{title}</div>
+        <div class="mdc-typography--body2">{subtitle}</div>
       </Content>
     </PrimaryAction>
   </Card>
 </a>
+
+<style>
+  img {
+    max-height: 10vw;
+  }
+</style>

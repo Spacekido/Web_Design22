@@ -7081,7 +7081,7 @@
 
     	const block = {
     		c: function create() {
-    			t = text("Minaçu, Brasile");
+    			t = text("Minaçu");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -7164,7 +7164,7 @@
 
     	const block = {
     		c: function create() {
-    			t = text("Balangero, Italia");
+    			t = text("Balangero");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -7247,7 +7247,7 @@
 
     	const block = {
     		c: function create() {
-    			t = text("Libby, USA");
+    			t = text("Libby");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -7330,7 +7330,7 @@
 
     	const block = {
     		c: function create() {
-    			t = text("Asbest, Russia");
+    			t = text("Asbest");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -8621,7 +8621,7 @@
     	return block;
     }
 
-    // (11:2) <Label class="mdc-typography--body1 bold" style="overflow: hidden;">
+    // (11:2) <Label class="mdc-typography--body2 bold" style="overflow: hidden;">
     function create_default_slot_1$4(ctx) {
     	let t;
 
@@ -8644,7 +8644,7 @@
     		block,
     		id: create_default_slot_1$4.name,
     		type: "slot",
-    		source: "(11:2) <Label class=\\\"mdc-typography--body1 bold\\\" style=\\\"overflow: hidden;\\\">",
+    		source: "(11:2) <Label class=\\\"mdc-typography--body2 bold\\\" style=\\\"overflow: hidden;\\\">",
     		ctx
     	});
 
@@ -8669,7 +8669,7 @@
 
     	label_1 = new Label({
     			props: {
-    				class: "mdc-typography--body1 bold",
+    				class: "mdc-typography--body2 bold",
     				style: "overflow: hidden;",
     				$$slots: { default: [create_default_slot_1$4] },
     				$$scope: { ctx }
@@ -8904,7 +8904,7 @@
     			span = element("span");
     			span.textContent = "Inferno dell'Amianto";
     			t7 = text(" e lo scoprirai...");
-    			attr_dev(div0, "class", "mdc-typography--headline2 uppercase svelte-v5e0jn");
+    			attr_dev(div0, "class", "mdc-typography--headline1 uppercase svelte-v5e0jn");
     			add_location(div0, file$o, 0, 0, 0);
     			add_location(br, file$o, 3, 2, 185);
     			attr_dev(div1, "class", "mdc-typography--headline4 svelte-v5e0jn");
@@ -10098,9 +10098,9 @@
     			t1 = space();
     			div1 = element("div");
     			t2 = text(/*subtitle*/ ctx[3]);
-    			attr_dev(div0, "class", "mdc-typography--body1 highlight");
+    			attr_dev(div0, "class", "mdc-typography--body2 highlight");
     			add_location(div0, file$j, 11, 8, 309);
-    			attr_dev(div1, "class", "mdc-typography--body1");
+    			attr_dev(div1, "class", "mdc-typography--body2");
     			add_location(div1, file$j, 12, 8, 377);
     		},
     		m: function mount(target, anchor) {
@@ -10156,6 +10156,7 @@
     			create_component(content.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = /*src*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*title*/ ctx[2]);
+    			attr_dev(img, "class", "svelte-131th0t");
     			add_location(img, file$j, 9, 6, 235);
     		},
     		m: function mount(target, anchor) {
@@ -10538,7 +10539,7 @@
     			create_component(linkcard2.$$.fragment);
     			t14 = space();
     			create_component(linkcard3.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase primary");
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase primary");
     			add_location(div0, file$i, 5, 2, 99);
     			attr_dev(span0, "class", "highlight");
     			add_location(span0, file$i, 7, 54, 358);
@@ -10737,7 +10738,7 @@
     			span5 = element("span");
     			span5.textContent = "condanne";
     			t23 = text(" per gli ex dirigenti della cava. Nel 2012 furono quaranta i casi sotto esame: venticinque morti e quindici malati, tra\r\n    i quali anche casi di normali cittadini e non solo di lavoratori della cava.");
-    			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
+    			attr_dev(div0, "class", "mdc-typography--headline1 uppercase");
     			add_location(div0, file$h, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
     			add_location(div1, file$h, 3, 2, 98);
@@ -10753,7 +10754,7 @@
     			add_location(span2, file$h, 15, 78, 1187);
     			attr_dev(div2, "class", "mdc-typography--body1");
     			add_location(div2, file$h, 4, 2, 180);
-    			attr_dev(div3, "class", "left svelte-1mkfja3");
+    			attr_dev(div3, "class", "left svelte-huhrer");
     			add_location(div3, file$h, 2, 0, 76);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
     			add_location(div4, file$h, 20, 2, 1311);
@@ -10767,7 +10768,7 @@
     			add_location(span5, file$h, 28, 4, 2124);
     			attr_dev(div5, "class", "mdc-typography--body1");
     			add_location(div5, file$h, 21, 2, 1407);
-    			attr_dev(div6, "class", "right svelte-1mkfja3");
+    			attr_dev(div6, "class", "right svelte-huhrer");
     			add_location(div6, file$h, 19, 0, 1288);
     		},
     		l: function claim(nodes) {
@@ -11534,7 +11535,7 @@
 
     /* src\Components\CustomButton.svelte generated by Svelte v3.46.6 */
 
-    // (8:2) <Label class="mdc-typography--body1 bold">
+    // (8:2) <Label class="mdc-typography--body2 bold">
     function create_default_slot_1$2(ctx) {
     	let t;
 
@@ -11557,7 +11558,7 @@
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(8:2) <Label class=\\\"mdc-typography--body1 bold\\\">",
+    		source: "(8:2) <Label class=\\\"mdc-typography--body2 bold\\\">",
     		ctx
     	});
 
@@ -11571,7 +11572,7 @@
 
     	label_1 = new Label({
     			props: {
-    				class: "mdc-typography--body1 bold",
+    				class: "mdc-typography--body2 bold",
     				$$slots: { default: [create_default_slot_1$2] },
     				$$scope: { ctx }
     			},
@@ -11785,9 +11786,9 @@
     			t1 = space();
     			div1 = element("div");
     			t2 = text(/*subtitle*/ ctx[3]);
-    			attr_dev(div0, "class", "mdc-typography--body1 highlight");
+    			attr_dev(div0, "class", "mdc-typography--body2 highlight");
     			add_location(div0, file$f, 17, 6, 561);
-    			attr_dev(div1, "class", "mdc-typography--body1");
+    			attr_dev(div1, "class", "mdc-typography--body2");
     			add_location(div1, file$f, 18, 6, 627);
     		},
     		m: function mount(target, anchor) {
@@ -11828,7 +11829,7 @@
 
     	label = new Label({
     			props: {
-    				class: "mdc-typography--body1 bold",
+    				class: "mdc-typography--body2 bold",
     				$$slots: { default: [create_default_slot_5] },
     				$$scope: { ctx }
     			},
@@ -11841,7 +11842,7 @@
     			i.textContent = "arrow_back";
     			t1 = space();
     			create_component(label.$$.fragment);
-    			attr_dev(i, "class", "material-icons svelte-701s29");
+    			attr_dev(i, "class", "material-icons svelte-ezh1kd");
     			attr_dev(i, "aria-hidden", "true");
     			add_location(i, file$f, 26, 10, 1045);
     		},
@@ -11896,7 +11897,7 @@
 
     	label = new Label({
     			props: {
-    				class: "mdc-typography--body1 bold",
+    				class: "mdc-typography--body2 bold",
     				$$slots: { default: [create_default_slot_4] },
     				$$scope: { ctx }
     			},
@@ -11909,7 +11910,7 @@
     			t0 = space();
     			i = element("i");
     			i.textContent = "arrow_forward";
-    			attr_dev(i, "class", "material-icons svelte-701s29");
+    			attr_dev(i, "class", "material-icons svelte-ezh1kd");
     			attr_dev(i, "aria-hidden", "true");
     			add_location(i, file$f, 24, 10, 924);
     		},
@@ -11955,7 +11956,7 @@
     	return block;
     }
 
-    // (28:10) <Label class="mdc-typography--body1 bold">
+    // (28:10) <Label class="mdc-typography--body2 bold">
     function create_default_slot_5(ctx) {
     	let t;
 
@@ -11978,14 +11979,14 @@
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(28:10) <Label class=\\\"mdc-typography--body1 bold\\\">",
+    		source: "(28:10) <Label class=\\\"mdc-typography--body2 bold\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (24:10) <Label class="mdc-typography--body1 bold">
+    // (24:10) <Label class="mdc-typography--body2 bold">
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -12008,7 +12009,7 @@
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(24:10) <Label class=\\\"mdc-typography--body1 bold\\\">",
+    		source: "(24:10) <Label class=\\\"mdc-typography--body2 bold\\\">",
     		ctx
     	});
 
@@ -12206,7 +12207,7 @@
     			create_component(actions.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = /*src*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*title*/ ctx[2]);
-    			attr_dev(img, "class", "svelte-701s29");
+    			attr_dev(img, "class", "svelte-ezh1kd");
     			add_location(img, file$f, 15, 4, 491);
     		},
     		m: function mount(target, anchor) {
@@ -12679,45 +12680,45 @@
     			create_component(custombutton1.$$.fragment);
     			t27 = space();
     			create_component(contentcard1.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			set_style(div0, "margin-block", "10vw");
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
+    			set_style(div0, "margin-top", "20vw");
     			add_location(div0, file$e, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$e, 19, 6, 967);
-    			add_location(br0, file$e, 21, 6, 1155);
-    			add_location(br1, file$e, 21, 12, 1161);
+    			add_location(span0, file$e, 19, 6, 965);
+    			add_location(br0, file$e, 21, 6, 1153);
+    			add_location(br1, file$e, 21, 12, 1159);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$e, 24, 57, 1410);
+    			add_location(span1, file$e, 24, 57, 1408);
     			attr_dev(span2, "class", "italic");
-    			add_location(span2, file$e, 22, 6, 1175);
-    			add_location(div1, file$e, 17, 4, 830);
+    			add_location(span2, file$e, 22, 6, 1173);
+    			add_location(div1, file$e, 17, 4, 828);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div2, "id", "content-balangero1");
-    			add_location(div2, file$e, 16, 2, 732);
+    			add_location(div2, file$e, 16, 2, 730);
     			attr_dev(div3, "class", "flex-row-4");
     			set_style(div3, "margin-top", "4vw");
-    			add_location(div3, file$e, 6, 0, 299);
+    			add_location(div3, file$e, 6, 0, 297);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$e, 39, 28, 2063);
+    			add_location(span3, file$e, 39, 28, 2061);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$e, 41, 6, 2336);
+    			add_location(span4, file$e, 41, 6, 2334);
     			attr_dev(span5, "class", "italic");
-    			add_location(span5, file$e, 42, 19, 2510);
-    			add_location(br2, file$e, 43, 6, 2598);
-    			add_location(br3, file$e, 43, 12, 2604);
+    			add_location(span5, file$e, 42, 19, 2508);
+    			add_location(br2, file$e, 43, 6, 2596);
+    			add_location(br3, file$e, 43, 12, 2602);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$e, 44, 15, 2627);
+    			add_location(span6, file$e, 44, 15, 2625);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$e, 46, 85, 2993);
+    			add_location(span7, file$e, 46, 85, 2991);
     			attr_dev(span8, "class", "italic");
-    			add_location(span8, file$e, 46, 6, 2914);
-    			add_location(div4, file$e, 38, 4, 2028);
+    			add_location(span8, file$e, 46, 6, 2912);
+    			add_location(div4, file$e, 38, 4, 2026);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div5, "id", "content-balangero2");
-    			add_location(div5, file$e, 37, 2, 1931);
+    			add_location(div5, file$e, 37, 2, 1929);
     			attr_dev(div6, "class", "flex-row-4");
-    			set_style(div6, "margin-top", "6vw");
-    			add_location(div6, file$e, 36, 0, 1878);
+    			set_style(div6, "margin-top", "4vw");
+    			add_location(div6, file$e, 36, 0, 1876);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12856,7 +12857,7 @@
     			t2 = text(/*caption*/ ctx[0]);
     			attr_dev(div0, "class", "mdc-typography--headline4 highlight");
     			add_location(div0, file$d, 8, 4, 265);
-    			attr_dev(div1, "class", "mdc-typography--body1 bold");
+    			attr_dev(div1, "class", "mdc-typography--body2 bold");
     			add_location(div1, file$d, 9, 4, 333);
     		},
     		m: function mount(target, anchor) {
@@ -13125,7 +13126,7 @@
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			div0.textContent = "Percentuali di vittime e inquinamento";
+    			div0.textContent = "La miniera in numeri";
     			t1 = space();
     			div1 = element("div");
     			create_component(statscard0.$$.fragment);
@@ -13136,14 +13137,14 @@
     			t4 = space();
     			div2 = element("div");
     			create_component(fab.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "8vw");
     			add_location(div0, file$c, 6, 0, 193);
     			attr_dev(div1, "class", "flex-row-2");
-    			set_style(div1, "margin-top", "6vw");
-    			add_location(div1, file$c, 7, 0, 312);
+    			set_style(div1, "margin-top", "2vw");
+    			add_location(div1, file$c, 7, 0, 295);
     			set_style(div2, "margin-top", "3.5vw");
-    			add_location(div2, file$c, 12, 0, 559);
+    			add_location(div2, file$c, 12, 0, 542);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13287,7 +13288,7 @@
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			div0.textContent = "Libby, Montana (USA)";
+    			div0.textContent = "Libby, USA";
     			t1 = space();
     			div3 = element("div");
     			div1 = element("div");
@@ -13315,7 +13316,7 @@
     			t14 = text(" al giorno, che non solo fluttuava ovunque negli stabilimenti, ma\r\n    inondava l'aria respirabile di gran parte della città. L'azienda sapeva che la vermiculite era ");
     			span4 = element("span");
     			span4.textContent = "contaminata";
-    			t16 = text(" dall'amianto e che\r\n    causava complicazioni per la salute. La società non avvertì nessuno dell'esposizione all'amianto e l'attività mineraria continuò fino al 1990.");
+    			t16 = text(" dall'amianto, ma non\r\n    avvertì nessuno e continuò ad operare fino al 1990.");
     			t17 = space();
     			div6 = element("div");
     			div4 = element("div");
@@ -13336,42 +13337,42 @@
     			br7 = element("br");
     			t26 = space();
     			create_component(custombutton.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
+    			attr_dev(div0, "class", "mdc-typography--headline1 uppercase");
     			add_location(div0, file$b, 4, 0, 88);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div1, file$b, 7, 2, 189);
+    			add_location(div1, file$b, 7, 2, 179);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$b, 9, 67, 370);
-    			add_location(br0, file$b, 11, 4, 583);
-    			add_location(br1, file$b, 11, 10, 589);
+    			add_location(span0, file$b, 9, 67, 360);
+    			add_location(br0, file$b, 11, 4, 573);
+    			add_location(br1, file$b, 11, 10, 579);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$b, 12, 71, 668);
+    			add_location(span1, file$b, 12, 71, 658);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$b, 14, 16, 926);
-    			add_location(br2, file$b, 15, 4, 979);
-    			add_location(br3, file$b, 15, 10, 985);
+    			add_location(span2, file$b, 14, 16, 916);
+    			add_location(br2, file$b, 15, 4, 969);
+    			add_location(br3, file$b, 15, 10, 975);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$b, 16, 40, 1033);
+    			add_location(span3, file$b, 16, 40, 1023);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$b, 17, 99, 1251);
+    			add_location(span4, file$b, 17, 99, 1241);
     			attr_dev(div2, "class", "mdc-typography--body1");
-    			add_location(div2, file$b, 8, 2, 266);
-    			attr_dev(div3, "class", "left svelte-85ztut");
-    			add_location(div3, file$b, 6, 0, 167);
+    			add_location(div2, file$b, 8, 2, 256);
+    			attr_dev(div3, "class", "left svelte-tz0xuf");
+    			add_location(div3, file$b, 6, 0, 157);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$b, 23, 2, 1505);
+    			add_location(div4, file$b, 23, 2, 1406);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$b, 25, 116, 1749);
-    			add_location(br4, file$b, 28, 4, 1971);
-    			add_location(br5, file$b, 28, 10, 1977);
+    			add_location(span5, file$b, 25, 116, 1650);
+    			add_location(br4, file$b, 28, 4, 1872);
+    			add_location(br5, file$b, 28, 10, 1878);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$b, 29, 50, 2035);
-    			add_location(br6, file$b, 32, 4, 2324);
-    			add_location(br7, file$b, 32, 10, 2330);
+    			add_location(span6, file$b, 29, 50, 1936);
+    			add_location(br6, file$b, 32, 4, 2225);
+    			add_location(br7, file$b, 32, 10, 2231);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$b, 24, 2, 1596);
-    			attr_dev(div6, "class", "right svelte-85ztut");
-    			add_location(div6, file$b, 22, 0, 1482);
+    			add_location(div5, file$b, 24, 2, 1497);
+    			attr_dev(div6, "class", "right svelte-tz0xuf");
+    			add_location(div6, file$b, 22, 0, 1383);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13542,7 +13543,7 @@
     				src: "img/libby-hutt.jpg",
     				title: "Ralph Hutt",
     				subtitle: "La testimonianza di un ex-operaio presso l'azienda mineraria W.R. Grace & Company.",
-    				buttonLabel: "Scopri la sua storia",
+    				buttonLabel: "Ascolta la sua storia",
     				direction: "left-card"
     			},
     			$$inline: true
@@ -13572,7 +13573,7 @@
     				src: "img/libby-today.jpg",
     				title: "La situazione a Libby oggi",
     				subtitle: "Come le attivitá di sanificazione hanno provato a rimediare al disastro causato dalla miniera.",
-    				buttonLabel: "Esplora",
+    				buttonLabel: "Scopri di piú",
     				direction: "right-card"
     			},
     			$$inline: true
@@ -13618,10 +13619,10 @@
     			div7 = element("div");
     			div6 = element("div");
     			div5 = element("div");
-    			t19 = text("Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono ");
+    			t19 = text("Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono\r\n      ");
     			span5 = element("span");
     			span5.textContent = "morti";
-    			t21 = text("\r\n      per malattie correlate all'amianto, e circa 1 su 10 tra tutti abitanti é ");
+    			t21 = text(" per malattie correlate all'amianto, e circa 1 su 10 tra tutti abitanti é\r\n      ");
     			span6 = element("span");
     			span6.textContent = "attualmente malato";
     			t23 = text(".\r\n      ");
@@ -13644,53 +13645,53 @@
     			create_component(custombutton1.$$.fragment);
     			t33 = space();
     			create_component(contentcard1.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			set_style(div0, "margin-block", "10vw");
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
+    			set_style(div0, "margin-top", "16vw");
     			add_location(div0, file$a, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$a, 17, 16, 746);
+    			add_location(span0, file$a, 17, 16, 748);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$a, 17, 108, 838);
+    			add_location(span1, file$a, 17, 108, 840);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$a, 19, 6, 1024);
-    			add_location(br0, file$a, 21, 6, 1230);
-    			add_location(br1, file$a, 21, 12, 1236);
+    			add_location(span2, file$a, 19, 6, 1026);
+    			add_location(br0, file$a, 21, 6, 1232);
+    			add_location(br1, file$a, 21, 12, 1238);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$a, 23, 6, 1374);
-    			add_location(br2, file$a, 25, 6, 1600);
-    			add_location(br3, file$a, 25, 12, 1606);
+    			add_location(span3, file$a, 23, 6, 1376);
+    			add_location(br2, file$a, 25, 6, 1602);
+    			add_location(br3, file$a, 25, 12, 1608);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$a, 27, 145, 1787);
+    			add_location(span4, file$a, 27, 145, 1789);
     			attr_dev(div1, "class", "italic");
-    			add_location(div1, file$a, 26, 6, 1620);
-    			add_location(div2, file$a, 16, 4, 723);
+    			add_location(div1, file$a, 26, 6, 1622);
+    			add_location(div2, file$a, 16, 4, 725);
     			attr_dev(div3, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div3, "id", "content-libby1");
-    			add_location(div3, file$a, 15, 2, 629);
+    			add_location(div3, file$a, 15, 2, 631);
     			attr_dev(div4, "class", "flex-row-4");
-    			set_style(div4, "margin-left", "2vw");
-    			add_location(div4, file$a, 6, 0, 289);
+    			set_style(div4, "margin", "4vw 0 0 2vw");
+    			add_location(div4, file$a, 6, 0, 287);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$a, 39, 143, 2337);
+    			add_location(span5, file$a, 40, 6, 2346);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$a, 42, 79, 2471);
-    			add_location(br4, file$a, 43, 6, 2529);
-    			add_location(br5, file$a, 43, 12, 2535);
+    			add_location(span6, file$a, 41, 6, 2463);
+    			add_location(br4, file$a, 42, 6, 2521);
+    			add_location(br5, file$a, 42, 12, 2527);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$a, 44, 91, 2634);
+    			add_location(span7, file$a, 43, 91, 2626);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$a, 46, 6, 2857);
-    			add_location(br6, file$a, 47, 6, 2923);
-    			add_location(br7, file$a, 47, 12, 2929);
+    			add_location(span8, file$a, 45, 6, 2849);
+    			add_location(br6, file$a, 46, 6, 2915);
+    			add_location(br7, file$a, 46, 12, 2921);
     			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$a, 48, 44, 2981);
-    			add_location(div5, file$a, 38, 4, 2187);
+    			add_location(span9, file$a, 47, 44, 2973);
+    			add_location(div5, file$a, 38, 4, 2189);
     			attr_dev(div6, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div6, "id", "content-libby2");
-    			add_location(div6, file$a, 37, 2, 2094);
+    			add_location(div6, file$a, 37, 2, 2096);
     			attr_dev(div7, "class", "flex-row-4");
-    			set_style(div7, "margin-top", "8vw");
-    			add_location(div7, file$a, 36, 0, 2041);
+    			set_style(div7, "margin-top", "6vw");
+    			add_location(div7, file$a, 36, 0, 2043);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13870,7 +13871,7 @@
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			div0.textContent = "Percentuali di vittime e inquinamento";
+    			div0.textContent = "La miniera in numeri";
     			t1 = space();
     			div1 = element("div");
     			create_component(statscard0.$$.fragment);
@@ -13881,14 +13882,14 @@
     			t4 = space();
     			div2 = element("div");
     			create_component(fab.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "6vw");
     			add_location(div0, file$9, 6, 0, 193);
     			attr_dev(div1, "class", "flex-row-2");
-    			set_style(div1, "margin-top", "4vw");
-    			add_location(div1, file$9, 7, 0, 312);
+    			set_style(div1, "margin-top", "2vw");
+    			add_location(div1, file$9, 7, 0, 295);
     			set_style(div2, "margin-top", "3vw");
-    			add_location(div2, file$9, 12, 0, 556);
+    			add_location(div2, file$9, 12, 0, 539);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14091,7 +14092,7 @@
     			span10 = element("span");
     			span10.textContent = "\"la maggior parte dei lavoratori fumava, e solo dopo essersi ammalati per le sigarette hanno accusato SAMA\"";
     			t34 = text(".");
-    			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
+    			attr_dev(div0, "class", "mdc-typography--headline1 uppercase");
     			add_location(div0, file$8, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
     			add_location(div1, file$8, 3, 2, 96);
@@ -14109,7 +14110,7 @@
     			add_location(span3, file$8, 12, 62, 992);
     			attr_dev(div2, "class", "mdc-typography--body1");
     			add_location(div2, file$8, 4, 2, 177);
-    			attr_dev(div3, "class", "left svelte-h660k8");
+    			attr_dev(div3, "class", "left svelte-1b0ac56");
     			add_location(div3, file$8, 2, 0, 74);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
     			add_location(div4, file$8, 19, 2, 1438);
@@ -14133,7 +14134,7 @@
     			add_location(span10, file$8, 30, 4, 2406);
     			attr_dev(div5, "class", "mdc-typography--body1");
     			add_location(div5, file$8, 20, 2, 1530);
-    			attr_dev(div6, "class", "right svelte-h660k8");
+    			attr_dev(div6, "class", "right svelte-1b0ac56");
     			add_location(div6, file$8, 18, 0, 1415);
     		},
     		l: function claim(nodes) {
@@ -14395,48 +14396,48 @@
     			create_component(custombutton1.$$.fragment);
     			t31 = space();
     			create_component(contentcard1.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			set_style(div0, "margin-block", "8vw");
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
+    			set_style(div0, "margin-top", "12vw");
     			add_location(div0, file$7, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$7, 18, 62, 970);
+    			add_location(span0, file$7, 18, 62, 969);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$7, 20, 6, 1164);
-    			add_location(br0, file$7, 22, 6, 1283);
-    			add_location(br1, file$7, 22, 12, 1289);
+    			add_location(span1, file$7, 20, 6, 1163);
+    			add_location(br0, file$7, 22, 6, 1282);
+    			add_location(br1, file$7, 22, 12, 1288);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$7, 23, 47, 1344);
+    			add_location(span2, file$7, 23, 47, 1343);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$7, 25, 6, 1587);
-    			add_location(div1, file$7, 16, 4, 739);
+    			add_location(span3, file$7, 25, 6, 1586);
+    			add_location(div1, file$7, 16, 4, 738);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div2, "id", "content-minacu1");
-    			add_location(div2, file$7, 15, 2, 644);
+    			add_location(div2, file$7, 15, 2, 643);
     			attr_dev(div3, "class", "flex-row-4");
     			set_style(div3, "margin-top", "4vw");
-    			add_location(div3, file$7, 6, 0, 305);
-    			add_location(br2, file$7, 38, 127, 2261);
+    			add_location(div3, file$7, 6, 0, 304);
+    			add_location(br2, file$7, 38, 127, 2260);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$7, 39, 6, 2275);
+    			add_location(span4, file$7, 39, 6, 2274);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$7, 40, 81, 2497);
+    			add_location(span5, file$7, 40, 81, 2496);
     			attr_dev(span6, "class", "italic");
-    			add_location(span6, file$7, 40, 6, 2422);
-    			add_location(br3, file$7, 41, 6, 2581);
-    			add_location(br4, file$7, 41, 12, 2587);
+    			add_location(span6, file$7, 40, 6, 2421);
+    			add_location(br3, file$7, 41, 6, 2580);
+    			add_location(br4, file$7, 41, 12, 2586);
     			attr_dev(span7, "class", "italic");
-    			add_location(span7, file$7, 43, 6, 2701);
+    			add_location(span7, file$7, 43, 6, 2700);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$7, 44, 76, 2891);
+    			add_location(span8, file$7, 44, 76, 2890);
     			attr_dev(span9, "class", "italic");
-    			add_location(span9, file$7, 44, 6, 2821);
-    			add_location(div4, file$7, 37, 4, 2127);
+    			add_location(span9, file$7, 44, 6, 2820);
+    			add_location(div4, file$7, 37, 4, 2126);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div5, "id", "content-minacu2");
-    			add_location(div5, file$7, 36, 2, 2033);
+    			add_location(div5, file$7, 36, 2, 2032);
     			attr_dev(div6, "class", "flex-row-4");
-    			set_style(div6, "margin-top", "6vw");
-    			add_location(div6, file$7, 35, 0, 1980);
+    			set_style(div6, "margin-top", "4vw");
+    			add_location(div6, file$7, 35, 0, 1979);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14602,7 +14603,7 @@
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			div0.textContent = "Percentuali di vittime e inquinamento";
+    			div0.textContent = "La miniera in numeri";
     			t1 = space();
     			div1 = element("div");
     			create_component(statscard0.$$.fragment);
@@ -14611,14 +14612,14 @@
     			t3 = space();
     			div2 = element("div");
     			create_component(fab.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "8vw");
     			add_location(div0, file$6, 6, 0, 193);
     			attr_dev(div1, "class", "flex-row-2");
-    			set_style(div1, "margin-top", "6vw");
-    			add_location(div1, file$6, 7, 0, 312);
-    			set_style(div2, "margin-top", "5vw");
-    			add_location(div2, file$6, 11, 0, 495);
+    			set_style(div1, "margin-top", "2vw");
+    			add_location(div1, file$6, 7, 0, 295);
+    			set_style(div2, "margin-top", "3vw");
+    			add_location(div2, file$6, 11, 0, 478);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14859,58 +14860,58 @@
     			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
     			add_location(div0, file$5, 4, 0, 88);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div1, file$5, 7, 2, 258);
+    			add_location(div1, file$5, 6, 2, 181);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$5, 10, 4, 492);
+    			add_location(span0, file$5, 9, 4, 415);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$5, 10, 83, 571);
+    			add_location(span1, file$5, 9, 83, 494);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$5, 11, 68, 716);
-    			add_location(br0, file$5, 12, 4, 764);
-    			add_location(br1, file$5, 12, 10, 770);
+    			add_location(span2, file$5, 10, 68, 639);
+    			add_location(br0, file$5, 11, 4, 687);
+    			add_location(br1, file$5, 11, 10, 693);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$5, 13, 74, 852);
-    			add_location(br2, file$5, 15, 4, 963);
-    			add_location(br3, file$5, 15, 10, 969);
+    			add_location(span3, file$5, 12, 74, 775);
+    			add_location(br2, file$5, 14, 4, 886);
+    			add_location(br3, file$5, 14, 10, 892);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$5, 16, 18, 995);
+    			add_location(span4, file$5, 15, 18, 918);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$5, 17, 88, 1225);
+    			add_location(span5, file$5, 16, 88, 1148);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$5, 18, 4, 1294);
-    			add_location(br4, file$5, 19, 4, 1410);
-    			add_location(br5, file$5, 19, 10, 1416);
+    			add_location(span6, file$5, 17, 4, 1217);
+    			add_location(br4, file$5, 18, 4, 1333);
+    			add_location(br5, file$5, 18, 10, 1339);
     			attr_dev(div2, "class", "mdc-typography--body1");
-    			add_location(div2, file$5, 8, 2, 335);
-    			attr_dev(div3, "class", "left svelte-1hgnd73");
-    			add_location(div3, file$5, 6, 0, 236);
+    			add_location(div2, file$5, 7, 2, 258);
+    			attr_dev(div3, "class", "left svelte-14vy1zp");
+    			add_location(div3, file$5, 5, 0, 159);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$5, 25, 2, 1592);
+    			add_location(div4, file$5, 24, 2, 1515);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$5, 27, 66, 1786);
-    			add_location(br6, file$5, 28, 68, 1949);
+    			add_location(span7, file$5, 26, 66, 1709);
+    			add_location(br6, file$5, 27, 68, 1872);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$5, 30, 11, 2131);
-    			add_location(br7, file$5, 31, 4, 2184);
-    			add_location(br8, file$5, 31, 10, 2190);
+    			add_location(span8, file$5, 29, 11, 2054);
+    			add_location(br7, file$5, 30, 4, 2107);
+    			add_location(br8, file$5, 30, 10, 2113);
     			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$5, 32, 69, 2267);
+    			add_location(span9, file$5, 31, 69, 2190);
     			attr_dev(span10, "class", "highlight");
-    			add_location(span10, file$5, 35, 4, 2538);
-    			add_location(br9, file$5, 36, 4, 2610);
-    			add_location(br10, file$5, 36, 10, 2616);
+    			add_location(span10, file$5, 34, 4, 2461);
+    			add_location(br9, file$5, 35, 4, 2533);
+    			add_location(br10, file$5, 35, 10, 2539);
     			attr_dev(span11, "class", "highlight");
-    			add_location(span11, file$5, 37, 108, 2732);
+    			add_location(span11, file$5, 36, 108, 2655);
     			attr_dev(span12, "class", "italic");
-    			add_location(span12, file$5, 39, 4, 2798);
+    			add_location(span12, file$5, 38, 4, 2721);
     			attr_dev(span13, "class", "highlight");
-    			add_location(span13, file$5, 40, 4, 2934);
+    			add_location(span13, file$5, 39, 4, 2857);
     			attr_dev(span14, "class", "italic");
-    			add_location(span14, file$5, 42, 4, 3127);
+    			add_location(span14, file$5, 41, 4, 3050);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$5, 26, 2, 1683);
-    			attr_dev(div6, "class", "right svelte-1hgnd73");
-    			add_location(div6, file$5, 24, 0, 1569);
+    			add_location(div5, file$5, 25, 2, 1606);
+    			attr_dev(div6, "class", "right svelte-14vy1zp");
+    			add_location(div6, file$5, 23, 0, 1492);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15119,19 +15120,16 @@
     	let br11;
     	let br12;
     	let t46;
-    	let span15;
+    	let span16;
     	let t47;
     	let span14;
     	let t49;
-    	let t50;
-    	let span17;
+    	let span15;
     	let t51;
-    	let span16;
+    	let t52;
     	let t53;
-    	let t54;
-    	let t55;
     	let custombutton2;
-    	let t56;
+    	let t54;
     	let contentcard3;
     	let current;
 
@@ -15304,102 +15302,97 @@
     			br11 = element("br");
     			br12 = element("br");
     			t46 = text("\r\n      Tuttavia, è convinto che la città non abbia altra scelta.\r\n      ");
-    			span15 = element("span");
+    			span16 = element("span");
     			t47 = text("\"Se non avessimo la fabbrica, ");
     			span14 = element("span");
     			span14.textContent = "come vivremmo?";
-    			t49 = text("\"");
-    			t50 = text(", afferma senza fiato mentre parla nel cortile di\r\n      una casa di riposo.\r\n      ");
-    			span17 = element("span");
-    			t51 = text("\"Dobbiamo continuare a tenerla aperta in modo da avere ");
-    			span16 = element("span");
-    			span16.textContent = "posti di lavoro";
-    			t53 = text(" per tutti\"");
-    			t54 = text(".");
-    			t55 = space();
+    			t49 = text("\r\n        Dobbiamo continuare a tenerla aperta in modo da avere ");
+    			span15 = element("span");
+    			span15.textContent = "posti di lavoro";
+    			t51 = text(" per tutti\"");
+    			t52 = text(", afferma senza fiato mentre parla nel cortile di una casa di riposo.");
+    			t53 = space();
     			create_component(custombutton2.$$.fragment);
-    			t56 = space();
+    			t54 = space();
     			create_component(contentcard3.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			set_style(div0, "margin-top", "4vw");
-    			add_location(div0, file$4, 6, 0, 214);
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
+    			set_style(div0, "margin-top", "14vw");
+    			add_location(div0, file$4, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$4, 18, 72, 871);
+    			add_location(span0, file$4, 17, 72, 819);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$4, 19, 66, 1025);
-    			add_location(br0, file$4, 21, 6, 1187);
-    			add_location(br1, file$4, 21, 12, 1193);
+    			add_location(span1, file$4, 18, 66, 973);
+    			add_location(br0, file$4, 20, 6, 1135);
+    			add_location(br1, file$4, 20, 12, 1141);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$4, 23, 47, 1414);
+    			add_location(span2, file$4, 22, 47, 1362);
     			attr_dev(span3, "class", "italic");
-    			add_location(span3, file$4, 23, 12, 1379);
-    			add_location(div1, file$4, 17, 4, 792);
+    			add_location(span3, file$4, 22, 12, 1327);
+    			add_location(div1, file$4, 16, 4, 740);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div2, "id", "content-asbest1");
-    			add_location(div2, file$4, 16, 2, 697);
+    			add_location(div2, file$4, 15, 2, 645);
     			attr_dev(div3, "class", "flex-row-4");
-    			set_style(div3, "margin-top", "6vw");
-    			add_location(div3, file$4, 7, 0, 340);
+    			set_style(div3, "margin-top", "3vw");
+    			add_location(div3, file$4, 6, 0, 288);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$4, 36, 16, 1968);
-    			add_location(br2, file$4, 38, 6, 2182);
-    			add_location(br3, file$4, 38, 12, 2188);
+    			add_location(span4, file$4, 35, 16, 1916);
+    			add_location(br2, file$4, 37, 6, 2130);
+    			add_location(br3, file$4, 37, 12, 2136);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$4, 39, 47, 2243);
+    			add_location(span5, file$4, 38, 47, 2191);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$4, 41, 6, 2491);
-    			add_location(br4, file$4, 43, 6, 2569);
-    			add_location(br5, file$4, 43, 12, 2575);
+    			add_location(span6, file$4, 40, 6, 2439);
+    			add_location(br4, file$4, 42, 6, 2517);
+    			add_location(br5, file$4, 42, 12, 2523);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$4, 44, 22, 2605);
+    			add_location(span7, file$4, 43, 22, 2553);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$4, 45, 6, 2727);
-    			add_location(div4, file$4, 35, 4, 1945);
+    			add_location(span8, file$4, 44, 6, 2675);
+    			add_location(div4, file$4, 34, 4, 1893);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div5, "id", "content-asbest2");
-    			add_location(div5, file$4, 34, 2, 1851);
+    			add_location(div5, file$4, 33, 2, 1799);
     			attr_dev(div6, "class", "flex-row-4");
-    			set_style(div6, "margin-top", "6vw");
-    			add_location(div6, file$4, 33, 0, 1798);
+    			set_style(div6, "margin-top", "3vw");
+    			add_location(div6, file$4, 32, 0, 1746);
     			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$4, 71, 39, 3764);
-    			add_location(br6, file$4, 72, 6, 3847);
-    			add_location(br7, file$4, 72, 12, 3853);
+    			add_location(span9, file$4, 70, 39, 3712);
+    			add_location(br6, file$4, 71, 6, 3795);
+    			add_location(br7, file$4, 71, 12, 3801);
     			attr_dev(span10, "class", "highlight");
-    			add_location(span10, file$4, 73, 33, 3894);
-    			add_location(div7, file$4, 69, 4, 3559);
+    			add_location(span10, file$4, 72, 33, 3842);
+    			add_location(div7, file$4, 68, 4, 3507);
     			attr_dev(div8, "class", "mdc-typography--body1 hidden right-align flex-column-2 italic");
     			attr_dev(div8, "id", "content-asbest3");
-    			add_location(div8, file$4, 68, 2, 3457);
+    			add_location(div8, file$4, 67, 2, 3405);
     			attr_dev(div9, "class", "flex-row-4");
-    			set_style(div9, "margin-top", "6vw");
-    			add_location(div9, file$4, 59, 0, 3148);
+    			set_style(div9, "margin-top", "3vw");
+    			add_location(div9, file$4, 58, 0, 3096);
     			attr_dev(span11, "class", "highlight");
-    			add_location(span11, file$4, 83, 6, 4522);
-    			add_location(br8, file$4, 85, 6, 4712);
-    			add_location(br9, file$4, 85, 12, 4718);
+    			add_location(span11, file$4, 82, 6, 4470);
+    			add_location(br8, file$4, 84, 6, 4660);
+    			add_location(br9, file$4, 84, 12, 4666);
     			attr_dev(span12, "class", "italic");
-    			add_location(span12, file$4, 86, 6, 4732);
-    			add_location(br10, file$4, 86, 149, 4875);
+    			add_location(span12, file$4, 85, 6, 4680);
+    			add_location(br10, file$4, 85, 149, 4823);
     			attr_dev(span13, "class", "highlight");
-    			add_location(span13, file$4, 87, 46, 4929);
-    			add_location(br11, file$4, 89, 6, 5085);
-    			add_location(br12, file$4, 89, 12, 5091);
+    			add_location(span13, file$4, 86, 46, 4877);
+    			add_location(br11, file$4, 88, 6, 5033);
+    			add_location(br12, file$4, 88, 12, 5039);
     			attr_dev(span14, "class", "highlight");
-    			add_location(span14, file$4, 91, 57, 5221);
-    			attr_dev(span15, "class", "italic");
-    			add_location(span15, file$4, 91, 6, 5170);
-    			attr_dev(span16, "class", "highlight");
-    			add_location(span16, file$4, 93, 82, 5434);
-    			attr_dev(span17, "class", "italic");
-    			add_location(span17, file$4, 93, 6, 5358);
-    			add_location(div10, file$4, 82, 4, 4509);
+    			add_location(span14, file$4, 91, 39, 5179);
+    			attr_dev(span15, "class", "highlight");
+    			add_location(span15, file$4, 92, 62, 5288);
+    			attr_dev(span16, "class", "italic");
+    			add_location(span16, file$4, 90, 6, 5118);
+    			add_location(div10, file$4, 81, 4, 4457);
     			attr_dev(div11, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div11, "id", "content-asbest4");
-    			add_location(div11, file$4, 81, 2, 4415);
+    			add_location(div11, file$4, 80, 2, 4363);
     			attr_dev(div12, "class", "flex-row-4");
-    			set_style(div12, "margin-top", "6vw");
-    			add_location(div12, file$4, 80, 0, 4362);
+    			set_style(div12, "margin-top", "3vw");
+    			add_location(div12, file$4, 79, 0, 4310);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15483,19 +15476,16 @@
     			append_dev(div10, br11);
     			append_dev(div10, br12);
     			append_dev(div10, t46);
-    			append_dev(div10, span15);
-    			append_dev(span15, t47);
-    			append_dev(span15, span14);
-    			append_dev(span15, t49);
-    			append_dev(div10, t50);
-    			append_dev(div10, span17);
-    			append_dev(span17, t51);
-    			append_dev(span17, span16);
-    			append_dev(span17, t53);
-    			append_dev(div10, t54);
-    			append_dev(div11, t55);
+    			append_dev(div10, span16);
+    			append_dev(span16, t47);
+    			append_dev(span16, span14);
+    			append_dev(span16, t49);
+    			append_dev(span16, span15);
+    			append_dev(span16, t51);
+    			append_dev(div10, t52);
+    			append_dev(div11, t53);
     			mount_component(custombutton2, div11, null);
-    			append_dev(div12, t56);
+    			append_dev(div12, t54);
     			mount_component(contentcard3, div12, null);
     			current = true;
     		},
@@ -15631,7 +15621,7 @@
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			div0.textContent = "Percentuali di vittime e inquinamento";
+    			div0.textContent = "La miniera in numeri";
     			t1 = space();
     			div1 = element("div");
     			create_component(statscard0.$$.fragment);
@@ -15642,14 +15632,14 @@
     			t4 = space();
     			div2 = element("div");
     			create_component(fab.$$.fragment);
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			set_style(div0, "margin-top", "4vw");
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
+    			set_style(div0, "margin-top", "8vw");
     			add_location(div0, file$3, 6, 0, 193);
     			attr_dev(div1, "class", "flex-row-2");
-    			set_style(div1, "margin-top", "8vw");
-    			add_location(div1, file$3, 7, 0, 312);
-    			set_style(div2, "margin-top", "5.5vw");
-    			add_location(div2, file$3, 12, 0, 566);
+    			set_style(div1, "margin-top", "2vw");
+    			add_location(div1, file$3, 7, 0, 295);
+    			set_style(div2, "margin-top", "3vw");
+    			add_location(div2, file$3, 12, 0, 549);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16025,7 +16015,7 @@
     			t28 = space();
     			div7 = element("div");
     			div7.textContent = "Frase finale ad effetto?";
-    			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
+    			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-block", "10vw");
     			add_location(div0, file$1, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
@@ -16305,20 +16295,6 @@
     	let t31;
     	let div29;
     	let asbeststats;
-    	let t32;
-    	let div32;
-    	let img15;
-    	let img15_src_value;
-    	let t33;
-    	let div31;
-    	let beiguaintro;
-    	let t34;
-    	let div34;
-    	let img16;
-    	let img16_src_value;
-    	let t35;
-    	let div33;
-    	let beiguacards;
     	let current;
     	topappbar = new TopAppBar_1({ $$inline: true });
     	introtitle = new Title({ $$inline: true });
@@ -16354,8 +16330,6 @@
     	asbestintro = new Intro$1({ $$inline: true });
     	asbestcards = new Cards$1({ $$inline: true });
     	asbeststats = new Stats({ $$inline: true });
-    	beiguaintro = new Intro({ $$inline: true });
-    	beiguacards = new Cards({ $$inline: true });
 
     	const block = {
     		c: function create() {
@@ -16456,192 +16430,160 @@
     			t31 = space();
     			div29 = element("div");
     			create_component(asbeststats.$$.fragment);
-    			t32 = space();
-    			div32 = element("div");
-    			img15 = element("img");
-    			t33 = space();
-    			div31 = element("div");
-    			create_component(beiguaintro.$$.fragment);
-    			t34 = space();
-    			div34 = element("div");
-    			img16 = element("img");
-    			t35 = space();
-    			div33 = element("div");
-    			create_component(beiguacards.$$.fragment);
-    			attr_dev(img0, "class", "background svelte-1k5l1bp");
+    			attr_dev(img0, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img0.src, img0_src_value = "img/background-1-1.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
-    			add_location(img0, file, 27, 4, 1202);
+    			add_location(img0, file, 26, 4, 1143);
     			attr_dev(div0, "id", "content1-1");
-    			attr_dev(div0, "class", "svelte-1k5l1bp");
-    			add_location(div0, file, 28, 4, 1270);
+    			attr_dev(div0, "class", "svelte-1hp1poh");
+    			add_location(div0, file, 27, 4, 1211);
     			attr_dev(div1, "id", "section1-1");
-    			attr_dev(div1, "class", "svelte-1k5l1bp");
-    			add_location(div1, file, 26, 2, 1175);
-    			attr_dev(img1, "class", "background svelte-1k5l1bp");
+    			attr_dev(div1, "class", "svelte-1hp1poh");
+    			add_location(div1, file, 25, 2, 1116);
+    			attr_dev(img1, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img1.src, img1_src_value = "img/background-1-2.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file, 35, 4, 1435);
+    			add_location(img1, file, 34, 4, 1376);
     			attr_dev(div2, "id", "content1-2");
-    			attr_dev(div2, "class", "svelte-1k5l1bp");
-    			add_location(div2, file, 36, 4, 1503);
+    			attr_dev(div2, "class", "svelte-1hp1poh");
+    			add_location(div2, file, 35, 4, 1444);
     			attr_dev(div3, "id", "section1-2");
-    			attr_dev(div3, "class", "svelte-1k5l1bp");
-    			add_location(div3, file, 34, 2, 1408);
-    			attr_dev(img2, "class", "background svelte-1k5l1bp");
+    			attr_dev(div3, "class", "svelte-1hp1poh");
+    			add_location(div3, file, 33, 2, 1349);
+    			attr_dev(img2, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img2.src, img2_src_value = "img/background-1-3.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "");
-    			add_location(img2, file, 42, 4, 1601);
+    			add_location(img2, file, 41, 4, 1542);
     			set_style(div4, "margin-top", "2vw");
-    			add_location(div4, file, 45, 6, 1720);
+    			add_location(div4, file, 44, 6, 1661);
     			attr_dev(div5, "id", "content1-3");
-    			attr_dev(div5, "class", "svelte-1k5l1bp");
-    			add_location(div5, file, 43, 4, 1669);
+    			attr_dev(div5, "class", "svelte-1hp1poh");
+    			add_location(div5, file, 42, 4, 1610);
     			attr_dev(div6, "id", "section1-3");
-    			attr_dev(div6, "class", "svelte-1k5l1bp");
-    			add_location(div6, file, 41, 2, 1574);
-    			attr_dev(img3, "class", "background svelte-1k5l1bp");
+    			attr_dev(div6, "class", "svelte-1hp1poh");
+    			add_location(div6, file, 40, 2, 1515);
+    			attr_dev(img3, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img3.src, img3_src_value = "img/background-2-1.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "");
-    			add_location(img3, file, 52, 4, 1888);
+    			add_location(img3, file, 51, 4, 1829);
     			attr_dev(div7, "id", "content2-1");
-    			attr_dev(div7, "class", "svelte-1k5l1bp");
-    			add_location(div7, file, 53, 4, 1956);
+    			attr_dev(div7, "class", "svelte-1hp1poh");
+    			add_location(div7, file, 52, 4, 1897);
     			attr_dev(div8, "id", "section2-1");
-    			attr_dev(div8, "class", "svelte-1k5l1bp");
-    			add_location(div8, file, 51, 2, 1861);
-    			attr_dev(img4, "class", "background svelte-1k5l1bp");
+    			attr_dev(div8, "class", "svelte-1hp1poh");
+    			add_location(div8, file, 50, 2, 1802);
+    			attr_dev(img4, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img4.src, img4_src_value = "img/background-2-2.png")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "");
-    			add_location(img4, file, 59, 4, 2055);
+    			add_location(img4, file, 58, 4, 1996);
     			attr_dev(div9, "id", "content2-2");
-    			attr_dev(div9, "class", "svelte-1k5l1bp");
-    			add_location(div9, file, 60, 4, 2123);
+    			attr_dev(div9, "class", "svelte-1hp1poh");
+    			add_location(div9, file, 59, 4, 2064);
     			attr_dev(div10, "id", "section2-2");
-    			attr_dev(div10, "class", "svelte-1k5l1bp");
-    			add_location(div10, file, 58, 2, 2028);
-    			attr_dev(img5, "class", "background svelte-1k5l1bp");
+    			attr_dev(div10, "class", "svelte-1hp1poh");
+    			add_location(div10, file, 57, 2, 1969);
+    			attr_dev(img5, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img5.src, img5_src_value = "img/background-2-3.png")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "alt", "");
-    			add_location(img5, file, 66, 4, 2222);
+    			add_location(img5, file, 65, 4, 2163);
     			attr_dev(div11, "id", "content2-3");
-    			attr_dev(div11, "class", "svelte-1k5l1bp");
-    			add_location(div11, file, 67, 4, 2290);
+    			attr_dev(div11, "class", "svelte-1hp1poh");
+    			add_location(div11, file, 66, 4, 2231);
     			attr_dev(div12, "id", "section2-3");
-    			attr_dev(div12, "class", "svelte-1k5l1bp");
-    			add_location(div12, file, 65, 2, 2195);
-    			attr_dev(img6, "class", "background svelte-1k5l1bp");
+    			attr_dev(div12, "class", "svelte-1hp1poh");
+    			add_location(div12, file, 64, 2, 2136);
+    			attr_dev(img6, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img6.src, img6_src_value = "img/background-3-1.png")) attr_dev(img6, "src", img6_src_value);
     			attr_dev(img6, "alt", "");
-    			add_location(img6, file, 73, 4, 2389);
+    			add_location(img6, file, 72, 4, 2330);
     			attr_dev(div13, "id", "content3-1");
-    			attr_dev(div13, "class", "svelte-1k5l1bp");
-    			add_location(div13, file, 74, 4, 2457);
+    			attr_dev(div13, "class", "svelte-1hp1poh");
+    			add_location(div13, file, 73, 4, 2398);
     			attr_dev(div14, "id", "section3-1");
-    			attr_dev(div14, "class", "svelte-1k5l1bp");
-    			add_location(div14, file, 72, 2, 2362);
-    			attr_dev(img7, "class", "background svelte-1k5l1bp");
+    			attr_dev(div14, "class", "svelte-1hp1poh");
+    			add_location(div14, file, 71, 2, 2303);
+    			attr_dev(img7, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img7.src, img7_src_value = "img/background-3-2.png")) attr_dev(img7, "src", img7_src_value);
     			attr_dev(img7, "alt", "");
-    			add_location(img7, file, 80, 4, 2559);
+    			add_location(img7, file, 79, 4, 2500);
     			attr_dev(div15, "id", "content3-2");
-    			attr_dev(div15, "class", "svelte-1k5l1bp");
-    			add_location(div15, file, 81, 4, 2627);
+    			attr_dev(div15, "class", "svelte-1hp1poh");
+    			add_location(div15, file, 80, 4, 2568);
     			attr_dev(div16, "id", "section3-2");
-    			attr_dev(div16, "class", "svelte-1k5l1bp");
-    			add_location(div16, file, 79, 2, 2532);
-    			attr_dev(img8, "class", "background svelte-1k5l1bp");
+    			attr_dev(div16, "class", "svelte-1hp1poh");
+    			add_location(div16, file, 78, 2, 2473);
+    			attr_dev(img8, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img8.src, img8_src_value = "img/background-3-3.png")) attr_dev(img8, "src", img8_src_value);
     			attr_dev(img8, "alt", "");
-    			add_location(img8, file, 87, 4, 2729);
+    			add_location(img8, file, 86, 4, 2670);
     			attr_dev(div17, "id", "content3-3");
-    			attr_dev(div17, "class", "svelte-1k5l1bp");
-    			add_location(div17, file, 88, 4, 2797);
+    			attr_dev(div17, "class", "svelte-1hp1poh");
+    			add_location(div17, file, 87, 4, 2738);
     			attr_dev(div18, "id", "section3-3");
-    			attr_dev(div18, "class", "svelte-1k5l1bp");
-    			add_location(div18, file, 86, 2, 2702);
-    			attr_dev(img9, "class", "background svelte-1k5l1bp");
+    			attr_dev(div18, "class", "svelte-1hp1poh");
+    			add_location(div18, file, 85, 2, 2643);
+    			attr_dev(img9, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img9.src, img9_src_value = "img/background-4-1.png")) attr_dev(img9, "src", img9_src_value);
     			attr_dev(img9, "alt", "");
-    			add_location(img9, file, 94, 4, 2899);
+    			add_location(img9, file, 93, 4, 2840);
     			attr_dev(div19, "id", "content4-1");
-    			attr_dev(div19, "class", "svelte-1k5l1bp");
-    			add_location(div19, file, 95, 4, 2967);
+    			attr_dev(div19, "class", "svelte-1hp1poh");
+    			add_location(div19, file, 94, 4, 2908);
     			attr_dev(div20, "id", "section4-1");
-    			attr_dev(div20, "class", "svelte-1k5l1bp");
-    			add_location(div20, file, 93, 2, 2872);
-    			attr_dev(img10, "class", "background svelte-1k5l1bp");
+    			attr_dev(div20, "class", "svelte-1hp1poh");
+    			add_location(div20, file, 92, 2, 2813);
+    			attr_dev(img10, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img10.src, img10_src_value = "img/background-4-2.png")) attr_dev(img10, "src", img10_src_value);
     			attr_dev(img10, "alt", "");
-    			add_location(img10, file, 101, 4, 3065);
+    			add_location(img10, file, 100, 4, 3006);
     			attr_dev(div21, "id", "content4-2");
-    			attr_dev(div21, "class", "svelte-1k5l1bp");
-    			add_location(div21, file, 102, 4, 3133);
+    			attr_dev(div21, "class", "svelte-1hp1poh");
+    			add_location(div21, file, 101, 4, 3074);
     			attr_dev(div22, "id", "section4-2");
-    			attr_dev(div22, "class", "svelte-1k5l1bp");
-    			add_location(div22, file, 100, 2, 3038);
-    			attr_dev(img11, "class", "background svelte-1k5l1bp");
+    			attr_dev(div22, "class", "svelte-1hp1poh");
+    			add_location(div22, file, 99, 2, 2979);
+    			attr_dev(img11, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img11.src, img11_src_value = "img/background-4-3.png")) attr_dev(img11, "src", img11_src_value);
     			attr_dev(img11, "alt", "");
-    			add_location(img11, file, 108, 4, 3231);
+    			add_location(img11, file, 107, 4, 3172);
     			attr_dev(div23, "id", "content4-3");
-    			attr_dev(div23, "class", "svelte-1k5l1bp");
-    			add_location(div23, file, 109, 4, 3299);
+    			attr_dev(div23, "class", "svelte-1hp1poh");
+    			add_location(div23, file, 108, 4, 3240);
     			attr_dev(div24, "id", "section4-3");
-    			attr_dev(div24, "class", "svelte-1k5l1bp");
-    			add_location(div24, file, 107, 2, 3204);
-    			attr_dev(img12, "class", "background svelte-1k5l1bp");
+    			attr_dev(div24, "class", "svelte-1hp1poh");
+    			add_location(div24, file, 106, 2, 3145);
+    			attr_dev(img12, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img12.src, img12_src_value = "img/background-5-1.png")) attr_dev(img12, "src", img12_src_value);
     			attr_dev(img12, "alt", "");
-    			add_location(img12, file, 115, 4, 3397);
+    			add_location(img12, file, 114, 4, 3338);
     			attr_dev(div25, "id", "content5-1");
-    			attr_dev(div25, "class", "svelte-1k5l1bp");
-    			add_location(div25, file, 116, 4, 3465);
+    			attr_dev(div25, "class", "svelte-1hp1poh");
+    			add_location(div25, file, 115, 4, 3406);
     			attr_dev(div26, "id", "section5-1");
-    			attr_dev(div26, "class", "svelte-1k5l1bp");
-    			add_location(div26, file, 114, 2, 3370);
-    			attr_dev(img13, "class", "background svelte-1k5l1bp");
+    			attr_dev(div26, "class", "svelte-1hp1poh");
+    			add_location(div26, file, 113, 2, 3311);
+    			attr_dev(img13, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img13.src, img13_src_value = "img/background-5-2.png")) attr_dev(img13, "src", img13_src_value);
     			attr_dev(img13, "alt", "");
-    			add_location(img13, file, 122, 4, 3564);
+    			add_location(img13, file, 121, 4, 3505);
     			attr_dev(div27, "id", "content5-2");
-    			attr_dev(div27, "class", "svelte-1k5l1bp");
-    			add_location(div27, file, 123, 4, 3632);
+    			attr_dev(div27, "class", "svelte-1hp1poh");
+    			add_location(div27, file, 122, 4, 3573);
     			attr_dev(div28, "id", "section5-2");
-    			attr_dev(div28, "class", "svelte-1k5l1bp");
-    			add_location(div28, file, 121, 2, 3537);
-    			attr_dev(img14, "class", "background svelte-1k5l1bp");
+    			attr_dev(div28, "class", "svelte-1hp1poh");
+    			add_location(div28, file, 120, 2, 3478);
+    			attr_dev(img14, "class", "background svelte-1hp1poh");
     			if (!src_url_equal(img14.src, img14_src_value = "img/background-5-3.png")) attr_dev(img14, "src", img14_src_value);
     			attr_dev(img14, "alt", "");
-    			add_location(img14, file, 129, 4, 3731);
+    			add_location(img14, file, 128, 4, 3672);
     			attr_dev(div29, "id", "content5-3");
-    			attr_dev(div29, "class", "svelte-1k5l1bp");
-    			add_location(div29, file, 130, 4, 3799);
+    			attr_dev(div29, "class", "svelte-1hp1poh");
+    			add_location(div29, file, 129, 4, 3740);
     			attr_dev(div30, "id", "section5-3");
-    			attr_dev(div30, "class", "svelte-1k5l1bp");
-    			add_location(div30, file, 128, 2, 3704);
-    			attr_dev(img15, "class", "background svelte-1k5l1bp");
-    			if (!src_url_equal(img15.src, img15_src_value = "img/background-1-1.png")) attr_dev(img15, "src", img15_src_value);
-    			attr_dev(img15, "alt", "");
-    			add_location(img15, file, 136, 4, 3898);
-    			attr_dev(div31, "id", "content6-1");
-    			attr_dev(div31, "class", "svelte-1k5l1bp");
-    			add_location(div31, file, 137, 4, 3966);
-    			attr_dev(div32, "id", "section6-1");
-    			attr_dev(div32, "class", "svelte-1k5l1bp");
-    			add_location(div32, file, 135, 2, 3871);
-    			attr_dev(img16, "class", "background svelte-1k5l1bp");
-    			if (!src_url_equal(img16.src, img16_src_value = "img/background-1-2.png")) attr_dev(img16, "src", img16_src_value);
-    			attr_dev(img16, "alt", "");
-    			add_location(img16, file, 143, 4, 4065);
-    			attr_dev(div33, "id", "content6-2");
-    			attr_dev(div33, "class", "svelte-1k5l1bp");
-    			add_location(div33, file, 144, 4, 4133);
-    			attr_dev(div34, "id", "section6-2");
-    			attr_dev(div34, "class", "svelte-1k5l1bp");
-    			add_location(div34, file, 142, 2, 4038);
-    			attr_dev(main, "class", "svelte-1k5l1bp");
-    			add_location(main, file, 25, 0, 1165);
+    			attr_dev(div30, "class", "svelte-1hp1poh");
+    			add_location(div30, file, 127, 2, 3645);
+    			attr_dev(main, "class", "svelte-1hp1poh");
+    			add_location(main, file, 24, 0, 1106);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16744,18 +16686,6 @@
     			append_dev(div30, t31);
     			append_dev(div30, div29);
     			mount_component(asbeststats, div29, null);
-    			append_dev(main, t32);
-    			append_dev(main, div32);
-    			append_dev(div32, img15);
-    			append_dev(div32, t33);
-    			append_dev(div32, div31);
-    			mount_component(beiguaintro, div31, null);
-    			append_dev(main, t34);
-    			append_dev(main, div34);
-    			append_dev(div34, img16);
-    			append_dev(div34, t35);
-    			append_dev(div34, div33);
-    			mount_component(beiguacards, div33, null);
     			current = true;
     		},
     		p: noop,
@@ -16779,8 +16709,6 @@
     			transition_in(asbestintro.$$.fragment, local);
     			transition_in(asbestcards.$$.fragment, local);
     			transition_in(asbeststats.$$.fragment, local);
-    			transition_in(beiguaintro.$$.fragment, local);
-    			transition_in(beiguacards.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -16802,8 +16730,6 @@
     			transition_out(asbestintro.$$.fragment, local);
     			transition_out(asbestcards.$$.fragment, local);
     			transition_out(asbeststats.$$.fragment, local);
-    			transition_out(beiguaintro.$$.fragment, local);
-    			transition_out(beiguacards.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -16827,8 +16753,6 @@
     			destroy_component(asbestintro);
     			destroy_component(asbestcards);
     			destroy_component(asbeststats);
-    			destroy_component(beiguaintro);
-    			destroy_component(beiguacards);
     		}
     	};
 

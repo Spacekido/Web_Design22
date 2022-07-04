@@ -8,7 +8,7 @@
 
 <Fab color="primary" href="#{target}" extended class="custom-FABExtended">
   <Icon class="material-icons custom-FAB-Icon">{icon}</Icon>
-  <Label class="mdc-typography--body1 bold" style="overflow: hidden;">{label}</Label>
+  <Label class="mdc-typography--body2 bold" style="overflow: hidden;">{label}</Label>
 </Fab>
 
 <style>

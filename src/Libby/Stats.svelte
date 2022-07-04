@@ -4,8 +4,8 @@
 </script>
 
 <!-- TODO cambiare il titolo della sezione -->
-<div class="mdc-typography--headline4 uppercase" style="margin-top: 6vw;">Percentuali di vittime e inquinamento</div>
-<div class="flex-row-2" style="margin-top: 4vw;">
+<div class="mdc-typography--headline3 uppercase" style="margin-top: 6vw;">La miniera in numeri</div>
+<div class="flex-row-2" style="margin-top: 2vw;">
   <StatsCard value="1919-1990" caption="Periodo di attivitá" />
   <StatsCard value="2,400+" caption="Tumori diagnosticati" />
   <StatsCard value="694" caption="Vittime accertate" />

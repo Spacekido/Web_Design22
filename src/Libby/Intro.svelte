@@ -2,7 +2,7 @@
   import CustomButton from "../Components/CustomButton.svelte";
 </script>
 
-<div class="mdc-typography--headline2 uppercase">Libby, Montana (USA)</div>
+<div class="mdc-typography--headline1 uppercase">Libby, USA</div>
 
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">Storia del passato</div>
@@ -15,8 +15,8 @@
     naturale di <span class="highlight">amianto mortale</span>.
     <br /><br />
     Per decenni, la miniera ha prodotto <span class="highlight">tonnellate di polvere</span> al giorno, che non solo fluttuava ovunque negli stabilimenti, ma
-    inondava l'aria respirabile di gran parte della città. L'azienda sapeva che la vermiculite era <span class="highlight">contaminata</span> dall'amianto e che
-    causava complicazioni per la salute. La società non avvertì nessuno dell'esposizione all'amianto e l'attività mineraria continuò fino al 1990.
+    inondava l'aria respirabile di gran parte della città. L'azienda sapeva che la vermiculite era <span class="highlight">contaminata</span> dall'amianto, ma non
+    avvertì nessuno e continuò ad operare fino al 1990.
   </div>
 </div>
 
@@ -33,13 +33,12 @@
     <br /><br />
     <CustomButton label="Guarda il documentario" href="https://youtu.be/cy3piCUPIkc?t=492" direction="right-button" />
   </div>
-  <!-- TODO aggiungere ancora uno o due paragrafi per riempire spazio vuoto -->
 </div>
 
 <style>
   .left {
     text-align: left;
-    margin: 8vw 30vw 0 0;
+    margin: 2vw 30vw 0 0;
   }
   .right {
     text-align: right;

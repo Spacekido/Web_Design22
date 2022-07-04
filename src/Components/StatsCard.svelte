@@ -7,12 +7,13 @@
 <Card class="stats-card" padded>
   <Content style="padding: 1vw;">
     <div class="mdc-typography--headline4 highlight">{value}</div>
-    <div class="mdc-typography--body1 bold">{caption}</div>
+    <div class="mdc-typography--body2 bold">{caption}</div>
   </Content>
 </Card>
 
 <style>
   :global(.stats-card) {
+    width: 14vw;
     padding: 1vw;
     border-radius: 3vw !important;
   }

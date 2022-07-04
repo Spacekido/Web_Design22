@@ -20,8 +20,7 @@
   import BeiguaCards from "./Beigua/Cards.svelte";
 </script>
 
-<!-- TODO correggere i link in modo che si arrivi sul testo -->
-<!-- TODO aggiungere immagine di sfondo definitiva -->
+<!-- TODO aggiungere immagine di sfondo con parte finale -->
 <TopAppBar />
 <main>
   <div id="section1-1">
@@ -133,7 +132,7 @@
     </div>
   </div>
 
-  <div id="section6-1">
+  <!-- <div id="section6-1">
     <img class="background" src="img/background-1-1.png" alt="" />
     <div id="content6-1">
       <BeiguaIntro />
@@ -145,7 +144,7 @@
     <div id="content6-2">
       <BeiguaCards />
     </div>
-  </div>
+  </div> -->
 </main>
 
 <style>
@@ -185,7 +184,7 @@
     padding-top: 6vw;
   }
   #content2-1 {
-    margin-top: 10vw;
+    margin-top: 13vw;
     padding-top: 15vw;
     padding-bottom: 10vw;
   }
@@ -194,11 +193,11 @@
     padding-top: 15vw;
   }
   #content4-1 {
-    margin-top: 15vw;
+    margin-top: 18vw;
     padding-top: 15vw;
   }
   #content5-1 {
-    margin-top: 10vw;
+    margin-top: 16vw;
     padding-top: 15vw;
   }
 </style>

@@ -3,7 +3,7 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<div class="mdc-typography--headline4 uppercase" style="margin-block: 10vw;">La miniera raccontata direttamente dai suoi testimoni</div>
+<div class="mdc-typography--headline3 uppercase" style="margin-top: 20vw;">La miniera raccontata direttamente dai suoi testimoni</div>
 <div class="flex-row-4" style="margin-top: 4vw;">
   <ContentCard
     contentId={"content-balangero1"}
@@ -34,7 +34,7 @@
   </div>
 </div>
 
-<div class="flex-row-4" style="margin-top: 6vw;">
+<div class="flex-row-4" style="margin-top: 4vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-balangero2">
     <div>
       Nel novembre del 1941 <span class="highlight">Primo Levi</span>, neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche

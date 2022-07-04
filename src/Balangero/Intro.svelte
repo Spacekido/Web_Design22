@@ -1,4 +1,4 @@
-<div class="mdc-typography--headline2 uppercase">Balangero, Italia</div>
+<div class="mdc-typography--headline1 uppercase">Balangero, Italia</div>
 
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">La storia della miniera</div>
@@ -34,10 +34,10 @@
 <style>
   .left {
     text-align: left;
-    margin: 8vw 25vw 0 0;
+    margin: 2vw 25vw 0 0;
   }
   .right {
     text-align: right;
-    margin: 23vw 0 0 26vw;
+    margin: 21vw 0 0 26vw;
   }
 </style>

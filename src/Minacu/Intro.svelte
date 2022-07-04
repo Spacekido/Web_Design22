@@ -1,4 +1,4 @@
-<div class="mdc-typography--headline2 uppercase">Minaçu, Brasile</div>
+<div class="mdc-typography--headline1 uppercase">Minaçu, Brasile</div>
 
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">Una storia controversa</div>
@@ -35,10 +35,10 @@
 <style>
   .left {
     text-align: left;
-    margin: 8vw 25vw 0 0;
+    margin: 1vw 25vw 0 0;
   }
   .right {
     text-align: right;
-    margin: 1.5vw 2vw 0 18vw;
+    margin: 1vw 2vw 0 18vw;
   }
 </style>

@@ -3,7 +3,7 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<div class="mdc-typography--headline4 uppercase" style="margin-block: 8vw;">Come si sono schierati i cittadini con ideologie differenti?</div>
+<div class="mdc-typography--headline3 uppercase" style="margin-top: 12vw;">Come si sono schierati i cittadini con ideologie differenti?</div>
 <div class="flex-row-4" style="margin-top: 4vw;">
   <ContentCard
     contentId={"content-minacu1"}
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<div class="flex-row-4" style="margin-top: 6vw;">
+<div class="flex-row-4" style="margin-top: 4vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-minacu2">
     <div>
       Nel cosiddetto "letto di polvere", dove il minerale si separava, gli operai, tra i tanti donne, erano coperti di polvere.<br />
