@@ -132,8 +132,8 @@
     </div>
   </div>
 
-  <!-- <div id="section6-1">
-    <img class="background" src="img/background-1-1.png" alt="" />
+  <div id="section6-1">
+    <img class="background" src="img/background-4-1.png" alt="" />
     <div id="content6-1">
       <BeiguaIntro />
     </div>
@@ -144,7 +144,7 @@
     <div id="content6-2">
       <BeiguaCards />
     </div>
-  </div> -->
+  </div>
 </main>
 
 <style>

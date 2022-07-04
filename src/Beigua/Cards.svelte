@@ -3,61 +3,65 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<div class="mdc-typography--headline3 uppercase" style="margin-block: 10vw;">Altro da dire sul beigua</div>
+<div class="mdc-typography--headline3 uppercase" style="margin-top: 10vw;">La situazione attuale</div>
 <div class="flex-row-4" style="margin-top: 4vw;">
   <ContentCard
-    contentId={"content-balangero1"}
-    src={"img/balangero-berrino.jpg"}
-    title={"Dott. Franco Berrino"}
-    subtitle={"Laureatosi in medicina all'Università di Torino nel 1969 e specializzatosi in anatomia patologica, si è poi dedicato all'epidemiologia dei tumori."}
-    buttonLabel={"Scopri la sua testimonianza"}
+    contentId={"content-beigua1"}
+    src={"img/beigua-parco.jpg"}
+    title={"Parco Naturale Regionale del Beigua"}
+    subtitle={"L'importanza del giacimento di titanio di Pianpaludo"}
+    buttonLabel={"Scopri cosa c'è sotto"}
     direction={"left-card"}
   />
 
-  <div class="mdc-typography--body1 hidden right-align flex-column-2" id="content-balangero1">
+  <div class="mdc-typography--body1 hidden right-align flex-column-2" id="content-beigua1">
     <div>
-      Una testimonianza diretta della tragedia causata dall'amianto ci arriva dal medico epidemiologo ed esperto di tumori
-      <span class="highlight">Franco Berrino</span>, cresciuto proprio a Balangero dove il padre, l'ingegnere Giovanni Berrino, era stato nominato direttore
-      tecnico della miniera.
-      <br /><br />
-      <span class="italic">
-        "Non c’era alcuna prevenzione: mio padre fu invitato a dimettersi perché ai padroni non piacevano i suoi investimenti per mettere i filtri, delle
-        maniche di cotone. Alla fine è morto di amianto: <span class="highlight">tumore al polmone</span> a 72 anni senza mai aver fumato una sigaretta. Stesso destino
-        per mio fratello: mesotelioma, a 67 anni."
-      </span>
+      Nel 1970 tra Urbe e Sassello è stato soperto un giacimento di rutilo sepolto in corrispondenza dei Monti Antenna e Tariné (rispettivamente 670 e 930 m s.l.m).
+      Sono stimate circa 9 milioni di tonnellate di biossido di Titanio, sottoforma di rutilo.
+      Nel 1976 il ministero dell’Industria rilascia alla Mineraria Italiana Srl una concessione ventennale, poi trasferita alla Compagnia Europea per il Titanio (C.E.T. Srl).
+      <br/><br/>
+      Secondo uno studio dell’Università di Genova degli anni '90, per sfruttare questo giacimento si potrebbe arrivare a smuovere circa 200 milioni di metri cubi di terre,
+      da cui ricavare il 6% di rutilio, ma anche una montagna di rocce amiantifere, stimate tra il 10 e il 15% (vale a dire 20 milioni di metri cubi circa, 
+      una movimentazione pari a circa 30 aeroporti di Genova).
+      <br/><br/>
+      Il <span class="highlight">Prof. Pietro Marescotti</span> del dipartimento Scienze della Terra, della Vita e dell’Ambiente dell’Università degli Studi di Genova, spiega:
+      <span class="italic">"Il titanio di per sé non è un elemento critico né per la salute umana né per l’ambiente. E’ un metallo abbastanza stabile e anche biologicamente non presenta grossi problemi.
+      Nel caso specifico del giacimento del Beigua il problema in realtà è collegato sia alle rocce che contengono il rutilo sia alle altre rocce dell’area:
+      le eclogiti, serpentiniti e anfiboliti. Queste possono contenere altri metalli come nichel, cromo, cobalto ma soprattutto minerali classificati come <span class="highlight">amianto</span>.
+      Eclogiti e serpentiniti, nella deliberazione di Regione Liguria (Delibera di Consiglio Regionale 105/96), sono inserite nella classe A, ovvero a <span class="highlight">rischio più elevato</span>"</span>.
     </div>
     <CustomButton
       direction={"right-button"}
-      label={"Leggi l'intervista"}
-      href={"https://www.corriere.it/cook/news/21_maggio_10/franco-berrino-vivo-solitudine-la-morte-mia-moglie-jo-b48c0c7c-a78d-11eb-b37e-07dee681b819.shtml"}
+      label={"Leggi l'aticolo"}
+      href={"https://www.ivg.it/2021/04/titanio-del-beigua-ecco-perche-il-giacimento-di-piampaludo-fa-gola/"}
     />
   </div>
 </div>
 
 <div class="flex-row-4" style="margin-top: 6vw;">
-  <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-balangero2">
+  <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-beigua2">
     <div>
-      Nel novembre del 1941 <span class="highlight">Primo Levi</span>, neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche
-      sull’estrazione del prezioso nichel dalla roccia di serpentino. Levi descrive la cava paragonandola alla rappresentazione dantesca dei
-      <span class="highlight">gironi infernali</span>, con fibre di amianto onnipresenti, raffigurate come un demone, asfissiante e ostile. Celebre é diventata
-      la sua frase <span class="italic">“C’era amianto dappertutto, come una neve cenerina”</span>.
-      <br /><br />
-      Nel 1954 <span class="highlight">Italo Calvino</span> arriva nella miniera piemontese come redattore del quotidiano “L’Unità” occupandosi del rischio
-      amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo
-      <span class="italic">“Il grigio polverone d’asbesto della cava che dove arriva <span class="highlight">brucia, foglie e polmoni</span>”</span>.
+      E&grave; stata depositata il 21 maggio 2022 la "la sentenza del TAR della Liguria che di fatto conferma il divieto di effettuare ricerche minerarie nell'area del Monte Tarinè".
+      <br/><br/>
+      <span class="highlight">Legambiente Liguria</span> esprime <span class="italic">"soddisfazione in merito alla sentenza del Tar che rappresenta la pietra tombale su qualsiasi ipotesi
+      di sfruttamento minerario del comprensorio del Beigua"</span>.
+      <br/><br/>
+      L'assessore regionale all'Urbanistica e alle attività estrattive <span class="highlight">Marco Scajola</span> afferma che <span class="italic">"La sentenza del Tar va nella direzione della tutela del territorio,
+      la stessa auspicata e voluta dalla Giunta regionale, da sempre contraria a qualsiasi attività estrattiva all'interno dell'area del Parco.
+      Chiediamo al Governo di fornire strumenti adeguati agli Enti locali per decidere il proprio destino senza dover attendere i tribunali"</span>.
     </div>
     <CustomButton
       direction={"left-button"}
       label={"Leggi l'articolo"}
-      href={"https://www.inail.it/cs/internet/comunicazione/news-ed-eventi/news/ucm_106891_amianto_a_balangero_la_minier.html"}
+      href={"https://genova.repubblica.it/cronaca/2022/05/28/news/liguria_titanio_nel_beigua_tar_conferma_no_a_ricerche_minerarie-351535040/"}
     />
   </div>
   <ContentCard
-    contentId={"content-balangero2"}
-    src={"img/balangero-levi-calvino.jpg"}
-    title={"Primo Levi e Italo Calvino"}
-    subtitle={"L'Amiantifera di Balangero viene denunciata anche dalla letteratura italiana del Novecento"}
-    buttonLabel={"Scopri i loro racconti"}
+    contentId={"content-beigua2"}
+    src={"img/beigua-tar.jpg"}
+    title={"Il no del TAR"}
+    subtitle={"Confermato il divieto di effettuare ricerche minerarie nell'area del Monte Tarinè"}
+    buttonLabel={"Scopri la sentenza"}
     direction={"right-card"}
   />
 </div>
