@@ -1,6 +1,7 @@
 <script>
   import TopAppBar from "./Components/TopAppBar.svelte";
   import FAB from "./Components/CustomFAB.svelte";
+  import Footer from "./Components/Footer.svelte";
   import IntroTitle from "./Amianto/Title.svelte";
   import IntroIntro from "./Amianto/Intro.svelte";
   import IntroCards from "./Amianto/Cards.svelte";
@@ -144,7 +145,9 @@
     <div id="content6-2">
       <BeiguaCards />
     </div>
-  </div>
+  </div> 
+
+  <Footer />
 </main>
 
 <style>

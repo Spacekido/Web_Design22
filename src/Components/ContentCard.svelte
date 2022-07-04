@@ -10,7 +10,6 @@
     direction = "";
 </script>
 
-<!-- TODO mettere dimensioni dinamiche vw su componenti della card (actions, button...) -->
 <Card class="custom-card {direction}">
   <PrimaryAction on:click={() => document.getElementById(contentId).classList.toggle("hidden")}>
     <img {src} alt={title} />
@@ -41,7 +40,6 @@
   }
   :global(.custom-card) {
     max-width: 25vw;
-    /* max-height: 30vw; */
     height: 100%;
   }
   :global(.left-card) {
