@@ -3,7 +3,7 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<div class="mdc-typography--headline3 uppercase" style="margin-top: 145vw;">La situazione attuale nel territorio</div>
+<div class="mdc-typography--headline3 uppercase" style="margin-top: 15vw;">La situazione attuale del territorio</div>
 <div class="flex-row-4" style="margin-top: 4vw;">
   <ContentCard
     contentId={"content-beigua1"}
@@ -20,10 +20,10 @@
       dei Monti Antenna e Tariné, il cui contenuto é stato stimato a circa 9 milioni di tonnellate. Nel 1976 il ministero dell’Industria ha rilasciato alla
       Mineraria Italiana Srl una concessione ventennale sul territorio, ceduta poi alla Compagnia Europea per il Titanio.
       <br /><br />
-      Secondo uno studio dell’Università di Genova degli anni '90, per sfruttare questo giacimento si potrebbe arrivare a smuovere circa
-      <span class="highlight">200 milioni</span> di metri cubi di terre, da cui ricavare il 6% di titanio, ma anche una montagna di rocce amiantifere, stimate
-      tra il <span class="highlight">10%</span> e il <span class="highlight">15%</span>. Una tale quantitá equivale a 20 milioni di metri cubi circa, ossia una
-      movimentazione pari a 30 aeroporti di Genova.
+      Secondo uno studio dell’Università di Genova degli anni '90, per sfruttare questo giacimento e ricavare solo il 6% di titanio, si potrebbe arrivare a smuovere
+      circa
+      <span class="highlight">200 milioni</span> di metri cubi di terra, di cui le rocce amiantifere compongono tra il <span class="highlight">10%</span> e il
+      <span class="highlight">15%</span>. Una tale quantitá equivale a una movimentazione pari a 30 aeroporti di Genova.
     </div>
     <CustomButton
       direction={"right-button"}
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<div class="flex-row-4" style="margin-top: 6vw;">
+<div class="flex-row-4" style="margin-top: 10vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-beigua2">
     <div>
       É stata depositata il <span class="highlight">21 maggio 2022</span> la
@@ -71,4 +71,14 @@
   />
 </div>
 
-<div class="mdc-typography--headline4 uppercase" style="margin-top: 10vw;">Frase finale ad effetto?</div>
+<div>
+  <div class="mdc-typography--headline3 uppercase" style="margin-top: 10vw;">E noi, vogliamo dare vita a questo inferno?</div>
+  <img src="img/logo.png" alt="Logo" />
+</div>
+
+<style>
+  img {
+    margin-top: 4vw;
+    width: 8vw;
+  }
+</style>

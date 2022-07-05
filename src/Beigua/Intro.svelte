@@ -16,8 +16,7 @@
     <br /><br />
     Quindi se non facciamo attenzione a dove si vorrà introdurre un nuovo sito estrattivo, le polveri sottili che si potrebbero alzare a seguito degli scavi potrebbero
     mescolarsi all'aria che respiriamo e <span class="highlight">contaminare</span> l'intera Ligura e il basso Piemonte, rendendo così inabitabili questi
-    <span class="highlight">territori</span>
-    così tanto a noi cari.
+    <span class="highlight">territori</span> a noi tanto cari.
     <br /><br />
     <CustomButton label="Amianto naturale" href="https://www.arpal.liguria.it/tematiche/suolo/amianto-naturale.html" direction="left-button" />
   </div>
@@ -60,10 +59,10 @@
   }
   .right {
     text-align: right;
-    margin: 4vw 0 0 16vw;
+    margin: 8vw 0 0 16vw;
   }
   .center {
-    margin: 4vw 8vw;
+    margin: 8vw 8vw;
   }
   img {
     width: 100%;

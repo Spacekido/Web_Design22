@@ -7,7 +7,9 @@
 </script>
 
 <Fab color="primary" href="#{target}" extended class="custom-FABExtended">
-  <Icon class="material-icons custom-FAB-Icon">{icon}</Icon>
+  <Icon class="custom-FAB-Icon">
+    <img src="img/logo.png" alt="Logo" />
+  </Icon>
   <Label class="mdc-typography--body2 bold" style="overflow: hidden;">{label}</Label>
 </Fab>
 
@@ -23,5 +25,8 @@
     margin-left: 0 !important;
     margin-right: 0.6vw !important;
     font-size: 1.4vw !important;
+  }
+  img {
+    width: 100%;
   }
 </style>

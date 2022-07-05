@@ -134,20 +134,20 @@
   </div>
 
   <div id="section6-1">
-    <!-- <img class="background" src="img/background-4-1.png" alt="" /> -->
+    <img class="background" src="img/background-6-1.png" alt="" />
     <div id="content6-1">
       <BeiguaIntro />
     </div>
   </div>
 
   <div id="section6-2">
-    <!-- <img class="background" src="img/background-1-2.png" alt="" /> -->
+    <img class="background" src="img/background-6-2.png" alt="" />
     <div id="content6-2">
       <BeiguaCards />
     </div>
   </div>
 
-  <!-- <Footer /> -->
+  <Footer />
 </main>
 
 <style>
@@ -204,7 +204,7 @@
     padding-top: 15vw;
   }
   #content6-1 {
-    margin-top: 16vw;
+    margin-top: 30vw;
     padding-top: 15vw;
   }
 </style>

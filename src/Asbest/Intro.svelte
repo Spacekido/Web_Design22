@@ -24,7 +24,7 @@
 <div class="right">
   <div class="mdc-typography--headline4 uppercase primary">Conseguenze sul presente</div>
   <div class="mdc-typography--body1">
-    Tutt'oggi i produttori russi operano incuranti dei pericoli e <span class="highlight">sostenuti dal governo</span>, il quale fa leva sugli abitanti sapendo
+    Tutt'oggi i produttori russi operano noncuranti dei pericoli e <span class="highlight">sostenuti dal governo</span>, il quale fa leva sugli abitanti sapendo
     che la miniera è l’unica importante fonte economica della città.<br />
     Asbest, dopo un secolo di estrazione mineraria intensiva, ha ancora abbastanza amianto crisotilo sepolto nel terreno per mantenere Uralasbest in attività per
     almeno <span class="highlight">un altro secolo</span>.

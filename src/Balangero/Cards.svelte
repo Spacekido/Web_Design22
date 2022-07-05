@@ -3,7 +3,7 @@
   import ContentCard from "../Components/ContentCard.svelte";
 </script>
 
-<div class="mdc-typography--headline3 uppercase" style="margin-top: 20vw;">La miniera raccontata direttamente dai suoi testimoni</div>
+<div class="mdc-typography--headline3 uppercase" style="margin-top: 23vw;">La miniera raccontata direttamente dai suoi testimoni</div>
 <div class="flex-row-4" style="margin-top: 4vw;">
   <ContentCard
     contentId={"content-balangero1"}

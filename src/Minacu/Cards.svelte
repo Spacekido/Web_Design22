@@ -36,15 +36,16 @@
 <div class="flex-row-4" style="margin-top: 4vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-minacu2">
     <div>
-      Nel cosiddetto "letto di polvere", dove il minerale si separava, gli operai, tra i tanti donne, erano coperti di polvere.<br />
-      <span class="highlight">Evandra Vieira Brito</span>, che ha perso il marito (un ex dipendente Sama) a causa di un cancro nel 2009, ricorda:
-      <span class="italic">"C'erano circa 20 ragazze coperte dalla polvere. Sono <span class="highlight">morte tutte</span> per aver vomitato sangue"</span>.
+      Nel cosiddetto "letto di polvere", luogo in cui il minerale veniva separato, gli operai, tra i quali molte donne, erano coperti di polvere.<br />
+      Ce ne da una testimonianza chiara <span class="highlight">Evandra Vieira Brito</span>, che ha perso il marito (un ex dipendente di SAMA) a causa di un
+      cancro nel 2009, ricordando:
+      <span class="italic">"C'erano circa 20 ragazze coperte dalla polvere. Sono <span class="highlight">morte tutte</span> dopo aver vomitato sangue"</span>.
       <br /><br />
       Nonostante questo tipo di testimonianze, gruppi favorevoli alla miniera hanno dichiarato che
       <span class="italic">"il modo in cui viene estratto l'amianto a Minaçu non è dannoso per la salute"</span> e che
-      <span class="italic">"l'azienda rispetta tutte le leggi relative alla <span class="highlight">salute sul lavoro</span>"</span>. Affermano anche che le
-      persone che si ammalano in miniera in questo momento è perché si sono ammalate in una miniera precedente e sono successivamente emigrate per lavoro a Cana
-      Brava.
+      <span class="italic">"l'azienda rispetta tutte le leggi relative alla <span class="highlight">salute sul lavoro</span>"</span>. Affermano inoltre che le
+      persone che si ammalano in miniera in questo momento è perché si sono ammalate a causa del lavoro svolto precedentemente presso un' altra miniera e sono
+      successivamente emigrate per lavoro a Cana Brava.
     </div>
     <CustomButton direction={"left-button"} label={"Leggi l'articolo"} href={"https://ejatlas.org/conflict/amianto-mining-in-minacu-goias"} />
   </div>

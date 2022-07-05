@@ -42,7 +42,7 @@
       <span class="highlight">attualmente malato</span>.
       <br /><br />
       L’Agenzia per la Protezione Ambientale Americana ha effettuato sopralluoghi in circa <span class="highlight">8200 proprietà</span>, di cui piú di 2400
-      siti sono stati risanificati completamente. Tra questi rientravano attività commerciali, giardini, abitazioni private, parchi pubblici e altri
+      siti sono stati risanificati completamente. Tra questi rientravano attività commerciali, giardini, abitazioni private, parchi e altri
       <span class="highlight">spazi pubblici</span> frequentati.
       <br /><br />
       Ad oggi, per la decontaminazione e il <span class="highlight">risanamento</span> della città di Libby, sono stati rimossi e rimpiazzati complessivamente più

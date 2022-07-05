@@ -12,28 +12,28 @@
 </div>
 <div class="flex-row-2" style="">
   <LinkCard
-    href="#section3"
+    href="#content2-1"
     src="img/minacu-mine.png"
     title="Minaçu, Brasile"
     subtitle="L'ultima miniera di amianto del Brasile ancora attiva, nonstante il divieto legale imposto dallo stato."
   />
 
   <LinkCard
-    href="#section4"
+    href="#content3-1"
     src="img/balangero-mine.png"
     title="Balangero, Italia"
     subtitle="La miniera di amianto piú grande d'Europa. Rimasta attiva nella provincia di Torino fino al 1990."
   />
 
   <LinkCard
-    href="#section5"
+    href="#content4-1"
     src="img/libby-mine.png"
     title="Libby, Montana"
     subtitle="La cittá che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite."
   />
 
   <LinkCard
-    href="#section6"
+    href="#content5-1"
     src="img/asbest-mine.png"
     title="Asbest, Russia"
     subtitle="Al giorno d'oggi, la miniera con la maggiore produzione annuale di amianto di tutto il mondo."

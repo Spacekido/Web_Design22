@@ -38,6 +38,6 @@
   }
   .right {
     text-align: right;
-    margin: 21vw 0 0 26vw;
+    margin: 23vw 0 0 26vw;
   }
 </style>

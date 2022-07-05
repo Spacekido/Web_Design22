@@ -11,8 +11,8 @@
     son rimaste attive fino al 2017, anno in cui la Corte Suprema Federale ha <span class="highlight">vietato</span> l’uso del minerale.
     <br /><br />
     Nel 2019, peró, il governatore del Brasile ha emanato una <span class="highlight">legislazione</span> nello stato di Goiás, approvando l’estrazione ed esportazione
-    di amianto, facendo continuare così l’operato di Cana Brava. Questa mossa politica ha portato gli abitanti di Minaçu di fronte a un bivio: caduta in un periodo
-    economico difficile, in qualsiasi momento una decisione del tribunale potrebbe interrompere l'attività mineraria della cittá.
+    di amianto, facendo continuare così l’operato di Cana Brava. Questa mossa politica ha portato gli abitanti di Minaçu in una situazione delicata di fronte a un
+    bivio: in qualsiasi momento una decisione del tribunale potrebbe interrompere l'attività mineraria della cittá caduta proprio in un periodo economico difficile.
   </div>
 </div>
 

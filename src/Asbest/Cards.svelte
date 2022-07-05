@@ -15,9 +15,9 @@
   />
   <div class="mdc-typography--body1 hidden right-align flex-column-2" id="content-asbest1">
     <div>
-      Attaccato per decenni dai difensori della salute, l'ostinatamente <span class="highlight">provocatoria</span> azienda russa produttrice di amianto pensa
-      di aver forse finalmente trovato la figura perfetta per una <span class="highlight">campagna per riabilitare</span> l'immagine profondamente macchiata del
-      prodotto: l'ex presidente statunitense Donald Trump.
+      Attaccato per decenni dai difensori della salute, l'ex presidente statunitense Donald Trump viene utilizzato dall'ostinatamente
+      <span class="highlight">provocatoria</span> azienda russa produttrice di amianto come figura perfetta per una campagna volta a
+      <span class="highlight">riabilitare</span> l'immagine profondamente macchiata del proprio prodotto:.
       <br /><br />
       Nel 2018 la società Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffigurante la faccia di Trump e recitante la seguente
       frase <span class="italic">"Approvato da <span class="highlight">Donald Trump</span>, 45° presidente degli Stati Uniti"</span>
@@ -42,8 +42,7 @@
       nella città di Asbest".
       <br /><br />
       L'incidenza del <span class="highlight">mesotelioma</span>, una malattia polmonare ampiamente attribuita all'amianto in Occidente,
-      <span class="highlight">non è stata studiata</span>
-      perché la Russia non registra questa malattia separatamente.
+      <span class="highlight">non è stata studiata</span> a sufficienza dalla Russia impedendone il corretto monitoraggio sanitario.
     </div>
   </div>
   <ContentCard

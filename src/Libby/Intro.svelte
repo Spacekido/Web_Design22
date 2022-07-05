@@ -27,9 +27,8 @@
     nei polmoni degli operai e delle loro famiglie, sul campo da baseball e sulle piste da corsa del liceo a cui l'azienda aveva donato il materiale per la
     copertura.
     <br /><br />
-    Gli effetti dolorosi delle polveri continuano <span class="highlight">lenti ma inesorabili</span>: difatti ci vogliono decenni perchè i sintomi delle
-    malattie da amianto si manifestino, e i bambini che hanno giocato a baseball o corso sulle piste a contatto con l'amianto anni fa stanno iniziando ad
-    ammalarsi solo ora.
+    Gli effetti dolorosi delle polveri continuano <span class="highlight">lenti ma inesorabili</span>: ci vogliono decenni perchè i sintomi delle malattie da
+    amianto si manifestino, infatti i bambini che hanno giocato a baseball o corso sulle piste a contatto con l'amianto stanno iniziando ad ammalarsi solo ora.
     <br /><br />
     <CustomButton label="Guarda il documentario" href="https://youtu.be/cy3piCUPIkc?t=492" direction="right-button" />
   </div>

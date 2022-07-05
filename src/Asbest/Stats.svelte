@@ -11,5 +11,5 @@
   <StatsCard value="68,893" caption="Cittadini a rischio" />
 </div>
 <div style="margin-top: 3vw;">
-  <FAB target={"content6-1"} label={"Continua il viaggio"} />
+  <FAB target={"content6-1"} label={"Cosa ci attende nel futuro?"} />
 </div>
