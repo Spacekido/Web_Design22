@@ -15,11 +15,12 @@
   />
   <div class="mdc-typography--body1 hidden right-align flex-column-2" id="content-asbest1">
     <div>
-      Attaccato per decenni dai difensori della salute, l'ex presidente statunitense Donald Trump viene utilizzato dall'ostinatamente
-      <span class="highlight">provocatoria</span> azienda russa produttrice di amianto come figura perfetta per una campagna volta a
-      <span class="highlight">riabilitare</span> l'immagine profondamente macchiata del proprio prodotto:.
+      Attaccato per decenni dai difensori della salute, l'ostinatamente
+      <span class="highlight">provocatoria</span> azienda russa produttrice di amianto, trova 
+      nell'ex presidente statunitense Donald Trump, la figura perfetta per una campagna volta a
+      <span class="highlight">riabilitare</span> l'immagine profondamente macchiata del proprio prodotto.
       <br /><br />
-      Nel 2018 la società Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffigurante la faccia di Trump e recitante la seguente
+      Nel 2018 la società Russa ha messo in circolazione pallet adornati con un sigillo raffigurante la faccia di Trump e recitante la seguente
       frase <span class="italic">"Approvato da <span class="highlight">Donald Trump</span>, 45° presidente degli Stati Uniti"</span>
     </div>
     <CustomButton
@@ -33,7 +34,7 @@
 <div class="flex-row-4" style="margin-top: 3vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-asbest2">
     <div>
-      Il dottor <span class="highlight">Igor Bragin</span> ha liquidato come "non corrispondente alla realtà" uno studio scientifico del 2016 che mostrava tassi
+      Il dottor <span class="highlight">Igor Bragin</span> ha liquidato come <span class="italic">"non corrispondente alla realtà"</span> uno studio scientifico del 2016 che mostrava tassi
       elevati di cancro ai polmoni nei pressi della miniera.
       <br /><br />
       Lo studio, una revisione comparativa dei <span class="highlight">tassi di mortalità</span> ad Asbest e nella regione circostante di Sverdlovsk, ha

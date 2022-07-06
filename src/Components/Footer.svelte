@@ -1,5 +1,5 @@
 <footer class="mdc-typography--body2">
-  &copy; Copyright 2022 — Gruppo 10 <br /> Arena Nicoló — Barnabe Carlos — Cannizzaro Gloria — Caotti Leonardo — Navone Federica — Oneto Alessandro — Sartori Alice
+  &copy; Copyright 2022 — Gruppo 10 <br /> Arena Nicolò — Barnabé Carlos — Cannizzaro Gloria — Caotti Leonardo — Navone Federica — Oneto Alessandro — Sartori Alice
   — Sattanino Giulia
 </footer>
 

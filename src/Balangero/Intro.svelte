@@ -7,12 +7,12 @@
     <span class="highlight">più grande</span>
     cava d'amianto dell'Occidente, è stata in primo luogo un'immensa fonte di lavoro e ricchezza per la comunità balangerese e i paesi limitrofi.
     <br /><br />
-    Le prime attività di estrazione vennero avviate nel 1918 mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare
-    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione tanto da raggiungere il
+    Le prime attività di estrazione vennero avviate nel 1918, mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare
+    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione, tanto da raggiungere il
     <span class="highlight">picco di produzione</span>
     di 36000 tonnellate annue.
     <br /><br />
-    In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta dalla Eternit e dalle Manifatture Colombo ai fratelli Puccini di Roma, ma
+    In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta, dalla Eternit e dalle Manifatture Colombo, ai fratelli Puccini di Roma, ma
     nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne <span class="highlight">chiusa per fallimento</span> e i dipendenti licenziati.
   </div>
 </div>

@@ -17,13 +17,13 @@
   <div class="mdc-typography--body1 hidden right-align flex-column-2" id="content-beigua1">
     <div>
       Nel 1970 tra i comuni di Urbe e Sassello è stato scoperto un giacimento di biossido di <span class="highlight">titanio</span>, sepolto in corrispondenza
-      dei Monti Antenna e Tariné, il cui contenuto é stato stimato a circa 9 milioni di tonnellate. Nel 1976 il ministero dell’Industria ha rilasciato alla
+      dei Monti Antenna e Tariné. Sono stimate circa 9 milioni di tonnellate di biossido di Titanio, sottoforma di rutilo. Nel 1976 il ministero dell’Industria ha rilasciato alla
       Mineraria Italiana Srl una concessione ventennale sul territorio, ceduta poi alla Compagnia Europea per il Titanio.
       <br /><br />
-      Secondo uno studio dell’Università di Genova degli anni '90, per sfruttare questo giacimento e ricavare solo il 6% di titanio, si potrebbe arrivare a smuovere
+      Secondo uno studio dell’Università di Genova degli anni '90, per sfruttare questo giacimento e ricavare solo il 6% di rutilo, si potrebbe arrivare a smuovere
       circa
       <span class="highlight">200 milioni</span> di metri cubi di terra, di cui le rocce amiantifere compongono tra il <span class="highlight">10%</span> e il
-      <span class="highlight">15%</span>. Una tale quantitá equivale a una movimentazione pari a 30 aeroporti di Genova.
+      <span class="highlight">15%</span>: una tale quantità equivale a una movimentazione pari a 30 aeroporti di Genova.
     </div>
     <CustomButton
       direction={"right-button"}
@@ -36,16 +36,13 @@
 <div class="flex-row-4" style="margin-top: 10vw;">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-beigua2">
     <div>
-      É stata depositata il <span class="highlight">21 maggio 2022</span> la
-      <span class="italic">
-        "la sentenza del Tribunale Amministrativo Regionale della Liguria che di fatto conferma il <span class="highlight">divieto</span> di effettuare ricerche
-        minerarie
-      </span>
-      nell'area del Monte Tarinè".
+      È stata depositata il <span class="highlight">21 maggio 2022</span> la
+      "sentenza del Tribunale Amministrativo Regionale della Liguria che di fatto conferma il <span class="highlight">divieto</span> di effettuare ricerche
+      minerarie nell'area del Monte Tariné".
       <br /><br />
       L'associazione di <span class="highlight">Legambiente Liguria</span> esprime
       <span class="italic"
-        >"soddisfazione in merito alla sentenza del Tar che rappresenta la pietra tombale su qualsiasi ipotesi di sfruttamento minerario del comprensorio del
+        >"soddisfazione in merito alla sentenza del TAR che rappresenta la pietra tombale su qualsiasi ipotesi di sfruttamento minerario del comprensorio del
         Beigua"</span
       >.
       <br /><br />
