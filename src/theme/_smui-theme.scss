@@ -3,7 +3,6 @@
 
 // custom defined colors
 @use "@material/theme/index" as theme with ($primary: #333333,
-  $secondary: #8BE283,
   $surface: #fff,
   $background: #fff,
   $error: color-palette.$red-900);
@@ -28,6 +27,7 @@
   font-family: 'Saira Semi Condensed', sans-serif !important;
 }
 
+// dimensioni dei testi responsive 
 .mdc-typography--headline1 {
   font-size: 4.5vw;
 }
@@ -59,13 +59,7 @@
   line-height: 1.5vw;
 }
 
-
-
-
-
-// override della grandezza dei testi
-
-// altre properties globali per elementi e classi
+// properties globali per elementi e classi
 html,
 body {
   background-color: theme.$surface;

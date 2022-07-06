@@ -2,7 +2,6 @@
   import Fab, { Label, Icon } from "@smui/fab";
 
   export var target,
-    icon = "arrow_downward",
     label = "";
 </script>
 
