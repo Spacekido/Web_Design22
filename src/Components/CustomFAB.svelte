@@ -9,7 +9,7 @@
   <Icon class="custom-FAB-Icon">
     <img src="img/logo.png" alt="Logo" />
   </Icon>
-  <Label class="mdc-typography--body2 bold" style="overflow: hidden;">{label}</Label>
+  <Label class="mdc-typography--button bold" style="overflow: hidden;">{label}</Label>
 </Fab>
 
 <style>
@@ -24,6 +24,18 @@
     margin-left: 0 !important;
     margin-right: 0.6vw !important;
     font-size: 1.4vw !important;
+  }
+  @media screen and (max-width: 450px) {
+    :global(.custom-FABExtended) {
+      height: 14vw !important;
+      padding-left: 3vw !important;
+      padding-right: 4vw !important;
+    }
+    :global(.custom-FAB-Icon) {
+      width: 7vw !important;
+      height: 7vw !important;
+      font-size: 7vw !important;
+    }
   }
   img {
     width: 100%;

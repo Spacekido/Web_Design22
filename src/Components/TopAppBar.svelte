@@ -18,7 +18,7 @@
 </script>
 
 <TopAppBar variant="fixed" class="transparent">
-  <Row class="mdc-elevation--z4" style="background-color: white; height: 3.5vw;">
+  <Row id="row" class="mdc-elevation--z4" style="background-color: white; ">
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#section1-2">L'Amianto</Link></Section>
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content2-1">Minaçu</Link></Section>
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content3-1">Balangero</Link></Section>
@@ -28,3 +28,14 @@
   </Row>
   <LinearProgress {progress} />
 </TopAppBar>
+
+<style>
+  :global(#row) {
+    height: 3.5vw;
+  }
+  @media screen and (max-width: 450px) {
+    :global(#row) {
+      height: 10vw;
+    }
+  }
+</style>

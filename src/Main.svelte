@@ -25,7 +25,8 @@
 <TopAppBar />
 <main>
   <div id="section1-1">
-    <img class="background" src="img/background-1-1.png" alt="" />
+    <img class="background-lg" src="img/background-1-1.png" alt="" />
+    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
     <div id="content1-1">
       <IntroTitle />
       <FAB target={"section1-2"} label={"Comincia il viaggio"} />
@@ -33,14 +34,16 @@
   </div>
 
   <div id="section1-2">
-    <img class="background" src="img/background-1-2.png" alt="" />
+    <img class="background-lg" src="img/background-1-2.png" alt="" />
+    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
     <div id="content1-2">
       <IntroIntro />
     </div>
   </div>
 
   <div id="section1-3">
-    <img class="background" src="img/background-1-3.png" alt="" />
+    <img class="background-lg" src="img/background-1-3.png" alt="" />
+    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
     <div id="content1-3">
       <IntroCards />
       <div style="margin-top: 2vw;">
@@ -48,106 +51,120 @@
       </div>
     </div>
   </div>
-
+  <!-- 
   <div id="section2-1">
-    <img class="background" src="img/background-2-1.png" alt="" />
+    <img class="background-lg" src="img/background-2-1.png" alt="" />
+    <img class="background-sm" src="img/background-2-1.png" alt="" />
     <div id="content2-1">
       <MinacuIntro />
     </div>
   </div>
 
   <div id="section2-2">
-    <img class="background" src="img/background-2-2.png" alt="" />
+    <img class="background-lg" src="img/background-2-2.png" alt="" />
+    <img class="background-sm" src="img/background-2-2.png" alt="" />
     <div id="content2-2">
       <MinacuCards />
     </div>
   </div>
 
   <div id="section2-3">
-    <img class="background" src="img/background-2-3.png" alt="" />
+    <img class="background-lg" src="img/background-2-3.png" alt="" />
+    <img class="background-sm" src="img/background-2-3.png" alt="" />
     <div id="content2-3">
       <MinacuStats />
     </div>
   </div>
 
   <div id="section3-1">
-    <img class="background" src="img/background-3-1.png" alt="" />
+    <img class="background-lg" src="img/background-3-1.png" alt="" />
+    <img class="background-sm" src="img/background-3-1.png" alt="" />
     <div id="content3-1">
       <BalangeroIntro />
     </div>
   </div>
 
   <div id="section3-2">
-    <img class="background" src="img/background-3-2.png" alt="" />
+    <img class="background-lg" src="img/background-3-2.png" alt="" />
+    <img class="background-sm" src="img/background-3-2.png" alt="" />
     <div id="content3-2">
       <BalangeroCards />
     </div>
   </div>
 
   <div id="section3-3">
-    <img class="background" src="img/background-3-3.png" alt="" />
+    <img class="background-lg" src="img/background-3-3.png" alt="" />
+    <img class="background-sm" src="img/background-3-3.png" alt="" />
     <div id="content3-3">
       <BalangeroStats />
     </div>
   </div>
 
   <div id="section4-1">
-    <img class="background" src="img/background-4-1.png" alt="" />
+    <img class="background-lg" src="img/background-4-1.png" alt="" />
+    <img class="background-sm" src="img/background-4-1.png" alt="" />
     <div id="content4-1">
       <LibbyIntro />
     </div>
   </div>
 
   <div id="section4-2">
-    <img class="background" src="img/background-4-2.png" alt="" />
+    <img class="background-lg" src="img/background-4-2.png" alt="" />
+    <img class="background-sm" src="img/background-4-2.png" alt="" />
     <div id="content4-2">
       <LibbyCards />
     </div>
   </div>
 
   <div id="section4-3">
-    <img class="background" src="img/background-4-3.png" alt="" />
+    <img class="background-lg" src="img/background-4-3.png" alt="" />
+    <img class="background-sm" src="img/background-4-3.png" alt="" />
     <div id="content4-3">
       <LibbyStats />
     </div>
   </div>
 
   <div id="section5-1">
-    <img class="background" src="img/background-5-1.png" alt="" />
+    <img class="background-lg" src="img/background-5-1.png" alt="" />
+    <img class="background-sm" src="img/background-5-1.png" alt="" />
     <div id="content5-1">
       <AsbestIntro />
     </div>
   </div>
 
   <div id="section5-2">
-    <img class="background" src="img/background-5-2.png" alt="" />
+    <img class="background-lg" src="img/background-5-2.png" alt="" />
+    <img class="background-sm" src="img/background-5-2.png" alt="" />
     <div id="content5-2">
       <AsbestCards />
     </div>
   </div>
 
   <div id="section5-3">
-    <img class="background" src="img/background-5-3.png" alt="" />
+    <img class="background-lg" src="img/background-5-3.png" alt="" />
+    <img class="background-sm" src="img/background-5-3.png" alt="" />
     <div id="content5-3">
       <AsbestStats />
     </div>
   </div>
 
   <div id="section6-1">
-    <img class="background" src="img/background-6-1.png" alt="" />
+    <img class="background-lg" src="img/background-6-1.png" alt="" />
+    <img class="background-sm" src="img/background-6-1.png" alt="" />
     <div id="content6-1">
       <BeiguaIntro />
     </div>
   </div>
 
   <div id="section6-2">
-    <img class="background" src="img/background-6-2.png" alt="" />
+    <img class="background-lg" src="img/background-6-2.png" alt="" />
+    <img class="background-sm" src="img/background-6-2.png" alt="" />
     <div id="content6-2">
       <BeiguaCards />
     </div>
-  </div>
+  </div> -->
 
-  <Footer />
+  <!-- <Footer /> -->
 </main>
 
 <style>
@@ -161,10 +178,18 @@
     display: flex;
     justify-content: center;
   }
-  .background {
+
+  .background-lg {
     z-index: 1;
     width: 100%;
+    display: block;
   }
+  .background-sm {
+    z-index: 1;
+    width: 100%;
+    display: none;
+  }
+
   [id^="content"] {
     display: flex;
     flex-direction: column;
@@ -206,5 +231,49 @@
   #content6-1 {
     margin-top: 30vw;
     padding-top: 15vw;
+  }
+  @media screen and (max-width: 450px) {
+    .background-lg {
+      z-index: 1;
+      width: 100%;
+      display: none;
+    }
+    .background-sm {
+      z-index: 1;
+      width: 100%;
+      display: block;
+    }
+
+    [id^="content"] {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: fit-content;
+      padding-inline: 2%;
+      position: absolute;
+      z-index: 2;
+    }
+    #section1-1 {
+      margin-top: 50vw;
+    }
+    #section1-2 {
+      margin-top: 100vw;
+    }
+    #section1-3 {
+      margin-top: 300vw;
+    }
+    #content1-1 {
+      top: 4vw;
+      gap: 4vw;
+    }
+    #content1-2 {
+      padding-top: 8vw;
+      padding-inline: 4vw;
+      gap: 8vw;
+    }
+    #content1-3 {
+      padding-top: 6vw;
+    }
   }
 </style>

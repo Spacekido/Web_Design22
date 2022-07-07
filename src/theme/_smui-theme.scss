@@ -59,6 +59,11 @@
   line-height: 1.5vw;
 }
 
+.mdc-typography--button {
+  font-size: 1.1vw;
+  line-height: 1.5vw;
+}
+
 // properties globali per elementi e classi
 html,
 body {
@@ -163,4 +168,48 @@ div[id^="content-"] {
   text-align: right;
   align-items: end;
   margin-right: 6vw;
+}
+
+
+// nuovo stile di tutti i componenti globali per mobile 
+@media screen and (max-width: 450px) {
+
+  // dimensioni dei testi per mobile 
+  .mdc-typography--headline1 {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+
+  .mdc-typography--headline2 {
+    font-size: 3.6vw;
+  }
+
+  .mdc-typography--headline3 {
+    font-size: 7vw;
+    line-height: 8vw;
+  }
+
+  .mdc-typography--headline4 {
+    font-size: 6.5vw;
+    line-height: 7vw;
+  }
+
+  .mdc-typography--headline6 {
+    font-size: 3.5vw;
+  }
+
+  .mdc-typography--body1 {
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+
+  .mdc-typography--body2 {
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+
+  .mdc-typography--button {
+    font-size: 6vw;
+    line-height: 7vw;
+  }
 }

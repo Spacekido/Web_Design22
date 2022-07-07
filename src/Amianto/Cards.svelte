@@ -10,7 +10,7 @@
     <br />Ad accompagnarti troverai gli <span class="highlight">uomini</span> che di più hanno sofferto, e potrai ascoltare le loro storie.
   </div>
 </div>
-<div class="flex-row-2" style="">
+<div id="link-cards" style="">
   <LinkCard
     href="#content2-1"
     src="img/minacu-mine.png"
@@ -39,3 +39,17 @@
     subtitle="Al giorno d'oggi, la miniera con la maggiore produzione annuale di amianto di tutto il mondo."
   />
 </div>
+
+<style>
+  #link-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+  }
+  @media screen and (max-width: 450px) {
+    #link-cards {
+      flex-direction: column;
+      gap: 4vw;
+    }
+  }
+</style>

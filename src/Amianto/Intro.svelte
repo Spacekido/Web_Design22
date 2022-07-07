@@ -35,4 +35,9 @@
     text-align: right;
     margin-left: 10%;
   }
+  @media screen and (max-width: 450px) {
+    .right {
+      margin-top: 8vw;
+    }
+  }
 </style>

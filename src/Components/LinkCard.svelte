@@ -4,11 +4,11 @@
   export var href, src, title, subtitle;
 </script>
 
-<a {href} style="width: 16vw;">
-  <Card style="max-height: 20vw;">
+<a {href} style="">
+  <Card class="link-card" style="">
     <PrimaryAction>
       <img {src} alt={title} />
-      <Content style="padding: 1vw;">
+      <Content class="link-card-content" style="">
         <div class="mdc-typography--body2 highlight">{title}</div>
         <div class="mdc-typography--body2">{subtitle}</div>
       </Content>
@@ -19,5 +19,28 @@
 <style>
   img {
     max-height: 10vw;
+  }
+  a {
+    width: 16vw;
+  }
+  :global(.link-card) {
+    max-height: 20vw;
+  }
+  :global(.link-card-content) {
+    padding: 1vw;
+  }
+  @media screen and (max-width: 450px) {
+    img {
+      max-height: 50vw;
+    }
+    a {
+      width: 85vw;
+    }
+    :global(.link-card) {
+      max-height: 100vw;
+    }
+    :global(.link-card-content) {
+      padding: 4vw;
+    }
   }
 </style>
