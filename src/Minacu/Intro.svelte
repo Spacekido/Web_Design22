@@ -20,9 +20,9 @@
   <div class="mdc-typography--headline4 uppercase primary">L'opinione degli abitanti</div>
   <div class="mdc-typography--body1">
     Alcuni residenti desiderano che la città abbandoni l’amianto e si rinnovi, secondo altri invece senza amianto la città è finita.
-    <span class="italic">"Se SAMA si ferma, la città si ferma"</span>,
-    ha detto Joaquim de Souza, 54 anni, operaio della SAMA, che vive vicino alla massiccia <span class="highlight">collina di detriti</span> di
-    amianto di Minaçu.
+    <span class="italic">"Se SAMA si ferma, la città si ferma"</span>, ha detto Joaquim de Souza, 54 anni, operaio della SAMA, che vive vicino alla massiccia
+    <span class="highlight">collina di detriti</span>
+    di amianto di Minaçu.
     <br /><br />
     Molti si riferiscono all'azienda come la <span class="italic">"<span class="highlight">madre</span> di Minaçu, che si prende cura dei suoi abitanti"</span>,
     mentre altri la ritengono in realtá una <span class="italic">"madre perversa che fa ammalare le persone, voltandogli poi le spalle"</span>.
@@ -40,5 +40,13 @@
   .right {
     text-align: right;
     margin: 1vw 2vw 0 18vw;
+  }
+  @media screen and (max-width: 450px) {
+    .left {
+      margin: 8vw 8vw 0 0;
+    }
+    .right {
+      margin: 8vw 0 0 8vw;
+    }
   }
 </style>

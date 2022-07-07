@@ -1,10 +1,16 @@
 <script lang="ts">
   import CustomButton from "../Components/CustomButton.svelte";
   import ContentCard from "../Components/ContentCard.svelte";
+  import DialogCard from "../Components/DialogCard.svelte";
+  import Dialog, { Title, Content, Actions } from "@smui/dialog";
+  import Button, { Label } from "@smui/button";
+
+  var dialog1 = false,
+    dialog2 = false;
 </script>
 
 <div class="mdc-typography--headline3 uppercase" style="margin-top: 12vw;">Come si sono schierati i cittadini con ideologie differenti?</div>
-<div class="flex-row-4" style="margin-top: 4vw;">
+<div class="content">
   <ContentCard
     contentId={"content-minacu1"}
     src={"img/minacu-court.png"}
@@ -33,7 +39,7 @@
   </div>
 </div>
 
-<div class="flex-row-4" style="margin-top: 4vw;">
+<div class="content">
   <div class="mdc-typography--body1 hidden left-align flex-column-2" id="content-minacu2">
     <div>
       Nel cosiddetto "letto di polvere", luogo in cui il minerale veniva separato, gli operai, tra i quali molte donne, erano coperti di polvere.<br />
@@ -58,3 +64,57 @@
     direction={"right-card"}
   />
 </div>
+
+<!-- contenuti per mobile -->
+<div class="flex-row-4" style="margin-top: 4vw;">
+  <DialogCard
+    src={"img/minacu-court.png"}
+    title={"Le infinite battaglie legali"}
+    subtitle={"Come le vittime hanno cercato giustizia contro i danni della miniera"}
+    buttonLabel={"Scopri di più"}
+    direction={"left-card"}
+  />
+
+  <Dialog>
+    <Content id="large-scroll-content" />
+    <div class="mdc-typography--body1 hidden right-align flex-column-2">
+      <div>
+        Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore
+        politico, scegliendo sindaci, consiglieri e sacerdoti schierati a <span class="highlight">difesa dell'amianto</span>. Denigrare pubblicamente SAMA può
+        essere considerato tabù da alcuni residenti, infatti, in migliaia hanno tranquillamente firmato
+        <span class="highlight">accordi</span>
+        con la compagnia per ottenere un risarcimento sui danni sanitari.
+        <br /><br />
+        La causa in corso è portata avanti dalla <span class="highlight">ABREA</span>, associazione brasiliana a difesa delle vittime di amianto, fondata da
+        Fernanda Giannasi nel 1995. L'ultima sentenza del tribunale, nel Novembre del 2021, ha ordinato alla compagnia di pagare le
+        <span class="highlight">spese mediche</span> per i prossimi 30 anni a tutti i lavoratori che abbiano manifestato problemi di salute "associabili all'amianto".
+      </div>
+      <Actions>
+        <CustomButton
+          direction={"right-button"}
+          label={"Approfondisci l'inchiesta"}
+          href={"https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L"}
+        />
+      </Actions>
+    </div>
+  </Dialog>
+</div>
+
+<style>
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+    margin-top: 4vw;
+  }
+  @media screen and (max-width: 450px) {
+    .content {
+      display: none;
+    }
+
+    #content-minacu1,
+    #content-minacu2 {
+      display: none;
+    }
+  }
+</style>

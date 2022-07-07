@@ -10,7 +10,7 @@
     direction = "";
 </script>
 
-<Card class="custom-card {direction}">
+<Card class="content-card {direction}">
   <PrimaryAction on:click={() => document.getElementById(contentId).classList.toggle("hidden")}>
     <img {src} alt={title} />
     <Content style="padding: 1vw;">
@@ -18,7 +18,7 @@
       <div class="mdc-typography--body2">{subtitle}</div>
     </Content>
     <Actions fullBleed style="min-height: 0;">
-      <Button style="padding: 0 1.6vw 0.8vw 1.6vw;">
+      <Button class="content-card-button">
         {#if direction === "left-card"}
           <Label class="mdc-typography--body2 bold">{buttonLabel}</Label>
           <i class="material-icons" aria-hidden="true">arrow_forward</i>
@@ -38,16 +38,36 @@
   i {
     font-size: 1.5vw;
   }
-  :global(.custom-card) {
+  :global(.content-card) {
     max-width: 25vw;
     height: 100%;
   }
   :global(.left-card) {
-    border-top-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
   }
   :global(.right-card) {
-    border-top-right-radius: 2vw;
-    border-bottom-left-radius: 2vw;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  :global(.content-card-button) {
+    padding: 0 1.6vw 0.8vw 1.6vw;
+  }
+
+  @media screen and (max-width: 450px) {
+    img {
+      max-height: 70vw;
+    }
+    /* cambiare icona per card mobile al posto della freccia */
+    i {
+      font-size: 8vw;
+    }
+    :global(.content-card) {
+      max-width: 85vw;
+      height: 100%;
+    }
+    :global(.content-card-button) {
+      padding: 0 4vw 3vw 4vw;
+    }
   }
 </style>

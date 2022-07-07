@@ -12,8 +12,8 @@
     <span class="highlight">picco di produzione</span>
     di 36000 tonnellate annue.
     <br /><br />
-    In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta, dalla Eternit e dalle Manifatture Colombo, ai fratelli Puccini di Roma, ma
-    nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne <span class="highlight">chiusa per fallimento</span> e i dipendenti licenziati.
+    In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta, dalla Eternit e dalle Manifatture Colombo, ai fratelli Puccini di Roma,
+    ma nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne <span class="highlight">chiusa per fallimento</span> e i dipendenti licenziati.
   </div>
 </div>
 
@@ -39,5 +39,13 @@
   .right {
     text-align: right;
     margin: 23vw 0 0 26vw;
+  }
+  @media screen and (max-width: 450px) {
+    .left {
+      margin: 8vw 8vw 0 0;
+    }
+    .right {
+      margin: 8vw 0 0 8vw;
+    }
   }
 </style>

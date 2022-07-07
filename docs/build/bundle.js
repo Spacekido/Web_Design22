@@ -1,5 +1,680 @@
-!function(){"use strict";function e(){}function t(e,t){for(const n in t)e[n]=t[n];return e}function n(e){return e()}function a(){return Object.create(null)}function i(e){e.forEach(n)}function o(e){return"function"==typeof e}function r(e,t){return e!=e?t==t:e!==t||e&&"object"==typeof e||"function"==typeof e}let s,l;function c(e,t){return s||(s=document.createElement("a")),s.href=t,e===s.href}function d(t,n,a){t.$$.on_destroy.push(function(t,...n){if(null==t)return e;const a=t.subscribe(...n);return a.unsubscribe?()=>a.unsubscribe():a}(n,a))}function u(e,t,n,a){if(e){const i=p(e,t,n,a);return e[0](i)}}function p(e,n,a,i){return e[1]&&i?t(a.ctx.slice(),e[1](i(n))):a.ctx}function m(e,t,n,a){if(e[2]&&a){const i=e[2](a(n));if(void 0===t.dirty)return i;if("object"==typeof i){const e=[],n=Math.max(t.dirty.length,i.length);for(let a=0;a<n;a+=1)e[a]=t.dirty[a]|i[a];return e}return t.dirty|i}return t.dirty}function g(e,t,n,a,i,o){if(i){const r=p(t,n,a,o);e.p(r,i)}}function f(e){if(e.ctx.length>32){const t=[],n=e.ctx.length/32;for(let e=0;e<n;e++)t[e]=-1;return t}return-1}function h(e){const t={};for(const n in e)"$"!==n[0]&&(t[n]=e[n]);return t}function $(e,t){const n={};t=new Set(t);for(const a in e)t.has(a)||"$"===a[0]||(n[a]=e[a]);return n}function v(t){return t&&o(t.destroy)?t.destroy:e}function b(e,t){e.appendChild(t)}function y(e,t,n){e.insertBefore(t,n||null)}function _(e){e.parentNode.removeChild(e)}function A(e){return document.createElement(e)}function w(e){return document.createTextNode(e)}function x(){return w(" ")}function C(){return w("")}function S(e,t,n,a){return e.addEventListener(t,n,a),()=>e.removeEventListener(t,n,a)}function E(e,t,n){null==n?e.removeAttribute(t):e.getAttribute(t)!==n&&e.setAttribute(t,n)}function T(e,t){const n=Object.getOwnPropertyDescriptors(e.__proto__);for(const a in t)null==t[a]?e.removeAttribute(a):"style"===a?e.style.cssText=t[a]:"__value"===a?e.value=e[a]=t[a]:n[a]&&n[a].set?e[a]=t[a]:E(e,a,t[a])}function L(e,t){for(const n in t)E(e,n,t[n])}function I(e,t){t=""+t,e.wholeText!==t&&(e.data=t)}function z(e,t,n,a){null===n?e.style.removeProperty(t):e.style.setProperty(t,n,a?"important":"")}function O(e,t,n){e.classList[n?"add":"remove"](t)}function q(e){l=e}function M(){if(!l)throw new Error("Function called outside component initialization");return l}function R(e){M().$$.on_mount.push(e)}function B(e,t){M().$$.context.set(e,t)}function D(e){return M().$$.context.get(e)}function P(e,t){const n=e.$$.callbacks[t.type];n&&n.slice().forEach((e=>e.call(this,t)))}const k=[],N=[],H=[],j=[],U=Promise.resolve();let V=!1;function F(e){H.push(e)}const G=new Set;let X=0;function W(){const e=l;do{for(;X<k.length;){const e=k[X];X++,q(e),Y(e.$$)}for(q(null),k.length=0,X=0;N.length;)N.pop()();for(let e=0;e<H.length;e+=1){const t=H[e];G.has(t)||(G.add(t),t())}H.length=0}while(k.length);for(;j.length;)j.pop()();V=!1,G.clear(),q(e)}function Y(e){if(null!==e.fragment){e.update(),i(e.before_update);const t=e.dirty;e.dirty=[-1],e.fragment&&e.fragment.p(e.ctx,t),e.after_update.forEach(F)}}const Q=new Set;let Z;function J(){Z={r:0,c:[],p:Z}}function K(){Z.r||i(Z.c),Z=Z.p}function ee(e,t){e&&e.i&&(Q.delete(e),e.i(t))}function te(e,t,n,a){if(e&&e.o){if(Q.has(e))return;Q.add(e),Z.c.push((()=>{Q.delete(e),a&&(n&&e.d(1),a())})),e.o(t)}}const ne="undefined"!=typeof window?window:"undefined"!=typeof globalThis?globalThis:global;function ae(e,t){const n={},a={},i={$$scope:1};let o=e.length;for(;o--;){const r=e[o],s=t[o];if(s){for(const e in r)e in s||(a[e]=1);for(const e in s)i[e]||(n[e]=s[e],i[e]=1);e[o]=s}else for(const e in r)i[e]=1}for(const e in a)e in n||(n[e]=void 0);return n}function ie(e){return"object"==typeof e&&null!==e?e:{}}function oe(e){e&&e.c()}function re(e,t,a,r){const{fragment:s,on_mount:l,on_destroy:c,after_update:d}=e.$$;s&&s.m(t,a),r||F((()=>{const t=l.map(n).filter(o);c?c.push(...t):i(t),e.$$.on_mount=[]})),d.forEach(F)}function se(e,t){const n=e.$$;null!==n.fragment&&(i(n.on_destroy),n.fragment&&n.fragment.d(t),n.on_destroy=n.fragment=null,n.ctx=[])}function le(e,t){-1===e.$$.dirty[0]&&(k.push(e),V||(V=!0,U.then(W)),e.$$.dirty.fill(0)),e.$$.dirty[t/31|0]|=1<<t%31}function ce(t,n,o,r,s,c,d,u=[-1]){const p=l;q(t);const m=t.$$={fragment:null,ctx:null,props:c,update:e,not_equal:s,bound:a(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(n.context||(p?p.$$.context:[])),callbacks:a(),dirty:u,skip_bound:!1,root:n.target||p.$$.root};d&&d(m.root);let g=!1;if(m.ctx=o?o(t,n.props||{},((e,n,...a)=>{const i=a.length?a[0]:n;return m.ctx&&s(m.ctx[e],m.ctx[e]=i)&&(!m.skip_bound&&m.bound[e]&&m.bound[e](i),g&&le(t,e)),n})):[],m.update(),g=!0,i(m.before_update),m.fragment=!!r&&r(m.ctx),n.target){if(n.hydrate){const e=function(e){return Array.from(e.childNodes)}(n.target);m.fragment&&m.fragment.l(e),e.forEach(_)}else m.fragment&&m.fragment.c();n.intro&&ee(t.$$.fragment),re(t,n.target,n.anchor,n.customElement),W()}q(p)}class de{$destroy(){se(this,1),this.$destroy=e}$on(e,t){const n=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return n.push(t),()=>{const e=n.indexOf(t);-1!==e&&n.splice(e,1)}}$set(e){var t;this.$$set&&(t=e,0!==Object.keys(t).length)&&(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}}var ue=function(e,t){return ue=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,t){e.__proto__=t}||function(e,t){for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n])},ue(e,t)};function pe(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Class extends value "+String(t)+" is not a constructor or null");function n(){this.constructor=e}ue(e,t),e.prototype=null===t?Object.create(t):(n.prototype=t.prototype,new n)}var me=function(){return me=Object.assign||function(e){for(var t,n=1,a=arguments.length;n<a;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i]);return e},me.apply(this,arguments)};function ge(e){var t="function"==typeof Symbol&&Symbol.iterator,n=t&&e[t],a=0;if(n)return n.call(e);if(e&&"number"==typeof e.length)return{next:function(){return e&&a>=e.length&&(e=void 0),{value:e&&e[a++],done:!e}}};throw new TypeError(t?"Object is not iterable.":"Symbol.iterator is not defined.")}
-/**
+
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function () {
+    'use strict';
+
+    function noop() { }
+    function assign(tar, src) {
+        // @ts-ignore
+        for (const k in src)
+            tar[k] = src[k];
+        return tar;
+    }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    let src_url_equal_anchor;
+    function src_url_equal(element_src, url) {
+        if (!src_url_equal_anchor) {
+            src_url_equal_anchor = document.createElement('a');
+        }
+        src_url_equal_anchor.href = url;
+        return element_src === src_url_equal_anchor.href;
+    }
+    function is_empty(obj) {
+        return Object.keys(obj).length === 0;
+    }
+    function validate_store(store, name) {
+        if (store != null && typeof store.subscribe !== 'function') {
+            throw new Error(`'${name}' is not a store with a 'subscribe' method`);
+        }
+    }
+    function subscribe(store, ...callbacks) {
+        if (store == null) {
+            return noop;
+        }
+        const unsub = store.subscribe(...callbacks);
+        return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+    }
+    function component_subscribe(component, store, callback) {
+        component.$$.on_destroy.push(subscribe(store, callback));
+    }
+    function create_slot(definition, ctx, $$scope, fn) {
+        if (definition) {
+            const slot_ctx = get_slot_context(definition, ctx, $$scope, fn);
+            return definition[0](slot_ctx);
+        }
+    }
+    function get_slot_context(definition, ctx, $$scope, fn) {
+        return definition[1] && fn
+            ? assign($$scope.ctx.slice(), definition[1](fn(ctx)))
+            : $$scope.ctx;
+    }
+    function get_slot_changes(definition, $$scope, dirty, fn) {
+        if (definition[2] && fn) {
+            const lets = definition[2](fn(dirty));
+            if ($$scope.dirty === undefined) {
+                return lets;
+            }
+            if (typeof lets === 'object') {
+                const merged = [];
+                const len = Math.max($$scope.dirty.length, lets.length);
+                for (let i = 0; i < len; i += 1) {
+                    merged[i] = $$scope.dirty[i] | lets[i];
+                }
+                return merged;
+            }
+            return $$scope.dirty | lets;
+        }
+        return $$scope.dirty;
+    }
+    function update_slot_base(slot, slot_definition, ctx, $$scope, slot_changes, get_slot_context_fn) {
+        if (slot_changes) {
+            const slot_context = get_slot_context(slot_definition, ctx, $$scope, get_slot_context_fn);
+            slot.p(slot_context, slot_changes);
+        }
+    }
+    function get_all_dirty_from_scope($$scope) {
+        if ($$scope.ctx.length > 32) {
+            const dirty = [];
+            const length = $$scope.ctx.length / 32;
+            for (let i = 0; i < length; i++) {
+                dirty[i] = -1;
+            }
+            return dirty;
+        }
+        return -1;
+    }
+    function exclude_internal_props(props) {
+        const result = {};
+        for (const k in props)
+            if (k[0] !== '$')
+                result[k] = props[k];
+        return result;
+    }
+    function compute_rest_props(props, keys) {
+        const rest = {};
+        keys = new Set(keys);
+        for (const k in props)
+            if (!keys.has(k) && k[0] !== '$')
+                rest[k] = props[k];
+        return rest;
+    }
+    function set_store_value(store, ret, value) {
+        store.set(value);
+        return ret;
+    }
+    function action_destroyer(action_result) {
+        return action_result && is_function(action_result.destroy) ? action_result.destroy : noop;
+    }
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function svg_element(name) {
+        return document.createElementNS('http://www.w3.org/2000/svg', name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function empty() {
+        return text('');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function prevent_default(fn) {
+        return function (event) {
+            event.preventDefault();
+            // @ts-ignore
+            return fn.call(this, event);
+        };
+    }
+    function stop_propagation(fn) {
+        return function (event) {
+            event.stopPropagation();
+            // @ts-ignore
+            return fn.call(this, event);
+        };
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else if (node.getAttribute(attribute) !== value)
+            node.setAttribute(attribute, value);
+    }
+    function set_attributes(node, attributes) {
+        // @ts-ignore
+        const descriptors = Object.getOwnPropertyDescriptors(node.__proto__);
+        for (const key in attributes) {
+            if (attributes[key] == null) {
+                node.removeAttribute(key);
+            }
+            else if (key === 'style') {
+                node.style.cssText = attributes[key];
+            }
+            else if (key === '__value') {
+                node.value = node[key] = attributes[key];
+            }
+            else if (descriptors[key] && descriptors[key].set) {
+                node[key] = attributes[key];
+            }
+            else {
+                attr(node, key, attributes[key]);
+            }
+        }
+    }
+    function set_svg_attributes(node, attributes) {
+        for (const key in attributes) {
+            attr(node, key, attributes[key]);
+        }
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function set_style(node, key, value, important) {
+        if (value === null) {
+            node.style.removeProperty(key);
+        }
+        else {
+            node.style.setProperty(key, value, important ? 'important' : '');
+        }
+    }
+    function toggle_class(element, name, toggle) {
+        element.classList[toggle ? 'add' : 'remove'](name);
+    }
+    function custom_event(type, detail, bubbles = false) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, bubbles, false, detail);
+        return e;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+    function get_current_component() {
+        if (!current_component)
+            throw new Error('Function called outside component initialization');
+        return current_component;
+    }
+    function onMount(fn) {
+        get_current_component().$$.on_mount.push(fn);
+    }
+    function onDestroy(fn) {
+        get_current_component().$$.on_destroy.push(fn);
+    }
+    function setContext(key, context) {
+        get_current_component().$$.context.set(key, context);
+    }
+    function getContext(key) {
+        return get_current_component().$$.context.get(key);
+    }
+    // TODO figure out if we still want to support
+    // shorthand events, or if we want to implement
+    // a real bubbling mechanism
+    function bubble(component, event) {
+        const callbacks = component.$$.callbacks[event.type];
+        if (callbacks) {
+            // @ts-ignore
+            callbacks.slice().forEach(fn => fn.call(this, event));
+        }
+    }
+
+    const dirty_components = [];
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    function add_flush_callback(fn) {
+        flush_callbacks.push(fn);
+    }
+    // flush() calls callbacks in this order:
+    // 1. All beforeUpdate callbacks, in order: parents before children
+    // 2. All bind:this callbacks, in reverse order: children before parents.
+    // 3. All afterUpdate callbacks, in order: parents before children. EXCEPT
+    //    for afterUpdates called during the initial onMount, which are called in
+    //    reverse order: children before parents.
+    // Since callbacks might update component values, which could trigger another
+    // call to flush(), the following steps guard against this:
+    // 1. During beforeUpdate, any updated components will be added to the
+    //    dirty_components array and will cause a reentrant call to flush(). Because
+    //    the flush index is kept outside the function, the reentrant call will pick
+    //    up where the earlier call left off and go through all dirty components. The
+    //    current_component value is saved and restored so that the reentrant call will
+    //    not interfere with the "parent" flush() call.
+    // 2. bind:this callbacks cannot trigger new flush() calls.
+    // 3. During afterUpdate, any updated components will NOT have their afterUpdate
+    //    callback called a second time; the seen_callbacks set, outside the flush()
+    //    function, guarantees this behavior.
+    const seen_callbacks = new Set();
+    let flushidx = 0; // Do *not* move this inside the flush() function
+    function flush() {
+        const saved_component = current_component;
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            while (flushidx < dirty_components.length) {
+                const component = dirty_components[flushidx];
+                flushidx++;
+                set_current_component(component);
+                update(component.$$);
+            }
+            set_current_component(null);
+            dirty_components.length = 0;
+            flushidx = 0;
+            while (binding_callbacks.length)
+                binding_callbacks.pop()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (let i = 0; i < render_callbacks.length; i += 1) {
+                const callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                    callback();
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+        seen_callbacks.clear();
+        set_current_component(saved_component);
+    }
+    function update($$) {
+        if ($$.fragment !== null) {
+            $$.update();
+            run_all($$.before_update);
+            const dirty = $$.dirty;
+            $$.dirty = [-1];
+            $$.fragment && $$.fragment.p($$.ctx, dirty);
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+    const outroing = new Set();
+    let outros;
+    function group_outros() {
+        outros = {
+            r: 0,
+            c: [],
+            p: outros // parent group
+        };
+    }
+    function check_outros() {
+        if (!outros.r) {
+            run_all(outros.c);
+        }
+        outros = outros.p;
+    }
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+    function transition_out(block, local, detach, callback) {
+        if (block && block.o) {
+            if (outroing.has(block))
+                return;
+            outroing.add(block);
+            outros.c.push(() => {
+                outroing.delete(block);
+                if (callback) {
+                    if (detach)
+                        block.d(1);
+                    callback();
+                }
+            });
+            block.o(local);
+        }
+    }
+
+    const globals = (typeof window !== 'undefined'
+        ? window
+        : typeof globalThis !== 'undefined'
+            ? globalThis
+            : global);
+
+    function get_spread_update(levels, updates) {
+        const update = {};
+        const to_null_out = {};
+        const accounted_for = { $$scope: 1 };
+        let i = levels.length;
+        while (i--) {
+            const o = levels[i];
+            const n = updates[i];
+            if (n) {
+                for (const key in o) {
+                    if (!(key in n))
+                        to_null_out[key] = 1;
+                }
+                for (const key in n) {
+                    if (!accounted_for[key]) {
+                        update[key] = n[key];
+                        accounted_for[key] = 1;
+                    }
+                }
+                levels[i] = n;
+            }
+            else {
+                for (const key in o) {
+                    accounted_for[key] = 1;
+                }
+            }
+        }
+        for (const key in to_null_out) {
+            if (!(key in update))
+                update[key] = undefined;
+        }
+        return update;
+    }
+    function get_spread_object(spread_props) {
+        return typeof spread_props === 'object' && spread_props !== null ? spread_props : {};
+    }
+
+    function bind(component, name, callback) {
+        const index = component.$$.props[name];
+        if (index !== undefined) {
+            component.$$.bound[index] = callback;
+            callback(component.$$.ctx[index]);
+        }
+    }
+    function create_component(block) {
+        block && block.c();
+    }
+    function mount_component(component, target, anchor, customElement) {
+        const { fragment, on_mount, on_destroy, after_update } = component.$$;
+        fragment && fragment.m(target, anchor);
+        if (!customElement) {
+            // onMount happens before the initial afterUpdate
+            add_render_callback(() => {
+                const new_on_destroy = on_mount.map(run).filter(is_function);
+                if (on_destroy) {
+                    on_destroy.push(...new_on_destroy);
+                }
+                else {
+                    // Edge case - component was destroyed immediately,
+                    // most likely as a result of a binding initialising
+                    run_all(new_on_destroy);
+                }
+                component.$$.on_mount = [];
+            });
+        }
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        const $$ = component.$$;
+        if ($$.fragment !== null) {
+            run_all($$.on_destroy);
+            $$.fragment && $$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            $$.on_destroy = $$.fragment = null;
+            $$.ctx = [];
+        }
+    }
+    function make_dirty(component, i) {
+        if (component.$$.dirty[0] === -1) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty.fill(0);
+        }
+        component.$$.dirty[(i / 31) | 0] |= (1 << (i % 31));
+    }
+    function init(component, options, instance, create_fragment, not_equal, props, append_styles, dirty = [-1]) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props,
+            update: noop,
+            not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            on_disconnect: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+            // everything else
+            callbacks: blank_object(),
+            dirty,
+            skip_bound: false,
+            root: options.target || parent_component.$$.root
+        };
+        append_styles && append_styles($$.root);
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, options.props || {}, (i, ret, ...rest) => {
+                const value = rest.length ? rest[0] : ret;
+                if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+                    if (!$$.skip_bound && $$.bound[i])
+                        $$.bound[i](value);
+                    if (ready)
+                        make_dirty(component, i);
+                }
+                return ret;
+            })
+            : [];
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        // `false` as a special case of no DOM component
+        $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
+        if (options.target) {
+            if (options.hydrate) {
+                const nodes = children(options.target);
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.l(nodes);
+                nodes.forEach(detach);
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment && $$.fragment.c();
+            }
+            if (options.intro)
+                transition_in(component.$$.fragment);
+            mount_component(component, options.target, options.anchor, options.customElement);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    /**
+     * Base class for Svelte components. Used when dev=false.
+     */
+    class SvelteComponent {
+        $destroy() {
+            destroy_component(this, 1);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set($$props) {
+            if (this.$$set && !is_empty($$props)) {
+                this.$$.skip_bound = true;
+                this.$$set($$props);
+                this.$$.skip_bound = false;
+            }
+        }
+    }
+
+    function dispatch_dev(type, detail) {
+        document.dispatchEvent(custom_event(type, Object.assign({ version: '3.46.6' }, detail), true));
+    }
+    function append_dev(target, node) {
+        dispatch_dev('SvelteDOMInsert', { target, node });
+        append(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+        dispatch_dev('SvelteDOMInsert', { target, node, anchor });
+        insert(target, node, anchor);
+    }
+    function detach_dev(node) {
+        dispatch_dev('SvelteDOMRemove', { node });
+        detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function attr_dev(node, attribute, value) {
+        attr(node, attribute, value);
+        if (value == null)
+            dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
+        else
+            dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
+    }
+    function set_data_dev(text, data) {
+        data = '' + data;
+        if (text.wholeText === data)
+            return;
+        dispatch_dev('SvelteDOMSetData', { node: text, data });
+        text.data = data;
+    }
+    function validate_slots(name, slot, keys) {
+        for (const slot_key of Object.keys(slot)) {
+            if (!~keys.indexOf(slot_key)) {
+                console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+            }
+        }
+    }
+    /**
+     * Base class for Svelte components with some minor dev-enhancements. Used when dev=true.
+     */
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error("'target' is a required option");
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn('Component was already destroyed'); // eslint-disable-line no-console
+            };
+        }
+        $capture_state() { }
+        $inject_state() { }
+    }
+
+    /******************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+    /* global Reflect, Promise */
+
+    var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+
+    function __extends(d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    }
+
+    var __assign = function() {
+        __assign = Object.assign || function __assign(t) {
+            for (var s, i = 1, n = arguments.length; i < n; i++) {
+                s = arguments[i];
+                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+            }
+            return t;
+        };
+        return __assign.apply(this, arguments);
+    };
+
+    function __values(o) {
+        var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+        if (m) return m.call(o);
+        if (o && typeof o.length === "number") return {
+            next: function () {
+                if (o && i >= o.length) o = void 0;
+                return { value: o && o[i++], done: !o };
+            }
+        };
+        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+    }
+
+    /**
      * @license
      * Copyright 2016 Google Inc.
      *
@@ -20,8 +695,59 @@
      * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
      * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
      * THE SOFTWARE.
-     */var fe=function(){function e(e){void 0===e&&(e={}),this.adapter=e}return Object.defineProperty(e,"cssClasses",{get:function(){return{}},enumerable:!1,configurable:!0}),Object.defineProperty(e,"strings",{get:function(){return{}},enumerable:!1,configurable:!0}),Object.defineProperty(e,"numbers",{get:function(){return{}},enumerable:!1,configurable:!0}),Object.defineProperty(e,"defaultAdapter",{get:function(){return{}},enumerable:!1,configurable:!0}),e.prototype.init=function(){},e.prototype.destroy=function(){},e}();
-/**
+     */
+    var MDCFoundation = /** @class */ (function () {
+        function MDCFoundation(adapter) {
+            if (adapter === void 0) { adapter = {}; }
+            this.adapter = adapter;
+        }
+        Object.defineProperty(MDCFoundation, "cssClasses", {
+            get: function () {
+                // Classes extending MDCFoundation should implement this method to return an object which exports every
+                // CSS class the foundation class needs as a property. e.g. {ACTIVE: 'mdc-component--active'}
+                return {};
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCFoundation, "strings", {
+            get: function () {
+                // Classes extending MDCFoundation should implement this method to return an object which exports all
+                // semantic strings as constants. e.g. {ARIA_ROLE: 'tablist'}
+                return {};
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCFoundation, "numbers", {
+            get: function () {
+                // Classes extending MDCFoundation should implement this method to return an object which exports all
+                // of its semantic numbers as constants. e.g. {ANIMATION_DELAY_MS: 350}
+                return {};
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCFoundation, "defaultAdapter", {
+            get: function () {
+                // Classes extending MDCFoundation may choose to implement this getter in order to provide a convenient
+                // way of viewing the necessary methods of an adapter. In the future, this could also be used for adapter
+                // validation.
+                return {};
+            },
+            enumerable: false,
+            configurable: true
+        });
+        MDCFoundation.prototype.init = function () {
+            // Subclasses should override this method to perform initialization routines (registering events, etc.)
+        };
+        MDCFoundation.prototype.destroy = function () {
+            // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
+        };
+        return MDCFoundation;
+    }());
+
+    /**
      * @license
      * Copyright 2019 Google Inc.
      *
@@ -42,8 +768,47 @@
      * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
      * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
      * THE SOFTWARE.
-     */var he=Object.freeze({__proto__:null,applyPassive:function(e){return void 0===e&&(e=window),!!function(e){void 0===e&&(e=window);var t=!1;try{var n={get passive(){return t=!0,!1}},a=function(){};e.document.addEventListener("test",a,n),e.document.removeEventListener("test",a,n)}catch(e){t=!1}return t}(e)&&{passive:!0}}});
-/**
+     */
+    /**
+     * Determine whether the current browser supports passive event listeners, and
+     * if so, use them.
+     */
+    function applyPassive$1(globalObj) {
+        if (globalObj === void 0) { globalObj = window; }
+        return supportsPassiveOption(globalObj) ?
+            { passive: true } :
+            false;
+    }
+    function supportsPassiveOption(globalObj) {
+        if (globalObj === void 0) { globalObj = window; }
+        // See
+        // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+        var passiveSupported = false;
+        try {
+            var options = {
+                // This function will be called when the browser
+                // attempts to access the passive property.
+                get passive() {
+                    passiveSupported = true;
+                    return false;
+                }
+            };
+            var handler = function () { };
+            globalObj.document.addEventListener('test', handler, options);
+            globalObj.document.removeEventListener('test', handler, options);
+        }
+        catch (err) {
+            passiveSupported = false;
+        }
+        return passiveSupported;
+    }
+
+    var events = /*#__PURE__*/Object.freeze({
+        __proto__: null,
+        applyPassive: applyPassive$1
+    });
+
+    /**
      * @license
      * Copyright 2018 Google Inc.
      *
@@ -64,8 +829,64 @@
      * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
      * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
      * THE SOFTWARE.
-     */function $e(e,t){return(e.matches||e.webkitMatchesSelector||e.msMatchesSelector).call(e,t)}var ve,be=Object.freeze({__proto__:null,closest:function(e,t){if(e.closest)return e.closest(t);for(var n=e;n;){if($e(n,t))return n;n=n.parentElement}return null},matches:$e,estimateScrollWidth:function(e){var t=e;if(null!==t.offsetParent)return t.scrollWidth;var n=t.cloneNode(!0);n.style.setProperty("position","absolute"),n.style.setProperty("transform","translate(-9999px, -9999px)"),document.documentElement.appendChild(n);var a=n.scrollWidth;return document.documentElement.removeChild(n),a}}),ye={BG_FOCUSED:"mdc-ripple-upgraded--background-focused",FG_ACTIVATION:"mdc-ripple-upgraded--foreground-activation",FG_DEACTIVATION:"mdc-ripple-upgraded--foreground-deactivation",ROOT:"mdc-ripple-upgraded",UNBOUNDED:"mdc-ripple-upgraded--unbounded"},_e={VAR_FG_SCALE:"--mdc-ripple-fg-scale",VAR_FG_SIZE:"--mdc-ripple-fg-size",VAR_FG_TRANSLATE_END:"--mdc-ripple-fg-translate-end",VAR_FG_TRANSLATE_START:"--mdc-ripple-fg-translate-start",VAR_LEFT:"--mdc-ripple-left",VAR_TOP:"--mdc-ripple-top"},Ae={DEACTIVATION_TIMEOUT_MS:225,FG_DEACTIVATION_MS:150,INITIAL_ORIGIN_SCALE:.6,PADDING:10,TAP_DELAY_MS:300};
-/**
+     */
+    /**
+     * @fileoverview A "ponyfill" is a polyfill that doesn't modify the global prototype chain.
+     * This makes ponyfills safer than traditional polyfills, especially for libraries like MDC.
+     */
+    function closest(element, selector) {
+        if (element.closest) {
+            return element.closest(selector);
+        }
+        var el = element;
+        while (el) {
+            if (matches$1(el, selector)) {
+                return el;
+            }
+            el = el.parentElement;
+        }
+        return null;
+    }
+    function matches$1(element, selector) {
+        var nativeMatches = element.matches
+            || element.webkitMatchesSelector
+            || element.msMatchesSelector;
+        return nativeMatches.call(element, selector);
+    }
+    /**
+     * Used to compute the estimated scroll width of elements. When an element is
+     * hidden due to display: none; being applied to a parent element, the width is
+     * returned as 0. However, the element will have a true width once no longer
+     * inside a display: none context. This method computes an estimated width when
+     * the element is hidden or returns the true width when the element is visble.
+     * @param {Element} element the element whose width to estimate
+     */
+    function estimateScrollWidth(element) {
+        // Check the offsetParent. If the element inherits display: none from any
+        // parent, the offsetParent property will be null (see
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent).
+        // This check ensures we only clone the node when necessary.
+        var htmlEl = element;
+        if (htmlEl.offsetParent !== null) {
+            return htmlEl.scrollWidth;
+        }
+        var clone = htmlEl.cloneNode(true);
+        clone.style.setProperty('position', 'absolute');
+        clone.style.setProperty('transform', 'translate(-9999px, -9999px)');
+        document.documentElement.appendChild(clone);
+        var scrollWidth = clone.scrollWidth;
+        document.documentElement.removeChild(clone);
+        return scrollWidth;
+    }
+
+    var ponyfill = /*#__PURE__*/Object.freeze({
+        __proto__: null,
+        closest: closest,
+        matches: matches$1,
+        estimateScrollWidth: estimateScrollWidth
+    });
+
+    /**
      * @license
      * Copyright 2016 Google Inc.
      *
@@ -87,7 +908,84 @@
      * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
      * THE SOFTWARE.
      */
-/**
+    var cssClasses$3 = {
+        // Ripple is a special case where the "root" component is really a "mixin" of sorts,
+        // given that it's an 'upgrade' to an existing component. That being said it is the root
+        // CSS class that all other CSS classes derive from.
+        BG_FOCUSED: 'mdc-ripple-upgraded--background-focused',
+        FG_ACTIVATION: 'mdc-ripple-upgraded--foreground-activation',
+        FG_DEACTIVATION: 'mdc-ripple-upgraded--foreground-deactivation',
+        ROOT: 'mdc-ripple-upgraded',
+        UNBOUNDED: 'mdc-ripple-upgraded--unbounded',
+    };
+    var strings$3 = {
+        VAR_FG_SCALE: '--mdc-ripple-fg-scale',
+        VAR_FG_SIZE: '--mdc-ripple-fg-size',
+        VAR_FG_TRANSLATE_END: '--mdc-ripple-fg-translate-end',
+        VAR_FG_TRANSLATE_START: '--mdc-ripple-fg-translate-start',
+        VAR_LEFT: '--mdc-ripple-left',
+        VAR_TOP: '--mdc-ripple-top',
+    };
+    var numbers$2 = {
+        DEACTIVATION_TIMEOUT_MS: 225,
+        FG_DEACTIVATION_MS: 150,
+        INITIAL_ORIGIN_SCALE: 0.6,
+        PADDING: 10,
+        TAP_DELAY_MS: 300, // Delay between touch and simulated mouse events on touch devices
+    };
+
+    /**
+     * Stores result from supportsCssVariables to avoid redundant processing to
+     * detect CSS custom variable support.
+     */
+    var supportsCssVariables_;
+    function supportsCssVariables(windowObj, forceRefresh) {
+        if (forceRefresh === void 0) { forceRefresh = false; }
+        var CSS = windowObj.CSS;
+        var supportsCssVars = supportsCssVariables_;
+        if (typeof supportsCssVariables_ === 'boolean' && !forceRefresh) {
+            return supportsCssVariables_;
+        }
+        var supportsFunctionPresent = CSS && typeof CSS.supports === 'function';
+        if (!supportsFunctionPresent) {
+            return false;
+        }
+        var explicitlySupportsCssVars = CSS.supports('--css-vars', 'yes');
+        // See: https://bugs.webkit.org/show_bug.cgi?id=154669
+        // See: README section on Safari
+        var weAreFeatureDetectingSafari10plus = (CSS.supports('(--css-vars: yes)') &&
+            CSS.supports('color', '#00000000'));
+        supportsCssVars =
+            explicitlySupportsCssVars || weAreFeatureDetectingSafari10plus;
+        if (!forceRefresh) {
+            supportsCssVariables_ = supportsCssVars;
+        }
+        return supportsCssVars;
+    }
+    function getNormalizedEventCoords(evt, pageOffset, clientRect) {
+        if (!evt) {
+            return { x: 0, y: 0 };
+        }
+        var x = pageOffset.x, y = pageOffset.y;
+        var documentX = x + clientRect.left;
+        var documentY = y + clientRect.top;
+        var normalizedX;
+        var normalizedY;
+        // Determine touch point relative to the ripple container.
+        if (evt.type === 'touchstart') {
+            var touchEvent = evt;
+            normalizedX = touchEvent.changedTouches[0].pageX - documentX;
+            normalizedY = touchEvent.changedTouches[0].pageY - documentY;
+        }
+        else {
+            var mouseEvent = evt;
+            normalizedX = mouseEvent.pageX - documentX;
+            normalizedY = mouseEvent.pageY - documentY;
+        }
+        return { x: normalizedX, y: normalizedY };
+    }
+
+    /**
      * @license
      * Copyright 2016 Google Inc.
      *
@@ -109,8 +1007,5368 @@
      * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
      * THE SOFTWARE.
      */
-var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointerup","mouseup","contextmenu"],Ce=[],Se=function(e){function t(n){var a=e.call(this,me(me({},t.defaultAdapter),n))||this;return a.activationAnimationHasEnded=!1,a.activationTimer=0,a.fgDeactivationRemovalTimer=0,a.fgScale="0",a.frame={width:0,height:0},a.initialSize=0,a.layoutFrame=0,a.maxRadius=0,a.unboundedCoords={left:0,top:0},a.activationState=a.defaultActivationState(),a.activationTimerCallback=function(){a.activationAnimationHasEnded=!0,a.runDeactivationUXLogicIfReady()},a.activateHandler=function(e){a.activateImpl(e)},a.deactivateHandler=function(){a.deactivateImpl()},a.focusHandler=function(){a.handleFocus()},a.blurHandler=function(){a.handleBlur()},a.resizeHandler=function(){a.layout()},a}return pe(t,e),Object.defineProperty(t,"cssClasses",{get:function(){return ye},enumerable:!1,configurable:!0}),Object.defineProperty(t,"strings",{get:function(){return _e},enumerable:!1,configurable:!0}),Object.defineProperty(t,"numbers",{get:function(){return Ae},enumerable:!1,configurable:!0}),Object.defineProperty(t,"defaultAdapter",{get:function(){return{addClass:function(){},browserSupportsCssVars:function(){return!0},computeBoundingRect:function(){return{top:0,right:0,bottom:0,left:0,width:0,height:0}},containsEventTarget:function(){return!0},deregisterDocumentInteractionHandler:function(){},deregisterInteractionHandler:function(){},deregisterResizeHandler:function(){},getWindowPageOffset:function(){return{x:0,y:0}},isSurfaceActive:function(){return!0},isSurfaceDisabled:function(){return!0},isUnbounded:function(){return!0},registerDocumentInteractionHandler:function(){},registerInteractionHandler:function(){},registerResizeHandler:function(){},removeClass:function(){},updateCssVariable:function(){}}},enumerable:!1,configurable:!0}),t.prototype.init=function(){var e=this,n=this.supportsPressRipple();if(this.registerRootHandlers(n),n){var a=t.cssClasses,i=a.ROOT,o=a.UNBOUNDED;requestAnimationFrame((function(){e.adapter.addClass(i),e.adapter.isUnbounded()&&(e.adapter.addClass(o),e.layoutInternal())}))}},t.prototype.destroy=function(){var e=this;if(this.supportsPressRipple()){this.activationTimer&&(clearTimeout(this.activationTimer),this.activationTimer=0,this.adapter.removeClass(t.cssClasses.FG_ACTIVATION)),this.fgDeactivationRemovalTimer&&(clearTimeout(this.fgDeactivationRemovalTimer),this.fgDeactivationRemovalTimer=0,this.adapter.removeClass(t.cssClasses.FG_DEACTIVATION));var n=t.cssClasses,a=n.ROOT,i=n.UNBOUNDED;requestAnimationFrame((function(){e.adapter.removeClass(a),e.adapter.removeClass(i),e.removeCssVars()}))}this.deregisterRootHandlers(),this.deregisterDeactivationHandlers()},t.prototype.activate=function(e){this.activateImpl(e)},t.prototype.deactivate=function(){this.deactivateImpl()},t.prototype.layout=function(){var e=this;this.layoutFrame&&cancelAnimationFrame(this.layoutFrame),this.layoutFrame=requestAnimationFrame((function(){e.layoutInternal(),e.layoutFrame=0}))},t.prototype.setUnbounded=function(e){var n=t.cssClasses.UNBOUNDED;e?this.adapter.addClass(n):this.adapter.removeClass(n)},t.prototype.handleFocus=function(){var e=this;requestAnimationFrame((function(){return e.adapter.addClass(t.cssClasses.BG_FOCUSED)}))},t.prototype.handleBlur=function(){var e=this;requestAnimationFrame((function(){return e.adapter.removeClass(t.cssClasses.BG_FOCUSED)}))},t.prototype.supportsPressRipple=function(){return this.adapter.browserSupportsCssVars()},t.prototype.defaultActivationState=function(){return{activationEvent:void 0,hasDeactivationUXRun:!1,isActivated:!1,isProgrammatic:!1,wasActivatedByPointer:!1,wasElementMadeActive:!1}},t.prototype.registerRootHandlers=function(e){var t,n;if(e){try{for(var a=ge(we),i=a.next();!i.done;i=a.next()){var o=i.value;this.adapter.registerInteractionHandler(o,this.activateHandler)}}catch(e){t={error:e}}finally{try{i&&!i.done&&(n=a.return)&&n.call(a)}finally{if(t)throw t.error}}this.adapter.isUnbounded()&&this.adapter.registerResizeHandler(this.resizeHandler)}this.adapter.registerInteractionHandler("focus",this.focusHandler),this.adapter.registerInteractionHandler("blur",this.blurHandler)},t.prototype.registerDeactivationHandlers=function(e){var t,n;if("keydown"===e.type)this.adapter.registerInteractionHandler("keyup",this.deactivateHandler);else try{for(var a=ge(xe),i=a.next();!i.done;i=a.next()){var o=i.value;this.adapter.registerDocumentInteractionHandler(o,this.deactivateHandler)}}catch(e){t={error:e}}finally{try{i&&!i.done&&(n=a.return)&&n.call(a)}finally{if(t)throw t.error}}},t.prototype.deregisterRootHandlers=function(){var e,t;try{for(var n=ge(we),a=n.next();!a.done;a=n.next()){var i=a.value;this.adapter.deregisterInteractionHandler(i,this.activateHandler)}}catch(t){e={error:t}}finally{try{a&&!a.done&&(t=n.return)&&t.call(n)}finally{if(e)throw e.error}}this.adapter.deregisterInteractionHandler("focus",this.focusHandler),this.adapter.deregisterInteractionHandler("blur",this.blurHandler),this.adapter.isUnbounded()&&this.adapter.deregisterResizeHandler(this.resizeHandler)},t.prototype.deregisterDeactivationHandlers=function(){var e,t;this.adapter.deregisterInteractionHandler("keyup",this.deactivateHandler);try{for(var n=ge(xe),a=n.next();!a.done;a=n.next()){var i=a.value;this.adapter.deregisterDocumentInteractionHandler(i,this.deactivateHandler)}}catch(t){e={error:t}}finally{try{a&&!a.done&&(t=n.return)&&t.call(n)}finally{if(e)throw e.error}}},t.prototype.removeCssVars=function(){var e=this,n=t.strings;Object.keys(n).forEach((function(t){0===t.indexOf("VAR_")&&e.adapter.updateCssVariable(n[t],null)}))},t.prototype.activateImpl=function(e){var t=this;if(!this.adapter.isSurfaceDisabled()){var n=this.activationState;if(!n.isActivated){var a=this.previousActivationEvent;if(!(a&&void 0!==e&&a.type!==e.type))n.isActivated=!0,n.isProgrammatic=void 0===e,n.activationEvent=e,n.wasActivatedByPointer=!n.isProgrammatic&&(void 0!==e&&("mousedown"===e.type||"touchstart"===e.type||"pointerdown"===e.type)),void 0!==e&&Ce.length>0&&Ce.some((function(e){return t.adapter.containsEventTarget(e)}))?this.resetActivationState():(void 0!==e&&(Ce.push(e.target),this.registerDeactivationHandlers(e)),n.wasElementMadeActive=this.checkElementMadeActive(e),n.wasElementMadeActive&&this.animateActivation(),requestAnimationFrame((function(){Ce=[],n.wasElementMadeActive||void 0===e||" "!==e.key&&32!==e.keyCode||(n.wasElementMadeActive=t.checkElementMadeActive(e),n.wasElementMadeActive&&t.animateActivation()),n.wasElementMadeActive||(t.activationState=t.defaultActivationState())})))}}},t.prototype.checkElementMadeActive=function(e){return void 0===e||"keydown"!==e.type||this.adapter.isSurfaceActive()},t.prototype.animateActivation=function(){var e=this,n=t.strings,a=n.VAR_FG_TRANSLATE_START,i=n.VAR_FG_TRANSLATE_END,o=t.cssClasses,r=o.FG_DEACTIVATION,s=o.FG_ACTIVATION,l=t.numbers.DEACTIVATION_TIMEOUT_MS;this.layoutInternal();var c="",d="";if(!this.adapter.isUnbounded()){var u=this.getFgTranslationCoordinates(),p=u.startPoint,m=u.endPoint;c=p.x+"px, "+p.y+"px",d=m.x+"px, "+m.y+"px"}this.adapter.updateCssVariable(a,c),this.adapter.updateCssVariable(i,d),clearTimeout(this.activationTimer),clearTimeout(this.fgDeactivationRemovalTimer),this.rmBoundedActivationClasses(),this.adapter.removeClass(r),this.adapter.computeBoundingRect(),this.adapter.addClass(s),this.activationTimer=setTimeout((function(){e.activationTimerCallback()}),l)},t.prototype.getFgTranslationCoordinates=function(){var e,t=this.activationState,n=t.activationEvent;return{startPoint:e={x:(e=t.wasActivatedByPointer?function(e,t,n){if(!e)return{x:0,y:0};var a,i,o=t.x,r=t.y,s=o+n.left,l=r+n.top;if("touchstart"===e.type){var c=e;a=c.changedTouches[0].pageX-s,i=c.changedTouches[0].pageY-l}else{var d=e;a=d.pageX-s,i=d.pageY-l}return{x:a,y:i}}(n,this.adapter.getWindowPageOffset(),this.adapter.computeBoundingRect()):{x:this.frame.width/2,y:this.frame.height/2}).x-this.initialSize/2,y:e.y-this.initialSize/2},endPoint:{x:this.frame.width/2-this.initialSize/2,y:this.frame.height/2-this.initialSize/2}}},t.prototype.runDeactivationUXLogicIfReady=function(){var e=this,n=t.cssClasses.FG_DEACTIVATION,a=this.activationState,i=a.hasDeactivationUXRun,o=a.isActivated;(i||!o)&&this.activationAnimationHasEnded&&(this.rmBoundedActivationClasses(),this.adapter.addClass(n),this.fgDeactivationRemovalTimer=setTimeout((function(){e.adapter.removeClass(n)}),Ae.FG_DEACTIVATION_MS))},t.prototype.rmBoundedActivationClasses=function(){var e=t.cssClasses.FG_ACTIVATION;this.adapter.removeClass(e),this.activationAnimationHasEnded=!1,this.adapter.computeBoundingRect()},t.prototype.resetActivationState=function(){var e=this;this.previousActivationEvent=this.activationState.activationEvent,this.activationState=this.defaultActivationState(),setTimeout((function(){return e.previousActivationEvent=void 0}),t.numbers.TAP_DELAY_MS)},t.prototype.deactivateImpl=function(){var e=this,t=this.activationState;if(t.isActivated){var n=me({},t);t.isProgrammatic?(requestAnimationFrame((function(){e.animateDeactivation(n)})),this.resetActivationState()):(this.deregisterDeactivationHandlers(),requestAnimationFrame((function(){e.activationState.hasDeactivationUXRun=!0,e.animateDeactivation(n),e.resetActivationState()})))}},t.prototype.animateDeactivation=function(e){var t=e.wasActivatedByPointer,n=e.wasElementMadeActive;(t||n)&&this.runDeactivationUXLogicIfReady()},t.prototype.layoutInternal=function(){var e=this;this.frame=this.adapter.computeBoundingRect();var n=Math.max(this.frame.height,this.frame.width);this.maxRadius=this.adapter.isUnbounded()?n:Math.sqrt(Math.pow(e.frame.width,2)+Math.pow(e.frame.height,2))+t.numbers.PADDING;var a=Math.floor(n*t.numbers.INITIAL_ORIGIN_SCALE);this.adapter.isUnbounded()&&a%2!=0?this.initialSize=a-1:this.initialSize=a,this.fgScale=""+this.maxRadius/this.initialSize,this.updateLayoutCssVars()},t.prototype.updateLayoutCssVars=function(){var e=t.strings,n=e.VAR_FG_SIZE,a=e.VAR_LEFT,i=e.VAR_TOP,o=e.VAR_FG_SCALE;this.adapter.updateCssVariable(n,this.initialSize+"px"),this.adapter.updateCssVariable(o,this.fgScale),this.adapter.isUnbounded()&&(this.unboundedCoords={left:Math.round(this.frame.width/2-this.initialSize/2),top:Math.round(this.frame.height/2-this.initialSize/2)},this.adapter.updateCssVariable(a,this.unboundedCoords.left+"px"),this.adapter.updateCssVariable(i,this.unboundedCoords.top+"px"))},t}(fe),Ee={FIXED_CLASS:"mdc-top-app-bar--fixed",FIXED_SCROLLED_CLASS:"mdc-top-app-bar--fixed-scrolled",SHORT_CLASS:"mdc-top-app-bar--short",SHORT_COLLAPSED_CLASS:"mdc-top-app-bar--short-collapsed",SHORT_HAS_ACTION_ITEM_CLASS:"mdc-top-app-bar--short-has-action-item"},Te={DEBOUNCE_THROTTLE_RESIZE_TIME_MS:100,MAX_TOP_APP_BAR_HEIGHT:128},Le={ACTION_ITEM_SELECTOR:".mdc-top-app-bar__action-item",NAVIGATION_EVENT:"MDCTopAppBar:nav",NAVIGATION_ICON_SELECTOR:".mdc-top-app-bar__navigation-icon",ROOT_SELECTOR:".mdc-top-app-bar",TITLE_SELECTOR:".mdc-top-app-bar__title"},Ie=function(e){function t(n){return e.call(this,me(me({},t.defaultAdapter),n))||this}return pe(t,e),Object.defineProperty(t,"strings",{get:function(){return Le},enumerable:!1,configurable:!0}),Object.defineProperty(t,"cssClasses",{get:function(){return Ee},enumerable:!1,configurable:!0}),Object.defineProperty(t,"numbers",{get:function(){return Te},enumerable:!1,configurable:!0}),Object.defineProperty(t,"defaultAdapter",{get:function(){return{addClass:function(){},removeClass:function(){},hasClass:function(){return!1},setStyle:function(){},getTopAppBarHeight:function(){return 0},notifyNavigationIconClicked:function(){},getViewportScrollY:function(){return 0},getTotalActionItems:function(){return 0}}},enumerable:!1,configurable:!0}),t.prototype.handleTargetScroll=function(){},t.prototype.handleWindowResize=function(){},t.prototype.handleNavigationClick=function(){this.adapter.notifyNavigationIconClicked()},t}(fe),ze=function(e){function t(t){var n=e.call(this,t)||this;return n.wasDocked=!0,n.isDockedShowing=!0,n.currentAppBarOffsetTop=0,n.isCurrentlyBeingResized=!1,n.resizeThrottleId=0,n.resizeDebounceId=0,n.lastScrollPosition=n.adapter.getViewportScrollY(),n.topAppBarHeight=n.adapter.getTopAppBarHeight(),n}return pe(t,e),t.prototype.destroy=function(){e.prototype.destroy.call(this),this.adapter.setStyle("top","")},t.prototype.handleTargetScroll=function(){var e=Math.max(this.adapter.getViewportScrollY(),0),t=e-this.lastScrollPosition;this.lastScrollPosition=e,this.isCurrentlyBeingResized||(this.currentAppBarOffsetTop-=t,this.currentAppBarOffsetTop>0?this.currentAppBarOffsetTop=0:Math.abs(this.currentAppBarOffsetTop)>this.topAppBarHeight&&(this.currentAppBarOffsetTop=-this.topAppBarHeight),this.moveTopAppBar())},t.prototype.handleWindowResize=function(){var e=this;this.resizeThrottleId||(this.resizeThrottleId=setTimeout((function(){e.resizeThrottleId=0,e.throttledResizeHandler()}),Te.DEBOUNCE_THROTTLE_RESIZE_TIME_MS)),this.isCurrentlyBeingResized=!0,this.resizeDebounceId&&clearTimeout(this.resizeDebounceId),this.resizeDebounceId=setTimeout((function(){e.handleTargetScroll(),e.isCurrentlyBeingResized=!1,e.resizeDebounceId=0}),Te.DEBOUNCE_THROTTLE_RESIZE_TIME_MS)},t.prototype.checkForUpdate=function(){var e=-this.topAppBarHeight,t=this.currentAppBarOffsetTop<0,n=this.currentAppBarOffsetTop>e,a=t&&n;if(a)this.wasDocked=!1;else{if(!this.wasDocked)return this.wasDocked=!0,!0;if(this.isDockedShowing!==n)return this.isDockedShowing=n,!0}return a},t.prototype.moveTopAppBar=function(){if(this.checkForUpdate()){var e=this.currentAppBarOffsetTop;Math.abs(e)>=this.topAppBarHeight&&(e=-Te.MAX_TOP_APP_BAR_HEIGHT),this.adapter.setStyle("top",e+"px")}},t.prototype.throttledResizeHandler=function(){var e=this.adapter.getTopAppBarHeight();this.topAppBarHeight!==e&&(this.wasDocked=!1,this.currentAppBarOffsetTop-=this.topAppBarHeight-e,this.topAppBarHeight=e),this.handleTargetScroll()},t}(Ie),Oe=function(e){function t(){var t=null!==e&&e.apply(this,arguments)||this;return t.wasScrolled=!1,t}return pe(t,e),t.prototype.handleTargetScroll=function(){this.adapter.getViewportScrollY()<=0?this.wasScrolled&&(this.adapter.removeClass(Ee.FIXED_SCROLLED_CLASS),this.wasScrolled=!1):this.wasScrolled||(this.adapter.addClass(Ee.FIXED_SCROLLED_CLASS),this.wasScrolled=!0)},t}(ze),qe=function(e){function t(t){var n=e.call(this,t)||this;return n.collapsed=!1,n.isAlwaysCollapsed=!1,n}return pe(t,e),Object.defineProperty(t.prototype,"isCollapsed",{get:function(){return this.collapsed},enumerable:!1,configurable:!0}),t.prototype.init=function(){e.prototype.init.call(this),this.adapter.getTotalActionItems()>0&&this.adapter.addClass(Ee.SHORT_HAS_ACTION_ITEM_CLASS),this.setAlwaysCollapsed(this.adapter.hasClass(Ee.SHORT_COLLAPSED_CLASS))},t.prototype.setAlwaysCollapsed=function(e){this.isAlwaysCollapsed=!!e,this.isAlwaysCollapsed?this.collapse():this.maybeCollapseBar()},t.prototype.getAlwaysCollapsed=function(){return this.isAlwaysCollapsed},t.prototype.handleTargetScroll=function(){this.maybeCollapseBar()},t.prototype.maybeCollapseBar=function(){this.isAlwaysCollapsed||(this.adapter.getViewportScrollY()<=0?this.collapsed&&this.uncollapse():this.collapsed||this.collapse())},t.prototype.uncollapse=function(){this.adapter.removeClass(Ee.SHORT_COLLAPSED_CLASS),this.collapsed=!1},t.prototype.collapse=function(){this.adapter.addClass(Ee.SHORT_COLLAPSED_CLASS),this.collapsed=!0},t}(Ie);const Me=[];function Re(t,n=e){let a;const i=new Set;function o(e){if(r(t,e)&&(t=e,a)){const e=!Me.length;for(const e of i)e[1](),Me.push(e,t);if(e){for(let e=0;e<Me.length;e+=2)Me[e][0](Me[e+1]);Me.length=0}}}return{set:o,update:function(e){o(e(t))},subscribe:function(r,s=e){const l=[r,s];return i.add(l),1===i.size&&(a=n(o)||e),r(t),()=>{i.delete(l),0===i.size&&(a(),a=null)}}}}function Be(e){return Object.entries(e).filter((([e,t])=>""!==e&&t)).map((([e])=>e)).join(" ")}function De(e,t,n,a={bubbles:!0},i=!1){if("undefined"!=typeof Event&&e){const o=new CustomEvent(t,Object.assign(Object.assign({},a),{detail:n}));if(null==e||e.dispatchEvent(o),i&&t.startsWith("SMUI")){const i=new CustomEvent(t.replace(/^SMUI/g,(()=>"MDC")),Object.assign(Object.assign({},a),{detail:n}));null==e||e.dispatchEvent(i),i.defaultPrevented&&o.preventDefault()}return o}}const Pe=/^[a-z]+(?::(?:preventDefault|stopPropagation|passive|nonpassive|capture|once|self))+$/,ke=/^[^$]+(?:\$(?:preventDefault|stopPropagation|passive|nonpassive|capture|once|self))+$/;function Ne(e){let t,n=[];function a(t){P(e,t)}return e.$on=(e,a)=>{let i=e,o=()=>{};t?o=t(i,a):n.push([i,a]);return i.match(Pe)&&console&&console.warn('Event modifiers in SMUI now use "$" instead of ":", so that all events can be bound with modifiers. Please update your event binding: ',i),()=>{o()}},e=>{const i=[],o={};t=(t,n)=>{let r=t,s=n,l=!1;const c=r.match(Pe),d=r.match(ke),u=c||d;if(r.match(/^SMUI:\w+:/)){const e=r.split(":");let t="";for(let n=0;n<e.length;n++)t+=n===e.length-1?":"+e[n]:e[n].split("-").map((e=>e.slice(0,1).toUpperCase()+e.slice(1))).join("");console.warn(`The event ${r.split("$")[0]} has been renamed to ${t.split("$")[0]}.`),r=t}if(u){const e=r.split(c?":":"$");r=e[0];const t=Object.fromEntries(e.slice(1).map((e=>[e,!0])));t.passive&&(l=l||{},l.passive=!0),t.nonpassive&&(l=l||{},l.passive=!1),t.capture&&(l=l||{},l.capture=!0),t.once&&(l=l||{},l.once=!0),t.preventDefault&&(p=s,s=function(e){return e.preventDefault(),p.call(this,e)}),t.stopPropagation&&(s=function(e){return function(t){return t.stopPropagation(),e.call(this,t)}}(s))}var p;const m=S(e,r,s,l),g=()=>{m();const e=i.indexOf(g);e>-1&&i.splice(e,1)};return i.push(g),r in o||(o[r]=S(e,r,a)),g};for(let e=0;e<n.length;e++)t(n[e][0],n[e][1]);return{destroy:()=>{for(let e=0;e<i.length;e++)i[e]();for(let e of Object.entries(o))e[1]()}}}}function He(e,t){let n=[];if(t)for(let a=0;a<t.length;a++){const i=t[a],o=Array.isArray(i)?i[0]:i;Array.isArray(i)&&i.length>1?n.push(o(e,i[1])):n.push(o(e))}return{update(e){if((e&&e.length||0)!=n.length)throw new Error("You must not change the length of an actions array.");if(e)for(let t=0;t<e.length;t++){const a=n[t];if(a&&a.update){const n=e[t];Array.isArray(n)&&n.length>1?a.update(n[1]):a.update()}}},destroy(){for(let e=0;e<n.length;e++){const t=n[e];t&&t.destroy&&t.destroy()}}}}const{window:je}=ne;function Ue(e){let n,a,r,s,l,c,d;const p=e[22].default,h=u(p,e,e[21],null);let $=[{class:a=Be({[e[2]]:!0,"mdc-top-app-bar":!0,"mdc-top-app-bar--short":"short"===e[4],"mdc-top-app-bar--short-collapsed":e[0],"mdc-top-app-bar--fixed":"fixed"===e[4],"smui-top-app-bar--static":"static"===e[4],"smui-top-app-bar--color-secondary":"secondary"===e[5],"mdc-top-app-bar--prominent":e[6],"mdc-top-app-bar--dense":e[7],...e[11]})},{style:r=Object.entries(e[12]).map(Ve).concat([e[3]]).join(" ")},e[15]],b={};for(let e=0;e<$.length;e+=1)b=t(b,$[e]);return{c(){n=A("header"),h&&h.c(),T(n,b)},m(t,a){y(t,n,a),h&&h.m(n,null),e[25](n),l=!0,c||(d=[S(je,"resize",e[23]),S(je,"scroll",e[24]),v(s=He.call(null,n,e[1])),v(e[13].call(null,n)),S(n,"SMUITopAppBarIconButton:nav",e[26])],c=!0)},p(e,t){h&&h.p&&(!l||2097152&t[0])&&g(h,p,e,e[21],l?m(p,e[21],t,null):f(e[21]),null),T(n,b=ae($,[(!l||2293&t[0]&&a!==(a=Be({[e[2]]:!0,"mdc-top-app-bar":!0,"mdc-top-app-bar--short":"short"===e[4],"mdc-top-app-bar--short-collapsed":e[0],"mdc-top-app-bar--fixed":"fixed"===e[4],"smui-top-app-bar--static":"static"===e[4],"smui-top-app-bar--color-secondary":"secondary"===e[5],"mdc-top-app-bar--prominent":e[6],"mdc-top-app-bar--dense":e[7],...e[11]})))&&{class:a},(!l||4104&t[0]&&r!==(r=Object.entries(e[12]).map(Ve).concat([e[3]]).join(" ")))&&{style:r},32768&t[0]&&e[15]])),s&&o(s.update)&&2&t[0]&&s.update.call(null,e[1])},i(e){l||(ee(h,e),l=!0)},o(e){te(h,e),l=!1},d(t){t&&_(n),h&&h.d(t),e[25](null),c=!1,i(d)}}}const Ve=([e,t])=>`${e}: ${t};`;function Fe(e,n,a){const i=["use","class","style","variant","color","collapsed","prominent","dense","scrollTarget","getPropStore","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n;const l=Ne(M());let c=()=>{};function d(e){return e===c}let{use:u=[]}=n,{class:p=""}=n,{style:m=""}=n,{variant:g="standard"}=n,{color:f="primary"}=n,{collapsed:v=c}=n;const b=!d(v)&&!!v;d(v)&&(v=!1);let y,_,A,{prominent:w=!1}=n,{dense:x=!1}=n,{scrollTarget:C}=n,S={},E={},T={subscribe:Re({variant:g,prominent:w,dense:x},(e=>{a(18,A=e)})).subscribe};let L,I=g;function z(){return new({static:Ie,short:qe,fixed:Oe}[g]||ze)({hasClass:O,addClass:q,removeClass:B,setStyle:D,getTopAppBarHeight:()=>y.clientHeight,notifyNavigationIconClicked:()=>De(y,"SMUITopAppBar:nav",void 0,void 0,!0),getViewportScrollY:()=>null==C?window.pageYOffset:C.scrollTop,getTotalActionItems:()=>y.querySelectorAll(".mdc-top-app-bar__action-item").length})}function O(e){return e in S?S[e]:k().classList.contains(e)}function q(e){S[e]||a(11,S[e]=!0,S)}function B(e){e in S&&!S[e]||a(11,S[e]=!1,S)}function D(e,t){E[e]!=t&&(""===t||null==t?(delete E[e],a(12,E),a(20,I),a(4,g),a(9,_)):a(12,E[e]=t,E))}function P(){_&&(_.handleTargetScroll(),"short"===g&&a(0,v="isCollapsed"in _&&_.isCollapsed))}function k(){return y}R((()=>(a(9,_=z()),_.init(),()=>{_.destroy()})));return e.$$set=e=>{n=t(t({},n),h(e)),a(15,o=$(n,i)),"use"in e&&a(1,u=e.use),"class"in e&&a(2,p=e.class),"style"in e&&a(3,m=e.style),"variant"in e&&a(4,g=e.variant),"color"in e&&a(5,f=e.color),"collapsed"in e&&a(0,v=e.collapsed),"prominent"in e&&a(6,w=e.prominent),"dense"in e&&a(7,x=e.dense),"scrollTarget"in e&&a(8,C=e.scrollTarget),"$$scope"in e&&a(21,s=e.$$scope)},e.$$.update=()=>{262352&e.$$.dirty[0]&&A&&A({variant:g,prominent:w,dense:x}),1049104&e.$$.dirty[0]&&I!==g&&_&&(a(20,I=g),_.destroy(),a(11,S={}),a(12,E={}),a(9,_=z()),_.init()),528&e.$$.dirty[0]&&_&&"short"===g&&"setAlwaysCollapsed"in _&&_.setAlwaysCollapsed(b),524544&e.$$.dirty[0]&&L!==C&&(L&&L.removeEventListener("scroll",P),C&&C.addEventListener("scroll",P),a(19,L=C))},[v,u,p,m,g,f,w,x,C,_,y,S,E,l,P,o,function(){return T},k,A,L,I,s,r,()=>"short"!==g&&"fixed"!==g&&_&&_.handleWindowResize(),()=>null==C&&P(),function(e){N[e?"unshift":"push"]((()=>{y=e,a(10,y)}))},()=>_&&_.handleNavigationClick()]}class Ge extends de{constructor(e){super(),ce(this,e,Fe,Ue,r,{use:1,class:2,style:3,variant:4,color:5,collapsed:0,prominent:6,dense:7,scrollTarget:8,getPropStore:16,getElement:17},null,[-1,-1])}get getPropStore(){return this.$$.ctx[16]}get getElement(){return this.$$.ctx[17]}}function Xe(e){let n,a,r,s,l;const c=e[6].default,d=u(c,e,e[5],null);let p=[e[3]],h={};for(let e=0;e<p.length;e+=1)h=t(h,p[e]);return{c(){n=A("div"),d&&d.c(),T(n,h)},m(t,i){y(t,n,i),d&&d.m(n,null),e[7](n),r=!0,s||(l=[v(a=He.call(null,n,e[0])),v(e[2].call(null,n))],s=!0)},p(e,[t]){d&&d.p&&(!r||32&t)&&g(d,c,e,e[5],r?m(c,e[5],t,null):f(e[5]),null),T(n,h=ae(p,[8&t&&e[3]])),a&&o(a.update)&&1&t&&a.update.call(null,e[0])},i(e){r||(ee(d,e),r=!0)},o(e){te(d,e),r=!1},d(t){t&&_(n),d&&d.d(t),e[7](null),s=!1,i(l)}}}function We(e,n,a){const i=["use","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n,{use:l=[]}=n;const c=Ne(M());let d;return e.$$set=e=>{n=t(t({},n),h(e)),a(3,o=$(n,i)),"use"in e&&a(0,l=e.use),"$$scope"in e&&a(5,s=e.$$scope)},[l,d,c,o,function(){return d},s,r,function(e){N[e?"unshift":"push"]((()=>{d=e,a(1,d)}))}]}class Ye extends de{constructor(e){super(),ce(this,e,We,Xe,r,{use:0,getElement:4})}get getElement(){return this.$$.ctx[4]}}function Qe(e){let t;const n=e[10].default,a=u(n,e,e[12],null);return{c(){a&&a.c()},m(e,n){a&&a.m(e,n),t=!0},p(e,i){a&&a.p&&(!t||4096&i)&&g(a,n,e,e[12],t?m(n,e[12],i,null):f(e[12]),null)},i(e){t||(ee(a,e),t=!0)},o(e){te(a,e),t=!1},d(e){a&&a.d(e)}}}function Ze(e){let n,a,i;const o=[{use:[e[7],...e[0]]},{class:Be({[e[1]]:!0,[e[5]]:!0,...e[4]})},e[6],e[8]];var r=e[2];function s(e){let n={$$slots:{default:[Qe]},$$scope:{ctx:e}};for(let e=0;e<o.length;e+=1)n=t(n,o[e]);return{props:n}}return r&&(n=new r(s(e)),e[11](n)),{c(){n&&oe(n.$$.fragment),a=C()},m(e,t){n&&re(n,e,t),y(e,a,t),i=!0},p(e,[t]){const i=499&t?ae(o,[129&t&&{use:[e[7],...e[0]]},50&t&&{class:Be({[e[1]]:!0,[e[5]]:!0,...e[4]})},64&t&&ie(e[6]),256&t&&ie(e[8])]):{};if(4096&t&&(i.$$scope={dirty:t,ctx:e}),r!==(r=e[2])){if(n){J();const e=n;te(e.$$.fragment,1,0,(()=>{se(e,1)})),K()}r?(n=new r(s(e)),e[11](n),oe(n.$$.fragment),ee(n.$$.fragment,1),re(n,a.parentNode,a)):n=null}else r&&n.$set(i)},i(e){i||(n&&ee(n.$$.fragment,e),i=!0)},o(e){n&&te(n.$$.fragment,e),i=!1},d(t){e[11](null),t&&_(a),n&&se(n,t)}}}const Je={component:Ye,class:"",classMap:{},contexts:{},props:{}};function Ke(e,n,a){const i=["use","class","component","getElement"];let o,r=$(n,i),{$$slots:s={},$$scope:l}=n,{use:c=[]}=n,{class:d=""}=n;const u=Je.class,p={},m=[],g=Je.contexts,f=Je.props;let{component:v=Je.component}=n;Object.entries(Je.classMap).forEach((([e,t])=>{const n=D(t);n&&"subscribe"in n&&m.push(n.subscribe((t=>{a(4,p[e]=t,p)})))}));const b=Ne(M());for(let e in g)g.hasOwnProperty(e)&&B(e,g[e]);var y;return y=()=>{for(const e of m)e()},M().$$.on_destroy.push(y),e.$$set=e=>{n=t(t({},n),h(e)),a(8,r=$(n,i)),"use"in e&&a(0,c=e.use),"class"in e&&a(1,d=e.class),"component"in e&&a(2,v=e.component),"$$scope"in e&&a(12,l=e.$$scope)},[c,d,v,o,p,u,f,b,r,function(){return o.getElement()},s,function(e){N[e?"unshift":"push"]((()=>{o=e,a(3,o)}))},l]}class et extends de{constructor(e){super(),ce(this,e,Ke,Ze,r,{use:0,class:1,component:2,getElement:9})}get getElement(){return this.$$.ctx[9]}}const tt=Object.assign({},Je);function nt(e){return new Proxy(et,{construct:function(t,n){return Object.assign(Je,tt,e),new t(...n)},get:function(t,n){return Object.assign(Je,tt,e),t[n]}})}function at(e){let n,a,r,s,l;const c=e[7].default,d=u(c,e,e[6],null);let p=[{href:e[1]},e[4]],h={};for(let e=0;e<p.length;e+=1)h=t(h,p[e]);return{c(){n=A("a"),d&&d.c(),T(n,h)},m(t,i){y(t,n,i),d&&d.m(n,null),e[8](n),r=!0,s||(l=[v(a=He.call(null,n,e[0])),v(e[3].call(null,n))],s=!0)},p(e,[t]){d&&d.p&&(!r||64&t)&&g(d,c,e,e[6],r?m(c,e[6],t,null):f(e[6]),null),T(n,h=ae(p,[(!r||2&t)&&{href:e[1]},16&t&&e[4]])),a&&o(a.update)&&1&t&&a.update.call(null,e[0])},i(e){r||(ee(d,e),r=!0)},o(e){te(d,e),r=!1},d(t){t&&_(n),d&&d.d(t),e[8](null),s=!1,i(l)}}}function it(e,n,a){const i=["use","href","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n,{use:l=[]}=n,{href:c="javascript:void(0);"}=n;const d=Ne(M());let u;return e.$$set=e=>{n=t(t({},n),h(e)),a(4,o=$(n,i)),"use"in e&&a(0,l=e.use),"href"in e&&a(1,c=e.href),"$$scope"in e&&a(6,s=e.$$scope)},[l,c,u,d,o,function(){return u},s,r,function(e){N[e?"unshift":"push"]((()=>{u=e,a(2,u)}))}]}function ot(e){let n,a,r,s,l;const c=e[6].default,d=u(c,e,e[5],null);let p=[e[3]],h={};for(let e=0;e<p.length;e+=1)h=t(h,p[e]);return{c(){n=A("button"),d&&d.c(),T(n,h)},m(t,i){y(t,n,i),d&&d.m(n,null),n.autofocus&&n.focus(),e[7](n),r=!0,s||(l=[v(a=He.call(null,n,e[0])),v(e[2].call(null,n))],s=!0)},p(e,[t]){d&&d.p&&(!r||32&t)&&g(d,c,e,e[5],r?m(c,e[5],t,null):f(e[5]),null),T(n,h=ae(p,[8&t&&e[3]])),a&&o(a.update)&&1&t&&a.update.call(null,e[0])},i(e){r||(ee(d,e),r=!0)},o(e){te(d,e),r=!1},d(t){t&&_(n),d&&d.d(t),e[7](null),s=!1,i(l)}}}function rt(e,n,a){const i=["use","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n,{use:l=[]}=n;const c=Ne(M());let d;return e.$$set=e=>{n=t(t({},n),h(e)),a(3,o=$(n,i)),"use"in e&&a(0,l=e.use),"$$scope"in e&&a(5,s=e.$$scope)},[l,d,c,o,function(){return d},s,r,function(e){N[e?"unshift":"push"]((()=>{d=e,a(1,d)}))}]}function st(e){let n,a,r,s,l;const c=e[6].default,d=u(c,e,e[5],null);let p=[e[3]],h={};for(let e=0;e<p.length;e+=1)h=t(h,p[e]);return{c(){n=A("i"),d&&d.c(),T(n,h)},m(t,i){y(t,n,i),d&&d.m(n,null),e[7](n),r=!0,s||(l=[v(a=He.call(null,n,e[0])),v(e[2].call(null,n))],s=!0)},p(e,[t]){d&&d.p&&(!r||32&t)&&g(d,c,e,e[5],r?m(c,e[5],t,null):f(e[5]),null),T(n,h=ae(p,[8&t&&e[3]])),a&&o(a.update)&&1&t&&a.update.call(null,e[0])},i(e){r||(ee(d,e),r=!0)},o(e){te(d,e),r=!1},d(t){t&&_(n),d&&d.d(t),e[7](null),s=!1,i(l)}}}function lt(e,n,a){const i=["use","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n,{use:l=[]}=n;const c=Ne(M());let d;return e.$$set=e=>{n=t(t({},n),h(e)),a(3,o=$(n,i)),"use"in e&&a(0,l=e.use),"$$scope"in e&&a(5,s=e.$$scope)},[l,d,c,o,function(){return d},s,r,function(e){N[e?"unshift":"push"]((()=>{d=e,a(1,d)}))}]}class ct extends de{constructor(e){super(),ce(this,e,lt,st,r,{use:0,getElement:4})}get getElement(){return this.$$.ctx[4]}}function dt(e){let n,a,r,s,l,c,d=[{alt:e[1]},e[4]],p={};for(let e=0;e<d.length;e+=1)p=t(p,d[e]);const h=e[7].default,$=u(h,e,e[6],null);return{c(){n=A("img"),r=x(),$&&$.c(),T(n,p)},m(t,i){y(t,n,i),e[8](n),y(t,r,i),$&&$.m(t,i),s=!0,l||(c=[v(a=He.call(null,n,e[0])),v(e[3].call(null,n))],l=!0)},p(e,[t]){T(n,p=ae(d,[(!s||2&t)&&{alt:e[1]},16&t&&e[4]])),a&&o(a.update)&&1&t&&a.update.call(null,e[0]),$&&$.p&&(!s||64&t)&&g($,h,e,e[6],s?m(h,e[6],t,null):f(e[6]),null)},i(e){s||(ee($,e),s=!0)},o(e){te($,e),s=!1},d(t){t&&_(n),e[8](null),t&&_(r),$&&$.d(t),l=!1,i(c)}}}function ut(e,n,a){const i=["use","alt","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n,{use:l=[]}=n,{alt:c}=n;const d=Ne(M());let u;return e.$$set=e=>{n=t(t({},n),h(e)),a(4,o=$(n,i)),"use"in e&&a(0,l=e.use),"alt"in e&&a(1,c=e.alt),"$$scope"in e&&a(6,s=e.$$scope)},[l,c,u,d,o,function(){return u},s,r,function(e){N[e?"unshift":"push"]((()=>{u=e,a(2,u)}))}]}function pt(e){let n,a,r,s,l;const c=e[6].default,d=u(c,e,e[5],null);let p=[e[3]],h={};for(let e=0;e<p.length;e+=1)h=t(h,p[e]);return{c(){n=A("li"),d&&d.c(),T(n,h)},m(t,i){y(t,n,i),d&&d.m(n,null),e[7](n),r=!0,s||(l=[v(a=He.call(null,n,e[0])),v(e[2].call(null,n))],s=!0)},p(e,[t]){d&&d.p&&(!r||32&t)&&g(d,c,e,e[5],r?m(c,e[5],t,null):f(e[5]),null),T(n,h=ae(p,[8&t&&e[3]])),a&&o(a.update)&&1&t&&a.update.call(null,e[0])},i(e){r||(ee(d,e),r=!0)},o(e){te(d,e),r=!1},d(t){t&&_(n),d&&d.d(t),e[7](null),s=!1,i(l)}}}function mt(e,n,a){const i=["use","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n,{use:l=[]}=n;const c=Ne(M());let d;return e.$$set=e=>{n=t(t({},n),h(e)),a(3,o=$(n,i)),"use"in e&&a(0,l=e.use),"$$scope"in e&&a(5,s=e.$$scope)},[l,d,c,o,function(){return d},s,r,function(e){N[e?"unshift":"push"]((()=>{d=e,a(1,d)}))}]}function gt(e){let n,a,r,s,l;const c=e[6].default,d=u(c,e,e[5],null);let p=[e[3]],h={};for(let e=0;e<p.length;e+=1)h=t(h,p[e]);return{c(){n=A("span"),d&&d.c(),T(n,h)},m(t,i){y(t,n,i),d&&d.m(n,null),e[7](n),r=!0,s||(l=[v(a=He.call(null,n,e[0])),v(e[2].call(null,n))],s=!0)},p(e,[t]){d&&d.p&&(!r||32&t)&&g(d,c,e,e[5],r?m(c,e[5],t,null):f(e[5]),null),T(n,h=ae(p,[8&t&&e[3]])),a&&o(a.update)&&1&t&&a.update.call(null,e[0])},i(e){r||(ee(d,e),r=!0)},o(e){te(d,e),r=!1},d(t){t&&_(n),d&&d.d(t),e[7](null),s=!1,i(l)}}}function ft(e,n,a){const i=["use","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n,{use:l=[]}=n;const c=Ne(M());let d;return e.$$set=e=>{n=t(t({},n),h(e)),a(3,o=$(n,i)),"use"in e&&a(0,l=e.use),"$$scope"in e&&a(5,s=e.$$scope)},[l,d,c,o,function(){return d},s,r,function(e){N[e?"unshift":"push"]((()=>{d=e,a(1,d)}))}]}class ht extends de{constructor(e){super(),ce(this,e,ft,gt,r,{use:0,getElement:4})}get getElement(){return this.$$.ctx[4]}}function $t(e){let n,a,r,s,l;const c=e[6].default,d=u(c,e,e[5],null);let p=[e[3]],h={};for(let e=0;e<p.length;e+=1)h=t(h,p[e]);return{c(){var e;e="svg",n=document.createElementNS("http://www.w3.org/2000/svg",e),d&&d.c(),L(n,h)},m(t,i){y(t,n,i),d&&d.m(n,null),e[7](n),r=!0,s||(l=[v(a=He.call(null,n,e[0])),v(e[2].call(null,n))],s=!0)},p(e,[t]){d&&d.p&&(!r||32&t)&&g(d,c,e,e[5],r?m(c,e[5],t,null):f(e[5]),null),L(n,h=ae(p,[8&t&&e[3]])),a&&o(a.update)&&1&t&&a.update.call(null,e[0])},i(e){r||(ee(d,e),r=!0)},o(e){te(d,e),r=!1},d(t){t&&_(n),d&&d.d(t),e[7](null),s=!1,i(l)}}}function vt(e,n,a){const i=["use","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n,{use:l=[]}=n;const c=Ne(M());let d;return e.$$set=e=>{n=t(t({},n),h(e)),a(3,o=$(n,i)),"use"in e&&a(0,l=e.use),"$$scope"in e&&a(5,s=e.$$scope)},[l,d,c,o,function(){return d},s,r,function(e){N[e?"unshift":"push"]((()=>{d=e,a(1,d)}))}]}class bt extends de{constructor(e){super(),ce(this,e,vt,$t,r,{use:0,getElement:4})}get getElement(){return this.$$.ctx[4]}}const yt=class extends de{constructor(e){super(),ce(this,e,it,at,r,{use:0,href:1,getElement:5})}get getElement(){return this.$$.ctx[5]}},_t=class extends de{constructor(e){super(),ce(this,e,rt,ot,r,{use:0,getElement:4})}get getElement(){return this.$$.ctx[4]}},At=Ye,wt=class extends de{constructor(e){super(),ce(this,e,ut,dt,r,{use:0,alt:1,getElement:5})}get getElement(){return this.$$.ctx[5]}},xt=class extends de{constructor(e){super(),ce(this,e,mt,pt,r,{use:0,getElement:4})}get getElement(){return this.$$.ctx[4]}},Ct=ht;var St=nt({class:"mdc-top-app-bar__row",component:At});function Et(e){let n,a,r,s,l,c;const d=e[9].default,p=u(d,e,e[8],null);let h=[{class:a=Be({[e[1]]:!0,"mdc-top-app-bar__section":!0,"mdc-top-app-bar__section--align-start":"start"===e[2],"mdc-top-app-bar__section--align-end":"end"===e[2]})},e[3]?{role:"toolbar"}:{},e[6]],$={};for(let e=0;e<h.length;e+=1)$=t($,h[e]);return{c(){n=A("section"),p&&p.c(),T(n,$)},m(t,a){y(t,n,a),p&&p.m(n,null),e[10](n),s=!0,l||(c=[v(r=He.call(null,n,e[0])),v(e[5].call(null,n))],l=!0)},p(e,[t]){p&&p.p&&(!s||256&t)&&g(p,d,e,e[8],s?m(d,e[8],t,null):f(e[8]),null),T(n,$=ae(h,[(!s||6&t&&a!==(a=Be({[e[1]]:!0,"mdc-top-app-bar__section":!0,"mdc-top-app-bar__section--align-start":"start"===e[2],"mdc-top-app-bar__section--align-end":"end"===e[2]})))&&{class:a},8&t&&(e[3]?{role:"toolbar"}:{}),64&t&&e[6]])),r&&o(r.update)&&1&t&&r.update.call(null,e[0])},i(e){s||(ee(p,e),s=!0)},o(e){te(p,e),s=!1},d(t){t&&_(n),p&&p.d(t),e[10](null),l=!1,i(c)}}}function Tt(e,n,a){const i=["use","class","align","toolbar","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n;const l=Ne(M());let c,{use:d=[]}=n,{class:u=""}=n,{align:p="start"}=n,{toolbar:m=!1}=n;return B("SMUI:icon-button:context",m?"top-app-bar:action":"top-app-bar:navigation"),B("SMUI:button:context",m?"top-app-bar:action":"top-app-bar:navigation"),e.$$set=e=>{n=t(t({},n),h(e)),a(6,o=$(n,i)),"use"in e&&a(0,d=e.use),"class"in e&&a(1,u=e.class),"align"in e&&a(2,p=e.align),"toolbar"in e&&a(3,m=e.toolbar),"$$scope"in e&&a(8,s=e.$$scope)},[d,u,p,m,c,l,o,function(){return c},s,r,function(e){N[e?"unshift":"push"]((()=>{c=e,a(4,c)}))}]}nt({class:"mdc-top-app-bar__title",component:Ct});const Lt=class extends de{constructor(e){super(),ce(this,e,Tt,Et,r,{use:0,class:1,align:2,toolbar:3,getElement:7})}get getElement(){return this.$$.ctx[7]}};function It(e){let t;const n=e[9].default,a=u(n,e,e[11],null);return{c(){a&&a.c()},m(e,n){a&&a.m(e,n),t=!0},p(e,i){a&&a.p&&(!t||2048&i)&&g(a,n,e,e[11],t?m(n,e[11],i,null):f(e[11]),null)},i(e){t||(ee(a,e),t=!0)},o(e){te(a,e),t=!1},d(e){a&&a.d(e)}}}function zt(e){let n,a,i;const o=[{use:[e[4],...e[0]]},{class:Be({[e[1]]:!0,"mdc-button__label":"button"===e[5],"mdc-fab__label":"fab"===e[5],"mdc-tab__text-label":"tab"===e[5],"mdc-image-list__label":"image-list"===e[5],"mdc-snackbar__label":"snackbar"===e[5],"mdc-banner__text":"banner"===e[5],"mdc-segmented-button__label":"segmented-button"===e[5],"mdc-data-table__pagination-rows-per-page-label":"data-table:pagination"===e[5],"mdc-data-table__header-cell-label":"data-table:sortable-header-cell"===e[5]})},"snackbar"===e[5]?{"aria-atomic":"false"}:{},{tabindex:e[6]},e[7]];var r=e[2];function s(e){let n={$$slots:{default:[It]},$$scope:{ctx:e}};for(let e=0;e<o.length;e+=1)n=t(n,o[e]);return{props:n}}return r&&(n=new r(s(e)),e[10](n)),{c(){n&&oe(n.$$.fragment),a=C()},m(e,t){n&&re(n,e,t),y(e,a,t),i=!0},p(e,[t]){const i=243&t?ae(o,[17&t&&{use:[e[4],...e[0]]},34&t&&{class:Be({[e[1]]:!0,"mdc-button__label":"button"===e[5],"mdc-fab__label":"fab"===e[5],"mdc-tab__text-label":"tab"===e[5],"mdc-image-list__label":"image-list"===e[5],"mdc-snackbar__label":"snackbar"===e[5],"mdc-banner__text":"banner"===e[5],"mdc-segmented-button__label":"segmented-button"===e[5],"mdc-data-table__pagination-rows-per-page-label":"data-table:pagination"===e[5],"mdc-data-table__header-cell-label":"data-table:sortable-header-cell"===e[5]})},32&t&&ie("snackbar"===e[5]?{"aria-atomic":"false"}:{}),64&t&&{tabindex:e[6]},128&t&&ie(e[7])]):{};if(2048&t&&(i.$$scope={dirty:t,ctx:e}),r!==(r=e[2])){if(n){J();const e=n;te(e.$$.fragment,1,0,(()=>{se(e,1)})),K()}r?(n=new r(s(e)),e[10](n),oe(n.$$.fragment),ee(n.$$.fragment,1),re(n,a.parentNode,a)):n=null}else r&&n.$set(i)},i(e){i||(n&&ee(n.$$.fragment,e),i=!0)},o(e){n&&te(n.$$.fragment,e),i=!1},d(t){e[10](null),t&&_(a),n&&se(n,t)}}}function Ot(e,n,a){const i=["use","class","component","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n;const l=Ne(M());let c,{use:d=[]}=n,{class:u=""}=n,{component:p=ht}=n;const m=D("SMUI:label:context"),g=D("SMUI:label:tabindex");return e.$$set=e=>{n=t(t({},n),h(e)),a(7,o=$(n,i)),"use"in e&&a(0,d=e.use),"class"in e&&a(1,u=e.class),"component"in e&&a(2,p=e.component),"$$scope"in e&&a(11,s=e.$$scope)},[d,u,p,c,l,m,g,o,function(){return c.getElement()},r,function(e){N[e?"unshift":"push"]((()=>{c=e,a(3,c)}))},s]}nt({class:"mdc-image-list__item",component:xt}),nt({class:"mdc-image-list__image-aspect-container",component:At}),nt({class:"mdc-image-list__image",component:wt}),nt({class:"mdc-image-list__supporting",component:At});function qt(e){let t;const n=e[9].default,a=u(n,e,e[11],null);return{c(){a&&a.c()},m(e,n){a&&a.m(e,n),t=!0},p(e,i){a&&a.p&&(!t||2048&i)&&g(a,n,e,e[11],t?m(n,e[11],i,null):f(e[11]),null)},i(e){t||(ee(a,e),t=!0)},o(e){te(a,e),t=!1},d(e){a&&a.d(e)}}}function Mt(e){let n,a,i;const o=[{use:[e[5],...e[0]]},{class:Be({[e[1]]:!0,"mdc-button__icon":"button"===e[6],"mdc-fab__icon":"fab"===e[6],"mdc-icon-button__icon":"icon-button"===e[6],"mdc-icon-button__icon--on":"icon-button"===e[6]&&e[2],"mdc-tab__icon":"tab"===e[6],"mdc-banner__icon":"banner"===e[6],"mdc-segmented-button__icon":"segmented-button"===e[6]})},{"aria-hidden":"true"},e[3]===bt?{focusable:"false",tabindex:"-1"}:{},e[7]];var r=e[3];function s(e){let n={$$slots:{default:[qt]},$$scope:{ctx:e}};for(let e=0;e<o.length;e+=1)n=t(n,o[e]);return{props:n}}return r&&(n=new r(s(e)),e[10](n)),{c(){n&&oe(n.$$.fragment),a=C()},m(e,t){n&&re(n,e,t),y(e,a,t),i=!0},p(e,[t]){const i=239&t?ae(o,[33&t&&{use:[e[5],...e[0]]},70&t&&{class:Be({[e[1]]:!0,"mdc-button__icon":"button"===e[6],"mdc-fab__icon":"fab"===e[6],"mdc-icon-button__icon":"icon-button"===e[6],"mdc-icon-button__icon--on":"icon-button"===e[6]&&e[2],"mdc-tab__icon":"tab"===e[6],"mdc-banner__icon":"banner"===e[6],"mdc-segmented-button__icon":"segmented-button"===e[6]})},o[2],8&t&&ie(e[3]===bt?{focusable:"false",tabindex:"-1"}:{}),128&t&&ie(e[7])]):{};if(2048&t&&(i.$$scope={dirty:t,ctx:e}),r!==(r=e[3])){if(n){J();const e=n;te(e.$$.fragment,1,0,(()=>{se(e,1)})),K()}r?(n=new r(s(e)),e[10](n),oe(n.$$.fragment),ee(n.$$.fragment,1),re(n,a.parentNode,a)):n=null}else r&&n.$set(i)},i(e){i||(n&&ee(n.$$.fragment,e),i=!0)},o(e){n&&te(n.$$.fragment,e),i=!1},d(t){e[10](null),t&&_(a),n&&se(n,t)}}}function Rt(e,n,a){const i=["use","class","on","component","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n;const l=Ne(M());let c,{use:d=[]}=n,{class:u=""}=n,{on:p=!1}=n,{component:m=ct}=n;const g=D("SMUI:icon:context");return e.$$set=e=>{n=t(t({},n),h(e)),a(7,o=$(n,i)),"use"in e&&a(0,d=e.use),"class"in e&&a(1,u=e.class),"on"in e&&a(2,p=e.on),"component"in e&&a(3,m=e.component),"$$scope"in e&&a(11,s=e.$$scope)},[d,u,p,m,c,l,g,o,function(){return c.getElement()},r,function(e){N[e?"unshift":"push"]((()=>{c=e,a(4,c)}))},s]}const Bt=class extends de{constructor(e){super(),ce(this,e,Ot,zt,r,{use:0,class:1,component:2,getElement:8})}get getElement(){return this.$$.ctx[8]}},Dt=class extends de{constructor(e){super(),ce(this,e,Rt,Mt,r,{use:0,class:1,on:2,component:3,getElement:8})}get getElement(){return this.$$.ctx[8]}};function Pt(e){let n,a,o,r,s;const l=e[9].default,c=u(l,e,e[8],null);let d=[{"aria-current":a=e[4]?"page":void 0},e[6],{href:e[2]},{target:e[1]},{rel:e[0]}],p={};for(let e=0;e<d.length;e+=1)p=t(p,d[e]);return{c(){n=A("a"),c&&c.c(),T(n,p),O(n,"active",e[4])},m(t,a){y(t,n,a),c&&c.m(n,null),o=!0,r||(s=[S(n,"click",e[17]),S(n,"mouseover",e[18]),S(n,"mouseenter",e[19]),S(n,"mouseenter",e[24]),S(n,"mouseout",e[20]),S(n,"focus",e[21]),S(n,"blur",e[22]),S(n,"keydown",e[23])],r=!0)},p(e,t){c&&c.p&&(!o||256&t)&&g(c,l,e,e[8],o?m(l,e[8],t,null):f(e[8]),null),T(n,p=ae(d,[(!o||16&t&&a!==(a=e[4]?"page":void 0))&&{"aria-current":a},64&t&&e[6],(!o||4&t)&&{href:e[2]},(!o||2&t)&&{target:e[1]},(!o||1&t)&&{rel:e[0]}])),O(n,"active",e[4])},i(e){o||(ee(c,e),o=!0)},o(e){te(c,e),o=!1},d(e){e&&_(n),c&&c.d(e),r=!1,i(s)}}}function kt(e){let n,a,o,r;const s=e[9].default,l=u(s,e,e[8],null);let c=[e[6]],d={};for(let e=0;e<c.length;e+=1)d=t(d,c[e]);return{c(){n=A("span"),l&&l.c(),T(n,d)},m(t,i){y(t,n,i),l&&l.m(n,null),a=!0,o||(r=[S(n,"click",e[10]),S(n,"mouseover",e[11]),S(n,"mouseenter",e[12]),S(n,"mouseout",e[13]),S(n,"focus",e[14]),S(n,"blur",e[15]),S(n,"keydown",e[16])],o=!0)},p(e,t){l&&l.p&&(!a||256&t)&&g(l,s,e,e[8],a?m(s,e[8],t,null):f(e[8]),null),T(n,d=ae(c,[64&t&&e[6]]))},i(e){a||(ee(l,e),a=!0)},o(e){te(l,e),a=!1},d(e){e&&_(n),l&&l.d(e),o=!1,i(r)}}}function Nt(e){let t,n,a,i;const o=[kt,Pt],r=[];function s(e,t){return e[3]?0:1}return t=s(e),n=r[t]=o[t](e),{c(){n.c(),a=C()},m(e,n){r[t].m(e,n),y(e,a,n),i=!0},p(e,[i]){let l=t;t=s(e),t===l?r[t].p(e,i):(J(),te(r[l],1,1,(()=>{r[l]=null})),K(),n=r[t],n?n.p(e,i):(n=r[t]=o[t](e),n.c()),ee(n,1),n.m(a.parentNode,a))},i(e){i||(ee(n),i=!0)},o(e){te(n),i=!1},d(e){r[t].d(e),e&&_(a)}}}const Ht=new Map;function jt(e,n,a){const i=["href","disabled","outbound","target","rel","active"];let o=$(n,i),{$$slots:r={},$$scope:s}=n,{href:l="javascript:void(0);"}=n,{disabled:c=!1}=n,{outbound:d}=n,{target:u}=n,{rel:p}=n,{active:m=!1}=n;async function g(){if(Ht.has(l))return;(await fetch(l)).ok&&Ht.set(l,!0)}return e.$$set=e=>{n=t(t({},n),h(e)),a(6,o=$(n,i)),"href"in e&&a(2,l=e.href),"disabled"in e&&a(3,c=e.disabled),"outbound"in e&&a(7,d=e.outbound),"target"in e&&a(1,u=e.target),"rel"in e&&a(0,p=e.rel),"active"in e&&a(4,m=e.active),"$$scope"in e&&a(8,s=e.$$scope)},e.$$.update=()=>{if(132&e.$$.dirty&&"undefined"!=typeof window){new URL(l,`${location.protocol}//${location.host}`).host!==location.host&&void 0===d&&a(7,d=!0)}129&e.$$.dirty&&d&&(a(1,u="_blank"),void 0===p&&a(0,p="noopener noreferrer"))},[p,u,l,c,m,g,o,d,s,r,function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},function(t){P.call(this,e,t)},()=>{"prefetch"===p&&g()}]}class Ut extends de{constructor(e){super(),ce(this,e,jt,Nt,r,{href:2,disabled:3,outbound:7,target:1,rel:0,active:4})}}
-/**
+    // Activation events registered on the root element of each instance for activation
+    var ACTIVATION_EVENT_TYPES = [
+        'touchstart', 'pointerdown', 'mousedown', 'keydown',
+    ];
+    // Deactivation events registered on documentElement when a pointer-related down event occurs
+    var POINTER_DEACTIVATION_EVENT_TYPES = [
+        'touchend', 'pointerup', 'mouseup', 'contextmenu',
+    ];
+    // simultaneous nested activations
+    var activatedTargets = [];
+    var MDCRippleFoundation = /** @class */ (function (_super) {
+        __extends(MDCRippleFoundation, _super);
+        function MDCRippleFoundation(adapter) {
+            var _this = _super.call(this, __assign(__assign({}, MDCRippleFoundation.defaultAdapter), adapter)) || this;
+            _this.activationAnimationHasEnded = false;
+            _this.activationTimer = 0;
+            _this.fgDeactivationRemovalTimer = 0;
+            _this.fgScale = '0';
+            _this.frame = { width: 0, height: 0 };
+            _this.initialSize = 0;
+            _this.layoutFrame = 0;
+            _this.maxRadius = 0;
+            _this.unboundedCoords = { left: 0, top: 0 };
+            _this.activationState = _this.defaultActivationState();
+            _this.activationTimerCallback = function () {
+                _this.activationAnimationHasEnded = true;
+                _this.runDeactivationUXLogicIfReady();
+            };
+            _this.activateHandler = function (e) {
+                _this.activateImpl(e);
+            };
+            _this.deactivateHandler = function () {
+                _this.deactivateImpl();
+            };
+            _this.focusHandler = function () {
+                _this.handleFocus();
+            };
+            _this.blurHandler = function () {
+                _this.handleBlur();
+            };
+            _this.resizeHandler = function () {
+                _this.layout();
+            };
+            return _this;
+        }
+        Object.defineProperty(MDCRippleFoundation, "cssClasses", {
+            get: function () {
+                return cssClasses$3;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCRippleFoundation, "strings", {
+            get: function () {
+                return strings$3;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCRippleFoundation, "numbers", {
+            get: function () {
+                return numbers$2;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCRippleFoundation, "defaultAdapter", {
+            get: function () {
+                return {
+                    addClass: function () { return undefined; },
+                    browserSupportsCssVars: function () { return true; },
+                    computeBoundingRect: function () {
+                        return ({ top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0 });
+                    },
+                    containsEventTarget: function () { return true; },
+                    deregisterDocumentInteractionHandler: function () { return undefined; },
+                    deregisterInteractionHandler: function () { return undefined; },
+                    deregisterResizeHandler: function () { return undefined; },
+                    getWindowPageOffset: function () { return ({ x: 0, y: 0 }); },
+                    isSurfaceActive: function () { return true; },
+                    isSurfaceDisabled: function () { return true; },
+                    isUnbounded: function () { return true; },
+                    registerDocumentInteractionHandler: function () { return undefined; },
+                    registerInteractionHandler: function () { return undefined; },
+                    registerResizeHandler: function () { return undefined; },
+                    removeClass: function () { return undefined; },
+                    updateCssVariable: function () { return undefined; },
+                };
+            },
+            enumerable: false,
+            configurable: true
+        });
+        MDCRippleFoundation.prototype.init = function () {
+            var _this = this;
+            var supportsPressRipple = this.supportsPressRipple();
+            this.registerRootHandlers(supportsPressRipple);
+            if (supportsPressRipple) {
+                var _a = MDCRippleFoundation.cssClasses, ROOT_1 = _a.ROOT, UNBOUNDED_1 = _a.UNBOUNDED;
+                requestAnimationFrame(function () {
+                    _this.adapter.addClass(ROOT_1);
+                    if (_this.adapter.isUnbounded()) {
+                        _this.adapter.addClass(UNBOUNDED_1);
+                        // Unbounded ripples need layout logic applied immediately to set coordinates for both shade and ripple
+                        _this.layoutInternal();
+                    }
+                });
+            }
+        };
+        MDCRippleFoundation.prototype.destroy = function () {
+            var _this = this;
+            if (this.supportsPressRipple()) {
+                if (this.activationTimer) {
+                    clearTimeout(this.activationTimer);
+                    this.activationTimer = 0;
+                    this.adapter.removeClass(MDCRippleFoundation.cssClasses.FG_ACTIVATION);
+                }
+                if (this.fgDeactivationRemovalTimer) {
+                    clearTimeout(this.fgDeactivationRemovalTimer);
+                    this.fgDeactivationRemovalTimer = 0;
+                    this.adapter.removeClass(MDCRippleFoundation.cssClasses.FG_DEACTIVATION);
+                }
+                var _a = MDCRippleFoundation.cssClasses, ROOT_2 = _a.ROOT, UNBOUNDED_2 = _a.UNBOUNDED;
+                requestAnimationFrame(function () {
+                    _this.adapter.removeClass(ROOT_2);
+                    _this.adapter.removeClass(UNBOUNDED_2);
+                    _this.removeCssVars();
+                });
+            }
+            this.deregisterRootHandlers();
+            this.deregisterDeactivationHandlers();
+        };
+        /**
+         * @param evt Optional event containing position information.
+         */
+        MDCRippleFoundation.prototype.activate = function (evt) {
+            this.activateImpl(evt);
+        };
+        MDCRippleFoundation.prototype.deactivate = function () {
+            this.deactivateImpl();
+        };
+        MDCRippleFoundation.prototype.layout = function () {
+            var _this = this;
+            if (this.layoutFrame) {
+                cancelAnimationFrame(this.layoutFrame);
+            }
+            this.layoutFrame = requestAnimationFrame(function () {
+                _this.layoutInternal();
+                _this.layoutFrame = 0;
+            });
+        };
+        MDCRippleFoundation.prototype.setUnbounded = function (unbounded) {
+            var UNBOUNDED = MDCRippleFoundation.cssClasses.UNBOUNDED;
+            if (unbounded) {
+                this.adapter.addClass(UNBOUNDED);
+            }
+            else {
+                this.adapter.removeClass(UNBOUNDED);
+            }
+        };
+        MDCRippleFoundation.prototype.handleFocus = function () {
+            var _this = this;
+            requestAnimationFrame(function () { return _this.adapter.addClass(MDCRippleFoundation.cssClasses.BG_FOCUSED); });
+        };
+        MDCRippleFoundation.prototype.handleBlur = function () {
+            var _this = this;
+            requestAnimationFrame(function () { return _this.adapter.removeClass(MDCRippleFoundation.cssClasses.BG_FOCUSED); });
+        };
+        /**
+         * We compute this property so that we are not querying information about the client
+         * until the point in time where the foundation requests it. This prevents scenarios where
+         * client-side feature-detection may happen too early, such as when components are rendered on the server
+         * and then initialized at mount time on the client.
+         */
+        MDCRippleFoundation.prototype.supportsPressRipple = function () {
+            return this.adapter.browserSupportsCssVars();
+        };
+        MDCRippleFoundation.prototype.defaultActivationState = function () {
+            return {
+                activationEvent: undefined,
+                hasDeactivationUXRun: false,
+                isActivated: false,
+                isProgrammatic: false,
+                wasActivatedByPointer: false,
+                wasElementMadeActive: false,
+            };
+        };
+        /**
+         * supportsPressRipple Passed from init to save a redundant function call
+         */
+        MDCRippleFoundation.prototype.registerRootHandlers = function (supportsPressRipple) {
+            var e_1, _a;
+            if (supportsPressRipple) {
+                try {
+                    for (var ACTIVATION_EVENT_TYPES_1 = __values(ACTIVATION_EVENT_TYPES), ACTIVATION_EVENT_TYPES_1_1 = ACTIVATION_EVENT_TYPES_1.next(); !ACTIVATION_EVENT_TYPES_1_1.done; ACTIVATION_EVENT_TYPES_1_1 = ACTIVATION_EVENT_TYPES_1.next()) {
+                        var evtType = ACTIVATION_EVENT_TYPES_1_1.value;
+                        this.adapter.registerInteractionHandler(evtType, this.activateHandler);
+                    }
+                }
+                catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                finally {
+                    try {
+                        if (ACTIVATION_EVENT_TYPES_1_1 && !ACTIVATION_EVENT_TYPES_1_1.done && (_a = ACTIVATION_EVENT_TYPES_1.return)) _a.call(ACTIVATION_EVENT_TYPES_1);
+                    }
+                    finally { if (e_1) throw e_1.error; }
+                }
+                if (this.adapter.isUnbounded()) {
+                    this.adapter.registerResizeHandler(this.resizeHandler);
+                }
+            }
+            this.adapter.registerInteractionHandler('focus', this.focusHandler);
+            this.adapter.registerInteractionHandler('blur', this.blurHandler);
+        };
+        MDCRippleFoundation.prototype.registerDeactivationHandlers = function (evt) {
+            var e_2, _a;
+            if (evt.type === 'keydown') {
+                this.adapter.registerInteractionHandler('keyup', this.deactivateHandler);
+            }
+            else {
+                try {
+                    for (var POINTER_DEACTIVATION_EVENT_TYPES_1 = __values(POINTER_DEACTIVATION_EVENT_TYPES), POINTER_DEACTIVATION_EVENT_TYPES_1_1 = POINTER_DEACTIVATION_EVENT_TYPES_1.next(); !POINTER_DEACTIVATION_EVENT_TYPES_1_1.done; POINTER_DEACTIVATION_EVENT_TYPES_1_1 = POINTER_DEACTIVATION_EVENT_TYPES_1.next()) {
+                        var evtType = POINTER_DEACTIVATION_EVENT_TYPES_1_1.value;
+                        this.adapter.registerDocumentInteractionHandler(evtType, this.deactivateHandler);
+                    }
+                }
+                catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                finally {
+                    try {
+                        if (POINTER_DEACTIVATION_EVENT_TYPES_1_1 && !POINTER_DEACTIVATION_EVENT_TYPES_1_1.done && (_a = POINTER_DEACTIVATION_EVENT_TYPES_1.return)) _a.call(POINTER_DEACTIVATION_EVENT_TYPES_1);
+                    }
+                    finally { if (e_2) throw e_2.error; }
+                }
+            }
+        };
+        MDCRippleFoundation.prototype.deregisterRootHandlers = function () {
+            var e_3, _a;
+            try {
+                for (var ACTIVATION_EVENT_TYPES_2 = __values(ACTIVATION_EVENT_TYPES), ACTIVATION_EVENT_TYPES_2_1 = ACTIVATION_EVENT_TYPES_2.next(); !ACTIVATION_EVENT_TYPES_2_1.done; ACTIVATION_EVENT_TYPES_2_1 = ACTIVATION_EVENT_TYPES_2.next()) {
+                    var evtType = ACTIVATION_EVENT_TYPES_2_1.value;
+                    this.adapter.deregisterInteractionHandler(evtType, this.activateHandler);
+                }
+            }
+            catch (e_3_1) { e_3 = { error: e_3_1 }; }
+            finally {
+                try {
+                    if (ACTIVATION_EVENT_TYPES_2_1 && !ACTIVATION_EVENT_TYPES_2_1.done && (_a = ACTIVATION_EVENT_TYPES_2.return)) _a.call(ACTIVATION_EVENT_TYPES_2);
+                }
+                finally { if (e_3) throw e_3.error; }
+            }
+            this.adapter.deregisterInteractionHandler('focus', this.focusHandler);
+            this.adapter.deregisterInteractionHandler('blur', this.blurHandler);
+            if (this.adapter.isUnbounded()) {
+                this.adapter.deregisterResizeHandler(this.resizeHandler);
+            }
+        };
+        MDCRippleFoundation.prototype.deregisterDeactivationHandlers = function () {
+            var e_4, _a;
+            this.adapter.deregisterInteractionHandler('keyup', this.deactivateHandler);
+            try {
+                for (var POINTER_DEACTIVATION_EVENT_TYPES_2 = __values(POINTER_DEACTIVATION_EVENT_TYPES), POINTER_DEACTIVATION_EVENT_TYPES_2_1 = POINTER_DEACTIVATION_EVENT_TYPES_2.next(); !POINTER_DEACTIVATION_EVENT_TYPES_2_1.done; POINTER_DEACTIVATION_EVENT_TYPES_2_1 = POINTER_DEACTIVATION_EVENT_TYPES_2.next()) {
+                    var evtType = POINTER_DEACTIVATION_EVENT_TYPES_2_1.value;
+                    this.adapter.deregisterDocumentInteractionHandler(evtType, this.deactivateHandler);
+                }
+            }
+            catch (e_4_1) { e_4 = { error: e_4_1 }; }
+            finally {
+                try {
+                    if (POINTER_DEACTIVATION_EVENT_TYPES_2_1 && !POINTER_DEACTIVATION_EVENT_TYPES_2_1.done && (_a = POINTER_DEACTIVATION_EVENT_TYPES_2.return)) _a.call(POINTER_DEACTIVATION_EVENT_TYPES_2);
+                }
+                finally { if (e_4) throw e_4.error; }
+            }
+        };
+        MDCRippleFoundation.prototype.removeCssVars = function () {
+            var _this = this;
+            var rippleStrings = MDCRippleFoundation.strings;
+            var keys = Object.keys(rippleStrings);
+            keys.forEach(function (key) {
+                if (key.indexOf('VAR_') === 0) {
+                    _this.adapter.updateCssVariable(rippleStrings[key], null);
+                }
+            });
+        };
+        MDCRippleFoundation.prototype.activateImpl = function (evt) {
+            var _this = this;
+            if (this.adapter.isSurfaceDisabled()) {
+                return;
+            }
+            var activationState = this.activationState;
+            if (activationState.isActivated) {
+                return;
+            }
+            // Avoid reacting to follow-on events fired by touch device after an already-processed user interaction
+            var previousActivationEvent = this.previousActivationEvent;
+            var isSameInteraction = previousActivationEvent && evt !== undefined && previousActivationEvent.type !== evt.type;
+            if (isSameInteraction) {
+                return;
+            }
+            activationState.isActivated = true;
+            activationState.isProgrammatic = evt === undefined;
+            activationState.activationEvent = evt;
+            activationState.wasActivatedByPointer = activationState.isProgrammatic ? false : evt !== undefined && (evt.type === 'mousedown' || evt.type === 'touchstart' || evt.type === 'pointerdown');
+            var hasActivatedChild = evt !== undefined &&
+                activatedTargets.length > 0 &&
+                activatedTargets.some(function (target) { return _this.adapter.containsEventTarget(target); });
+            if (hasActivatedChild) {
+                // Immediately reset activation state, while preserving logic that prevents touch follow-on events
+                this.resetActivationState();
+                return;
+            }
+            if (evt !== undefined) {
+                activatedTargets.push(evt.target);
+                this.registerDeactivationHandlers(evt);
+            }
+            activationState.wasElementMadeActive = this.checkElementMadeActive(evt);
+            if (activationState.wasElementMadeActive) {
+                this.animateActivation();
+            }
+            requestAnimationFrame(function () {
+                // Reset array on next frame after the current event has had a chance to bubble to prevent ancestor ripples
+                activatedTargets = [];
+                if (!activationState.wasElementMadeActive
+                    && evt !== undefined
+                    && (evt.key === ' ' || evt.keyCode === 32)) {
+                    // If space was pressed, try again within an rAF call to detect :active, because different UAs report
+                    // active states inconsistently when they're called within event handling code:
+                    // - https://bugs.chromium.org/p/chromium/issues/detail?id=635971
+                    // - https://bugzilla.mozilla.org/show_bug.cgi?id=1293741
+                    // We try first outside rAF to support Edge, which does not exhibit this problem, but will crash if a CSS
+                    // variable is set within a rAF callback for a submit button interaction (#2241).
+                    activationState.wasElementMadeActive = _this.checkElementMadeActive(evt);
+                    if (activationState.wasElementMadeActive) {
+                        _this.animateActivation();
+                    }
+                }
+                if (!activationState.wasElementMadeActive) {
+                    // Reset activation state immediately if element was not made active.
+                    _this.activationState = _this.defaultActivationState();
+                }
+            });
+        };
+        MDCRippleFoundation.prototype.checkElementMadeActive = function (evt) {
+            return (evt !== undefined && evt.type === 'keydown') ?
+                this.adapter.isSurfaceActive() :
+                true;
+        };
+        MDCRippleFoundation.prototype.animateActivation = function () {
+            var _this = this;
+            var _a = MDCRippleFoundation.strings, VAR_FG_TRANSLATE_START = _a.VAR_FG_TRANSLATE_START, VAR_FG_TRANSLATE_END = _a.VAR_FG_TRANSLATE_END;
+            var _b = MDCRippleFoundation.cssClasses, FG_DEACTIVATION = _b.FG_DEACTIVATION, FG_ACTIVATION = _b.FG_ACTIVATION;
+            var DEACTIVATION_TIMEOUT_MS = MDCRippleFoundation.numbers.DEACTIVATION_TIMEOUT_MS;
+            this.layoutInternal();
+            var translateStart = '';
+            var translateEnd = '';
+            if (!this.adapter.isUnbounded()) {
+                var _c = this.getFgTranslationCoordinates(), startPoint = _c.startPoint, endPoint = _c.endPoint;
+                translateStart = startPoint.x + "px, " + startPoint.y + "px";
+                translateEnd = endPoint.x + "px, " + endPoint.y + "px";
+            }
+            this.adapter.updateCssVariable(VAR_FG_TRANSLATE_START, translateStart);
+            this.adapter.updateCssVariable(VAR_FG_TRANSLATE_END, translateEnd);
+            // Cancel any ongoing activation/deactivation animations
+            clearTimeout(this.activationTimer);
+            clearTimeout(this.fgDeactivationRemovalTimer);
+            this.rmBoundedActivationClasses();
+            this.adapter.removeClass(FG_DEACTIVATION);
+            // Force layout in order to re-trigger the animation.
+            this.adapter.computeBoundingRect();
+            this.adapter.addClass(FG_ACTIVATION);
+            this.activationTimer = setTimeout(function () {
+                _this.activationTimerCallback();
+            }, DEACTIVATION_TIMEOUT_MS);
+        };
+        MDCRippleFoundation.prototype.getFgTranslationCoordinates = function () {
+            var _a = this.activationState, activationEvent = _a.activationEvent, wasActivatedByPointer = _a.wasActivatedByPointer;
+            var startPoint;
+            if (wasActivatedByPointer) {
+                startPoint = getNormalizedEventCoords(activationEvent, this.adapter.getWindowPageOffset(), this.adapter.computeBoundingRect());
+            }
+            else {
+                startPoint = {
+                    x: this.frame.width / 2,
+                    y: this.frame.height / 2,
+                };
+            }
+            // Center the element around the start point.
+            startPoint = {
+                x: startPoint.x - (this.initialSize / 2),
+                y: startPoint.y - (this.initialSize / 2),
+            };
+            var endPoint = {
+                x: (this.frame.width / 2) - (this.initialSize / 2),
+                y: (this.frame.height / 2) - (this.initialSize / 2),
+            };
+            return { startPoint: startPoint, endPoint: endPoint };
+        };
+        MDCRippleFoundation.prototype.runDeactivationUXLogicIfReady = function () {
+            var _this = this;
+            // This method is called both when a pointing device is released, and when the activation animation ends.
+            // The deactivation animation should only run after both of those occur.
+            var FG_DEACTIVATION = MDCRippleFoundation.cssClasses.FG_DEACTIVATION;
+            var _a = this.activationState, hasDeactivationUXRun = _a.hasDeactivationUXRun, isActivated = _a.isActivated;
+            var activationHasEnded = hasDeactivationUXRun || !isActivated;
+            if (activationHasEnded && this.activationAnimationHasEnded) {
+                this.rmBoundedActivationClasses();
+                this.adapter.addClass(FG_DEACTIVATION);
+                this.fgDeactivationRemovalTimer = setTimeout(function () {
+                    _this.adapter.removeClass(FG_DEACTIVATION);
+                }, numbers$2.FG_DEACTIVATION_MS);
+            }
+        };
+        MDCRippleFoundation.prototype.rmBoundedActivationClasses = function () {
+            var FG_ACTIVATION = MDCRippleFoundation.cssClasses.FG_ACTIVATION;
+            this.adapter.removeClass(FG_ACTIVATION);
+            this.activationAnimationHasEnded = false;
+            this.adapter.computeBoundingRect();
+        };
+        MDCRippleFoundation.prototype.resetActivationState = function () {
+            var _this = this;
+            this.previousActivationEvent = this.activationState.activationEvent;
+            this.activationState = this.defaultActivationState();
+            // Touch devices may fire additional events for the same interaction within a short time.
+            // Store the previous event until it's safe to assume that subsequent events are for new interactions.
+            setTimeout(function () { return _this.previousActivationEvent = undefined; }, MDCRippleFoundation.numbers.TAP_DELAY_MS);
+        };
+        MDCRippleFoundation.prototype.deactivateImpl = function () {
+            var _this = this;
+            var activationState = this.activationState;
+            // This can happen in scenarios such as when you have a keyup event that blurs the element.
+            if (!activationState.isActivated) {
+                return;
+            }
+            var state = __assign({}, activationState);
+            if (activationState.isProgrammatic) {
+                requestAnimationFrame(function () {
+                    _this.animateDeactivation(state);
+                });
+                this.resetActivationState();
+            }
+            else {
+                this.deregisterDeactivationHandlers();
+                requestAnimationFrame(function () {
+                    _this.activationState.hasDeactivationUXRun = true;
+                    _this.animateDeactivation(state);
+                    _this.resetActivationState();
+                });
+            }
+        };
+        MDCRippleFoundation.prototype.animateDeactivation = function (_a) {
+            var wasActivatedByPointer = _a.wasActivatedByPointer, wasElementMadeActive = _a.wasElementMadeActive;
+            if (wasActivatedByPointer || wasElementMadeActive) {
+                this.runDeactivationUXLogicIfReady();
+            }
+        };
+        MDCRippleFoundation.prototype.layoutInternal = function () {
+            var _this = this;
+            this.frame = this.adapter.computeBoundingRect();
+            var maxDim = Math.max(this.frame.height, this.frame.width);
+            // Surface diameter is treated differently for unbounded vs. bounded ripples.
+            // Unbounded ripple diameter is calculated smaller since the surface is expected to already be padded appropriately
+            // to extend the hitbox, and the ripple is expected to meet the edges of the padded hitbox (which is typically
+            // square). Bounded ripples, on the other hand, are fully expected to expand beyond the surface's longest diameter
+            // (calculated based on the diagonal plus a constant padding), and are clipped at the surface's border via
+            // `overflow: hidden`.
+            var getBoundedRadius = function () {
+                var hypotenuse = Math.sqrt(Math.pow(_this.frame.width, 2) + Math.pow(_this.frame.height, 2));
+                return hypotenuse + MDCRippleFoundation.numbers.PADDING;
+            };
+            this.maxRadius = this.adapter.isUnbounded() ? maxDim : getBoundedRadius();
+            // Ripple is sized as a fraction of the largest dimension of the surface, then scales up using a CSS scale transform
+            var initialSize = Math.floor(maxDim * MDCRippleFoundation.numbers.INITIAL_ORIGIN_SCALE);
+            // Unbounded ripple size should always be even number to equally center align.
+            if (this.adapter.isUnbounded() && initialSize % 2 !== 0) {
+                this.initialSize = initialSize - 1;
+            }
+            else {
+                this.initialSize = initialSize;
+            }
+            this.fgScale = "" + this.maxRadius / this.initialSize;
+            this.updateLayoutCssVars();
+        };
+        MDCRippleFoundation.prototype.updateLayoutCssVars = function () {
+            var _a = MDCRippleFoundation.strings, VAR_FG_SIZE = _a.VAR_FG_SIZE, VAR_LEFT = _a.VAR_LEFT, VAR_TOP = _a.VAR_TOP, VAR_FG_SCALE = _a.VAR_FG_SCALE;
+            this.adapter.updateCssVariable(VAR_FG_SIZE, this.initialSize + "px");
+            this.adapter.updateCssVariable(VAR_FG_SCALE, this.fgScale);
+            if (this.adapter.isUnbounded()) {
+                this.unboundedCoords = {
+                    left: Math.round((this.frame.width / 2) - (this.initialSize / 2)),
+                    top: Math.round((this.frame.height / 2) - (this.initialSize / 2)),
+                };
+                this.adapter.updateCssVariable(VAR_LEFT, this.unboundedCoords.left + "px");
+                this.adapter.updateCssVariable(VAR_TOP, this.unboundedCoords.top + "px");
+            }
+        };
+        return MDCRippleFoundation;
+    }(MDCFoundation));
+
+    /**
+     * @license
+     * Copyright 2018 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    var cssClasses$2 = {
+        FIXED_CLASS: 'mdc-top-app-bar--fixed',
+        FIXED_SCROLLED_CLASS: 'mdc-top-app-bar--fixed-scrolled',
+        SHORT_CLASS: 'mdc-top-app-bar--short',
+        SHORT_COLLAPSED_CLASS: 'mdc-top-app-bar--short-collapsed',
+        SHORT_HAS_ACTION_ITEM_CLASS: 'mdc-top-app-bar--short-has-action-item',
+    };
+    var numbers$1 = {
+        DEBOUNCE_THROTTLE_RESIZE_TIME_MS: 100,
+        MAX_TOP_APP_BAR_HEIGHT: 128,
+    };
+    var strings$2 = {
+        ACTION_ITEM_SELECTOR: '.mdc-top-app-bar__action-item',
+        NAVIGATION_EVENT: 'MDCTopAppBar:nav',
+        NAVIGATION_ICON_SELECTOR: '.mdc-top-app-bar__navigation-icon',
+        ROOT_SELECTOR: '.mdc-top-app-bar',
+        TITLE_SELECTOR: '.mdc-top-app-bar__title',
+    };
+
+    /**
+     * @license
+     * Copyright 2018 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    var MDCTopAppBarBaseFoundation = /** @class */ (function (_super) {
+        __extends(MDCTopAppBarBaseFoundation, _super);
+        /* istanbul ignore next: optional argument is not a branch statement */
+        function MDCTopAppBarBaseFoundation(adapter) {
+            return _super.call(this, __assign(__assign({}, MDCTopAppBarBaseFoundation.defaultAdapter), adapter)) || this;
+        }
+        Object.defineProperty(MDCTopAppBarBaseFoundation, "strings", {
+            get: function () {
+                return strings$2;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCTopAppBarBaseFoundation, "cssClasses", {
+            get: function () {
+                return cssClasses$2;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCTopAppBarBaseFoundation, "numbers", {
+            get: function () {
+                return numbers$1;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCTopAppBarBaseFoundation, "defaultAdapter", {
+            /**
+             * See {@link MDCTopAppBarAdapter} for typing information on parameters and return types.
+             */
+            get: function () {
+                // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+                return {
+                    addClass: function () { return undefined; },
+                    removeClass: function () { return undefined; },
+                    hasClass: function () { return false; },
+                    setStyle: function () { return undefined; },
+                    getTopAppBarHeight: function () { return 0; },
+                    notifyNavigationIconClicked: function () { return undefined; },
+                    getViewportScrollY: function () { return 0; },
+                    getTotalActionItems: function () { return 0; },
+                };
+                // tslint:enable:object-literal-sort-keys
+            },
+            enumerable: false,
+            configurable: true
+        });
+        /** Other variants of TopAppBar foundation overrides this method */
+        MDCTopAppBarBaseFoundation.prototype.handleTargetScroll = function () { }; // tslint:disable-line:no-empty
+        /** Other variants of TopAppBar foundation overrides this method */
+        MDCTopAppBarBaseFoundation.prototype.handleWindowResize = function () { }; // tslint:disable-line:no-empty
+        MDCTopAppBarBaseFoundation.prototype.handleNavigationClick = function () {
+            this.adapter.notifyNavigationIconClicked();
+        };
+        return MDCTopAppBarBaseFoundation;
+    }(MDCFoundation));
+
+    /**
+     * @license
+     * Copyright 2018 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    var INITIAL_VALUE = 0;
+    var MDCTopAppBarFoundation = /** @class */ (function (_super) {
+        __extends(MDCTopAppBarFoundation, _super);
+        /* istanbul ignore next: optional argument is not a branch statement */
+        function MDCTopAppBarFoundation(adapter) {
+            var _this = _super.call(this, adapter) || this;
+            /**
+             * Indicates if the top app bar was docked in the previous scroll handler iteration.
+             */
+            _this.wasDocked = true;
+            /**
+             * Indicates if the top app bar is docked in the fully shown position.
+             */
+            _this.isDockedShowing = true;
+            /**
+             * Variable for current scroll position of the top app bar
+             */
+            _this.currentAppBarOffsetTop = 0;
+            /**
+             * Used to prevent the top app bar from being scrolled out of view during resize events
+             */
+            _this.isCurrentlyBeingResized = false;
+            /**
+             * The timeout that's used to throttle the resize events
+             */
+            _this.resizeThrottleId = INITIAL_VALUE;
+            /**
+             * The timeout that's used to debounce toggling the isCurrentlyBeingResized
+             * variable after a resize
+             */
+            _this.resizeDebounceId = INITIAL_VALUE;
+            _this.lastScrollPosition = _this.adapter.getViewportScrollY();
+            _this.topAppBarHeight = _this.adapter.getTopAppBarHeight();
+            return _this;
+        }
+        MDCTopAppBarFoundation.prototype.destroy = function () {
+            _super.prototype.destroy.call(this);
+            this.adapter.setStyle('top', '');
+        };
+        /**
+         * Scroll handler for the default scroll behavior of the top app bar.
+         * @override
+         */
+        MDCTopAppBarFoundation.prototype.handleTargetScroll = function () {
+            var currentScrollPosition = Math.max(this.adapter.getViewportScrollY(), 0);
+            var diff = currentScrollPosition - this.lastScrollPosition;
+            this.lastScrollPosition = currentScrollPosition;
+            // If the window is being resized the lastScrollPosition needs to be updated
+            // but the current scroll of the top app bar should stay in the same
+            // position.
+            if (!this.isCurrentlyBeingResized) {
+                this.currentAppBarOffsetTop -= diff;
+                if (this.currentAppBarOffsetTop > 0) {
+                    this.currentAppBarOffsetTop = 0;
+                }
+                else if (Math.abs(this.currentAppBarOffsetTop) > this.topAppBarHeight) {
+                    this.currentAppBarOffsetTop = -this.topAppBarHeight;
+                }
+                this.moveTopAppBar();
+            }
+        };
+        /**
+         * Top app bar resize handler that throttle/debounce functions that execute updates.
+         * @override
+         */
+        MDCTopAppBarFoundation.prototype.handleWindowResize = function () {
+            var _this = this;
+            // Throttle resize events 10 p/s
+            if (!this.resizeThrottleId) {
+                this.resizeThrottleId = setTimeout(function () {
+                    _this.resizeThrottleId = INITIAL_VALUE;
+                    _this.throttledResizeHandler();
+                }, numbers$1.DEBOUNCE_THROTTLE_RESIZE_TIME_MS);
+            }
+            this.isCurrentlyBeingResized = true;
+            if (this.resizeDebounceId) {
+                clearTimeout(this.resizeDebounceId);
+            }
+            this.resizeDebounceId = setTimeout(function () {
+                _this.handleTargetScroll();
+                _this.isCurrentlyBeingResized = false;
+                _this.resizeDebounceId = INITIAL_VALUE;
+            }, numbers$1.DEBOUNCE_THROTTLE_RESIZE_TIME_MS);
+        };
+        /**
+         * Function to determine if the DOM needs to update.
+         */
+        MDCTopAppBarFoundation.prototype.checkForUpdate = function () {
+            var offscreenBoundaryTop = -this.topAppBarHeight;
+            var hasAnyPixelsOffscreen = this.currentAppBarOffsetTop < 0;
+            var hasAnyPixelsOnscreen = this.currentAppBarOffsetTop > offscreenBoundaryTop;
+            var partiallyShowing = hasAnyPixelsOffscreen && hasAnyPixelsOnscreen;
+            // If it's partially showing, it can't be docked.
+            if (partiallyShowing) {
+                this.wasDocked = false;
+            }
+            else {
+                // Not previously docked and not partially showing, it's now docked.
+                if (!this.wasDocked) {
+                    this.wasDocked = true;
+                    return true;
+                }
+                else if (this.isDockedShowing !== hasAnyPixelsOnscreen) {
+                    this.isDockedShowing = hasAnyPixelsOnscreen;
+                    return true;
+                }
+            }
+            return partiallyShowing;
+        };
+        /**
+         * Function to move the top app bar if needed.
+         */
+        MDCTopAppBarFoundation.prototype.moveTopAppBar = function () {
+            if (this.checkForUpdate()) {
+                // Once the top app bar is fully hidden we use the max potential top app bar height as our offset
+                // so the top app bar doesn't show if the window resizes and the new height > the old height.
+                var offset = this.currentAppBarOffsetTop;
+                if (Math.abs(offset) >= this.topAppBarHeight) {
+                    offset = -numbers$1.MAX_TOP_APP_BAR_HEIGHT;
+                }
+                this.adapter.setStyle('top', offset + 'px');
+            }
+        };
+        /**
+         * Throttled function that updates the top app bar scrolled values if the
+         * top app bar height changes.
+         */
+        MDCTopAppBarFoundation.prototype.throttledResizeHandler = function () {
+            var currentHeight = this.adapter.getTopAppBarHeight();
+            if (this.topAppBarHeight !== currentHeight) {
+                this.wasDocked = false;
+                // Since the top app bar has a different height depending on the screen width, this
+                // will ensure that the top app bar remains in the correct location if
+                // completely hidden and a resize makes the top app bar a different height.
+                this.currentAppBarOffsetTop -= this.topAppBarHeight - currentHeight;
+                this.topAppBarHeight = currentHeight;
+            }
+            this.handleTargetScroll();
+        };
+        return MDCTopAppBarFoundation;
+    }(MDCTopAppBarBaseFoundation));
+
+    /**
+     * @license
+     * Copyright 2018 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    var MDCFixedTopAppBarFoundation = /** @class */ (function (_super) {
+        __extends(MDCFixedTopAppBarFoundation, _super);
+        function MDCFixedTopAppBarFoundation() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            /**
+             * State variable for the previous scroll iteration top app bar state
+             */
+            _this.wasScrolled = false;
+            return _this;
+        }
+        /**
+         * Scroll handler for applying/removing the modifier class on the fixed top app bar.
+         * @override
+         */
+        MDCFixedTopAppBarFoundation.prototype.handleTargetScroll = function () {
+            var currentScroll = this.adapter.getViewportScrollY();
+            if (currentScroll <= 0) {
+                if (this.wasScrolled) {
+                    this.adapter.removeClass(cssClasses$2.FIXED_SCROLLED_CLASS);
+                    this.wasScrolled = false;
+                }
+            }
+            else {
+                if (!this.wasScrolled) {
+                    this.adapter.addClass(cssClasses$2.FIXED_SCROLLED_CLASS);
+                    this.wasScrolled = true;
+                }
+            }
+        };
+        return MDCFixedTopAppBarFoundation;
+    }(MDCTopAppBarFoundation));
+
+    /**
+     * @license
+     * Copyright 2018 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    var MDCShortTopAppBarFoundation = /** @class */ (function (_super) {
+        __extends(MDCShortTopAppBarFoundation, _super);
+        /* istanbul ignore next: optional argument is not a branch statement */
+        function MDCShortTopAppBarFoundation(adapter) {
+            var _this = _super.call(this, adapter) || this;
+            _this.collapsed = false;
+            _this.isAlwaysCollapsed = false;
+            return _this;
+        }
+        Object.defineProperty(MDCShortTopAppBarFoundation.prototype, "isCollapsed", {
+            // Public visibility for backward compatibility.
+            get: function () {
+                return this.collapsed;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        MDCShortTopAppBarFoundation.prototype.init = function () {
+            _super.prototype.init.call(this);
+            if (this.adapter.getTotalActionItems() > 0) {
+                this.adapter.addClass(cssClasses$2.SHORT_HAS_ACTION_ITEM_CLASS);
+            }
+            // If initialized with SHORT_COLLAPSED_CLASS, the bar should always be collapsed
+            this.setAlwaysCollapsed(this.adapter.hasClass(cssClasses$2.SHORT_COLLAPSED_CLASS));
+        };
+        /**
+         * Set if the short top app bar should always be collapsed.
+         *
+         * @param value When `true`, bar will always be collapsed. When `false`, bar may collapse or expand based on scroll.
+         */
+        MDCShortTopAppBarFoundation.prototype.setAlwaysCollapsed = function (value) {
+            this.isAlwaysCollapsed = !!value;
+            if (this.isAlwaysCollapsed) {
+                this.collapse();
+            }
+            else {
+                // let maybeCollapseBar determine if the bar should be collapsed
+                this.maybeCollapseBar();
+            }
+        };
+        MDCShortTopAppBarFoundation.prototype.getAlwaysCollapsed = function () {
+            return this.isAlwaysCollapsed;
+        };
+        /**
+         * Scroll handler for applying/removing the collapsed modifier class on the short top app bar.
+         * @override
+         */
+        MDCShortTopAppBarFoundation.prototype.handleTargetScroll = function () {
+            this.maybeCollapseBar();
+        };
+        MDCShortTopAppBarFoundation.prototype.maybeCollapseBar = function () {
+            if (this.isAlwaysCollapsed) {
+                return;
+            }
+            var currentScroll = this.adapter.getViewportScrollY();
+            if (currentScroll <= 0) {
+                if (this.collapsed) {
+                    this.uncollapse();
+                }
+            }
+            else {
+                if (!this.collapsed) {
+                    this.collapse();
+                }
+            }
+        };
+        MDCShortTopAppBarFoundation.prototype.uncollapse = function () {
+            this.adapter.removeClass(cssClasses$2.SHORT_COLLAPSED_CLASS);
+            this.collapsed = false;
+        };
+        MDCShortTopAppBarFoundation.prototype.collapse = function () {
+            this.adapter.addClass(cssClasses$2.SHORT_COLLAPSED_CLASS);
+            this.collapsed = true;
+        };
+        return MDCShortTopAppBarFoundation;
+    }(MDCTopAppBarBaseFoundation));
+
+    const subscriber_queue = [];
+    /**
+     * Creates a `Readable` store that allows reading by subscription.
+     * @param value initial value
+     * @param {StartStopNotifier}start start and stop notifications for subscriptions
+     */
+    function readable(value, start) {
+        return {
+            subscribe: writable(value, start).subscribe
+        };
+    }
+    /**
+     * Create a `Writable` store that allows both updating and reading by subscription.
+     * @param {*=}value initial value
+     * @param {StartStopNotifier=}start start and stop notifications for subscriptions
+     */
+    function writable(value, start = noop) {
+        let stop;
+        const subscribers = new Set();
+        function set(new_value) {
+            if (safe_not_equal(value, new_value)) {
+                value = new_value;
+                if (stop) { // store is ready
+                    const run_queue = !subscriber_queue.length;
+                    for (const subscriber of subscribers) {
+                        subscriber[1]();
+                        subscriber_queue.push(subscriber, value);
+                    }
+                    if (run_queue) {
+                        for (let i = 0; i < subscriber_queue.length; i += 2) {
+                            subscriber_queue[i][0](subscriber_queue[i + 1]);
+                        }
+                        subscriber_queue.length = 0;
+                    }
+                }
+            }
+        }
+        function update(fn) {
+            set(fn(value));
+        }
+        function subscribe(run, invalidate = noop) {
+            const subscriber = [run, invalidate];
+            subscribers.add(subscriber);
+            if (subscribers.size === 1) {
+                stop = start(set) || noop;
+            }
+            run(value);
+            return () => {
+                subscribers.delete(subscriber);
+                if (subscribers.size === 0) {
+                    stop();
+                    stop = null;
+                }
+            };
+        }
+        return { set, update, subscribe };
+    }
+
+    function classMap(classObj) {
+        return Object.entries(classObj)
+            .filter(([name, value]) => name !== '' && value)
+            .map(([name]) => name)
+            .join(' ');
+    }
+
+    function dispatch(element, eventType, detail, eventInit = { bubbles: true }, 
+    /** This is an internal thing used by SMUI to duplicate some SMUI events as MDC events. */
+    duplicateEventForMDC = false) {
+        if (typeof Event !== 'undefined' && element) {
+            const event = new CustomEvent(eventType, Object.assign(Object.assign({}, eventInit), { detail }));
+            element === null || element === void 0 ? void 0 : element.dispatchEvent(event);
+            if (duplicateEventForMDC && eventType.startsWith('SMUI')) {
+                const duplicateEvent = new CustomEvent(eventType.replace(/^SMUI/g, () => 'MDC'), Object.assign(Object.assign({}, eventInit), { detail }));
+                element === null || element === void 0 ? void 0 : element.dispatchEvent(duplicateEvent);
+                if (duplicateEvent.defaultPrevented) {
+                    event.preventDefault();
+                }
+            }
+            return event;
+        }
+    }
+
+    function exclude(obj, keys) {
+        let names = Object.getOwnPropertyNames(obj);
+        const newObj = {};
+        for (let i = 0; i < names.length; i++) {
+            const name = names[i];
+            const cashIndex = name.indexOf('$');
+            if (cashIndex !== -1 &&
+                keys.indexOf(name.substring(0, cashIndex + 1)) !== -1) {
+                continue;
+            }
+            if (keys.indexOf(name) !== -1) {
+                continue;
+            }
+            newObj[name] = obj[name];
+        }
+        return newObj;
+    }
+
+    // Match old modifiers. (only works on DOM events)
+    const oldModifierRegex = /^[a-z]+(?::(?:preventDefault|stopPropagation|passive|nonpassive|capture|once|self))+$/;
+    // Match new modifiers.
+    const newModifierRegex = /^[^$]+(?:\$(?:preventDefault|stopPropagation|passive|nonpassive|capture|once|self))+$/;
+    function forwardEventsBuilder(component) {
+        // This is our pseudo $on function. It is defined on component mount.
+        let $on;
+        // This is a list of events bound before mount.
+        let events = [];
+        // And we override the $on function to forward all bound events.
+        component.$on = (fullEventType, callback) => {
+            let eventType = fullEventType;
+            let destructor = () => { };
+            if ($on) {
+                // The event was bound programmatically.
+                destructor = $on(eventType, callback);
+            }
+            else {
+                // The event was bound before mount by Svelte.
+                events.push([eventType, callback]);
+            }
+            const oldModifierMatch = eventType.match(oldModifierRegex);
+            if (oldModifierMatch && console) {
+                console.warn('Event modifiers in SMUI now use "$" instead of ":", so that ' +
+                    'all events can be bound with modifiers. Please update your ' +
+                    'event binding: ', eventType);
+            }
+            return () => {
+                destructor();
+            };
+        };
+        function forward(e) {
+            // Internally bubble the event up from Svelte components.
+            bubble(component, e);
+        }
+        return (node) => {
+            const destructors = [];
+            const forwardDestructors = {};
+            // This function is responsible for listening and forwarding
+            // all bound events.
+            $on = (fullEventType, callback) => {
+                let eventType = fullEventType;
+                let handler = callback;
+                // DOM addEventListener options argument.
+                let options = false;
+                const oldModifierMatch = eventType.match(oldModifierRegex);
+                const newModifierMatch = eventType.match(newModifierRegex);
+                const modifierMatch = oldModifierMatch || newModifierMatch;
+                if (eventType.match(/^SMUI:\w+:/)) {
+                    const newEventTypeParts = eventType.split(':');
+                    let newEventType = '';
+                    for (let i = 0; i < newEventTypeParts.length; i++) {
+                        newEventType +=
+                            i === newEventTypeParts.length - 1
+                                ? ':' + newEventTypeParts[i]
+                                : newEventTypeParts[i]
+                                    .split('-')
+                                    .map((value) => value.slice(0, 1).toUpperCase() + value.slice(1))
+                                    .join('');
+                    }
+                    console.warn(`The event ${eventType.split('$')[0]} has been renamed to ${newEventType.split('$')[0]}.`);
+                    eventType = newEventType;
+                }
+                if (modifierMatch) {
+                    // Parse the event modifiers.
+                    // Supported modifiers:
+                    // - preventDefault
+                    // - stopPropagation
+                    // - passive
+                    // - nonpassive
+                    // - capture
+                    // - once
+                    const parts = eventType.split(oldModifierMatch ? ':' : '$');
+                    eventType = parts[0];
+                    const eventOptions = Object.fromEntries(parts.slice(1).map((mod) => [mod, true]));
+                    if (eventOptions.passive) {
+                        options = options || {};
+                        options.passive = true;
+                    }
+                    if (eventOptions.nonpassive) {
+                        options = options || {};
+                        options.passive = false;
+                    }
+                    if (eventOptions.capture) {
+                        options = options || {};
+                        options.capture = true;
+                    }
+                    if (eventOptions.once) {
+                        options = options || {};
+                        options.once = true;
+                    }
+                    if (eventOptions.preventDefault) {
+                        handler = prevent_default(handler);
+                    }
+                    if (eventOptions.stopPropagation) {
+                        handler = stop_propagation(handler);
+                    }
+                }
+                // Listen for the event directly, with the given options.
+                const off = listen(node, eventType, handler, options);
+                const destructor = () => {
+                    off();
+                    const idx = destructors.indexOf(destructor);
+                    if (idx > -1) {
+                        destructors.splice(idx, 1);
+                    }
+                };
+                destructors.push(destructor);
+                // Forward the event from Svelte.
+                if (!(eventType in forwardDestructors)) {
+                    forwardDestructors[eventType] = listen(node, eventType, forward);
+                }
+                return destructor;
+            };
+            for (let i = 0; i < events.length; i++) {
+                // Listen to all the events added before mount.
+                $on(events[i][0], events[i][1]);
+            }
+            return {
+                destroy: () => {
+                    // Remove all event listeners.
+                    for (let i = 0; i < destructors.length; i++) {
+                        destructors[i]();
+                    }
+                    // Remove all event forwarders.
+                    for (let entry of Object.entries(forwardDestructors)) {
+                        entry[1]();
+                    }
+                },
+            };
+        };
+    }
+
+    function prefixFilter(obj, prefix) {
+        let names = Object.getOwnPropertyNames(obj);
+        const newObj = {};
+        for (let i = 0; i < names.length; i++) {
+            const name = names[i];
+            if (name.substring(0, prefix.length) === prefix) {
+                newObj[name.substring(prefix.length)] = obj[name];
+            }
+        }
+        return newObj;
+    }
+
+    function useActions(node, actions) {
+        let actionReturns = [];
+        if (actions) {
+            for (let i = 0; i < actions.length; i++) {
+                const actionEntry = actions[i];
+                const action = Array.isArray(actionEntry) ? actionEntry[0] : actionEntry;
+                if (Array.isArray(actionEntry) && actionEntry.length > 1) {
+                    actionReturns.push(action(node, actionEntry[1]));
+                }
+                else {
+                    actionReturns.push(action(node));
+                }
+            }
+        }
+        return {
+            update(actions) {
+                if (((actions && actions.length) || 0) != actionReturns.length) {
+                    throw new Error('You must not change the length of an actions array.');
+                }
+                if (actions) {
+                    for (let i = 0; i < actions.length; i++) {
+                        const returnEntry = actionReturns[i];
+                        if (returnEntry && returnEntry.update) {
+                            const actionEntry = actions[i];
+                            if (Array.isArray(actionEntry) && actionEntry.length > 1) {
+                                returnEntry.update(actionEntry[1]);
+                            }
+                            else {
+                                returnEntry.update();
+                            }
+                        }
+                    }
+                }
+            },
+            destroy() {
+                for (let i = 0; i < actionReturns.length; i++) {
+                    const returnEntry = actionReturns[i];
+                    if (returnEntry && returnEntry.destroy) {
+                        returnEntry.destroy();
+                    }
+                }
+            },
+        };
+    }
+
+    /* node_modules\@smui\top-app-bar\dist\TopAppBar.svelte generated by Svelte v3.46.6 */
+
+    const { window: window_1$1 } = globals;
+
+    const file$G = "node_modules\\@smui\\top-app-bar\\dist\\TopAppBar.svelte";
+
+    function create_fragment$L(ctx) {
+    	let header;
+    	let header_class_value;
+    	let header_style_value;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[22].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[21], null);
+
+    	let header_levels = [
+    		{
+    			class: header_class_value = classMap({
+    				[/*className*/ ctx[2]]: true,
+    				'mdc-top-app-bar': true,
+    				'mdc-top-app-bar--short': /*variant*/ ctx[4] === 'short',
+    				'mdc-top-app-bar--short-collapsed': /*collapsed*/ ctx[0],
+    				'mdc-top-app-bar--fixed': /*variant*/ ctx[4] === 'fixed',
+    				'smui-top-app-bar--static': /*variant*/ ctx[4] === 'static',
+    				'smui-top-app-bar--color-secondary': /*color*/ ctx[5] === 'secondary',
+    				'mdc-top-app-bar--prominent': /*prominent*/ ctx[6],
+    				'mdc-top-app-bar--dense': /*dense*/ ctx[7],
+    				.../*internalClasses*/ ctx[11]
+    			})
+    		},
+    		{
+    			style: header_style_value = Object.entries(/*internalStyles*/ ctx[12]).map(func$4).concat([/*style*/ ctx[3]]).join(' ')
+    		},
+    		/*$$restProps*/ ctx[15]
+    	];
+
+    	let header_data = {};
+
+    	for (let i = 0; i < header_levels.length; i += 1) {
+    		header_data = assign(header_data, header_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			header = element("header");
+    			if (default_slot) default_slot.c();
+    			set_attributes(header, header_data);
+    			add_location(header, file$G, 9, 0, 208);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, header, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(header, null);
+    			}
+
+    			/*header_binding*/ ctx[25](header);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(window_1$1, "resize", /*resize_handler*/ ctx[23], false, false, false),
+    					listen_dev(window_1$1, "scroll", /*scroll_handler*/ ctx[24], false, false, false),
+    					action_destroyer(useActions_action = useActions.call(null, header, /*use*/ ctx[1])),
+    					action_destroyer(/*forwardEvents*/ ctx[13].call(null, header)),
+    					listen_dev(header, "SMUITopAppBarIconButton:nav", /*SMUITopAppBarIconButton_nav_handler*/ ctx[26], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty[0] & /*$$scope*/ 2097152)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[21],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[21])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[21], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(header, header_data = get_spread_update(header_levels, [
+    				(!current || dirty[0] & /*className, variant, collapsed, color, prominent, dense, internalClasses*/ 2293 && header_class_value !== (header_class_value = classMap({
+    					[/*className*/ ctx[2]]: true,
+    					'mdc-top-app-bar': true,
+    					'mdc-top-app-bar--short': /*variant*/ ctx[4] === 'short',
+    					'mdc-top-app-bar--short-collapsed': /*collapsed*/ ctx[0],
+    					'mdc-top-app-bar--fixed': /*variant*/ ctx[4] === 'fixed',
+    					'smui-top-app-bar--static': /*variant*/ ctx[4] === 'static',
+    					'smui-top-app-bar--color-secondary': /*color*/ ctx[5] === 'secondary',
+    					'mdc-top-app-bar--prominent': /*prominent*/ ctx[6],
+    					'mdc-top-app-bar--dense': /*dense*/ ctx[7],
+    					.../*internalClasses*/ ctx[11]
+    				}))) && { class: header_class_value },
+    				(!current || dirty[0] & /*internalStyles, style*/ 4104 && header_style_value !== (header_style_value = Object.entries(/*internalStyles*/ ctx[12]).map(func$4).concat([/*style*/ ctx[3]]).join(' '))) && { style: header_style_value },
+    				dirty[0] & /*$$restProps*/ 32768 && /*$$restProps*/ ctx[15]
+    			]));
+
+    			if (useActions_action && is_function(useActions_action.update) && dirty[0] & /*use*/ 2) useActions_action.update.call(null, /*use*/ ctx[1]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(header);
+    			if (default_slot) default_slot.d(detaching);
+    			/*header_binding*/ ctx[25](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$L.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    const func$4 = ([name, value]) => `${name}: ${value};`;
+
+    function instance_1$2($$self, $$props, $$invalidate) {
+    	const omit_props_names = [
+    		"use","class","style","variant","color","collapsed","prominent","dense","scrollTarget","getPropStore","getElement"
+    	];
+
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('TopAppBar', slots, ['default']);
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+
+    	let uninitializedValue = () => {
+    		
+    	};
+
+    	function isUninitializedValue(value) {
+    		return value === uninitializedValue;
+    	}
+
+    	let { use = [] } = $$props;
+    	let { class: className = '' } = $$props;
+    	let { style = '' } = $$props;
+    	let { variant = 'standard' } = $$props;
+    	let { color = 'primary' } = $$props;
+    	let { collapsed = uninitializedValue } = $$props;
+    	const alwaysCollapsed = !isUninitializedValue(collapsed) && !!collapsed;
+
+    	if (isUninitializedValue(collapsed)) {
+    		collapsed = false;
+    	}
+
+    	let { prominent = false } = $$props;
+    	let { dense = false } = $$props;
+    	let { scrollTarget = undefined } = $$props;
+    	let element;
+    	let instance;
+    	let internalClasses = {};
+    	let internalStyles = {};
+    	let propStoreSet;
+
+    	let propStore = readable({ variant, prominent, dense }, set => {
+    		$$invalidate(18, propStoreSet = set);
+    	});
+
+    	let oldScrollTarget = undefined;
+    	let oldVariant = variant;
+
+    	onMount(() => {
+    		$$invalidate(9, instance = getInstance());
+    		instance.init();
+
+    		return () => {
+    			instance.destroy();
+    		};
+    	});
+
+    	function getInstance() {
+    		const Foundation = ({
+    			static: MDCTopAppBarBaseFoundation,
+    			short: MDCShortTopAppBarFoundation,
+    			fixed: MDCFixedTopAppBarFoundation
+    		})[variant] || MDCTopAppBarFoundation;
+
+    		return new Foundation({
+    				hasClass,
+    				addClass,
+    				removeClass,
+    				setStyle: addStyle,
+    				getTopAppBarHeight: () => element.clientHeight,
+    				notifyNavigationIconClicked: () => dispatch(element, 'SMUITopAppBar:nav', undefined, undefined, true),
+    				getViewportScrollY: () => scrollTarget == null
+    				? window.pageYOffset
+    				: scrollTarget.scrollTop,
+    				getTotalActionItems: () => element.querySelectorAll('.mdc-top-app-bar__action-item').length
+    			});
+    	}
+
+    	function hasClass(className) {
+    		return className in internalClasses
+    		? internalClasses[className]
+    		: getElement().classList.contains(className);
+    	}
+
+    	function addClass(className) {
+    		if (!internalClasses[className]) {
+    			$$invalidate(11, internalClasses[className] = true, internalClasses);
+    		}
+    	}
+
+    	function removeClass(className) {
+    		if (!(className in internalClasses) || internalClasses[className]) {
+    			$$invalidate(11, internalClasses[className] = false, internalClasses);
+    		}
+    	}
+
+    	function addStyle(name, value) {
+    		if (internalStyles[name] != value) {
+    			if (value === '' || value == null) {
+    				delete internalStyles[name];
+    				((($$invalidate(12, internalStyles), $$invalidate(20, oldVariant)), $$invalidate(4, variant)), $$invalidate(9, instance));
+    			} else {
+    				$$invalidate(12, internalStyles[name] = value, internalStyles);
+    			}
+    		}
+    	}
+
+    	function handleTargetScroll() {
+    		if (instance) {
+    			instance.handleTargetScroll();
+
+    			if (variant === 'short') {
+    				$$invalidate(0, collapsed = 'isCollapsed' in instance && instance.isCollapsed);
+    			}
+    		}
+    	}
+
+    	function getPropStore() {
+    		return propStore;
+    	}
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	const resize_handler = () => variant !== 'short' && variant !== 'fixed' && instance && instance.handleWindowResize();
+    	const scroll_handler = () => scrollTarget == null && handleTargetScroll();
+
+    	function header_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(10, element);
+    		});
+    	}
+
+    	const SMUITopAppBarIconButton_nav_handler = () => instance && instance.handleNavigationClick();
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(15, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(1, use = $$new_props.use);
+    		if ('class' in $$new_props) $$invalidate(2, className = $$new_props.class);
+    		if ('style' in $$new_props) $$invalidate(3, style = $$new_props.style);
+    		if ('variant' in $$new_props) $$invalidate(4, variant = $$new_props.variant);
+    		if ('color' in $$new_props) $$invalidate(5, color = $$new_props.color);
+    		if ('collapsed' in $$new_props) $$invalidate(0, collapsed = $$new_props.collapsed);
+    		if ('prominent' in $$new_props) $$invalidate(6, prominent = $$new_props.prominent);
+    		if ('dense' in $$new_props) $$invalidate(7, dense = $$new_props.dense);
+    		if ('scrollTarget' in $$new_props) $$invalidate(8, scrollTarget = $$new_props.scrollTarget);
+    		if ('$$scope' in $$new_props) $$invalidate(21, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		MDCTopAppBarBaseFoundation,
+    		MDCTopAppBarFoundation,
+    		MDCFixedTopAppBarFoundation,
+    		MDCShortTopAppBarFoundation,
+    		onMount,
+    		get_current_component,
+    		readable,
+    		forwardEventsBuilder,
+    		classMap,
+    		useActions,
+    		dispatch,
+    		forwardEvents,
+    		uninitializedValue,
+    		isUninitializedValue,
+    		use,
+    		className,
+    		style,
+    		variant,
+    		color,
+    		collapsed,
+    		alwaysCollapsed,
+    		prominent,
+    		dense,
+    		scrollTarget,
+    		element,
+    		instance,
+    		internalClasses,
+    		internalStyles,
+    		propStoreSet,
+    		propStore,
+    		oldScrollTarget,
+    		oldVariant,
+    		getInstance,
+    		hasClass,
+    		addClass,
+    		removeClass,
+    		addStyle,
+    		handleTargetScroll,
+    		getPropStore,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('uninitializedValue' in $$props) uninitializedValue = $$new_props.uninitializedValue;
+    		if ('use' in $$props) $$invalidate(1, use = $$new_props.use);
+    		if ('className' in $$props) $$invalidate(2, className = $$new_props.className);
+    		if ('style' in $$props) $$invalidate(3, style = $$new_props.style);
+    		if ('variant' in $$props) $$invalidate(4, variant = $$new_props.variant);
+    		if ('color' in $$props) $$invalidate(5, color = $$new_props.color);
+    		if ('collapsed' in $$props) $$invalidate(0, collapsed = $$new_props.collapsed);
+    		if ('prominent' in $$props) $$invalidate(6, prominent = $$new_props.prominent);
+    		if ('dense' in $$props) $$invalidate(7, dense = $$new_props.dense);
+    		if ('scrollTarget' in $$props) $$invalidate(8, scrollTarget = $$new_props.scrollTarget);
+    		if ('element' in $$props) $$invalidate(10, element = $$new_props.element);
+    		if ('instance' in $$props) $$invalidate(9, instance = $$new_props.instance);
+    		if ('internalClasses' in $$props) $$invalidate(11, internalClasses = $$new_props.internalClasses);
+    		if ('internalStyles' in $$props) $$invalidate(12, internalStyles = $$new_props.internalStyles);
+    		if ('propStoreSet' in $$props) $$invalidate(18, propStoreSet = $$new_props.propStoreSet);
+    		if ('propStore' in $$props) propStore = $$new_props.propStore;
+    		if ('oldScrollTarget' in $$props) $$invalidate(19, oldScrollTarget = $$new_props.oldScrollTarget);
+    		if ('oldVariant' in $$props) $$invalidate(20, oldVariant = $$new_props.oldVariant);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty[0] & /*propStoreSet, variant, prominent, dense*/ 262352) {
+    			if (propStoreSet) {
+    				propStoreSet({ variant, prominent, dense });
+    			}
+    		}
+
+    		if ($$self.$$.dirty[0] & /*oldVariant, variant, instance*/ 1049104) {
+    			if (oldVariant !== variant && instance) {
+    				$$invalidate(20, oldVariant = variant);
+    				instance.destroy();
+    				$$invalidate(11, internalClasses = {});
+    				$$invalidate(12, internalStyles = {});
+    				$$invalidate(9, instance = getInstance());
+    				instance.init();
+    			}
+    		}
+
+    		if ($$self.$$.dirty[0] & /*instance, variant*/ 528) {
+    			if (instance && variant === 'short' && 'setAlwaysCollapsed' in instance) {
+    				instance.setAlwaysCollapsed(alwaysCollapsed);
+    			}
+    		}
+
+    		if ($$self.$$.dirty[0] & /*oldScrollTarget, scrollTarget*/ 524544) {
+    			if (oldScrollTarget !== scrollTarget) {
+    				if (oldScrollTarget) {
+    					oldScrollTarget.removeEventListener('scroll', handleTargetScroll);
+    				}
+
+    				if (scrollTarget) {
+    					scrollTarget.addEventListener('scroll', handleTargetScroll);
+    				}
+
+    				$$invalidate(19, oldScrollTarget = scrollTarget);
+    			}
+    		}
+    	};
+
+    	return [
+    		collapsed,
+    		use,
+    		className,
+    		style,
+    		variant,
+    		color,
+    		prominent,
+    		dense,
+    		scrollTarget,
+    		instance,
+    		element,
+    		internalClasses,
+    		internalStyles,
+    		forwardEvents,
+    		handleTargetScroll,
+    		$$restProps,
+    		getPropStore,
+    		getElement,
+    		propStoreSet,
+    		oldScrollTarget,
+    		oldVariant,
+    		$$scope,
+    		slots,
+    		resize_handler,
+    		scroll_handler,
+    		header_binding,
+    		SMUITopAppBarIconButton_nav_handler
+    	];
+    }
+
+    class TopAppBar extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(
+    			this,
+    			options,
+    			instance_1$2,
+    			create_fragment$L,
+    			safe_not_equal,
+    			{
+    				use: 1,
+    				class: 2,
+    				style: 3,
+    				variant: 4,
+    				color: 5,
+    				collapsed: 0,
+    				prominent: 6,
+    				dense: 7,
+    				scrollTarget: 8,
+    				getPropStore: 16,
+    				getElement: 17
+    			},
+    			null,
+    			[-1, -1]
+    		);
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "TopAppBar",
+    			options,
+    			id: create_fragment$L.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<TopAppBar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get class() {
+    		throw new Error("<TopAppBar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set class(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get style() {
+    		throw new Error("<TopAppBar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set style(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get variant() {
+    		throw new Error("<TopAppBar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set variant(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get color() {
+    		throw new Error("<TopAppBar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set color(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get collapsed() {
+    		throw new Error("<TopAppBar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set collapsed(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get prominent() {
+    		throw new Error("<TopAppBar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set prominent(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get dense() {
+    		throw new Error("<TopAppBar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set dense(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get scrollTarget() {
+    		throw new Error("<TopAppBar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set scrollTarget(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getPropStore() {
+    		return this.$$.ctx[16];
+    	}
+
+    	set getPropStore(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[17];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<TopAppBar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\elements\Div.svelte generated by Svelte v3.46.6 */
+    const file$F = "node_modules\\@smui\\common\\dist\\elements\\Div.svelte";
+
+    function create_fragment$K(ctx) {
+    	let div;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[6].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
+    	let div_levels = [/*$$restProps*/ ctx[3]];
+    	let div_data = {};
+
+    	for (let i = 0; i < div_levels.length; i += 1) {
+    		div_data = assign(div_data, div_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			if (default_slot) default_slot.c();
+    			set_attributes(div, div_data);
+    			add_location(div, file$F, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(div, null);
+    			}
+
+    			/*div_binding*/ ctx[7](div);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, div, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[2].call(null, div))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 32)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[5],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[5])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[5], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(div, div_data = get_spread_update(div_levels, [dirty & /*$$restProps*/ 8 && /*$$restProps*/ ctx[3]]));
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (default_slot) default_slot.d(detaching);
+    			/*div_binding*/ ctx[7](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$K.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$I($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Div', slots, ['default']);
+    	let { use = [] } = $$props;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let element;
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function div_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(1, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(3, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('$$scope' in $$new_props) $$invalidate(5, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		get_current_component,
+    		forwardEventsBuilder,
+    		useActions,
+    		use,
+    		forwardEvents,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('element' in $$props) $$invalidate(1, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		div_binding
+    	];
+    }
+
+    class Div$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$I, create_fragment$K, safe_not_equal, { use: 0, getElement: 4 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Div",
+    			options,
+    			id: create_fragment$K.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<Div>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<Div>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[4];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<Div>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\classadder\ClassAdder.svelte generated by Svelte v3.46.6 */
+
+    // (1:0) <svelte:component   this={component}   bind:this={element}   use={[forwardEvents, ...use]}   class={classMap({     [className]: true,     [smuiClass]: true,     ...smuiClassMap,   })}   {...props}   {...$$restProps}>
+    function create_default_slot$c(ctx) {
+    	let current;
+    	const default_slot_template = /*#slots*/ ctx[10].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[12], null);
+
+    	const block = {
+    		c: function create() {
+    			if (default_slot) default_slot.c();
+    		},
+    		m: function mount(target, anchor) {
+    			if (default_slot) {
+    				default_slot.m(target, anchor);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 4096)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[12],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[12])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[12], dirty, null),
+    						null
+    					);
+    				}
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$c.name,
+    		type: "slot",
+    		source: "(1:0) <svelte:component   this={component}   bind:this={element}   use={[forwardEvents, ...use]}   class={classMap({     [className]: true,     [smuiClass]: true,     ...smuiClassMap,   })}   {...props}   {...$$restProps}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$J(ctx) {
+    	let switch_instance;
+    	let switch_instance_anchor;
+    	let current;
+
+    	const switch_instance_spread_levels = [
+    		{
+    			use: [/*forwardEvents*/ ctx[7], .../*use*/ ctx[0]]
+    		},
+    		{
+    			class: classMap({
+    				[/*className*/ ctx[1]]: true,
+    				[/*smuiClass*/ ctx[5]]: true,
+    				.../*smuiClassMap*/ ctx[4]
+    			})
+    		},
+    		/*props*/ ctx[6],
+    		/*$$restProps*/ ctx[8]
+    	];
+
+    	var switch_value = /*component*/ ctx[2];
+
+    	function switch_props(ctx) {
+    		let switch_instance_props = {
+    			$$slots: { default: [create_default_slot$c] },
+    			$$scope: { ctx }
+    		};
+
+    		for (let i = 0; i < switch_instance_spread_levels.length; i += 1) {
+    			switch_instance_props = assign(switch_instance_props, switch_instance_spread_levels[i]);
+    		}
+
+    		return {
+    			props: switch_instance_props,
+    			$$inline: true
+    		};
+    	}
+
+    	if (switch_value) {
+    		switch_instance = new switch_value(switch_props(ctx));
+    		/*switch_instance_binding*/ ctx[11](switch_instance);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			if (switch_instance) create_component(switch_instance.$$.fragment);
+    			switch_instance_anchor = empty();
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			if (switch_instance) {
+    				mount_component(switch_instance, target, anchor);
+    			}
+
+    			insert_dev(target, switch_instance_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const switch_instance_changes = (dirty & /*forwardEvents, use, classMap, className, smuiClass, smuiClassMap, props, $$restProps*/ 499)
+    			? get_spread_update(switch_instance_spread_levels, [
+    					dirty & /*forwardEvents, use*/ 129 && {
+    						use: [/*forwardEvents*/ ctx[7], .../*use*/ ctx[0]]
+    					},
+    					dirty & /*classMap, className, smuiClass, smuiClassMap*/ 50 && {
+    						class: classMap({
+    							[/*className*/ ctx[1]]: true,
+    							[/*smuiClass*/ ctx[5]]: true,
+    							.../*smuiClassMap*/ ctx[4]
+    						})
+    					},
+    					dirty & /*props*/ 64 && get_spread_object(/*props*/ ctx[6]),
+    					dirty & /*$$restProps*/ 256 && get_spread_object(/*$$restProps*/ ctx[8])
+    				])
+    			: {};
+
+    			if (dirty & /*$$scope*/ 4096) {
+    				switch_instance_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (switch_value !== (switch_value = /*component*/ ctx[2])) {
+    				if (switch_instance) {
+    					group_outros();
+    					const old_component = switch_instance;
+
+    					transition_out(old_component.$$.fragment, 1, 0, () => {
+    						destroy_component(old_component, 1);
+    					});
+
+    					check_outros();
+    				}
+
+    				if (switch_value) {
+    					switch_instance = new switch_value(switch_props(ctx));
+    					/*switch_instance_binding*/ ctx[11](switch_instance);
+    					create_component(switch_instance.$$.fragment);
+    					transition_in(switch_instance.$$.fragment, 1);
+    					mount_component(switch_instance, switch_instance_anchor.parentNode, switch_instance_anchor);
+    				} else {
+    					switch_instance = null;
+    				}
+    			} else if (switch_value) {
+    				switch_instance.$set(switch_instance_changes);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			if (switch_instance) transition_in(switch_instance.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (switch_instance) transition_out(switch_instance.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			/*switch_instance_binding*/ ctx[11](null);
+    			if (detaching) detach_dev(switch_instance_anchor);
+    			if (switch_instance) destroy_component(switch_instance, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$J.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    const internals = {
+    	component: Div$1,
+    	class: '',
+    	classMap: {},
+    	contexts: {},
+    	props: {}
+    };
+
+    function instance$H($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","class","component","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('ClassAdder', slots, ['default']);
+    	let { use = [] } = $$props;
+    	let { class: className = '' } = $$props;
+    	let element;
+    	const smuiClass = internals.class;
+    	const smuiClassMap = {};
+    	const smuiClassUnsubscribes = [];
+    	const contexts = internals.contexts;
+    	const props = internals.props;
+    	let { component = internals.component } = $$props;
+
+    	Object.entries(internals.classMap).forEach(([name, context]) => {
+    		const store = getContext(context);
+
+    		if (store && 'subscribe' in store) {
+    			smuiClassUnsubscribes.push(store.subscribe(value => {
+    				$$invalidate(4, smuiClassMap[name] = value, smuiClassMap);
+    			}));
+    		}
+    	});
+
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+
+    	for (let context in contexts) {
+    		if (contexts.hasOwnProperty(context)) {
+    			setContext(context, contexts[context]);
+    		}
+    	}
+
+    	onDestroy(() => {
+    		for (const unsubscribe of smuiClassUnsubscribes) {
+    			unsubscribe();
+    		}
+    	});
+
+    	function getElement() {
+    		return element.getElement();
+    	}
+
+    	function switch_instance_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(3, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(8, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('class' in $$new_props) $$invalidate(1, className = $$new_props.class);
+    		if ('component' in $$new_props) $$invalidate(2, component = $$new_props.component);
+    		if ('$$scope' in $$new_props) $$invalidate(12, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		Div: Div$1,
+    		internals,
+    		onDestroy,
+    		getContext,
+    		setContext,
+    		get_current_component,
+    		forwardEventsBuilder,
+    		classMap,
+    		use,
+    		className,
+    		element,
+    		smuiClass,
+    		smuiClassMap,
+    		smuiClassUnsubscribes,
+    		contexts,
+    		props,
+    		component,
+    		forwardEvents,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('className' in $$props) $$invalidate(1, className = $$new_props.className);
+    		if ('element' in $$props) $$invalidate(3, element = $$new_props.element);
+    		if ('component' in $$props) $$invalidate(2, component = $$new_props.component);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		className,
+    		component,
+    		element,
+    		smuiClassMap,
+    		smuiClass,
+    		props,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		slots,
+    		switch_instance_binding,
+    		$$scope
+    	];
+    }
+
+    class ClassAdder extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$H, create_fragment$J, safe_not_equal, {
+    			use: 0,
+    			class: 1,
+    			component: 2,
+    			getElement: 9
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "ClassAdder",
+    			options,
+    			id: create_fragment$J.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<ClassAdder>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<ClassAdder>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get class() {
+    		throw new Error("<ClassAdder>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set class(value) {
+    		throw new Error("<ClassAdder>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get component() {
+    		throw new Error("<ClassAdder>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set component(value) {
+    		throw new Error("<ClassAdder>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[9];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<ClassAdder>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    // @ts-ignore: Internals is exported... argh.
+    const defaults = Object.assign({}, internals);
+    function classAdderBuilder(props) {
+        return new Proxy(ClassAdder, {
+            construct: function (target, args) {
+                Object.assign(internals, defaults, props);
+                // @ts-ignore: Need spread arg.
+                return new target(...args);
+            },
+            get: function (target, prop) {
+                Object.assign(internals, defaults, props);
+                return target[prop];
+            },
+        });
+    }
+
+    /* node_modules\@smui\common\dist\elements\A.svelte generated by Svelte v3.46.6 */
+    const file$E = "node_modules\\@smui\\common\\dist\\elements\\A.svelte";
+
+    function create_fragment$I(ctx) {
+    	let a;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[7].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[6], null);
+    	let a_levels = [{ href: /*href*/ ctx[1] }, /*$$restProps*/ ctx[4]];
+    	let a_data = {};
+
+    	for (let i = 0; i < a_levels.length; i += 1) {
+    		a_data = assign(a_data, a_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			a = element("a");
+    			if (default_slot) default_slot.c();
+    			set_attributes(a, a_data);
+    			add_location(a, file$E, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, a, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(a, null);
+    			}
+
+    			/*a_binding*/ ctx[8](a);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, a, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[3].call(null, a))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 64)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[6],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[6])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[6], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(a, a_data = get_spread_update(a_levels, [
+    				(!current || dirty & /*href*/ 2) && { href: /*href*/ ctx[1] },
+    				dirty & /*$$restProps*/ 16 && /*$$restProps*/ ctx[4]
+    			]));
+
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(a);
+    			if (default_slot) default_slot.d(detaching);
+    			/*a_binding*/ ctx[8](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$I.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$G($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","href","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('A', slots, ['default']);
+    	let { use = [] } = $$props;
+    	let { href = 'javascript:void(0);' } = $$props;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let element;
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function a_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(2, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(4, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('href' in $$new_props) $$invalidate(1, href = $$new_props.href);
+    		if ('$$scope' in $$new_props) $$invalidate(6, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		get_current_component,
+    		forwardEventsBuilder,
+    		useActions,
+    		use,
+    		href,
+    		forwardEvents,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('href' in $$props) $$invalidate(1, href = $$new_props.href);
+    		if ('element' in $$props) $$invalidate(2, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		href,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		a_binding
+    	];
+    }
+
+    class A$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$G, create_fragment$I, safe_not_equal, { use: 0, href: 1, getElement: 5 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "A",
+    			options,
+    			id: create_fragment$I.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<A>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<A>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get href() {
+    		throw new Error("<A>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set href(value) {
+    		throw new Error("<A>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[5];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<A>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\elements\Button.svelte generated by Svelte v3.46.6 */
+    const file$D = "node_modules\\@smui\\common\\dist\\elements\\Button.svelte";
+
+    function create_fragment$H(ctx) {
+    	let button;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[6].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
+    	let button_levels = [/*$$restProps*/ ctx[3]];
+    	let button_data = {};
+
+    	for (let i = 0; i < button_levels.length; i += 1) {
+    		button_data = assign(button_data, button_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			button = element("button");
+    			if (default_slot) default_slot.c();
+    			set_attributes(button, button_data);
+    			add_location(button, file$D, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(button, null);
+    			}
+
+    			if (button.autofocus) button.focus();
+    			/*button_binding*/ ctx[7](button);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, button, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[2].call(null, button))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 32)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[5],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[5])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[5], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(button, button_data = get_spread_update(button_levels, [dirty & /*$$restProps*/ 8 && /*$$restProps*/ ctx[3]]));
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    			if (default_slot) default_slot.d(detaching);
+    			/*button_binding*/ ctx[7](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$H.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$F($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Button', slots, ['default']);
+    	let { use = [] } = $$props;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let element;
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function button_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(1, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(3, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('$$scope' in $$new_props) $$invalidate(5, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		get_current_component,
+    		forwardEventsBuilder,
+    		useActions,
+    		use,
+    		forwardEvents,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('element' in $$props) $$invalidate(1, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		button_binding
+    	];
+    }
+
+    class Button$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$F, create_fragment$H, safe_not_equal, { use: 0, getElement: 4 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Button",
+    			options,
+    			id: create_fragment$H.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<Button>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<Button>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[4];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<Button>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\elements\H2.svelte generated by Svelte v3.46.6 */
+    const file$C = "node_modules\\@smui\\common\\dist\\elements\\H2.svelte";
+
+    function create_fragment$G(ctx) {
+    	let h2;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[6].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
+    	let h2_levels = [/*$$restProps*/ ctx[3]];
+    	let h2_data = {};
+
+    	for (let i = 0; i < h2_levels.length; i += 1) {
+    		h2_data = assign(h2_data, h2_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			h2 = element("h2");
+    			if (default_slot) default_slot.c();
+    			set_attributes(h2, h2_data);
+    			add_location(h2, file$C, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h2, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(h2, null);
+    			}
+
+    			/*h2_binding*/ ctx[7](h2);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, h2, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[2].call(null, h2))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 32)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[5],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[5])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[5], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(h2, h2_data = get_spread_update(h2_levels, [dirty & /*$$restProps*/ 8 && /*$$restProps*/ ctx[3]]));
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h2);
+    			if (default_slot) default_slot.d(detaching);
+    			/*h2_binding*/ ctx[7](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$G.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$E($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('H2', slots, ['default']);
+    	let { use = [] } = $$props;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let element;
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function h2_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(1, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(3, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('$$scope' in $$new_props) $$invalidate(5, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		get_current_component,
+    		forwardEventsBuilder,
+    		useActions,
+    		use,
+    		forwardEvents,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('element' in $$props) $$invalidate(1, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		h2_binding
+    	];
+    }
+
+    class H2$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$E, create_fragment$G, safe_not_equal, { use: 0, getElement: 4 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "H2",
+    			options,
+    			id: create_fragment$G.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<H2>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<H2>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[4];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<H2>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\elements\I.svelte generated by Svelte v3.46.6 */
+    const file$B = "node_modules\\@smui\\common\\dist\\elements\\I.svelte";
+
+    function create_fragment$F(ctx) {
+    	let i;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[6].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
+    	let i_levels = [/*$$restProps*/ ctx[3]];
+    	let i_data = {};
+
+    	for (let i = 0; i < i_levels.length; i += 1) {
+    		i_data = assign(i_data, i_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			if (default_slot) default_slot.c();
+    			set_attributes(i, i_data);
+    			add_location(i, file$B, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(i, null);
+    			}
+
+    			/*i_binding*/ ctx[7](i);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, i, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[2].call(null, i))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 32)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[5],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[5])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[5], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(i, i_data = get_spread_update(i_levels, [dirty & /*$$restProps*/ 8 && /*$$restProps*/ ctx[3]]));
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (default_slot) default_slot.d(detaching);
+    			/*i_binding*/ ctx[7](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$F.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$D($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('I', slots, ['default']);
+    	let { use = [] } = $$props;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let element;
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function i_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(1, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(3, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('$$scope' in $$new_props) $$invalidate(5, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		get_current_component,
+    		forwardEventsBuilder,
+    		useActions,
+    		use,
+    		forwardEvents,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('element' in $$props) $$invalidate(1, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		i_binding
+    	];
+    }
+
+    class I extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$D, create_fragment$F, safe_not_equal, { use: 0, getElement: 4 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "I",
+    			options,
+    			id: create_fragment$F.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<I>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<I>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[4];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<I>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\elements\Img.svelte generated by Svelte v3.46.6 */
+    const file$A = "node_modules\\@smui\\common\\dist\\elements\\Img.svelte";
+
+    function create_fragment$E(ctx) {
+    	let img;
+    	let useActions_action;
+    	let t;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	let img_levels = [{ alt: /*alt*/ ctx[1] }, /*$$restProps*/ ctx[4]];
+    	let img_data = {};
+
+    	for (let i = 0; i < img_levels.length; i += 1) {
+    		img_data = assign(img_data, img_levels[i]);
+    	}
+
+    	const default_slot_template = /*#slots*/ ctx[7].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[6], null);
+
+    	const block = {
+    		c: function create() {
+    			img = element("img");
+    			t = space();
+    			if (default_slot) default_slot.c();
+    			set_attributes(img, img_data);
+    			add_location(img, file$A, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, img, anchor);
+    			/*img_binding*/ ctx[8](img);
+    			insert_dev(target, t, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(target, anchor);
+    			}
+
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, img, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[3].call(null, img))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			set_attributes(img, img_data = get_spread_update(img_levels, [
+    				(!current || dirty & /*alt*/ 2) && { alt: /*alt*/ ctx[1] },
+    				dirty & /*$$restProps*/ 16 && /*$$restProps*/ ctx[4]
+    			]));
+
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 64)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[6],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[6])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[6], dirty, null),
+    						null
+    					);
+    				}
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(img);
+    			/*img_binding*/ ctx[8](null);
+    			if (detaching) detach_dev(t);
+    			if (default_slot) default_slot.d(detaching);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$E.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$C($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","alt","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Img', slots, ['default']);
+    	let { use = [] } = $$props;
+    	let { alt = undefined } = $$props;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let element;
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function img_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(2, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(4, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('alt' in $$new_props) $$invalidate(1, alt = $$new_props.alt);
+    		if ('$$scope' in $$new_props) $$invalidate(6, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		get_current_component,
+    		forwardEventsBuilder,
+    		useActions,
+    		use,
+    		alt,
+    		forwardEvents,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('alt' in $$props) $$invalidate(1, alt = $$new_props.alt);
+    		if ('element' in $$props) $$invalidate(2, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		alt,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		img_binding
+    	];
+    }
+
+    class Img$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$C, create_fragment$E, safe_not_equal, { use: 0, alt: 1, getElement: 5 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Img",
+    			options,
+    			id: create_fragment$E.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<Img>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<Img>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get alt() {
+    		throw new Error("<Img>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set alt(value) {
+    		throw new Error("<Img>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[5];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<Img>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\elements\Li.svelte generated by Svelte v3.46.6 */
+    const file$z = "node_modules\\@smui\\common\\dist\\elements\\Li.svelte";
+
+    function create_fragment$D(ctx) {
+    	let li;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[6].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
+    	let li_levels = [/*$$restProps*/ ctx[3]];
+    	let li_data = {};
+
+    	for (let i = 0; i < li_levels.length; i += 1) {
+    		li_data = assign(li_data, li_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			if (default_slot) default_slot.c();
+    			set_attributes(li, li_data);
+    			add_location(li, file$z, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(li, null);
+    			}
+
+    			/*li_binding*/ ctx[7](li);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, li, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[2].call(null, li))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 32)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[5],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[5])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[5], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(li, li_data = get_spread_update(li_levels, [dirty & /*$$restProps*/ 8 && /*$$restProps*/ ctx[3]]));
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			if (default_slot) default_slot.d(detaching);
+    			/*li_binding*/ ctx[7](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$D.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$B($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Li', slots, ['default']);
+    	let { use = [] } = $$props;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let element;
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function li_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(1, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(3, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('$$scope' in $$new_props) $$invalidate(5, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		get_current_component,
+    		forwardEventsBuilder,
+    		useActions,
+    		use,
+    		forwardEvents,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('element' in $$props) $$invalidate(1, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		li_binding
+    	];
+    }
+
+    class Li$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$B, create_fragment$D, safe_not_equal, { use: 0, getElement: 4 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Li",
+    			options,
+    			id: create_fragment$D.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<Li>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<Li>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[4];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<Li>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\elements\Span.svelte generated by Svelte v3.46.6 */
+    const file$y = "node_modules\\@smui\\common\\dist\\elements\\Span.svelte";
+
+    function create_fragment$C(ctx) {
+    	let span;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[6].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
+    	let span_levels = [/*$$restProps*/ ctx[3]];
+    	let span_data = {};
+
+    	for (let i = 0; i < span_levels.length; i += 1) {
+    		span_data = assign(span_data, span_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			span = element("span");
+    			if (default_slot) default_slot.c();
+    			set_attributes(span, span_data);
+    			add_location(span, file$y, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, span, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(span, null);
+    			}
+
+    			/*span_binding*/ ctx[7](span);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, span, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[2].call(null, span))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 32)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[5],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[5])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[5], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(span, span_data = get_spread_update(span_levels, [dirty & /*$$restProps*/ 8 && /*$$restProps*/ ctx[3]]));
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(span);
+    			if (default_slot) default_slot.d(detaching);
+    			/*span_binding*/ ctx[7](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$C.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$A($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Span', slots, ['default']);
+    	let { use = [] } = $$props;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let element;
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function span_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(1, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(3, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('$$scope' in $$new_props) $$invalidate(5, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		get_current_component,
+    		forwardEventsBuilder,
+    		useActions,
+    		use,
+    		forwardEvents,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('element' in $$props) $$invalidate(1, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		span_binding
+    	];
+    }
+
+    class Span$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$A, create_fragment$C, safe_not_equal, { use: 0, getElement: 4 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Span",
+    			options,
+    			id: create_fragment$C.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<Span>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<Span>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[4];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<Span>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\elements\Svg.svelte generated by Svelte v3.46.6 */
+    const file$x = "node_modules\\@smui\\common\\dist\\elements\\Svg.svelte";
+
+    function create_fragment$B(ctx) {
+    	let svg;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[6].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
+    	let svg_levels = [/*$$restProps*/ ctx[3]];
+    	let svg_data = {};
+
+    	for (let i = 0; i < svg_levels.length; i += 1) {
+    		svg_data = assign(svg_data, svg_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			svg = svg_element("svg");
+    			if (default_slot) default_slot.c();
+    			set_svg_attributes(svg, svg_data);
+    			add_location(svg, file$x, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, svg, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(svg, null);
+    			}
+
+    			/*svg_binding*/ ctx[7](svg);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, svg, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[2].call(null, svg))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 32)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[5],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[5])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[5], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_svg_attributes(svg, svg_data = get_spread_update(svg_levels, [dirty & /*$$restProps*/ 8 && /*$$restProps*/ ctx[3]]));
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(svg);
+    			if (default_slot) default_slot.d(detaching);
+    			/*svg_binding*/ ctx[7](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$B.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$z($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Svg', slots, ['default']);
+    	let { use = [] } = $$props;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let element;
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function svg_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(1, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(3, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('$$scope' in $$new_props) $$invalidate(5, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		get_current_component,
+    		forwardEventsBuilder,
+    		useActions,
+    		use,
+    		forwardEvents,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('element' in $$props) $$invalidate(1, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		svg_binding
+    	];
+    }
+
+    class Svg extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$z, create_fragment$B, safe_not_equal, { use: 0, getElement: 4 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Svg",
+    			options,
+    			id: create_fragment$B.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<Svg>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<Svg>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[4];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<Svg>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    const A = A$1;
+    const Button = Button$1;
+    const Div = Div$1;
+    const H2 = H2$1;
+    const Img = Img$1;
+    const Li = Li$1;
+    const Span = Span$1;
+
+    var Row = classAdderBuilder({
+        class: 'mdc-top-app-bar__row',
+        component: Div,
+    });
+
+    /* node_modules\@smui\top-app-bar\dist\Section.svelte generated by Svelte v3.46.6 */
+    const file$w = "node_modules\\@smui\\top-app-bar\\dist\\Section.svelte";
+
+    function create_fragment$A(ctx) {
+    	let section;
+    	let section_class_value;
+    	let useActions_action;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[9].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[8], null);
+
+    	let section_levels = [
+    		{
+    			class: section_class_value = classMap({
+    				[/*className*/ ctx[1]]: true,
+    				'mdc-top-app-bar__section': true,
+    				'mdc-top-app-bar__section--align-start': /*align*/ ctx[2] === 'start',
+    				'mdc-top-app-bar__section--align-end': /*align*/ ctx[2] === 'end'
+    			})
+    		},
+    		/*toolbar*/ ctx[3] ? { role: 'toolbar' } : {},
+    		/*$$restProps*/ ctx[6]
+    	];
+
+    	let section_data = {};
+
+    	for (let i = 0; i < section_levels.length; i += 1) {
+    		section_data = assign(section_data, section_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			section = element("section");
+    			if (default_slot) default_slot.c();
+    			set_attributes(section, section_data);
+    			add_location(section, file$w, 0, 0, 0);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, section, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(section, null);
+    			}
+
+    			/*section_binding*/ ctx[10](section);
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					action_destroyer(useActions_action = useActions.call(null, section, /*use*/ ctx[0])),
+    					action_destroyer(/*forwardEvents*/ ctx[5].call(null, section))
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, [dirty]) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 256)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[8],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[8])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[8], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(section, section_data = get_spread_update(section_levels, [
+    				(!current || dirty & /*className, align*/ 6 && section_class_value !== (section_class_value = classMap({
+    					[/*className*/ ctx[1]]: true,
+    					'mdc-top-app-bar__section': true,
+    					'mdc-top-app-bar__section--align-start': /*align*/ ctx[2] === 'start',
+    					'mdc-top-app-bar__section--align-end': /*align*/ ctx[2] === 'end'
+    				}))) && { class: section_class_value },
+    				dirty & /*toolbar*/ 8 && (/*toolbar*/ ctx[3] ? { role: 'toolbar' } : {}),
+    				dirty & /*$$restProps*/ 64 && /*$$restProps*/ ctx[6]
+    			]));
+
+    			if (useActions_action && is_function(useActions_action.update) && dirty & /*use*/ 1) useActions_action.update.call(null, /*use*/ ctx[0]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(section);
+    			if (default_slot) default_slot.d(detaching);
+    			/*section_binding*/ ctx[10](null);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$A.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$y($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","class","align","toolbar","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Section', slots, ['default']);
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let { use = [] } = $$props;
+    	let { class: className = '' } = $$props;
+    	let { align = 'start' } = $$props;
+    	let { toolbar = false } = $$props;
+    	let element;
+
+    	setContext('SMUI:icon-button:context', toolbar
+    	? 'top-app-bar:action'
+    	: 'top-app-bar:navigation');
+
+    	setContext('SMUI:button:context', toolbar
+    	? 'top-app-bar:action'
+    	: 'top-app-bar:navigation');
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	function section_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(4, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(6, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('class' in $$new_props) $$invalidate(1, className = $$new_props.class);
+    		if ('align' in $$new_props) $$invalidate(2, align = $$new_props.align);
+    		if ('toolbar' in $$new_props) $$invalidate(3, toolbar = $$new_props.toolbar);
+    		if ('$$scope' in $$new_props) $$invalidate(8, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		setContext,
+    		get_current_component,
+    		forwardEventsBuilder,
+    		classMap,
+    		useActions,
+    		forwardEvents,
+    		use,
+    		className,
+    		align,
+    		toolbar,
+    		element,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('className' in $$props) $$invalidate(1, className = $$new_props.className);
+    		if ('align' in $$props) $$invalidate(2, align = $$new_props.align);
+    		if ('toolbar' in $$props) $$invalidate(3, toolbar = $$new_props.toolbar);
+    		if ('element' in $$props) $$invalidate(4, element = $$new_props.element);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		className,
+    		align,
+    		toolbar,
+    		element,
+    		forwardEvents,
+    		$$restProps,
+    		getElement,
+    		$$scope,
+    		slots,
+    		section_binding
+    	];
+    }
+
+    class Section$1 extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$y, create_fragment$A, safe_not_equal, {
+    			use: 0,
+    			class: 1,
+    			align: 2,
+    			toolbar: 3,
+    			getElement: 7
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Section",
+    			options,
+    			id: create_fragment$A.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<Section>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<Section>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get class() {
+    		throw new Error("<Section>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set class(value) {
+    		throw new Error("<Section>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get align() {
+    		throw new Error("<Section>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set align(value) {
+    		throw new Error("<Section>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get toolbar() {
+    		throw new Error("<Section>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toolbar(value) {
+    		throw new Error("<Section>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[7];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<Section>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    var Title$2 = classAdderBuilder({
+        class: 'mdc-top-app-bar__title',
+        component: Span,
+    });
+
+    const Section = Section$1;
+
+    classAdderBuilder({
+        class: 'mdc-image-list__item',
+        component: Li,
+    });
+
+    classAdderBuilder({
+        class: 'mdc-image-list__image-aspect-container',
+        component: Div,
+    });
+
+    var Image = classAdderBuilder({
+        class: 'mdc-image-list__image',
+        component: Img,
+    });
+
+    classAdderBuilder({
+        class: 'mdc-image-list__supporting',
+        component: Div,
+    });
+
+    /* node_modules\@smui\common\dist\CommonLabel.svelte generated by Svelte v3.46.6 */
+
+    // (1:0) <svelte:component   this={component}   bind:this={element}   use={[forwardEvents, ...use]}   class={classMap({     [className]: true,     'mdc-button__label': context === 'button',     'mdc-fab__label': context === 'fab',     'mdc-tab__text-label': context === 'tab',     'mdc-image-list__label': context === 'image-list',     'mdc-snackbar__label': context === 'snackbar',     'mdc-banner__text': context === 'banner',     'mdc-segmented-button__label': context === 'segmented-button',     'mdc-data-table__pagination-rows-per-page-label':       context === 'data-table:pagination',     'mdc-data-table__header-cell-label':       context === 'data-table:sortable-header-cell',   })}   {...context === 'snackbar' ? { 'aria-atomic': 'false' } : {}}   {tabindex}   {...$$restProps}>
+    function create_default_slot$b(ctx) {
+    	let current;
+    	const default_slot_template = /*#slots*/ ctx[9].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[11], null);
+
+    	const block = {
+    		c: function create() {
+    			if (default_slot) default_slot.c();
+    		},
+    		m: function mount(target, anchor) {
+    			if (default_slot) {
+    				default_slot.m(target, anchor);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 2048)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[11],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[11])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[11], dirty, null),
+    						null
+    					);
+    				}
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$b.name,
+    		type: "slot",
+    		source: "(1:0) <svelte:component   this={component}   bind:this={element}   use={[forwardEvents, ...use]}   class={classMap({     [className]: true,     'mdc-button__label': context === 'button',     'mdc-fab__label': context === 'fab',     'mdc-tab__text-label': context === 'tab',     'mdc-image-list__label': context === 'image-list',     'mdc-snackbar__label': context === 'snackbar',     'mdc-banner__text': context === 'banner',     'mdc-segmented-button__label': context === 'segmented-button',     'mdc-data-table__pagination-rows-per-page-label':       context === 'data-table:pagination',     'mdc-data-table__header-cell-label':       context === 'data-table:sortable-header-cell',   })}   {...context === 'snackbar' ? { 'aria-atomic': 'false' } : {}}   {tabindex}   {...$$restProps}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$z(ctx) {
+    	let switch_instance;
+    	let switch_instance_anchor;
+    	let current;
+
+    	const switch_instance_spread_levels = [
+    		{
+    			use: [/*forwardEvents*/ ctx[4], .../*use*/ ctx[0]]
+    		},
+    		{
+    			class: classMap({
+    				[/*className*/ ctx[1]]: true,
+    				'mdc-button__label': /*context*/ ctx[5] === 'button',
+    				'mdc-fab__label': /*context*/ ctx[5] === 'fab',
+    				'mdc-tab__text-label': /*context*/ ctx[5] === 'tab',
+    				'mdc-image-list__label': /*context*/ ctx[5] === 'image-list',
+    				'mdc-snackbar__label': /*context*/ ctx[5] === 'snackbar',
+    				'mdc-banner__text': /*context*/ ctx[5] === 'banner',
+    				'mdc-segmented-button__label': /*context*/ ctx[5] === 'segmented-button',
+    				'mdc-data-table__pagination-rows-per-page-label': /*context*/ ctx[5] === 'data-table:pagination',
+    				'mdc-data-table__header-cell-label': /*context*/ ctx[5] === 'data-table:sortable-header-cell'
+    			})
+    		},
+    		/*context*/ ctx[5] === 'snackbar'
+    		? { 'aria-atomic': 'false' }
+    		: {},
+    		{ tabindex: /*tabindex*/ ctx[6] },
+    		/*$$restProps*/ ctx[7]
+    	];
+
+    	var switch_value = /*component*/ ctx[2];
+
+    	function switch_props(ctx) {
+    		let switch_instance_props = {
+    			$$slots: { default: [create_default_slot$b] },
+    			$$scope: { ctx }
+    		};
+
+    		for (let i = 0; i < switch_instance_spread_levels.length; i += 1) {
+    			switch_instance_props = assign(switch_instance_props, switch_instance_spread_levels[i]);
+    		}
+
+    		return {
+    			props: switch_instance_props,
+    			$$inline: true
+    		};
+    	}
+
+    	if (switch_value) {
+    		switch_instance = new switch_value(switch_props(ctx));
+    		/*switch_instance_binding*/ ctx[10](switch_instance);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			if (switch_instance) create_component(switch_instance.$$.fragment);
+    			switch_instance_anchor = empty();
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			if (switch_instance) {
+    				mount_component(switch_instance, target, anchor);
+    			}
+
+    			insert_dev(target, switch_instance_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const switch_instance_changes = (dirty & /*forwardEvents, use, classMap, className, context, tabindex, $$restProps*/ 243)
+    			? get_spread_update(switch_instance_spread_levels, [
+    					dirty & /*forwardEvents, use*/ 17 && {
+    						use: [/*forwardEvents*/ ctx[4], .../*use*/ ctx[0]]
+    					},
+    					dirty & /*classMap, className, context*/ 34 && {
+    						class: classMap({
+    							[/*className*/ ctx[1]]: true,
+    							'mdc-button__label': /*context*/ ctx[5] === 'button',
+    							'mdc-fab__label': /*context*/ ctx[5] === 'fab',
+    							'mdc-tab__text-label': /*context*/ ctx[5] === 'tab',
+    							'mdc-image-list__label': /*context*/ ctx[5] === 'image-list',
+    							'mdc-snackbar__label': /*context*/ ctx[5] === 'snackbar',
+    							'mdc-banner__text': /*context*/ ctx[5] === 'banner',
+    							'mdc-segmented-button__label': /*context*/ ctx[5] === 'segmented-button',
+    							'mdc-data-table__pagination-rows-per-page-label': /*context*/ ctx[5] === 'data-table:pagination',
+    							'mdc-data-table__header-cell-label': /*context*/ ctx[5] === 'data-table:sortable-header-cell'
+    						})
+    					},
+    					dirty & /*context*/ 32 && get_spread_object(/*context*/ ctx[5] === 'snackbar'
+    					? { 'aria-atomic': 'false' }
+    					: {}),
+    					dirty & /*tabindex*/ 64 && { tabindex: /*tabindex*/ ctx[6] },
+    					dirty & /*$$restProps*/ 128 && get_spread_object(/*$$restProps*/ ctx[7])
+    				])
+    			: {};
+
+    			if (dirty & /*$$scope*/ 2048) {
+    				switch_instance_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (switch_value !== (switch_value = /*component*/ ctx[2])) {
+    				if (switch_instance) {
+    					group_outros();
+    					const old_component = switch_instance;
+
+    					transition_out(old_component.$$.fragment, 1, 0, () => {
+    						destroy_component(old_component, 1);
+    					});
+
+    					check_outros();
+    				}
+
+    				if (switch_value) {
+    					switch_instance = new switch_value(switch_props(ctx));
+    					/*switch_instance_binding*/ ctx[10](switch_instance);
+    					create_component(switch_instance.$$.fragment);
+    					transition_in(switch_instance.$$.fragment, 1);
+    					mount_component(switch_instance, switch_instance_anchor.parentNode, switch_instance_anchor);
+    				} else {
+    					switch_instance = null;
+    				}
+    			} else if (switch_value) {
+    				switch_instance.$set(switch_instance_changes);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			if (switch_instance) transition_in(switch_instance.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (switch_instance) transition_out(switch_instance.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			/*switch_instance_binding*/ ctx[10](null);
+    			if (detaching) detach_dev(switch_instance_anchor);
+    			if (switch_instance) destroy_component(switch_instance, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$z.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$x($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","class","component","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('CommonLabel', slots, ['default']);
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let { use = [] } = $$props;
+    	let { class: className = '' } = $$props;
+    	let element;
+    	let { component = Span$1 } = $$props;
+    	const context = getContext('SMUI:label:context');
+    	const tabindex = getContext('SMUI:label:tabindex');
+
+    	function getElement() {
+    		return element.getElement();
+    	}
+
+    	function switch_instance_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(3, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(7, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('class' in $$new_props) $$invalidate(1, className = $$new_props.class);
+    		if ('component' in $$new_props) $$invalidate(2, component = $$new_props.component);
+    		if ('$$scope' in $$new_props) $$invalidate(11, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		getContext,
+    		get_current_component,
+    		forwardEventsBuilder,
+    		classMap,
+    		Span: Span$1,
+    		forwardEvents,
+    		use,
+    		className,
+    		element,
+    		component,
+    		context,
+    		tabindex,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('className' in $$props) $$invalidate(1, className = $$new_props.className);
+    		if ('element' in $$props) $$invalidate(3, element = $$new_props.element);
+    		if ('component' in $$props) $$invalidate(2, component = $$new_props.component);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		className,
+    		component,
+    		element,
+    		forwardEvents,
+    		context,
+    		tabindex,
+    		$$restProps,
+    		getElement,
+    		slots,
+    		switch_instance_binding,
+    		$$scope
+    	];
+    }
+
+    class CommonLabel extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$x, create_fragment$z, safe_not_equal, {
+    			use: 0,
+    			class: 1,
+    			component: 2,
+    			getElement: 8
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "CommonLabel",
+    			options,
+    			id: create_fragment$z.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<CommonLabel>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<CommonLabel>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get class() {
+    		throw new Error("<CommonLabel>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set class(value) {
+    		throw new Error("<CommonLabel>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get component() {
+    		throw new Error("<CommonLabel>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set component(value) {
+    		throw new Error("<CommonLabel>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[8];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<CommonLabel>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\@smui\common\dist\CommonIcon.svelte generated by Svelte v3.46.6 */
+
+    // (1:0) <svelte:component   this={component}   bind:this={element}   use={[forwardEvents, ...use]}   class={classMap({     [className]: true,     'mdc-button__icon': context === 'button',     'mdc-fab__icon': context === 'fab',     'mdc-icon-button__icon': context === 'icon-button',     'mdc-icon-button__icon--on': context === 'icon-button' && on,     'mdc-tab__icon': context === 'tab',     'mdc-banner__icon': context === 'banner',     'mdc-segmented-button__icon': context === 'segmented-button',   })}   aria-hidden="true"   {...component === Svg ? { focusable: 'false', tabindex: '-1' } : {}}   {...$$restProps}>
+    function create_default_slot$a(ctx) {
+    	let current;
+    	const default_slot_template = /*#slots*/ ctx[9].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[11], null);
+
+    	const block = {
+    		c: function create() {
+    			if (default_slot) default_slot.c();
+    		},
+    		m: function mount(target, anchor) {
+    			if (default_slot) {
+    				default_slot.m(target, anchor);
+    			}
+
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 2048)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[11],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[11])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[11], dirty, null),
+    						null
+    					);
+    				}
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$a.name,
+    		type: "slot",
+    		source: "(1:0) <svelte:component   this={component}   bind:this={element}   use={[forwardEvents, ...use]}   class={classMap({     [className]: true,     'mdc-button__icon': context === 'button',     'mdc-fab__icon': context === 'fab',     'mdc-icon-button__icon': context === 'icon-button',     'mdc-icon-button__icon--on': context === 'icon-button' && on,     'mdc-tab__icon': context === 'tab',     'mdc-banner__icon': context === 'banner',     'mdc-segmented-button__icon': context === 'segmented-button',   })}   aria-hidden=\\\"true\\\"   {...component === Svg ? { focusable: 'false', tabindex: '-1' } : {}}   {...$$restProps}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$y(ctx) {
+    	let switch_instance;
+    	let switch_instance_anchor;
+    	let current;
+
+    	const switch_instance_spread_levels = [
+    		{
+    			use: [/*forwardEvents*/ ctx[5], .../*use*/ ctx[0]]
+    		},
+    		{
+    			class: classMap({
+    				[/*className*/ ctx[1]]: true,
+    				'mdc-button__icon': /*context*/ ctx[6] === 'button',
+    				'mdc-fab__icon': /*context*/ ctx[6] === 'fab',
+    				'mdc-icon-button__icon': /*context*/ ctx[6] === 'icon-button',
+    				'mdc-icon-button__icon--on': /*context*/ ctx[6] === 'icon-button' && /*on*/ ctx[2],
+    				'mdc-tab__icon': /*context*/ ctx[6] === 'tab',
+    				'mdc-banner__icon': /*context*/ ctx[6] === 'banner',
+    				'mdc-segmented-button__icon': /*context*/ ctx[6] === 'segmented-button'
+    			})
+    		},
+    		{ "aria-hidden": "true" },
+    		/*component*/ ctx[3] === Svg
+    		? { focusable: 'false', tabindex: '-1' }
+    		: {},
+    		/*$$restProps*/ ctx[7]
+    	];
+
+    	var switch_value = /*component*/ ctx[3];
+
+    	function switch_props(ctx) {
+    		let switch_instance_props = {
+    			$$slots: { default: [create_default_slot$a] },
+    			$$scope: { ctx }
+    		};
+
+    		for (let i = 0; i < switch_instance_spread_levels.length; i += 1) {
+    			switch_instance_props = assign(switch_instance_props, switch_instance_spread_levels[i]);
+    		}
+
+    		return {
+    			props: switch_instance_props,
+    			$$inline: true
+    		};
+    	}
+
+    	if (switch_value) {
+    		switch_instance = new switch_value(switch_props(ctx));
+    		/*switch_instance_binding*/ ctx[10](switch_instance);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			if (switch_instance) create_component(switch_instance.$$.fragment);
+    			switch_instance_anchor = empty();
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			if (switch_instance) {
+    				mount_component(switch_instance, target, anchor);
+    			}
+
+    			insert_dev(target, switch_instance_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const switch_instance_changes = (dirty & /*forwardEvents, use, classMap, className, context, on, component, Svg, $$restProps*/ 239)
+    			? get_spread_update(switch_instance_spread_levels, [
+    					dirty & /*forwardEvents, use*/ 33 && {
+    						use: [/*forwardEvents*/ ctx[5], .../*use*/ ctx[0]]
+    					},
+    					dirty & /*classMap, className, context, on*/ 70 && {
+    						class: classMap({
+    							[/*className*/ ctx[1]]: true,
+    							'mdc-button__icon': /*context*/ ctx[6] === 'button',
+    							'mdc-fab__icon': /*context*/ ctx[6] === 'fab',
+    							'mdc-icon-button__icon': /*context*/ ctx[6] === 'icon-button',
+    							'mdc-icon-button__icon--on': /*context*/ ctx[6] === 'icon-button' && /*on*/ ctx[2],
+    							'mdc-tab__icon': /*context*/ ctx[6] === 'tab',
+    							'mdc-banner__icon': /*context*/ ctx[6] === 'banner',
+    							'mdc-segmented-button__icon': /*context*/ ctx[6] === 'segmented-button'
+    						})
+    					},
+    					switch_instance_spread_levels[2],
+    					dirty & /*component, Svg*/ 8 && get_spread_object(/*component*/ ctx[3] === Svg
+    					? { focusable: 'false', tabindex: '-1' }
+    					: {}),
+    					dirty & /*$$restProps*/ 128 && get_spread_object(/*$$restProps*/ ctx[7])
+    				])
+    			: {};
+
+    			if (dirty & /*$$scope*/ 2048) {
+    				switch_instance_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (switch_value !== (switch_value = /*component*/ ctx[3])) {
+    				if (switch_instance) {
+    					group_outros();
+    					const old_component = switch_instance;
+
+    					transition_out(old_component.$$.fragment, 1, 0, () => {
+    						destroy_component(old_component, 1);
+    					});
+
+    					check_outros();
+    				}
+
+    				if (switch_value) {
+    					switch_instance = new switch_value(switch_props(ctx));
+    					/*switch_instance_binding*/ ctx[10](switch_instance);
+    					create_component(switch_instance.$$.fragment);
+    					transition_in(switch_instance.$$.fragment, 1);
+    					mount_component(switch_instance, switch_instance_anchor.parentNode, switch_instance_anchor);
+    				} else {
+    					switch_instance = null;
+    				}
+    			} else if (switch_value) {
+    				switch_instance.$set(switch_instance_changes);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			if (switch_instance) transition_in(switch_instance.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (switch_instance) transition_out(switch_instance.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			/*switch_instance_binding*/ ctx[10](null);
+    			if (detaching) detach_dev(switch_instance_anchor);
+    			if (switch_instance) destroy_component(switch_instance, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$y.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$w($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["use","class","on","component","getElement"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('CommonIcon', slots, ['default']);
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let { use = [] } = $$props;
+    	let { class: className = '' } = $$props;
+    	let { on = false } = $$props;
+    	let element;
+    	let { component = I } = $$props;
+    	const context = getContext('SMUI:icon:context');
+
+    	function getElement() {
+    		return element.getElement();
+    	}
+
+    	function switch_instance_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(4, element);
+    		});
+    	}
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(7, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(0, use = $$new_props.use);
+    		if ('class' in $$new_props) $$invalidate(1, className = $$new_props.class);
+    		if ('on' in $$new_props) $$invalidate(2, on = $$new_props.on);
+    		if ('component' in $$new_props) $$invalidate(3, component = $$new_props.component);
+    		if ('$$scope' in $$new_props) $$invalidate(11, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		getContext,
+    		get_current_component,
+    		forwardEventsBuilder,
+    		classMap,
+    		I,
+    		Svg,
+    		forwardEvents,
+    		use,
+    		className,
+    		on,
+    		element,
+    		component,
+    		context,
+    		getElement
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('use' in $$props) $$invalidate(0, use = $$new_props.use);
+    		if ('className' in $$props) $$invalidate(1, className = $$new_props.className);
+    		if ('on' in $$props) $$invalidate(2, on = $$new_props.on);
+    		if ('element' in $$props) $$invalidate(4, element = $$new_props.element);
+    		if ('component' in $$props) $$invalidate(3, component = $$new_props.component);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		use,
+    		className,
+    		on,
+    		component,
+    		element,
+    		forwardEvents,
+    		context,
+    		$$restProps,
+    		getElement,
+    		slots,
+    		switch_instance_binding,
+    		$$scope
+    	];
+    }
+
+    class CommonIcon extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$w, create_fragment$y, safe_not_equal, {
+    			use: 0,
+    			class: 1,
+    			on: 2,
+    			component: 3,
+    			getElement: 8
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "CommonIcon",
+    			options,
+    			id: create_fragment$y.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<CommonIcon>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<CommonIcon>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get class() {
+    		throw new Error("<CommonIcon>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set class(value) {
+    		throw new Error("<CommonIcon>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get on() {
+    		throw new Error("<CommonIcon>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set on(value) {
+    		throw new Error("<CommonIcon>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get component() {
+    		throw new Error("<CommonIcon>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set component(value) {
+    		throw new Error("<CommonIcon>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[8];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<CommonIcon>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    const Label = CommonLabel;
+    const Icon = CommonIcon;
+
+    /* node_modules\svelte-link\src\Link.svelte generated by Svelte v3.46.6 */
+
+    const file$v = "node_modules\\svelte-link\\src\\Link.svelte";
+
+    // (77:0) {:else}
+    function create_else_block$1(ctx) {
+    	let a;
+    	let a_aria_current_value;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[9].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[8], null);
+
+    	let a_levels = [
+    		{
+    			"aria-current": a_aria_current_value = /*active*/ ctx[4] ? "page" : undefined
+    		},
+    		/*$$restProps*/ ctx[6],
+    		{ href: /*href*/ ctx[2] },
+    		{ target: /*target*/ ctx[1] },
+    		{ rel: /*rel*/ ctx[0] }
+    	];
+
+    	let a_data = {};
+
+    	for (let i = 0; i < a_levels.length; i += 1) {
+    		a_data = assign(a_data, a_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			a = element("a");
+    			if (default_slot) default_slot.c();
+    			set_attributes(a, a_data);
+    			toggle_class(a, "active", /*active*/ ctx[4]);
+    			add_location(a, file$v, 77, 2, 1589);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, a, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(a, null);
+    			}
+
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(a, "click", /*click_handler_1*/ ctx[17], false, false, false),
+    					listen_dev(a, "mouseover", /*mouseover_handler_1*/ ctx[18], false, false, false),
+    					listen_dev(a, "mouseenter", /*mouseenter_handler_1*/ ctx[19], false, false, false),
+    					listen_dev(a, "mouseenter", /*mouseenter_handler_2*/ ctx[24], false, false, false),
+    					listen_dev(a, "mouseout", /*mouseout_handler_1*/ ctx[20], false, false, false),
+    					listen_dev(a, "focus", /*focus_handler_1*/ ctx[21], false, false, false),
+    					listen_dev(a, "blur", /*blur_handler_1*/ ctx[22], false, false, false),
+    					listen_dev(a, "keydown", /*keydown_handler_1*/ ctx[23], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 256)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[8],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[8])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[8], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(a, a_data = get_spread_update(a_levels, [
+    				(!current || dirty & /*active*/ 16 && a_aria_current_value !== (a_aria_current_value = /*active*/ ctx[4] ? "page" : undefined)) && { "aria-current": a_aria_current_value },
+    				dirty & /*$$restProps*/ 64 && /*$$restProps*/ ctx[6],
+    				(!current || dirty & /*href*/ 4) && { href: /*href*/ ctx[2] },
+    				(!current || dirty & /*target*/ 2) && { target: /*target*/ ctx[1] },
+    				(!current || dirty & /*rel*/ 1) && { rel: /*rel*/ ctx[0] }
+    			]));
+
+    			toggle_class(a, "active", /*active*/ ctx[4]);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(a);
+    			if (default_slot) default_slot.d(detaching);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block$1.name,
+    		type: "else",
+    		source: "(77:0) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (64:0) {#if disabled}
+    function create_if_block$6(ctx) {
+    	let span;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[9].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[8], null);
+    	let span_levels = [/*$$restProps*/ ctx[6]];
+    	let span_data = {};
+
+    	for (let i = 0; i < span_levels.length; i += 1) {
+    		span_data = assign(span_data, span_levels[i]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			span = element("span");
+    			if (default_slot) default_slot.c();
+    			set_attributes(span, span_data);
+    			add_location(span, file$v, 64, 2, 1421);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, span, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(span, null);
+    			}
+
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(span, "click", /*click_handler*/ ctx[10], false, false, false),
+    					listen_dev(span, "mouseover", /*mouseover_handler*/ ctx[11], false, false, false),
+    					listen_dev(span, "mouseenter", /*mouseenter_handler*/ ctx[12], false, false, false),
+    					listen_dev(span, "mouseout", /*mouseout_handler*/ ctx[13], false, false, false),
+    					listen_dev(span, "focus", /*focus_handler*/ ctx[14], false, false, false),
+    					listen_dev(span, "blur", /*blur_handler*/ ctx[15], false, false, false),
+    					listen_dev(span, "keydown", /*keydown_handler*/ ctx[16], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 256)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[8],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[8])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[8], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			set_attributes(span, span_data = get_spread_update(span_levels, [dirty & /*$$restProps*/ 64 && /*$$restProps*/ ctx[6]]));
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(span);
+    			if (default_slot) default_slot.d(detaching);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$6.name,
+    		type: "if",
+    		source: "(64:0) {#if disabled}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$x(ctx) {
+    	let current_block_type_index;
+    	let if_block;
+    	let if_block_anchor;
+    	let current;
+    	const if_block_creators = [create_if_block$6, create_else_block$1];
+    	const if_blocks = [];
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*disabled*/ ctx[3]) return 0;
+    		return 1;
+    	}
+
+    	current_block_type_index = select_block_type(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	const block = {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			if_blocks[current_block_type_index].m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
+    				group_outros();
+
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+
+    				check_outros();
+    				if_block = if_blocks[current_block_type_index];
+
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				} else {
+    					if_block.p(ctx, dirty);
+    				}
+
+    				transition_in(if_block, 1);
+    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if_blocks[current_block_type_index].d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$x.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    const fetched = new Map();
+
+    function instance$v($$self, $$props, $$invalidate) {
+    	const omit_props_names = ["href","disabled","outbound","target","rel","active"];
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Link', slots, ['default']);
+    	let { href = "javascript:void(0);" } = $$props;
+    	let { disabled = false } = $$props;
+    	let { outbound = undefined } = $$props;
+    	let { target = undefined } = $$props;
+    	let { rel = undefined } = $$props;
+    	let { active = false } = $$props;
+
+    	async function prefetch() {
+    		if (fetched.has(href)) return;
+    		const response = await fetch(href);
+    		if (response.ok) fetched.set(href, true);
+    	}
+
+    	function click_handler(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function mouseover_handler(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function mouseenter_handler(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function mouseout_handler(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function focus_handler(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function blur_handler(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function keydown_handler(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function click_handler_1(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function mouseover_handler_1(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function mouseenter_handler_1(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function mouseout_handler_1(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function focus_handler_1(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function blur_handler_1(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	function keydown_handler_1(event) {
+    		bubble.call(this, $$self, event);
+    	}
+
+    	const mouseenter_handler_2 = () => {
+    		if (rel === "prefetch") prefetch();
+    	};
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(6, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('href' in $$new_props) $$invalidate(2, href = $$new_props.href);
+    		if ('disabled' in $$new_props) $$invalidate(3, disabled = $$new_props.disabled);
+    		if ('outbound' in $$new_props) $$invalidate(7, outbound = $$new_props.outbound);
+    		if ('target' in $$new_props) $$invalidate(1, target = $$new_props.target);
+    		if ('rel' in $$new_props) $$invalidate(0, rel = $$new_props.rel);
+    		if ('active' in $$new_props) $$invalidate(4, active = $$new_props.active);
+    		if ('$$scope' in $$new_props) $$invalidate(8, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		fetched,
+    		href,
+    		disabled,
+    		outbound,
+    		target,
+    		rel,
+    		active,
+    		prefetch
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('href' in $$props) $$invalidate(2, href = $$new_props.href);
+    		if ('disabled' in $$props) $$invalidate(3, disabled = $$new_props.disabled);
+    		if ('outbound' in $$props) $$invalidate(7, outbound = $$new_props.outbound);
+    		if ('target' in $$props) $$invalidate(1, target = $$new_props.target);
+    		if ('rel' in $$props) $$invalidate(0, rel = $$new_props.rel);
+    		if ('active' in $$props) $$invalidate(4, active = $$new_props.active);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*href, outbound*/ 132) {
+    			if (typeof window !== "undefined") {
+    				const isExternal = new URL(href, `${location.protocol}//${location.host}`).host !== location.host;
+
+    				if (isExternal && outbound === undefined) {
+    					$$invalidate(7, outbound = true);
+    				}
+    			}
+    		}
+
+    		if ($$self.$$.dirty & /*outbound, rel*/ 129) {
+    			if (outbound) {
+    				$$invalidate(1, target = "_blank");
+    				if (rel === undefined) $$invalidate(0, rel = "noopener noreferrer");
+    			}
+    		}
+    	};
+
+    	return [
+    		rel,
+    		target,
+    		href,
+    		disabled,
+    		active,
+    		prefetch,
+    		$$restProps,
+    		outbound,
+    		$$scope,
+    		slots,
+    		click_handler,
+    		mouseover_handler,
+    		mouseenter_handler,
+    		mouseout_handler,
+    		focus_handler,
+    		blur_handler,
+    		keydown_handler,
+    		click_handler_1,
+    		mouseover_handler_1,
+    		mouseenter_handler_1,
+    		mouseout_handler_1,
+    		focus_handler_1,
+    		blur_handler_1,
+    		keydown_handler_1,
+    		mouseenter_handler_2
+    	];
+    }
+
+    class Link extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$v, create_fragment$x, safe_not_equal, {
+    			href: 2,
+    			disabled: 3,
+    			outbound: 7,
+    			target: 1,
+    			rel: 0,
+    			active: 4
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Link",
+    			options,
+    			id: create_fragment$x.name
+    		});
+    	}
+
+    	get href() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set href(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get disabled() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set disabled(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get outbound() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set outbound(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get target() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set target(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get rel() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set rel(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get active() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set active(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /**
      * @license
      * Copyright 2016 Google Inc.
      *
@@ -131,8 +6389,35 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
      * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
      * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
      * THE SOFTWARE.
-     */var Vt={animation:{prefixed:"-webkit-animation",standard:"animation"},transform:{prefixed:"-webkit-transform",standard:"transform"},transition:{prefixed:"-webkit-transition",standard:"transition"}};function Ft(e,t){if(function(e){return Boolean(e.document)&&"function"==typeof e.document.createElement}(e)&&t in Vt){var n=e.document.createElement("div"),a=Vt[t],i=a.standard,o=a.prefixed;return i in n.style?i:o}return t}
-/**
+     */
+    var cssPropertyNameMap = {
+        animation: {
+            prefixed: '-webkit-animation',
+            standard: 'animation',
+        },
+        transform: {
+            prefixed: '-webkit-transform',
+            standard: 'transform',
+        },
+        transition: {
+            prefixed: '-webkit-transition',
+            standard: 'transition',
+        },
+    };
+    function isWindow(windowObj) {
+        return Boolean(windowObj.document) && typeof windowObj.document.createElement === 'function';
+    }
+    function getCorrectPropertyName(windowObj, cssProperty) {
+        if (isWindow(windowObj) && cssProperty in cssPropertyNameMap) {
+            var el = windowObj.document.createElement('div');
+            var _a = cssPropertyNameMap[cssProperty], standard = _a.standard, prefixed = _a.prefixed;
+            var isStandard = standard in el.style;
+            return isStandard ? standard : prefixed;
+        }
+        return cssProperty;
+    }
+
+    /**
      * @license
      * Copyright 2017 Google Inc.
      *
@@ -153,9 +6438,53 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
      * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
      * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
      * THE SOFTWARE.
-<<<<<<< Updated upstream
-     */var Gt={CLOSED_CLASS:"mdc-linear-progress--closed",CLOSED_ANIMATION_OFF_CLASS:"mdc-linear-progress--closed-animation-off",INDETERMINATE_CLASS:"mdc-linear-progress--indeterminate",REVERSED_CLASS:"mdc-linear-progress--reversed",ANIMATION_READY_CLASS:"mdc-linear-progress--animation-ready"},Xt={ARIA_HIDDEN:"aria-hidden",ARIA_VALUEMAX:"aria-valuemax",ARIA_VALUEMIN:"aria-valuemin",ARIA_VALUENOW:"aria-valuenow",BUFFER_BAR_SELECTOR:".mdc-linear-progress__buffer-bar",FLEX_BASIS:"flex-basis",PRIMARY_BAR_SELECTOR:".mdc-linear-progress__primary-bar"},Wt=.8367142,Yt=2.00611057,Qt=.37651913,Zt=.84386165,Jt=1.60277782,Kt=function(e){function t(n){var a=e.call(this,me(me({},t.defaultAdapter),n))||this;return a.observer=null,a}return pe(t,e),Object.defineProperty(t,"cssClasses",{get:function(){return Gt},enumerable:!1,configurable:!0}),Object.defineProperty(t,"strings",{get:function(){return Xt},enumerable:!1,configurable:!0}),Object.defineProperty(t,"defaultAdapter",{get:function(){return{addClass:function(){},attachResizeObserver:function(){return null},forceLayout:function(){},getWidth:function(){return 0},hasClass:function(){return!1},setBufferBarStyle:function(){return null},setPrimaryBarStyle:function(){return null},setStyle:function(){},removeAttribute:function(){},removeClass:function(){},setAttribute:function(){}}},enumerable:!1,configurable:!0}),t.prototype.init=function(){var e=this;this.determinate=!this.adapter.hasClass(Gt.INDETERMINATE_CLASS),this.adapter.addClass(Gt.ANIMATION_READY_CLASS),this.progress=0,this.buffer=1,this.observer=this.adapter.attachResizeObserver((function(t){var n,a;if(!e.determinate)try{for(var i=ge(t),o=i.next();!o.done;o=i.next()){var r=o.value;r.contentRect&&e.calculateAndSetDimensions(r.contentRect.width)}}catch(e){n={error:e}}finally{try{o&&!o.done&&(a=i.return)&&a.call(i)}finally{if(n)throw n.error}}})),!this.determinate&&this.observer&&this.calculateAndSetDimensions(this.adapter.getWidth())},t.prototype.setDeterminate=function(e){if(this.determinate=e,this.determinate)return this.adapter.removeClass(Gt.INDETERMINATE_CLASS),this.adapter.setAttribute(Xt.ARIA_VALUENOW,this.progress.toString()),this.adapter.setAttribute(Xt.ARIA_VALUEMAX,"1"),this.adapter.setAttribute(Xt.ARIA_VALUEMIN,"0"),this.setPrimaryBarProgress(this.progress),void this.setBufferBarProgress(this.buffer);this.observer&&this.calculateAndSetDimensions(this.adapter.getWidth()),this.adapter.addClass(Gt.INDETERMINATE_CLASS),this.adapter.removeAttribute(Xt.ARIA_VALUENOW),this.adapter.removeAttribute(Xt.ARIA_VALUEMAX),this.adapter.removeAttribute(Xt.ARIA_VALUEMIN),this.setPrimaryBarProgress(1),this.setBufferBarProgress(1)},t.prototype.isDeterminate=function(){return this.determinate},t.prototype.setProgress=function(e){this.progress=e,this.determinate&&(this.setPrimaryBarProgress(e),this.adapter.setAttribute(Xt.ARIA_VALUENOW,e.toString()))},t.prototype.getProgress=function(){return this.progress},t.prototype.setBuffer=function(e){this.buffer=e,this.determinate&&this.setBufferBarProgress(e)},t.prototype.getBuffer=function(){return this.buffer},t.prototype.open=function(){this.adapter.removeClass(Gt.CLOSED_CLASS),this.adapter.removeClass(Gt.CLOSED_ANIMATION_OFF_CLASS),this.adapter.removeAttribute(Xt.ARIA_HIDDEN)},t.prototype.close=function(){this.adapter.addClass(Gt.CLOSED_CLASS),this.adapter.setAttribute(Xt.ARIA_HIDDEN,"true")},t.prototype.isClosed=function(){return this.adapter.hasClass(Gt.CLOSED_CLASS)},t.prototype.handleTransitionEnd=function(){this.adapter.hasClass(Gt.CLOSED_CLASS)&&this.adapter.addClass(Gt.CLOSED_ANIMATION_OFF_CLASS)},t.prototype.destroy=function(){e.prototype.destroy.call(this),this.observer&&this.observer.disconnect()},t.prototype.restartAnimation=function(){this.adapter.removeClass(Gt.ANIMATION_READY_CLASS),this.adapter.forceLayout(),this.adapter.addClass(Gt.ANIMATION_READY_CLASS)},t.prototype.setPrimaryBarProgress=function(e){var t="scaleX("+e+")",n="undefined"!=typeof window?Ft(window,"transform"):"transform";this.adapter.setPrimaryBarStyle(n,t)},t.prototype.setBufferBarProgress=function(e){var t=100*e+"%";this.adapter.setBufferBarStyle(Xt.FLEX_BASIS,t)},t.prototype.calculateAndSetDimensions=function(e){var t=e*Wt,n=e*Yt,a=e*Qt,i=e*Zt,o=e*Jt;this.adapter.setStyle("--mdc-linear-progress-primary-half",t+"px"),this.adapter.setStyle("--mdc-linear-progress-primary-half-neg",-t+"px"),this.adapter.setStyle("--mdc-linear-progress-primary-full",n+"px"),this.adapter.setStyle("--mdc-linear-progress-primary-full-neg",-n+"px"),this.adapter.setStyle("--mdc-linear-progress-secondary-quarter",a+"px"),this.adapter.setStyle("--mdc-linear-progress-secondary-quarter-neg",-a+"px"),this.adapter.setStyle("--mdc-linear-progress-secondary-half",i+"px"),this.adapter.setStyle("--mdc-linear-progress-secondary-half-neg",-i+"px"),this.adapter.setStyle("--mdc-linear-progress-secondary-full",o+"px"),this.adapter.setStyle("--mdc-linear-progress-secondary-full-neg",-o+"px"),this.restartAnimation()},t}(fe);function en(n){let a,r,s,l,c,d,u,p,m,g,f,h,$,w,C,L,I,z,O,q,M=[{class:$=Be({[n[1]]:!0,"mdc-linear-progress":!0,"mdc-linear-progress--indeterminate":n[3],"mdc-linear-progress--closed":n[4],"mdc-data-table__linear-progress":"data-table"===n[14],...n[8]})},{style:w=Object.entries(n[10]).map(an).concat([n[2]]).join(" ")},{role:"progressbar"},{"aria-valuemin":C=0},{"aria-valuemax":L=1},{"aria-valuenow":I=n[3]?void 0:n[5]},n[9],n[16]],R={};for(let e=0;e<M.length;e+=1)R=t(R,M[e]);return{c(){a=A("div"),r=A("div"),s=A("div"),c=x(),d=A("div"),u=x(),p=A("div"),m=A("span"),f=x(),h=A("div"),h.innerHTML='<span class="mdc-linear-progress__bar-inner"></span>',E(s,"class","mdc-linear-progress__buffer-bar"),E(s,"style",l=Object.entries(n[11]).map(tn).join(" ")),E(d,"class","mdc-linear-progress__buffer-dots"),E(r,"class","mdc-linear-progress__buffer"),E(m,"class","mdc-linear-progress__bar-inner"),E(p,"class","mdc-linear-progress__bar mdc-linear-progress__primary-bar"),E(p,"style",g=Object.entries(n[12]).map(nn).join(" ")),E(h,"class","mdc-linear-progress__bar mdc-linear-progress__secondary-bar"),T(a,R)},m(e,t){y(e,a,t),b(a,r),b(r,s),b(r,c),b(r,d),b(a,u),b(a,p),b(p,m),b(a,f),b(a,h),n[19](a),O||(q=[v(z=He.call(null,a,n[0])),v(n[13].call(null,a)),S(a,"transitionend",n[20])],O=!0)},p(e,[t]){2048&t&&l!==(l=Object.entries(e[11]).map(tn).join(" "))&&E(s,"style",l),4096&t&&g!==(g=Object.entries(e[12]).map(nn).join(" "))&&E(p,"style",g),T(a,R=ae(M,[282&t&&$!==($=Be({[e[1]]:!0,"mdc-linear-progress":!0,"mdc-linear-progress--indeterminate":e[3],"mdc-linear-progress--closed":e[4],"mdc-data-table__linear-progress":"data-table"===e[14],...e[8]}))&&{class:$},1028&t&&w!==(w=Object.entries(e[10]).map(an).concat([e[2]]).join(" "))&&{style:w},{role:"progressbar"},{"aria-valuemin":0},{"aria-valuemax":1},40&t&&I!==(I=e[3]?void 0:e[5])&&{"aria-valuenow":I},512&t&&e[9],65536&t&&e[16]])),z&&o(z.update)&&1&t&&z.update.call(null,e[0])},i:e,o:e,d(e){e&&_(a),n[19](null),O=!1,i(q)}}}const tn=([e,t])=>`${e}: ${t};`,nn=([e,t])=>`${e}: ${t};`,an=([e,t])=>`${e}: ${t};`;function on(e,n,a){const i=["use","class","style","indeterminate","closed","progress","buffer","getElement"];let o,r=$(n,i);const s=Ne(M());let l,c,{use:u=[]}=n,{class:p=""}=n,{style:m=""}=n,{indeterminate:g=!1}=n,{closed:f=!1}=n,{progress:v=0}=n,{buffer:b}=n,y={},_={},A={},w={},x={},C=D("SMUI:linear-progress:context"),S=D("SMUI:linear-progress:closed");function E(e){return e in y?y[e]:P().classList.contains(e)}function T(e){y[e]||a(8,y[e]=!0,y)}function L(e){e in y&&!y[e]||a(8,y[e]=!1,y)}function I(e,t){_[e]!==t&&a(9,_[e]=t,_)}function z(e){e in _&&null==_[e]||a(9,_[e]=void 0,_)}function O(e,t){A[e]!=t&&(""===t||null==t?(delete A[e],a(10,A)):a(10,A[e]=t,A))}function q(e,t){w[e]!=t&&(""===t||null==t?(delete w[e],a(11,w)):a(11,w[e]=t,w))}function B(e,t){x[e]!=t&&(""===t||null==t?(delete x[e],a(12,x)):a(12,x[e]=t,x))}function P(){return l}d(e,S,(e=>a(21,o=e))),R((()=>(a(6,c=new Kt({addClass:T,forceLayout:()=>{P().getBoundingClientRect()},setBufferBarStyle:q,setPrimaryBarStyle:B,hasClass:E,removeAttribute:z,removeClass:L,setAttribute:I,setStyle:O,attachResizeObserver:e=>{const t=window.ResizeObserver;if(t){const n=new t(e);return n.observe(P()),n}return null},getWidth:()=>P().offsetWidth})),c.init(),()=>{c.destroy()})));return e.$$set=e=>{n=t(t({},n),h(e)),a(16,r=$(n,i)),"use"in e&&a(0,u=e.use),"class"in e&&a(1,p=e.class),"style"in e&&a(2,m=e.style),"indeterminate"in e&&a(3,g=e.indeterminate),"closed"in e&&a(4,f=e.closed),"progress"in e&&a(5,v=e.progress),"buffer"in e&&a(17,b=e.buffer)},e.$$.update=()=>{var t;16&e.$$.dirty&&S&&(o=f,t=o,S.set(t)),72&e.$$.dirty&&c&&c.isDeterminate()!==!g&&c.setDeterminate(!g),96&e.$$.dirty&&c&&c.getProgress()!==v&&c.setProgress(v),131136&e.$$.dirty&&c&&(null==b?c.setBuffer(1):c.setBuffer(b)),80&e.$$.dirty&&c&&(f?c.close():c.open())},[u,p,m,g,f,v,c,l,y,_,A,w,x,s,C,S,r,b,P,function(e){N[e?"unshift":"push"]((()=>{l=e,a(7,l)}))},()=>c&&c.handleTransitionEnd()]}class rn extends de{constructor(e){super(),ce(this,e,on,en,r,{use:0,class:1,style:2,indeterminate:3,closed:4,progress:5,buffer:17,getElement:18})}get getElement(){return this.$$.ctx[18]}}function sn(e){let t;return{c(){t=w("L'Amianto")},m(e,n){y(e,t,n)},d(e){e&&_(t)}}}function ln(e){let t,n;return t=new Ut({props:{href:"#section1-2",$$slots:{default:[sn]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};2&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function cn(e){let t;return{c(){t=w("Minaçu")},m(e,n){y(e,t,n)},d(e){e&&_(t)}}}function dn(e){let t,n;return t=new Ut({props:{href:"#content2-1",$$slots:{default:[cn]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};2&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function un(e){let t;return{c(){t=w("Balangero")},m(e,n){y(e,t,n)},d(e){e&&_(t)}}}function pn(e){let t,n;return t=new Ut({props:{href:"#content3-1",$$slots:{default:[un]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};2&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function mn(e){let t;return{c(){t=w("Libby")},m(e,n){y(e,t,n)},d(e){e&&_(t)}}}function gn(e){let t,n;return t=new Ut({props:{href:"#content4-1",$$slots:{default:[mn]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};2&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function fn(e){let t;return{c(){t=w("Asbest")},m(e,n){y(e,t,n)},d(e){e&&_(t)}}}function hn(e){let t,n;return t=new Ut({props:{href:"#content5-1",$$slots:{default:[fn]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};2&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function $n(e){let t;return{c(){t=w("Il futuro")},m(e,n){y(e,t,n)},d(e){e&&_(t)}}}function vn(e){let t,n;return t=new Ut({props:{href:"#section6-1",$$slots:{default:[$n]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};2&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function bn(e){let t,n,a,i,o,r,s,l,c,d,u,p;return t=new Lt({props:{class:"mdc-typography--headline6",style:"justify-content: center;",$$slots:{default:[ln]},$$scope:{ctx:e}}}),a=new Lt({props:{class:"mdc-typography--headline6",style:"justify-content: center;",$$slots:{default:[dn]},$$scope:{ctx:e}}}),o=new Lt({props:{class:"mdc-typography--headline6",style:"justify-content: center;",$$slots:{default:[pn]},$$scope:{ctx:e}}}),s=new Lt({props:{class:"mdc-typography--headline6",style:"justify-content: center;",$$slots:{default:[gn]},$$scope:{ctx:e}}}),c=new Lt({props:{class:"mdc-typography--headline6",style:"justify-content: center;",$$slots:{default:[hn]},$$scope:{ctx:e}}}),u=new Lt({props:{class:"mdc-typography--headline6",style:"justify-content: center;",$$slots:{default:[vn]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment),n=x(),oe(a.$$.fragment),i=x(),oe(o.$$.fragment),r=x(),oe(s.$$.fragment),l=x(),oe(c.$$.fragment),d=x(),oe(u.$$.fragment)},m(e,m){re(t,e,m),y(e,n,m),re(a,e,m),y(e,i,m),re(o,e,m),y(e,r,m),re(s,e,m),y(e,l,m),re(c,e,m),y(e,d,m),re(u,e,m),p=!0},p(e,n){const i={};2&n&&(i.$$scope={dirty:n,ctx:e}),t.$set(i);const r={};2&n&&(r.$$scope={dirty:n,ctx:e}),a.$set(r);const l={};2&n&&(l.$$scope={dirty:n,ctx:e}),o.$set(l);const d={};2&n&&(d.$$scope={dirty:n,ctx:e}),s.$set(d);const p={};2&n&&(p.$$scope={dirty:n,ctx:e}),c.$set(p);const m={};2&n&&(m.$$scope={dirty:n,ctx:e}),u.$set(m)},i(e){p||(ee(t.$$.fragment,e),ee(a.$$.fragment,e),ee(o.$$.fragment,e),ee(s.$$.fragment,e),ee(c.$$.fragment,e),ee(u.$$.fragment,e),p=!0)},o(e){te(t.$$.fragment,e),te(a.$$.fragment,e),te(o.$$.fragment,e),te(s.$$.fragment,e),te(c.$$.fragment,e),te(u.$$.fragment,e),p=!1},d(e){se(t,e),e&&_(n),se(a,e),e&&_(i),se(o,e),e&&_(r),se(s,e),e&&_(l),se(c,e),e&&_(d),se(u,e)}}}function yn(e){let t,n,a,i;return t=new St({props:{class:"mdc-elevation--z4",style:"background-color: white; height: 3.5vw;",$$slots:{default:[bn]},$$scope:{ctx:e}}}),a=new rn({props:{progress:e[0]}}),{c(){oe(t.$$.fragment),n=x(),oe(a.$$.fragment)},m(e,o){re(t,e,o),y(e,n,o),re(a,e,o),i=!0},p(e,n){const i={};2&n&&(i.$$scope={dirty:n,ctx:e}),t.$set(i);const o={};1&n&&(o.progress=e[0]),a.$set(o)},i(e){i||(ee(t.$$.fragment,e),ee(a.$$.fragment,e),i=!0)},o(e){te(t.$$.fragment,e),te(a.$$.fragment,e),i=!1},d(e){se(t,e),e&&_(n),se(a,e)}}}function _n(e){let t,n;return t=new Ge({props:{variant:"fixed",class:"transparent",$$slots:{default:[yn]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,[n]){const a={};3&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function An(e,t,n){let a=0;return R((()=>{n(0,a=0)})),document.addEventListener("scroll",(function(){n(0,a=(document.body.scrollTop||document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight))})),[a]}class wn extends de{constructor(e){super(),ce(this,e,An,_n,r,{})}}const{applyPassive:xn}=he,{matches:Cn}=be;function Sn(e,{ripple:t=!0,surface:n=!1,unbounded:a=!1,disabled:i=!1,color:o,active:r,rippleElement:s,eventTarget:l,activeTarget:c,addClass:d=(t=>e.classList.add(t)),removeClass:u=(t=>e.classList.remove(t)),addStyle:p=((t,n)=>e.style.setProperty(t,n)),initPromise:m=Promise.resolve()}={}){let g,f,h=D("SMUI:addLayoutListener"),$=r,v=l,b=c;function y(){n?(d("mdc-ripple-surface"),"primary"===o?(d("smui-ripple-surface--primary"),u("smui-ripple-surface--secondary")):"secondary"===o?(u("smui-ripple-surface--primary"),d("smui-ripple-surface--secondary")):(u("smui-ripple-surface--primary"),u("smui-ripple-surface--secondary"))):(u("mdc-ripple-surface"),u("smui-ripple-surface--primary"),u("smui-ripple-surface--secondary")),g&&$!==r&&($=r,r?g.activate():!1===r&&g.deactivate()),t&&!g?(g=new Se({addClass:d,browserSupportsCssVars:()=>function(e,t){void 0===t&&(t=!1);var n,a=e.CSS;if("boolean"==typeof ve&&!t)return ve;if(!a||"function"!=typeof a.supports)return!1;var i=a.supports("--css-vars","yes"),o=a.supports("(--css-vars: yes)")&&a.supports("color","#00000000");return n=i||o,t||(ve=n),n}(window),computeBoundingRect:()=>(s||e).getBoundingClientRect(),containsEventTarget:t=>e.contains(t),deregisterDocumentInteractionHandler:(e,t)=>document.documentElement.removeEventListener(e,t,xn()),deregisterInteractionHandler:(t,n)=>(l||e).removeEventListener(t,n,xn()),deregisterResizeHandler:e=>window.removeEventListener("resize",e),getWindowPageOffset:()=>({x:window.pageXOffset,y:window.pageYOffset}),isSurfaceActive:()=>null==r?Cn(c||e,":active"):r,isSurfaceDisabled:()=>!!i,isUnbounded:()=>!!a,registerDocumentInteractionHandler:(e,t)=>document.documentElement.addEventListener(e,t,xn()),registerInteractionHandler:(t,n)=>(l||e).addEventListener(t,n,xn()),registerResizeHandler:e=>window.addEventListener("resize",e),removeClass:u,updateCssVariable:p}),m.then((()=>{g&&(g.init(),g.setUnbounded(a))}))):g&&!t&&m.then((()=>{g&&(g.destroy(),g=void 0)})),!g||v===l&&b===c||(v=l,b=c,g.destroy(),requestAnimationFrame((()=>{g&&(g.init(),g.setUnbounded(a))}))),!t&&a&&d("mdc-ripple-upgraded--unbounded")}return y(),h&&(f=h((function(){g&&g.layout()}))),{update(g){({ripple:t,surface:n,unbounded:a,disabled:i,color:o,active:r,rippleElement:s,eventTarget:l,activeTarget:c,addClass:d,removeClass:u,addStyle:p,initPromise:m}=Object.assign({ripple:!0,surface:!1,unbounded:!1,disabled:!1,color:void 0,active:void 0,rippleElement:void 0,eventTarget:void 0,activeTarget:void 0,addClass:t=>e.classList.add(t),removeClass:t=>e.classList.remove(t),addStyle:(t,n)=>e.style.setProperty(t,n),initPromise:Promise.resolve()},g)),y()},destroy(){g&&(g.destroy(),g=void 0,u("mdc-ripple-surface"),u("smui-ripple-surface--primary"),u("smui-ripple-surface--secondary")),f&&f()}}}function En(e){let t;return{c(){t=A("div"),E(t,"class","mdc-fab__touch")},m(e,n){y(e,t,n)},d(e){e&&_(t)}}}function Tn(e){let t,n,a,i;const o=e[20].default,r=u(o,e,e[22],null);let s=e[8]&&En();return{c(){t=A("div"),n=x(),r&&r.c(),s&&s.c(),a=C(),E(t,"class","mdc-fab__ripple")},m(e,o){y(e,t,o),y(e,n,o),r&&r.m(e,o),s&&s.m(e,o),y(e,a,o),i=!0},p(e,t){r&&r.p&&(!i||4194304&t)&&g(r,o,e,e[22],i?m(o,e[22],t,null):f(e[22]),null),e[8]?s||(s=En(),s.c(),s.m(a.parentNode,a)):s&&(s.d(1),s=null)},i(e){i||(ee(r,e),i=!0)},o(e){te(r,e),i=!1},d(e){e&&_(t),e&&_(n),r&&r.d(e),s&&s.d(e),e&&_(a)}}}function Ln(e){let n,a,i;const o=[{use:[[Sn,{ripple:e[3],unbounded:!1,color:e[4],disabled:!!e[18].disabled,addClass:e[15],removeClass:e[16],addStyle:e[17]}],e[14],...e[0]]},{class:Be({[e[1]]:!0,"mdc-fab":!0,"mdc-fab--mini":e[5],"mdc-fab--exited":e[6],"mdc-fab--extended":e[7],"smui-fab--color-primary":"primary"===e[4],"mdc-fab--touch":e[8],...e[12]})},{style:Object.entries(e[13]).map(In).concat([e[2]]).join(" ")},{href:e[9]},e[18]];var r=e[10];function s(e){let n={$$slots:{default:[Tn]},$$scope:{ctx:e}};for(let e=0;e<o.length;e+=1)n=t(n,o[e]);return{props:n}}return r&&(n=new r(s(e)),e[21](n)),{c(){n&&oe(n.$$.fragment),a=C()},m(e,t){n&&re(n,e,t),y(e,a,t),i=!0},p(e,[t]){const i=521215&t?ae(o,[507929&t&&{use:[[Sn,{ripple:e[3],unbounded:!1,color:e[4],disabled:!!e[18].disabled,addClass:e[15],removeClass:e[16],addStyle:e[17]}],e[14],...e[0]]},4594&t&&{class:Be({[e[1]]:!0,"mdc-fab":!0,"mdc-fab--mini":e[5],"mdc-fab--exited":e[6],"mdc-fab--extended":e[7],"smui-fab--color-primary":"primary"===e[4],"mdc-fab--touch":e[8],...e[12]})},8196&t&&{style:Object.entries(e[13]).map(In).concat([e[2]]).join(" ")},512&t&&{href:e[9]},262144&t&&ie(e[18])]):{};if(4194560&t&&(i.$$scope={dirty:t,ctx:e}),r!==(r=e[10])){if(n){J();const e=n;te(e.$$.fragment,1,0,(()=>{se(e,1)})),K()}r?(n=new r(s(e)),e[21](n),oe(n.$$.fragment),ee(n.$$.fragment,1),re(n,a.parentNode,a)):n=null}else r&&n.$set(i)},i(e){i||(n&&ee(n.$$.fragment,e),i=!0)},o(e){n&&te(n.$$.fragment,e),i=!1},d(t){e[21](null),t&&_(a),n&&se(n,t)}}}const In=([e,t])=>`${e}: ${t};`;function zn(e,n,a){const i=["use","class","style","ripple","color","mini","exited","extended","touch","href","component","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n;const l=Ne(M());let c,{use:d=[]}=n,{class:u=""}=n,{style:p=""}=n,{ripple:m=!0}=n,{color:g="secondary"}=n,{mini:f=!1}=n,{exited:v=!1}=n,{extended:b=!1}=n,{touch:y=!1}=n,{href:_}=n,A={},w={},{component:x=(null==_?_t:yt)}=n;return B("SMUI:label:context","fab"),B("SMUI:icon:context","fab"),e.$$set=e=>{n=t(t({},n),h(e)),a(18,o=$(n,i)),"use"in e&&a(0,d=e.use),"class"in e&&a(1,u=e.class),"style"in e&&a(2,p=e.style),"ripple"in e&&a(3,m=e.ripple),"color"in e&&a(4,g=e.color),"mini"in e&&a(5,f=e.mini),"exited"in e&&a(6,v=e.exited),"extended"in e&&a(7,b=e.extended),"touch"in e&&a(8,y=e.touch),"href"in e&&a(9,_=e.href),"component"in e&&a(10,x=e.component),"$$scope"in e&&a(22,s=e.$$scope)},[d,u,p,m,g,f,v,b,y,_,x,c,A,w,l,function(e){A[e]||a(12,A[e]=!0,A)},function(e){e in A&&!A[e]||a(12,A[e]=!1,A)},function(e,t){w[e]!=t&&(""===t||null==t?(delete w[e],a(13,w)):a(13,w[e]=t,w))},o,function(){return c.getElement()},r,function(e){N[e?"unshift":"push"]((()=>{c=e,a(11,c)}))},s]}class On extends de{constructor(e){super(),ce(this,e,zn,Ln,r,{use:0,class:1,style:2,ripple:3,color:4,mini:5,exited:6,extended:7,touch:8,href:9,component:10,getElement:19})}get getElement(){return this.$$.ctx[19]}}function qn(e){let t,n;return{c(){t=A("img"),c(t.src,n="img/logo.png")||E(t,"src","img/logo.png"),E(t,"alt","Logo"),E(t,"class","svelte-9qvr9p")},m(e,n){y(e,t,n)},d(e){e&&_(t)}}}function Mn(e){let t;return{c(){t=w(e[1])},m(e,n){y(e,t,n)},p(e,n){2&n&&I(t,e[1])},d(e){e&&_(t)}}}function Rn(e){let t,n,a,i;return t=new Dt({props:{class:"custom-FAB-Icon",$$slots:{default:[qn]},$$scope:{ctx:e}}}),a=new Bt({props:{class:"mdc-typography--body2 bold",style:"overflow: hidden;",$$slots:{default:[Mn]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment),n=x(),oe(a.$$.fragment)},m(e,o){re(t,e,o),y(e,n,o),re(a,e,o),i=!0},p(e,n){const i={};4&n&&(i.$$scope={dirty:n,ctx:e}),t.$set(i);const o={};6&n&&(o.$$scope={dirty:n,ctx:e}),a.$set(o)},i(e){i||(ee(t.$$.fragment,e),ee(a.$$.fragment,e),i=!0)},o(e){te(t.$$.fragment,e),te(a.$$.fragment,e),i=!1},d(e){se(t,e),e&&_(n),se(a,e)}}}function Bn(e){let t,n;return t=new On({props:{color:"primary",href:"#"+e[0],extended:!0,class:"custom-FABExtended",$$slots:{default:[Rn]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,[n]){const a={};1&n&&(a.href="#"+e[0]),6&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function Dn(e,t,n){let{target:a,label:i=""}=t;return e.$$set=e=>{"target"in e&&n(0,a=e.target),"label"in e&&n(1,i=e.label)},[a,i]}class Pn extends de{constructor(e){super(),ce(this,e,Dn,Bn,r,{target:0,label:1})}}function kn(t){let n;return{c(){n=A("footer"),n.innerHTML="© Copyright 2022 — Gruppo 10 <br/> Arena Nicolò — Barnabé Carlos — Cannizzaro Gloria — Caotti Leonardo — Navone Federica — Oneto Alessandro — Sartori Alice\n  — Sattanino Giulia",E(n,"class","mdc-typography--body2 svelte-1huo1b5")},m(e,t){y(e,n,t)},p:e,i:e,o:e,d(e){e&&_(n)}}}class Nn extends de{constructor(e){super(),ce(this,e,null,kn,r,{})}}function Hn(t){let n,a,i,o,r;return{c(){n=A("div"),n.textContent="Sai davvero cos'è l'amianto?",a=x(),i=A("div"),i.innerHTML="Sai come ha rovinato le vite di innumerevoli persone?\n  <br/>Sai quanti danni ha provocato nella storia?",o=x(),r=A("div"),r.innerHTML='Scendi nell&#39;<span class="bold error">Inferno dell&#39;Amianto</span> e lo scoprirai...',E(n,"class","mdc-typography--headline1 uppercase svelte-v5e0jn"),E(i,"class","mdc-typography--headline4 svelte-v5e0jn"),E(r,"class","mdc-typography--headline4 svelte-v5e0jn")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),y(e,o,t),y(e,r,t)},p:e,i:e,o:e,d(e){e&&_(n),e&&_(a),e&&_(i),e&&_(o),e&&_(r)}}}class jn extends de{constructor(e){super(),ce(this,e,null,Hn,r,{})}}function Un(t){let n,a,i;return{c(){n=A("div"),n.innerHTML='<div class="mdc-typography--headline4 uppercase">COS&#39;È L&#39;AMIANTO E PERCHÉ VIENE SCAVATO?</div> \n  <div class="mdc-typography--body1">Con il termine <span class="highlight">amianto</span> o asbesto viene identificato un minerale naturale a struttura fibrosa, conosciuto sin dall&#39;antichitá\n    per le sue proprietà termoisolanti e fonoassorbenti. Nel XX secolo, grazie alla sua\n    <span class="highlight">economicità di produzione</span>, è stato largamente adottato da tutto il mondo in innumerevoli applicazioni industriali ed\n    edilizie.\n    <br/><br/>\n    Con il tempo però tale materiale si è rivelato <span class="highlight">nocivo</span> per la salute dell&#39;uomo, a causa del rilascio di fibre che, se inalate,\n    possono provocare patologie <span class="highlight">gravi ed irreversibili</span> all&#39;apparato respiratorio, tra cui le più note sono asbestosi, carcinomi polmonari\n    e mesoteliomi.</div>',a=x(),i=A("div"),i.innerHTML='<div class="mdc-typography--headline4 uppercase">Che reputazione ha oggi l&#39;amianto?</div> \n  <div class="mdc-typography--body1">Negli anni &#39;70 è stato raggiunto il <span class="highlight">picco</span> di produzione di amianto, coinvolgendo 85 paesi diversi nella sua estrazione e\n    lavorazione. In Italia, dal 1992 ad oggi, sono entrate in vigore numerose leggi che <span class="highlight">vietano</span> estrazione, commercializzazione e\n    produzione di amianto. Non tutte le nazioni però hanno bandito questo materiale: Russia, Cina, Brasile e Canada sono gli attuali maggiori\n    <span class="highlight">produttori</span> di amianto.\n    <br/><br/>\n    L&#39;estrazione di amianto rimane ancora oggi uno dei maggiori argomenti di discussione sul campo legislativo e su quello etico. Attraverso questo viaggio\n    metaforico nell&#39;<span class="highlight">Inferno</span>, avrai modo di scoprire l&#39;impatto che questo minerale ha avuto in tutto il mondo, dal suo controverso\n    <span class="highlight">passato</span> alle sue conseguenze letali sul <span class="highlight">presente</span>.</div>',E(n,"class","left svelte-44ybgg"),E(i,"class","right svelte-44ybgg")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t)},p:e,i:e,o:e,d(e){e&&_(n),e&&_(a),e&&_(i)}}}class Vn extends de{constructor(e){super(),ce(this,e,null,Un,r,{})}}function Fn(e){let n,a,r,s,l,c;const d=e[9].default,p=u(d,e,e[8],null);let h=[{class:a=Be({[e[1]]:!0,"mdc-card":!0,"mdc-card--outlined":"outlined"===e[2],"smui-card--padded":e[3]})},e[6]],$={};for(let e=0;e<h.length;e+=1)$=t($,h[e]);return{c(){n=A("div"),p&&p.c(),T(n,$)},m(t,a){y(t,n,a),p&&p.m(n,null),e[10](n),s=!0,l||(c=[v(r=He.call(null,n,e[0])),v(e[5].call(null,n))],l=!0)},p(e,[t]){p&&p.p&&(!s||256&t)&&g(p,d,e,e[8],s?m(d,e[8],t,null):f(e[8]),null),T(n,$=ae(h,[(!s||14&t&&a!==(a=Be({[e[1]]:!0,"mdc-card":!0,"mdc-card--outlined":"outlined"===e[2],"smui-card--padded":e[3]})))&&{class:a},64&t&&e[6]])),r&&o(r.update)&&1&t&&r.update.call(null,e[0])},i(e){s||(ee(p,e),s=!0)},o(e){te(p,e),s=!1},d(t){t&&_(n),p&&p.d(t),e[10](null),l=!1,i(c)}}}function Gn(e,n,a){const i=["use","class","variant","padded","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n;const l=Ne(M());let c,{use:d=[]}=n,{class:u=""}=n,{variant:p="raised"}=n,{padded:m=!1}=n;return e.$$set=e=>{n=t(t({},n),h(e)),a(6,o=$(n,i)),"use"in e&&a(0,d=e.use),"class"in e&&a(1,u=e.class),"variant"in e&&a(2,p=e.variant),"padded"in e&&a(3,m=e.padded),"$$scope"in e&&a(8,s=e.$$scope)},[d,u,p,m,c,l,o,function(){return c},s,r,function(e){N[e?"unshift":"push"]((()=>{c=e,a(4,c)}))}]}class Xn extends de{constructor(e){super(),ce(this,e,Gn,Fn,r,{use:0,class:1,variant:2,padded:3,getElement:7})}get getElement(){return this.$$.ctx[7]}}var Wn=nt({class:"smui-card__content",component:At});function Yn(e){let n,a,r,s,l,c,d,p,h,$;const w=e[17].default,C=u(w,e,e[16],null);let S=[{class:s=Be({[e[1]]:!0,"mdc-card__primary-action":!0,"smui-card__primary-action--padded":e[5],...e[8]})},{style:l=Object.entries(e[9]).map(Qn).concat([e[2]]).join(" ")},{tabindex:e[6]},e[14]],L={};for(let e=0;e<S.length;e+=1)L=t(L,S[e]);return{c(){n=A("div"),a=A("div"),r=x(),C&&C.c(),E(a,"class","mdc-card__ripple"),T(n,L)},m(t,i){y(t,n,i),b(n,a),b(n,r),C&&C.m(n,null),e[18](n),p=!0,h||($=[v(c=He.call(null,n,e[0])),v(e[10].call(null,n)),v(d=Sn.call(null,n,{ripple:e[3],unbounded:!1,color:e[4],addClass:e[11],removeClass:e[12],addStyle:e[13]}))],h=!0)},p(e,[t]){C&&C.p&&(!p||65536&t)&&g(C,w,e,e[16],p?m(w,e[16],t,null):f(e[16]),null),T(n,L=ae(S,[(!p||290&t&&s!==(s=Be({[e[1]]:!0,"mdc-card__primary-action":!0,"smui-card__primary-action--padded":e[5],...e[8]})))&&{class:s},(!p||516&t&&l!==(l=Object.entries(e[9]).map(Qn).concat([e[2]]).join(" ")))&&{style:l},(!p||64&t)&&{tabindex:e[6]},16384&t&&e[14]])),c&&o(c.update)&&1&t&&c.update.call(null,e[0]),d&&o(d.update)&&24&t&&d.update.call(null,{ripple:e[3],unbounded:!1,color:e[4],addClass:e[11],removeClass:e[12],addStyle:e[13]})},i(e){p||(ee(C,e),p=!0)},o(e){te(C,e),p=!1},d(t){t&&_(n),C&&C.d(t),e[18](null),h=!1,i($)}}}const Qn=([e,t])=>`${e}: ${t};`;function Zn(e,n,a){const i=["use","class","style","ripple","color","padded","tabindex","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n;const l=Ne(M());let c,{use:d=[]}=n,{class:u=""}=n,{style:p=""}=n,{ripple:m=!0}=n,{color:g}=n,{padded:f=!1}=n,{tabindex:v=0}=n,b={},y={};return e.$$set=e=>{n=t(t({},n),h(e)),a(14,o=$(n,i)),"use"in e&&a(0,d=e.use),"class"in e&&a(1,u=e.class),"style"in e&&a(2,p=e.style),"ripple"in e&&a(3,m=e.ripple),"color"in e&&a(4,g=e.color),"padded"in e&&a(5,f=e.padded),"tabindex"in e&&a(6,v=e.tabindex),"$$scope"in e&&a(16,s=e.$$scope)},[d,u,p,m,g,f,v,c,b,y,l,function(e){b[e]||a(8,b[e]=!0,b)},function(e){e in b&&!b[e]||a(8,b[e]=!1,b)},function(e,t){y[e]!=t&&(""===t||null==t?(delete y[e],a(9,y)):a(9,y[e]=t,y))},o,function(){return c},s,r,function(e){N[e?"unshift":"push"]((()=>{c=e,a(7,c)}))}]}function Jn(e){let n,a,r,s,l,c;const d=e[8].default,p=u(d,e,e[7],null);let h=[{class:a=Be({[e[1]]:!0,"mdc-card__actions":!0,"mdc-card__actions--full-bleed":e[2]})},e[5]],$={};for(let e=0;e<h.length;e+=1)$=t($,h[e]);return{c(){n=A("div"),p&&p.c(),T(n,$)},m(t,a){y(t,n,a),p&&p.m(n,null),e[9](n),s=!0,l||(c=[v(r=He.call(null,n,e[0])),v(e[4].call(null,n))],l=!0)},p(e,[t]){p&&p.p&&(!s||128&t)&&g(p,d,e,e[7],s?m(d,e[7],t,null):f(e[7]),null),T(n,$=ae(h,[(!s||6&t&&a!==(a=Be({[e[1]]:!0,"mdc-card__actions":!0,"mdc-card__actions--full-bleed":e[2]})))&&{class:a},32&t&&e[5]])),r&&o(r.update)&&1&t&&r.update.call(null,e[0])},i(e){s||(ee(p,e),s=!0)},o(e){te(p,e),s=!1},d(t){t&&_(n),p&&p.d(t),e[9](null),l=!1,i(c)}}}function Kn(e,n,a){const i=["use","class","fullBleed","getElement"];let o=$(n,i),{$$slots:r={},$$scope:s}=n;const l=Ne(M());let c,{use:d=[]}=n,{class:u=""}=n,{fullBleed:p=!1}=n;return B("SMUI:button:context","card:action"),B("SMUI:icon-button:context","card:action"),e.$$set=e=>{n=t(t({},n),h(e)),a(5,o=$(n,i)),"use"in e&&a(0,d=e.use),"class"in e&&a(1,u=e.class),"fullBleed"in e&&a(2,p=e.fullBleed),"$$scope"in e&&a(7,s=e.$$scope)},[d,u,p,c,l,o,function(){return c},s,r,function(e){N[e?"unshift":"push"]((()=>{c=e,a(3,c)}))}]}nt({class:"mdc-card__media-content",component:At});nt({class:"mdc-card__action-buttons",component:At}),nt({class:"mdc-card__action-icons",component:At});const ea=class extends de{constructor(e){super(),ce(this,e,Zn,Yn,r,{use:0,class:1,style:2,ripple:3,color:4,padded:5,tabindex:6,getElement:15})}get getElement(){return this.$$.ctx[15]}},ta=class extends de{constructor(e){super(),ce(this,e,Kn,Jn,r,{use:0,class:1,fullBleed:2,getElement:6})}get getElement(){return this.$$.ctx[6]}};function na(e){let t,n,a,i,o;return{c(){t=A("div"),n=w(e[2]),a=x(),i=A("div"),o=w(e[3]),E(t,"class","mdc-typography--body2 highlight"),E(i,"class","mdc-typography--body2")},m(e,r){y(e,t,r),b(t,n),y(e,a,r),y(e,i,r),b(i,o)},p(e,t){4&t&&I(n,e[2]),8&t&&I(o,e[3])},d(e){e&&_(t),e&&_(a),e&&_(i)}}}function aa(e){let t,n,a,i,o;return i=new Wn({props:{style:"padding: 1vw;",$$slots:{default:[na]},$$scope:{ctx:e}}}),{c(){t=A("img"),a=x(),oe(i.$$.fragment),c(t.src,n=e[1])||E(t,"src",n),E(t,"alt",e[2]),E(t,"class","svelte-131th0t")},m(e,n){y(e,t,n),y(e,a,n),re(i,e,n),o=!0},p(e,a){(!o||2&a&&!c(t.src,n=e[1]))&&E(t,"src",n),(!o||4&a)&&E(t,"alt",e[2]);const r={};28&a&&(r.$$scope={dirty:a,ctx:e}),i.$set(r)},i(e){o||(ee(i.$$.fragment,e),o=!0)},o(e){te(i.$$.fragment,e),o=!1},d(e){e&&_(t),e&&_(a),se(i,e)}}}function ia(e){let t,n;return t=new ea({props:{$$slots:{default:[aa]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};30&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function oa(e){let t,n,a;return n=new Xn({props:{style:"max-height: 20vw;",$$slots:{default:[ia]},$$scope:{ctx:e}}}),{c(){t=A("a"),oe(n.$$.fragment),E(t,"href",e[0]),z(t,"width","16vw")},m(e,i){y(e,t,i),re(n,t,null),a=!0},p(e,[i]){const o={};30&i&&(o.$$scope={dirty:i,ctx:e}),n.$set(o),(!a||1&i)&&E(t,"href",e[0])},i(e){a||(ee(n.$$.fragment,e),a=!0)},o(e){te(n.$$.fragment,e),a=!1},d(e){e&&_(t),se(n)}}}function ra(e,t,n){let{href:a,src:i,title:o,subtitle:r}=t;return e.$$set=e=>{"href"in e&&n(0,a=e.href),"src"in e&&n(1,i=e.src),"title"in e&&n(2,o=e.title),"subtitle"in e&&n(3,r=e.subtitle)},[a,i,o,r]}class sa extends de{constructor(e){super(),ce(this,e,ra,oa,r,{href:0,src:1,title:2,subtitle:3})}}function la(t){let n,a,i,o,r,s,l,c,d,u,p;return o=new sa({props:{href:"#content2-1",src:"img/minacu-mine.png",title:"Minaçu, Brasile",subtitle:"L'ultima miniera di amianto del Brasile ancora attiva, nonstante il divieto legale imposto dallo stato."}}),s=new sa({props:{href:"#content3-1",src:"img/balangero-mine.png",title:"Balangero, Italia",subtitle:"La miniera di amianto più grande d'Europa. Rimasta attiva nella provincia di Torino fino al 1990."}}),c=new sa({props:{href:"#content4-1",src:"img/libby-mine.png",title:"Libby, Montana",subtitle:"La città che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite."}}),u=new sa({props:{href:"#content5-1",src:"img/asbest-mine.png",title:"Asbest, Russia",subtitle:"Al giorno d'oggi, la miniera con la maggiore produzione annuale di amianto di tutto il mondo."}}),{c(){n=A("div"),n.innerHTML='<div class="mdc-typography--headline3 uppercase primary">Quali luoghi ti attendono nell&#39;Inferno dell&#39;Amianto?</div> \n  <div class="mdc-typography--body1" style="padding-top: 1vw; padding-bottom: 1.8vw;">Lasciati guidare nel viaggio attraverso i quattro <span class="highlight">gironi</span> infernali.\n    <br/>Le <span class="highlight">città</span> che incontrerai ti mostreranno quanta influenza abbia avuto l&#39;amianto in tutto il mondo.\n    <br/>Ad accompagnarti troverai gli <span class="highlight">uomini</span> che di più hanno sofferto, e potrai ascoltare le loro storie.</div>',a=x(),i=A("div"),oe(o.$$.fragment),r=x(),oe(s.$$.fragment),l=x(),oe(c.$$.fragment),d=x(),oe(u.$$.fragment),E(i,"class","flex-row-2"),E(i,"style","")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),re(s,i,null),b(i,l),re(c,i,null),b(i,d),re(u,i,null),p=!0},p:e,i(e){p||(ee(o.$$.fragment,e),ee(s.$$.fragment,e),ee(c.$$.fragment,e),ee(u.$$.fragment,e),p=!0)},o(e){te(o.$$.fragment,e),te(s.$$.fragment,e),te(c.$$.fragment,e),te(u.$$.fragment,e),p=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(s),se(c),se(u)}}}class ca extends de{constructor(e){super(),ce(this,e,null,la,r,{})}}function da(t){let n,a,i,o,r;return{c(){n=A("div"),n.textContent="Balangero, Italia",a=x(),i=A("div"),i.innerHTML='<div class="mdc-typography--headline4 uppercase">La storia della miniera</div> \n  <div class="mdc-typography--body1">L’Amiantifera di Balangero, situata sul Monte San Vittore nella provincia di Torino, oltre ad essere stata per decenni la\n    <span class="highlight">più grande</span>\n    cava d&#39;amianto dell&#39;Occidente, è stata in primo luogo un&#39;immensa fonte di lavoro e ricchezza per la comunità balangerese e i paesi limitrofi.\n    <br/><br/>\n    Le prime attività di estrazione vennero avviate nel 1918, mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare\n    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione, tanto da raggiungere il\n    <span class="highlight">picco di produzione</span>\n    di 36000 tonnellate annue.\n    <br/><br/>\n    In pieno boom di produzione, nel 1983 l&#39;Amiantifera di Balangero S.p.A. venne ceduta, dalla Eternit e dalle Manifatture Colombo, ai fratelli Puccini di Roma, ma\n    nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne <span class="highlight">chiusa per fallimento</span> e i dipendenti licenziati.</div>',o=x(),r=A("div"),r.innerHTML='<div class="mdc-typography--headline4 uppercase primary">Quanta sofferenza ha causato?</div> \n  <div class="mdc-typography--body1">Con la chiusura della miniera e le leggi sulla pericolosità dell’amianto, è stato avviato un progetto di messa in sicurezza del luogo a causa delle numerose\n    <span class="highlight">vittime e malati</span> accertati tra gli ex lavoratori e le loro famiglie. Gli specialisti hanno esaminato le storie sanitarie di\n    1.966 ex addetti all’Amiantifera. Su questo totale, emerge un risultato sconcertante: fra essi ci sono\n    <span class="highlight">214 vittime</span> riferibili proprio al contatto con la fibra killer.\n    <br/><br/>\n    Non solo, negli anni si sono susseguite una serie di inchieste a favore degli operai, indagini che si conclusero con delle\n    <span class="highlight">condanne</span> per gli ex dirigenti della cava. Nel 2012 furono quaranta i casi sotto esame: venticinque morti e quindici malati, tra\n    i quali anche casi di normali cittadini e non solo di lavoratori della cava.</div>',E(n,"class","mdc-typography--headline1 uppercase"),E(i,"class","left svelte-u95hax"),E(r,"class","right svelte-u95hax")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),y(e,o,t),y(e,r,t)},p:e,i:e,o:e,d(e){e&&_(n),e&&_(a),e&&_(i),e&&_(o),e&&_(r)}}}class ua extends de{constructor(e){super(),ce(this,e,null,da,r,{})}}function pa(e){let t;return{c(){t=A("div"),E(t,"class","mdc-button__touch")},m(e,n){y(e,t,n)},d(e){e&&_(t)}}}function ma(e){let t,n,a,i;const o=e[27].default,r=u(o,e,e[29],null);let s=e[6]&&pa();return{c(){t=A("div"),n=x(),r&&r.c(),s&&s.c(),a=C(),E(t,"class","mdc-button__ripple")},m(e,o){y(e,t,o),y(e,n,o),r&&r.m(e,o),s&&s.m(e,o),y(e,a,o),i=!0},p(e,t){r&&r.p&&(!i||536870912&t)&&g(r,o,e,e[29],i?m(o,e[29],t,null):f(e[29]),null),e[6]?s||(s=pa(),s.c(),s.m(a.parentNode,a)):s&&(s.d(1),s=null)},i(e){i||(ee(r,e),i=!0)},o(e){te(r,e),i=!1},d(e){e&&_(t),e&&_(n),r&&r.d(e),s&&s.d(e),e&&_(a)}}}function ga(e){let n,a,i;const o=[{use:[[Sn,{ripple:e[3],unbounded:!1,color:e[4],disabled:!!e[22].disabled,addClass:e[18],removeClass:e[19],addStyle:e[20]}],e[16],...e[0]]},{class:Be({[e[1]]:!0,"mdc-button":!0,"mdc-button--raised":"raised"===e[5],"mdc-button--unelevated":"unelevated"===e[5],"mdc-button--outlined":"outlined"===e[5],"smui-button--color-secondary":"secondary"===e[4],"mdc-button--touch":e[6],"mdc-card__action":"card:action"===e[17],"mdc-card__action--button":"card:action"===e[17],"mdc-dialog__button":"dialog:action"===e[17],"mdc-top-app-bar__navigation-icon":"top-app-bar:navigation"===e[17],"mdc-top-app-bar__action-item":"top-app-bar:action"===e[17],"mdc-snackbar__action":"snackbar:actions"===e[17],"mdc-banner__secondary-action":"banner"===e[17]&&e[8],"mdc-banner__primary-action":"banner"===e[17]&&!e[8],"mdc-tooltip__action":"tooltip:rich-actions"===e[17],...e[11]})},{style:Object.entries(e[12]).map(fa).concat([e[2]]).join(" ")},e[15],e[14],e[13],{href:e[7]},e[22]];var r=e[9];function s(e){let n={$$slots:{default:[ma]},$$scope:{ctx:e}};for(let e=0;e<o.length;e+=1)n=t(n,o[e]);return{props:n}}return r&&(n=new r(s(e)),e[28](n),n.$on("click",e[21])),{c(){n&&oe(n.$$.fragment),a=C()},m(e,t){n&&re(n,e,t),y(e,a,t),i=!0},p(e,[t]){const i=6289919&t?ae(o,[6094873&t&&{use:[[Sn,{ripple:e[3],unbounded:!1,color:e[4],disabled:!!e[22].disabled,addClass:e[18],removeClass:e[19],addStyle:e[20]}],e[16],...e[0]]},133490&t&&{class:Be({[e[1]]:!0,"mdc-button":!0,"mdc-button--raised":"raised"===e[5],"mdc-button--unelevated":"unelevated"===e[5],"mdc-button--outlined":"outlined"===e[5],"smui-button--color-secondary":"secondary"===e[4],"mdc-button--touch":e[6],"mdc-card__action":"card:action"===e[17],"mdc-card__action--button":"card:action"===e[17],"mdc-dialog__button":"dialog:action"===e[17],"mdc-top-app-bar__navigation-icon":"top-app-bar:navigation"===e[17],"mdc-top-app-bar__action-item":"top-app-bar:action"===e[17],"mdc-snackbar__action":"snackbar:actions"===e[17],"mdc-banner__secondary-action":"banner"===e[17]&&e[8],"mdc-banner__primary-action":"banner"===e[17]&&!e[8],"mdc-tooltip__action":"tooltip:rich-actions"===e[17],...e[11]})},4100&t&&{style:Object.entries(e[12]).map(fa).concat([e[2]]).join(" ")},32768&t&&ie(e[15]),16384&t&&ie(e[14]),8192&t&&ie(e[13]),128&t&&{href:e[7]},4194304&t&&ie(e[22])]):{};if(536870976&t&&(i.$$scope={dirty:t,ctx:e}),r!==(r=e[9])){if(n){J();const e=n;te(e.$$.fragment,1,0,(()=>{se(e,1)})),K()}r?(n=new r(s(e)),e[28](n),n.$on("click",e[21]),oe(n.$$.fragment),ee(n.$$.fragment,1),re(n,a.parentNode,a)):n=null}else r&&n.$set(i)},i(e){i||(n&&ee(n.$$.fragment,e),i=!0)},o(e){n&&te(n.$$.fragment,e),i=!1},d(t){e[28](null),t&&_(a),n&&se(n,t)}}}const fa=([e,t])=>`${e}: ${t};`;function ha(e,n,a){let i,o,r;const s=["use","class","style","ripple","color","variant","touch","href","action","defaultAction","secondary","component","getElement"];let l=$(n,s),{$$slots:c={},$$scope:d}=n;const u=Ne(M());let p,{use:m=[]}=n,{class:g=""}=n,{style:f=""}=n,{ripple:v=!0}=n,{color:b="primary"}=n,{variant:y="text"}=n,{touch:_=!1}=n,{href:A}=n,{action:w="close"}=n,{defaultAction:x=!1}=n,{secondary:C=!1}=n,S={},E={},T=D("SMUI:button:context"),{component:L=(null==A?_t:yt)}=n,I=l.disabled;function z(){return p.getElement()}return B("SMUI:label:context","button"),B("SMUI:icon:context","button"),e.$$set=e=>{a(30,n=t(t({},n),h(e))),a(22,l=$(n,s)),"use"in e&&a(0,m=e.use),"class"in e&&a(1,g=e.class),"style"in e&&a(2,f=e.style),"ripple"in e&&a(3,v=e.ripple),"color"in e&&a(4,b=e.color),"variant"in e&&a(5,y=e.variant),"touch"in e&&a(6,_=e.touch),"href"in e&&a(7,A=e.href),"action"in e&&a(23,w=e.action),"defaultAction"in e&&a(24,x=e.defaultAction),"secondary"in e&&a(8,C=e.secondary),"component"in e&&a(9,L=e.component),"$$scope"in e&&a(29,d=e.$$scope)},e.$$.update=()=>{a(15,i="dialog:action"===T&&null!=w?{"data-mdc-dialog-action":w}:{action:n.action}),a(14,o="dialog:action"===T&&x?{"data-mdc-dialog-button-default":""}:{default:n.default}),a(13,r="banner"===T?{}:{secondary:n.secondary}),I!==l.disabled&&(z().blur(),a(26,I=l.disabled))},n=h(n),[m,g,f,v,b,y,_,A,C,L,p,S,E,r,o,i,u,T,function(e){S[e]||a(11,S[e]=!0,S)},function(e){e in S&&!S[e]||a(11,S[e]=!1,S)},function(e,t){E[e]!=t&&(""===t||null==t?(delete E[e],a(12,E)):a(12,E[e]=t,E))},function(){"banner"===T&&De(z(),C?"SMUIBannerButton:secondaryActionClick":"SMUIBannerButton:primaryActionClick")},l,w,x,z,I,c,function(e){N[e?"unshift":"push"]((()=>{p=e,a(10,p)}))},d]}class $a extends de{constructor(e){super(),ce(this,e,ha,ga,r,{use:0,class:1,style:2,ripple:3,color:4,variant:5,touch:6,href:7,action:23,defaultAction:24,secondary:8,component:9,getElement:25})}get getElement(){return this.$$.ctx[25]}}function va(e){let t;return{c(){t=w(e[0])},m(e,n){y(e,t,n)},p(e,n){1&n&&I(t,e[0])},d(e){e&&_(t)}}}function ba(e){let t,n;return t=new Bt({props:{class:"mdc-typography--body2 bold",$$slots:{default:[va]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};9&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function ya(e){let t,n;return t=new $a({props:{class:e[2],variant:"raised",href:e[1],style:"height: 2.5vw;",$$slots:{default:[ba]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,[n]){const a={};4&n&&(a.class=e[2]),2&n&&(a.href=e[1]),9&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function _a(e,t,n){let{label:a,href:i,direction:o}=t;return e.$$set=e=>{"label"in e&&n(0,a=e.label),"href"in e&&n(1,i=e.href),"direction"in e&&n(2,o=e.direction)},[a,i,o]}class Aa extends de{constructor(e){super(),ce(this,e,_a,ya,r,{label:0,href:1,direction:2})}}function wa(e){let t,n,a,i,o;return{c(){t=A("div"),n=w(e[2]),a=x(),i=A("div"),o=w(e[3]),E(t,"class","mdc-typography--body2 highlight"),E(i,"class","mdc-typography--body2")},m(e,r){y(e,t,r),b(t,n),y(e,a,r),y(e,i,r),b(i,o)},p(e,t){4&t&&I(n,e[2]),8&t&&I(o,e[3])},d(e){e&&_(t),e&&_(a),e&&_(i)}}}function xa(e){let t,n,a,i;return a=new Bt({props:{class:"mdc-typography--body2 bold",$$slots:{default:[Sa]},$$scope:{ctx:e}}}),{c(){t=A("i"),t.textContent="arrow_back",n=x(),oe(a.$$.fragment),E(t,"class","material-icons svelte-2n91h2"),E(t,"aria-hidden","true")},m(e,o){y(e,t,o),y(e,n,o),re(a,e,o),i=!0},p(e,t){const n={};144&t&&(n.$$scope={dirty:t,ctx:e}),a.$set(n)},i(e){i||(ee(a.$$.fragment,e),i=!0)},o(e){te(a.$$.fragment,e),i=!1},d(e){e&&_(t),e&&_(n),se(a,e)}}}function Ca(e){let t,n,a,i;return t=new Bt({props:{class:"mdc-typography--body2 bold",$$slots:{default:[Ea]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment),n=x(),a=A("i"),a.textContent="arrow_forward",E(a,"class","material-icons svelte-2n91h2"),E(a,"aria-hidden","true")},m(e,o){re(t,e,o),y(e,n,o),y(e,a,o),i=!0},p(e,n){const a={};144&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){i||(ee(t.$$.fragment,e),i=!0)},o(e){te(t.$$.fragment,e),i=!1},d(e){se(t,e),e&&_(n),e&&_(a)}}}function Sa(e){let t;return{c(){t=w(e[4])},m(e,n){y(e,t,n)},p(e,n){16&n&&I(t,e[4])},d(e){e&&_(t)}}}function Ea(e){let t;return{c(){t=w(e[4])},m(e,n){y(e,t,n)},p(e,n){16&n&&I(t,e[4])},d(e){e&&_(t)}}}function Ta(e){let t,n,a,i;const o=[Ca,xa],r=[];function s(e,t){return"left-card"===e[5]?0:"right-card"===e[5]?1:-1}return~(t=s(e))&&(n=r[t]=o[t](e)),{c(){n&&n.c(),a=C()},m(e,n){~t&&r[t].m(e,n),y(e,a,n),i=!0},p(e,i){let l=t;t=s(e),t===l?~t&&r[t].p(e,i):(n&&(J(),te(r[l],1,1,(()=>{r[l]=null})),K()),~t?(n=r[t],n?n.p(e,i):(n=r[t]=o[t](e),n.c()),ee(n,1),n.m(a.parentNode,a)):n=null)},i(e){i||(ee(n),i=!0)},o(e){te(n),i=!1},d(e){~t&&r[t].d(e),e&&_(a)}}}function La(e){let t,n;return t=new $a({props:{style:"padding: 0 1.6vw 0.8vw 1.6vw;",$$slots:{default:[Ta]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};176&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function Ia(e){let t,n,a,i,o,r,s;return i=new Wn({props:{style:"padding: 1vw;",$$slots:{default:[wa]},$$scope:{ctx:e}}}),r=new ta({props:{fullBleed:!0,style:"min-height: 0;",$$slots:{default:[La]},$$scope:{ctx:e}}}),{c(){t=A("img"),a=x(),oe(i.$$.fragment),o=x(),oe(r.$$.fragment),c(t.src,n=e[1])||E(t,"src",n),E(t,"alt",e[2]),E(t,"class","svelte-2n91h2")},m(e,n){y(e,t,n),y(e,a,n),re(i,e,n),y(e,o,n),re(r,e,n),s=!0},p(e,a){(!s||2&a&&!c(t.src,n=e[1]))&&E(t,"src",n),(!s||4&a)&&E(t,"alt",e[2]);const o={};140&a&&(o.$$scope={dirty:a,ctx:e}),i.$set(o);const l={};176&a&&(l.$$scope={dirty:a,ctx:e}),r.$set(l)},i(e){s||(ee(i.$$.fragment,e),ee(r.$$.fragment,e),s=!0)},o(e){te(i.$$.fragment,e),te(r.$$.fragment,e),s=!1},d(e){e&&_(t),e&&_(a),se(i,e),e&&_(o),se(r,e)}}}function za(e){let t,n;return t=new ea({props:{$$slots:{default:[Ia]},$$scope:{ctx:e}}}),t.$on("click",e[6]),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};190&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function Oa(e){let t,n;return t=new Xn({props:{class:"custom-card "+e[5],$$slots:{default:[za]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,[n]){const a={};32&n&&(a.class="custom-card "+e[5]),191&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function qa(e,t,n){let{contentId:a,src:i,title:o,subtitle:r,buttonLabel:s,direction:l=""}=t;return e.$$set=e=>{"contentId"in e&&n(0,a=e.contentId),"src"in e&&n(1,i=e.src),"title"in e&&n(2,o=e.title),"subtitle"in e&&n(3,r=e.subtitle),"buttonLabel"in e&&n(4,s=e.buttonLabel),"direction"in e&&n(5,l=e.direction)},[a,i,o,r,s,l,()=>document.getElementById(a).classList.toggle("hidden")]}class Ma extends de{constructor(e){super(),ce(this,e,qa,Oa,r,{contentId:0,src:1,title:2,subtitle:3,buttonLabel:4,direction:5})}}function Ra(t){let n,a,i,o,r,s,l,c,d,u,p,m,g,f,h,$,v,w;return o=new Ma({props:{contentId:"content-balangero1",src:"img/balangero-berrino.jpg",title:"Dott. Franco Berrino",subtitle:"Laureatosi in medicina all'Università di Torino nel 1969 e specializzatosi in anatomia patologica, si è poi dedicato all'epidemiologia dei tumori.",buttonLabel:"Scopri la sua testimonianza",direction:"left-card"}}),d=new Aa({props:{direction:"right-button",label:"Leggi l'intervista",href:"https://www.corriere.it/cook/news/21_maggio_10/franco-berrino-vivo-solitudine-la-morte-mia-moglie-jo-b48c0c7c-a78d-11eb-b37e-07dee681b819.shtml"}}),h=new Aa({props:{direction:"left-button",label:"Leggi l'articolo",href:"https://www.inail.it/cs/internet/comunicazione/news-ed-eventi/news/ucm_106891_amianto_a_balangero_la_minier.html"}}),v=new Ma({props:{contentId:"content-balangero2",src:"img/balangero-levi-calvino.jpg",title:"Primo Levi e Italo Calvino",subtitle:"L'Amiantifera di Balangero viene denunciata anche dalla letteratura italiana del Novecento",buttonLabel:"Scopri i loro racconti",direction:"right-card"}}),{c(){n=A("div"),n.textContent="La miniera raccontata direttamente dai suoi testimoni",a=x(),i=A("div"),oe(o.$$.fragment),r=x(),s=A("div"),l=A("div"),l.innerHTML='Una testimonianza diretta della tragedia causata dall&#39;amianto ci arriva dal medico epidemiologo ed esperto di tumori\n      <span class="highlight">Franco Berrino</span>, cresciuto proprio a Balangero dove il padre, l&#39;ingegnere Giovanni Berrino, era stato nominato direttore\n      tecnico della miniera.\n      <br/><br/> \n      <span class="italic">&quot;Non c’era alcuna prevenzione: mio padre fu invitato a dimettersi perché ai padroni non piacevano i suoi investimenti per mettere i filtri, delle\n        maniche di cotone. Alla fine è morto di amianto: <span class="highlight">tumore al polmone</span> a 72 anni senza mai aver fumato una sigaretta. Stesso destino\n        per mio fratello: mesotelioma, a 67 anni.&quot;</span>',c=x(),oe(d.$$.fragment),u=x(),p=A("div"),m=A("div"),g=A("div"),g.innerHTML='Nel novembre del 1941 <span class="highlight">Primo Levi</span>, neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche\n      sull’estrazione del prezioso nichel dalla roccia di serpentino. Levi descrive la cava paragonandola alla rappresentazione dantesca dei\n      <span class="highlight">gironi infernali</span>, con fibre di amianto onnipresenti, raffigurate come un demone, asfissiante e ostile. Celebre è diventata\n      la sua frase <span class="italic">&quot;C’era amianto dappertutto, come una neve cenerina&quot;</span>.\n      <br/><br/>\n      Nel 1954 <span class="highlight">Italo Calvino</span> arriva nella miniera piemontese come redattore del quotidiano &quot;l’Unità&quot; occupandosi del rischio\n      amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo\n      <span class="italic">&quot;Il grigio polverone d’asbesto della cava che dove arriva <span class="highlight">brucia</span>, <span class="highlight">foglie e polmoni</span>&quot;</span>.',f=x(),oe(h.$$.fragment),$=x(),oe(v.$$.fragment),E(n,"class","mdc-typography--headline3 uppercase"),z(n,"margin-top","23vw"),E(s,"class","mdc-typography--body1 hidden right-align flex-column-2"),E(s,"id","content-balangero1"),E(i,"class","flex-row-4"),z(i,"margin-top","4vw"),E(m,"class","mdc-typography--body1 hidden left-align flex-column-2"),E(m,"id","content-balangero2"),E(p,"class","flex-row-4"),z(p,"margin-top","4vw")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),b(i,s),b(s,l),b(s,c),re(d,s,null),y(e,u,t),y(e,p,t),b(p,m),b(m,g),b(m,f),re(h,m,null),b(p,$),re(v,p,null),w=!0},p:e,i(e){w||(ee(o.$$.fragment,e),ee(d.$$.fragment,e),ee(h.$$.fragment,e),ee(v.$$.fragment,e),w=!0)},o(e){te(o.$$.fragment,e),te(d.$$.fragment,e),te(h.$$.fragment,e),te(v.$$.fragment,e),w=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(d),e&&_(u),e&&_(p),se(h),se(v)}}}class Ba extends de{constructor(e){super(),ce(this,e,null,Ra,r,{})}}function Da(e){let t,n,a,i,o;return{c(){t=A("div"),n=w(e[1]),a=x(),i=A("div"),o=w(e[0]),E(t,"class","mdc-typography--headline4 highlight"),E(i,"class","mdc-typography--body2 bold")},m(e,r){y(e,t,r),b(t,n),y(e,a,r),y(e,i,r),b(i,o)},p(e,t){2&t&&I(n,e[1]),1&t&&I(o,e[0])},d(e){e&&_(t),e&&_(a),e&&_(i)}}}function Pa(e){let t,n;return t=new Wn({props:{style:"padding: 1vw;",$$slots:{default:[Da]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,n){const a={};7&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function ka(e){let t,n;return t=new Xn({props:{class:"stats-card",padded:!0,$$slots:{default:[Pa]},$$scope:{ctx:e}}}),{c(){oe(t.$$.fragment)},m(e,a){re(t,e,a),n=!0},p(e,[n]){const a={};7&n&&(a.$$scope={dirty:n,ctx:e}),t.$set(a)},i(e){n||(ee(t.$$.fragment,e),n=!0)},o(e){te(t.$$.fragment,e),n=!1},d(e){se(t,e)}}}function Na(e,t,n){let{caption:a,value:i}=t;return e.$$set=e=>{"caption"in e&&n(0,a=e.caption),"value"in e&&n(1,i=e.value)},[a,i]}class Ha extends de{constructor(e){super(),ce(this,e,Na,ka,r,{caption:0,value:1})}}function ja(t){let n,a,i,o,r,s,l,c,d,u,p,m;return o=new Ha({props:{value:"1918-1990",caption:"Periodo di attivitá"}}),s=new Ha({props:{value:"35-40.000 Ton",caption:"Estrazioni annue"}}),c=new Ha({props:{value:"214",caption:"Vittime accertate"}}),p=new Pn({props:{target:"content4-1",label:"Continua il viaggio"}}),{c(){n=A("div"),n.textContent="La miniera in numeri",a=x(),i=A("div"),oe(o.$$.fragment),r=x(),oe(s.$$.fragment),l=x(),oe(c.$$.fragment),d=x(),u=A("div"),oe(p.$$.fragment),E(n,"class","mdc-typography--headline3 uppercase"),z(n,"margin-top","8vw"),E(i,"class","flex-row-2"),z(i,"margin-top","2vw"),z(u,"margin-top","3.5vw")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),re(s,i,null),b(i,l),re(c,i,null),y(e,d,t),y(e,u,t),re(p,u,null),m=!0},p:e,i(e){m||(ee(o.$$.fragment,e),ee(s.$$.fragment,e),ee(c.$$.fragment,e),ee(p.$$.fragment,e),m=!0)},o(e){te(o.$$.fragment,e),te(s.$$.fragment,e),te(c.$$.fragment,e),te(p.$$.fragment,e),m=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(s),se(c),e&&_(d),e&&_(u),se(p)}}}class Ua extends de{constructor(e){super(),ce(this,e,null,ja,r,{})}}function Va(t){let n,a,i,o,r,s,l,c,d,u,p,m,g,f,h,$,v,C,S,T,L;return T=new Aa({props:{label:"Guarda il documentario",href:"https://youtu.be/cy3piCUPIkc?t=492",direction:"right-button"}}),{c(){n=A("div"),n.textContent="Libby, USA",a=x(),i=A("div"),i.innerHTML='<div class="mdc-typography--headline4 uppercase">Storia del passato</div> \n  <div class="mdc-typography--body1">La cittadina di Libby, in Montana, è il sito di uno dei peggiori <span class="highlight">disastri ambientali</span> causati dall&#39;uomo. La polvere di amianto\n    tossico proveniente dalle miniere di vermiculite ha ucciso centinaia di residenti, ammalandone altre migliaia.\n    <br/><br/>\n    Nel 1963, la W.R. Grace &amp; Company iniziò a scavare un deposito di <span class="highlight">vermiculite</span> su una cima boschiva vicino a Libby. Il\n    minerale, relativamente innocuo, è stato utilizzato come isolamento delle soffitte fino agli anni &#39;80. Ma nello stesso deposito è stato trovato un tipo\n    naturale di <span class="highlight">amianto mortale</span>.\n    <br/><br/>\n    Per decenni, la miniera ha prodotto <span class="highlight">tonnellate di polvere</span> al giorno, che non solo fluttuava ovunque negli stabilimenti, ma\n    inondava l&#39;aria respirabile di gran parte della città. L&#39;azienda sapeva che la vermiculite era <span class="highlight">contaminata</span> dall&#39;amianto, ma non\n    avvertì nessuno e continuò ad operare fino al 1990.</div>',o=x(),r=A("div"),s=A("div"),s.textContent="Conseguenze sul presente",l=x(),c=A("div"),d=w("Quando l'azienda venne chiusa, gli operai del governo chiamati per il risanamento hanno trovato l'amianto quasi "),u=A("span"),u.textContent="dappertutto",p=w(":\r\n    nei polmoni degli operai e delle loro famiglie, sul campo da baseball e sulle piste da corsa del liceo a cui l'azienda aveva donato il materiale per la\r\n    copertura.\r\n    "),m=A("br"),g=A("br"),f=w("\r\n    Gli effetti dolorosi delle polveri continuano "),h=A("span"),h.textContent="lenti ma inesorabili",$=w(": ci vogliono decenni perché i sintomi delle malattie da\r\n    amianto si manifestino, infatti i bambini che hanno giocato a baseball o corso sulle piste a contatto con l'amianto stanno iniziando ad ammalarsi solo ora.\r\n    "),v=A("br"),C=A("br"),S=x(),oe(T.$$.fragment),E(n,"class","mdc-typography--headline1 uppercase"),E(i,"class","left svelte-tz0xuf"),E(s,"class","mdc-typography--headline4 uppercase primary"),E(u,"class","highlight"),E(h,"class","highlight"),E(c,"class","mdc-typography--body1"),E(r,"class","right svelte-tz0xuf")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),y(e,o,t),y(e,r,t),b(r,s),b(r,l),b(r,c),b(c,d),b(c,u),b(c,p),b(c,m),b(c,g),b(c,f),b(c,h),b(c,$),b(c,v),b(c,C),b(c,S),re(T,c,null),L=!0},p:e,i(e){L||(ee(T.$$.fragment,e),L=!0)},o(e){te(T.$$.fragment,e),L=!1},d(e){e&&_(n),e&&_(a),e&&_(i),e&&_(o),e&&_(r),se(T)}}}class Fa extends de{constructor(e){super(),ce(this,e,null,Va,r,{})}}function Ga(t){let n,a,i,o,r,s,l,c,d,u,p,m,g,f,h,$,v,w;return o=new Ma({props:{contentId:"content-libby1",src:"img/libby-hutt.jpg",title:"Ralph Hutt",subtitle:"La testimonianza di un ex-operaio presso l'azienda mineraria W.R. Grace & Company.",buttonLabel:"Ascolta la sua storia",direction:"left-card"}}),d=new Aa({props:{direction:"right-button",label:"Guarda l'intervista",href:"https://youtu.be/ILklSy6QLbI"}}),h=new Aa({props:{direction:"left-button",label:"Leggi lo studio",href:"https://www.nature.com/articles/jes201618"}}),v=new Ma({props:{contentId:"content-libby2",src:"img/libby-today.jpg",title:"La situazione a Libby oggi",subtitle:"Come le attivitá di sanificazione hanno provato a rimediare al disastro causato dalla miniera.",buttonLabel:"Scopri di piú",direction:"right-card"}}),{c(){n=A("div"),n.textContent="Si può tornare indietro da questo disastro?",a=x(),i=A("div"),oe(o.$$.fragment),r=x(),s=A("div"),l=A("div"),l.innerHTML='Il signor <span class="highlight">Ralph Hutt</span> ha lavorato a contatto con l&#39;amianto soltanto per <span class="highlight">18 mesi</span> e gli è stata\n      diagnosticata l&#39;asbestosi polmonare nel 2002. Ai tempi, le uniche precauzioni fornite ai lavoratori dall&#39;azienda erano\n      <span class="highlight">mascherine di carta</span>. Quando ha chiesto al suo supervisore una maggiore protezione, gli fu detto di non preoccuparsi poiché\n      ciò che respiravano era solo polvere.\n      <br/><br/>\n      Già da allora le sue radiografie mostravano segni dei danni da amianto ai polmoni, tra cui la graduale perdita della\n      <span class="highlight">capacità di respirare</span>. I dirigenti dell&#39;azienda erano al corrente della presenza di amianto nello stabilimento, ma decisero\n      di tenere tutti i lavoratori, tra cui Ralph, all&#39;oscuro.\n      <br/><br/> \n      <span class="italic">&quot;Questo non è il modo in cui me ne voglio andare&quot;</span>, ha detto.\n      <span class="italic">&quot;Lasciate che qualcuno mi spari. Non voglio essere schiacciato sott&#39;acqua o <span class="highlight">strangolato</span>. È così che ci si sente&quot;</span>.',c=x(),oe(d.$$.fragment),u=x(),p=A("div"),m=A("div"),g=A("div"),g.innerHTML='Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono\n      <span class="highlight">morti</span> per malattie correlate all&#39;amianto e circa 1 su 10 tra tutti gli abitanti è\n      <span class="highlight">attualmente malato</span>.\n      <br/><br/>\n      L’Agenzia per la Protezione Ambientale Americana ha effettuato sopralluoghi in circa <span class="highlight">8200 proprietà</span>, di cui più di 2400\n      siti sono stati risanificati completamente. Tra questi rientravano attività commerciali, giardini, abitazioni private, parchi e altri\n      <span class="highlight">spazi pubblici</span> frequentati.\n      <br/><br/>\n      Ad oggi, per la decontaminazione e il <span class="highlight">risanamento</span> della città di Libby, sono stati rimossi e rimpiazzati complessivamente più\n      di 750’000 metri cubi di rifiuti e materiali da costruzione, causando una spesa di oltre 600 milioni di dollari statali.',f=x(),oe(h.$$.fragment),$=x(),oe(v.$$.fragment),E(n,"class","mdc-typography--headline3 uppercase"),z(n,"margin-top","16vw"),E(s,"class","mdc-typography--body1 hidden right-align flex-column-2"),E(s,"id","content-libby1"),E(i,"class","flex-row-4"),z(i,"margin","4vw 0 0 2vw"),E(m,"class","mdc-typography--body1 hidden left-align flex-column-2"),E(m,"id","content-libby2"),E(p,"class","flex-row-4"),z(p,"margin-top","6vw")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),b(i,s),b(s,l),b(s,c),re(d,s,null),y(e,u,t),y(e,p,t),b(p,m),b(m,g),b(m,f),re(h,m,null),b(p,$),re(v,p,null),w=!0},p:e,i(e){w||(ee(o.$$.fragment,e),ee(d.$$.fragment,e),ee(h.$$.fragment,e),ee(v.$$.fragment,e),w=!0)},o(e){te(o.$$.fragment,e),te(d.$$.fragment,e),te(h.$$.fragment,e),te(v.$$.fragment,e),w=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(d),e&&_(u),e&&_(p),se(h),se(v)}}}class Xa extends de{constructor(e){super(),ce(this,e,null,Ga,r,{})}}function Wa(t){let n,a,i,o,r,s,l,c,d,u,p,m;return o=new Ha({props:{value:"1919-1990",caption:"Periodo di attivitá"}}),s=new Ha({props:{value:"2,400+",caption:"Tumori diagnosticati"}}),c=new Ha({props:{value:"694",caption:"Vittime accertate"}}),p=new Pn({props:{target:"content5-1",label:"Continua il viaggio"}}),{c(){n=A("div"),n.textContent="La miniera in numeri",a=x(),i=A("div"),oe(o.$$.fragment),r=x(),oe(s.$$.fragment),l=x(),oe(c.$$.fragment),d=x(),u=A("div"),oe(p.$$.fragment),E(n,"class","mdc-typography--headline3 uppercase"),z(n,"margin-top","6vw"),E(i,"class","flex-row-2"),z(i,"margin-top","2vw"),z(u,"margin-top","3vw")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),re(s,i,null),b(i,l),re(c,i,null),y(e,d,t),y(e,u,t),re(p,u,null),m=!0},p:e,i(e){m||(ee(o.$$.fragment,e),ee(s.$$.fragment,e),ee(c.$$.fragment,e),ee(p.$$.fragment,e),m=!0)},o(e){te(o.$$.fragment,e),te(s.$$.fragment,e),te(c.$$.fragment,e),te(p.$$.fragment,e),m=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(s),se(c),e&&_(d),e&&_(u),se(p)}}}class Ya extends de{constructor(e){super(),ce(this,e,null,Wa,r,{})}}function Qa(t){let n,a,i,o,r;return{c(){n=A("div"),n.textContent="Minaçu, Brasile",a=x(),i=A("div"),i.innerHTML='<div class="mdc-typography--headline4 uppercase">Una storia controversa</div> \n  <div class="mdc-typography--body1">Minaçu è un comune brasiliano dello stato del Goiás dove opera la <span class="highlight">SAMA</span>, un&#39;industria franco-brasiliana dedita all’estrazione\n    di amianto crisotilo, e dove è presente la più grande miniera di amianto del Brasile chiamata <span class="highlight">Cana Brava</span>. L&#39;amianto ha reso\n    Minaçu uno dei comuni più ricchi del paese.\n    <br/><br/>\n    Le leggi federali in Brasile attestano chiaramente la pericolosità dell’amianto. Ciononostante, l’estrazione, la manipolazione e la commercializzazione di quest’ultimo\n    sono rimaste attive fino al 2017, anno in cui la Corte Suprema Federale ha <span class="highlight">vietato</span> l’uso del minerale.\n    <br/><br/>\n    Nel 2019, però, il governatore del Brasile ha emanato una <span class="highlight">legislazione</span> nello stato di Goiás, approvando l’estrazione e l&#39;esportazione\n    di amianto, facendo continuare così l’operato di Cana Brava. Questa mossa politica ha portato gli abitanti di Minaçu in una situazione delicata di fronte a un\n    bivio: in qualsiasi momento una decisione del tribunale potrebbe interrompere l&#39;attività mineraria della città, caduta proprio in un periodo economico difficile.</div>',o=x(),r=A("div"),r.innerHTML='<div class="mdc-typography--headline4 uppercase primary">L&#39;opinione degli abitanti</div> \n  <div class="mdc-typography--body1">Alcuni residenti desiderano che la città abbandoni l’amianto e si rinnovi, secondo altri invece senza amianto la città è finita.\n    <span class="italic">&quot;Se SAMA si ferma, la città si ferma&quot;</span>,\n    ha detto Joaquim de Souza, 54 anni, operaio della SAMA, che vive vicino alla massiccia <span class="highlight">collina di detriti</span> di\n    amianto di Minaçu.\n    <br/><br/>\n    Molti si riferiscono all&#39;azienda come la <span class="italic">&quot;<span class="highlight">madre</span> di Minaçu, che si prende cura dei suoi abitanti&quot;</span>,\n    mentre altri la ritengono in realtá una <span class="italic">&quot;madre perversa che fa ammalare le persone, voltandogli poi le spalle&quot;</span>.\n    <br/><br/>\n    In tanti ancora negano che l&#39;amianto sia <span class="highlight">dannoso</span>, sostenendo che\n    <span class="italic">&quot;la maggior parte dei lavoratori fumava, e solo dopo essersi ammalati per le sigarette hanno accusato SAMA&quot;</span>.</div>',E(n,"class","mdc-typography--headline1 uppercase"),E(i,"class","left svelte-1b0ac56"),E(r,"class","right svelte-1b0ac56")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),y(e,o,t),y(e,r,t)},p:e,i:e,o:e,d(e){e&&_(n),e&&_(a),e&&_(i),e&&_(o),e&&_(r)}}}class Za extends de{constructor(e){super(),ce(this,e,null,Qa,r,{})}}function Ja(t){let n,a,i,o,r,s,l,c,d,u,p,m,g,f,h,$,v,w;return o=new Ma({props:{contentId:"content-minacu1",src:"img/minacu-court.png",title:"Le infinite battaglie legali",subtitle:"Come le vittime hanno cercato giustizia contro i danni della miniera",buttonLabel:"Scopri di più",direction:"left-card"}}),d=new Aa({props:{direction:"right-button",label:"Approfondisci l'inchiesta",href:"https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L"}}),h=new Aa({props:{direction:"left-button",label:"Leggi l'articolo",href:"https://ejatlas.org/conflict/amianto-mining-in-minacu-goias"}}),v=new Ma({props:{contentId:"content-minacu2",src:"img/minacu-evandra.jpg",title:"Evandra Vieira Brito",subtitle:"Vedova di un ex dipendente di SAMA",buttonLabel:"Leggi la testimonianza",direction:"right-card"}}),{c(){n=A("div"),n.textContent="Come si sono schierati i cittadini con ideologie differenti?",a=x(),i=A("div"),oe(o.$$.fragment),r=x(),s=A("div"),l=A("div"),l.innerHTML='Quando l&#39;industria dell&#39;amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore politico,\n      scegliendo sindaci, consiglieri e sacerdoti schierati a <span class="highlight">difesa dell&#39;amianto</span>. Denigrare pubblicamente SAMA può essere\n      considerato tabù da alcuni residenti, infatti, in migliaia hanno tranquillamente firmato\n      <span class="highlight">accordi</span>\n      con la compagnia per ottenere un risarcimento sui danni sanitari.\n      <br/><br/>\n      La causa in corso è portata avanti dalla <span class="highlight">ABREA</span>, associazione brasiliana a difesa delle vittime di amianto, fondata da\n      Fernanda Giannasi nel 1995. L&#39;ultima sentenza del tribunale, nel Novembre del 2021, ha ordinato alla compagnia di pagare le\n      <span class="highlight">spese mediche</span> per i prossimi 30 anni a tutti i lavoratori che abbiano manifestato problemi di salute &quot;associabili all&#39;amianto&quot;.',c=x(),oe(d.$$.fragment),u=x(),p=A("div"),m=A("div"),g=A("div"),g.innerHTML='Nel cosiddetto &quot;letto di polvere&quot;, luogo in cui il minerale veniva separato, gli operai, tra i quali molte donne, erano coperti di polvere.<br/>\n      Ce ne dà una testimonianza chiara <span class="highlight">Evandra Vieira Brito</span>, che ha perso il marito (un ex dipendente di SAMA) a causa di un\n      cancro nel 2009, ricordando:\n      <span class="italic">&quot;C&#39;erano circa 20 ragazze coperte dalla polvere. Sono <span class="highlight">morte tutte</span> dopo aver vomitato sangue&quot;</span>.\n      <br/><br/>\n      Nonostante questo tipo di testimonianze, gruppi favorevoli alla miniera hanno dichiarato che\n      <span class="italic">&quot;il modo in cui viene estratto l&#39;amianto a Minaçu non è dannoso per la salute&quot;</span> e che\n      <span class="italic">&quot;l&#39;azienda rispetta tutte le leggi relative alla <span class="highlight">salute sul lavoro</span>&quot;</span>. Affermano inoltre che le\n      persone che si ammalano in miniera in questo momento è perché si sono ammalate a causa del lavoro svolto precedentemente presso un&#39;altra miniera e sono\n      successivamente emigrate per lavoro a Cana Brava.',f=x(),oe(h.$$.fragment),$=x(),oe(v.$$.fragment),E(n,"class","mdc-typography--headline3 uppercase"),z(n,"margin-top","12vw"),E(s,"class","mdc-typography--body1 hidden right-align flex-column-2"),E(s,"id","content-minacu1"),E(i,"class","flex-row-4"),z(i,"margin-top","4vw"),E(m,"class","mdc-typography--body1 hidden left-align flex-column-2"),E(m,"id","content-minacu2"),E(p,"class","flex-row-4"),z(p,"margin-top","4vw")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),b(i,s),b(s,l),b(s,c),re(d,s,null),y(e,u,t),y(e,p,t),b(p,m),b(m,g),b(m,f),re(h,m,null),b(p,$),re(v,p,null),w=!0},p:e,i(e){w||(ee(o.$$.fragment,e),ee(d.$$.fragment,e),ee(h.$$.fragment,e),ee(v.$$.fragment,e),w=!0)},o(e){te(o.$$.fragment,e),te(d.$$.fragment,e),te(h.$$.fragment,e),te(v.$$.fragment,e),w=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(d),e&&_(u),e&&_(p),se(h),se(v)}}}class Ka extends de{constructor(e){super(),ce(this,e,null,Ja,r,{})}}function ei(t){let n,a,i,o,r,s,l,c,d,u;return o=new Ha({props:{value:"1967 - oggi",caption:"Periodo di attivitá"}}),s=new Ha({props:{value:"13%",caption:"Produzione globale"}}),d=new Pn({props:{target:"content3-1",label:"Continua il viaggio"}}),{c(){n=A("div"),n.textContent="La miniera in numeri",a=x(),i=A("div"),oe(o.$$.fragment),r=x(),oe(s.$$.fragment),l=x(),c=A("div"),oe(d.$$.fragment),E(n,"class","mdc-typography--headline3 uppercase"),z(n,"margin-top","8vw"),E(i,"class","flex-row-2"),z(i,"margin-top","2vw"),z(c,"margin-top","3vw")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),re(s,i,null),y(e,l,t),y(e,c,t),re(d,c,null),u=!0},p:e,i(e){u||(ee(o.$$.fragment,e),ee(s.$$.fragment,e),ee(d.$$.fragment,e),u=!0)},o(e){te(o.$$.fragment,e),te(s.$$.fragment,e),te(d.$$.fragment,e),u=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(s),e&&_(l),e&&_(c),se(d)}}}class ti extends de{constructor(e){super(),ce(this,e,null,ei,r,{})}}function ni(t){let n,a,i,o,r,s,l,c,d,u,p,m,g,f,h,$,v,C,S,T,L,I,z,O,q,M,R,B,D,P,k,N,H,j;return k=new Aa({props:{label:"L'azienda Uralasbest",href:"https://www.uralasbest.ru/en/about-company",direction:"left-button"}}),{c(){n=A("div"),n.textContent="Asbest, Russia",a=x(),i=A("div"),o=A("div"),o.textContent="Storia del passato",r=x(),s=A("div"),l=w("Ci troviamo in Russia, più precisamente ad Asbest, una piccola città chiamata così proprio per la presenza del\r\n    "),c=A("span"),c.textContent="più grande",d=w(" giacimento a cielo aperto di amianto "),u=A("span"),u.textContent="nel mondo",p=w(": quasi mezzo milione di tonnellate\r\n    di amianto vengono scavate ogni anno nella miniera dall'impresa "),m=A("span"),m.textContent="Uralasbest",g=w(".\r\n    "),f=A("br"),h=A("br"),$=w("\r\n    Circa settantamila persone vivono ad Asbest, un tempo conosciuta come "),v=A("span"),v.textContent='"la città che muore"',C=w(" per i suoi altissimi tassi di\r\n    cancro ai polmoni.\r\n    "),S=A("br"),T=A("br"),L=w("\r\n    Nonostante il "),I=A("span"),I.textContent="divieto",z=w(" di estrazione e distribuzione dell'amianto da parte degli altri paesi, l'azienda locale ha cercato di\r\n    eliminare l'associazione popolare tra amianto e cancro ai polmoni e altre malattie, "),O=A("span"),O.textContent="rinominando",q=w(" il suo prodotto come\r\n    "),M=A("span"),M.textContent='"crisotilo"',R=w(", il nome blando e tecnico del tipo specifico del minerale estratto.\r\n    "),B=A("br"),D=A("br"),P=x(),oe(k.$$.fragment),N=x(),H=A("div"),H.innerHTML='<div class="mdc-typography--headline4 uppercase primary">Conseguenze sul presente</div> \n  <div class="mdc-typography--body1">Tutt&#39;oggi i produttori russi operano noncuranti dei pericoli e <span class="highlight">sostenuti dal governo</span>, il quale fa leva sugli abitanti sapendo\n    che la miniera è l’unica importante fonte economica della città.<br/>\n    Asbest, dopo un secolo di estrazione mineraria intensiva, ha ancora abbastanza amianto crisotilo sepolto nel terreno per mantenere Uralasbest in attività per\n    almeno <span class="highlight">un altro secolo</span>.\n    <br/><br/>\n    L&#39;opinione di molti residenti di Asbest è che ci sono così tante <span class="highlight">altre questioni</span> di cui preoccuparsi nella loro regione\n    fortemente industrializzata, inclusa una centrale nucleare a poche miglia di distanza e una centrale elettrica a carbone ancora più vicina, che l&#39;amianto è\n    probabilmente\n    <span class="highlight">l&#39;ultima delle loro preoccupazioni</span>.\n    <br/><br/>\n    La vita dei cittadini è fortemente intrecciata con quella della miniera, tanto che la città possiede un <span class="highlight">inno municipale</span>\n    chiamato\n    <span class="italic">&quot;Amianto, la mia città e il mio destino&quot;</span>. Dal 2002 il Consiglio Comunale ha adottato perfino una nuova\n    <span class="highlight">bandiera</span>: le linee bianche, che simboleggiano le fibre di amianto, passano attraverso un anello di fiamme. Un cartellone\n    affisso da Uralasbest proclama\n    <span class="italic">&quot;L&#39;amianto è il nostro futuro&quot;</span>.</div>',E(n,"class","mdc-typography--headline2 uppercase"),E(o,"class","mdc-typography--headline4 uppercase"),E(c,"class","highlight"),E(u,"class","highlight"),E(m,"class","highlight"),E(v,"class","highlight"),E(I,"class","highlight"),E(O,"class","highlight"),E(M,"class","highlight"),E(s,"class","mdc-typography--body1"),E(i,"class","left svelte-14vy1zp"),E(H,"class","right svelte-14vy1zp")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),b(i,o),b(i,r),b(i,s),b(s,l),b(s,c),b(s,d),b(s,u),b(s,p),b(s,m),b(s,g),b(s,f),b(s,h),b(s,$),b(s,v),b(s,C),b(s,S),b(s,T),b(s,L),b(s,I),b(s,z),b(s,O),b(s,q),b(s,M),b(s,R),b(s,B),b(s,D),b(s,P),re(k,s,null),y(e,N,t),y(e,H,t),j=!0},p:e,i(e){j||(ee(k.$$.fragment,e),j=!0)},o(e){te(k.$$.fragment,e),j=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(k),e&&_(N),e&&_(H)}}}class ai extends de{constructor(e){super(),ce(this,e,null,ni,r,{})}}function ii(t){let n,a,i,o,r,s,l,c,d,u,p,m,g,f,h,$,v,w,C,S,T,L,I,O,q,M,R,B,D,P,k;return o=new Ma({props:{contentId:"content-asbest1",src:"img/asbest-trump.jpeg",title:"Donald Trump",subtitle:"Come il 45° presidente degli Stati Uniti viene usato nella propaganda a favore dell'amianto",buttonLabel:"Approfondisci la storia",direction:"left-card"}}),d=new Aa({props:{direction:"right-button",label:"Leggi l'articolo",href:"https://www.washingtonpost.com/news/business/wp/2018/07/11/approved-by-donald-trump-asbestos-sold-by-russian-company-is-branded-with-the-presidents-face/"}}),f=new Ma({props:{contentId:"content-asbest2",src:"img/asbest-city.jpg",title:"Igor Bragin",subtitle:"Medico capo del complesso ospedaliero Asbest City Hospital",buttonLabel:"Scopri la sua opinione",direction:"right-card"}}),v=new Ma({props:{contentId:"content-asbest3",src:"img/asbest-stepanov.jpg",title:"Viktor Stepanov",subtitle:"Ex lavoratore della fabbrica di Uralasbest",buttonLabel:"Leggi le sua parole",direction:"left-card"}}),L=new Aa({props:{direction:"right-button",label:"Leggi l'articolo",href:"https://www.nytimes.com/2019/04/07/world/europe/asbestos-russia-mine.html"}}),B=new Aa({props:{direction:"left-button",label:"Leggi l'articolo",href:"https://www.nytimes.com/2013/07/14/business/global/city-in-russia-unable-to-kick-asbestos-habit.html"}}),P=new Ma({props:{contentId:"content-asbest4",src:"img/asbest-miner.png",title:"Valentin K. Zemskov",subtitle:"Ex lavoratore della miniera",buttonLabel:"Scopri la testimonianza",direction:"right-card"}}),{c(){n=A("div"),n.textContent="Perché preoccuparsi così tanto dell'amianto?",a=x(),i=A("div"),oe(o.$$.fragment),r=x(),s=A("div"),l=A("div"),l.innerHTML='Attaccato per decenni dai difensori della salute, l&#39;ostinatamente\n      <span class="highlight">provocatoria</span> azienda russa produttrice di amianto, trova \n      nell&#39;ex presidente statunitense Donald Trump, la figura perfetta per una campagna volta a\n      <span class="highlight">riabilitare</span> l&#39;immagine profondamente macchiata del proprio prodotto.\n      <br/><br/>\n      Nel 2018 la società Russa ha messo in circolazione pallet adornati con un sigillo raffigurante la faccia di Trump e recitante la seguente\n      frase <span class="italic">&quot;Approvato da <span class="highlight">Donald Trump</span>, 45° presidente degli Stati Uniti&quot;</span>',c=x(),oe(d.$$.fragment),u=x(),p=A("div"),m=A("div"),m.innerHTML='<div>Il dottor <span class="highlight">Igor Bragin</span> ha liquidato come <span class="italic">&quot;non corrispondente alla realtà&quot;</span> uno studio scientifico del 2016 che mostrava tassi\n      elevati di cancro ai polmoni nei pressi della miniera.\n      <br/><br/>\n      Lo studio, una revisione comparativa dei <span class="highlight">tassi di mortalità</span> ad Asbest e nella regione circostante di Sverdlovsk, ha\n      rilevato che &quot;i tassi di mortalità per tumori del polmone, dello stomaco e del colon erano statisticamente e significativamente\n      <span class="highlight">più alti</span>\n      nella città di Asbest&quot;.\n      <br/><br/>\n      L&#39;incidenza del <span class="highlight">mesotelioma</span>, una malattia polmonare ampiamente attribuita all&#39;amianto in Occidente,\n      <span class="highlight">non è stata studiata</span> a sufficienza dalla Russia impedendone il corretto monitoraggio sanitario.</div>',g=x(),oe(f.$$.fragment),h=x(),$=A("div"),oe(v.$$.fragment),w=x(),C=A("div"),S=A("div"),S.innerHTML='&quot;Sono un pensionato di 88 anni che ha trascorso decenni a lavorare nella fabbrica di amianto. La mia stessa età avanzata e il mantenimento di una buona\n      salute sono la prova che tutta l&#39;<span class="highlight">isteria sull&#39;amianto</span> non poteva essere vera.\n      <br/><br/>\n      Mentre lavoravo bevevo una <span class="highlight">bottiglia di latte</span> al giorno, l&#39;azienda le forniva gratuitamente per aiutare i lavoratori a difendersi\n      dalle malattie. Tutto è pericoloso in una certa misura. Il cento per cento di certezza che qualcosa non sia dannoso non puó esistere&quot;.',T=x(),oe(L.$$.fragment),I=x(),O=A("div"),q=A("div"),M=A("div"),M.innerHTML='<span class="highlight">Valentin K. Zemskov</span>, 82 anni, ha lavorato nella miniera per 40 anni e ha sviluppato l&#39;asbestosi, causata dall’inalazione\n      delle fibre di amianto.\n      <br/><br/> \n      <span class="italic">&quot;C&#39;era così tanta polvere che non potevi vedere un uomo in piedi accanto a te&quot;</span>, dice ricordando gli anni di lavoro.<br/>\n      Per la disabilità, la fabbrica aggiunge <span class="highlight">4.500 rubli</span> al suo assegno mensile per la pensione, una cifra ridicola sufficiente\n      a coprire solo pochi pasti.\n      <br/><br/>\n      Tuttavia, è convinto che la città non abbia altra scelta.\n      <span class="italic">&quot;Se non avessimo la fabbrica, <span class="highlight">come vivremmo?</span>\n        Dobbiamo continuare a tenerla aperta in modo da avere <span class="highlight">posti di lavoro</span> per tutti&quot;</span>, afferma senza fiato mentre parla nel cortile di una casa di riposo.',R=x(),oe(B.$$.fragment),D=x(),oe(P.$$.fragment),E(n,"class","mdc-typography--headline3 uppercase"),z(n,"margin-top","14vw"),E(s,"class","mdc-typography--body1 hidden right-align flex-column-2"),E(s,"id","content-asbest1"),E(i,"class","flex-row-4"),z(i,"margin-top","3vw"),E(m,"class","mdc-typography--body1 hidden left-align flex-column-2"),E(m,"id","content-asbest2"),E(p,"class","flex-row-4"),z(p,"margin-top","3vw"),E(C,"class","mdc-typography--body1 hidden right-align flex-column-2 italic"),E(C,"id","content-asbest3"),E($,"class","flex-row-4"),z($,"margin-top","3vw"),E(q,"class","mdc-typography--body1 hidden left-align flex-column-2"),E(q,"id","content-asbest4"),E(O,"class","flex-row-4"),z(O,"margin-top","3vw")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),b(i,s),b(s,l),b(s,c),re(d,s,null),y(e,u,t),y(e,p,t),b(p,m),b(p,g),re(f,p,null),y(e,h,t),y(e,$,t),re(v,$,null),b($,w),b($,C),b(C,S),b(C,T),re(L,C,null),y(e,I,t),y(e,O,t),b(O,q),b(q,M),b(q,R),re(B,q,null),b(O,D),re(P,O,null),k=!0},p:e,i(e){k||(ee(o.$$.fragment,e),ee(d.$$.fragment,e),ee(f.$$.fragment,e),ee(v.$$.fragment,e),ee(L.$$.fragment,e),ee(B.$$.fragment,e),ee(P.$$.fragment,e),k=!0)},o(e){te(o.$$.fragment,e),te(d.$$.fragment,e),te(f.$$.fragment,e),te(v.$$.fragment,e),te(L.$$.fragment,e),te(B.$$.fragment,e),te(P.$$.fragment,e),k=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(d),e&&_(u),e&&_(p),se(f),e&&_(h),e&&_($),se(v),se(L),e&&_(I),e&&_(O),se(B),se(P)}}}class oi extends de{constructor(e){super(),ce(this,e,null,ii,r,{})}}function ri(t){let n,a,i,o,r,s,l,c,d,u,p,m;return o=new Ha({props:{value:"1922 - oggi",caption:"Periodo di attivitá"}}),s=new Ha({props:{value:"500.000 ton",caption:"Estratte ogni anno"}}),c=new Ha({props:{value:"68,893",caption:"Cittadini a rischio"}}),p=new Pn({props:{target:"content6-1",label:"Cosa ci attende nel futuro?"}}),{c(){n=A("div"),n.textContent="La miniera in numeri",a=x(),i=A("div"),oe(o.$$.fragment),r=x(),oe(s.$$.fragment),l=x(),oe(c.$$.fragment),d=x(),u=A("div"),oe(p.$$.fragment),E(n,"class","mdc-typography--headline3 uppercase"),z(n,"margin-top","8vw"),E(i,"class","flex-row-2"),z(i,"margin-top","2vw"),z(u,"margin-top","3vw")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),re(s,i,null),b(i,l),re(c,i,null),y(e,d,t),y(e,u,t),re(p,u,null),m=!0},p:e,i(e){m||(ee(o.$$.fragment,e),ee(s.$$.fragment,e),ee(c.$$.fragment,e),ee(p.$$.fragment,e),m=!0)},o(e){te(o.$$.fragment,e),te(s.$$.fragment,e),te(c.$$.fragment,e),te(p.$$.fragment,e),m=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(s),se(c),e&&_(d),e&&_(u),se(p)}}}class si extends de{constructor(e){super(),ce(this,e,null,ri,r,{})}}function li(t){let n,a,i,o,r,s,l,d,u,p,m,g,f,h,$,v,C,S,T,L,I,O,q,M,R,B,D,P,k,N,H,j,U,V,F,G,X,W,Y,Q,Z,J,K,ne,ae,ie,le,ce,de,ue,pe,me,ge,fe,he,$e,ve,be,ye,_e,Ae;return H=new Aa({props:{label:"Amianto naturale",href:"https://www.arpal.liguria.it/tematiche/suolo/amianto-naturale.html",direction:"left-button"}}),me=new Aa({props:{label:"Lo studio completo",href:"https://www.regione.liguria.it/homepage/ambiente/territorio/bonifiche-siti-contaminati/mappatura-amianto/amianto-naturale.html",direction:"right-button"}}),_e=new Aa({props:{label:"Mappa interattiva",href:"http://srvcarto.regione.liguria.it/geoviewer2/pages/apps/geoportale/index.html?id=1200",direction:"right-button"}}),{c(){n=A("div"),n.textContent="Parco del Beigua, Liguria",a=x(),i=A("div"),o=A("div"),o.textContent="Potrebbe succedere anche a noi?",r=x(),s=A("div"),l=w("Con la legge 257 del 1992 l’Italia ha messo "),d=A("span"),d.textContent="al bando",u=w(" l'amianto, ma non ha risolto i problemi legati alla sua presenza\r\n    "),p=A("span"),p.textContent="in natura",m=w(" e all'utilizzo dei materiali a base di amianto già messi in opera.\r\n    "),g=A("br"),f=A("br"),h=w("\r\n    Ai sensi della L.R. 20/2006 Arpal provvede, su richiesta della Regione o degli Enti locali, ad effettuare le attività di\r\n    "),$=A("span"),$.textContent="controllo",v=w(" e "),C=A("span"),C.textContent="monitoraggio",S=w(" di siti estrattivi o di affioramenti naturali interessati dalla\r\n    presenza di "),T=A("span"),T.textContent='"Pietre verdi"',L=w(" (rocce ofiolitiche) a potenziale rischio amianto.\r\n    "),I=A("br"),O=A("br"),q=w("\r\n    Quindi se non facciamo attenzione a dove si vorrà introdurre un nuovo sito estrattivo, le polveri sottili che si potrebbero alzare a seguito degli scavi potrebbero\r\n    mescolarsi all'aria che respiriamo e "),M=A("span"),M.textContent="contaminare",R=w(" l'intera Ligura e il basso Piemonte, rendendo così inabitabili questi\r\n    "),B=A("span"),B.textContent="territori",D=w(" a noi tanto cari.\r\n    "),P=A("br"),k=A("br"),N=x(),oe(H.$$.fragment),j=x(),U=A("div"),V=A("div"),V.textContent="Cosa sono le pietre verdi?",F=x(),G=A("div"),X=w("Le "),W=A("span"),W.textContent='"Pietre verdi"',Y=w(" rappresentano i frammenti di un antico fondale oceanico successivamente compresso ed emerso in seguito ad\r\n    imponenti movimenti della crosta terreste. Tali rocce spesso contengono "),Q=A("span"),Q.textContent="fibre di amianto",Z=w(" e, pertanto, è\r\n    importante conoscere dove possono essere trovate, soprattutto in tema di gestione ed utilizzo delle terre e rocce da scavo.\r\n    "),J=A("br"),K=A("br"),ne=w("\r\n    La "),ae=A("span"),ae.textContent="cartografia",ie=w(" sotto riportata raffigura i territori in cui, in relazione alle rocce riconosciute in affioramento o\r\n    subaffioramento, potrebbero rinvenirsi concentrazioni di "),le=A("span"),le.textContent="minerali asbestiformi",ce=w(" con alte probabilità.\r\n    "),de=A("br"),ue=A("br"),pe=x(),oe(me.$$.fragment),ge=x(),fe=A("div"),he=A("img"),ve=x(),be=A("div"),be.textContent="Mappa della presenza di Pietre Verdi in Liguria, con evidenza sul territorio protetto del Parco del Beigua",ye=x(),oe(_e.$$.fragment),E(n,"class","mdc-typography--headline2 uppercase"),E(o,"class","mdc-typography--headline4 uppercase"),E(d,"class","highlight"),E(p,"class","highlight"),E($,"class","highlight"),E(C,"class","highlight"),E(T,"class","italic"),E(M,"class","highlight"),E(B,"class","highlight"),E(s,"class","mdc-typography--body1"),E(i,"class","left svelte-asx7jm"),E(V,"class","mdc-typography--headline4 uppercase primary"),E(W,"class","italic"),E(Q,"class","highlight"),E(ae,"class","highlight"),E(le,"class","highlight"),E(G,"class","mdc-typography--body1"),E(U,"class","right svelte-asx7jm"),c(he.src,$e="img/beigua-mappa.png")||E(he,"src","img/beigua-mappa.png"),E(he,"alt","Mappa della presenza di Pietre Verdi in Liguria, con evidenza sul territorio protetto del parco del Beigua"),E(he,"class","svelte-asx7jm"),E(be,"class","mdc-typography--body1"),z(be,"margin-block","1vw"),E(fe,"class","center svelte-asx7jm")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),b(i,o),b(i,r),b(i,s),b(s,l),b(s,d),b(s,u),b(s,p),b(s,m),b(s,g),b(s,f),b(s,h),b(s,$),b(s,v),b(s,C),b(s,S),b(s,T),b(s,L),b(s,I),b(s,O),b(s,q),b(s,M),b(s,R),b(s,B),b(s,D),b(s,P),b(s,k),b(s,N),re(H,s,null),y(e,j,t),y(e,U,t),b(U,V),b(U,F),b(U,G),b(G,X),b(G,W),b(G,Y),b(G,Q),b(G,Z),b(G,J),b(G,K),b(G,ne),b(G,ae),b(G,ie),b(G,le),b(G,ce),b(G,de),b(G,ue),b(G,pe),re(me,G,null),y(e,ge,t),y(e,fe,t),b(fe,he),b(fe,ve),b(fe,be),b(fe,ye),re(_e,fe,null),Ae=!0},p:e,i(e){Ae||(ee(H.$$.fragment,e),ee(me.$$.fragment,e),ee(_e.$$.fragment,e),Ae=!0)},o(e){te(H.$$.fragment,e),te(me.$$.fragment,e),te(_e.$$.fragment,e),Ae=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(H),e&&_(j),e&&_(U),se(me),e&&_(ge),e&&_(fe),se(_e)}}}class ci extends de{constructor(e){super(),ce(this,e,null,li,r,{})}}function di(t){let n,a,i,o,r,s,l,c,d,u,p,m,g,f,h,$,v,w,C,S;return o=new Ma({props:{contentId:"content-beigua1",src:"img/beigua-parco.jpg",title:"Parco Naturale Regionale del Beigua",subtitle:"L'importanza del giacimento di titanio di Pianpaludo",buttonLabel:"Scopri cosa c'è sotto",direction:"left-card"}}),d=new Aa({props:{direction:"right-button",label:"Approfondisci l'articolo",href:"https://www.ivg.it/2021/04/titanio-del-beigua-ecco-perche-il-giacimento-di-piampaludo-fa-gola/"}}),h=new Aa({props:{direction:"left-button",label:"Leggi l'articolo",href:"https://genova.repubblica.it/cronaca/2022/05/28/news/liguria_titanio_nel_beigua_tar_conferma_no_a_ricerche_minerarie-351535040/"}}),v=new Ma({props:{contentId:"content-beigua2",src:"img/beigua-tar.jpg",title:"Il no del TAR",subtitle:"Confermato il divieto di effettuare ricerche minerarie nell'area del Monte Tarinè",buttonLabel:"Scopri la sentenza",direction:"right-card"}}),{c(){n=A("div"),n.textContent="La situazione attuale del territorio",a=x(),i=A("div"),oe(o.$$.fragment),r=x(),s=A("div"),l=A("div"),l.innerHTML='Nel 1970 tra i comuni di Urbe e Sassello è stato scoperto un giacimento di biossido di <span class="highlight">titanio</span>, sepolto in corrispondenza\n      dei Monti Antenna e Tariné. Sono stimate circa 9 milioni di tonnellate di biossido di Titanio, sottoforma di rutilo. Nel 1976 il ministero dell’Industria ha rilasciato alla\n      Mineraria Italiana Srl una concessione ventennale sul territorio, ceduta poi alla Compagnia Europea per il Titanio.\n      <br/><br/>\n      Secondo uno studio dell’Università di Genova degli anni &#39;90, per sfruttare questo giacimento e ricavare solo il 6% di rutilo, si potrebbe arrivare a smuovere\n      circa\n      <span class="highlight">200 milioni</span> di metri cubi di terra, di cui le rocce amiantifere compongono tra il <span class="highlight">10%</span> e il\n      <span class="highlight">15%</span>: una tale quantità equivale a una movimentazione pari a 30 aeroporti di Genova.',c=x(),oe(d.$$.fragment),u=x(),p=A("div"),m=A("div"),g=A("div"),g.innerHTML='È stata depositata il <span class="highlight">21 maggio 2022</span> la\n      &quot;sentenza del Tribunale Amministrativo Regionale della Liguria che di fatto conferma il <span class="highlight">divieto</span> di effettuare ricerche\n      minerarie nell&#39;area del Monte Tariné&quot;.\n      <br/><br/>\n      L&#39;associazione di <span class="highlight">Legambiente Liguria</span> esprime\n      <span class="italic">&quot;soddisfazione in merito alla sentenza del TAR che rappresenta la pietra tombale su qualsiasi ipotesi di sfruttamento minerario del comprensorio del\n        Beigua&quot;</span>.\n      <br/><br/>\n      L&#39;assessore regionale all&#39;Urbanistica e alle attività estrattive <span class="highlight">Marco Scajola</span> afferma che\n      <span class="italic">&quot;La sentenza del Tar va nella direzione della <span class="highlight">tutela</span> del territorio voluta dalla Giunta regionale, da sempre contraria a\n        qualsiasi attività estrattiva all&#39;interno dell&#39;area del Parco&quot;</span>.',f=x(),oe(h.$$.fragment),$=x(),oe(v.$$.fragment),w=x(),C=A("div"),C.innerHTML='<div class="mdc-typography--headline3 uppercase" style="margin-top: 10vw;">E noi, vogliamo dare vita a questo inferno?</div> \n  <img src="img/logo.png" alt="Logo" class="svelte-1dbqn48"/>',E(n,"class","mdc-typography--headline3 uppercase"),z(n,"margin-top","15vw"),E(s,"class","mdc-typography--body1 hidden right-align flex-column-2"),E(s,"id","content-beigua1"),E(i,"class","flex-row-4"),z(i,"margin-top","4vw"),E(m,"class","mdc-typography--body1 hidden left-align flex-column-2"),E(m,"id","content-beigua2"),E(p,"class","flex-row-4"),z(p,"margin-top","10vw")},m(e,t){y(e,n,t),y(e,a,t),y(e,i,t),re(o,i,null),b(i,r),b(i,s),b(s,l),b(s,c),re(d,s,null),y(e,u,t),y(e,p,t),b(p,m),b(m,g),b(m,f),re(h,m,null),b(p,$),re(v,p,null),y(e,w,t),y(e,C,t),S=!0},p:e,i(e){S||(ee(o.$$.fragment,e),ee(d.$$.fragment,e),ee(h.$$.fragment,e),ee(v.$$.fragment,e),S=!0)},o(e){te(o.$$.fragment,e),te(d.$$.fragment,e),te(h.$$.fragment,e),te(v.$$.fragment,e),S=!1},d(e){e&&_(n),e&&_(a),e&&_(i),se(o),se(d),e&&_(u),e&&_(p),se(h),se(v),e&&_(w),e&&_(C)}}}class ui extends de{constructor(e){super(),ce(this,e,null,di,r,{})}}function pi(t){let n,a,i,o,r,s,l,d,u,p,m,g,f,h,$,v,w,C,S,T,L,I,O,q,M,R,B,D,P,k,N,H,j,U,V,F,G,X,W,Y,Q,Z,J,K,ne,ae,ie,le,ce,de,ue,pe,me,ge,fe,he,$e,ve,be,ye,_e,Ae,we,xe,Ce,Se,Ee,Te,Le,Ie,ze,Oe,qe,Me,Re,Be,De,Pe,ke,Ne,He,je,Ue,Ve,Fe,Ge,Xe,We,Ye,Qe,Ze,Je,Ke,et,tt,nt,at,it,ot,rt,st,lt,ct,dt,ut,pt,mt,gt,ft,ht,$t,vt,bt,yt,_t,At,wt,xt,Ct,St,Et,Tt,Lt,It,zt,Ot,qt,Mt,Rt;return n=new wn({}),u=new jn({}),m=new Pn({props:{target:"section1-2",label:"Comincia il viaggio"}}),C=new Vn({}),M=new ca({}),D=new Pn({props:{target:"content2-1",label:"Entra nella miniera"}}),V=new Za({}),Z=new Ka({}),ce=new ti({}),he=new ua({}),we=new Ba({}),Ie=new Ua({}),De=new Fa({}),Ve=new Xa({}),Ze=new Ya({}),it=new ai({}),ut=new oi({}),vt=new si({}),Ct=new ci({}),Ot=new ui({}),Mt=new Nn({}),{c(){oe(n.$$.fragment),a=x(),i=A("main"),o=A("div"),r=A("img"),l=x(),d=A("div"),oe(u.$$.fragment),p=x(),oe(m.$$.fragment),g=x(),f=A("div"),h=A("img"),v=x(),w=A("div"),oe(C.$$.fragment),S=x(),T=A("div"),L=A("img"),O=x(),q=A("div"),oe(M.$$.fragment),R=x(),B=A("div"),oe(D.$$.fragment),P=x(),k=A("div"),N=A("img"),j=x(),U=A("div"),oe(V.$$.fragment),F=x(),G=A("div"),X=A("img"),Y=x(),Q=A("div"),oe(Z.$$.fragment),J=x(),K=A("div"),ne=A("img"),ie=x(),le=A("div"),oe(ce.$$.fragment),de=x(),ue=A("div"),pe=A("img"),ge=x(),fe=A("div"),oe(he.$$.fragment),$e=x(),ve=A("div"),be=A("img"),_e=x(),Ae=A("div"),oe(we.$$.fragment),xe=x(),Ce=A("div"),Se=A("img"),Te=x(),Le=A("div"),oe(Ie.$$.fragment),ze=x(),Oe=A("div"),qe=A("img"),Re=x(),Be=A("div"),oe(De.$$.fragment),Pe=x(),ke=A("div"),Ne=A("img"),je=x(),Ue=A("div"),oe(Ve.$$.fragment),Fe=x(),Ge=A("div"),Xe=A("img"),Ye=x(),Qe=A("div"),oe(Ze.$$.fragment),Je=x(),Ke=A("div"),et=A("img"),nt=x(),at=A("div"),oe(it.$$.fragment),ot=x(),rt=A("div"),st=A("img"),ct=x(),dt=A("div"),oe(ut.$$.fragment),pt=x(),mt=A("div"),gt=A("img"),ht=x(),$t=A("div"),oe(vt.$$.fragment),bt=x(),yt=A("div"),_t=A("img"),wt=x(),xt=A("div"),oe(Ct.$$.fragment),St=x(),Et=A("div"),Tt=A("img"),It=x(),zt=A("div"),oe(Ot.$$.fragment),qt=x(),oe(Mt.$$.fragment),E(r,"class","background svelte-q1onv1"),c(r.src,s="img/background-1-1.png")||E(r,"src","img/background-1-1.png"),E(r,"alt",""),E(d,"id","content1-1"),E(d,"class","svelte-q1onv1"),E(o,"id","section1-1"),E(o,"class","svelte-q1onv1"),E(h,"class","background svelte-q1onv1"),c(h.src,$="img/background-1-2.png")||E(h,"src","img/background-1-2.png"),E(h,"alt",""),E(w,"id","content1-2"),E(w,"class","svelte-q1onv1"),E(f,"id","section1-2"),E(f,"class","svelte-q1onv1"),E(L,"class","background svelte-q1onv1"),c(L.src,I="img/background-1-3.png")||E(L,"src","img/background-1-3.png"),E(L,"alt",""),z(B,"margin-top","2vw"),E(q,"id","content1-3"),E(q,"class","svelte-q1onv1"),E(T,"id","section1-3"),E(T,"class","svelte-q1onv1"),E(N,"class","background svelte-q1onv1"),c(N.src,H="img/background-2-1.png")||E(N,"src","img/background-2-1.png"),E(N,"alt",""),E(U,"id","content2-1"),E(U,"class","svelte-q1onv1"),E(k,"id","section2-1"),E(k,"class","svelte-q1onv1"),E(X,"class","background svelte-q1onv1"),c(X.src,W="img/background-2-2.png")||E(X,"src","img/background-2-2.png"),E(X,"alt",""),E(Q,"id","content2-2"),E(Q,"class","svelte-q1onv1"),E(G,"id","section2-2"),E(G,"class","svelte-q1onv1"),E(ne,"class","background svelte-q1onv1"),c(ne.src,ae="img/background-2-3.png")||E(ne,"src","img/background-2-3.png"),E(ne,"alt",""),E(le,"id","content2-3"),E(le,"class","svelte-q1onv1"),E(K,"id","section2-3"),E(K,"class","svelte-q1onv1"),E(pe,"class","background svelte-q1onv1"),c(pe.src,me="img/background-3-1.png")||E(pe,"src","img/background-3-1.png"),E(pe,"alt",""),E(fe,"id","content3-1"),E(fe,"class","svelte-q1onv1"),E(ue,"id","section3-1"),E(ue,"class","svelte-q1onv1"),E(be,"class","background svelte-q1onv1"),c(be.src,ye="img/background-3-2.png")||E(be,"src","img/background-3-2.png"),E(be,"alt",""),E(Ae,"id","content3-2"),E(Ae,"class","svelte-q1onv1"),E(ve,"id","section3-2"),E(ve,"class","svelte-q1onv1"),E(Se,"class","background svelte-q1onv1"),c(Se.src,Ee="img/background-3-3.png")||E(Se,"src","img/background-3-3.png"),E(Se,"alt",""),E(Le,"id","content3-3"),E(Le,"class","svelte-q1onv1"),E(Ce,"id","section3-3"),E(Ce,"class","svelte-q1onv1"),E(qe,"class","background svelte-q1onv1"),c(qe.src,Me="img/background-4-1.png")||E(qe,"src","img/background-4-1.png"),E(qe,"alt",""),E(Be,"id","content4-1"),E(Be,"class","svelte-q1onv1"),E(Oe,"id","section4-1"),E(Oe,"class","svelte-q1onv1"),E(Ne,"class","background svelte-q1onv1"),c(Ne.src,He="img/background-4-2.png")||E(Ne,"src","img/background-4-2.png"),E(Ne,"alt",""),E(Ue,"id","content4-2"),E(Ue,"class","svelte-q1onv1"),E(ke,"id","section4-2"),E(ke,"class","svelte-q1onv1"),E(Xe,"class","background svelte-q1onv1"),c(Xe.src,We="img/background-4-3.png")||E(Xe,"src","img/background-4-3.png"),E(Xe,"alt",""),E(Qe,"id","content4-3"),E(Qe,"class","svelte-q1onv1"),E(Ge,"id","section4-3"),E(Ge,"class","svelte-q1onv1"),E(et,"class","background svelte-q1onv1"),c(et.src,tt="img/background-5-1.png")||E(et,"src","img/background-5-1.png"),E(et,"alt",""),E(at,"id","content5-1"),E(at,"class","svelte-q1onv1"),E(Ke,"id","section5-1"),E(Ke,"class","svelte-q1onv1"),E(st,"class","background svelte-q1onv1"),c(st.src,lt="img/background-5-2.png")||E(st,"src","img/background-5-2.png"),E(st,"alt",""),E(dt,"id","content5-2"),E(dt,"class","svelte-q1onv1"),E(rt,"id","section5-2"),E(rt,"class","svelte-q1onv1"),E(gt,"class","background svelte-q1onv1"),c(gt.src,ft="img/background-5-3.png")||E(gt,"src","img/background-5-3.png"),E(gt,"alt",""),E($t,"id","content5-3"),E($t,"class","svelte-q1onv1"),E(mt,"id","section5-3"),E(mt,"class","svelte-q1onv1"),E(_t,"class","background svelte-q1onv1"),c(_t.src,At="img/background-6-1.png")||E(_t,"src","img/background-6-1.png"),E(_t,"alt",""),E(xt,"id","content6-1"),E(xt,"class","svelte-q1onv1"),E(yt,"id","section6-1"),E(yt,"class","svelte-q1onv1"),E(Tt,"class","background svelte-q1onv1"),c(Tt.src,Lt="img/background-6-2.png")||E(Tt,"src","img/background-6-2.png"),E(Tt,"alt",""),E(zt,"id","content6-2"),E(zt,"class","svelte-q1onv1"),E(Et,"id","section6-2"),E(Et,"class","svelte-q1onv1"),E(i,"class","svelte-q1onv1")},m(e,t){re(n,e,t),y(e,a,t),y(e,i,t),b(i,o),b(o,r),b(o,l),b(o,d),re(u,d,null),b(d,p),re(m,d,null),b(i,g),b(i,f),b(f,h),b(f,v),b(f,w),re(C,w,null),b(i,S),b(i,T),b(T,L),b(T,O),b(T,q),re(M,q,null),b(q,R),b(q,B),re(D,B,null),b(i,P),b(i,k),b(k,N),b(k,j),b(k,U),re(V,U,null),b(i,F),b(i,G),b(G,X),b(G,Y),b(G,Q),re(Z,Q,null),b(i,J),b(i,K),b(K,ne),b(K,ie),b(K,le),re(ce,le,null),b(i,de),b(i,ue),b(ue,pe),b(ue,ge),b(ue,fe),re(he,fe,null),b(i,$e),b(i,ve),b(ve,be),b(ve,_e),b(ve,Ae),re(we,Ae,null),b(i,xe),b(i,Ce),b(Ce,Se),b(Ce,Te),b(Ce,Le),re(Ie,Le,null),b(i,ze),b(i,Oe),b(Oe,qe),b(Oe,Re),b(Oe,Be),re(De,Be,null),b(i,Pe),b(i,ke),b(ke,Ne),b(ke,je),b(ke,Ue),re(Ve,Ue,null),b(i,Fe),b(i,Ge),b(Ge,Xe),b(Ge,Ye),b(Ge,Qe),re(Ze,Qe,null),b(i,Je),b(i,Ke),b(Ke,et),b(Ke,nt),b(Ke,at),re(it,at,null),b(i,ot),b(i,rt),b(rt,st),b(rt,ct),b(rt,dt),re(ut,dt,null),b(i,pt),b(i,mt),b(mt,gt),b(mt,ht),b(mt,$t),re(vt,$t,null),b(i,bt),b(i,yt),b(yt,_t),b(yt,wt),b(yt,xt),re(Ct,xt,null),b(i,St),b(i,Et),b(Et,Tt),b(Et,It),b(Et,zt),re(Ot,zt,null),b(i,qt),re(Mt,i,null),Rt=!0},p:e,i(e){Rt||(ee(n.$$.fragment,e),ee(u.$$.fragment,e),ee(m.$$.fragment,e),ee(C.$$.fragment,e),ee(M.$$.fragment,e),ee(D.$$.fragment,e),ee(V.$$.fragment,e),ee(Z.$$.fragment,e),ee(ce.$$.fragment,e),ee(he.$$.fragment,e),ee(we.$$.fragment,e),ee(Ie.$$.fragment,e),ee(De.$$.fragment,e),ee(Ve.$$.fragment,e),ee(Ze.$$.fragment,e),ee(it.$$.fragment,e),ee(ut.$$.fragment,e),ee(vt.$$.fragment,e),ee(Ct.$$.fragment,e),ee(Ot.$$.fragment,e),ee(Mt.$$.fragment,e),Rt=!0)},o(e){te(n.$$.fragment,e),te(u.$$.fragment,e),te(m.$$.fragment,e),te(C.$$.fragment,e),te(M.$$.fragment,e),te(D.$$.fragment,e),te(V.$$.fragment,e),te(Z.$$.fragment,e),te(ce.$$.fragment,e),te(he.$$.fragment,e),te(we.$$.fragment,e),te(Ie.$$.fragment,e),te(De.$$.fragment,e),te(Ve.$$.fragment,e),te(Ze.$$.fragment,e),te(it.$$.fragment,e),te(ut.$$.fragment,e),te(vt.$$.fragment,e),te(Ct.$$.fragment,e),te(Ot.$$.fragment,e),te(Mt.$$.fragment,e),Rt=!1},d(e){se(n,e),e&&_(a),e&&_(i),se(u),se(m),se(C),se(M),se(D),se(V),se(Z),se(ce),se(he),se(we),se(Ie),se(De),se(Ve),se(Ze),se(it),se(ut),se(vt),se(Ct),se(Ot),se(Mt)}}}new class extends de{constructor(e){super(),ce(this,e,null,pi,r,{})}}({target:document.body,props:{}})}();
-=======
+     */
+    var cssClasses$1 = {
+        CLOSED_CLASS: 'mdc-linear-progress--closed',
+        CLOSED_ANIMATION_OFF_CLASS: 'mdc-linear-progress--closed-animation-off',
+        INDETERMINATE_CLASS: 'mdc-linear-progress--indeterminate',
+        REVERSED_CLASS: 'mdc-linear-progress--reversed',
+        ANIMATION_READY_CLASS: 'mdc-linear-progress--animation-ready',
+    };
+    var strings$1 = {
+        ARIA_HIDDEN: 'aria-hidden',
+        ARIA_VALUEMAX: 'aria-valuemax',
+        ARIA_VALUEMIN: 'aria-valuemin',
+        ARIA_VALUENOW: 'aria-valuenow',
+        BUFFER_BAR_SELECTOR: '.mdc-linear-progress__buffer-bar',
+        FLEX_BASIS: 'flex-basis',
+        PRIMARY_BAR_SELECTOR: '.mdc-linear-progress__primary-bar',
+    };
+    // these are percentages pulled from keyframes.scss
+    var animationDimensionPercentages = {
+        PRIMARY_HALF: .8367142,
+        PRIMARY_FULL: 2.00611057,
+        SECONDARY_QUARTER: .37651913,
+        SECONDARY_HALF: .84386165,
+        SECONDARY_FULL: 1.60277782,
+    };
+
+    /**
+     * @license
+     * Copyright 2017 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
      */
     var MDCLinearProgressFoundation = /** @class */ (function (_super) {
         __extends(MDCLinearProgressFoundation, _super);
@@ -166,14 +6495,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
         }
         Object.defineProperty(MDCLinearProgressFoundation, "cssClasses", {
             get: function () {
-                return cssClasses;
+                return cssClasses$1;
             },
             enumerable: false,
             configurable: true
         });
         Object.defineProperty(MDCLinearProgressFoundation, "strings", {
             get: function () {
-                return strings;
+                return strings$1;
             },
             enumerable: false,
             configurable: true
@@ -199,8 +6528,8 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
         });
         MDCLinearProgressFoundation.prototype.init = function () {
             var _this = this;
-            this.determinate = !this.adapter.hasClass(cssClasses.INDETERMINATE_CLASS);
-            this.adapter.addClass(cssClasses.ANIMATION_READY_CLASS);
+            this.determinate = !this.adapter.hasClass(cssClasses$1.INDETERMINATE_CLASS);
+            this.adapter.addClass(cssClasses$1.ANIMATION_READY_CLASS);
             this.progress = 0;
             this.buffer = 1;
             this.observer = this.adapter.attachResizeObserver(function (entries) {
@@ -231,10 +6560,10 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
         MDCLinearProgressFoundation.prototype.setDeterminate = function (isDeterminate) {
             this.determinate = isDeterminate;
             if (this.determinate) {
-                this.adapter.removeClass(cssClasses.INDETERMINATE_CLASS);
-                this.adapter.setAttribute(strings.ARIA_VALUENOW, this.progress.toString());
-                this.adapter.setAttribute(strings.ARIA_VALUEMAX, '1');
-                this.adapter.setAttribute(strings.ARIA_VALUEMIN, '0');
+                this.adapter.removeClass(cssClasses$1.INDETERMINATE_CLASS);
+                this.adapter.setAttribute(strings$1.ARIA_VALUENOW, this.progress.toString());
+                this.adapter.setAttribute(strings$1.ARIA_VALUEMAX, '1');
+                this.adapter.setAttribute(strings$1.ARIA_VALUEMIN, '0');
                 this.setPrimaryBarProgress(this.progress);
                 this.setBufferBarProgress(this.buffer);
                 return;
@@ -242,10 +6571,10 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
             if (this.observer) {
                 this.calculateAndSetDimensions(this.adapter.getWidth());
             }
-            this.adapter.addClass(cssClasses.INDETERMINATE_CLASS);
-            this.adapter.removeAttribute(strings.ARIA_VALUENOW);
-            this.adapter.removeAttribute(strings.ARIA_VALUEMAX);
-            this.adapter.removeAttribute(strings.ARIA_VALUEMIN);
+            this.adapter.addClass(cssClasses$1.INDETERMINATE_CLASS);
+            this.adapter.removeAttribute(strings$1.ARIA_VALUENOW);
+            this.adapter.removeAttribute(strings$1.ARIA_VALUEMAX);
+            this.adapter.removeAttribute(strings$1.ARIA_VALUEMIN);
             this.setPrimaryBarProgress(1);
             this.setBufferBarProgress(1);
         };
@@ -256,7 +6585,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
             this.progress = value;
             if (this.determinate) {
                 this.setPrimaryBarProgress(value);
-                this.adapter.setAttribute(strings.ARIA_VALUENOW, value.toString());
+                this.adapter.setAttribute(strings$1.ARIA_VALUENOW, value.toString());
             }
         };
         MDCLinearProgressFoundation.prototype.getProgress = function () {
@@ -272,16 +6601,16 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
             return this.buffer;
         };
         MDCLinearProgressFoundation.prototype.open = function () {
-            this.adapter.removeClass(cssClasses.CLOSED_CLASS);
-            this.adapter.removeClass(cssClasses.CLOSED_ANIMATION_OFF_CLASS);
-            this.adapter.removeAttribute(strings.ARIA_HIDDEN);
+            this.adapter.removeClass(cssClasses$1.CLOSED_CLASS);
+            this.adapter.removeClass(cssClasses$1.CLOSED_ANIMATION_OFF_CLASS);
+            this.adapter.removeAttribute(strings$1.ARIA_HIDDEN);
         };
         MDCLinearProgressFoundation.prototype.close = function () {
-            this.adapter.addClass(cssClasses.CLOSED_CLASS);
-            this.adapter.setAttribute(strings.ARIA_HIDDEN, 'true');
+            this.adapter.addClass(cssClasses$1.CLOSED_CLASS);
+            this.adapter.setAttribute(strings$1.ARIA_HIDDEN, 'true');
         };
         MDCLinearProgressFoundation.prototype.isClosed = function () {
-            return this.adapter.hasClass(cssClasses.CLOSED_CLASS);
+            return this.adapter.hasClass(cssClasses$1.CLOSED_CLASS);
         };
         /**
          * Handles the transitionend event emitted after `close()` is called and the
@@ -289,8 +6618,8 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
          * progress indicator is completely hidden.
          */
         MDCLinearProgressFoundation.prototype.handleTransitionEnd = function () {
-            if (this.adapter.hasClass(cssClasses.CLOSED_CLASS)) {
-                this.adapter.addClass(cssClasses.CLOSED_ANIMATION_OFF_CLASS);
+            if (this.adapter.hasClass(cssClasses$1.CLOSED_CLASS)) {
+                this.adapter.addClass(cssClasses$1.CLOSED_ANIMATION_OFF_CLASS);
             }
         };
         MDCLinearProgressFoundation.prototype.destroy = function () {
@@ -300,9 +6629,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
             }
         };
         MDCLinearProgressFoundation.prototype.restartAnimation = function () {
-            this.adapter.removeClass(cssClasses.ANIMATION_READY_CLASS);
+            this.adapter.removeClass(cssClasses$1.ANIMATION_READY_CLASS);
             this.adapter.forceLayout();
-            this.adapter.addClass(cssClasses.ANIMATION_READY_CLASS);
+            this.adapter.addClass(cssClasses$1.ANIMATION_READY_CLASS);
         };
         MDCLinearProgressFoundation.prototype.setPrimaryBarProgress = function (progressValue) {
             var value = "scaleX(" + progressValue + ")";
@@ -315,7 +6644,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
         };
         MDCLinearProgressFoundation.prototype.setBufferBarProgress = function (progressValue) {
             var value = progressValue * 100 + "%";
-            this.adapter.setBufferBarStyle(strings.FLEX_BASIS, value);
+            this.adapter.setBufferBarStyle(strings$1.FLEX_BASIS, value);
         };
         MDCLinearProgressFoundation.prototype.calculateAndSetDimensions = function (width) {
             var primaryHalf = width * animationDimensionPercentages.PRIMARY_HALF;
@@ -340,9 +6669,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }(MDCFoundation));
 
     /* node_modules\@smui\linear-progress\dist\LinearProgress.svelte generated by Svelte v3.46.6 */
-    const file$s = "node_modules\\@smui\\linear-progress\\dist\\LinearProgress.svelte";
+    const file$u = "node_modules\\@smui\\linear-progress\\dist\\LinearProgress.svelte";
 
-    function create_fragment$u(ctx) {
+    function create_fragment$w(ctx) {
     	let div5;
     	let div2;
     	let div0;
@@ -416,22 +6745,22 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			span1 = element("span");
     			attr_dev(div0, "class", "mdc-linear-progress__buffer-bar");
     			attr_dev(div0, "style", div0_style_value = Object.entries(/*bufferBarStyles*/ ctx[11]).map(func$3).join(' '));
-    			add_location(div0, file$s, 25, 4, 744);
+    			add_location(div0, file$u, 25, 4, 744);
     			attr_dev(div1, "class", "mdc-linear-progress__buffer-dots");
-    			add_location(div1, file$s, 31, 4, 925);
+    			add_location(div1, file$u, 31, 4, 925);
     			attr_dev(div2, "class", "mdc-linear-progress__buffer");
-    			add_location(div2, file$s, 24, 2, 698);
+    			add_location(div2, file$u, 24, 2, 698);
     			attr_dev(span0, "class", "mdc-linear-progress__bar-inner");
-    			add_location(span0, file$s, 39, 4, 1182);
+    			add_location(span0, file$u, 39, 4, 1182);
     			attr_dev(div3, "class", "mdc-linear-progress__bar mdc-linear-progress__primary-bar");
     			attr_dev(div3, "style", div3_style_value = Object.entries(/*primaryBarStyles*/ ctx[12]).map(func_1).join(' '));
-    			add_location(div3, file$s, 33, 2, 985);
+    			add_location(div3, file$u, 33, 2, 985);
     			attr_dev(span1, "class", "mdc-linear-progress__bar-inner");
-    			add_location(span1, file$s, 42, 4, 1319);
+    			add_location(span1, file$u, 42, 4, 1319);
     			attr_dev(div4, "class", "mdc-linear-progress__bar mdc-linear-progress__secondary-bar");
-    			add_location(div4, file$s, 41, 2, 1241);
+    			add_location(div4, file$u, 41, 2, 1241);
     			set_attributes(div5, div5_data);
-    			add_location(div5, file$s, 0, 0, 0);
+    			add_location(div5, file$u, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -509,7 +6838,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$u.name,
+    		id: create_fragment$w.name,
     		type: "component",
     		source: "",
     		ctx
@@ -522,7 +6851,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     const func_1 = ([name, value]) => `${name}: ${value};`;
     const func_2 = ([name, value]) => `${name}: ${value};`;
 
-    function instance_1($$self, $$props, $$invalidate) {
+    function instance_1$1($$self, $$props, $$invalidate) {
     	const omit_props_names = [
     		"use","class","style","indeterminate","closed","progress","buffer","getElement"
     	];
@@ -802,7 +7131,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	constructor(options) {
     		super(options);
 
-    		init(this, options, instance_1, create_fragment$u, safe_not_equal, {
+    		init(this, options, instance_1$1, create_fragment$w, safe_not_equal, {
     			use: 0,
     			class: 1,
     			style: 2,
@@ -817,7 +7146,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			component: this,
     			tagName: "LinearProgress",
     			options,
-    			id: create_fragment$u.name
+    			id: create_fragment$w.name
     		});
     	}
 
@@ -999,7 +7328,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (23:4) <Section class="mdc-typography--headline6" style="justify-content: center;">
-    function create_default_slot_10(ctx) {
+    function create_default_slot_10$1(ctx) {
     	let link;
     	let current;
 
@@ -1045,7 +7374,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_10.name,
+    		id: create_default_slot_10$1.name,
     		type: "slot",
     		source: "(23:4) <Section class=\\\"mdc-typography--headline6\\\" style=\\\"justify-content: center;\\\">",
     		ctx
@@ -1055,7 +7384,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (24:80) <Link href="#content3-1">
-    function create_default_slot_9(ctx) {
+    function create_default_slot_9$1(ctx) {
     	let t;
 
     	const block = {
@@ -1072,7 +7401,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_9.name,
+    		id: create_default_slot_9$1.name,
     		type: "slot",
     		source: "(24:80) <Link href=\\\"#content3-1\\\">",
     		ctx
@@ -1082,14 +7411,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (24:4) <Section class="mdc-typography--headline6" style="justify-content: center;">
-    function create_default_slot_8(ctx) {
+    function create_default_slot_8$1(ctx) {
     	let link;
     	let current;
 
     	link = new Link({
     			props: {
     				href: "#content3-1",
-    				$$slots: { default: [create_default_slot_9] },
+    				$$slots: { default: [create_default_slot_9$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1128,7 +7457,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_8.name,
+    		id: create_default_slot_8$1.name,
     		type: "slot",
     		source: "(24:4) <Section class=\\\"mdc-typography--headline6\\\" style=\\\"justify-content: center;\\\">",
     		ctx
@@ -1138,7 +7467,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (25:80) <Link href="#content4-1">
-    function create_default_slot_7(ctx) {
+    function create_default_slot_7$1(ctx) {
     	let t;
 
     	const block = {
@@ -1155,7 +7484,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_7.name,
+    		id: create_default_slot_7$1.name,
     		type: "slot",
     		source: "(25:80) <Link href=\\\"#content4-1\\\">",
     		ctx
@@ -1165,14 +7494,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (25:4) <Section class="mdc-typography--headline6" style="justify-content: center;">
-    function create_default_slot_6$1(ctx) {
+    function create_default_slot_6$2(ctx) {
     	let link;
     	let current;
 
     	link = new Link({
     			props: {
     				href: "#content4-1",
-    				$$slots: { default: [create_default_slot_7] },
+    				$$slots: { default: [create_default_slot_7$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1211,7 +7540,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_6$1.name,
+    		id: create_default_slot_6$2.name,
     		type: "slot",
     		source: "(25:4) <Section class=\\\"mdc-typography--headline6\\\" style=\\\"justify-content: center;\\\">",
     		ctx
@@ -1221,7 +7550,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (26:80) <Link href="#content5-1">
-    function create_default_slot_5$1(ctx) {
+    function create_default_slot_5$2(ctx) {
     	let t;
 
     	const block = {
@@ -1238,7 +7567,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5$1.name,
+    		id: create_default_slot_5$2.name,
     		type: "slot",
     		source: "(26:80) <Link href=\\\"#content5-1\\\">",
     		ctx
@@ -1248,14 +7577,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (26:4) <Section class="mdc-typography--headline6" style="justify-content: center;">
-    function create_default_slot_4$1(ctx) {
+    function create_default_slot_4$2(ctx) {
     	let link;
     	let current;
 
     	link = new Link({
     			props: {
     				href: "#content5-1",
-    				$$slots: { default: [create_default_slot_5$1] },
+    				$$slots: { default: [create_default_slot_5$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1294,7 +7623,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_4$1.name,
+    		id: create_default_slot_4$2.name,
     		type: "slot",
     		source: "(26:4) <Section class=\\\"mdc-typography--headline6\\\" style=\\\"justify-content: center;\\\">",
     		ctx
@@ -1304,7 +7633,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (27:80) <Link href="#section6-1">
-    function create_default_slot_3$1(ctx) {
+    function create_default_slot_3$3(ctx) {
     	let t;
 
     	const block = {
@@ -1321,7 +7650,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$1.name,
+    		id: create_default_slot_3$3.name,
     		type: "slot",
     		source: "(27:80) <Link href=\\\"#section6-1\\\">",
     		ctx
@@ -1331,14 +7660,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (27:4) <Section class="mdc-typography--headline6" style="justify-content: center;">
-    function create_default_slot_2$3(ctx) {
+    function create_default_slot_2$5(ctx) {
     	let link;
     	let current;
 
     	link = new Link({
     			props: {
     				href: "#section6-1",
-    				$$slots: { default: [create_default_slot_3$1] },
+    				$$slots: { default: [create_default_slot_3$3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1377,7 +7706,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$3.name,
+    		id: create_default_slot_2$5.name,
     		type: "slot",
     		source: "(27:4) <Section class=\\\"mdc-typography--headline6\\\" style=\\\"justify-content: center;\\\">",
     		ctx
@@ -1387,7 +7716,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (21:2) <Row id="row" class="mdc-elevation--z4" style="background-color: white; ">
-    function create_default_slot_1$5(ctx) {
+    function create_default_slot_1$7(ctx) {
     	let section0;
     	let t0;
     	let section1;
@@ -1415,7 +7744,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			props: {
     				class: "mdc-typography--headline6",
     				style: "justify-content: center;",
-    				$$slots: { default: [create_default_slot_10] },
+    				$$slots: { default: [create_default_slot_10$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1425,7 +7754,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			props: {
     				class: "mdc-typography--headline6",
     				style: "justify-content: center;",
-    				$$slots: { default: [create_default_slot_8] },
+    				$$slots: { default: [create_default_slot_8$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1435,7 +7764,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			props: {
     				class: "mdc-typography--headline6",
     				style: "justify-content: center;",
-    				$$slots: { default: [create_default_slot_6$1] },
+    				$$slots: { default: [create_default_slot_6$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1445,7 +7774,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			props: {
     				class: "mdc-typography--headline6",
     				style: "justify-content: center;",
-    				$$slots: { default: [create_default_slot_4$1] },
+    				$$slots: { default: [create_default_slot_4$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1455,7 +7784,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			props: {
     				class: "mdc-typography--headline6",
     				style: "justify-content: center;",
-    				$$slots: { default: [create_default_slot_2$3] },
+    				$$slots: { default: [create_default_slot_2$5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1569,7 +7898,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$5.name,
+    		id: create_default_slot_1$7.name,
     		type: "slot",
     		source: "(21:2) <Row id=\\\"row\\\" class=\\\"mdc-elevation--z4\\\" style=\\\"background-color: white; \\\">",
     		ctx
@@ -1579,7 +7908,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (20:0) <TopAppBar variant="fixed" class="transparent">
-    function create_default_slot$7(ctx) {
+    function create_default_slot$9(ctx) {
     	let row;
     	let t;
     	let linearprogress;
@@ -1590,7 +7919,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     				id: "row",
     				class: "mdc-elevation--z4",
     				style: "background-color: white; ",
-    				$$slots: { default: [create_default_slot_1$5] },
+    				$$slots: { default: [create_default_slot_1$7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1645,7 +7974,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$7.name,
+    		id: create_default_slot$9.name,
     		type: "slot",
     		source: "(20:0) <TopAppBar variant=\\\"fixed\\\" class=\\\"transparent\\\">",
     		ctx
@@ -1654,7 +7983,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function create_fragment$t(ctx) {
+    function create_fragment$v(ctx) {
     	let topappbar;
     	let current;
 
@@ -1662,7 +7991,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			props: {
     				variant: "fixed",
     				class: "transparent",
-    				$$slots: { default: [create_default_slot$7] },
+    				$$slots: { default: [create_default_slot$9] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -1704,7 +8033,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$t.name,
+    		id: create_fragment$v.name,
     		type: "component",
     		source: "",
     		ctx
@@ -1713,7 +8042,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$t($$self, $$props, $$invalidate) {
+    function instance$u($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('TopAppBar', slots, []);
     	let progress = 0;
@@ -1736,7 +8065,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     		TopAppBar,
     		Row,
     		Section,
-    		Title: Title$1,
+    		Title: Title$2,
     		Image,
     		Link,
     		onMount,
@@ -1758,16 +8087,156 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class TopAppBar_1 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$t, create_fragment$t, safe_not_equal, {});
+    		init(this, options, instance$u, create_fragment$v, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "TopAppBar_1",
     			options,
-    			id: create_fragment$t.name
+    			id: create_fragment$v.name
     		});
     	}
     }
+
+    /**
+     * @license
+     * Copyright 2020 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    var FOCUS_SENTINEL_CLASS = 'mdc-dom-focus-sentinel';
+    /**
+     * Utility to trap focus in a given root element, e.g. for modal components such
+     * as dialogs. The root should have at least one focusable child element,
+     * for setting initial focus when trapping focus.
+     * Also tracks the previously focused element, and restores focus to that
+     * element when releasing focus.
+     */
+    var FocusTrap = /** @class */ (function () {
+        function FocusTrap(root, options) {
+            if (options === void 0) { options = {}; }
+            this.root = root;
+            this.options = options;
+            // Previously focused element before trapping focus.
+            this.elFocusedBeforeTrapFocus = null;
+        }
+        /**
+         * Traps focus in `root`. Also focuses on either `initialFocusEl` if set;
+         * otherwises sets initial focus to the first focusable child element.
+         */
+        FocusTrap.prototype.trapFocus = function () {
+            var focusableEls = this.getFocusableElements(this.root);
+            if (focusableEls.length === 0) {
+                throw new Error('FocusTrap: Element must have at least one focusable child.');
+            }
+            this.elFocusedBeforeTrapFocus =
+                document.activeElement instanceof HTMLElement ? document.activeElement :
+                    null;
+            this.wrapTabFocus(this.root);
+            if (!this.options.skipInitialFocus) {
+                this.focusInitialElement(focusableEls, this.options.initialFocusEl);
+            }
+        };
+        /**
+         * Releases focus from `root`. Also restores focus to the previously focused
+         * element.
+         */
+        FocusTrap.prototype.releaseFocus = function () {
+            [].slice.call(this.root.querySelectorAll("." + FOCUS_SENTINEL_CLASS))
+                .forEach(function (sentinelEl) {
+                sentinelEl.parentElement.removeChild(sentinelEl);
+            });
+            if (!this.options.skipRestoreFocus && this.elFocusedBeforeTrapFocus) {
+                this.elFocusedBeforeTrapFocus.focus();
+            }
+        };
+        /**
+         * Wraps tab focus within `el` by adding two hidden sentinel divs which are
+         * used to mark the beginning and the end of the tabbable region. When
+         * focused, these sentinel elements redirect focus to the first/last
+         * children elements of the tabbable region, ensuring that focus is trapped
+         * within that region.
+         */
+        FocusTrap.prototype.wrapTabFocus = function (el) {
+            var _this = this;
+            var sentinelStart = this.createSentinel();
+            var sentinelEnd = this.createSentinel();
+            sentinelStart.addEventListener('focus', function () {
+                var focusableEls = _this.getFocusableElements(el);
+                if (focusableEls.length > 0) {
+                    focusableEls[focusableEls.length - 1].focus();
+                }
+            });
+            sentinelEnd.addEventListener('focus', function () {
+                var focusableEls = _this.getFocusableElements(el);
+                if (focusableEls.length > 0) {
+                    focusableEls[0].focus();
+                }
+            });
+            el.insertBefore(sentinelStart, el.children[0]);
+            el.appendChild(sentinelEnd);
+        };
+        /**
+         * Focuses on `initialFocusEl` if defined and a child of the root element.
+         * Otherwise, focuses on the first focusable child element of the root.
+         */
+        FocusTrap.prototype.focusInitialElement = function (focusableEls, initialFocusEl) {
+            var focusIndex = 0;
+            if (initialFocusEl) {
+                focusIndex = Math.max(focusableEls.indexOf(initialFocusEl), 0);
+            }
+            focusableEls[focusIndex].focus();
+        };
+        FocusTrap.prototype.getFocusableElements = function (root) {
+            var focusableEls = [].slice.call(root.querySelectorAll('[autofocus], [tabindex], a, input, textarea, select, button'));
+            return focusableEls.filter(function (el) {
+                var isDisabledOrHidden = el.getAttribute('aria-disabled') === 'true' ||
+                    el.getAttribute('disabled') != null ||
+                    el.getAttribute('hidden') != null ||
+                    el.getAttribute('aria-hidden') === 'true';
+                var isTabbableAndVisible = el.tabIndex >= 0 &&
+                    el.getBoundingClientRect().width > 0 &&
+                    !el.classList.contains(FOCUS_SENTINEL_CLASS) && !isDisabledOrHidden;
+                var isProgrammaticallyHidden = false;
+                if (isTabbableAndVisible) {
+                    var style = getComputedStyle(el);
+                    isProgrammaticallyHidden =
+                        style.display === 'none' || style.visibility === 'hidden';
+                }
+                return isTabbableAndVisible && !isProgrammaticallyHidden;
+            });
+        };
+        FocusTrap.prototype.createSentinel = function () {
+            var sentinel = document.createElement('div');
+            sentinel.setAttribute('tabindex', '0');
+            // Don't announce in screen readers.
+            sentinel.setAttribute('aria-hidden', 'true');
+            sentinel.classList.add(FOCUS_SENTINEL_CLASS);
+            return sentinel;
+        };
+        return FocusTrap;
+    }());
+
+    var domFocusTrap = /*#__PURE__*/Object.freeze({
+        __proto__: null,
+        FocusTrap: FocusTrap
+    });
 
     const { applyPassive } = events;
     const { matches } = ponyfill;
@@ -1908,17 +8377,17 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     /* node_modules\@smui\fab\dist\Fab.svelte generated by Svelte v3.46.6 */
-    const file$r = "node_modules\\@smui\\fab\\dist\\Fab.svelte";
+    const file$t = "node_modules\\@smui\\fab\\dist\\Fab.svelte";
 
     // (37:10) {#if touch}
-    function create_if_block$2(ctx) {
+    function create_if_block$5(ctx) {
     	let div;
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "mdc-fab__touch");
-    			add_location(div, file$r, 36, 21, 783);
+    			add_location(div, file$t, 36, 21, 783);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1930,7 +8399,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$2.name,
+    		id: create_if_block$5.name,
     		type: "if",
     		source: "(37:10) {#if touch}",
     		ctx
@@ -1940,14 +8409,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (1:0) <svelte:component   this={component}   bind:this={element}   use={[     [       Ripple,       {         ripple,         unbounded: false,         color,         disabled: !!$$restProps.disabled,         addClass,         removeClass,         addStyle,       },     ],     forwardEvents,     ...use,   ]}   class={classMap({     [className]: true,     'mdc-fab': true,     'mdc-fab--mini': mini,     'mdc-fab--exited': exited,     'mdc-fab--extended': extended,     'smui-fab--color-primary': color === 'primary',     'mdc-fab--touch': touch,     ...internalClasses,   })}   style={Object.entries(internalStyles)     .map(([name, value]) => `${name}: ${value};`)     .concat([style])     .join(' ')}   {href}   {...$$restProps}   >
-    function create_default_slot$6(ctx) {
+    function create_default_slot$8(ctx) {
     	let div;
     	let t;
     	let if_block_anchor;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[20].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[22], null);
-    	let if_block = /*touch*/ ctx[8] && create_if_block$2(ctx);
+    	let if_block = /*touch*/ ctx[8] && create_if_block$5(ctx);
 
     	const block = {
     		c: function create() {
@@ -1957,7 +8426,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
     			attr_dev(div, "class", "mdc-fab__ripple");
-    			add_location(div, file$r, 35, 3, 730);
+    			add_location(div, file$t, 35, 3, 730);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1989,7 +8458,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     			if (/*touch*/ ctx[8]) {
     				if (if_block) ; else {
-    					if_block = create_if_block$2(ctx);
+    					if_block = create_if_block$5(ctx);
     					if_block.c();
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
@@ -2018,7 +8487,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$6.name,
+    		id: create_default_slot$8.name,
     		type: "slot",
     		source: "(1:0) <svelte:component   this={component}   bind:this={element}   use={[     [       Ripple,       {         ripple,         unbounded: false,         color,         disabled: !!$$restProps.disabled,         addClass,         removeClass,         addStyle,       },     ],     forwardEvents,     ...use,   ]}   class={classMap({     [className]: true,     'mdc-fab': true,     'mdc-fab--mini': mini,     'mdc-fab--exited': exited,     'mdc-fab--extended': extended,     'smui-fab--color-primary': color === 'primary',     'mdc-fab--touch': touch,     ...internalClasses,   })}   style={Object.entries(internalStyles)     .map(([name, value]) => `${name}: ${value};`)     .concat([style])     .join(' ')}   {href}   {...$$restProps}   >",
     		ctx
@@ -2027,7 +8496,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function create_fragment$s(ctx) {
+    function create_fragment$u(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -2074,7 +8543,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	function switch_props(ctx) {
     		let switch_instance_props = {
-    			$$slots: { default: [create_default_slot$6] },
+    			$$slots: { default: [create_default_slot$8] },
     			$$scope: { ctx }
     		};
 
@@ -2197,7 +8666,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$s.name,
+    		id: create_fragment$u.name,
     		type: "component",
     		source: "",
     		ctx
@@ -2208,7 +8677,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     const func$2 = ([name, value]) => `${name}: ${value};`;
 
-    function instance$s($$self, $$props, $$invalidate) {
+    function instance$t($$self, $$props, $$invalidate) {
     	const omit_props_names = [
     		"use","class","style","ripple","color","mini","exited","extended","touch","href","component","getElement"
     	];
@@ -2366,7 +8835,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	constructor(options) {
     		super(options);
 
-    		init(this, options, instance$s, create_fragment$s, safe_not_equal, {
+    		init(this, options, instance$t, create_fragment$u, safe_not_equal, {
     			use: 0,
     			class: 1,
     			style: 2,
@@ -2385,7 +8854,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			component: this,
     			tagName: "Fab",
     			options,
-    			id: create_fragment$s.name
+    			id: create_fragment$u.name
     		});
     	}
 
@@ -2487,10 +8956,10 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     /* src\Components\CustomFAB.svelte generated by Svelte v3.46.6 */
-    const file$q = "src\\Components\\CustomFAB.svelte";
+    const file$s = "src\\Components\\CustomFAB.svelte";
 
     // (9:2) <Icon class="custom-FAB-Icon">
-    function create_default_slot_2$2(ctx) {
+    function create_default_slot_2$4(ctx) {
     	let img;
     	let img_src_value;
 
@@ -2500,7 +8969,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			if (!src_url_equal(img.src, img_src_value = "img/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Logo");
     			attr_dev(img, "class", "svelte-25nunp");
-    			add_location(img, file$q, 9, 4, 237);
+    			add_location(img, file$s, 9, 4, 237);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -2512,7 +8981,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$2.name,
+    		id: create_default_slot_2$4.name,
     		type: "slot",
     		source: "(9:2) <Icon class=\\\"custom-FAB-Icon\\\">",
     		ctx
@@ -2522,7 +8991,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (12:2) <Label class="mdc-typography--button bold" style="overflow: hidden;">
-    function create_default_slot_1$4(ctx) {
+    function create_default_slot_1$6(ctx) {
     	let t;
 
     	const block = {
@@ -2542,7 +9011,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$4.name,
+    		id: create_default_slot_1$6.name,
     		type: "slot",
     		source: "(12:2) <Label class=\\\"mdc-typography--button bold\\\" style=\\\"overflow: hidden;\\\">",
     		ctx
@@ -2552,7 +9021,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (8:0) <Fab color="primary" href="#{target}" extended class="custom-FABExtended">
-    function create_default_slot$5(ctx) {
+    function create_default_slot$7(ctx) {
     	let icon;
     	let t;
     	let label_1;
@@ -2561,7 +9030,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	icon = new Icon({
     			props: {
     				class: "custom-FAB-Icon",
-    				$$slots: { default: [create_default_slot_2$2] },
+    				$$slots: { default: [create_default_slot_2$4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -2571,7 +9040,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			props: {
     				class: "mdc-typography--button bold",
     				style: "overflow: hidden;",
-    				$$slots: { default: [create_default_slot_1$4] },
+    				$$slots: { default: [create_default_slot_1$6] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -2625,7 +9094,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$5.name,
+    		id: create_default_slot$7.name,
     		type: "slot",
     		source: "(8:0) <Fab color=\\\"primary\\\" href=\\\"#{target}\\\" extended class=\\\"custom-FABExtended\\\">",
     		ctx
@@ -2634,7 +9103,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function create_fragment$r(ctx) {
+    function create_fragment$t(ctx) {
     	let fab;
     	let current;
 
@@ -2644,7 +9113,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     				href: "#" + /*target*/ ctx[0],
     				extended: true,
     				class: "custom-FABExtended",
-    				$$slots: { default: [create_default_slot$5] },
+    				$$slots: { default: [create_default_slot$7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -2687,7 +9156,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$r.name,
+    		id: create_fragment$t.name,
     		type: "component",
     		source: "",
     		ctx
@@ -2696,7 +9165,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$r($$self, $$props, $$invalidate) {
+    function instance$s($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('CustomFAB', slots, []);
     	let { target, label = "" } = $$props;
@@ -2728,13 +9197,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class CustomFAB extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$r, create_fragment$r, safe_not_equal, { target: 0, label: 1 });
+    		init(this, options, instance$s, create_fragment$t, safe_not_equal, { target: 0, label: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "CustomFAB",
     			options,
-    			id: create_fragment$r.name
+    			id: create_fragment$t.name
     		});
 
     		const { ctx } = this.$$;
@@ -2764,9 +9233,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     /* src\Components\Footer.svelte generated by Svelte v3.46.6 */
 
-    const file$p = "src\\Components\\Footer.svelte";
+    const file$r = "src\\Components\\Footer.svelte";
 
-    function create_fragment$q(ctx) {
+    function create_fragment$s(ctx) {
     	let footer;
     	let t0;
     	let br;
@@ -2777,10 +9246,10 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			footer = element("footer");
     			t0 = text("© Copyright 2022 — Gruppo 10 ");
     			br = element("br");
-    			t1 = text(" Arena Nicoló — Barnabe Carlos — Cannizzaro Gloria — Caotti Leonardo — Navone Federica — Oneto Alessandro — Sartori Alice\r\n  — Sattanino Giulia");
-    			add_location(br, file$p, 1, 36, 76);
+    			t1 = text(" Arena Nicolò — Barnabé Carlos — Cannizzaro Gloria — Caotti Leonardo — Navone Federica — Oneto Alessandro — Sartori Alice\r\n  — Sattanino Giulia");
+    			add_location(br, file$r, 1, 36, 76);
     			attr_dev(footer, "class", "mdc-typography--body2 svelte-1huo1b5");
-    			add_location(footer, file$p, 0, 0, 0);
+    			add_location(footer, file$r, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2801,7 +9270,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$q.name,
+    		id: create_fragment$s.name,
     		type: "component",
     		source: "",
     		ctx
@@ -2810,7 +9279,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$q($$self, $$props) {
+    function instance$r($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Footer', slots, []);
     	const writable_props = [];
@@ -2825,22 +9294,22 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Footer extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$q, create_fragment$q, safe_not_equal, {});
+    		init(this, options, instance$r, create_fragment$s, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Footer",
     			options,
-    			id: create_fragment$q.name
+    			id: create_fragment$s.name
     		});
     	}
     }
 
     /* src\Amianto\Title.svelte generated by Svelte v3.46.6 */
 
-    const file$o = "src\\Amianto\\Title.svelte";
+    const file$q = "src\\Amianto\\Title.svelte";
 
-    function create_fragment$p(ctx) {
+    function create_fragment$r(ctx) {
     	let div0;
     	let t1;
     	let div1;
@@ -2856,7 +9325,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			div0.textContent = "Sai davvero cos'é l'amianto?";
+    			div0.textContent = "Sai davvero cos'è l'amianto?";
     			t1 = space();
     			div1 = element("div");
     			t2 = text("Sai come ha rovinato le vite di innumerevoli persone?\r\n  ");
@@ -2869,14 +9338,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			span.textContent = "Inferno dell'Amianto";
     			t7 = text(" e lo scoprirai...");
     			attr_dev(div0, "class", "mdc-typography--headline1 uppercase svelte-v5e0jn");
-    			add_location(div0, file$o, 0, 0, 0);
-    			add_location(br, file$o, 3, 2, 185);
+    			add_location(div0, file$q, 0, 0, 0);
+    			add_location(br, file$q, 3, 2, 185);
     			attr_dev(div1, "class", "mdc-typography--headline4 svelte-v5e0jn");
-    			add_location(div1, file$o, 1, 0, 85);
+    			add_location(div1, file$q, 1, 0, 85);
     			attr_dev(span, "class", "bold error");
-    			add_location(span, file$o, 5, 51, 295);
+    			add_location(span, file$q, 5, 51, 295);
     			attr_dev(div2, "class", "mdc-typography--headline4 svelte-v5e0jn");
-    			add_location(div2, file$o, 5, 0, 244);
+    			add_location(div2, file$q, 5, 0, 244);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2908,7 +9377,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$p.name,
+    		id: create_fragment$r.name,
     		type: "component",
     		source: "",
     		ctx
@@ -2917,7 +9386,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$p($$self, $$props) {
+    function instance$q($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Title', slots, []);
     	const writable_props = [];
@@ -2929,25 +9398,25 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return [];
     }
 
-    class Title extends SvelteComponentDev {
+    class Title$1 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$p, create_fragment$p, safe_not_equal, {});
+    		init(this, options, instance$q, create_fragment$r, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Title",
     			options,
-    			id: create_fragment$p.name
+    			id: create_fragment$r.name
     		});
     	}
     }
 
     /* src\Amianto\Intro.svelte generated by Svelte v3.46.6 */
 
-    const file$n = "src\\Amianto\\Intro.svelte";
+    const file$p = "src\\Amianto\\Intro.svelte";
 
-    function create_fragment$o(ctx) {
+    function create_fragment$q(ctx) {
     	let div2;
     	let div0;
     	let t1;
@@ -2990,44 +9459,44 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     		c: function create() {
     			div2 = element("div");
     			div0 = element("div");
-    			div0.textContent = "COS'É L'AMIANTO E PERCHÉ VIENE SCAVATO?";
+    			div0.textContent = "COS'È L'AMIANTO E PERCHÉ VIENE SCAVATO?";
     			t1 = space();
     			div1 = element("div");
     			t2 = text("Con il termine ");
     			span0 = element("span");
-    			span0.textContent = "AMIANTO";
-    			t4 = text(" o asbesto viene identificato un minerale naturale a struttura fibrosa, conosciuto sin dall'antichitá\r\n    per le sue proprietá termoisolanti e fonoassorbenti. Nel XX secolo, grazie alla sua\r\n    ");
+    			span0.textContent = "amianto";
+    			t4 = text(" o asbesto viene identificato un minerale naturale a struttura fibrosa, conosciuto sin dall'antichitá\r\n    per le sue proprietà termoisolanti e fonoassorbenti. Nel XX secolo, grazie alla sua\r\n    ");
     			span1 = element("span");
-    			span1.textContent = "economicitá di PRODUZIONE";
-    			t6 = text(", é stato largamente adottato da tutto il mondo in innumerevoli applicazioni industriali ed\r\n    edilizie.\r\n    ");
+    			span1.textContent = "economicità di produzione";
+    			t6 = text(", è stato largamente adottato da tutto il mondo in innumerevoli applicazioni industriali ed\r\n    edilizie.\r\n    ");
     			br0 = element("br");
     			br1 = element("br");
     			t7 = text("\r\n    Con il tempo però tale materiale si è rivelato ");
     			span2 = element("span");
-    			span2.textContent = "NOCIVO";
+    			span2.textContent = "nocivo";
     			t9 = text(" per la salute dell'uomo, a causa del rilascio di fibre che, se inalate,\r\n    possono provocare patologie ");
     			span3 = element("span");
     			span3.textContent = "gravi ed irreversibili";
-    			t11 = text(" all'apparato respiratorio, tra cui le piú note sono asbestosi, carcinomi polmonari\r\n    e mesoteliomi.");
+    			t11 = text(" all'apparato respiratorio, tra cui le più note sono asbestosi, carcinomi polmonari\r\n    e mesoteliomi.");
     			t12 = space();
     			div5 = element("div");
     			div3 = element("div");
     			div3.textContent = "Che reputazione ha oggi l'amianto?";
     			t14 = space();
     			div4 = element("div");
-    			t15 = text("Negli anni '70 é stato raggiunto il ");
+    			t15 = text("Negli anni '70 è stato raggiunto il ");
     			span4 = element("span");
-    			span4.textContent = "PICCO";
+    			span4.textContent = "picco";
     			t17 = text(" di produzione di amianto, coinvolgendo 85 paesi diversi nella sua estrazione e\r\n    lavorazione. In Italia, dal 1992 ad oggi, sono entrate in vigore numerose leggi che ");
     			span5 = element("span");
-    			span5.textContent = "VIETANO";
-    			t19 = text(" estrazione, commercializzazione e\r\n    produzione di amianto. Ma non tutte le nazioni hanno bandito questo materiale: Russia, Cina, Brasile e Canada sono gli attuali maggiori\r\n    ");
+    			span5.textContent = "vietano";
+    			t19 = text(" estrazione, commercializzazione e\r\n    produzione di amianto. Non tutte le nazioni però hanno bandito questo materiale: Russia, Cina, Brasile e Canada sono gli attuali maggiori\r\n    ");
     			span6 = element("span");
-    			span6.textContent = "PRODUTTORI";
+    			span6.textContent = "produttori";
     			t21 = text(" di amianto.\r\n    ");
     			br2 = element("br");
     			br3 = element("br");
-    			t22 = text("\r\n    Infatti, l'estrazione di amianto rimane ancora oggi uno dei maggiori argomenti di discussione, sul campo legislativo e su quello etico. Attraverso questo viaggio\r\n    metaforico nell'");
+    			t22 = text("\r\n    L'estrazione di amianto rimane ancora oggi uno dei maggiori argomenti di discussione sul campo legislativo e su quello etico. Attraverso questo viaggio\r\n    metaforico nell'");
     			span7 = element("span");
     			span7.textContent = "Inferno";
     			t24 = text(", avrai modo di scoprire l'impatto che questo minerale ha avuto in tutto il mondo, dal suo controverso\r\n    ");
@@ -3038,41 +9507,41 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			span9.textContent = "presente";
     			t28 = text(".");
     			attr_dev(div0, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div0, file$n, 1, 2, 22);
+    			add_location(div0, file$p, 1, 2, 22);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$n, 3, 19, 176);
+    			add_location(span0, file$p, 3, 19, 176);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$n, 5, 4, 410);
-    			add_location(br0, file$n, 7, 4, 578);
-    			add_location(br1, file$n, 7, 10, 584);
+    			add_location(span1, file$p, 5, 4, 410);
+    			add_location(br0, file$p, 7, 4, 578);
+    			add_location(br1, file$p, 7, 10, 584);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$n, 8, 51, 643);
+    			add_location(span2, file$p, 8, 51, 643);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$n, 9, 32, 786);
+    			add_location(span3, file$p, 9, 32, 786);
     			attr_dev(div1, "class", "mdc-typography--body1");
-    			add_location(div1, file$n, 2, 2, 120);
+    			add_location(div1, file$p, 2, 2, 120);
     			attr_dev(div2, "class", "left svelte-1jctsza");
-    			add_location(div2, file$n, 0, 0, 0);
+    			add_location(div2, file$p, 0, 0, 0);
     			attr_dev(div3, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div3, file$n, 15, 2, 987);
+    			add_location(div3, file$p, 15, 2, 987);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$n, 17, 40, 1157);
+    			add_location(span4, file$p, 17, 40, 1157);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$n, 18, 88, 1362);
+    			add_location(span5, file$p, 18, 88, 1362);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$n, 20, 4, 1581);
-    			add_location(br2, file$n, 21, 4, 1640);
-    			add_location(br3, file$n, 21, 10, 1646);
+    			add_location(span6, file$p, 20, 4, 1583);
+    			add_location(br2, file$p, 21, 4, 1642);
+    			add_location(br3, file$p, 21, 10, 1648);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$n, 23, 20, 1841);
+    			add_location(span7, file$p, 23, 20, 1833);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$n, 24, 4, 1987);
+    			add_location(span8, file$p, 24, 4, 1979);
     			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$n, 24, 75, 2058);
+    			add_location(span9, file$p, 24, 75, 2050);
     			attr_dev(div4, "class", "mdc-typography--body1");
-    			add_location(div4, file$n, 16, 2, 1080);
+    			add_location(div4, file$p, 16, 2, 1080);
     			attr_dev(div5, "class", "right svelte-1jctsza");
-    			add_location(div5, file$n, 14, 0, 964);
+    			add_location(div5, file$p, 14, 0, 964);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3128,7 +9597,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$o.name,
+    		id: create_fragment$q.name,
     		type: "component",
     		source: "",
     		ctx
@@ -3137,7 +9606,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$o($$self, $$props) {
+    function instance$p($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Intro', slots, []);
     	const writable_props = [];
@@ -3152,21 +9621,21 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Intro$5 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$o, create_fragment$o, safe_not_equal, {});
+    		init(this, options, instance$p, create_fragment$q, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Intro",
     			options,
-    			id: create_fragment$o.name
+    			id: create_fragment$q.name
     		});
     	}
     }
 
     /* node_modules\@smui\card\dist\Card.svelte generated by Svelte v3.46.6 */
-    const file$m = "node_modules\\@smui\\card\\dist\\Card.svelte";
+    const file$o = "node_modules\\@smui\\card\\dist\\Card.svelte";
 
-    function create_fragment$n(ctx) {
+    function create_fragment$p(ctx) {
     	let div;
     	let div_class_value;
     	let useActions_action;
@@ -3199,7 +9668,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			div = element("div");
     			if (default_slot) default_slot.c();
     			set_attributes(div, div_data);
-    			add_location(div, file$m, 0, 0, 0);
+    			add_location(div, file$o, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3271,7 +9740,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$n.name,
+    		id: create_fragment$p.name,
     		type: "component",
     		source: "",
     		ctx
@@ -3280,7 +9749,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$n($$self, $$props, $$invalidate) {
+    function instance$o($$self, $$props, $$invalidate) {
     	const omit_props_names = ["use","class","variant","padded","getElement"];
     	let $$restProps = compute_rest_props($$props, omit_props_names);
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -3358,7 +9827,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	constructor(options) {
     		super(options);
 
-    		init(this, options, instance$n, create_fragment$n, safe_not_equal, {
+    		init(this, options, instance$o, create_fragment$p, safe_not_equal, {
     			use: 0,
     			class: 1,
     			variant: 2,
@@ -3370,7 +9839,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			component: this,
     			tagName: "Card",
     			options,
-    			id: create_fragment$n.name
+    			id: create_fragment$p.name
     		});
     	}
 
@@ -3415,15 +9884,15 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	}
     }
 
-    var Content = classAdderBuilder({
+    var Content$1 = classAdderBuilder({
         class: 'smui-card__content',
         component: Div,
     });
 
     /* node_modules\@smui\card\dist\PrimaryAction.svelte generated by Svelte v3.46.6 */
-    const file$l = "node_modules\\@smui\\card\\dist\\PrimaryAction.svelte";
+    const file$n = "node_modules\\@smui\\card\\dist\\PrimaryAction.svelte";
 
-    function create_fragment$m(ctx) {
+    function create_fragment$o(ctx) {
     	let div1;
     	let div0;
     	let t;
@@ -3466,9 +9935,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t = space();
     			if (default_slot) default_slot.c();
     			attr_dev(div0, "class", "mdc-card__ripple");
-    			add_location(div0, file$l, 25, 2, 504);
+    			add_location(div0, file$n, 25, 2, 504);
     			set_attributes(div1, div1_data);
-    			add_location(div1, file$l, 0, 0, 0);
+    			add_location(div1, file$n, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3561,7 +10030,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$m.name,
+    		id: create_fragment$o.name,
     		type: "component",
     		source: "",
     		ctx
@@ -3572,7 +10041,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     const func$1 = ([name, value]) => `${name}: ${value};`;
 
-    function instance$m($$self, $$props, $$invalidate) {
+    function instance$n($$self, $$props, $$invalidate) {
     	const omit_props_names = ["use","class","style","ripple","color","padded","tabindex","getElement"];
     	let $$restProps = compute_rest_props($$props, omit_props_names);
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -3703,7 +10172,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	constructor(options) {
     		super(options);
 
-    		init(this, options, instance$m, create_fragment$m, safe_not_equal, {
+    		init(this, options, instance$n, create_fragment$o, safe_not_equal, {
     			use: 0,
     			class: 1,
     			style: 2,
@@ -3718,7 +10187,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			component: this,
     			tagName: "PrimaryAction",
     			options,
-    			id: create_fragment$m.name
+    			id: create_fragment$o.name
     		});
     	}
 
@@ -3793,9 +10262,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     });
 
     /* node_modules\@smui\card\dist\Actions.svelte generated by Svelte v3.46.6 */
-    const file$k = "node_modules\\@smui\\card\\dist\\Actions.svelte";
+    const file$m = "node_modules\\@smui\\card\\dist\\Actions.svelte";
 
-    function create_fragment$l(ctx) {
+    function create_fragment$n(ctx) {
     	let div;
     	let div_class_value;
     	let useActions_action;
@@ -3827,7 +10296,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			div = element("div");
     			if (default_slot) default_slot.c();
     			set_attributes(div, div_data);
-    			add_location(div, file$k, 0, 0, 0);
+    			add_location(div, file$m, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3898,7 +10367,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$l.name,
+    		id: create_fragment$n.name,
     		type: "component",
     		source: "",
     		ctx
@@ -3907,7 +10376,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$l($$self, $$props, $$invalidate) {
+    function instance$m($$self, $$props, $$invalidate) {
     	const omit_props_names = ["use","class","fullBleed","getElement"];
     	let $$restProps = compute_rest_props($$props, omit_props_names);
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -3979,11 +10448,11 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	];
     }
 
-    class Actions$1 extends SvelteComponentDev {
+    class Actions$2 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
 
-    		init(this, options, instance$l, create_fragment$l, safe_not_equal, {
+    		init(this, options, instance$m, create_fragment$n, safe_not_equal, {
     			use: 0,
     			class: 1,
     			fullBleed: 2,
@@ -3994,7 +10463,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			component: this,
     			tagName: "Actions",
     			options,
-    			id: create_fragment$l.name
+    			id: create_fragment$n.name
     		});
     	}
 
@@ -4042,13 +10511,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     });
 
     const PrimaryAction = PrimaryAction$1;
-    const Actions = Actions$1;
+    const Actions$1 = Actions$2;
 
     /* src\Components\LinkCard.svelte generated by Svelte v3.46.6 */
-    const file$j = "src\\Components\\LinkCard.svelte";
+    const file$l = "src\\Components\\LinkCard.svelte";
 
     // (11:6) <Content class="link-card-content" style="">
-    function create_default_slot_2$1(ctx) {
+    function create_default_slot_2$3(ctx) {
     	let div0;
     	let t0;
     	let t1;
@@ -4063,9 +10532,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			div1 = element("div");
     			t2 = text(/*subtitle*/ ctx[3]);
     			attr_dev(div0, "class", "mdc-typography--body2 highlight");
-    			add_location(div0, file$j, 11, 8, 311);
+    			add_location(div0, file$l, 11, 8, 311);
     			attr_dev(div1, "class", "mdc-typography--body2");
-    			add_location(div1, file$j, 12, 8, 379);
+    			add_location(div1, file$l, 12, 8, 379);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -4087,7 +10556,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$1.name,
+    		id: create_default_slot_2$3.name,
     		type: "slot",
     		source: "(11:6) <Content class=\\\"link-card-content\\\" style=\\\"\\\">",
     		ctx
@@ -4097,18 +10566,18 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (9:4) <PrimaryAction>
-    function create_default_slot_1$3(ctx) {
+    function create_default_slot_1$5(ctx) {
     	let img;
     	let img_src_value;
     	let t;
     	let content;
     	let current;
 
-    	content = new Content({
+    	content = new Content$1({
     			props: {
     				class: "link-card-content",
     				style: "",
-    				$$slots: { default: [create_default_slot_2$1] },
+    				$$slots: { default: [create_default_slot_2$3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -4122,7 +10591,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			if (!src_url_equal(img.src, img_src_value = /*src*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*title*/ ctx[2]);
     			attr_dev(img, "class", "svelte-rqmlsf");
-    			add_location(img, file$j, 9, 6, 224);
+    			add_location(img, file$l, 9, 6, 224);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -4165,7 +10634,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$3.name,
+    		id: create_default_slot_1$5.name,
     		type: "slot",
     		source: "(9:4) <PrimaryAction>",
     		ctx
@@ -4175,13 +10644,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (8:2) <Card class="link-card" style="">
-    function create_default_slot$4(ctx) {
+    function create_default_slot$6(ctx) {
     	let primaryaction;
     	let current;
 
     	primaryaction = new PrimaryAction({
     			props: {
-    				$$slots: { default: [create_default_slot_1$3] },
+    				$$slots: { default: [create_default_slot_1$5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -4220,7 +10689,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$4.name,
+    		id: create_default_slot$6.name,
     		type: "slot",
     		source: "(8:2) <Card class=\\\"link-card\\\" style=\\\"\\\">",
     		ctx
@@ -4229,7 +10698,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function create_fragment$k(ctx) {
+    function create_fragment$m(ctx) {
     	let a;
     	let card;
     	let current;
@@ -4238,7 +10707,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			props: {
     				class: "link-card",
     				style: "",
-    				$$slots: { default: [create_default_slot$4] },
+    				$$slots: { default: [create_default_slot$6] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -4251,7 +10720,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			attr_dev(a, "href", /*href*/ ctx[0]);
     			attr_dev(a, "style", "");
     			attr_dev(a, "class", "svelte-rqmlsf");
-    			add_location(a, file$j, 6, 0, 139);
+    			add_location(a, file$l, 6, 0, 139);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4291,7 +10760,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$k.name,
+    		id: create_fragment$m.name,
     		type: "component",
     		source: "",
     		ctx
@@ -4300,7 +10769,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$k($$self, $$props, $$invalidate) {
+    function instance$l($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('LinkCard', slots, []);
     	let { href, src, title, subtitle } = $$props;
@@ -4319,7 +10788,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	$$self.$capture_state = () => ({
     		Card,
-    		Content,
+    		Content: Content$1,
     		PrimaryAction,
     		href,
     		src,
@@ -4344,13 +10813,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class LinkCard extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$k, create_fragment$k, safe_not_equal, { href: 0, src: 1, title: 2, subtitle: 3 });
+    		init(this, options, instance$l, create_fragment$m, safe_not_equal, { href: 0, src: 1, title: 2, subtitle: 3 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "LinkCard",
     			options,
-    			id: create_fragment$k.name
+    			id: create_fragment$m.name
     		});
 
     		const { ctx } = this.$$;
@@ -4407,9 +10876,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     /* src\Amianto\Cards.svelte generated by Svelte v3.46.6 */
-    const file$i = "src\\Amianto\\Cards.svelte";
+    const file$k = "src\\Amianto\\Cards.svelte";
 
-    function create_fragment$j(ctx) {
+    function create_fragment$l(ctx) {
     	let div2;
     	let div0;
     	let t1;
@@ -4451,7 +10920,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     				href: "#content3-1",
     				src: "img/balangero-mine.png",
     				title: "Balangero, Italia",
-    				subtitle: "La miniera di amianto piú grande d'Europa. Rimasta attiva nella provincia di Torino fino al 1990."
+    				subtitle: "La miniera di amianto più grande d'Europa. Rimasta attiva nella provincia di Torino fino al 1990."
     			},
     			$$inline: true
     		});
@@ -4461,7 +10930,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     				href: "#content4-1",
     				src: "img/libby-mine.png",
     				title: "Libby, Montana",
-    				subtitle: "La cittá che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite."
+    				subtitle: "La città che ha sofferto la contaminazione d'amianto causata dall'estrazione di vermiculite."
     			},
     			$$inline: true
     		});
@@ -4490,13 +10959,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			br0 = element("br");
     			t5 = text("Le ");
     			span1 = element("span");
-    			span1.textContent = "cittá";
+    			span1.textContent = "città";
     			t7 = text(" che incontrerai ti mostreranno quanta influenza abbia avuto l'amianto in tutto il mondo.\r\n    ");
     			br1 = element("br");
     			t8 = text("Ad accompagnarti troverai gli ");
     			span2 = element("span");
     			span2.textContent = "uomini";
-    			t10 = text(" che di piú hanno sofferto, e potrai ascoltare le loro storie.");
+    			t10 = text(" che di più hanno sofferto, e potrai ascoltare le loro storie.");
     			t11 = space();
     			div3 = element("div");
     			create_component(linkcard0.$$.fragment);
@@ -4507,24 +10976,24 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t14 = space();
     			create_component(linkcard3.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase primary");
-    			add_location(div0, file$i, 5, 2, 99);
+    			add_location(div0, file$k, 5, 2, 99);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$i, 7, 54, 358);
-    			add_location(br0, file$i, 8, 4, 412);
+    			add_location(span0, file$k, 7, 54, 358);
+    			add_location(br0, file$k, 8, 4, 412);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$i, 8, 13, 421);
-    			add_location(br1, file$i, 9, 4, 552);
+    			add_location(span1, file$k, 8, 13, 421);
+    			add_location(br1, file$k, 9, 4, 552);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$i, 9, 40, 588);
+    			add_location(span2, file$k, 9, 40, 588);
     			attr_dev(div1, "class", "mdc-typography--body1");
     			set_style(div1, "padding-top", "1vw");
     			set_style(div1, "padding-bottom", "1.8vw");
-    			add_location(div1, file$i, 6, 2, 218);
-    			add_location(div2, file$i, 4, 0, 90);
+    			add_location(div1, file$k, 6, 2, 218);
+    			add_location(div2, file$k, 4, 0, 90);
     			attr_dev(div3, "id", "link-cards");
     			attr_dev(div3, "style", "");
     			attr_dev(div3, "class", "svelte-7sl4wl");
-    			add_location(div3, file$i, 12, 0, 707);
+    			add_location(div3, file$k, 12, 0, 707);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4585,7 +11054,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$j.name,
+    		id: create_fragment$l.name,
     		type: "component",
     		source: "",
     		ctx
@@ -4594,7 +11063,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$j($$self, $$props, $$invalidate) {
+    function instance$k($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Cards', slots, []);
     	const writable_props = [];
@@ -4610,22 +11079,22 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Cards$5 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$j, create_fragment$j, safe_not_equal, {});
+    		init(this, options, instance$k, create_fragment$l, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Cards",
     			options,
-    			id: create_fragment$j.name
+    			id: create_fragment$l.name
     		});
     	}
     }
 
     /* src\Balangero\Intro.svelte generated by Svelte v3.46.6 */
 
-    const file$h = "src\\Balangero\\Intro.svelte";
+    const file$j = "src\\Balangero\\Intro.svelte";
 
-    function create_fragment$i(ctx) {
+    function create_fragment$k(ctx) {
     	let div0;
     	let t1;
     	let div3;
@@ -4677,13 +11146,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t6 = text("\r\n    cava d'amianto dell'Occidente, è stata in primo luogo un'immensa fonte di lavoro e ricchezza per la comunità balangerese e i paesi limitrofi.\r\n    ");
     			br0 = element("br");
     			br1 = element("br");
-    			t7 = text("\r\n    Le prime attività di estrazione vennero avviate nel 1918 mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare\r\n    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione tanto da raggiungere il\r\n    ");
+    			t7 = text("\r\n    Le prime attività di estrazione vennero avviate nel 1918, mentre l’impianto di macinazione e separazione dell’amianto entrò in funzione nel 1921. Con il passare\r\n    degli anni vennero potenziate le opere di scavo e ingranditi gli impianti di lavorazione, tanto da raggiungere il\r\n    ");
     			span1 = element("span");
     			span1.textContent = "picco di produzione";
     			t9 = text("\r\n    di 36000 tonnellate annue.\r\n    ");
     			br2 = element("br");
     			br3 = element("br");
-    			t10 = text("\r\n    In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta dalla Eternit e dalle Manifatture Colombo ai fratelli Puccini di Roma, ma\r\n    nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne ");
+    			t10 = text("\r\n    In pieno boom di produzione, nel 1983 l'Amiantifera di Balangero S.p.A. venne ceduta, dalla Eternit e dalle Manifatture Colombo, ai fratelli Puccini di Roma,\r\n    ma nel giro di 7 anni la società subì una grave involuzione e nel 1990 venne ");
     			span2 = element("span");
     			span2.textContent = "chiusa per fallimento";
     			t12 = text(" e i dipendenti licenziati.");
@@ -4707,37 +11176,37 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			span5.textContent = "condanne";
     			t23 = text(" per gli ex dirigenti della cava. Nel 2012 furono quaranta i casi sotto esame: venticinque morti e quindici malati, tra\r\n    i quali anche casi di normali cittadini e non solo di lavoratori della cava.");
     			attr_dev(div0, "class", "mdc-typography--headline1 uppercase");
-    			add_location(div0, file$h, 0, 0, 0);
+    			add_location(div0, file$j, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div1, file$h, 3, 2, 98);
+    			add_location(div1, file$j, 3, 2, 98);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$h, 6, 4, 348);
-    			add_location(br0, file$h, 8, 4, 542);
-    			add_location(br1, file$h, 8, 10, 548);
+    			add_location(span0, file$j, 6, 4, 348);
+    			add_location(br0, file$j, 8, 4, 542);
+    			add_location(br1, file$j, 8, 10, 548);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$h, 11, 4, 843);
-    			add_location(br2, file$h, 13, 4, 931);
-    			add_location(br3, file$h, 13, 10, 937);
+    			add_location(span1, file$j, 11, 4, 845);
+    			add_location(br2, file$j, 13, 4, 933);
+    			add_location(br3, file$j, 13, 10, 939);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$h, 15, 78, 1187);
+    			add_location(span2, file$j, 15, 81, 1191);
     			attr_dev(div2, "class", "mdc-typography--body1");
-    			add_location(div2, file$h, 4, 2, 180);
-    			attr_dev(div3, "class", "left svelte-u95hax");
-    			add_location(div3, file$h, 2, 0, 76);
+    			add_location(div2, file$j, 4, 2, 180);
+    			attr_dev(div3, "class", "left svelte-2r5nqk");
+    			add_location(div3, file$j, 2, 0, 76);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$h, 20, 2, 1311);
+    			add_location(div4, file$j, 20, 2, 1315);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$h, 23, 4, 1610);
+    			add_location(span3, file$j, 23, 4, 1614);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$h, 25, 4, 1878);
-    			add_location(br4, file$h, 26, 4, 1978);
-    			add_location(br5, file$h, 26, 10, 1984);
+    			add_location(span4, file$j, 25, 4, 1882);
+    			add_location(br4, file$j, 26, 4, 1982);
+    			add_location(br5, file$j, 26, 10, 1988);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$h, 28, 4, 2124);
+    			add_location(span5, file$j, 28, 4, 2128);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$h, 21, 2, 1407);
-    			attr_dev(div6, "class", "right svelte-u95hax");
-    			add_location(div6, file$h, 19, 0, 1288);
+    			add_location(div5, file$j, 21, 2, 1411);
+    			attr_dev(div6, "class", "right svelte-2r5nqk");
+    			add_location(div6, file$j, 19, 0, 1292);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4792,7 +11261,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$i.name,
+    		id: create_fragment$k.name,
     		type: "component",
     		source: "",
     		ctx
@@ -4801,7 +11270,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$i($$self, $$props) {
+    function instance$j($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Intro', slots, []);
     	const writable_props = [];
@@ -4816,29 +11285,29 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Intro$4 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$i, create_fragment$i, safe_not_equal, {});
+    		init(this, options, instance$j, create_fragment$k, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Intro",
     			options,
-    			id: create_fragment$i.name
+    			id: create_fragment$k.name
     		});
     	}
     }
 
     /* node_modules\@smui\button\dist\Button.svelte generated by Svelte v3.46.6 */
-    const file$g = "node_modules\\@smui\\button\\dist\\Button.svelte";
+    const file$i = "node_modules\\@smui\\button\\dist\\Button.svelte";
 
     // (50:10) {#if touch}
-    function create_if_block$1(ctx) {
+    function create_if_block$4(ctx) {
     	let div;
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "mdc-button__touch");
-    			add_location(div, file$g, 49, 21, 1522);
+    			add_location(div, file$i, 49, 21, 1522);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4850,7 +11319,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$4.name,
     		type: "if",
     		source: "(50:10) {#if touch}",
     		ctx
@@ -4860,14 +11329,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (1:0) <svelte:component   this={component}   bind:this={element}   use={[     [       Ripple,       {         ripple,         unbounded: false,         color,         disabled: !!$$restProps.disabled,         addClass,         removeClass,         addStyle,       },     ],     forwardEvents,     ...use,   ]}   class={classMap({     [className]: true,     'mdc-button': true,     'mdc-button--raised': variant === 'raised',     'mdc-button--unelevated': variant === 'unelevated',     'mdc-button--outlined': variant === 'outlined',     'smui-button--color-secondary': color === 'secondary',     'mdc-button--touch': touch,     'mdc-card__action': context === 'card:action',     'mdc-card__action--button': context === 'card:action',     'mdc-dialog__button': context === 'dialog:action',     'mdc-top-app-bar__navigation-icon': context === 'top-app-bar:navigation',     'mdc-top-app-bar__action-item': context === 'top-app-bar:action',     'mdc-snackbar__action': context === 'snackbar:actions',     'mdc-banner__secondary-action': context === 'banner' && secondary,     'mdc-banner__primary-action': context === 'banner' && !secondary,     'mdc-tooltip__action': context === 'tooltip:rich-actions',     ...internalClasses,   })}   style={Object.entries(internalStyles)     .map(([name, value]) => `${name}: ${value};`)     .concat([style])     .join(' ')}   {...actionProp}   {...defaultProp}   {...secondaryProp}   {href}   on:click={handleClick}   {...$$restProps}   >
-    function create_default_slot$3(ctx) {
+    function create_default_slot$5(ctx) {
     	let div;
     	let t;
     	let if_block_anchor;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[27].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[29], null);
-    	let if_block = /*touch*/ ctx[6] && create_if_block$1(ctx);
+    	let if_block = /*touch*/ ctx[6] && create_if_block$4(ctx);
 
     	const block = {
     		c: function create() {
@@ -4877,7 +11346,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
     			attr_dev(div, "class", "mdc-button__ripple");
-    			add_location(div, file$g, 48, 3, 1466);
+    			add_location(div, file$i, 48, 3, 1466);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4909,7 +11378,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     			if (/*touch*/ ctx[6]) {
     				if (if_block) ; else {
-    					if_block = create_if_block$1(ctx);
+    					if_block = create_if_block$4(ctx);
     					if_block.c();
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
@@ -4938,7 +11407,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$3.name,
+    		id: create_default_slot$5.name,
     		type: "slot",
     		source: "(1:0) <svelte:component   this={component}   bind:this={element}   use={[     [       Ripple,       {         ripple,         unbounded: false,         color,         disabled: !!$$restProps.disabled,         addClass,         removeClass,         addStyle,       },     ],     forwardEvents,     ...use,   ]}   class={classMap({     [className]: true,     'mdc-button': true,     'mdc-button--raised': variant === 'raised',     'mdc-button--unelevated': variant === 'unelevated',     'mdc-button--outlined': variant === 'outlined',     'smui-button--color-secondary': color === 'secondary',     'mdc-button--touch': touch,     'mdc-card__action': context === 'card:action',     'mdc-card__action--button': context === 'card:action',     'mdc-dialog__button': context === 'dialog:action',     'mdc-top-app-bar__navigation-icon': context === 'top-app-bar:navigation',     'mdc-top-app-bar__action-item': context === 'top-app-bar:action',     'mdc-snackbar__action': context === 'snackbar:actions',     'mdc-banner__secondary-action': context === 'banner' && secondary,     'mdc-banner__primary-action': context === 'banner' && !secondary,     'mdc-tooltip__action': context === 'tooltip:rich-actions',     ...internalClasses,   })}   style={Object.entries(internalStyles)     .map(([name, value]) => `${name}: ${value};`)     .concat([style])     .join(' ')}   {...actionProp}   {...defaultProp}   {...secondaryProp}   {href}   on:click={handleClick}   {...$$restProps}   >",
     		ctx
@@ -4947,7 +11416,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function create_fragment$h(ctx) {
+    function create_fragment$j(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -5006,7 +11475,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	function switch_props(ctx) {
     		let switch_instance_props = {
-    			$$slots: { default: [create_default_slot$3] },
+    			$$slots: { default: [create_default_slot$5] },
     			$$scope: { ctx }
     		};
 
@@ -5143,7 +11612,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$h.name,
+    		id: create_fragment$j.name,
     		type: "component",
     		source: "",
     		ctx
@@ -5154,7 +11623,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     const func = ([name, value]) => `${name}: ${value};`;
 
-    function instance$h($$self, $$props, $$invalidate) {
+    function instance$i($$self, $$props, $$invalidate) {
     	let actionProp;
     	let defaultProp;
     	let secondaryProp;
@@ -5372,7 +11841,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	constructor(options) {
     		super(options);
 
-    		init(this, options, instance$h, create_fragment$h, safe_not_equal, {
+    		init(this, options, instance$i, create_fragment$j, safe_not_equal, {
     			use: 0,
     			class: 1,
     			style: 2,
@@ -5392,7 +11861,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			component: this,
     			tagName: "Button_1",
     			options,
-    			id: create_fragment$h.name
+    			id: create_fragment$j.name
     		});
     	}
 
@@ -5503,8 +11972,128 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     /* src\Components\CustomButton.svelte generated by Svelte v3.46.6 */
 
-    // (8:2) <Label class="mdc-typography--body2 bold">
-    function create_default_slot_1$2(ctx) {
+    // (13:0) {:else}
+    function create_else_block(ctx) {
+    	let button;
+    	let current;
+
+    	button = new Button_1({
+    			props: {
+    				class: /*direction*/ ctx[2],
+    				variant: "raised",
+    				style: "height: 10vw;",
+    				$$slots: { default: [create_default_slot_2$2] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(button.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(button, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const button_changes = {};
+    			if (dirty & /*direction*/ 4) button_changes.class = /*direction*/ ctx[2];
+
+    			if (dirty & /*$$scope, label*/ 9) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(button, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(13:0) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (9:0) {#if href !== ""}
+    function create_if_block$3(ctx) {
+    	let button;
+    	let current;
+
+    	button = new Button_1({
+    			props: {
+    				class: /*direction*/ ctx[2],
+    				variant: "raised",
+    				href: /*href*/ ctx[1],
+    				style: "height: 10vw;",
+    				$$slots: { default: [create_default_slot$4] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(button.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(button, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const button_changes = {};
+    			if (dirty & /*direction*/ 4) button_changes.class = /*direction*/ ctx[2];
+    			if (dirty & /*href*/ 2) button_changes.href = /*href*/ ctx[1];
+
+    			if (dirty & /*$$scope, label*/ 9) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(button, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$3.name,
+    		type: "if",
+    		source: "(9:0) {#if href !== \\\"\\\"}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (15:4) <Label class="mdc-typography--button bold">
+    function create_default_slot_3$2(ctx) {
     	let t;
 
     	const block = {
@@ -5524,24 +12113,24 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$2.name,
+    		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(8:2) <Label class=\\\"mdc-typography--body2 bold\\\">",
+    		source: "(15:4) <Label class=\\\"mdc-typography--button bold\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (7:0) <Button class={direction} variant="raised" {href} style="height: 2.5vw;">
-    function create_default_slot$2(ctx) {
+    // (14:2) <Button class={direction} variant="raised" style="height: 10vw;">
+    function create_default_slot_2$2(ctx) {
     	let label_1;
     	let current;
 
     	label_1 = new Label({
     			props: {
-    				class: "mdc-typography--body2 bold",
-    				$$slots: { default: [create_default_slot_1$2] },
+    				class: "mdc-typography--button bold",
+    				$$slots: { default: [create_default_slot_3$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -5580,26 +12169,54 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$2.name,
+    		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(7:0) <Button class={direction} variant=\\\"raised\\\" {href} style=\\\"height: 2.5vw;\\\">",
+    		source: "(14:2) <Button class={direction} variant=\\\"raised\\\" style=\\\"height: 10vw;\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    function create_fragment$g(ctx) {
-    	let button;
+    // (11:4) <Label class="mdc-typography--button bold">
+    function create_default_slot_1$4(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(/*label*/ ctx[0]);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*label*/ 1) set_data_dev(t, /*label*/ ctx[0]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$4.name,
+    		type: "slot",
+    		source: "(11:4) <Label class=\\\"mdc-typography--button bold\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (10:2) <Button class={direction} variant="raised" {href} style="height: 10vw;">
+    function create_default_slot$4(ctx) {
+    	let label_1;
     	let current;
 
-    	button = new Button_1({
+    	label_1 = new Label({
     			props: {
-    				class: /*direction*/ ctx[2],
-    				variant: "raised",
-    				href: /*href*/ ctx[1],
-    				style: "height: 2.5vw;",
-    				$$slots: { default: [create_default_slot$2] },
+    				class: "mdc-typography--button bold",
+    				$$slots: { default: [create_default_slot_1$4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -5607,43 +12224,120 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	const block = {
     		c: function create() {
-    			create_component(button.$$.fragment);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    			create_component(label_1.$$.fragment);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(button, target, anchor);
+    			mount_component(label_1, target, anchor);
     			current = true;
     		},
-    		p: function update(ctx, [dirty]) {
-    			const button_changes = {};
-    			if (dirty & /*direction*/ 4) button_changes.class = /*direction*/ ctx[2];
-    			if (dirty & /*href*/ 2) button_changes.href = /*href*/ ctx[1];
+    		p: function update(ctx, dirty) {
+    			const label_1_changes = {};
 
     			if (dirty & /*$$scope, label*/ 9) {
-    				button_changes.$$scope = { dirty, ctx };
+    				label_1_changes.$$scope = { dirty, ctx };
     			}
 
-    			button.$set(button_changes);
+    			label_1.$set(label_1_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(button.$$.fragment, local);
+    			transition_in(label_1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(button.$$.fragment, local);
+    			transition_out(label_1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(button, detaching);
+    			destroy_component(label_1, detaching);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$g.name,
+    		id: create_default_slot$4.name,
+    		type: "slot",
+    		source: "(10:2) <Button class={direction} variant=\\\"raised\\\" {href} style=\\\"height: 10vw;\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$i(ctx) {
+    	let current_block_type_index;
+    	let if_block;
+    	let if_block_anchor;
+    	let current;
+    	const if_block_creators = [create_if_block$3, create_else_block];
+    	const if_blocks = [];
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*href*/ ctx[1] !== "") return 0;
+    		return 1;
+    	}
+
+    	current_block_type_index = select_block_type(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	const block = {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			if_blocks[current_block_type_index].m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
+    				group_outros();
+
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+
+    				check_outros();
+    				if_block = if_blocks[current_block_type_index];
+
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				} else {
+    					if_block.p(ctx, dirty);
+    				}
+
+    				transition_in(if_block, 1);
+    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if_blocks[current_block_type_index].d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$i.name,
     		type: "component",
     		source: "",
     		ctx
@@ -5652,10 +12346,10 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$g($$self, $$props, $$invalidate) {
+    function instance$h($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('CustomButton', slots, []);
-    	let { label, href, direction } = $$props;
+    	let { label, href = "", direction } = $$props;
     	const writable_props = ['label', 'href', 'direction'];
 
     	Object.keys($$props).forEach(key => {
@@ -5686,13 +12380,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class CustomButton extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$g, create_fragment$g, safe_not_equal, { label: 0, href: 1, direction: 2 });
+    		init(this, options, instance$h, create_fragment$i, safe_not_equal, { label: 0, href: 1, direction: 2 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "CustomButton",
     			options,
-    			id: create_fragment$g.name
+    			id: create_fragment$i.name
     		});
 
     		const { ctx } = this.$$;
@@ -5700,10 +12394,6 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     		if (/*label*/ ctx[0] === undefined && !('label' in props)) {
     			console.warn("<CustomButton> was created without expected prop 'label'");
-    		}
-
-    		if (/*href*/ ctx[1] === undefined && !('href' in props)) {
-    			console.warn("<CustomButton> was created without expected prop 'href'");
     		}
 
     		if (/*direction*/ ctx[2] === undefined && !('direction' in props)) {
@@ -5737,10 +12427,10 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     /* src\Components\ContentCard.svelte generated by Svelte v3.46.6 */
-    const file$f = "src\\Components\\ContentCard.svelte";
+    const file$h = "src\\Components\\ContentCard.svelte";
 
     // (16:4) <Content style="padding: 1vw;">
-    function create_default_slot_6(ctx) {
+    function create_default_slot_6$1(ctx) {
     	let div0;
     	let t0;
     	let t1;
@@ -5755,9 +12445,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			div1 = element("div");
     			t2 = text(/*subtitle*/ ctx[3]);
     			attr_dev(div0, "class", "mdc-typography--body2 highlight");
-    			add_location(div0, file$f, 16, 6, 468);
+    			add_location(div0, file$h, 16, 6, 469);
     			attr_dev(div1, "class", "mdc-typography--body2");
-    			add_location(div1, file$f, 17, 6, 534);
+    			add_location(div1, file$h, 17, 6, 535);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -5779,7 +12469,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_6.name,
+    		id: create_default_slot_6$1.name,
     		type: "slot",
     		source: "(16:4) <Content style=\\\"padding: 1vw;\\\">",
     		ctx
@@ -5789,7 +12479,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (25:45) 
-    function create_if_block_1(ctx) {
+    function create_if_block_1$1(ctx) {
     	let i;
     	let t1;
     	let label;
@@ -5798,7 +12488,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	label = new Label({
     			props: {
     				class: "mdc-typography--body2 bold",
-    				$$slots: { default: [create_default_slot_5] },
+    				$$slots: { default: [create_default_slot_5$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -5810,9 +12500,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			i.textContent = "arrow_back";
     			t1 = space();
     			create_component(label.$$.fragment);
-    			attr_dev(i, "class", "material-icons svelte-2n91h2");
+    			attr_dev(i, "class", "material-icons svelte-ihribd");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$f, 25, 10, 952);
+    			add_location(i, file$h, 25, 10, 943);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -5847,7 +12537,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1.name,
+    		id: create_if_block_1$1.name,
     		type: "if",
     		source: "(25:45) ",
     		ctx
@@ -5857,7 +12547,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (22:8) {#if direction === "left-card"}
-    function create_if_block(ctx) {
+    function create_if_block$2(ctx) {
     	let label;
     	let t0;
     	let i;
@@ -5866,7 +12556,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	label = new Label({
     			props: {
     				class: "mdc-typography--body2 bold",
-    				$$slots: { default: [create_default_slot_4] },
+    				$$slots: { default: [create_default_slot_4$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -5878,9 +12568,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t0 = space();
     			i = element("i");
     			i.textContent = "arrow_forward";
-    			attr_dev(i, "class", "material-icons svelte-2n91h2");
+    			attr_dev(i, "class", "material-icons svelte-ihribd");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$f, 23, 10, 831);
+    			add_location(i, file$h, 23, 10, 822);
     		},
     		m: function mount(target, anchor) {
     			mount_component(label, target, anchor);
@@ -5915,7 +12605,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(22:8) {#if direction === \\\"left-card\\\"}",
     		ctx
@@ -5925,7 +12615,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (27:10) <Label class="mdc-typography--body2 bold">
-    function create_default_slot_5(ctx) {
+    function create_default_slot_5$1(ctx) {
     	let t;
 
     	const block = {
@@ -5945,7 +12635,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5.name,
+    		id: create_default_slot_5$1.name,
     		type: "slot",
     		source: "(27:10) <Label class=\\\"mdc-typography--body2 bold\\\">",
     		ctx
@@ -5955,7 +12645,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (23:10) <Label class="mdc-typography--body2 bold">
-    function create_default_slot_4(ctx) {
+    function create_default_slot_4$1(ctx) {
     	let t;
 
     	const block = {
@@ -5975,7 +12665,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_4.name,
+    		id: create_default_slot_4$1.name,
     		type: "slot",
     		source: "(23:10) <Label class=\\\"mdc-typography--body2 bold\\\">",
     		ctx
@@ -5984,13 +12674,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    // (21:6) <Button style="padding: 0 1.6vw 0.8vw 1.6vw;">
-    function create_default_slot_3(ctx) {
+    // (21:6) <Button class="content-card-button">
+    function create_default_slot_3$1(ctx) {
     	let current_block_type_index;
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block, create_if_block_1];
+    	const if_block_creators = [create_if_block$2, create_if_block_1$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -6072,9 +12762,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3.name,
+    		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(21:6) <Button style=\\\"padding: 0 1.6vw 0.8vw 1.6vw;\\\">",
+    		source: "(21:6) <Button class=\\\"content-card-button\\\">",
     		ctx
     	});
 
@@ -6082,14 +12772,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (20:4) <Actions fullBleed style="min-height: 0;">
-    function create_default_slot_2(ctx) {
+    function create_default_slot_2$1(ctx) {
     	let button;
     	let current;
 
     	button = new Button_1({
     			props: {
-    				style: "padding: 0 1.6vw 0.8vw 1.6vw;",
-    				$$slots: { default: [create_default_slot_3] },
+    				class: "content-card-button",
+    				$$slots: { default: [create_default_slot_3$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -6128,7 +12818,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2.name,
+    		id: create_default_slot_2$1.name,
     		type: "slot",
     		source: "(20:4) <Actions fullBleed style=\\\"min-height: 0;\\\">",
     		ctx
@@ -6138,7 +12828,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (14:2) <PrimaryAction on:click={() => document.getElementById(contentId).classList.toggle("hidden")}>
-    function create_default_slot_1$1(ctx) {
+    function create_default_slot_1$3(ctx) {
     	let img;
     	let img_src_value;
     	let t0;
@@ -6147,20 +12837,20 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	let actions;
     	let current;
 
-    	content = new Content({
+    	content = new Content$1({
     			props: {
     				style: "padding: 1vw;",
-    				$$slots: { default: [create_default_slot_6] },
+    				$$slots: { default: [create_default_slot_6$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	actions = new Actions({
+    	actions = new Actions$1({
     			props: {
     				fullBleed: true,
     				style: "min-height: 0;",
-    				$$slots: { default: [create_default_slot_2] },
+    				$$slots: { default: [create_default_slot_2$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -6175,8 +12865,8 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			create_component(actions.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = /*src*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*title*/ ctx[2]);
-    			attr_dev(img, "class", "svelte-2n91h2");
-    			add_location(img, file$f, 14, 4, 398);
+    			attr_dev(img, "class", "svelte-ihribd");
+    			add_location(img, file$h, 14, 4, 399);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -6232,7 +12922,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$1.name,
+    		id: create_default_slot_1$3.name,
     		type: "slot",
     		source: "(14:2) <PrimaryAction on:click={() => document.getElementById(contentId).classList.toggle(\\\"hidden\\\")}>",
     		ctx
@@ -6241,14 +12931,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    // (13:0) <Card class="custom-card {direction}">
-    function create_default_slot$1(ctx) {
+    // (13:0) <Card class="content-card {direction}">
+    function create_default_slot$3(ctx) {
     	let primaryaction;
     	let current;
 
     	primaryaction = new PrimaryAction({
     			props: {
-    				$$slots: { default: [create_default_slot_1$1] },
+    				$$slots: { default: [create_default_slot_1$3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -6289,23 +12979,23 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$1.name,
+    		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(13:0) <Card class=\\\"custom-card {direction}\\\">",
+    		source: "(13:0) <Card class=\\\"content-card {direction}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    function create_fragment$f(ctx) {
+    function create_fragment$h(ctx) {
     	let card;
     	let current;
 
     	card = new Card({
     			props: {
-    				class: "custom-card " + /*direction*/ ctx[5],
-    				$$slots: { default: [create_default_slot$1] },
+    				class: "content-card " + /*direction*/ ctx[5],
+    				$$slots: { default: [create_default_slot$3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -6324,7 +13014,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     		},
     		p: function update(ctx, [dirty]) {
     			const card_changes = {};
-    			if (dirty & /*direction*/ 32) card_changes.class = "custom-card " + /*direction*/ ctx[5];
+    			if (dirty & /*direction*/ 32) card_changes.class = "content-card " + /*direction*/ ctx[5];
 
     			if (dirty & /*$$scope, contentId, buttonLabel, direction, subtitle, title, src*/ 191) {
     				card_changes.$$scope = { dirty, ctx };
@@ -6348,7 +13038,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$f.name,
+    		id: create_fragment$h.name,
     		type: "component",
     		source: "",
     		ctx
@@ -6357,7 +13047,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$f($$self, $$props, $$invalidate) {
+    function instance$g($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('ContentCard', slots, []);
     	let { contentId, src, title, subtitle, buttonLabel, direction = "" } = $$props;
@@ -6380,8 +13070,8 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	$$self.$capture_state = () => ({
     		Card,
-    		Content,
-    		Actions,
+    		Content: Content$1,
+    		Actions: Actions$1,
     		PrimaryAction,
     		Button: Button_1,
     		Label,
@@ -6413,7 +13103,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	constructor(options) {
     		super(options);
 
-    		init(this, options, instance$f, create_fragment$f, safe_not_equal, {
+    		init(this, options, instance$g, create_fragment$h, safe_not_equal, {
     			contentId: 0,
     			src: 1,
     			title: 2,
@@ -6426,7 +13116,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			component: this,
     			tagName: "ContentCard",
     			options,
-    			id: create_fragment$f.name
+    			id: create_fragment$h.name
     		});
 
     		const { ctx } = this.$$;
@@ -6503,9 +13193,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     /* src\Balangero\Cards.svelte generated by Svelte v3.46.6 */
-    const file$e = "src\\Balangero\\Cards.svelte";
+    const file$g = "src\\Balangero\\Cards.svelte";
 
-    function create_fragment$e(ctx) {
+    function create_fragment$g(ctx) {
     	let div0;
     	let t1;
     	let div3;
@@ -6541,14 +13231,16 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	let t19;
     	let span6;
     	let t21;
-    	let span8;
+    	let span9;
     	let t22;
     	let span7;
     	let t24;
-    	let t25;
+    	let span8;
     	let t26;
-    	let custombutton1;
     	let t27;
+    	let t28;
+    	let custombutton1;
+    	let t29;
     	let contentcard1;
     	let current;
 
@@ -6628,65 +13320,70 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t14 = text(", neolaureato in chimica, lavorò presso la cava di Balangero per compiere ricerche\r\n      sull’estrazione del prezioso nichel dalla roccia di serpentino. Levi descrive la cava paragonandola alla rappresentazione dantesca dei\r\n      ");
     			span4 = element("span");
     			span4.textContent = "gironi infernali";
-    			t16 = text(", con fibre di amianto onnipresenti, raffigurate come un demone, asfissiante e ostile. Celebre é diventata\r\n      la sua frase ");
+    			t16 = text(", con fibre di amianto onnipresenti, raffigurate come un demone, asfissiante e ostile. Celebre è diventata\r\n      la sua frase ");
     			span5 = element("span");
-    			span5.textContent = "“C’era amianto dappertutto, come una neve cenerina”";
+    			span5.textContent = "\"C’era amianto dappertutto, come una neve cenerina\"";
     			t18 = text(".\r\n      ");
     			br2 = element("br");
     			br3 = element("br");
     			t19 = text("\r\n      Nel 1954 ");
     			span6 = element("span");
     			span6.textContent = "Italo Calvino";
-    			t21 = text(" arriva nella miniera piemontese come redattore del quotidiano “L’Unità” occupandosi del rischio\r\n      amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo\r\n      ");
-    			span8 = element("span");
-    			t22 = text("“Il grigio polverone d’asbesto della cava che dove arriva ");
+    			t21 = text(" arriva nella miniera piemontese come redattore del quotidiano \"l’Unità\" occupandosi del rischio\r\n      amianto e della sorte degli operai della cava. Italo Calvino diede una lettura emblematica della situazione dei minatori, scrivendo\r\n      ");
+    			span9 = element("span");
+    			t22 = text("\"Il grigio polverone d’asbesto della cava che dove arriva ");
     			span7 = element("span");
-    			span7.textContent = "brucia, foglie e polmoni";
-    			t24 = text("”");
-    			t25 = text(".");
-    			t26 = space();
+    			span7.textContent = "brucia";
+    			t24 = text(", ");
+    			span8 = element("span");
+    			span8.textContent = "foglie e polmoni";
+    			t26 = text("\"");
+    			t27 = text(".");
+    			t28 = space();
     			create_component(custombutton1.$$.fragment);
-    			t27 = space();
+    			t29 = space();
     			create_component(contentcard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "23vw");
-    			add_location(div0, file$e, 5, 0, 161);
+    			add_location(div0, file$g, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$e, 19, 6, 965);
-    			add_location(br0, file$e, 21, 6, 1153);
-    			add_location(br1, file$e, 21, 12, 1159);
+    			add_location(span0, file$g, 19, 6, 965);
+    			add_location(br0, file$g, 21, 6, 1153);
+    			add_location(br1, file$g, 21, 12, 1159);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$e, 24, 57, 1408);
+    			add_location(span1, file$g, 24, 57, 1408);
     			attr_dev(span2, "class", "italic");
-    			add_location(span2, file$e, 22, 6, 1173);
-    			add_location(div1, file$e, 17, 4, 828);
+    			add_location(span2, file$g, 22, 6, 1173);
+    			add_location(div1, file$g, 17, 4, 828);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div2, "id", "content-balangero1");
-    			add_location(div2, file$e, 16, 2, 730);
+    			add_location(div2, file$g, 16, 2, 730);
     			attr_dev(div3, "class", "flex-row-4");
     			set_style(div3, "margin-top", "4vw");
-    			add_location(div3, file$e, 6, 0, 297);
+    			add_location(div3, file$g, 6, 0, 297);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$e, 39, 28, 2061);
+    			add_location(span3, file$g, 39, 28, 2061);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$e, 41, 6, 2334);
+    			add_location(span4, file$g, 41, 6, 2334);
     			attr_dev(span5, "class", "italic");
-    			add_location(span5, file$e, 42, 19, 2508);
-    			add_location(br2, file$e, 43, 6, 2596);
-    			add_location(br3, file$e, 43, 12, 2602);
+    			add_location(span5, file$g, 42, 19, 2508);
+    			add_location(br2, file$g, 43, 6, 2596);
+    			add_location(br3, file$g, 43, 12, 2602);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$e, 44, 15, 2625);
+    			add_location(span6, file$g, 44, 15, 2625);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$e, 46, 85, 2991);
-    			attr_dev(span8, "class", "italic");
-    			add_location(span8, file$e, 46, 6, 2912);
-    			add_location(div4, file$e, 38, 4, 2026);
+    			add_location(span7, file$g, 46, 85, 2991);
+    			attr_dev(span8, "class", "highlight");
+    			add_location(span8, file$g, 46, 124, 3030);
+    			attr_dev(span9, "class", "italic");
+    			add_location(span9, file$g, 46, 6, 2912);
+    			add_location(div4, file$g, 38, 4, 2026);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div5, "id", "content-balangero2");
-    			add_location(div5, file$e, 37, 2, 1929);
+    			add_location(div5, file$g, 37, 2, 1929);
     			attr_dev(div6, "class", "flex-row-4");
     			set_style(div6, "margin-top", "4vw");
-    			add_location(div6, file$e, 36, 0, 1876);
+    			add_location(div6, file$g, 36, 0, 1876);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6727,14 +13424,16 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			append_dev(div4, t19);
     			append_dev(div4, span6);
     			append_dev(div4, t21);
-    			append_dev(div4, span8);
-    			append_dev(span8, t22);
-    			append_dev(span8, span7);
-    			append_dev(span8, t24);
-    			append_dev(div4, t25);
-    			append_dev(div5, t26);
+    			append_dev(div4, span9);
+    			append_dev(span9, t22);
+    			append_dev(span9, span7);
+    			append_dev(span9, t24);
+    			append_dev(span9, span8);
+    			append_dev(span9, t26);
+    			append_dev(div4, t27);
+    			append_dev(div5, t28);
     			mount_component(custombutton1, div5, null);
-    			append_dev(div6, t27);
+    			append_dev(div6, t29);
     			mount_component(contentcard1, div6, null);
     			current = true;
     		},
@@ -6769,7 +13468,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$e.name,
+    		id: create_fragment$g.name,
     		type: "component",
     		source: "",
     		ctx
@@ -6778,7 +13477,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$e($$self, $$props, $$invalidate) {
+    function instance$f($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Cards', slots, []);
     	const writable_props = [];
@@ -6794,22 +13493,22 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Cards$4 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$e, create_fragment$e, safe_not_equal, {});
+    		init(this, options, instance$f, create_fragment$g, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Cards",
     			options,
-    			id: create_fragment$e.name
+    			id: create_fragment$g.name
     		});
     	}
     }
 
     /* src\Components\StatsCard.svelte generated by Svelte v3.46.6 */
-    const file$d = "src\\Components\\StatsCard.svelte";
+    const file$f = "src\\Components\\StatsCard.svelte";
 
     // (8:2) <Content style="padding: 1vw;">
-    function create_default_slot_1(ctx) {
+    function create_default_slot_1$2(ctx) {
     	let div0;
     	let t0;
     	let t1;
@@ -6824,9 +13523,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			div1 = element("div");
     			t2 = text(/*caption*/ ctx[0]);
     			attr_dev(div0, "class", "mdc-typography--headline4 highlight");
-    			add_location(div0, file$d, 8, 4, 265);
+    			add_location(div0, file$f, 8, 4, 265);
     			attr_dev(div1, "class", "mdc-typography--body2 bold");
-    			add_location(div1, file$d, 9, 4, 333);
+    			add_location(div1, file$f, 9, 4, 333);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -6848,7 +13547,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1.name,
+    		id: create_default_slot_1$2.name,
     		type: "slot",
     		source: "(8:2) <Content style=\\\"padding: 1vw;\\\">",
     		ctx
@@ -6858,14 +13557,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     // (7:0) <Card class="stats-card" padded>
-    function create_default_slot(ctx) {
+    function create_default_slot$2(ctx) {
     	let content;
     	let current;
 
-    	content = new Content({
+    	content = new Content$1({
     			props: {
     				style: "padding: 1vw;",
-    				$$slots: { default: [create_default_slot_1] },
+    				$$slots: { default: [create_default_slot_1$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -6904,7 +13603,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot.name,
+    		id: create_default_slot$2.name,
     		type: "slot",
     		source: "(7:0) <Card class=\\\"stats-card\\\" padded>",
     		ctx
@@ -6913,7 +13612,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function create_fragment$d(ctx) {
+    function create_fragment$f(ctx) {
     	let card;
     	let current;
 
@@ -6921,7 +13620,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			props: {
     				class: "stats-card",
     				padded: true,
-    				$$slots: { default: [create_default_slot] },
+    				$$slots: { default: [create_default_slot$2] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -6963,7 +13662,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$d.name,
+    		id: create_fragment$f.name,
     		type: "component",
     		source: "",
     		ctx
@@ -6972,7 +13671,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$d($$self, $$props, $$invalidate) {
+    function instance$e($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('StatsCard', slots, []);
     	let { caption, value } = $$props;
@@ -6987,7 +13686,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     		if ('value' in $$props) $$invalidate(1, value = $$props.value);
     	};
 
-    	$$self.$capture_state = () => ({ Card, Content, caption, value });
+    	$$self.$capture_state = () => ({ Card, Content: Content$1, caption, value });
 
     	$$self.$inject_state = $$props => {
     		if ('caption' in $$props) $$invalidate(0, caption = $$props.caption);
@@ -7004,13 +13703,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class StatsCard extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$d, create_fragment$d, safe_not_equal, { caption: 0, value: 1 });
+    		init(this, options, instance$e, create_fragment$f, safe_not_equal, { caption: 0, value: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "StatsCard",
     			options,
-    			id: create_fragment$d.name
+    			id: create_fragment$f.name
     		});
 
     		const { ctx } = this.$$;
@@ -7043,9 +13742,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     }
 
     /* src\Balangero\Stats.svelte generated by Svelte v3.46.6 */
-    const file$c = "src\\Balangero\\Stats.svelte";
+    const file$e = "src\\Balangero\\Stats.svelte";
 
-    function create_fragment$c(ctx) {
+    function create_fragment$e(ctx) {
     	let div0;
     	let t1;
     	let div1;
@@ -7107,12 +13806,12 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			create_component(fab.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "8vw");
-    			add_location(div0, file$c, 6, 0, 193);
+    			add_location(div0, file$e, 6, 0, 193);
     			attr_dev(div1, "class", "flex-row-2");
     			set_style(div1, "margin-top", "2vw");
-    			add_location(div1, file$c, 7, 0, 295);
+    			add_location(div1, file$e, 7, 0, 295);
     			set_style(div2, "margin-top", "3.5vw");
-    			add_location(div2, file$c, 12, 0, 542);
+    			add_location(div2, file$e, 12, 0, 542);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7162,7 +13861,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$c.name,
+    		id: create_fragment$e.name,
     		type: "component",
     		source: "",
     		ctx
@@ -7171,7 +13870,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$c($$self, $$props, $$invalidate) {
+    function instance$d($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Stats', slots, []);
     	const writable_props = [];
@@ -7187,21 +13886,21 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Stats$3 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$c, create_fragment$c, safe_not_equal, {});
+    		init(this, options, instance$d, create_fragment$e, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Stats",
     			options,
-    			id: create_fragment$c.name
+    			id: create_fragment$e.name
     		});
     	}
     }
 
     /* src\Libby\Intro.svelte generated by Svelte v3.46.6 */
-    const file$b = "src\\Libby\\Intro.svelte";
+    const file$d = "src\\Libby\\Intro.svelte";
 
-    function create_fragment$b(ctx) {
+    function create_fragment$d(ctx) {
     	let div0;
     	let t1;
     	let div3;
@@ -7263,16 +13962,16 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			div1.textContent = "Storia del passato";
     			t3 = space();
     			div2 = element("div");
-    			t4 = text("La cittadina di Libby in Montana è il sito di uno dei peggiori ");
+    			t4 = text("La cittadina di Libby, in Montana, è il sito di uno dei peggiori ");
     			span0 = element("span");
     			span0.textContent = "disastri ambientali";
     			t6 = text(" causati dall'uomo. La polvere di amianto\r\n    tossico proveniente dalle miniere di vermiculite ha ucciso centinaia di residenti, ammalandone altre migliaia.\r\n    ");
     			br0 = element("br");
     			br1 = element("br");
-    			t7 = text("\r\n    Nel 1963, la W.R. Grace & Company, iniziò a scavare un deposito di ");
+    			t7 = text("\r\n    Nel 1963, la W.R. Grace & Company iniziò a scavare un deposito di ");
     			span1 = element("span");
     			span1.textContent = "vermiculite";
-    			t9 = text(" su una cima boschiva vicino a Libby. Il\r\n    minerale, relativamente innocuo, è stato utilizzato come isolamento delle soffitte fino agli anni 1980. Ma nello stesso deposito è stato trovato un tipo\r\n    naturale di ");
+    			t9 = text(" su una cima boschiva vicino a Libby. Il\r\n    minerale, relativamente innocuo, è stato utilizzato come isolamento delle soffitte fino agli anni '80. Ma nello stesso deposito è stato trovato un tipo\r\n    naturale di ");
     			span2 = element("span");
     			span2.textContent = "amianto mortale";
     			t11 = text(".\r\n    ");
@@ -7300,47 +13999,47 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t23 = text("\r\n    Gli effetti dolorosi delle polveri continuano ");
     			span6 = element("span");
     			span6.textContent = "lenti ma inesorabili";
-    			t25 = text(": ci vogliono decenni perchè i sintomi delle malattie da\r\n    amianto si manifestino, infatti i bambini che hanno giocato a baseball o corso sulle piste a contatto con l'amianto stanno iniziando ad ammalarsi solo ora.\r\n    ");
+    			t25 = text(": ci vogliono decenni perché i sintomi delle malattie da\r\n    amianto si manifestino, infatti i bambini che hanno giocato a baseball o corso sulle piste a contatto con l'amianto stanno iniziando ad ammalarsi solo ora.\r\n    ");
     			br6 = element("br");
     			br7 = element("br");
     			t26 = space();
     			create_component(custombutton.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline1 uppercase");
-    			add_location(div0, file$b, 4, 0, 88);
+    			add_location(div0, file$d, 4, 0, 88);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div1, file$b, 7, 2, 179);
+    			add_location(div1, file$d, 7, 2, 179);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$b, 9, 67, 360);
-    			add_location(br0, file$b, 11, 4, 573);
-    			add_location(br1, file$b, 11, 10, 579);
+    			add_location(span0, file$d, 9, 69, 362);
+    			add_location(br0, file$d, 11, 4, 575);
+    			add_location(br1, file$d, 11, 10, 581);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$b, 12, 71, 658);
+    			add_location(span1, file$d, 12, 70, 659);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$b, 14, 16, 916);
-    			add_location(br2, file$b, 15, 4, 969);
-    			add_location(br3, file$b, 15, 10, 975);
+    			add_location(span2, file$d, 14, 16, 916);
+    			add_location(br2, file$d, 15, 4, 969);
+    			add_location(br3, file$d, 15, 10, 975);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$b, 16, 40, 1023);
+    			add_location(span3, file$d, 16, 40, 1023);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$b, 17, 99, 1241);
+    			add_location(span4, file$d, 17, 99, 1241);
     			attr_dev(div2, "class", "mdc-typography--body1");
-    			add_location(div2, file$b, 8, 2, 256);
+    			add_location(div2, file$d, 8, 2, 256);
     			attr_dev(div3, "class", "left svelte-tz0xuf");
-    			add_location(div3, file$b, 6, 0, 157);
+    			add_location(div3, file$d, 6, 0, 157);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$b, 23, 2, 1406);
+    			add_location(div4, file$d, 23, 2, 1406);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$b, 25, 116, 1650);
-    			add_location(br4, file$b, 28, 4, 1872);
-    			add_location(br5, file$b, 28, 10, 1878);
+    			add_location(span5, file$d, 25, 116, 1650);
+    			add_location(br4, file$d, 28, 4, 1872);
+    			add_location(br5, file$d, 28, 10, 1878);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$b, 29, 50, 1936);
-    			add_location(br6, file$b, 31, 4, 2210);
-    			add_location(br7, file$b, 31, 10, 2216);
+    			add_location(span6, file$d, 29, 50, 1936);
+    			add_location(br6, file$d, 31, 4, 2210);
+    			add_location(br7, file$d, 31, 10, 2216);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$b, 24, 2, 1497);
+    			add_location(div5, file$d, 24, 2, 1497);
     			attr_dev(div6, "class", "right svelte-tz0xuf");
-    			add_location(div6, file$b, 22, 0, 1383);
+    			add_location(div6, file$d, 22, 0, 1383);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7410,7 +14109,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$b.name,
+    		id: create_fragment$d.name,
     		type: "component",
     		source: "",
     		ctx
@@ -7419,7 +14118,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$b($$self, $$props, $$invalidate) {
+    function instance$c($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Intro', slots, []);
     	const writable_props = [];
@@ -7435,28 +14134,28 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Intro$3 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$b, create_fragment$b, safe_not_equal, {});
+    		init(this, options, instance$c, create_fragment$d, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Intro",
     			options,
-    			id: create_fragment$b.name
+    			id: create_fragment$d.name
     		});
     	}
     }
 
     /* src\Libby\Cards.svelte generated by Svelte v3.46.6 */
-    const file$a = "src\\Libby\\Cards.svelte";
+    const file$c = "src\\Libby\\Cards.svelte";
 
-    function create_fragment$a(ctx) {
+    function create_fragment$c(ctx) {
     	let div0;
     	let t1;
-    	let div4;
+    	let div3;
     	let contentcard0;
     	let t2;
-    	let div3;
     	let div2;
+    	let div1;
     	let t3;
     	let span0;
     	let t5;
@@ -7472,36 +14171,39 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	let br2;
     	let br3;
     	let t13;
-    	let div1;
-    	let t14;
     	let span4;
+    	let t15;
+    	let span6;
     	let t16;
-    	let t17;
-    	let custombutton0;
+    	let span5;
     	let t18;
-    	let div7;
+    	let t19;
+    	let t20;
+    	let custombutton0;
+    	let t21;
     	let div6;
     	let div5;
-    	let t19;
-    	let span5;
-    	let t21;
-    	let span6;
-    	let t23;
+    	let div4;
+    	let t22;
+    	let span7;
+    	let t24;
+    	let span8;
+    	let t26;
     	let br4;
     	let br5;
-    	let t24;
-    	let span7;
-    	let t26;
-    	let span8;
-    	let t28;
+    	let t27;
+    	let span9;
+    	let t29;
+    	let span10;
+    	let t31;
     	let br6;
     	let br7;
-    	let t29;
-    	let span9;
-    	let t31;
     	let t32;
+    	let span11;
+    	let t34;
+    	let t35;
     	let custombutton1;
-    	let t33;
+    	let t36;
     	let contentcard1;
     	let current;
 
@@ -7550,13 +14252,13 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			div0.textContent = "Si puó tornare indietro da questo disastro?";
+    			div0.textContent = "Si può tornare indietro da questo disastro?";
     			t1 = space();
-    			div4 = element("div");
+    			div3 = element("div");
     			create_component(contentcard0.$$.fragment);
     			t2 = space();
-    			div3 = element("div");
     			div2 = element("div");
+    			div1 = element("div");
     			t3 = text("Il signor ");
     			span0 = element("span");
     			span0.textContent = "Ralph Hutt";
@@ -7566,100 +14268,106 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t7 = text(" e gli è stata\r\n      diagnosticata l'asbestosi polmonare nel 2002. Ai tempi, le uniche precauzioni fornite ai lavoratori dall'azienda erano\r\n      ");
     			span2 = element("span");
     			span2.textContent = "mascherine di carta";
-    			t9 = text(". Quando ha chiesto al suo supervisore una maggiore protezione, gli fu detto di non preoccuparsi poiché\r\n      ció che respiravano era solo polvere.\r\n      ");
+    			t9 = text(". Quando ha chiesto al suo supervisore una maggiore protezione, gli fu detto di non preoccuparsi poiché\r\n      ciò che respiravano era solo polvere.\r\n      ");
     			br0 = element("br");
     			br1 = element("br");
-    			t10 = text("\r\n      Giá da allora le sue radiografie mostravano segni dei danni da amianto ai polmoni, tra cui la graduale perdita della\r\n      ");
+    			t10 = text("\r\n      Già da allora le sue radiografie mostravano segni dei danni da amianto ai polmoni, tra cui la graduale perdita della\r\n      ");
     			span3 = element("span");
     			span3.textContent = "capacità di respirare";
     			t12 = text(". I dirigenti dell'azienda erano al corrente della presenza di amianto nello stabilimento, ma decisero\r\n      di tenere tutti i lavoratori, tra cui Ralph, all'oscuro.\r\n      ");
     			br2 = element("br");
     			br3 = element("br");
     			t13 = space();
-    			div1 = element("div");
-    			t14 = text("\"Questo non è il modo in cui me ne voglio andare,\" ha detto. \"Lasciate che qualcuno mi spari. Non voglio essere schiacciato sott'acqua o ");
     			span4 = element("span");
-    			span4.textContent = "strangolato";
-    			t16 = text(". È così che ci si sente.\"");
-    			t17 = space();
+    			span4.textContent = "\"Questo non è il modo in cui me ne voglio andare\"";
+    			t15 = text(", ha detto.\r\n      ");
+    			span6 = element("span");
+    			t16 = text("\"Lasciate che qualcuno mi spari. Non voglio essere schiacciato sott'acqua o ");
+    			span5 = element("span");
+    			span5.textContent = "strangolato";
+    			t18 = text(". È così che ci si sente\"");
+    			t19 = text(".");
+    			t20 = space();
     			create_component(custombutton0.$$.fragment);
-    			t18 = space();
-    			div7 = element("div");
+    			t21 = space();
     			div6 = element("div");
     			div5 = element("div");
-    			t19 = text("Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono\r\n      ");
-    			span5 = element("span");
-    			span5.textContent = "morti";
-    			t21 = text(" per malattie correlate all'amianto, e circa 1 su 10 tra tutti abitanti é\r\n      ");
-    			span6 = element("span");
-    			span6.textContent = "attualmente malato";
-    			t23 = text(".\r\n      ");
+    			div4 = element("div");
+    			t22 = text("Secondo uno studio del 2017 pubblicato sul Journal of Exposure Science and Environmental Epidemiology, circa 694 residenti di Libby sono\r\n      ");
+    			span7 = element("span");
+    			span7.textContent = "morti";
+    			t24 = text(" per malattie correlate all'amianto e circa 1 su 10 tra tutti gli abitanti è\r\n      ");
+    			span8 = element("span");
+    			span8.textContent = "attualmente malato";
+    			t26 = text(".\r\n      ");
     			br4 = element("br");
     			br5 = element("br");
-    			t24 = text("\r\n      L’Agenzia per la Protezione Ambientale Americana ha effettuato sopralluoghi in circa ");
-    			span7 = element("span");
-    			span7.textContent = "8200 proprietà";
-    			t26 = text(", di cui piú di 2400\r\n      siti sono stati risanificati completamente. Tra questi rientravano attività commerciali, giardini, abitazioni private, parchi e altri\r\n      ");
-    			span8 = element("span");
-    			span8.textContent = "spazi pubblici";
-    			t28 = text(" frequentati.\r\n      ");
+    			t27 = text("\r\n      L’Agenzia per la Protezione Ambientale Americana ha effettuato sopralluoghi in circa ");
+    			span9 = element("span");
+    			span9.textContent = "8200 proprietà";
+    			t29 = text(", di cui più di 2400\r\n      siti sono stati risanificati completamente. Tra questi rientravano attività commerciali, giardini, abitazioni private, parchi e altri\r\n      ");
+    			span10 = element("span");
+    			span10.textContent = "spazi pubblici";
+    			t31 = text(" frequentati.\r\n      ");
     			br6 = element("br");
     			br7 = element("br");
-    			t29 = text("\r\n      Ad oggi, per la decontaminazione e il ");
-    			span9 = element("span");
-    			span9.textContent = "risanamento";
-    			t31 = text(" della città di Libby, sono stati rimossi e rimpiazzati complessivamente più\r\n      di 750’000 metri cubi di rifiuti e materiali da costruzione, causando una spesa di oltre 600 milioni di dollari statali.");
-    			t32 = space();
+    			t32 = text("\r\n      Ad oggi, per la decontaminazione e il ");
+    			span11 = element("span");
+    			span11.textContent = "risanamento";
+    			t34 = text(" della città di Libby, sono stati rimossi e rimpiazzati complessivamente più\r\n      di 750’000 metri cubi di rifiuti e materiali da costruzione, causando una spesa di oltre 600 milioni di dollari statali.");
+    			t35 = space();
     			create_component(custombutton1.$$.fragment);
-    			t33 = space();
+    			t36 = space();
     			create_component(contentcard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "16vw");
-    			add_location(div0, file$a, 5, 0, 161);
+    			add_location(div0, file$c, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$a, 17, 16, 748);
+    			add_location(span0, file$c, 17, 16, 748);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$a, 17, 108, 840);
+    			add_location(span1, file$c, 17, 108, 840);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$a, 19, 6, 1026);
-    			add_location(br0, file$a, 21, 6, 1232);
-    			add_location(br1, file$a, 21, 12, 1238);
+    			add_location(span2, file$c, 19, 6, 1026);
+    			add_location(br0, file$c, 21, 6, 1232);
+    			add_location(br1, file$c, 21, 12, 1238);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$a, 23, 6, 1376);
-    			add_location(br2, file$a, 25, 6, 1602);
-    			add_location(br3, file$a, 25, 12, 1608);
-    			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$a, 27, 145, 1789);
-    			attr_dev(div1, "class", "italic");
-    			add_location(div1, file$a, 26, 6, 1622);
-    			add_location(div2, file$a, 16, 4, 725);
-    			attr_dev(div3, "class", "mdc-typography--body1 hidden right-align flex-column-2");
-    			attr_dev(div3, "id", "content-libby1");
-    			add_location(div3, file$a, 15, 2, 631);
-    			attr_dev(div4, "class", "flex-row-4");
-    			set_style(div4, "margin", "4vw 0 0 2vw");
-    			add_location(div4, file$a, 6, 0, 287);
+    			add_location(span3, file$c, 23, 6, 1376);
+    			add_location(br2, file$c, 25, 6, 1602);
+    			add_location(br3, file$c, 25, 12, 1608);
+    			attr_dev(span4, "class", "italic");
+    			add_location(span4, file$c, 26, 6, 1622);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$a, 40, 6, 2346);
-    			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$a, 41, 6, 2463);
-    			add_location(br4, file$a, 42, 6, 2521);
-    			add_location(br5, file$a, 42, 12, 2527);
+    			add_location(span5, file$c, 27, 103, 1815);
+    			attr_dev(span6, "class", "italic");
+    			add_location(span6, file$c, 27, 6, 1718);
+    			add_location(div1, file$c, 16, 4, 725);
+    			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
+    			attr_dev(div2, "id", "content-libby1");
+    			add_location(div2, file$c, 15, 2, 631);
+    			attr_dev(div3, "class", "flex-row-4");
+    			set_style(div3, "margin", "4vw 0 0 2vw");
+    			add_location(div3, file$c, 6, 0, 287);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$a, 43, 91, 2626);
+    			add_location(span7, file$c, 38, 6, 2355);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$a, 45, 6, 2840);
-    			add_location(br6, file$a, 46, 6, 2906);
-    			add_location(br7, file$a, 46, 12, 2912);
+    			add_location(span8, file$c, 39, 6, 2475);
+    			add_location(br4, file$c, 40, 6, 2533);
+    			add_location(br5, file$c, 40, 12, 2539);
     			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$a, 47, 44, 2964);
-    			add_location(div5, file$a, 38, 4, 2189);
-    			attr_dev(div6, "class", "mdc-typography--body1 hidden left-align flex-column-2");
-    			attr_dev(div6, "id", "content-libby2");
-    			add_location(div6, file$a, 37, 2, 2096);
-    			attr_dev(div7, "class", "flex-row-4");
-    			set_style(div7, "margin-top", "6vw");
-    			add_location(div7, file$a, 36, 0, 2043);
+    			add_location(span9, file$c, 41, 91, 2638);
+    			attr_dev(span10, "class", "highlight");
+    			add_location(span10, file$c, 43, 6, 2852);
+    			add_location(br6, file$c, 44, 6, 2918);
+    			add_location(br7, file$c, 44, 12, 2924);
+    			attr_dev(span11, "class", "highlight");
+    			add_location(span11, file$c, 45, 44, 2976);
+    			add_location(div4, file$c, 36, 4, 2198);
+    			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
+    			attr_dev(div5, "id", "content-libby2");
+    			add_location(div5, file$c, 35, 2, 2105);
+    			attr_dev(div6, "class", "flex-row-4");
+    			set_style(div6, "margin-top", "6vw");
+    			add_location(div6, file$c, 34, 0, 2052);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7667,57 +14375,60 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, div4, anchor);
-    			mount_component(contentcard0, div4, null);
-    			append_dev(div4, t2);
-    			append_dev(div4, div3);
+    			insert_dev(target, div3, anchor);
+    			mount_component(contentcard0, div3, null);
+    			append_dev(div3, t2);
     			append_dev(div3, div2);
-    			append_dev(div2, t3);
-    			append_dev(div2, span0);
-    			append_dev(div2, t5);
-    			append_dev(div2, span1);
-    			append_dev(div2, t7);
-    			append_dev(div2, span2);
-    			append_dev(div2, t9);
-    			append_dev(div2, br0);
-    			append_dev(div2, br1);
-    			append_dev(div2, t10);
-    			append_dev(div2, span3);
-    			append_dev(div2, t12);
-    			append_dev(div2, br2);
-    			append_dev(div2, br3);
-    			append_dev(div2, t13);
     			append_dev(div2, div1);
-    			append_dev(div1, t14);
+    			append_dev(div1, t3);
+    			append_dev(div1, span0);
+    			append_dev(div1, t5);
+    			append_dev(div1, span1);
+    			append_dev(div1, t7);
+    			append_dev(div1, span2);
+    			append_dev(div1, t9);
+    			append_dev(div1, br0);
+    			append_dev(div1, br1);
+    			append_dev(div1, t10);
+    			append_dev(div1, span3);
+    			append_dev(div1, t12);
+    			append_dev(div1, br2);
+    			append_dev(div1, br3);
+    			append_dev(div1, t13);
     			append_dev(div1, span4);
-    			append_dev(div1, t16);
-    			append_dev(div3, t17);
-    			mount_component(custombutton0, div3, null);
-    			insert_dev(target, t18, anchor);
-    			insert_dev(target, div7, anchor);
-    			append_dev(div7, div6);
+    			append_dev(div1, t15);
+    			append_dev(div1, span6);
+    			append_dev(span6, t16);
+    			append_dev(span6, span5);
+    			append_dev(span6, t18);
+    			append_dev(div1, t19);
+    			append_dev(div2, t20);
+    			mount_component(custombutton0, div2, null);
+    			insert_dev(target, t21, anchor);
+    			insert_dev(target, div6, anchor);
     			append_dev(div6, div5);
-    			append_dev(div5, t19);
-    			append_dev(div5, span5);
-    			append_dev(div5, t21);
-    			append_dev(div5, span6);
-    			append_dev(div5, t23);
-    			append_dev(div5, br4);
-    			append_dev(div5, br5);
-    			append_dev(div5, t24);
-    			append_dev(div5, span7);
-    			append_dev(div5, t26);
-    			append_dev(div5, span8);
-    			append_dev(div5, t28);
-    			append_dev(div5, br6);
-    			append_dev(div5, br7);
-    			append_dev(div5, t29);
-    			append_dev(div5, span9);
-    			append_dev(div5, t31);
-    			append_dev(div6, t32);
-    			mount_component(custombutton1, div6, null);
-    			append_dev(div7, t33);
-    			mount_component(contentcard1, div7, null);
+    			append_dev(div5, div4);
+    			append_dev(div4, t22);
+    			append_dev(div4, span7);
+    			append_dev(div4, t24);
+    			append_dev(div4, span8);
+    			append_dev(div4, t26);
+    			append_dev(div4, br4);
+    			append_dev(div4, br5);
+    			append_dev(div4, t27);
+    			append_dev(div4, span9);
+    			append_dev(div4, t29);
+    			append_dev(div4, span10);
+    			append_dev(div4, t31);
+    			append_dev(div4, br6);
+    			append_dev(div4, br7);
+    			append_dev(div4, t32);
+    			append_dev(div4, span11);
+    			append_dev(div4, t34);
+    			append_dev(div5, t35);
+    			mount_component(custombutton1, div5, null);
+    			append_dev(div6, t36);
+    			mount_component(contentcard1, div6, null);
     			current = true;
     		},
     		p: noop,
@@ -7739,11 +14450,11 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(div3);
     			destroy_component(contentcard0);
     			destroy_component(custombutton0);
-    			if (detaching) detach_dev(t18);
-    			if (detaching) detach_dev(div7);
+    			if (detaching) detach_dev(t21);
+    			if (detaching) detach_dev(div6);
     			destroy_component(custombutton1);
     			destroy_component(contentcard1);
     		}
@@ -7751,7 +14462,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$a.name,
+    		id: create_fragment$c.name,
     		type: "component",
     		source: "",
     		ctx
@@ -7760,7 +14471,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$a($$self, $$props, $$invalidate) {
+    function instance$b($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Cards', slots, []);
     	const writable_props = [];
@@ -7776,21 +14487,21 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Cards$3 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$a, create_fragment$a, safe_not_equal, {});
+    		init(this, options, instance$b, create_fragment$c, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Cards",
     			options,
-    			id: create_fragment$a.name
+    			id: create_fragment$c.name
     		});
     	}
     }
 
     /* src\Libby\Stats.svelte generated by Svelte v3.46.6 */
-    const file$9 = "src\\Libby\\Stats.svelte";
+    const file$b = "src\\Libby\\Stats.svelte";
 
-    function create_fragment$9(ctx) {
+    function create_fragment$b(ctx) {
     	let div0;
     	let t1;
     	let div1;
@@ -7852,12 +14563,12 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			create_component(fab.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "6vw");
-    			add_location(div0, file$9, 6, 0, 193);
+    			add_location(div0, file$b, 6, 0, 193);
     			attr_dev(div1, "class", "flex-row-2");
     			set_style(div1, "margin-top", "2vw");
-    			add_location(div1, file$9, 7, 0, 295);
+    			add_location(div1, file$b, 7, 0, 295);
     			set_style(div2, "margin-top", "3vw");
-    			add_location(div2, file$9, 12, 0, 539);
+    			add_location(div2, file$b, 12, 0, 539);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7907,7 +14618,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$9.name,
+    		id: create_fragment$b.name,
     		type: "component",
     		source: "",
     		ctx
@@ -7916,7 +14627,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$9($$self, $$props, $$invalidate) {
+    function instance$a($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Stats', slots, []);
     	const writable_props = [];
@@ -7932,22 +14643,22 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Stats$2 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, {});
+    		init(this, options, instance$a, create_fragment$b, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Stats",
     			options,
-    			id: create_fragment$9.name
+    			id: create_fragment$b.name
     		});
     	}
     }
 
     /* src\Minacu\Intro.svelte generated by Svelte v3.46.6 */
 
-    const file$8 = "src\\Minacu\\Intro.svelte";
+    const file$a = "src\\Minacu\\Intro.svelte";
 
-    function create_fragment$8(ctx) {
+    function create_fragment$a(ctx) {
     	let div0;
     	let t1;
     	let div3;
@@ -8007,7 +14718,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			div1.textContent = "Una storia controversa";
     			t3 = space();
     			div2 = element("div");
-    			t4 = text("Minaçu è un comune brasiliano dello stato del Goiàs dove opera la ");
+    			t4 = text("Minaçu è un comune brasiliano dello stato del Goiás dove opera la ");
     			span0 = element("span");
     			span0.textContent = "SAMA";
     			t6 = text(", un'industria franco-brasiliana dedita all’estrazione\r\n    di amianto crisotilo, e dove è presente la più grande miniera di amianto del Brasile chiamata ");
@@ -8016,29 +14727,29 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t8 = text(". L'amianto ha reso\r\n    Minaçu uno dei comuni più ricchi del paese.\r\n    ");
     			br0 = element("br");
     			br1 = element("br");
-    			t9 = text("\r\n    Le leggi federali in Brasile attestano chiaramente la pericolosità dell’amianto. Ciononostante l’estrazione, la manipolazione e la commercializzazione di quest’ultimo\r\n    son rimaste attive fino al 2017, anno in cui la Corte Suprema Federale ha ");
+    			t9 = text("\r\n    Le leggi federali in Brasile attestano chiaramente la pericolosità dell’amianto. Ciononostante, l’estrazione, la manipolazione e la commercializzazione di quest’ultimo\r\n    sono rimaste attive fino al 2017, anno in cui la Corte Suprema Federale ha ");
     			span2 = element("span");
     			span2.textContent = "vietato";
     			t11 = text(" l’uso del minerale.\r\n    ");
     			br2 = element("br");
     			br3 = element("br");
-    			t12 = text("\r\n    Nel 2019, peró, il governatore del Brasile ha emanato una ");
+    			t12 = text("\r\n    Nel 2019, però, il governatore del Brasile ha emanato una ");
     			span3 = element("span");
     			span3.textContent = "legislazione";
-    			t14 = text(" nello stato di Goiás, approvando l’estrazione ed esportazione\r\n    di amianto, facendo continuare così l’operato di Cana Brava. Questa mossa politica ha portato gli abitanti di Minaçu in una situazione delicata di fronte a un\r\n    bivio: in qualsiasi momento una decisione del tribunale potrebbe interrompere l'attività mineraria della cittá caduta proprio in un periodo economico difficile.");
+    			t14 = text(" nello stato di Goiás, approvando l’estrazione e l'esportazione\r\n    di amianto, facendo continuare così l’operato di Cana Brava. Questa mossa politica ha portato gli abitanti di Minaçu in una situazione delicata di fronte a un\r\n    bivio: in qualsiasi momento una decisione del tribunale potrebbe interrompere l'attività mineraria della città, caduta proprio in un periodo economico difficile.");
     			t15 = space();
     			div6 = element("div");
     			div4 = element("div");
     			div4.textContent = "L'opinione degli abitanti";
     			t17 = space();
     			div5 = element("div");
-    			t18 = text("Alcuni residenti desiderano che la città abbandoni l’amianto e si rinnovi, secondo altri invece senza amianto la città è finita. ");
+    			t18 = text("Alcuni residenti desiderano che la città abbandoni l’amianto e si rinnovi, secondo altri invece senza amianto la città è finita.\r\n    ");
     			span4 = element("span");
     			span4.textContent = "\"Se SAMA si ferma, la città si ferma\"";
-    			t20 = text(", ha detto Joaquim de Souza, 54 anni, operaio della SAMA, che vive vicino alla massiccia collina di ");
+    			t20 = text(", ha detto Joaquim de Souza, 54 anni, operaio della SAMA, che vive vicino alla massiccia\r\n    ");
     			span5 = element("span");
-    			span5.textContent = "legislazione";
-    			t22 = text("detriti di\r\n    amianto di Minaçu.\r\n    ");
+    			span5.textContent = "collina di detriti";
+    			t22 = text("\r\n    di amianto di Minaçu.\r\n    ");
     			br4 = element("br");
     			br5 = element("br");
     			t23 = text("\r\n    Molti si riferiscono all'azienda come la ");
@@ -8061,49 +14772,49 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			span10.textContent = "\"la maggior parte dei lavoratori fumava, e solo dopo essersi ammalati per le sigarette hanno accusato SAMA\"";
     			t34 = text(".");
     			attr_dev(div0, "class", "mdc-typography--headline1 uppercase");
-    			add_location(div0, file$8, 0, 0, 0);
+    			add_location(div0, file$a, 0, 0, 0);
     			attr_dev(div1, "class", "mdc-typography--headline4 uppercase");
-    			add_location(div1, file$8, 3, 2, 96);
+    			add_location(div1, file$a, 3, 2, 96);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$8, 5, 70, 284);
+    			add_location(span0, file$a, 5, 70, 284);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$8, 6, 98, 473);
-    			add_location(br0, file$8, 8, 4, 588);
-    			add_location(br1, file$8, 8, 10, 594);
+    			add_location(span1, file$a, 6, 98, 473);
+    			add_location(br0, file$a, 8, 4, 588);
+    			add_location(br1, file$a, 8, 10, 594);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$8, 10, 78, 852);
-    			add_location(br2, file$8, 11, 4, 916);
-    			add_location(br3, file$8, 11, 10, 922);
+    			add_location(span2, file$a, 10, 79, 854);
+    			add_location(br2, file$a, 11, 4, 918);
+    			add_location(br3, file$a, 11, 10, 924);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$8, 12, 62, 992);
+    			add_location(span3, file$a, 12, 62, 994);
     			attr_dev(div2, "class", "mdc-typography--body1");
-    			add_location(div2, file$8, 4, 2, 177);
-    			attr_dev(div3, "class", "left svelte-1b0ac56");
-    			add_location(div3, file$8, 2, 0, 74);
+    			add_location(div2, file$a, 4, 2, 177);
+    			attr_dev(div3, "class", "left svelte-12d5b79");
+    			add_location(div3, file$a, 2, 0, 74);
     			attr_dev(div4, "class", "mdc-typography--headline4 uppercase primary");
-    			add_location(div4, file$8, 19, 2, 1472);
+    			add_location(div4, file$a, 19, 2, 1476);
     			attr_dev(span4, "class", "italic");
-    			add_location(span4, file$8, 21, 133, 1734);
+    			add_location(span4, file$a, 22, 4, 1743);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$8, 23, 105, 1913);
-    			add_location(br4, file$8, 25, 4, 1996);
-    			add_location(br5, file$8, 25, 10, 2002);
+    			add_location(span5, file$a, 23, 4, 1902);
+    			add_location(br4, file$a, 25, 4, 1984);
+    			add_location(br5, file$a, 25, 10, 1990);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$8, 26, 67, 2077);
+    			add_location(span6, file$a, 26, 67, 2065);
     			attr_dev(span7, "class", "italic");
-    			add_location(span7, file$8, 26, 45, 2055);
+    			add_location(span7, file$a, 26, 45, 2043);
     			attr_dev(span8, "class", "italic");
-    			add_location(span8, file$8, 27, 44, 2216);
-    			add_location(br6, file$8, 28, 4, 2321);
-    			add_location(br7, file$8, 28, 10, 2327);
+    			add_location(span8, file$a, 27, 44, 2204);
+    			add_location(br6, file$a, 28, 4, 2309);
+    			add_location(br7, file$a, 28, 10, 2315);
     			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$8, 29, 45, 2380);
+    			add_location(span9, file$a, 29, 45, 2368);
     			attr_dev(span10, "class", "italic");
-    			add_location(span10, file$8, 30, 4, 2440);
+    			add_location(span10, file$a, 30, 4, 2428);
     			attr_dev(div5, "class", "mdc-typography--body1");
-    			add_location(div5, file$8, 20, 2, 1564);
-    			attr_dev(div6, "class", "right svelte-1b0ac56");
-    			add_location(div6, file$8, 18, 0, 1449);
+    			add_location(div5, file$a, 20, 2, 1568);
+    			attr_dev(div6, "class", "right svelte-12d5b79");
+    			add_location(div6, file$a, 18, 0, 1453);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8172,7 +14883,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$8.name,
+    		id: create_fragment$a.name,
     		type: "component",
     		source: "",
     		ctx
@@ -8181,7 +14892,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	return block;
     }
 
-    function instance$8($$self, $$props) {
+    function instance$9($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Intro', slots, []);
     	const writable_props = [];
@@ -8196,19 +14907,2833 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     class Intro$2 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {});
+    		init(this, options, instance$9, create_fragment$a, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Intro",
     			options,
+    			id: create_fragment$a.name
+    		});
+    	}
+    }
+
+    /**
+     * @license
+     * Copyright 2016 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    function createFocusTrapInstance(surfaceEl, focusTrapFactory, initialFocusEl) {
+        return focusTrapFactory(surfaceEl, { initialFocusEl: initialFocusEl });
+    }
+    function isScrollable(el) {
+        return el ? el.scrollHeight > el.offsetHeight : false;
+    }
+    /**
+     * For scrollable content, returns true if the content has not been scrolled
+     * (that is, the scroll content is as the "top"). This is used in full-screen
+     * dialogs, where the scroll divider is expected only to appear once the
+     * content has been scrolled "underneath" the header bar.
+     */
+    function isScrollAtTop(el) {
+        return el ? el.scrollTop === 0 : false;
+    }
+    /**
+     * For scrollable content, returns true if the content has been scrolled all the
+     * way to the bottom. This is used in full-screen dialogs, where the footer
+     * scroll divider is expected only to appear when the content is "cut-off" by
+     * the footer bar.
+     */
+    function isScrollAtBottom(el) {
+        return el ? Math.ceil(el.scrollHeight - el.scrollTop) === el.clientHeight :
+            false;
+    }
+    function areTopsMisaligned(els) {
+        var tops = new Set();
+        [].forEach.call(els, function (el) { return tops.add(el.offsetTop); });
+        return tops.size > 1;
+    }
+
+    var util = /*#__PURE__*/Object.freeze({
+        __proto__: null,
+        createFocusTrapInstance: createFocusTrapInstance,
+        isScrollable: isScrollable,
+        isScrollAtTop: isScrollAtTop,
+        isScrollAtBottom: isScrollAtBottom,
+        areTopsMisaligned: areTopsMisaligned
+    });
+
+    /**
+     * @license
+     * Copyright 2020 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    /**
+     * AnimationFrame provides a user-friendly abstraction around requesting
+     * and canceling animation frames.
+     */
+    var AnimationFrame = /** @class */ (function () {
+        function AnimationFrame() {
+            this.rafIDs = new Map();
+        }
+        /**
+         * Requests an animation frame. Cancels any existing frame with the same key.
+         * @param {string} key The key for this callback.
+         * @param {FrameRequestCallback} callback The callback to be executed.
+         */
+        AnimationFrame.prototype.request = function (key, callback) {
+            var _this = this;
+            this.cancel(key);
+            var frameID = requestAnimationFrame(function (frame) {
+                _this.rafIDs.delete(key);
+                // Callback must come *after* the key is deleted so that nested calls to
+                // request with the same key are not deleted.
+                callback(frame);
+            });
+            this.rafIDs.set(key, frameID);
+        };
+        /**
+         * Cancels a queued callback with the given key.
+         * @param {string} key The key for this callback.
+         */
+        AnimationFrame.prototype.cancel = function (key) {
+            var rafID = this.rafIDs.get(key);
+            if (rafID) {
+                cancelAnimationFrame(rafID);
+                this.rafIDs.delete(key);
+            }
+        };
+        /**
+         * Cancels all queued callback.
+         */
+        AnimationFrame.prototype.cancelAll = function () {
+            var _this = this;
+            // Need to use forEach because it's the only iteration method supported
+            // by IE11. Suppress the underscore because we don't need it.
+            // tslint:disable-next-line:enforce-name-casing
+            this.rafIDs.forEach(function (_, key) {
+                _this.cancel(key);
+            });
+        };
+        /**
+         * Returns the queue of unexecuted callback keys.
+         */
+        AnimationFrame.prototype.getQueue = function () {
+            var queue = [];
+            // Need to use forEach because it's the only iteration method supported
+            // by IE11. Suppress the underscore because we don't need it.
+            // tslint:disable-next-line:enforce-name-casing
+            this.rafIDs.forEach(function (_, key) {
+                queue.push(key);
+            });
+            return queue;
+        };
+        return AnimationFrame;
+    }());
+
+    /**
+     * @license
+     * Copyright 2016 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    var cssClasses = {
+        CLOSING: 'mdc-dialog--closing',
+        OPEN: 'mdc-dialog--open',
+        OPENING: 'mdc-dialog--opening',
+        SCROLLABLE: 'mdc-dialog--scrollable',
+        SCROLL_LOCK: 'mdc-dialog-scroll-lock',
+        STACKED: 'mdc-dialog--stacked',
+        FULLSCREEN: 'mdc-dialog--fullscreen',
+        // Class for showing a scroll divider on full-screen dialog header element.
+        // Should only be displayed on scrollable content, when the dialog content is
+        // scrolled "underneath" the header.
+        SCROLL_DIVIDER_HEADER: 'mdc-dialog-scroll-divider-header',
+        // Class for showing a scroll divider on a full-screen dialog footer element.
+        // Should only be displayed on scrolalble content, when the dialog content is
+        // obscured "underneath" the footer.
+        SCROLL_DIVIDER_FOOTER: 'mdc-dialog-scroll-divider-footer',
+        // The "surface scrim" is a scrim covering only the surface of a dialog. This
+        // is used in situations where a confirmation dialog is shown over an already
+        // opened full-screen dialog. On larger screen-sizes, the full-screen dialog
+        // is sized as a modal and so in these situations we display a "surface scrim"
+        // to prevent a "double scrim" (where the scrim from the secondary
+        // confirmation dialog would overlap with the scrim from the full-screen
+        // dialog).
+        SURFACE_SCRIM_SHOWN: 'mdc-dialog__surface-scrim--shown',
+        // "Showing" animating class for the surface-scrim.
+        SURFACE_SCRIM_SHOWING: 'mdc-dialog__surface-scrim--showing',
+        // "Hiding" animating class for the surface-scrim.
+        SURFACE_SCRIM_HIDING: 'mdc-dialog__surface-scrim--hiding',
+        // Class to hide a dialog's scrim (used in conjunction with a surface-scrim).
+        // Note that we only hide the original scrim rather than removing it entirely
+        // to prevent interactions with the content behind this scrim, and to capture
+        // scrim clicks.
+        SCRIM_HIDDEN: 'mdc-dialog__scrim--hidden',
+    };
+    var strings = {
+        ACTION_ATTRIBUTE: 'data-mdc-dialog-action',
+        BUTTON_DEFAULT_ATTRIBUTE: 'data-mdc-dialog-button-default',
+        BUTTON_SELECTOR: '.mdc-dialog__button',
+        CLOSED_EVENT: 'MDCDialog:closed',
+        CLOSE_ACTION: 'close',
+        CLOSING_EVENT: 'MDCDialog:closing',
+        CONTAINER_SELECTOR: '.mdc-dialog__container',
+        CONTENT_SELECTOR: '.mdc-dialog__content',
+        DESTROY_ACTION: 'destroy',
+        INITIAL_FOCUS_ATTRIBUTE: 'data-mdc-dialog-initial-focus',
+        OPENED_EVENT: 'MDCDialog:opened',
+        OPENING_EVENT: 'MDCDialog:opening',
+        SCRIM_SELECTOR: '.mdc-dialog__scrim',
+        SUPPRESS_DEFAULT_PRESS_SELECTOR: [
+            'textarea',
+            '.mdc-menu .mdc-list-item',
+            '.mdc-menu .mdc-deprecated-list-item',
+        ].join(', '),
+        SURFACE_SELECTOR: '.mdc-dialog__surface',
+    };
+    var numbers = {
+        DIALOG_ANIMATION_CLOSE_TIME_MS: 75,
+        DIALOG_ANIMATION_OPEN_TIME_MS: 150,
+    };
+
+    /**
+     * @license
+     * Copyright 2017 Google Inc.
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
+    var AnimationKeys;
+    (function (AnimationKeys) {
+        AnimationKeys["POLL_SCROLL_POS"] = "poll_scroll_position";
+        AnimationKeys["POLL_LAYOUT_CHANGE"] = "poll_layout_change";
+    })(AnimationKeys || (AnimationKeys = {}));
+    var MDCDialogFoundation = /** @class */ (function (_super) {
+        __extends(MDCDialogFoundation, _super);
+        function MDCDialogFoundation(adapter) {
+            var _this = _super.call(this, __assign(__assign({}, MDCDialogFoundation.defaultAdapter), adapter)) || this;
+            _this.dialogOpen = false;
+            _this.isFullscreen = false;
+            _this.animationFrame = 0;
+            _this.animationTimer = 0;
+            _this.escapeKeyAction = strings.CLOSE_ACTION;
+            _this.scrimClickAction = strings.CLOSE_ACTION;
+            _this.autoStackButtons = true;
+            _this.areButtonsStacked = false;
+            _this.suppressDefaultPressSelector = strings.SUPPRESS_DEFAULT_PRESS_SELECTOR;
+            _this.animFrame = new AnimationFrame();
+            _this.contentScrollHandler = function () {
+                _this.handleScrollEvent();
+            };
+            _this.windowResizeHandler = function () {
+                _this.layout();
+            };
+            _this.windowOrientationChangeHandler = function () {
+                _this.layout();
+            };
+            return _this;
+        }
+        Object.defineProperty(MDCDialogFoundation, "cssClasses", {
+            get: function () {
+                return cssClasses;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCDialogFoundation, "strings", {
+            get: function () {
+                return strings;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCDialogFoundation, "numbers", {
+            get: function () {
+                return numbers;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(MDCDialogFoundation, "defaultAdapter", {
+            get: function () {
+                return {
+                    addBodyClass: function () { return undefined; },
+                    addClass: function () { return undefined; },
+                    areButtonsStacked: function () { return false; },
+                    clickDefaultButton: function () { return undefined; },
+                    eventTargetMatches: function () { return false; },
+                    getActionFromEvent: function () { return ''; },
+                    getInitialFocusEl: function () { return null; },
+                    hasClass: function () { return false; },
+                    isContentScrollable: function () { return false; },
+                    notifyClosed: function () { return undefined; },
+                    notifyClosing: function () { return undefined; },
+                    notifyOpened: function () { return undefined; },
+                    notifyOpening: function () { return undefined; },
+                    releaseFocus: function () { return undefined; },
+                    removeBodyClass: function () { return undefined; },
+                    removeClass: function () { return undefined; },
+                    reverseButtons: function () { return undefined; },
+                    trapFocus: function () { return undefined; },
+                    registerContentEventHandler: function () { return undefined; },
+                    deregisterContentEventHandler: function () { return undefined; },
+                    isScrollableContentAtTop: function () { return false; },
+                    isScrollableContentAtBottom: function () { return false; },
+                    registerWindowEventHandler: function () { return undefined; },
+                    deregisterWindowEventHandler: function () { return undefined; },
+                };
+            },
+            enumerable: false,
+            configurable: true
+        });
+        MDCDialogFoundation.prototype.init = function () {
+            if (this.adapter.hasClass(cssClasses.STACKED)) {
+                this.setAutoStackButtons(false);
+            }
+            this.isFullscreen = this.adapter.hasClass(cssClasses.FULLSCREEN);
+        };
+        MDCDialogFoundation.prototype.destroy = function () {
+            if (this.animationTimer) {
+                clearTimeout(this.animationTimer);
+                this.handleAnimationTimerEnd();
+            }
+            if (this.isFullscreen) {
+                this.adapter.deregisterContentEventHandler('scroll', this.contentScrollHandler);
+            }
+            this.animFrame.cancelAll();
+            this.adapter.deregisterWindowEventHandler('resize', this.windowResizeHandler);
+            this.adapter.deregisterWindowEventHandler('orientationchange', this.windowOrientationChangeHandler);
+        };
+        MDCDialogFoundation.prototype.open = function (dialogOptions) {
+            var _this = this;
+            this.dialogOpen = true;
+            this.adapter.notifyOpening();
+            this.adapter.addClass(cssClasses.OPENING);
+            if (this.isFullscreen) {
+                // A scroll event listener is registered even if the dialog is not
+                // scrollable on open, since the window resize event, or orientation
+                // change may make the dialog scrollable after it is opened.
+                this.adapter.registerContentEventHandler('scroll', this.contentScrollHandler);
+            }
+            if (dialogOptions && dialogOptions.isAboveFullscreenDialog) {
+                this.adapter.addClass(cssClasses.SCRIM_HIDDEN);
+            }
+            this.adapter.registerWindowEventHandler('resize', this.windowResizeHandler);
+            this.adapter.registerWindowEventHandler('orientationchange', this.windowOrientationChangeHandler);
+            // Wait a frame once display is no longer "none", to establish basis for
+            // animation
+            this.runNextAnimationFrame(function () {
+                _this.adapter.addClass(cssClasses.OPEN);
+                _this.adapter.addBodyClass(cssClasses.SCROLL_LOCK);
+                _this.layout();
+                _this.animationTimer = setTimeout(function () {
+                    _this.handleAnimationTimerEnd();
+                    _this.adapter.trapFocus(_this.adapter.getInitialFocusEl());
+                    _this.adapter.notifyOpened();
+                }, numbers.DIALOG_ANIMATION_OPEN_TIME_MS);
+            });
+        };
+        MDCDialogFoundation.prototype.close = function (action) {
+            var _this = this;
+            if (action === void 0) { action = ''; }
+            if (!this.dialogOpen) {
+                // Avoid redundant close calls (and events), e.g. from keydown on elements
+                // that inherently emit click
+                return;
+            }
+            this.dialogOpen = false;
+            this.adapter.notifyClosing(action);
+            this.adapter.addClass(cssClasses.CLOSING);
+            this.adapter.removeClass(cssClasses.OPEN);
+            this.adapter.removeBodyClass(cssClasses.SCROLL_LOCK);
+            if (this.isFullscreen) {
+                this.adapter.deregisterContentEventHandler('scroll', this.contentScrollHandler);
+            }
+            this.adapter.deregisterWindowEventHandler('resize', this.windowResizeHandler);
+            this.adapter.deregisterWindowEventHandler('orientationchange', this.windowOrientationChangeHandler);
+            cancelAnimationFrame(this.animationFrame);
+            this.animationFrame = 0;
+            clearTimeout(this.animationTimer);
+            this.animationTimer = setTimeout(function () {
+                _this.adapter.releaseFocus();
+                _this.handleAnimationTimerEnd();
+                _this.adapter.notifyClosed(action);
+            }, numbers.DIALOG_ANIMATION_CLOSE_TIME_MS);
+        };
+        /**
+         * Used only in instances of showing a secondary dialog over a full-screen
+         * dialog. Shows the "surface scrim" displayed over the full-screen dialog.
+         */
+        MDCDialogFoundation.prototype.showSurfaceScrim = function () {
+            var _this = this;
+            this.adapter.addClass(cssClasses.SURFACE_SCRIM_SHOWING);
+            this.runNextAnimationFrame(function () {
+                _this.adapter.addClass(cssClasses.SURFACE_SCRIM_SHOWN);
+            });
+        };
+        /**
+         * Used only in instances of showing a secondary dialog over a full-screen
+         * dialog. Hides the "surface scrim" displayed over the full-screen dialog.
+         */
+        MDCDialogFoundation.prototype.hideSurfaceScrim = function () {
+            this.adapter.removeClass(cssClasses.SURFACE_SCRIM_SHOWN);
+            this.adapter.addClass(cssClasses.SURFACE_SCRIM_HIDING);
+        };
+        /**
+         * Handles `transitionend` event triggered when surface scrim animation is
+         * finished.
+         */
+        MDCDialogFoundation.prototype.handleSurfaceScrimTransitionEnd = function () {
+            this.adapter.removeClass(cssClasses.SURFACE_SCRIM_HIDING);
+            this.adapter.removeClass(cssClasses.SURFACE_SCRIM_SHOWING);
+        };
+        MDCDialogFoundation.prototype.isOpen = function () {
+            return this.dialogOpen;
+        };
+        MDCDialogFoundation.prototype.getEscapeKeyAction = function () {
+            return this.escapeKeyAction;
+        };
+        MDCDialogFoundation.prototype.setEscapeKeyAction = function (action) {
+            this.escapeKeyAction = action;
+        };
+        MDCDialogFoundation.prototype.getScrimClickAction = function () {
+            return this.scrimClickAction;
+        };
+        MDCDialogFoundation.prototype.setScrimClickAction = function (action) {
+            this.scrimClickAction = action;
+        };
+        MDCDialogFoundation.prototype.getAutoStackButtons = function () {
+            return this.autoStackButtons;
+        };
+        MDCDialogFoundation.prototype.setAutoStackButtons = function (autoStack) {
+            this.autoStackButtons = autoStack;
+        };
+        MDCDialogFoundation.prototype.getSuppressDefaultPressSelector = function () {
+            return this.suppressDefaultPressSelector;
+        };
+        MDCDialogFoundation.prototype.setSuppressDefaultPressSelector = function (selector) {
+            this.suppressDefaultPressSelector = selector;
+        };
+        MDCDialogFoundation.prototype.layout = function () {
+            var _this = this;
+            this.animFrame.request(AnimationKeys.POLL_LAYOUT_CHANGE, function () {
+                _this.layoutInternal();
+            });
+        };
+        /** Handles click on the dialog root element. */
+        MDCDialogFoundation.prototype.handleClick = function (evt) {
+            var isScrim = this.adapter.eventTargetMatches(evt.target, strings.SCRIM_SELECTOR);
+            // Check for scrim click first since it doesn't require querying ancestors.
+            if (isScrim && this.scrimClickAction !== '') {
+                this.close(this.scrimClickAction);
+            }
+            else {
+                var action = this.adapter.getActionFromEvent(evt);
+                if (action) {
+                    this.close(action);
+                }
+            }
+        };
+        /** Handles keydown on the dialog root element. */
+        MDCDialogFoundation.prototype.handleKeydown = function (evt) {
+            var isEnter = evt.key === 'Enter' || evt.keyCode === 13;
+            if (!isEnter) {
+                return;
+            }
+            var action = this.adapter.getActionFromEvent(evt);
+            if (action) {
+                // Action button callback is handled in `handleClick`,
+                // since space/enter keydowns on buttons trigger click events.
+                return;
+            }
+            // `composedPath` is used here, when available, to account for use cases
+            // where a target meant to suppress the default press behaviour
+            // may exist in a shadow root.
+            // For example, a textarea inside a web component:
+            // <mwc-dialog>
+            //   <horizontal-layout>
+            //     #shadow-root (open)
+            //       <mwc-textarea>
+            //         #shadow-root (open)
+            //           <textarea></textarea>
+            //       </mwc-textarea>
+            //   </horizontal-layout>
+            // </mwc-dialog>
+            var target = evt.composedPath ? evt.composedPath()[0] : evt.target;
+            var isDefault = this.suppressDefaultPressSelector ?
+                !this.adapter.eventTargetMatches(target, this.suppressDefaultPressSelector) :
+                true;
+            if (isEnter && isDefault) {
+                this.adapter.clickDefaultButton();
+            }
+        };
+        /** Handles keydown on the document. */
+        MDCDialogFoundation.prototype.handleDocumentKeydown = function (evt) {
+            var isEscape = evt.key === 'Escape' || evt.keyCode === 27;
+            if (isEscape && this.escapeKeyAction !== '') {
+                this.close(this.escapeKeyAction);
+            }
+        };
+        /**
+         * Handles scroll event on the dialog's content element -- showing a scroll
+         * divider on the header or footer based on the scroll position. This handler
+         * should only be registered on full-screen dialogs with scrollable content.
+         */
+        MDCDialogFoundation.prototype.handleScrollEvent = function () {
+            var _this = this;
+            // Since scroll events can fire at a high rate, we throttle these events by
+            // using requestAnimationFrame.
+            this.animFrame.request(AnimationKeys.POLL_SCROLL_POS, function () {
+                _this.toggleScrollDividerHeader();
+                _this.toggleScrollDividerFooter();
+            });
+        };
+        MDCDialogFoundation.prototype.layoutInternal = function () {
+            if (this.autoStackButtons) {
+                this.detectStackedButtons();
+            }
+            this.toggleScrollableClasses();
+        };
+        MDCDialogFoundation.prototype.handleAnimationTimerEnd = function () {
+            this.animationTimer = 0;
+            this.adapter.removeClass(cssClasses.OPENING);
+            this.adapter.removeClass(cssClasses.CLOSING);
+        };
+        /**
+         * Runs the given logic on the next animation frame, using setTimeout to
+         * factor in Firefox reflow behavior.
+         */
+        MDCDialogFoundation.prototype.runNextAnimationFrame = function (callback) {
+            var _this = this;
+            cancelAnimationFrame(this.animationFrame);
+            this.animationFrame = requestAnimationFrame(function () {
+                _this.animationFrame = 0;
+                clearTimeout(_this.animationTimer);
+                _this.animationTimer = setTimeout(callback, 0);
+            });
+        };
+        MDCDialogFoundation.prototype.detectStackedButtons = function () {
+            // Remove the class first to let us measure the buttons' natural positions.
+            this.adapter.removeClass(cssClasses.STACKED);
+            var areButtonsStacked = this.adapter.areButtonsStacked();
+            if (areButtonsStacked) {
+                this.adapter.addClass(cssClasses.STACKED);
+            }
+            if (areButtonsStacked !== this.areButtonsStacked) {
+                this.adapter.reverseButtons();
+                this.areButtonsStacked = areButtonsStacked;
+            }
+        };
+        MDCDialogFoundation.prototype.toggleScrollableClasses = function () {
+            // Remove the class first to let us measure the natural height of the
+            // content.
+            this.adapter.removeClass(cssClasses.SCROLLABLE);
+            if (this.adapter.isContentScrollable()) {
+                this.adapter.addClass(cssClasses.SCROLLABLE);
+                if (this.isFullscreen) {
+                    // If dialog is full-screen and scrollable, check if a scroll divider
+                    // should be shown.
+                    this.toggleScrollDividerHeader();
+                    this.toggleScrollDividerFooter();
+                }
+            }
+        };
+        MDCDialogFoundation.prototype.toggleScrollDividerHeader = function () {
+            if (!this.adapter.isScrollableContentAtTop()) {
+                this.adapter.addClass(cssClasses.SCROLL_DIVIDER_HEADER);
+            }
+            else if (this.adapter.hasClass(cssClasses.SCROLL_DIVIDER_HEADER)) {
+                this.adapter.removeClass(cssClasses.SCROLL_DIVIDER_HEADER);
+            }
+        };
+        MDCDialogFoundation.prototype.toggleScrollDividerFooter = function () {
+            if (!this.adapter.isScrollableContentAtBottom()) {
+                this.adapter.addClass(cssClasses.SCROLL_DIVIDER_FOOTER);
+            }
+            else if (this.adapter.hasClass(cssClasses.SCROLL_DIVIDER_FOOTER)) {
+                this.adapter.removeClass(cssClasses.SCROLL_DIVIDER_FOOTER);
+            }
+        };
+        return MDCDialogFoundation;
+    }(MDCFoundation));
+
+    /* node_modules\@smui\dialog\dist\Dialog.svelte generated by Svelte v3.46.6 */
+
+    const { document: document_1, window: window_1 } = globals;
+
+    const file$9 = "node_modules\\@smui\\dialog\\dist\\Dialog.svelte";
+    const get_over_slot_changes = dirty => ({});
+    const get_over_slot_context = ctx => ({});
+
+    // (47:6) {#if fullscreen}
+    function create_if_block$1(ctx) {
+    	let div;
+    	let mounted;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			attr_dev(div, "class", "mdc-dialog__surface-scrim");
+    			add_location(div, file$9, 47, 8, 1330);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
+    			if (!mounted) {
+    				dispose = listen_dev(div, "transitionend", /*transitionend_handler*/ ctx[31], false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(47:6) {#if fullscreen}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$9(ctx) {
+    	let t0;
+    	let div3;
+    	let div1;
+    	let div0;
+    	let t1;
+    	let div0_class_value;
+    	let div1_class_value;
+    	let t2;
+    	let div2;
+    	let div3_class_value;
+    	let useActions_action;
+    	let t3;
+    	let current;
+    	let mounted;
+    	let dispose;
+    	const default_slot_template = /*#slots*/ ctx[27].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[26], null);
+    	let if_block = /*fullscreen*/ ctx[5] && create_if_block$1(ctx);
+
+    	let div0_levels = [
+    		{
+    			class: div0_class_value = classMap({
+    				[/*surface$class*/ ctx[7]]: true,
+    				'mdc-dialog__surface': true
+    			})
+    		},
+    		{ role: "alertdialog" },
+    		{ "aria-modal": "true" },
+    		prefixFilter(/*$$restProps*/ ctx[17], 'surface$')
+    	];
+
+    	let div0_data = {};
+
+    	for (let i = 0; i < div0_levels.length; i += 1) {
+    		div0_data = assign(div0_data, div0_levels[i]);
+    	}
+
+    	let div1_levels = [
+    		{
+    			class: div1_class_value = classMap({
+    				[/*container$class*/ ctx[6]]: true,
+    				'mdc-dialog__container': true
+    			})
+    		},
+    		prefixFilter(/*$$restProps*/ ctx[17], 'container$')
+    	];
+
+    	let div1_data = {};
+
+    	for (let i = 0; i < div1_levels.length; i += 1) {
+    		div1_data = assign(div1_data, div1_levels[i]);
+    	}
+
+    	let div3_levels = [
+    		{
+    			class: div3_class_value = classMap({
+    				[/*className*/ ctx[2]]: true,
+    				'mdc-dialog': true,
+    				'mdc-dialog--stacked': !/*autoStackButtons*/ ctx[4],
+    				'mdc-dialog--fullscreen': /*fullscreen*/ ctx[5],
+    				'smui-dialog--selection': /*selection*/ ctx[3],
+    				.../*internalClasses*/ ctx[10]
+    			})
+    		},
+    		{ role: "alertdialog" },
+    		{ "aria-modal": "true" },
+    		exclude(/*$$restProps*/ ctx[17], ['container$', 'surface$'])
+    	];
+
+    	let div3_data = {};
+
+    	for (let i = 0; i < div3_levels.length; i += 1) {
+    		div3_data = assign(div3_data, div3_levels[i]);
+    	}
+
+    	const over_slot_template = /*#slots*/ ctx[27].over;
+    	const over_slot = create_slot(over_slot_template, ctx, /*$$scope*/ ctx[26], get_over_slot_context);
+
+    	const block = {
+    		c: function create() {
+    			t0 = space();
+    			div3 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			if (default_slot) default_slot.c();
+    			t1 = space();
+    			if (if_block) if_block.c();
+    			t2 = space();
+    			div2 = element("div");
+    			t3 = space();
+    			if (over_slot) over_slot.c();
+    			set_attributes(div0, div0_data);
+    			add_location(div0, file$9, 36, 4, 1073);
+    			set_attributes(div1, div1_data);
+    			add_location(div1, file$9, 29, 2, 913);
+    			attr_dev(div2, "class", "mdc-dialog__scrim");
+    			add_location(div2, file$9, 55, 2, 1526);
+    			set_attributes(div3, div3_data);
+    			add_location(div3, file$9, 8, 0, 250);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div1);
+    			append_dev(div1, div0);
+
+    			if (default_slot) {
+    				default_slot.m(div0, null);
+    			}
+
+    			append_dev(div0, t1);
+    			if (if_block) if_block.m(div0, null);
+    			append_dev(div3, t2);
+    			append_dev(div3, div2);
+    			/*div3_binding*/ ctx[32](div3);
+    			insert_dev(target, t3, anchor);
+
+    			if (over_slot) {
+    				over_slot.m(target, anchor);
+    			}
+
+    			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(window_1, "resize", /*resize_handler*/ ctx[28], false, false, false),
+    					listen_dev(window_1, "orientationchange", /*orientationchange_handler*/ ctx[29], false, false, false),
+    					listen_dev(document_1.body, "keydown", /*keydown_handler*/ ctx[30], false, false, false),
+    					action_destroyer(useActions_action = useActions.call(null, div3, /*use*/ ctx[1])),
+    					action_destroyer(/*forwardEvents*/ ctx[11].call(null, div3)),
+    					listen_dev(div3, "SMUIDialog:opening", /*handleDialogOpening*/ ctx[14], false, false, false),
+    					listen_dev(div3, "SMUIDialog:opened", /*handleDialogOpened*/ ctx[15], false, false, false),
+    					listen_dev(div3, "SMUIDialog:closed", /*handleDialogClosed*/ ctx[16], false, false, false),
+    					listen_dev(div3, "click", /*click_handler*/ ctx[33], false, false, false),
+    					listen_dev(div3, "keydown", /*keydown_handler_1*/ ctx[34], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty[0] & /*$$scope*/ 67108864)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[26],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[26])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[26], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
+    			if (/*fullscreen*/ ctx[5]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block$1(ctx);
+    					if_block.c();
+    					if_block.m(div0, null);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			set_attributes(div0, div0_data = get_spread_update(div0_levels, [
+    				(!current || dirty[0] & /*surface$class*/ 128 && div0_class_value !== (div0_class_value = classMap({
+    					[/*surface$class*/ ctx[7]]: true,
+    					'mdc-dialog__surface': true
+    				}))) && { class: div0_class_value },
+    				{ role: "alertdialog" },
+    				{ "aria-modal": "true" },
+    				dirty[0] & /*$$restProps*/ 131072 && prefixFilter(/*$$restProps*/ ctx[17], 'surface$')
+    			]));
+
+    			set_attributes(div1, div1_data = get_spread_update(div1_levels, [
+    				(!current || dirty[0] & /*container$class*/ 64 && div1_class_value !== (div1_class_value = classMap({
+    					[/*container$class*/ ctx[6]]: true,
+    					'mdc-dialog__container': true
+    				}))) && { class: div1_class_value },
+    				dirty[0] & /*$$restProps*/ 131072 && prefixFilter(/*$$restProps*/ ctx[17], 'container$')
+    			]));
+
+    			set_attributes(div3, div3_data = get_spread_update(div3_levels, [
+    				(!current || dirty[0] & /*className, autoStackButtons, fullscreen, selection, internalClasses*/ 1084 && div3_class_value !== (div3_class_value = classMap({
+    					[/*className*/ ctx[2]]: true,
+    					'mdc-dialog': true,
+    					'mdc-dialog--stacked': !/*autoStackButtons*/ ctx[4],
+    					'mdc-dialog--fullscreen': /*fullscreen*/ ctx[5],
+    					'smui-dialog--selection': /*selection*/ ctx[3],
+    					.../*internalClasses*/ ctx[10]
+    				}))) && { class: div3_class_value },
+    				{ role: "alertdialog" },
+    				{ "aria-modal": "true" },
+    				dirty[0] & /*$$restProps*/ 131072 && exclude(/*$$restProps*/ ctx[17], ['container$', 'surface$'])
+    			]));
+
+    			if (useActions_action && is_function(useActions_action.update) && dirty[0] & /*use*/ 2) useActions_action.update.call(null, /*use*/ ctx[1]);
+
+    			if (over_slot) {
+    				if (over_slot.p && (!current || dirty[0] & /*$$scope*/ 67108864)) {
+    					update_slot_base(
+    						over_slot,
+    						over_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[26],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[26])
+    						: get_slot_changes(over_slot_template, /*$$scope*/ ctx[26], dirty, get_over_slot_changes),
+    						get_over_slot_context
+    					);
+    				}
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			transition_in(over_slot, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(default_slot, local);
+    			transition_out(over_slot, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(div3);
+    			if (default_slot) default_slot.d(detaching);
+    			if (if_block) if_block.d();
+    			/*div3_binding*/ ctx[32](null);
+    			if (detaching) detach_dev(t3);
+    			if (over_slot) over_slot.d(detaching);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$9.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance_1($$self, $$props, $$invalidate) {
+    	const omit_props_names = [
+    		"use","class","open","selection","escapeKeyAction","scrimClickAction","autoStackButtons","fullscreen","container$class","surface$class","isOpen","setOpen","layout","getElement"
+    	];
+
+    	let $$restProps = compute_rest_props($$props, omit_props_names);
+    	let $aboveFullscreenShown;
+    	let $actionButtonsReversed;
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Dialog', slots, ['default','over']);
+    	var _a;
+    	const { FocusTrap } = domFocusTrap;
+    	const { closest, matches } = ponyfill;
+    	const forwardEvents = forwardEventsBuilder(get_current_component());
+    	let { use = [] } = $$props;
+    	let { class: className = '' } = $$props;
+    	let { open = false } = $$props;
+    	let { selection = false } = $$props;
+    	let { escapeKeyAction = 'close' } = $$props;
+    	let { scrimClickAction = 'close' } = $$props;
+    	let { autoStackButtons = true } = $$props;
+    	let { fullscreen = false } = $$props;
+    	let { container$class = '' } = $$props;
+    	let { surface$class = '' } = $$props;
+    	let element;
+    	let instance;
+    	let internalClasses = {};
+    	let focusTrap;
+    	let actionButtonsReversed = writable(false);
+    	validate_store(actionButtonsReversed, 'actionButtonsReversed');
+    	component_subscribe($$self, actionButtonsReversed, value => $$invalidate(38, $actionButtonsReversed = value));
+    	let aboveFullscreen = getContext('SMUI:dialog:aboveFullscreen');
+
+    	let aboveFullscreenShown = (_a = getContext('SMUI:dialog:aboveFullscreenShown')) !== null && _a !== void 0
+    	? _a
+    	: writable(false);
+
+    	validate_store(aboveFullscreenShown, 'aboveFullscreenShown');
+    	component_subscribe($$self, aboveFullscreenShown, value => $$invalidate(25, $aboveFullscreenShown = value));
+    	let addLayoutListener = getContext('SMUI:addLayoutListener');
+    	let removeLayoutListener;
+    	let layoutListeners = [];
+
+    	let addLayoutListenerFn = listener => {
+    		layoutListeners.push(listener);
+
+    		return () => {
+    			const idx = layoutListeners.indexOf(listener);
+
+    			if (idx >= 0) {
+    				layoutListeners.splice(idx, 1);
+    			}
+    		};
+    	};
+
+    	setContext('SMUI:dialog:actions:reversed', actionButtonsReversed);
+    	setContext('SMUI:addLayoutListener', addLayoutListenerFn);
+    	setContext('SMUI:dialog:selection', selection);
+    	setContext('SMUI:dialog:aboveFullscreen', aboveFullscreen || fullscreen);
+    	setContext('SMUI:dialog:aboveFullscreenShown', aboveFullscreenShown);
+
+    	if (addLayoutListener) {
+    		removeLayoutListener = addLayoutListener(layout);
+    	}
+
+    	let previousAboveFullscreenShown = $aboveFullscreenShown;
+
+    	onMount(() => {
+    		var _a;
+
+    		focusTrap = new FocusTrap(element,
+    		{
+    				initialFocusEl: (_a = getInitialFocusEl()) !== null && _a !== void 0
+    				? _a
+    				: undefined
+    			});
+
+    		$$invalidate(8, instance = new MDCDialogFoundation({
+    				addBodyClass: className => document.body.classList.add(className),
+    				addClass,
+    				areButtonsStacked: () => areTopsMisaligned(getButtonEls()),
+    				clickDefaultButton: () => {
+    					const defaultButton = getDefaultButtonEl();
+
+    					if (defaultButton) {
+    						defaultButton.click();
+    					}
+    				},
+    				eventTargetMatches: (target, selector) => target ? matches(target, selector) : false,
+    				getActionFromEvent: evt => {
+    					if (!evt.target) {
+    						return '';
+    					}
+
+    					const element = closest(evt.target, '[data-mdc-dialog-action]');
+    					return element && element.getAttribute('data-mdc-dialog-action');
+    				},
+    				getInitialFocusEl,
+    				hasClass,
+    				isContentScrollable: () => isScrollable(getContentEl()),
+    				notifyClosed: action => {
+    					$$invalidate(0, open = false);
+    					dispatch(getElement(), 'SMUIDialog:closed', action ? { action } : {}, undefined, true);
+    				},
+    				notifyClosing: action => dispatch(getElement(), 'SMUIDialog:closing', action ? { action } : {}, undefined, true),
+    				notifyOpened: () => dispatch(getElement(), 'SMUIDialog:opened', {}, undefined, true),
+    				notifyOpening: () => dispatch(getElement(), 'SMUIDialog:opening', {}, undefined, true),
+    				releaseFocus: () => focusTrap.releaseFocus(),
+    				removeBodyClass: className => document.body.classList.remove(className),
+    				removeClass,
+    				reverseButtons: () => {
+    					set_store_value(actionButtonsReversed, $actionButtonsReversed = true, $actionButtonsReversed);
+    				},
+    				trapFocus: () => focusTrap.trapFocus(),
+    				registerContentEventHandler: (evt, handler) => {
+    					const content = getContentEl();
+
+    					if (content instanceof HTMLElement) {
+    						content.addEventListener(evt, handler);
+    					}
+    				},
+    				deregisterContentEventHandler: (evt, handler) => {
+    					const content = getContentEl();
+
+    					if (content instanceof HTMLElement) {
+    						content.removeEventListener(evt, handler);
+    					}
+    				},
+    				isScrollableContentAtTop: () => {
+    					return isScrollAtTop(getContentEl());
+    				},
+    				isScrollableContentAtBottom: () => {
+    					return isScrollAtBottom(getContentEl());
+    				},
+    				registerWindowEventHandler: (evt, handler) => {
+    					window.addEventListener(evt, handler);
+    				},
+    				deregisterWindowEventHandler: (evt, handler) => {
+    					window.removeEventListener(evt, handler);
+    				}
+    			}));
+
+    		instance.init();
+
+    		return () => {
+    			instance.destroy();
+    		};
+    	});
+
+    	onDestroy(() => {
+    		if (removeLayoutListener) {
+    			removeLayoutListener();
+    		}
+    	});
+
+    	function hasClass(className) {
+    		return className in internalClasses
+    		? internalClasses[className]
+    		: getElement().classList.contains(className);
+    	}
+
+    	function addClass(className) {
+    		if (!internalClasses[className]) {
+    			$$invalidate(10, internalClasses[className] = true, internalClasses);
+    		}
+    	}
+
+    	function removeClass(className) {
+    		if (!(className in internalClasses) || internalClasses[className]) {
+    			$$invalidate(10, internalClasses[className] = false, internalClasses);
+    		}
+    	}
+
+    	function getButtonEls() {
+    		return [].slice.call(element.querySelectorAll('.mdc-dialog__button'));
+    	}
+
+    	function getDefaultButtonEl() {
+    		return element.querySelector('[data-mdc-dialog-button-default');
+    	}
+
+    	function getContentEl() {
+    		return element.querySelector('.mdc-dialog__content');
+    	}
+
+    	function getInitialFocusEl() {
+    		return element.querySelector('[data-mdc-dialog-initial-focus]');
+    	}
+
+    	function handleDialogOpening() {
+    		if (aboveFullscreen) {
+    			set_store_value(aboveFullscreenShown, $aboveFullscreenShown = true, $aboveFullscreenShown);
+    		}
+
+    		requestAnimationFrame(() => {
+    			layoutListeners.forEach(listener => listener());
+    		});
+    	}
+
+    	function handleDialogOpened() {
+    		layoutListeners.forEach(listener => listener());
+    	}
+
+    	function handleDialogClosed() {
+    		if (aboveFullscreen) {
+    			set_store_value(aboveFullscreenShown, $aboveFullscreenShown = false, $aboveFullscreenShown);
+    		}
+    	}
+
+    	function isOpen() {
+    		return open;
+    	}
+
+    	function setOpen(value) {
+    		$$invalidate(0, open = value);
+    	}
+
+    	function layout() {
+    		return instance.layout();
+    	}
+
+    	function getElement() {
+    		return element;
+    	}
+
+    	const resize_handler = () => open && instance && instance.layout();
+    	const orientationchange_handler = () => open && instance && instance.layout();
+    	const keydown_handler = event => open && instance && instance.handleDocumentKeydown(event);
+    	const transitionend_handler = () => instance && instance.handleSurfaceScrimTransitionEnd();
+
+    	function div3_binding($$value) {
+    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
+    			element = $$value;
+    			$$invalidate(9, element);
+    		});
+    	}
+
+    	const click_handler = event => instance && instance.handleClick(event);
+    	const keydown_handler_1 = event => instance && instance.handleKeydown(event);
+
+    	$$self.$$set = $$new_props => {
+    		$$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    		$$invalidate(17, $$restProps = compute_rest_props($$props, omit_props_names));
+    		if ('use' in $$new_props) $$invalidate(1, use = $$new_props.use);
+    		if ('class' in $$new_props) $$invalidate(2, className = $$new_props.class);
+    		if ('open' in $$new_props) $$invalidate(0, open = $$new_props.open);
+    		if ('selection' in $$new_props) $$invalidate(3, selection = $$new_props.selection);
+    		if ('escapeKeyAction' in $$new_props) $$invalidate(18, escapeKeyAction = $$new_props.escapeKeyAction);
+    		if ('scrimClickAction' in $$new_props) $$invalidate(19, scrimClickAction = $$new_props.scrimClickAction);
+    		if ('autoStackButtons' in $$new_props) $$invalidate(4, autoStackButtons = $$new_props.autoStackButtons);
+    		if ('fullscreen' in $$new_props) $$invalidate(5, fullscreen = $$new_props.fullscreen);
+    		if ('container$class' in $$new_props) $$invalidate(6, container$class = $$new_props.container$class);
+    		if ('surface$class' in $$new_props) $$invalidate(7, surface$class = $$new_props.surface$class);
+    		if ('$$scope' in $$new_props) $$invalidate(26, $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		_a,
+    		MDCDialogFoundation,
+    		util,
+    		domFocusTrap,
+    		ponyfill,
+    		onMount,
+    		onDestroy,
+    		getContext,
+    		setContext,
+    		writable,
+    		get_current_component,
+    		forwardEventsBuilder,
+    		classMap,
+    		exclude,
+    		prefixFilter,
+    		useActions,
+    		dispatch,
+    		FocusTrap,
+    		closest,
+    		matches,
+    		forwardEvents,
+    		use,
+    		className,
+    		open,
+    		selection,
+    		escapeKeyAction,
+    		scrimClickAction,
+    		autoStackButtons,
+    		fullscreen,
+    		container$class,
+    		surface$class,
+    		element,
+    		instance,
+    		internalClasses,
+    		focusTrap,
+    		actionButtonsReversed,
+    		aboveFullscreen,
+    		aboveFullscreenShown,
+    		addLayoutListener,
+    		removeLayoutListener,
+    		layoutListeners,
+    		addLayoutListenerFn,
+    		previousAboveFullscreenShown,
+    		hasClass,
+    		addClass,
+    		removeClass,
+    		getButtonEls,
+    		getDefaultButtonEl,
+    		getContentEl,
+    		getInitialFocusEl,
+    		handleDialogOpening,
+    		handleDialogOpened,
+    		handleDialogClosed,
+    		isOpen,
+    		setOpen,
+    		layout,
+    		getElement,
+    		$aboveFullscreenShown,
+    		$actionButtonsReversed
+    	});
+
+    	$$self.$inject_state = $$new_props => {
+    		if ('_a' in $$props) _a = $$new_props._a;
+    		if ('use' in $$props) $$invalidate(1, use = $$new_props.use);
+    		if ('className' in $$props) $$invalidate(2, className = $$new_props.className);
+    		if ('open' in $$props) $$invalidate(0, open = $$new_props.open);
+    		if ('selection' in $$props) $$invalidate(3, selection = $$new_props.selection);
+    		if ('escapeKeyAction' in $$props) $$invalidate(18, escapeKeyAction = $$new_props.escapeKeyAction);
+    		if ('scrimClickAction' in $$props) $$invalidate(19, scrimClickAction = $$new_props.scrimClickAction);
+    		if ('autoStackButtons' in $$props) $$invalidate(4, autoStackButtons = $$new_props.autoStackButtons);
+    		if ('fullscreen' in $$props) $$invalidate(5, fullscreen = $$new_props.fullscreen);
+    		if ('container$class' in $$props) $$invalidate(6, container$class = $$new_props.container$class);
+    		if ('surface$class' in $$props) $$invalidate(7, surface$class = $$new_props.surface$class);
+    		if ('element' in $$props) $$invalidate(9, element = $$new_props.element);
+    		if ('instance' in $$props) $$invalidate(8, instance = $$new_props.instance);
+    		if ('internalClasses' in $$props) $$invalidate(10, internalClasses = $$new_props.internalClasses);
+    		if ('focusTrap' in $$props) focusTrap = $$new_props.focusTrap;
+    		if ('actionButtonsReversed' in $$props) $$invalidate(12, actionButtonsReversed = $$new_props.actionButtonsReversed);
+    		if ('aboveFullscreen' in $$props) $$invalidate(42, aboveFullscreen = $$new_props.aboveFullscreen);
+    		if ('aboveFullscreenShown' in $$props) $$invalidate(13, aboveFullscreenShown = $$new_props.aboveFullscreenShown);
+    		if ('addLayoutListener' in $$props) addLayoutListener = $$new_props.addLayoutListener;
+    		if ('removeLayoutListener' in $$props) removeLayoutListener = $$new_props.removeLayoutListener;
+    		if ('layoutListeners' in $$props) layoutListeners = $$new_props.layoutListeners;
+    		if ('addLayoutListenerFn' in $$props) addLayoutListenerFn = $$new_props.addLayoutListenerFn;
+    		if ('previousAboveFullscreenShown' in $$props) $$invalidate(24, previousAboveFullscreenShown = $$new_props.previousAboveFullscreenShown);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty[0] & /*instance, escapeKeyAction*/ 262400) {
+    			if (instance && instance.getEscapeKeyAction() !== escapeKeyAction) {
+    				instance.setEscapeKeyAction(escapeKeyAction);
+    			}
+    		}
+
+    		if ($$self.$$.dirty[0] & /*instance, scrimClickAction*/ 524544) {
+    			if (instance && instance.getScrimClickAction() !== scrimClickAction) {
+    				instance.setScrimClickAction(scrimClickAction);
+    			}
+    		}
+
+    		if ($$self.$$.dirty[0] & /*instance, autoStackButtons*/ 272) {
+    			if (instance && instance.getAutoStackButtons() !== autoStackButtons) {
+    				instance.setAutoStackButtons(autoStackButtons);
+    			}
+    		}
+
+    		if ($$self.$$.dirty[0] & /*autoStackButtons*/ 16) {
+    			if (!autoStackButtons) {
+    				set_store_value(actionButtonsReversed, $actionButtonsReversed = true, $actionButtonsReversed);
+    			}
+    		}
+
+    		if ($$self.$$.dirty[0] & /*instance, open*/ 257) {
+    			if (instance && instance.isOpen() !== open) {
+    				if (open) {
+    					instance.open({
+    						isAboveFullscreenDialog: !!aboveFullscreen
+    					});
+    				} else {
+    					instance.close();
+    				}
+    			}
+    		}
+
+    		if ($$self.$$.dirty[0] & /*fullscreen, instance, previousAboveFullscreenShown, $aboveFullscreenShown*/ 50331936) {
+    			if (fullscreen && instance && previousAboveFullscreenShown !== $aboveFullscreenShown) {
+    				$$invalidate(24, previousAboveFullscreenShown = $aboveFullscreenShown);
+
+    				if ($aboveFullscreenShown) {
+    					instance.showSurfaceScrim();
+    				} else {
+    					instance.hideSurfaceScrim();
+    				}
+    			}
+    		}
+    	};
+
+    	return [
+    		open,
+    		use,
+    		className,
+    		selection,
+    		autoStackButtons,
+    		fullscreen,
+    		container$class,
+    		surface$class,
+    		instance,
+    		element,
+    		internalClasses,
+    		forwardEvents,
+    		actionButtonsReversed,
+    		aboveFullscreenShown,
+    		handleDialogOpening,
+    		handleDialogOpened,
+    		handleDialogClosed,
+    		$$restProps,
+    		escapeKeyAction,
+    		scrimClickAction,
+    		isOpen,
+    		setOpen,
+    		layout,
+    		getElement,
+    		previousAboveFullscreenShown,
+    		$aboveFullscreenShown,
+    		$$scope,
+    		slots,
+    		resize_handler,
+    		orientationchange_handler,
+    		keydown_handler,
+    		transitionend_handler,
+    		div3_binding,
+    		click_handler,
+    		keydown_handler_1
+    	];
+    }
+
+    class Dialog extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(
+    			this,
+    			options,
+    			instance_1,
+    			create_fragment$9,
+    			safe_not_equal,
+    			{
+    				use: 1,
+    				class: 2,
+    				open: 0,
+    				selection: 3,
+    				escapeKeyAction: 18,
+    				scrimClickAction: 19,
+    				autoStackButtons: 4,
+    				fullscreen: 5,
+    				container$class: 6,
+    				surface$class: 7,
+    				isOpen: 20,
+    				setOpen: 21,
+    				layout: 22,
+    				getElement: 23
+    			},
+    			null,
+    			[-1, -1]
+    		);
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Dialog",
+    			options,
+    			id: create_fragment$9.name
+    		});
+    	}
+
+    	get use() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set use(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get class() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set class(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get open() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set open(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selection() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selection(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get escapeKeyAction() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set escapeKeyAction(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get scrimClickAction() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set scrimClickAction(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get autoStackButtons() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set autoStackButtons(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get fullscreen() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set fullscreen(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get container$class() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set container$class(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get surface$class() {
+    		throw new Error("<Dialog>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set surface$class(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get isOpen() {
+    		return this.$$.ctx[20];
+    	}
+
+    	set isOpen(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get setOpen() {
+    		return this.$$.ctx[21];
+    	}
+
+    	set setOpen(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get layout() {
+    		return this.$$.ctx[22];
+    	}
+
+    	set layout(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getElement() {
+    		return this.$$.ctx[23];
+    	}
+
+    	set getElement(value) {
+    		throw new Error("<Dialog>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    classAdderBuilder({
+        class: 'mdc-dialog__header',
+        component: Div,
+        contexts: {
+            'SMUI:icon-button:context': 'dialog:header',
+        },
+    });
+
+    var Title = classAdderBuilder({
+        class: 'mdc-dialog__title',
+        component: H2,
+    });
+
+    var Content = classAdderBuilder({
+        class: 'mdc-dialog__content',
+        component: Div,
+    });
+
+    var Actions = classAdderBuilder({
+        class: 'mdc-dialog__actions',
+        component: Div,
+        classMap: {
+            'smui-dialog__actions--reversed': 'SMUI:dialog:actions:reversed',
+        },
+        contexts: {
+            'SMUI:button:context': 'dialog:action',
+        },
+    });
+
+    /* src\Components\DialogCard.svelte generated by Svelte v3.46.6 */
+    const file$8 = "src\\Components\\DialogCard.svelte";
+
+    // (18:4) <Content style="padding: 1vw;">
+    function create_default_slot_10(ctx) {
+    	let div0;
+    	let t0;
+    	let t1;
+    	let div1;
+    	let t2;
+
+    	const block = {
+    		c: function create() {
+    			div0 = element("div");
+    			t0 = text(/*title*/ ctx[1]);
+    			t1 = space();
+    			div1 = element("div");
+    			t2 = text(/*subtitle*/ ctx[2]);
+    			attr_dev(div0, "class", "mdc-typography--body2 highlight");
+    			add_location(div0, file$8, 18, 6, 539);
+    			attr_dev(div1, "class", "mdc-typography--body2");
+    			add_location(div1, file$8, 19, 6, 605);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, t0);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*title*/ 2) set_data_dev(t0, /*title*/ ctx[1]);
+    			if (dirty & /*subtitle*/ 4) set_data_dev(t2, /*subtitle*/ ctx[2]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div1);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_10.name,
+    		type: "slot",
+    		source: "(18:4) <Content style=\\\"padding: 1vw;\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (28:45) 
+    function create_if_block_1(ctx) {
+    	let i;
+    	let t1;
+    	let label;
+    	let current;
+
+    	label = new Label({
+    			props: {
+    				class: "mdc-typography--body2 bold",
+    				$$slots: { default: [create_default_slot_9] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			i = element("i");
+    			i.textContent = "arrow_back";
+    			t1 = space();
+    			create_component(label.$$.fragment);
+    			attr_dev(i, "class", "material-icons svelte-pky5a5");
+    			attr_dev(i, "aria-hidden", "true");
+    			add_location(i, file$8, 28, 10, 1095);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, i, anchor);
+    			insert_dev(target, t1, anchor);
+    			mount_component(label, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const label_changes = {};
+
+    			if (dirty & /*$$scope, buttonLabel*/ 264) {
+    				label_changes.$$scope = { dirty, ctx };
+    			}
+
+    			label.$set(label_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(label.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(label.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(i);
+    			if (detaching) detach_dev(t1);
+    			destroy_component(label, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1.name,
+    		type: "if",
+    		source: "(28:45) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (25:8) {#if direction === "left-card"}
+    function create_if_block(ctx) {
+    	let label;
+    	let t0;
+    	let i;
+    	let current;
+
+    	label = new Label({
+    			props: {
+    				class: "mdc-typography--body2 bold",
+    				$$slots: { default: [create_default_slot_8] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(label.$$.fragment);
+    			t0 = space();
+    			i = element("i");
+    			i.textContent = "arrow_forward";
+    			attr_dev(i, "class", "material-icons svelte-pky5a5");
+    			attr_dev(i, "aria-hidden", "true");
+    			add_location(i, file$8, 26, 10, 974);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(label, target, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, i, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const label_changes = {};
+
+    			if (dirty & /*$$scope, buttonLabel*/ 264) {
+    				label_changes.$$scope = { dirty, ctx };
+    			}
+
+    			label.$set(label_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(label.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(label.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(label, detaching);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(i);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block.name,
+    		type: "if",
+    		source: "(25:8) {#if direction === \\\"left-card\\\"}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (30:10) <Label class="mdc-typography--body2 bold">
+    function create_default_slot_9(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(/*buttonLabel*/ ctx[3]);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*buttonLabel*/ 8) set_data_dev(t, /*buttonLabel*/ ctx[3]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_9.name,
+    		type: "slot",
+    		source: "(30:10) <Label class=\\\"mdc-typography--body2 bold\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (26:10) <Label class="mdc-typography--body2 bold">
+    function create_default_slot_8(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(/*buttonLabel*/ ctx[3]);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*buttonLabel*/ 8) set_data_dev(t, /*buttonLabel*/ ctx[3]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_8.name,
+    		type: "slot",
+    		source: "(26:10) <Label class=\\\"mdc-typography--body2 bold\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (23:6) <Button class="dialog-card-button">
+    function create_default_slot_7(ctx) {
+    	let current_block_type_index;
+    	let if_block;
+    	let if_block_anchor;
+    	let current;
+    	const if_block_creators = [create_if_block, create_if_block_1];
+    	const if_blocks = [];
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*direction*/ ctx[4] === "left-card") return 0;
+    		if (/*direction*/ ctx[4] === "right-card") return 1;
+    		return -1;
+    	}
+
+    	if (~(current_block_type_index = select_block_type(ctx))) {
+    		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].m(target, anchor);
+    			}
+
+    			insert_dev(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+
+    			if (current_block_type_index === previous_block_index) {
+    				if (~current_block_type_index) {
+    					if_blocks[current_block_type_index].p(ctx, dirty);
+    				}
+    			} else {
+    				if (if_block) {
+    					group_outros();
+
+    					transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    						if_blocks[previous_block_index] = null;
+    					});
+
+    					check_outros();
+    				}
+
+    				if (~current_block_type_index) {
+    					if_block = if_blocks[current_block_type_index];
+
+    					if (!if_block) {
+    						if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    						if_block.c();
+    					} else {
+    						if_block.p(ctx, dirty);
+    					}
+
+    					transition_in(if_block, 1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				} else {
+    					if_block = null;
+    				}
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].d(detaching);
+    			}
+
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_7.name,
+    		type: "slot",
+    		source: "(23:6) <Button class=\\\"dialog-card-button\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (22:4) <Actions fullBleed style="min-height: 0;">
+    function create_default_slot_6(ctx) {
+    	let button;
+    	let current;
+
+    	button = new Button_1({
+    			props: {
+    				class: "dialog-card-button",
+    				$$slots: { default: [create_default_slot_7] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(button.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(button, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope, buttonLabel, direction*/ 280) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(button, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_6.name,
+    		type: "slot",
+    		source: "(22:4) <Actions fullBleed style=\\\"min-height: 0;\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (16:2) <PrimaryAction on:click={() => (open = true)}>
+    function create_default_slot_5(ctx) {
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let content;
+    	let t1;
+    	let actions;
+    	let current;
+
+    	content = new Content$1({
+    			props: {
+    				style: "padding: 1vw;",
+    				$$slots: { default: [create_default_slot_10] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	actions = new Actions({
+    			props: {
+    				fullBleed: true,
+    				style: "min-height: 0;",
+    				$$slots: { default: [create_default_slot_6] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			img = element("img");
+    			t0 = space();
+    			create_component(content.$$.fragment);
+    			t1 = space();
+    			create_component(actions.$$.fragment);
+    			if (!src_url_equal(img.src, img_src_value = /*src*/ ctx[0])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", /*title*/ ctx[1]);
+    			attr_dev(img, "class", "svelte-pky5a5");
+    			add_location(img, file$8, 16, 4, 469);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, img, anchor);
+    			insert_dev(target, t0, anchor);
+    			mount_component(content, target, anchor);
+    			insert_dev(target, t1, anchor);
+    			mount_component(actions, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (!current || dirty & /*src*/ 1 && !src_url_equal(img.src, img_src_value = /*src*/ ctx[0])) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if (!current || dirty & /*title*/ 2) {
+    				attr_dev(img, "alt", /*title*/ ctx[1]);
+    			}
+
+    			const content_changes = {};
+
+    			if (dirty & /*$$scope, subtitle, title*/ 262) {
+    				content_changes.$$scope = { dirty, ctx };
+    			}
+
+    			content.$set(content_changes);
+    			const actions_changes = {};
+
+    			if (dirty & /*$$scope, buttonLabel, direction*/ 280) {
+    				actions_changes.$$scope = { dirty, ctx };
+    			}
+
+    			actions.$set(actions_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(content.$$.fragment, local);
+    			transition_in(actions.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(content.$$.fragment, local);
+    			transition_out(actions.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(img);
+    			if (detaching) detach_dev(t0);
+    			destroy_component(content, detaching);
+    			if (detaching) detach_dev(t1);
+    			destroy_component(actions, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_5.name,
+    		type: "slot",
+    		source: "(16:2) <PrimaryAction on:click={() => (open = true)}>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (15:0) <Card class="dialog-card {direction}">
+    function create_default_slot_4(ctx) {
+    	let primaryaction;
+    	let current;
+
+    	primaryaction = new PrimaryAction({
+    			props: {
+    				$$slots: { default: [create_default_slot_5] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	primaryaction.$on("click", /*click_handler*/ ctx[6]);
+
+    	const block = {
+    		c: function create() {
+    			create_component(primaryaction.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(primaryaction, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const primaryaction_changes = {};
+
+    			if (dirty & /*$$scope, buttonLabel, direction, subtitle, title, src*/ 287) {
+    				primaryaction_changes.$$scope = { dirty, ctx };
+    			}
+
+    			primaryaction.$set(primaryaction_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(primaryaction.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(primaryaction.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(primaryaction, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_4.name,
+    		type: "slot",
+    		source: "(15:0) <Card class=\\\"dialog-card {direction}\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (38:2) <Title class="mdc-typography--headline3">
+    function create_default_slot_3(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(/*title*/ ctx[1]);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*title*/ 2) set_data_dev(t, /*title*/ ctx[1]);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_3.name,
+    		type: "slot",
+    		source: "(38:2) <Title class=\\\"mdc-typography--headline3\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (51:4) <Actions class="flex-row-2">
+    function create_default_slot_2(ctx) {
+    	let custombutton0;
+    	let t;
+    	let custombutton1;
+    	let current;
+
+    	custombutton0 = new CustomButton({
+    			props: {
+    				direction: "right-button",
+    				label: "Chiudi"
+    			},
+    			$$inline: true
+    		});
+
+    	custombutton1 = new CustomButton({
+    			props: {
+    				direction: "right-button",
+    				label: "Approfondisci l'inchiesta",
+    				href: "https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L"
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(custombutton0.$$.fragment);
+    			t = space();
+    			create_component(custombutton1.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(custombutton0, target, anchor);
+    			insert_dev(target, t, anchor);
+    			mount_component(custombutton1, target, anchor);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(custombutton0.$$.fragment, local);
+    			transition_in(custombutton1.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(custombutton0.$$.fragment, local);
+    			transition_out(custombutton1.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(custombutton0, detaching);
+    			if (detaching) detach_dev(t);
+    			destroy_component(custombutton1, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_2.name,
+    		type: "slot",
+    		source: "(51:4) <Actions class=\\\"flex-row-2\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (39:2) <Content class="mdc-typography--body1 flex-column-2">
+    function create_default_slot_1$1(ctx) {
+    	let div;
+    	let t0;
+    	let span0;
+    	let t2;
+    	let span1;
+    	let t4;
+    	let br0;
+    	let br1;
+    	let t5;
+    	let span2;
+    	let t7;
+    	let span3;
+    	let t9;
+    	let t10;
+    	let actions;
+    	let current;
+
+    	actions = new Actions({
+    			props: {
+    				class: "flex-row-2",
+    				$$slots: { default: [create_default_slot_2] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			t0 = text("Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore politico,\r\n      scegliendo sindaci, consiglieri e sacerdoti schierati a ");
+    			span0 = element("span");
+    			span0.textContent = "difesa dell'amianto";
+    			t2 = text(". Denigrare pubblicamente SAMA può essere\r\n      considerato tabù da alcuni residenti, infatti, in migliaia hanno tranquillamente firmato\r\n      ");
+    			span1 = element("span");
+    			span1.textContent = "accordi";
+    			t4 = text("\r\n      con la compagnia per ottenere un risarcimento sui danni sanitari.\r\n      ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t5 = text("\r\n      La causa in corso è portata avanti dalla ");
+    			span2 = element("span");
+    			span2.textContent = "ABREA";
+    			t7 = text(", associazione brasiliana a difesa delle vittime di amianto, fondata da\r\n      Fernanda Giannasi nel 1995. L'ultima sentenza del tribunale, nel Novembre del 2021, ha ordinato alla compagnia di pagare le\r\n      ");
+    			span3 = element("span");
+    			span3.textContent = "spese mediche";
+    			t9 = text(" per i prossimi 30 anni a tutti i lavoratori che abbiano manifestato problemi di salute \"associabili all'amianto\".");
+    			t10 = space();
+    			create_component(actions.$$.fragment);
+    			attr_dev(span0, "class", "highlight");
+    			add_location(span0, file$8, 41, 62, 1817);
+    			attr_dev(span1, "class", "highlight");
+    			add_location(span1, file$8, 43, 6, 2012);
+    			add_location(br0, file$8, 45, 6, 2131);
+    			add_location(br1, file$8, 45, 12, 2137);
+    			attr_dev(span2, "class", "highlight");
+    			add_location(span2, file$8, 46, 47, 2192);
+    			attr_dev(span3, "class", "highlight");
+    			add_location(span3, file$8, 48, 6, 2438);
+    			add_location(div, file$8, 39, 4, 1586);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t0);
+    			append_dev(div, span0);
+    			append_dev(div, t2);
+    			append_dev(div, span1);
+    			append_dev(div, t4);
+    			append_dev(div, br0);
+    			append_dev(div, br1);
+    			append_dev(div, t5);
+    			append_dev(div, span2);
+    			append_dev(div, t7);
+    			append_dev(div, span3);
+    			append_dev(div, t9);
+    			insert_dev(target, t10, anchor);
+    			mount_component(actions, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const actions_changes = {};
+
+    			if (dirty & /*$$scope*/ 256) {
+    				actions_changes.$$scope = { dirty, ctx };
+    			}
+
+    			actions.$set(actions_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(actions.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(actions.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(t10);
+    			destroy_component(actions, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$1.name,
+    		type: "slot",
+    		source: "(39:2) <Content class=\\\"mdc-typography--body1 flex-column-2\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (37:0) <Dialog bind:open aria-labelledby="large-scroll-title" aria-describedby="large-scroll-content" class="dialog" surface$style="width: 85vw; height: 180vw">
+    function create_default_slot$1(ctx) {
+    	let title_1;
+    	let t;
+    	let content;
+    	let current;
+
+    	title_1 = new Title({
+    			props: {
+    				class: "mdc-typography--headline3",
+    				$$slots: { default: [create_default_slot_3] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	content = new Content$1({
+    			props: {
+    				class: "mdc-typography--body1 flex-column-2",
+    				$$slots: { default: [create_default_slot_1$1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(title_1.$$.fragment);
+    			t = space();
+    			create_component(content.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(title_1, target, anchor);
+    			insert_dev(target, t, anchor);
+    			mount_component(content, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const title_1_changes = {};
+
+    			if (dirty & /*$$scope, title*/ 258) {
+    				title_1_changes.$$scope = { dirty, ctx };
+    			}
+
+    			title_1.$set(title_1_changes);
+    			const content_changes = {};
+
+    			if (dirty & /*$$scope*/ 256) {
+    				content_changes.$$scope = { dirty, ctx };
+    			}
+
+    			content.$set(content_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(title_1.$$.fragment, local);
+    			transition_in(content.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(title_1.$$.fragment, local);
+    			transition_out(content.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(title_1, detaching);
+    			if (detaching) detach_dev(t);
+    			destroy_component(content, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$1.name,
+    		type: "slot",
+    		source: "(37:0) <Dialog bind:open aria-labelledby=\\\"large-scroll-title\\\" aria-describedby=\\\"large-scroll-content\\\" class=\\\"dialog\\\" surface$style=\\\"width: 85vw; height: 180vw\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$8(ctx) {
+    	let card;
+    	let t;
+    	let dialog;
+    	let updating_open;
+    	let current;
+
+    	card = new Card({
+    			props: {
+    				class: "dialog-card " + /*direction*/ ctx[4],
+    				$$slots: { default: [create_default_slot_4] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	function dialog_open_binding(value) {
+    		/*dialog_open_binding*/ ctx[7](value);
+    	}
+
+    	let dialog_props = {
+    		"aria-labelledby": "large-scroll-title",
+    		"aria-describedby": "large-scroll-content",
+    		class: "dialog",
+    		surface$style: "width: 85vw; height: 180vw",
+    		$$slots: { default: [create_default_slot$1] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*open*/ ctx[5] !== void 0) {
+    		dialog_props.open = /*open*/ ctx[5];
+    	}
+
+    	dialog = new Dialog({ props: dialog_props, $$inline: true });
+    	binding_callbacks.push(() => bind(dialog, 'open', dialog_open_binding));
+
+    	const block = {
+    		c: function create() {
+    			create_component(card.$$.fragment);
+    			t = space();
+    			create_component(dialog.$$.fragment);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(card, target, anchor);
+    			insert_dev(target, t, anchor);
+    			mount_component(dialog, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const card_changes = {};
+    			if (dirty & /*direction*/ 16) card_changes.class = "dialog-card " + /*direction*/ ctx[4];
+
+    			if (dirty & /*$$scope, open, buttonLabel, direction, subtitle, title, src*/ 319) {
+    				card_changes.$$scope = { dirty, ctx };
+    			}
+
+    			card.$set(card_changes);
+    			const dialog_changes = {};
+
+    			if (dirty & /*$$scope, title*/ 258) {
+    				dialog_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_open && dirty & /*open*/ 32) {
+    				updating_open = true;
+    				dialog_changes.open = /*open*/ ctx[5];
+    				add_flush_callback(() => updating_open = false);
+    			}
+
+    			dialog.$set(dialog_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(card.$$.fragment, local);
+    			transition_in(dialog.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(card.$$.fragment, local);
+    			transition_out(dialog.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(card, detaching);
+    			if (detaching) detach_dev(t);
+    			destroy_component(dialog, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$8.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$8($$self, $$props, $$invalidate) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('DialogCard', slots, []);
+    	let { src, title, subtitle, buttonLabel, direction = "" } = $$props;
+    	var open = false;
+    	const writable_props = ['src', 'title', 'subtitle', 'buttonLabel', 'direction'];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<DialogCard> was created with unknown prop '${key}'`);
+    	});
+
+    	const click_handler = () => $$invalidate(5, open = true);
+
+    	function dialog_open_binding(value) {
+    		open = value;
+    		$$invalidate(5, open);
+    	}
+
+    	$$self.$$set = $$props => {
+    		if ('src' in $$props) $$invalidate(0, src = $$props.src);
+    		if ('title' in $$props) $$invalidate(1, title = $$props.title);
+    		if ('subtitle' in $$props) $$invalidate(2, subtitle = $$props.subtitle);
+    		if ('buttonLabel' in $$props) $$invalidate(3, buttonLabel = $$props.buttonLabel);
+    		if ('direction' in $$props) $$invalidate(4, direction = $$props.direction);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		Card,
+    		Content: Content$1,
+    		PrimaryAction,
+    		Button: Button_1,
+    		Label,
+    		Dialog,
+    		Title,
+    		Actions,
+    		CustomButton,
+    		src,
+    		title,
+    		subtitle,
+    		buttonLabel,
+    		direction,
+    		open
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('src' in $$props) $$invalidate(0, src = $$props.src);
+    		if ('title' in $$props) $$invalidate(1, title = $$props.title);
+    		if ('subtitle' in $$props) $$invalidate(2, subtitle = $$props.subtitle);
+    		if ('buttonLabel' in $$props) $$invalidate(3, buttonLabel = $$props.buttonLabel);
+    		if ('direction' in $$props) $$invalidate(4, direction = $$props.direction);
+    		if ('open' in $$props) $$invalidate(5, open = $$props.open);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [
+    		src,
+    		title,
+    		subtitle,
+    		buttonLabel,
+    		direction,
+    		open,
+    		click_handler,
+    		dialog_open_binding
+    	];
+    }
+
+    class DialogCard extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {
+    			src: 0,
+    			title: 1,
+    			subtitle: 2,
+    			buttonLabel: 3,
+    			direction: 4
+    		});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "DialogCard",
+    			options,
     			id: create_fragment$8.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*src*/ ctx[0] === undefined && !('src' in props)) {
+    			console.warn("<DialogCard> was created without expected prop 'src'");
+    		}
+
+    		if (/*title*/ ctx[1] === undefined && !('title' in props)) {
+    			console.warn("<DialogCard> was created without expected prop 'title'");
+    		}
+
+    		if (/*subtitle*/ ctx[2] === undefined && !('subtitle' in props)) {
+    			console.warn("<DialogCard> was created without expected prop 'subtitle'");
+    		}
+
+    		if (/*buttonLabel*/ ctx[3] === undefined && !('buttonLabel' in props)) {
+    			console.warn("<DialogCard> was created without expected prop 'buttonLabel'");
+    		}
+    	}
+
+    	get src() {
+    		throw new Error("<DialogCard>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set src(value) {
+    		throw new Error("<DialogCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get title() {
+    		throw new Error("<DialogCard>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set title(value) {
+    		throw new Error("<DialogCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subtitle() {
+    		throw new Error("<DialogCard>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subtitle(value) {
+    		throw new Error("<DialogCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get buttonLabel() {
+    		throw new Error("<DialogCard>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set buttonLabel(value) {
+    		throw new Error("<DialogCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get direction() {
+    		throw new Error("<DialogCard>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set direction(value) {
+    		throw new Error("<DialogCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\Minacu\Cards.svelte generated by Svelte v3.46.6 */
     const file$7 = "src\\Minacu\\Cards.svelte";
+
+    // (92:6) <Actions>
+    function create_default_slot_1(ctx) {
+    	let custombutton;
+    	let current;
+
+    	custombutton = new CustomButton({
+    			props: {
+    				direction: "right-button",
+    				label: "Approfondisci l'inchiesta",
+    				href: "https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L"
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(custombutton.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(custombutton, target, anchor);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(custombutton.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(custombutton.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(custombutton, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1.name,
+    		type: "slot",
+    		source: "(92:6) <Actions>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (78:2) <Dialog>
+    function create_default_slot(ctx) {
+    	let content;
+    	let t0;
+    	let div1;
+    	let div0;
+    	let t1;
+    	let span0;
+    	let t3;
+    	let span1;
+    	let t5;
+    	let br0;
+    	let br1;
+    	let t6;
+    	let span2;
+    	let t8;
+    	let span3;
+    	let t10;
+    	let t11;
+    	let actions;
+    	let current;
+
+    	content = new Content({
+    			props: { id: "large-scroll-content" },
+    			$$inline: true
+    		});
+
+    	actions = new Actions({
+    			props: {
+    				$$slots: { default: [create_default_slot_1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(content.$$.fragment);
+    			t0 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			t1 = text("Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore\r\n        politico, scegliendo sindaci, consiglieri e sacerdoti schierati a ");
+    			span0 = element("span");
+    			span0.textContent = "difesa dell'amianto";
+    			t3 = text(". Denigrare pubblicamente SAMA può\r\n        essere considerato tabù da alcuni residenti, infatti, in migliaia hanno tranquillamente firmato\r\n        ");
+    			span1 = element("span");
+    			span1.textContent = "accordi";
+    			t5 = text("\r\n        con la compagnia per ottenere un risarcimento sui danni sanitari.\r\n        ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t6 = text("\r\n        La causa in corso è portata avanti dalla ");
+    			span2 = element("span");
+    			span2.textContent = "ABREA";
+    			t8 = text(", associazione brasiliana a difesa delle vittime di amianto, fondata da\r\n        Fernanda Giannasi nel 1995. L'ultima sentenza del tribunale, nel Novembre del 2021, ha ordinato alla compagnia di pagare le\r\n        ");
+    			span3 = element("span");
+    			span3.textContent = "spese mediche";
+    			t10 = text(" per i prossimi 30 anni a tutti i lavoratori che abbiano manifestato problemi di salute \"associabili all'amianto\".");
+    			t11 = space();
+    			create_component(actions.$$.fragment);
+    			attr_dev(span0, "class", "highlight");
+    			add_location(span0, file$7, 82, 74, 4565);
+    			attr_dev(span1, "class", "highlight");
+    			add_location(span1, file$7, 84, 8, 4764);
+    			add_location(br0, file$7, 86, 8, 4887);
+    			add_location(br1, file$7, 86, 14, 4893);
+    			attr_dev(span2, "class", "highlight");
+    			add_location(span2, file$7, 87, 49, 4950);
+    			attr_dev(span3, "class", "highlight");
+    			add_location(span3, file$7, 89, 8, 5200);
+    			add_location(div0, file$7, 80, 6, 4330);
+    			attr_dev(div1, "class", "mdc-typography--body1 hidden right-align flex-column-2");
+    			add_location(div1, file$7, 79, 4, 4254);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(content, target, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, t1);
+    			append_dev(div0, span0);
+    			append_dev(div0, t3);
+    			append_dev(div0, span1);
+    			append_dev(div0, t5);
+    			append_dev(div0, br0);
+    			append_dev(div0, br1);
+    			append_dev(div0, t6);
+    			append_dev(div0, span2);
+    			append_dev(div0, t8);
+    			append_dev(div0, span3);
+    			append_dev(div0, t10);
+    			append_dev(div1, t11);
+    			mount_component(actions, div1, null);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const actions_changes = {};
+
+    			if (dirty & /*$$scope*/ 4) {
+    				actions_changes.$$scope = { dirty, ctx };
+    			}
+
+    			actions.$set(actions_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(content.$$.fragment, local);
+    			transition_in(actions.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(content.$$.fragment, local);
+    			transition_out(actions.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(content, detaching);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(div1);
+    			destroy_component(actions);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot.name,
+    		type: "slot",
+    		source: "(78:2) <Dialog>",
+    		ctx
+    	});
+
+    	return block;
+    }
 
     function create_fragment$7(ctx) {
     	let div0;
@@ -8260,6 +17785,11 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	let custombutton1;
     	let t31;
     	let contentcard1;
+    	let t32;
+    	let div7;
+    	let dialogcard;
+    	let t33;
+    	let dialog;
     	let current;
 
     	contentcard0 = new ContentCard({
@@ -8304,6 +17834,25 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			$$inline: true
     		});
 
+    	dialogcard = new DialogCard({
+    			props: {
+    				src: "img/minacu-court.png",
+    				title: "Le infinite battaglie legali",
+    				subtitle: "Come le vittime hanno cercato giustizia contro i danni della miniera",
+    				buttonLabel: "Scopri di più",
+    				direction: "left-card"
+    			},
+    			$$inline: true
+    		});
+
+    	dialog = new Dialog({
+    			props: {
+    				$$slots: { default: [create_default_slot] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
     			div0 = element("div");
@@ -8317,16 +17866,16 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t3 = text("Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore politico,\r\n      scegliendo sindaci, consiglieri e sacerdoti schierati a ");
     			span0 = element("span");
     			span0.textContent = "difesa dell'amianto";
-    			t5 = text(". Denigrare pubblicamente SAMA può essere\r\n      considerato tabù da alcuni residenti, infatti in migliaia hanno tranquillamente firmato\r\n      ");
+    			t5 = text(". Denigrare pubblicamente SAMA può essere\r\n      considerato tabù da alcuni residenti, infatti, in migliaia hanno tranquillamente firmato\r\n      ");
     			span1 = element("span");
     			span1.textContent = "accordi";
     			t7 = text("\r\n      con la compagnia per ottenere un risarcimento sui danni sanitari.\r\n      ");
     			br0 = element("br");
     			br1 = element("br");
-    			t8 = text("\r\n      La causa in corso é portata avanti dalla ");
+    			t8 = text("\r\n      La causa in corso è portata avanti dalla ");
     			span2 = element("span");
     			span2.textContent = "ABREA";
-    			t10 = text(", associazione brasiliana a difesa delle vittime di amianto fondata da\r\n      Fernanda Giannasi nel 1995. L'ultima sentenza del tribunale nel Novembre del 2021 ha ordinato alla compagnia di pagare le\r\n      ");
+    			t10 = text(", associazione brasiliana a difesa delle vittime di amianto, fondata da\r\n      Fernanda Giannasi nel 1995. L'ultima sentenza del tribunale, nel Novembre del 2021, ha ordinato alla compagnia di pagare le\r\n      ");
     			span3 = element("span");
     			span3.textContent = "spese mediche";
     			t12 = text(" per i prossimi 30 anni a tutti i lavoratori che abbiano manifestato problemi di salute \"associabili all'amianto\".");
@@ -8338,7 +17887,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			div4 = element("div");
     			t15 = text("Nel cosiddetto \"letto di polvere\", luogo in cui il minerale veniva separato, gli operai, tra i quali molte donne, erano coperti di polvere.");
     			br2 = element("br");
-    			t16 = text("\r\n      Ce ne da una testimonianza chiara ");
+    			t16 = text("\r\n      Ce ne dà una testimonianza chiara ");
     			span4 = element("span");
     			span4.textContent = "Evandra Vieira Brito";
     			t18 = text(", che ha perso il marito (un ex dipendente di SAMA) a causa di un\r\n      cancro nel 2009, ricordando:\r\n      ");
@@ -8359,53 +17908,59 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			span8 = element("span");
     			span8.textContent = "salute sul lavoro";
     			t28 = text("\"");
-    			t29 = text(". Affermano inoltre che le\r\n      persone che si ammalano in miniera in questo momento è perché si sono ammalate a causa del lavoro svolto precedentemente presso un' altra miniera e sono\r\n      successivamente emigrate per lavoro a Cana Brava.");
+    			t29 = text(". Affermano inoltre che le\r\n      persone che si ammalano in miniera in questo momento è perché si sono ammalate a causa del lavoro svolto precedentemente presso un'altra miniera e sono\r\n      successivamente emigrate per lavoro a Cana Brava.");
     			t30 = space();
     			create_component(custombutton1.$$.fragment);
     			t31 = space();
     			create_component(contentcard1.$$.fragment);
+    			t32 = space();
+    			div7 = element("div");
+    			create_component(dialogcard.$$.fragment);
+    			t33 = space();
+    			create_component(dialog.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "12vw");
-    			add_location(div0, file$7, 5, 0, 161);
+    			add_location(div0, file$7, 11, 0, 386);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$7, 18, 62, 969);
+    			add_location(span0, file$7, 24, 62, 1166);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$7, 20, 6, 1163);
-    			add_location(br0, file$7, 22, 6, 1282);
-    			add_location(br1, file$7, 22, 12, 1288);
+    			add_location(span1, file$7, 26, 6, 1361);
+    			add_location(br0, file$7, 28, 6, 1480);
+    			add_location(br1, file$7, 28, 12, 1486);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$7, 23, 47, 1343);
+    			add_location(span2, file$7, 29, 47, 1541);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$7, 25, 6, 1586);
-    			add_location(div1, file$7, 16, 4, 738);
-    			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
+    			add_location(span3, file$7, 31, 6, 1787);
+    			add_location(div1, file$7, 22, 4, 935);
+    			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2 svelte-lrh810");
     			attr_dev(div2, "id", "content-minacu1");
-    			add_location(div2, file$7, 15, 2, 643);
-    			attr_dev(div3, "class", "flex-row-4");
-    			set_style(div3, "margin-top", "4vw");
-    			add_location(div3, file$7, 6, 0, 304);
-    			add_location(br2, file$7, 38, 145, 2278);
+    			add_location(div2, file$7, 21, 2, 840);
+    			attr_dev(div3, "class", "content svelte-lrh810");
+    			add_location(div3, file$7, 12, 0, 529);
+    			add_location(br2, file$7, 44, 145, 2451);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$7, 39, 40, 2326);
+    			add_location(span4, file$7, 45, 40, 2499);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$7, 41, 81, 2561);
+    			add_location(span5, file$7, 47, 81, 2734);
     			attr_dev(span6, "class", "italic");
-    			add_location(span6, file$7, 41, 6, 2486);
-    			add_location(br3, file$7, 42, 6, 2646);
-    			add_location(br4, file$7, 42, 12, 2652);
+    			add_location(span6, file$7, 47, 6, 2659);
+    			add_location(br3, file$7, 48, 6, 2819);
+    			add_location(br4, file$7, 48, 12, 2825);
     			attr_dev(span7, "class", "italic");
-    			add_location(span7, file$7, 44, 6, 2766);
+    			add_location(span7, file$7, 50, 6, 2939);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$7, 45, 76, 2956);
+    			add_location(span8, file$7, 51, 76, 3129);
     			attr_dev(span9, "class", "italic");
-    			add_location(span9, file$7, 45, 6, 2886);
-    			add_location(div4, file$7, 37, 4, 2126);
-    			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
+    			add_location(span9, file$7, 51, 6, 3059);
+    			add_location(div4, file$7, 43, 4, 2299);
+    			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2 svelte-lrh810");
     			attr_dev(div5, "id", "content-minacu2");
-    			add_location(div5, file$7, 36, 2, 2032);
-    			attr_dev(div6, "class", "flex-row-4");
-    			set_style(div6, "margin-top", "4vw");
-    			add_location(div6, file$7, 35, 0, 1979);
+    			add_location(div5, file$7, 42, 2, 2205);
+    			attr_dev(div6, "class", "content svelte-lrh810");
+    			add_location(div6, file$7, 41, 0, 2180);
+    			attr_dev(div7, "class", "flex-row-4");
+    			set_style(div7, "margin-top", "4vw");
+    			add_location(div7, file$7, 68, 0, 3892);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8460,15 +18015,30 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			mount_component(custombutton1, div5, null);
     			append_dev(div6, t31);
     			mount_component(contentcard1, div6, null);
+    			insert_dev(target, t32, anchor);
+    			insert_dev(target, div7, anchor);
+    			mount_component(dialogcard, div7, null);
+    			append_dev(div7, t33);
+    			mount_component(dialog, div7, null);
     			current = true;
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			const dialog_changes = {};
+
+    			if (dirty & /*$$scope*/ 4) {
+    				dialog_changes.$$scope = { dirty, ctx };
+    			}
+
+    			dialog.$set(dialog_changes);
+    		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(contentcard0.$$.fragment, local);
     			transition_in(custombutton0.$$.fragment, local);
     			transition_in(custombutton1.$$.fragment, local);
     			transition_in(contentcard1.$$.fragment, local);
+    			transition_in(dialogcard.$$.fragment, local);
+    			transition_in(dialog.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -8476,6 +18046,8 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			transition_out(custombutton0.$$.fragment, local);
     			transition_out(custombutton1.$$.fragment, local);
     			transition_out(contentcard1.$$.fragment, local);
+    			transition_out(dialogcard.$$.fragment, local);
+    			transition_out(dialog.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -8488,6 +18060,10 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			if (detaching) detach_dev(div6);
     			destroy_component(custombutton1);
     			destroy_component(contentcard1);
+    			if (detaching) detach_dev(t32);
+    			if (detaching) detach_dev(div7);
+    			destroy_component(dialogcard);
+    			destroy_component(dialog);
     		}
     	};
 
@@ -8505,13 +18081,36 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     function instance$7($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Cards', slots, []);
+    	var dialog1 = false, dialog2 = false;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Cards> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ CustomButton, ContentCard });
+    	$$self.$capture_state = () => ({
+    		CustomButton,
+    		ContentCard,
+    		DialogCard,
+    		Dialog,
+    		Title,
+    		Content,
+    		Actions,
+    		Button: Button_1,
+    		Label,
+    		dialog1,
+    		dialog2
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('dialog1' in $$props) dialog1 = $$props.dialog1;
+    		if ('dialog2' in $$props) dialog2 = $$props.dialog2;
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
     	return [];
     }
 
@@ -9038,66 +18637,68 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	let t14;
     	let span4;
     	let t16;
+    	let span5;
+    	let t18;
     	let br2;
     	let br3;
-    	let t17;
-    	let span5;
     	let t19;
     	let span6;
     	let t21;
+    	let span7;
+    	let t23;
     	let br4;
     	let br5;
-    	let t22;
-    	let span7;
     	let t24;
     	let span8;
     	let t26;
-    	let t27;
-    	let contentcard1;
+    	let span9;
     	let t28;
+    	let t29;
+    	let contentcard1;
+    	let t30;
     	let div9;
     	let contentcard2;
-    	let t29;
+    	let t31;
     	let div8;
     	let div7;
-    	let t30;
-    	let span9;
     	let t32;
+    	let span10;
+    	let t34;
     	let br6;
     	let br7;
-    	let t33;
-    	let span10;
     	let t35;
-    	let t36;
-    	let custombutton1;
+    	let span11;
     	let t37;
+    	let t38;
+    	let custombutton1;
+    	let t39;
     	let div12;
     	let div11;
     	let div10;
-    	let span11;
-    	let t39;
+    	let span12;
+    	let t41;
     	let br8;
     	let br9;
-    	let t40;
-    	let span12;
     	let t42;
-    	let br10;
-    	let t43;
     	let span13;
+    	let t44;
+    	let br10;
     	let t45;
+    	let span14;
+    	let t47;
     	let br11;
     	let br12;
-    	let t46;
-    	let span16;
-    	let t47;
-    	let span14;
+    	let t48;
+    	let span17;
     	let t49;
     	let span15;
     	let t51;
-    	let t52;
+    	let span16;
     	let t53;
-    	let custombutton2;
     	let t54;
+    	let t55;
+    	let custombutton2;
+    	let t56;
     	let contentcard3;
     	let current;
 
@@ -9186,16 +18787,16 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t2 = space();
     			div2 = element("div");
     			div1 = element("div");
-    			t3 = text("Attaccato per decenni dai difensori della salute, l'ex presidente statunitense Donald Trump viene utilizzato dall'ostinatamente\r\n      ");
+    			t3 = text("Attaccato per decenni dai difensori della salute, l'ostinatamente\r\n      ");
     			span0 = element("span");
     			span0.textContent = "provocatoria";
-    			t5 = text(" azienda russa produttrice di amianto come figura perfetta per una campagna volta a\r\n      ");
+    			t5 = text(" azienda russa produttrice di amianto, trova \r\n      nell'ex presidente statunitense Donald Trump, la figura perfetta per una campagna volta a\r\n      ");
     			span1 = element("span");
     			span1.textContent = "riabilitare";
-    			t7 = text(" l'immagine profondamente macchiata del proprio prodotto:.\r\n      ");
+    			t7 = text(" l'immagine profondamente macchiata del proprio prodotto.\r\n      ");
     			br0 = element("br");
     			br1 = element("br");
-    			t8 = text("\r\n      Nel 2018 la società Russa ha messo in circolazione pallet del proprio prodotto adornati con un sigillo raffigurante la faccia di Trump e recitante la seguente\r\n      frase ");
+    			t8 = text("\r\n      Nel 2018 la società Russa ha messo in circolazione pallet adornati con un sigillo raffigurante la faccia di Trump e recitante la seguente\r\n      frase ");
     			span3 = element("span");
     			t9 = text("\"Approvato da ");
     			span2 = element("span");
@@ -9210,92 +18811,95 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t14 = text("Il dottor ");
     			span4 = element("span");
     			span4.textContent = "Igor Bragin";
-    			t16 = text(" ha liquidato come \"non corrispondente alla realtà\" uno studio scientifico del 2016 che mostrava tassi\r\n      elevati di cancro ai polmoni nei pressi della miniera.\r\n      ");
+    			t16 = text(" ha liquidato come ");
+    			span5 = element("span");
+    			span5.textContent = "\"non corrispondente alla realtà\"";
+    			t18 = text(" uno studio scientifico del 2016 che mostrava tassi\r\n      elevati di cancro ai polmoni nei pressi della miniera.\r\n      ");
     			br2 = element("br");
     			br3 = element("br");
-    			t17 = text("\r\n      Lo studio, una revisione comparativa dei ");
-    			span5 = element("span");
-    			span5.textContent = "tassi di mortalità";
-    			t19 = text(" ad Asbest e nella regione circostante di Sverdlovsk, ha\r\n      rilevato che \"i tassi di mortalità per tumori del polmone, dello stomaco e del colon erano statisticamente e significativamente\r\n      ");
+    			t19 = text("\r\n      Lo studio, una revisione comparativa dei ");
     			span6 = element("span");
-    			span6.textContent = "più alti";
-    			t21 = text("\r\n      nella città di Asbest\".\r\n      ");
+    			span6.textContent = "tassi di mortalità";
+    			t21 = text(" ad Asbest e nella regione circostante di Sverdlovsk, ha\r\n      rilevato che \"i tassi di mortalità per tumori del polmone, dello stomaco e del colon erano statisticamente e significativamente\r\n      ");
+    			span7 = element("span");
+    			span7.textContent = "più alti";
+    			t23 = text("\r\n      nella città di Asbest\".\r\n      ");
     			br4 = element("br");
     			br5 = element("br");
-    			t22 = text("\r\n      L'incidenza del ");
-    			span7 = element("span");
-    			span7.textContent = "mesotelioma";
-    			t24 = text(", una malattia polmonare ampiamente attribuita all'amianto in Occidente,\r\n      ");
+    			t24 = text("\r\n      L'incidenza del ");
     			span8 = element("span");
-    			span8.textContent = "non è stata studiata";
-    			t26 = text(" a sufficienza dalla Russia impedendone il corretto monitoraggio sanitario.");
-    			t27 = space();
+    			span8.textContent = "mesotelioma";
+    			t26 = text(", una malattia polmonare ampiamente attribuita all'amianto in Occidente,\r\n      ");
+    			span9 = element("span");
+    			span9.textContent = "non è stata studiata";
+    			t28 = text(" a sufficienza dalla Russia impedendone il corretto monitoraggio sanitario.");
+    			t29 = space();
     			create_component(contentcard1.$$.fragment);
-    			t28 = space();
+    			t30 = space();
     			div9 = element("div");
     			create_component(contentcard2.$$.fragment);
-    			t29 = space();
+    			t31 = space();
     			div8 = element("div");
     			div7 = element("div");
-    			t30 = text("\"Sono un pensionato di 88 anni che ha trascorso decenni a lavorare nella fabbrica di amianto. La mia stessa età avanzata e il mantenimento di una buona\r\n      salute sono la prova che tutta l'");
-    			span9 = element("span");
-    			span9.textContent = "isteria sull'amianto";
-    			t32 = text(" non poteva essere vera.\r\n      ");
+    			t32 = text("\"Sono un pensionato di 88 anni che ha trascorso decenni a lavorare nella fabbrica di amianto. La mia stessa età avanzata e il mantenimento di una buona\r\n      salute sono la prova che tutta l'");
+    			span10 = element("span");
+    			span10.textContent = "isteria sull'amianto";
+    			t34 = text(" non poteva essere vera.\r\n      ");
     			br6 = element("br");
     			br7 = element("br");
-    			t33 = text("\r\n      Mentre lavoravo bevevo una ");
-    			span10 = element("span");
-    			span10.textContent = "bottiglia di latte";
-    			t35 = text(" al giorno, l'azienda le forniva gratuitamente per aiutare i lavoratori a difendersi\r\n      dalle malattie. Tutto è pericoloso in una certa misura. Il cento per cento di certezza che qualcosa non sia dannoso non puó esistere\".");
-    			t36 = space();
+    			t35 = text("\r\n      Mentre lavoravo bevevo una ");
+    			span11 = element("span");
+    			span11.textContent = "bottiglia di latte";
+    			t37 = text(" al giorno, l'azienda le forniva gratuitamente per aiutare i lavoratori a difendersi\r\n      dalle malattie. Tutto è pericoloso in una certa misura. Il cento per cento di certezza che qualcosa non sia dannoso non puó esistere\".");
+    			t38 = space();
     			create_component(custombutton1.$$.fragment);
-    			t37 = space();
+    			t39 = space();
     			div12 = element("div");
     			div11 = element("div");
     			div10 = element("div");
-    			span11 = element("span");
-    			span11.textContent = "Valentin K. Zemskov";
-    			t39 = text(", 82 anni, ha lavorato nella miniera per 40 anni e ha sviluppato l'asbestosi, causata dall’inalazione\r\n      delle fibre di amianto.\r\n      ");
+    			span12 = element("span");
+    			span12.textContent = "Valentin K. Zemskov";
+    			t41 = text(", 82 anni, ha lavorato nella miniera per 40 anni e ha sviluppato l'asbestosi, causata dall’inalazione\r\n      delle fibre di amianto.\r\n      ");
     			br8 = element("br");
     			br9 = element("br");
-    			t40 = space();
-    			span12 = element("span");
-    			span12.textContent = "\"C'era così tanta polvere che non potevi vedere un uomo in piedi accanto a te\"";
-    			t42 = text(", dice ricordando gli anni di lavoro.");
-    			br10 = element("br");
-    			t43 = text("\r\n      Per la disabilità, la fabbrica aggiunge ");
+    			t42 = space();
     			span13 = element("span");
-    			span13.textContent = "4.500 rubli";
-    			t45 = text(" al suo assegno mensile per la pensione, una cifra ridicola sufficiente\r\n      a coprire solo pochi pasti.\r\n      ");
+    			span13.textContent = "\"C'era così tanta polvere che non potevi vedere un uomo in piedi accanto a te\"";
+    			t44 = text(", dice ricordando gli anni di lavoro.");
+    			br10 = element("br");
+    			t45 = text("\r\n      Per la disabilità, la fabbrica aggiunge ");
+    			span14 = element("span");
+    			span14.textContent = "4.500 rubli";
+    			t47 = text(" al suo assegno mensile per la pensione, una cifra ridicola sufficiente\r\n      a coprire solo pochi pasti.\r\n      ");
     			br11 = element("br");
     			br12 = element("br");
-    			t46 = text("\r\n      Tuttavia, è convinto che la città non abbia altra scelta.\r\n      ");
-    			span16 = element("span");
-    			t47 = text("\"Se non avessimo la fabbrica, ");
-    			span14 = element("span");
-    			span14.textContent = "come vivremmo?";
-    			t49 = text("\r\n        Dobbiamo continuare a tenerla aperta in modo da avere ");
+    			t48 = text("\r\n      Tuttavia, è convinto che la città non abbia altra scelta.\r\n      ");
+    			span17 = element("span");
+    			t49 = text("\"Se non avessimo la fabbrica, ");
     			span15 = element("span");
-    			span15.textContent = "posti di lavoro";
-    			t51 = text(" per tutti\"");
-    			t52 = text(", afferma senza fiato mentre parla nel cortile di una casa di riposo.");
-    			t53 = space();
+    			span15.textContent = "come vivremmo?";
+    			t51 = text("\r\n        Dobbiamo continuare a tenerla aperta in modo da avere ");
+    			span16 = element("span");
+    			span16.textContent = "posti di lavoro";
+    			t53 = text(" per tutti\"");
+    			t54 = text(", afferma senza fiato mentre parla nel cortile di una casa di riposo.");
+    			t55 = space();
     			create_component(custombutton2.$$.fragment);
-    			t54 = space();
+    			t56 = space();
     			create_component(contentcard3.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "14vw");
     			add_location(div0, file$4, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$4, 18, 6, 888);
+    			add_location(span0, file$4, 18, 6, 826);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$4, 19, 6, 1022);
-    			add_location(br0, file$4, 20, 6, 1130);
-    			add_location(br1, file$4, 20, 12, 1136);
+    			add_location(span1, file$4, 20, 6, 1019);
+    			add_location(br0, file$4, 21, 6, 1126);
+    			add_location(br1, file$4, 21, 12, 1132);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$4, 22, 47, 1357);
+    			add_location(span2, file$4, 23, 47, 1332);
     			attr_dev(span3, "class", "italic");
-    			add_location(span3, file$4, 22, 12, 1322);
+    			add_location(span3, file$4, 23, 12, 1297);
     			add_location(div1, file$4, 16, 4, 740);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div2, "id", "content-asbest1");
@@ -9304,63 +18908,65 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			set_style(div3, "margin-top", "3vw");
     			add_location(div3, file$4, 6, 0, 288);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$4, 35, 16, 1911);
-    			add_location(br2, file$4, 37, 6, 2125);
-    			add_location(br3, file$4, 37, 12, 2131);
-    			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$4, 38, 47, 2186);
+    			add_location(span4, file$4, 36, 16, 1886);
+    			attr_dev(span5, "class", "italic");
+    			add_location(span5, file$4, 36, 77, 1947);
+    			add_location(br2, file$4, 38, 6, 2128);
+    			add_location(br3, file$4, 38, 12, 2134);
     			attr_dev(span6, "class", "highlight");
-    			add_location(span6, file$4, 40, 6, 2434);
-    			add_location(br4, file$4, 42, 6, 2512);
-    			add_location(br5, file$4, 42, 12, 2518);
+    			add_location(span6, file$4, 39, 47, 2189);
     			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$4, 43, 22, 2548);
+    			add_location(span7, file$4, 41, 6, 2437);
+    			add_location(br4, file$4, 43, 6, 2515);
+    			add_location(br5, file$4, 43, 12, 2521);
     			attr_dev(span8, "class", "highlight");
-    			add_location(span8, file$4, 44, 6, 2670);
-    			add_location(div4, file$4, 34, 4, 1888);
+    			add_location(span8, file$4, 44, 22, 2551);
+    			attr_dev(span9, "class", "highlight");
+    			add_location(span9, file$4, 45, 6, 2673);
+    			add_location(div4, file$4, 35, 4, 1863);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div5, "id", "content-asbest2");
-    			add_location(div5, file$4, 33, 2, 1794);
+    			add_location(div5, file$4, 34, 2, 1769);
     			attr_dev(div6, "class", "flex-row-4");
     			set_style(div6, "margin-top", "3vw");
-    			add_location(div6, file$4, 32, 0, 1741);
-    			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$4, 69, 39, 3714);
-    			add_location(br6, file$4, 70, 6, 3797);
-    			add_location(br7, file$4, 70, 12, 3803);
+    			add_location(div6, file$4, 33, 0, 1716);
     			attr_dev(span10, "class", "highlight");
-    			add_location(span10, file$4, 71, 33, 3844);
-    			add_location(div7, file$4, 67, 4, 3509);
+    			add_location(span10, file$4, 70, 39, 3717);
+    			add_location(br6, file$4, 71, 6, 3800);
+    			add_location(br7, file$4, 71, 12, 3806);
+    			attr_dev(span11, "class", "highlight");
+    			add_location(span11, file$4, 72, 33, 3847);
+    			add_location(div7, file$4, 68, 4, 3512);
     			attr_dev(div8, "class", "mdc-typography--body1 hidden right-align flex-column-2 italic");
     			attr_dev(div8, "id", "content-asbest3");
-    			add_location(div8, file$4, 66, 2, 3407);
+    			add_location(div8, file$4, 67, 2, 3410);
     			attr_dev(div9, "class", "flex-row-4");
     			set_style(div9, "margin-top", "3vw");
-    			add_location(div9, file$4, 57, 0, 3098);
-    			attr_dev(span11, "class", "highlight");
-    			add_location(span11, file$4, 81, 6, 4472);
-    			add_location(br8, file$4, 83, 6, 4662);
-    			add_location(br9, file$4, 83, 12, 4668);
-    			attr_dev(span12, "class", "italic");
-    			add_location(span12, file$4, 84, 6, 4682);
-    			add_location(br10, file$4, 84, 149, 4825);
-    			attr_dev(span13, "class", "highlight");
-    			add_location(span13, file$4, 85, 46, 4879);
-    			add_location(br11, file$4, 87, 6, 5035);
-    			add_location(br12, file$4, 87, 12, 5041);
+    			add_location(div9, file$4, 58, 0, 3101);
+    			attr_dev(span12, "class", "highlight");
+    			add_location(span12, file$4, 82, 6, 4475);
+    			add_location(br8, file$4, 84, 6, 4665);
+    			add_location(br9, file$4, 84, 12, 4671);
+    			attr_dev(span13, "class", "italic");
+    			add_location(span13, file$4, 85, 6, 4685);
+    			add_location(br10, file$4, 85, 149, 4828);
     			attr_dev(span14, "class", "highlight");
-    			add_location(span14, file$4, 90, 39, 5181);
+    			add_location(span14, file$4, 86, 46, 4882);
+    			add_location(br11, file$4, 88, 6, 5038);
+    			add_location(br12, file$4, 88, 12, 5044);
     			attr_dev(span15, "class", "highlight");
-    			add_location(span15, file$4, 91, 62, 5290);
-    			attr_dev(span16, "class", "italic");
-    			add_location(span16, file$4, 89, 6, 5120);
-    			add_location(div10, file$4, 80, 4, 4459);
+    			add_location(span15, file$4, 91, 39, 5184);
+    			attr_dev(span16, "class", "highlight");
+    			add_location(span16, file$4, 92, 62, 5293);
+    			attr_dev(span17, "class", "italic");
+    			add_location(span17, file$4, 90, 6, 5123);
+    			add_location(div10, file$4, 81, 4, 4462);
     			attr_dev(div11, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div11, "id", "content-asbest4");
-    			add_location(div11, file$4, 79, 2, 4365);
+    			add_location(div11, file$4, 80, 2, 4368);
     			attr_dev(div12, "class", "flex-row-4");
     			set_style(div12, "margin-top", "3vw");
-    			add_location(div12, file$4, 78, 0, 4312);
+    			add_location(div12, file$4, 79, 0, 4315);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9394,66 +19000,68 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			append_dev(div4, t14);
     			append_dev(div4, span4);
     			append_dev(div4, t16);
+    			append_dev(div4, span5);
+    			append_dev(div4, t18);
     			append_dev(div4, br2);
     			append_dev(div4, br3);
-    			append_dev(div4, t17);
-    			append_dev(div4, span5);
     			append_dev(div4, t19);
     			append_dev(div4, span6);
     			append_dev(div4, t21);
+    			append_dev(div4, span7);
+    			append_dev(div4, t23);
     			append_dev(div4, br4);
     			append_dev(div4, br5);
-    			append_dev(div4, t22);
-    			append_dev(div4, span7);
     			append_dev(div4, t24);
     			append_dev(div4, span8);
     			append_dev(div4, t26);
-    			append_dev(div6, t27);
+    			append_dev(div4, span9);
+    			append_dev(div4, t28);
+    			append_dev(div6, t29);
     			mount_component(contentcard1, div6, null);
-    			insert_dev(target, t28, anchor);
+    			insert_dev(target, t30, anchor);
     			insert_dev(target, div9, anchor);
     			mount_component(contentcard2, div9, null);
-    			append_dev(div9, t29);
+    			append_dev(div9, t31);
     			append_dev(div9, div8);
     			append_dev(div8, div7);
-    			append_dev(div7, t30);
-    			append_dev(div7, span9);
     			append_dev(div7, t32);
+    			append_dev(div7, span10);
+    			append_dev(div7, t34);
     			append_dev(div7, br6);
     			append_dev(div7, br7);
-    			append_dev(div7, t33);
-    			append_dev(div7, span10);
     			append_dev(div7, t35);
-    			append_dev(div8, t36);
+    			append_dev(div7, span11);
+    			append_dev(div7, t37);
+    			append_dev(div8, t38);
     			mount_component(custombutton1, div8, null);
-    			insert_dev(target, t37, anchor);
+    			insert_dev(target, t39, anchor);
     			insert_dev(target, div12, anchor);
     			append_dev(div12, div11);
     			append_dev(div11, div10);
-    			append_dev(div10, span11);
-    			append_dev(div10, t39);
+    			append_dev(div10, span12);
+    			append_dev(div10, t41);
     			append_dev(div10, br8);
     			append_dev(div10, br9);
-    			append_dev(div10, t40);
-    			append_dev(div10, span12);
     			append_dev(div10, t42);
-    			append_dev(div10, br10);
-    			append_dev(div10, t43);
     			append_dev(div10, span13);
+    			append_dev(div10, t44);
+    			append_dev(div10, br10);
     			append_dev(div10, t45);
+    			append_dev(div10, span14);
+    			append_dev(div10, t47);
     			append_dev(div10, br11);
     			append_dev(div10, br12);
-    			append_dev(div10, t46);
-    			append_dev(div10, span16);
-    			append_dev(span16, t47);
-    			append_dev(span16, span14);
-    			append_dev(span16, t49);
-    			append_dev(span16, span15);
-    			append_dev(span16, t51);
-    			append_dev(div10, t52);
-    			append_dev(div11, t53);
+    			append_dev(div10, t48);
+    			append_dev(div10, span17);
+    			append_dev(span17, t49);
+    			append_dev(span17, span15);
+    			append_dev(span17, t51);
+    			append_dev(span17, span16);
+    			append_dev(span17, t53);
+    			append_dev(div10, t54);
+    			append_dev(div11, t55);
     			mount_component(custombutton2, div11, null);
-    			append_dev(div12, t54);
+    			append_dev(div12, t56);
     			mount_component(contentcard3, div12, null);
     			current = true;
     		},
@@ -9488,11 +19096,11 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			if (detaching) detach_dev(t13);
     			if (detaching) detach_dev(div6);
     			destroy_component(contentcard1);
-    			if (detaching) detach_dev(t28);
+    			if (detaching) detach_dev(t30);
     			if (detaching) detach_dev(div9);
     			destroy_component(contentcard2);
     			destroy_component(custombutton1);
-    			if (detaching) detach_dev(t37);
+    			if (detaching) detach_dev(t39);
     			if (detaching) detach_dev(div12);
     			destroy_component(custombutton2);
     			destroy_component(contentcard3);
@@ -9840,7 +19448,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t27 = text(" rappresentano i frammenti di un antico fondale oceanico successivamente compresso ed emerso in seguito ad\r\n    imponenti movimenti della crosta terreste. Tali rocce spesso contengono ");
     			span8 = element("span");
     			span8.textContent = "fibre di amianto";
-    			t29 = text(" all'interno e, pertanto, è\r\n    importante conoscere dove possono essere trovate, soprattutto in tema di gestione ed utilizzo delle terre e rocce da scavo.\r\n    ");
+    			t29 = text(" e, pertanto, è\r\n    importante conoscere dove possono essere trovate, soprattutto in tema di gestione ed utilizzo delle terre e rocce da scavo.\r\n    ");
     			br6 = element("br");
     			br7 = element("br");
     			t30 = text("\r\n    La ");
@@ -9849,7 +19457,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t32 = text(" sotto riportata raffigura i territori in cui, in relazione alle rocce riconosciute in affioramento o\r\n    subaffioramento, potrebbero rinvenirsi concentrazioni di ");
     			span10 = element("span");
     			span10.textContent = "minerali asbestiformi";
-    			t34 = text(" con alte probabilitá.\r\n    ");
+    			t34 = text(" con alte probabilità.\r\n    ");
     			br8 = element("br");
     			br9 = element("br");
     			t35 = space();
@@ -9859,7 +19467,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			img = element("img");
     			t37 = space();
     			div7 = element("div");
-    			div7.textContent = "Mappa della presenza di Pietre Verdi in Liguria, con evidenza sul territorio protetto del parco del Beigua";
+    			div7.textContent = "Mappa della presenza di Pietre Verdi in Liguria, con evidenza sul territorio protetto del Parco del Beigua";
     			t39 = space();
     			create_component(custombutton2.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline2 uppercase");
@@ -9896,14 +19504,14 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			add_location(span7, file$2, 27, 7, 1747);
     			attr_dev(span8, "class", "highlight");
     			add_location(span8, file$2, 28, 76, 1973);
-    			add_location(br6, file$2, 30, 4, 2182);
-    			add_location(br7, file$2, 30, 10, 2188);
+    			add_location(br6, file$2, 30, 4, 2170);
+    			add_location(br7, file$2, 30, 10, 2176);
     			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$2, 31, 7, 2203);
+    			add_location(span9, file$2, 31, 7, 2191);
     			attr_dev(span10, "class", "highlight");
-    			add_location(span10, file$2, 32, 61, 2409);
-    			add_location(br8, file$2, 33, 4, 2489);
-    			add_location(br9, file$2, 33, 10, 2495);
+    			add_location(span10, file$2, 32, 61, 2397);
+    			add_location(br8, file$2, 33, 4, 2477);
+    			add_location(br9, file$2, 33, 10, 2483);
     			attr_dev(div5, "class", "mdc-typography--body1");
     			add_location(div5, file$2, 26, 2, 1703);
     			attr_dev(div6, "class", "right svelte-asx7jm");
@@ -9911,12 +19519,12 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			if (!src_url_equal(img.src, img_src_value = "img/beigua-mappa.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Mappa della presenza di Pietre Verdi in Liguria, con evidenza sul territorio protetto del parco del Beigua");
     			attr_dev(img, "class", "svelte-asx7jm");
-    			add_location(img, file$2, 43, 2, 2781);
+    			add_location(img, file$2, 43, 2, 2769);
     			attr_dev(div7, "class", "mdc-typography--body1");
     			set_style(div7, "margin-block", "1vw");
-    			add_location(div7, file$2, 44, 2, 2932);
+    			add_location(div7, file$2, 44, 2, 2920);
     			attr_dev(div8, "class", "center svelte-asx7jm");
-    			add_location(div8, file$2, 42, 0, 2757);
+    			add_location(div8, file$2, 42, 0, 2745);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10081,36 +19689,33 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	let t15;
     	let span4;
     	let t17;
-    	let span6;
-    	let t18;
     	let span5;
-    	let t20;
-    	let t21;
+    	let t19;
     	let br2;
     	let br3;
+    	let t20;
+    	let span6;
     	let t22;
     	let span7;
     	let t24;
-    	let span8;
-    	let t26;
     	let br4;
     	let br5;
+    	let t25;
+    	let span8;
     	let t27;
-    	let span9;
-    	let t29;
-    	let span11;
-    	let t30;
     	let span10;
+    	let t28;
+    	let span9;
+    	let t30;
+    	let t31;
     	let t32;
-    	let t33;
-    	let t34;
     	let custombutton1;
-    	let t35;
+    	let t33;
     	let contentcard1;
-    	let t36;
+    	let t34;
     	let div8;
     	let div7;
-    	let t38;
+    	let t36;
     	let img;
     	let img_src_value;
     	let current;
@@ -10170,10 +19775,10 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t3 = text("Nel 1970 tra i comuni di Urbe e Sassello è stato scoperto un giacimento di biossido di ");
     			span0 = element("span");
     			span0.textContent = "titanio";
-    			t5 = text(", sepolto in corrispondenza\r\n      dei Monti Antenna e Tariné, il cui contenuto é stato stimato a circa 9 milioni di tonnellate. Nel 1976 il ministero dell’Industria ha rilasciato alla\r\n      Mineraria Italiana Srl una concessione ventennale sul territorio, ceduta poi alla Compagnia Europea per il Titanio.\r\n      ");
+    			t5 = text(", sepolto in corrispondenza\r\n      dei Monti Antenna e Tariné. Sono stimate circa 9 milioni di tonnellate di biossido di Titanio, sottoforma di rutilo. Nel 1976 il ministero dell’Industria ha rilasciato alla\r\n      Mineraria Italiana Srl una concessione ventennale sul territorio, ceduta poi alla Compagnia Europea per il Titanio.\r\n      ");
     			br0 = element("br");
     			br1 = element("br");
-    			t6 = text("\r\n      Secondo uno studio dell’Università di Genova degli anni '90, per sfruttare questo giacimento e ricavare solo il 6% di titanio, si potrebbe arrivare a smuovere\r\n      circa\r\n      ");
+    			t6 = text("\r\n      Secondo uno studio dell’Università di Genova degli anni '90, per sfruttare questo giacimento e ricavare solo il 6% di rutilo, si potrebbe arrivare a smuovere\r\n      circa\r\n      ");
     			span1 = element("span");
     			span1.textContent = "200 milioni";
     			t8 = text(" di metri cubi di terra, di cui le rocce amiantifere compongono tra il ");
@@ -10182,67 +19787,64 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t10 = text(" e il\r\n      ");
     			span3 = element("span");
     			span3.textContent = "15%";
-    			t12 = text(". Una tale quantitá equivale a una movimentazione pari a 30 aeroporti di Genova.");
+    			t12 = text(": una tale quantità equivale a una movimentazione pari a 30 aeroporti di Genova.");
     			t13 = space();
     			create_component(custombutton0.$$.fragment);
     			t14 = space();
     			div6 = element("div");
     			div5 = element("div");
     			div4 = element("div");
-    			t15 = text("É stata depositata il ");
+    			t15 = text("È stata depositata il ");
     			span4 = element("span");
     			span4.textContent = "21 maggio 2022";
-    			t17 = text(" la\r\n      ");
-    			span6 = element("span");
-    			t18 = text("\"la sentenza del Tribunale Amministrativo Regionale della Liguria che di fatto conferma il ");
+    			t17 = text(" la\r\n      \"sentenza del Tribunale Amministrativo Regionale della Liguria che di fatto conferma il ");
     			span5 = element("span");
     			span5.textContent = "divieto";
-    			t20 = text(" di effettuare ricerche\r\n        minerarie");
-    			t21 = text("\r\n      nell'area del Monte Tarinè\".\r\n      ");
+    			t19 = text(" di effettuare ricerche\r\n      minerarie nell'area del Monte Tariné\".\r\n      ");
     			br2 = element("br");
     			br3 = element("br");
-    			t22 = text("\r\n      L'associazione di ");
+    			t20 = text("\r\n      L'associazione di ");
+    			span6 = element("span");
+    			span6.textContent = "Legambiente Liguria";
+    			t22 = text(" esprime\r\n      ");
     			span7 = element("span");
-    			span7.textContent = "Legambiente Liguria";
-    			t24 = text(" esprime\r\n      ");
-    			span8 = element("span");
-    			span8.textContent = "\"soddisfazione in merito alla sentenza del Tar che rappresenta la pietra tombale su qualsiasi ipotesi di sfruttamento minerario del comprensorio del\r\n        Beigua\"";
-    			t26 = text(".\r\n      ");
+    			span7.textContent = "\"soddisfazione in merito alla sentenza del TAR che rappresenta la pietra tombale su qualsiasi ipotesi di sfruttamento minerario del comprensorio del\r\n        Beigua\"";
+    			t24 = text(".\r\n      ");
     			br4 = element("br");
     			br5 = element("br");
-    			t27 = text("\r\n      L'assessore regionale all'Urbanistica e alle attività estrattive ");
-    			span9 = element("span");
-    			span9.textContent = "Marco Scajola";
-    			t29 = text(" afferma che\r\n      ");
-    			span11 = element("span");
-    			t30 = text("\"La sentenza del Tar va nella direzione della ");
+    			t25 = text("\r\n      L'assessore regionale all'Urbanistica e alle attività estrattive ");
+    			span8 = element("span");
+    			span8.textContent = "Marco Scajola";
+    			t27 = text(" afferma che\r\n      ");
     			span10 = element("span");
-    			span10.textContent = "tutela";
-    			t32 = text(" del territorio voluta dalla Giunta regionale, da sempre contraria a\r\n        qualsiasi attività estrattiva all'interno dell'area del Parco\"");
-    			t33 = text(".");
-    			t34 = space();
+    			t28 = text("\"La sentenza del Tar va nella direzione della ");
+    			span9 = element("span");
+    			span9.textContent = "tutela";
+    			t30 = text(" del territorio voluta dalla Giunta regionale, da sempre contraria a\r\n        qualsiasi attività estrattiva all'interno dell'area del Parco\"");
+    			t31 = text(".");
+    			t32 = space();
     			create_component(custombutton1.$$.fragment);
-    			t35 = space();
+    			t33 = space();
     			create_component(contentcard1.$$.fragment);
-    			t36 = space();
+    			t34 = space();
     			div8 = element("div");
     			div7 = element("div");
     			div7.textContent = "E noi, vogliamo dare vita a questo inferno?";
-    			t38 = space();
+    			t36 = space();
     			img = element("img");
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "15vw");
     			add_location(div0, file$1, 5, 0, 161);
     			attr_dev(span0, "class", "highlight");
     			add_location(span0, file$1, 18, 93, 815);
-    			add_location(br0, file$1, 21, 6, 1168);
-    			add_location(br1, file$1, 21, 12, 1174);
+    			add_location(br0, file$1, 21, 6, 1191);
+    			add_location(br1, file$1, 21, 12, 1197);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$1, 24, 6, 1367);
+    			add_location(span1, file$1, 24, 6, 1389);
     			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$1, 24, 119, 1480);
+    			add_location(span2, file$1, 24, 119, 1502);
     			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$1, 25, 6, 1527);
+    			add_location(span3, file$1, 25, 6, 1549);
     			add_location(div1, file$1, 17, 4, 715);
     			attr_dev(div2, "class", "mdc-typography--body1 hidden right-align flex-column-2");
     			attr_dev(div2, "id", "content-beigua1");
@@ -10251,40 +19853,38 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			set_style(div3, "margin-top", "4vw");
     			add_location(div3, file$1, 6, 0, 280);
     			attr_dev(span4, "class", "highlight");
-    			add_location(span4, file$1, 38, 28, 2072);
+    			add_location(span4, file$1, 38, 28, 2094);
     			attr_dev(span5, "class", "highlight");
-    			add_location(span5, file$1, 40, 99, 2250);
-    			attr_dev(span6, "class", "italic");
-    			add_location(span6, file$1, 39, 6, 2128);
-    			add_location(br2, file$1, 44, 6, 2389);
-    			add_location(br3, file$1, 44, 12, 2395);
-    			attr_dev(span7, "class", "highlight");
-    			add_location(span7, file$1, 45, 24, 2427);
-    			attr_dev(span8, "class", "italic");
-    			add_location(span8, file$1, 46, 6, 2493);
-    			add_location(br4, file$1, 50, 6, 2713);
-    			add_location(br5, file$1, 50, 12, 2719);
+    			add_location(span5, file$1, 39, 94, 2238);
+    			add_location(br2, file$1, 41, 6, 2353);
+    			add_location(br3, file$1, 41, 12, 2359);
+    			attr_dev(span6, "class", "highlight");
+    			add_location(span6, file$1, 42, 24, 2391);
+    			attr_dev(span7, "class", "italic");
+    			add_location(span7, file$1, 43, 6, 2457);
+    			add_location(br4, file$1, 47, 6, 2677);
+    			add_location(br5, file$1, 47, 12, 2683);
+    			attr_dev(span8, "class", "highlight");
+    			add_location(span8, file$1, 48, 71, 2762);
     			attr_dev(span9, "class", "highlight");
-    			add_location(span9, file$1, 51, 71, 2798);
-    			attr_dev(span10, "class", "highlight");
-    			add_location(span10, file$1, 53, 55, 2939);
-    			attr_dev(span11, "class", "italic");
-    			add_location(span11, file$1, 52, 6, 2862);
-    			add_location(div4, file$1, 37, 4, 2037);
+    			add_location(span9, file$1, 50, 55, 2903);
+    			attr_dev(span10, "class", "italic");
+    			add_location(span10, file$1, 49, 6, 2826);
+    			add_location(div4, file$1, 37, 4, 2059);
     			attr_dev(div5, "class", "mdc-typography--body1 hidden left-align flex-column-2");
     			attr_dev(div5, "id", "content-beigua2");
-    			add_location(div5, file$1, 36, 2, 1943);
+    			add_location(div5, file$1, 36, 2, 1965);
     			attr_dev(div6, "class", "flex-row-4");
     			set_style(div6, "margin-top", "10vw");
-    			add_location(div6, file$1, 35, 0, 1889);
+    			add_location(div6, file$1, 35, 0, 1911);
     			attr_dev(div7, "class", "mdc-typography--headline3 uppercase");
     			set_style(div7, "margin-top", "10vw");
-    			add_location(div7, file$1, 74, 2, 3701);
+    			add_location(div7, file$1, 71, 2, 3665);
     			if (!src_url_equal(img.src, img_src_value = "img/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Logo");
     			attr_dev(img, "class", "svelte-1dbqn48");
-    			add_location(img, file$1, 75, 2, 3829);
-    			add_location(div8, file$1, 73, 0, 3692);
+    			add_location(img, file$1, 72, 2, 3793);
+    			add_location(div8, file$1, 70, 0, 3656);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10318,36 +19918,33 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			append_dev(div4, t15);
     			append_dev(div4, span4);
     			append_dev(div4, t17);
-    			append_dev(div4, span6);
-    			append_dev(span6, t18);
-    			append_dev(span6, span5);
-    			append_dev(span6, t20);
-    			append_dev(div4, t21);
+    			append_dev(div4, span5);
+    			append_dev(div4, t19);
     			append_dev(div4, br2);
     			append_dev(div4, br3);
+    			append_dev(div4, t20);
+    			append_dev(div4, span6);
     			append_dev(div4, t22);
     			append_dev(div4, span7);
     			append_dev(div4, t24);
-    			append_dev(div4, span8);
-    			append_dev(div4, t26);
     			append_dev(div4, br4);
     			append_dev(div4, br5);
+    			append_dev(div4, t25);
+    			append_dev(div4, span8);
     			append_dev(div4, t27);
-    			append_dev(div4, span9);
-    			append_dev(div4, t29);
-    			append_dev(div4, span11);
-    			append_dev(span11, t30);
-    			append_dev(span11, span10);
-    			append_dev(span11, t32);
-    			append_dev(div4, t33);
-    			append_dev(div5, t34);
+    			append_dev(div4, span10);
+    			append_dev(span10, t28);
+    			append_dev(span10, span9);
+    			append_dev(span10, t30);
+    			append_dev(div4, t31);
+    			append_dev(div5, t32);
     			mount_component(custombutton1, div5, null);
-    			append_dev(div6, t35);
+    			append_dev(div6, t33);
     			mount_component(contentcard1, div6, null);
-    			insert_dev(target, t36, anchor);
+    			insert_dev(target, t34, anchor);
     			insert_dev(target, div8, anchor);
     			append_dev(div8, div7);
-    			append_dev(div8, t38);
+    			append_dev(div8, t36);
     			append_dev(div8, img);
     			current = true;
     		},
@@ -10377,7 +19974,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			if (detaching) detach_dev(div6);
     			destroy_component(custombutton1);
     			destroy_component(contentcard1);
-    			if (detaching) detach_dev(t36);
+    			if (detaching) detach_dev(t34);
     			if (detaching) detach_dev(div8);
     		}
     	};
@@ -10461,9 +20058,29 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     	let t10;
     	let div4;
     	let fab1;
+    	let t11;
+    	let div8;
+    	let img6;
+    	let img6_src_value;
+    	let t12;
+    	let img7;
+    	let img7_src_value;
+    	let t13;
+    	let div7;
+    	let minacuintro;
+    	let t14;
+    	let div10;
+    	let img8;
+    	let img8_src_value;
+    	let t15;
+    	let img9;
+    	let img9_src_value;
+    	let t16;
+    	let div9;
+    	let minacucards;
     	let current;
     	topappbar = new TopAppBar_1({ $$inline: true });
-    	introtitle = new Title({ $$inline: true });
+    	introtitle = new Title$1({ $$inline: true });
 
     	fab0 = new CustomFAB({
     			props: {
@@ -10483,6 +20100,9 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			},
     			$$inline: true
     		});
+
+    	minacuintro = new Intro$2({ $$inline: true });
+    	minacucards = new Cards$2({ $$inline: true });
 
     	const block = {
     		c: function create() {
@@ -10517,51 +20137,95 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			t10 = space();
     			div4 = element("div");
     			create_component(fab1.$$.fragment);
-    			attr_dev(img0, "class", "background-lg svelte-1o0ewtw");
+    			t11 = space();
+    			div8 = element("div");
+    			img6 = element("img");
+    			t12 = space();
+    			img7 = element("img");
+    			t13 = space();
+    			div7 = element("div");
+    			create_component(minacuintro.$$.fragment);
+    			t14 = space();
+    			div10 = element("div");
+    			img8 = element("img");
+    			t15 = space();
+    			img9 = element("img");
+    			t16 = space();
+    			div9 = element("div");
+    			create_component(minacucards.$$.fragment);
+    			attr_dev(img0, "class", "background-lg svelte-1b6k33h");
     			if (!src_url_equal(img0.src, img0_src_value = "img/background-1-1.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
     			add_location(img0, file, 27, 4, 1195);
-    			attr_dev(img1, "class", "background-sm svelte-1o0ewtw");
+    			attr_dev(img1, "class", "background-sm svelte-1b6k33h");
     			if (!src_url_equal(img1.src, img1_src_value = "img/background-1-1-sm.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
     			add_location(img1, file, 28, 4, 1266);
     			attr_dev(div0, "id", "content1-1");
-    			attr_dev(div0, "class", "svelte-1o0ewtw");
+    			attr_dev(div0, "class", "svelte-1b6k33h");
     			add_location(div0, file, 29, 4, 1340);
     			attr_dev(div1, "id", "section1-1");
-    			attr_dev(div1, "class", "svelte-1o0ewtw");
+    			attr_dev(div1, "class", "svelte-1b6k33h");
     			add_location(div1, file, 26, 2, 1168);
-    			attr_dev(img2, "class", "background-lg svelte-1o0ewtw");
+    			attr_dev(img2, "class", "background-lg svelte-1b6k33h");
     			if (!src_url_equal(img2.src, img2_src_value = "img/background-1-2.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "");
     			add_location(img2, file, 36, 4, 1505);
-    			attr_dev(img3, "class", "background-sm svelte-1o0ewtw");
+    			attr_dev(img3, "class", "background-sm svelte-1b6k33h");
     			if (!src_url_equal(img3.src, img3_src_value = "img/background-1-1-sm.png")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "");
     			add_location(img3, file, 37, 4, 1576);
     			attr_dev(div2, "id", "content1-2");
-    			attr_dev(div2, "class", "svelte-1o0ewtw");
+    			attr_dev(div2, "class", "svelte-1b6k33h");
     			add_location(div2, file, 38, 4, 1650);
     			attr_dev(div3, "id", "section1-2");
-    			attr_dev(div3, "class", "svelte-1o0ewtw");
+    			attr_dev(div3, "class", "svelte-1b6k33h");
     			add_location(div3, file, 35, 2, 1478);
-    			attr_dev(img4, "class", "background-lg svelte-1o0ewtw");
+    			attr_dev(img4, "class", "background-lg svelte-1b6k33h");
     			if (!src_url_equal(img4.src, img4_src_value = "img/background-1-3.png")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "");
     			add_location(img4, file, 44, 4, 1748);
-    			attr_dev(img5, "class", "background-sm svelte-1o0ewtw");
+    			attr_dev(img5, "class", "background-sm svelte-1b6k33h");
     			if (!src_url_equal(img5.src, img5_src_value = "img/background-1-1-sm.png")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "alt", "");
     			add_location(img5, file, 45, 4, 1819);
     			set_style(div4, "margin-top", "2vw");
     			add_location(div4, file, 48, 6, 1944);
     			attr_dev(div5, "id", "content1-3");
-    			attr_dev(div5, "class", "svelte-1o0ewtw");
+    			attr_dev(div5, "class", "svelte-1b6k33h");
     			add_location(div5, file, 46, 4, 1893);
     			attr_dev(div6, "id", "section1-3");
-    			attr_dev(div6, "class", "svelte-1o0ewtw");
+    			attr_dev(div6, "class", "svelte-1b6k33h");
     			add_location(div6, file, 43, 2, 1721);
-    			attr_dev(main, "class", "svelte-1o0ewtw");
+    			attr_dev(img6, "class", "background-lg svelte-1b6k33h");
+    			if (!src_url_equal(img6.src, img6_src_value = "img/background-2-1.png")) attr_dev(img6, "src", img6_src_value);
+    			attr_dev(img6, "alt", "");
+    			add_location(img6, file, 55, 4, 2112);
+    			attr_dev(img7, "class", "background-sm svelte-1b6k33h");
+    			if (!src_url_equal(img7.src, img7_src_value = "img/background-1-1-sm.png")) attr_dev(img7, "src", img7_src_value);
+    			attr_dev(img7, "alt", "");
+    			add_location(img7, file, 56, 4, 2183);
+    			attr_dev(div7, "id", "content2-1");
+    			attr_dev(div7, "class", "svelte-1b6k33h");
+    			add_location(div7, file, 57, 4, 2257);
+    			attr_dev(div8, "id", "section2-1");
+    			attr_dev(div8, "class", "svelte-1b6k33h");
+    			add_location(div8, file, 54, 2, 2085);
+    			attr_dev(img8, "class", "background-lg svelte-1b6k33h");
+    			if (!src_url_equal(img8.src, img8_src_value = "img/background-2-2.png")) attr_dev(img8, "src", img8_src_value);
+    			attr_dev(img8, "alt", "");
+    			add_location(img8, file, 63, 4, 2356);
+    			attr_dev(img9, "class", "background-sm svelte-1b6k33h");
+    			if (!src_url_equal(img9.src, img9_src_value = "img/background-1-1-sm.png")) attr_dev(img9, "src", img9_src_value);
+    			attr_dev(img9, "alt", "");
+    			add_location(img9, file, 64, 4, 2427);
+    			attr_dev(div9, "id", "content2-2");
+    			attr_dev(div9, "class", "svelte-1b6k33h");
+    			add_location(div9, file, 65, 4, 2501);
+    			attr_dev(div10, "id", "section2-2");
+    			attr_dev(div10, "class", "svelte-1b6k33h");
+    			add_location(div10, file, 62, 2, 2329);
+    			attr_dev(main, "class", "svelte-1b6k33h");
     			add_location(main, file, 25, 0, 1158);
     		},
     		l: function claim(nodes) {
@@ -10599,6 +20263,22 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			append_dev(div5, t10);
     			append_dev(div5, div4);
     			mount_component(fab1, div4, null);
+    			append_dev(main, t11);
+    			append_dev(main, div8);
+    			append_dev(div8, img6);
+    			append_dev(div8, t12);
+    			append_dev(div8, img7);
+    			append_dev(div8, t13);
+    			append_dev(div8, div7);
+    			mount_component(minacuintro, div7, null);
+    			append_dev(main, t14);
+    			append_dev(main, div10);
+    			append_dev(div10, img8);
+    			append_dev(div10, t15);
+    			append_dev(div10, img9);
+    			append_dev(div10, t16);
+    			append_dev(div10, div9);
+    			mount_component(minacucards, div9, null);
     			current = true;
     		},
     		p: noop,
@@ -10610,6 +20290,8 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			transition_in(introintro.$$.fragment, local);
     			transition_in(introcards.$$.fragment, local);
     			transition_in(fab1.$$.fragment, local);
+    			transition_in(minacuintro.$$.fragment, local);
+    			transition_in(minacucards.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -10619,6 +20301,8 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			transition_out(introintro.$$.fragment, local);
     			transition_out(introcards.$$.fragment, local);
     			transition_out(fab1.$$.fragment, local);
+    			transition_out(minacuintro.$$.fragment, local);
+    			transition_out(minacucards.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -10630,6 +20314,8 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     			destroy_component(introintro);
     			destroy_component(introcards);
     			destroy_component(fab1);
+    			destroy_component(minacuintro);
+    			destroy_component(minacucards);
     		}
     	};
 
@@ -10657,7 +20343,7 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     		TopAppBar: TopAppBar_1,
     		FAB: CustomFAB,
     		Footer,
-    		IntroTitle: Title,
+    		IntroTitle: Title$1,
     		IntroIntro: Intro$5,
     		IntroCards: Cards$5,
     		BalangeroIntro: Intro$4,
@@ -10708,5 +20394,4 @@ var we=["touchstart","pointerdown","mousedown","keydown"],xe=["touchend","pointe
     // export { app, topAppBar };
 
 })();
->>>>>>> Stashed changes
 //# sourceMappingURL=bundle.js.map
