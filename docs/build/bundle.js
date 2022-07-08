@@ -5962,7 +5962,7 @@
     }
 
     // (64:0) {#if disabled}
-    function create_if_block$6(ctx) {
+    function create_if_block$5(ctx) {
     	let span;
     	let current;
     	let mounted;
@@ -6043,7 +6043,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$6.name,
+    		id: create_if_block$5.name,
     		type: "if",
     		source: "(64:0) {#if disabled}",
     		ctx
@@ -6057,7 +6057,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$6, create_else_block$1];
+    	const if_block_creators = [create_if_block$5, create_else_block$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -7328,7 +7328,7 @@
     }
 
     // (23:4) <Section class="mdc-typography--headline6" style="justify-content: center;">
-    function create_default_slot_10$1(ctx) {
+    function create_default_slot_10(ctx) {
     	let link;
     	let current;
 
@@ -7374,7 +7374,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_10$1.name,
+    		id: create_default_slot_10.name,
     		type: "slot",
     		source: "(23:4) <Section class=\\\"mdc-typography--headline6\\\" style=\\\"justify-content: center;\\\">",
     		ctx
@@ -7384,7 +7384,7 @@
     }
 
     // (24:80) <Link href="#content3-1">
-    function create_default_slot_9$1(ctx) {
+    function create_default_slot_9(ctx) {
     	let t;
 
     	const block = {
@@ -7401,7 +7401,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_9$1.name,
+    		id: create_default_slot_9.name,
     		type: "slot",
     		source: "(24:80) <Link href=\\\"#content3-1\\\">",
     		ctx
@@ -7418,7 +7418,7 @@
     	link = new Link({
     			props: {
     				href: "#content3-1",
-    				$$slots: { default: [create_default_slot_9$1] },
+    				$$slots: { default: [create_default_slot_9] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -7744,7 +7744,7 @@
     			props: {
     				class: "mdc-typography--headline6",
     				style: "justify-content: center;",
-    				$$slots: { default: [create_default_slot_10$1] },
+    				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -8380,7 +8380,7 @@
     const file$t = "node_modules\\@smui\\fab\\dist\\Fab.svelte";
 
     // (37:10) {#if touch}
-    function create_if_block$5(ctx) {
+    function create_if_block$4(ctx) {
     	let div;
 
     	const block = {
@@ -8399,7 +8399,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$5.name,
+    		id: create_if_block$4.name,
     		type: "if",
     		source: "(37:10) {#if touch}",
     		ctx
@@ -8416,7 +8416,7 @@
     	let current;
     	const default_slot_template = /*#slots*/ ctx[20].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[22], null);
-    	let if_block = /*touch*/ ctx[8] && create_if_block$5(ctx);
+    	let if_block = /*touch*/ ctx[8] && create_if_block$4(ctx);
 
     	const block = {
     		c: function create() {
@@ -8458,7 +8458,7 @@
 
     			if (/*touch*/ ctx[8]) {
     				if (if_block) ; else {
-    					if_block = create_if_block$5(ctx);
+    					if_block = create_if_block$4(ctx);
     					if_block.c();
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
@@ -11300,7 +11300,7 @@
     const file$i = "node_modules\\@smui\\button\\dist\\Button.svelte";
 
     // (50:10) {#if touch}
-    function create_if_block$4(ctx) {
+    function create_if_block$3(ctx) {
     	let div;
 
     	const block = {
@@ -11319,7 +11319,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$4.name,
+    		id: create_if_block$3.name,
     		type: "if",
     		source: "(50:10) {#if touch}",
     		ctx
@@ -11336,7 +11336,7 @@
     	let current;
     	const default_slot_template = /*#slots*/ ctx[27].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[29], null);
-    	let if_block = /*touch*/ ctx[6] && create_if_block$4(ctx);
+    	let if_block = /*touch*/ ctx[6] && create_if_block$3(ctx);
 
     	const block = {
     		c: function create() {
@@ -11378,7 +11378,7 @@
 
     			if (/*touch*/ ctx[6]) {
     				if (if_block) ; else {
-    					if_block = create_if_block$4(ctx);
+    					if_block = create_if_block$3(ctx);
     					if_block.c();
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
@@ -11981,7 +11981,6 @@
     			props: {
     				class: /*direction*/ ctx[2],
     				variant: "raised",
-    				style: "height: 10vw;",
     				$$slots: { default: [create_default_slot_2$2] },
     				$$scope: { ctx }
     			},
@@ -12032,7 +12031,7 @@
     }
 
     // (9:0) {#if href !== ""}
-    function create_if_block$3(ctx) {
+    function create_if_block$2(ctx) {
     	let button;
     	let current;
 
@@ -12041,7 +12040,6 @@
     				class: /*direction*/ ctx[2],
     				variant: "raised",
     				href: /*href*/ ctx[1],
-    				style: "height: 10vw;",
     				$$slots: { default: [create_default_slot$4] },
     				$$scope: { ctx }
     			},
@@ -12083,7 +12081,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$3.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(9:0) {#if href !== \\\"\\\"}",
     		ctx
@@ -12122,7 +12120,7 @@
     	return block;
     }
 
-    // (14:2) <Button class={direction} variant="raised" style="height: 10vw;">
+    // (14:2) <Button class={direction} variant="raised">
     function create_default_slot_2$2(ctx) {
     	let label_1;
     	let current;
@@ -12171,7 +12169,7 @@
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(14:2) <Button class={direction} variant=\\\"raised\\\" style=\\\"height: 10vw;\\\">",
+    		source: "(14:2) <Button class={direction} variant=\\\"raised\\\">",
     		ctx
     	});
 
@@ -12208,7 +12206,7 @@
     	return block;
     }
 
-    // (10:2) <Button class={direction} variant="raised" {href} style="height: 10vw;">
+    // (10:2) <Button class={direction} variant="raised" {href}>
     function create_default_slot$4(ctx) {
     	let label_1;
     	let current;
@@ -12257,7 +12255,7 @@
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(10:2) <Button class={direction} variant=\\\"raised\\\" {href} style=\\\"height: 10vw;\\\">",
+    		source: "(10:2) <Button class={direction} variant=\\\"raised\\\" {href}>",
     		ctx
     	});
 
@@ -12269,7 +12267,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$3, create_else_block];
+    	const if_block_creators = [create_if_block$2, create_else_block];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -12479,7 +12477,7 @@
     }
 
     // (25:45) 
-    function create_if_block_1$1(ctx) {
+    function create_if_block_1(ctx) {
     	let i;
     	let t1;
     	let label;
@@ -12537,7 +12535,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$1.name,
+    		id: create_if_block_1.name,
     		type: "if",
     		source: "(25:45) ",
     		ctx
@@ -12547,7 +12545,7 @@
     }
 
     // (22:8) {#if direction === "left-card"}
-    function create_if_block$2(ctx) {
+    function create_if_block$1(ctx) {
     	let label;
     	let t0;
     	let i;
@@ -12605,7 +12603,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$2.name,
+    		id: create_if_block$1.name,
     		type: "if",
     		source: "(22:8) {#if direction === \\\"left-card\\\"}",
     		ctx
@@ -12680,7 +12678,7 @@
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$2, create_if_block_1$1];
+    	const if_block_creators = [create_if_block$1, create_if_block_1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -15532,7 +15530,7 @@
     const get_over_slot_context = ctx => ({});
 
     // (47:6) {#if fullscreen}
-    function create_if_block$1(ctx) {
+    function create_if_block(ctx) {
     	let div;
     	let mounted;
     	let dispose;
@@ -15561,7 +15559,7 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block.name,
     		type: "if",
     		source: "(47:6) {#if fullscreen}",
     		ctx
@@ -15588,7 +15586,7 @@
     	let dispose;
     	const default_slot_template = /*#slots*/ ctx[27].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[26], null);
-    	let if_block = /*fullscreen*/ ctx[5] && create_if_block$1(ctx);
+    	let if_block = /*fullscreen*/ ctx[5] && create_if_block(ctx);
 
     	let div0_levels = [
     		{
@@ -15734,7 +15732,7 @@
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
-    					if_block = create_if_block$1(ctx);
+    					if_block = create_if_block(ctx);
     					if_block.c();
     					if_block.m(div0, null);
     				}
@@ -16447,8 +16445,8 @@
     /* src\Components\DialogCard.svelte generated by Svelte v3.46.6 */
     const file$8 = "src\\Components\\DialogCard.svelte";
 
-    // (18:4) <Content style="padding: 1vw;">
-    function create_default_slot_10(ctx) {
+    // (20:4) <Content style="padding: 1vw;">
+    function create_default_slot_8(ctx) {
     	let div0;
     	let t0;
     	let t1;
@@ -16463,9 +16461,9 @@
     			div1 = element("div");
     			t2 = text(/*subtitle*/ ctx[2]);
     			attr_dev(div0, "class", "mdc-typography--body2 highlight");
-    			add_location(div0, file$8, 18, 6, 539);
+    			add_location(div0, file$8, 20, 6, 573);
     			attr_dev(div1, "class", "mdc-typography--body2");
-    			add_location(div1, file$8, 19, 6, 605);
+    			add_location(div1, file$8, 21, 6, 639);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -16487,85 +16485,47 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_10.name,
+    		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(18:4) <Content style=\\\"padding: 1vw;\\\">",
+    		source: "(20:4) <Content style=\\\"padding: 1vw;\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (28:45) 
-    function create_if_block_1(ctx) {
-    	let i;
-    	let t1;
-    	let label;
-    	let current;
-
-    	label = new Label({
-    			props: {
-    				class: "mdc-typography--body2 bold",
-    				$$slots: { default: [create_default_slot_9] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
+    // (26:8) <Label class="mdc-typography--body2 bold">
+    function create_default_slot_7(ctx) {
+    	let t;
 
     	const block = {
     		c: function create() {
-    			i = element("i");
-    			i.textContent = "arrow_back";
-    			t1 = space();
-    			create_component(label.$$.fragment);
-    			attr_dev(i, "class", "material-icons svelte-pky5a5");
-    			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$8, 28, 10, 1095);
+    			t = text(/*buttonLabel*/ ctx[3]);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, i, anchor);
-    			insert_dev(target, t1, anchor);
-    			mount_component(label, target, anchor);
-    			current = true;
+    			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			const label_changes = {};
-
-    			if (dirty & /*$$scope, buttonLabel*/ 264) {
-    				label_changes.$$scope = { dirty, ctx };
-    			}
-
-    			label.$set(label_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(label.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(label.$$.fragment, local);
-    			current = false;
+    			if (dirty & /*buttonLabel*/ 8) set_data_dev(t, /*buttonLabel*/ ctx[3]);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(i);
-    			if (detaching) detach_dev(t1);
-    			destroy_component(label, detaching);
+    			if (detaching) detach_dev(t);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1.name,
-    		type: "if",
-    		source: "(28:45) ",
+    		id: create_default_slot_7.name,
+    		type: "slot",
+    		source: "(26:8) <Label class=\\\"mdc-typography--body2 bold\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (25:8) {#if direction === "left-card"}
-    function create_if_block(ctx) {
+    // (25:6) <Button class="dialog-card-button">
+    function create_default_slot_6(ctx) {
     	let label;
     	let t0;
     	let i;
@@ -16574,7 +16534,7 @@
     	label = new Label({
     			props: {
     				class: "mdc-typography--body2 bold",
-    				$$slots: { default: [create_default_slot_8] },
+    				$$slots: { default: [create_default_slot_7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -16585,10 +16545,10 @@
     			create_component(label.$$.fragment);
     			t0 = space();
     			i = element("i");
-    			i.textContent = "arrow_forward";
-    			attr_dev(i, "class", "material-icons svelte-pky5a5");
+    			i.textContent = "open_in_new";
+    			attr_dev(i, "class", "material-icons svelte-1dodpt9");
     			attr_dev(i, "aria-hidden", "true");
-    			add_location(i, file$8, 26, 10, 974);
+    			add_location(i, file$8, 26, 8, 880);
     		},
     		m: function mount(target, anchor) {
     			mount_component(label, target, anchor);
@@ -16599,7 +16559,7 @@
     		p: function update(ctx, dirty) {
     			const label_changes = {};
 
-    			if (dirty & /*$$scope, buttonLabel*/ 264) {
+    			if (dirty & /*$$scope, buttonLabel*/ 2056) {
     				label_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16623,181 +16583,24 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block.name,
-    		type: "if",
-    		source: "(25:8) {#if direction === \\\"left-card\\\"}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (30:10) <Label class="mdc-typography--body2 bold">
-    function create_default_slot_9(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text(/*buttonLabel*/ ctx[3]);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*buttonLabel*/ 8) set_data_dev(t, /*buttonLabel*/ ctx[3]);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_9.name,
+    		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(30:10) <Label class=\\\"mdc-typography--body2 bold\\\">",
+    		source: "(25:6) <Button class=\\\"dialog-card-button\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (26:10) <Label class="mdc-typography--body2 bold">
-    function create_default_slot_8(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text(/*buttonLabel*/ ctx[3]);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*buttonLabel*/ 8) set_data_dev(t, /*buttonLabel*/ ctx[3]);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_8.name,
-    		type: "slot",
-    		source: "(26:10) <Label class=\\\"mdc-typography--body2 bold\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (23:6) <Button class="dialog-card-button">
-    function create_default_slot_7(ctx) {
-    	let current_block_type_index;
-    	let if_block;
-    	let if_block_anchor;
-    	let current;
-    	const if_block_creators = [create_if_block, create_if_block_1];
-    	const if_blocks = [];
-
-    	function select_block_type(ctx, dirty) {
-    		if (/*direction*/ ctx[4] === "left-card") return 0;
-    		if (/*direction*/ ctx[4] === "right-card") return 1;
-    		return -1;
-    	}
-
-    	if (~(current_block_type_index = select_block_type(ctx))) {
-    		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-    	}
-
-    	const block = {
-    		c: function create() {
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
-    		},
-    		m: function mount(target, anchor) {
-    			if (~current_block_type_index) {
-    				if_blocks[current_block_type_index].m(target, anchor);
-    			}
-
-    			insert_dev(target, if_block_anchor, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			let previous_block_index = current_block_type_index;
-    			current_block_type_index = select_block_type(ctx);
-
-    			if (current_block_type_index === previous_block_index) {
-    				if (~current_block_type_index) {
-    					if_blocks[current_block_type_index].p(ctx, dirty);
-    				}
-    			} else {
-    				if (if_block) {
-    					group_outros();
-
-    					transition_out(if_blocks[previous_block_index], 1, 1, () => {
-    						if_blocks[previous_block_index] = null;
-    					});
-
-    					check_outros();
-    				}
-
-    				if (~current_block_type_index) {
-    					if_block = if_blocks[current_block_type_index];
-
-    					if (!if_block) {
-    						if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-    						if_block.c();
-    					} else {
-    						if_block.p(ctx, dirty);
-    					}
-
-    					transition_in(if_block, 1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				} else {
-    					if_block = null;
-    				}
-    			}
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(if_block);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(if_block);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (~current_block_type_index) {
-    				if_blocks[current_block_type_index].d(detaching);
-    			}
-
-    			if (detaching) detach_dev(if_block_anchor);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_7.name,
-    		type: "slot",
-    		source: "(23:6) <Button class=\\\"dialog-card-button\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (22:4) <Actions fullBleed style="min-height: 0;">
-    function create_default_slot_6(ctx) {
+    // (24:4) <Actions fullBleed style="min-height: 0;">
+    function create_default_slot_5(ctx) {
     	let button;
     	let current;
 
     	button = new Button_1({
     			props: {
     				class: "dialog-card-button",
-    				$$slots: { default: [create_default_slot_7] },
+    				$$slots: { default: [create_default_slot_6] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -16814,7 +16617,7 @@
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope, buttonLabel, direction*/ 280) {
+    			if (dirty & /*$$scope, buttonLabel*/ 2056) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16836,17 +16639,17 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_6.name,
+    		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(22:4) <Actions fullBleed style=\\\"min-height: 0;\\\">",
+    		source: "(24:4) <Actions fullBleed style=\\\"min-height: 0;\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (16:2) <PrimaryAction on:click={() => (open = true)}>
-    function create_default_slot_5(ctx) {
+    // (18:2) <PrimaryAction on:click={() => (open = true)}>
+    function create_default_slot_4(ctx) {
     	let img;
     	let img_src_value;
     	let t0;
@@ -16858,7 +16661,7 @@
     	content = new Content$1({
     			props: {
     				style: "padding: 1vw;",
-    				$$slots: { default: [create_default_slot_10] },
+    				$$slots: { default: [create_default_slot_8] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -16868,7 +16671,7 @@
     			props: {
     				fullBleed: true,
     				style: "min-height: 0;",
-    				$$slots: { default: [create_default_slot_6] },
+    				$$slots: { default: [create_default_slot_5] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -16883,8 +16686,8 @@
     			create_component(actions.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = /*src*/ ctx[0])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*title*/ ctx[1]);
-    			attr_dev(img, "class", "svelte-pky5a5");
-    			add_location(img, file$8, 16, 4, 469);
+    			attr_dev(img, "class", "svelte-1dodpt9");
+    			add_location(img, file$8, 18, 4, 503);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -16905,14 +16708,14 @@
 
     			const content_changes = {};
 
-    			if (dirty & /*$$scope, subtitle, title*/ 262) {
+    			if (dirty & /*$$scope, subtitle, title*/ 2054) {
     				content_changes.$$scope = { dirty, ctx };
     			}
 
     			content.$set(content_changes);
     			const actions_changes = {};
 
-    			if (dirty & /*$$scope, buttonLabel, direction*/ 280) {
+    			if (dirty & /*$$scope, buttonLabel*/ 2056) {
     				actions_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16940,29 +16743,29 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5.name,
+    		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(16:2) <PrimaryAction on:click={() => (open = true)}>",
+    		source: "(18:2) <PrimaryAction on:click={() => (open = true)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (15:0) <Card class="dialog-card {direction}">
-    function create_default_slot_4(ctx) {
+    // (17:0) <Card class="dialog-card {direction}">
+    function create_default_slot_3(ctx) {
     	let primaryaction;
     	let current;
 
     	primaryaction = new PrimaryAction({
     			props: {
-    				$$slots: { default: [create_default_slot_5] },
+    				$$slots: { default: [create_default_slot_4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	primaryaction.$on("click", /*click_handler*/ ctx[6]);
+    	primaryaction.$on("click", /*click_handler*/ ctx[9]);
 
     	const block = {
     		c: function create() {
@@ -16975,7 +16778,7 @@
     		p: function update(ctx, dirty) {
     			const primaryaction_changes = {};
 
-    			if (dirty & /*$$scope, buttonLabel, direction, subtitle, title, src*/ 287) {
+    			if (dirty & /*$$scope, buttonLabel, subtitle, title, src*/ 2063) {
     				primaryaction_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16997,46 +16800,16 @@
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_4.name,
-    		type: "slot",
-    		source: "(15:0) <Card class=\\\"dialog-card {direction}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (38:2) <Title class="mdc-typography--headline3">
-    function create_default_slot_3(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text(/*title*/ ctx[1]);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*title*/ 2) set_data_dev(t, /*title*/ ctx[1]);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(38:2) <Title class=\\\"mdc-typography--headline3\\\">",
+    		source: "(17:0) <Card class=\\\"dialog-card {direction}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (51:4) <Actions class="flex-row-2">
+    // (46:4) <Actions class="dialog-actions">
     function create_default_slot_2(ctx) {
     	let custombutton0;
     	let t;
@@ -17054,8 +16827,8 @@
     	custombutton1 = new CustomButton({
     			props: {
     				direction: "right-button",
-    				label: "Approfondisci l'inchiesta",
-    				href: "https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L"
+    				label: /*dialogLabel*/ ctx[5],
+    				href: /*href*/ ctx[6]
     			},
     			$$inline: true
     		});
@@ -17072,7 +16845,12 @@
     			mount_component(custombutton1, target, anchor);
     			current = true;
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			const custombutton1_changes = {};
+    			if (dirty & /*dialogLabel*/ 32) custombutton1_changes.label = /*dialogLabel*/ ctx[5];
+    			if (dirty & /*href*/ 64) custombutton1_changes.href = /*href*/ ctx[6];
+    			custombutton1.$set(custombutton1_changes);
+    		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(custombutton0.$$.fragment, local);
@@ -17095,35 +16873,24 @@
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(51:4) <Actions class=\\\"flex-row-2\\\">",
+    		source: "(46:4) <Actions class=\\\"dialog-actions\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:2) <Content class="mdc-typography--body1 flex-column-2">
+    // (43:2) <Content class="mdc-typography--body1 flex-column-2" style="padding: 4vw 0 0 0;">
     function create_default_slot_1$1(ctx) {
-    	let div;
-    	let t0;
-    	let span0;
-    	let t2;
-    	let span1;
-    	let t4;
-    	let br0;
-    	let br1;
-    	let t5;
-    	let span2;
-    	let t7;
-    	let span3;
-    	let t9;
-    	let t10;
+    	let t;
     	let actions;
     	let current;
+    	const default_slot_template = /*#slots*/ ctx[8].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[11], null);
 
     	actions = new Actions({
     			props: {
-    				class: "flex-row-2",
+    				class: "dialog-actions",
     				$$slots: { default: [create_default_slot_2] },
     				$$scope: { ctx }
     			},
@@ -17132,59 +16899,38 @@
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			t0 = text("Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore politico,\r\n      scegliendo sindaci, consiglieri e sacerdoti schierati a ");
-    			span0 = element("span");
-    			span0.textContent = "difesa dell'amianto";
-    			t2 = text(". Denigrare pubblicamente SAMA può essere\r\n      considerato tabù da alcuni residenti, infatti, in migliaia hanno tranquillamente firmato\r\n      ");
-    			span1 = element("span");
-    			span1.textContent = "accordi";
-    			t4 = text("\r\n      con la compagnia per ottenere un risarcimento sui danni sanitari.\r\n      ");
-    			br0 = element("br");
-    			br1 = element("br");
-    			t5 = text("\r\n      La causa in corso è portata avanti dalla ");
-    			span2 = element("span");
-    			span2.textContent = "ABREA";
-    			t7 = text(", associazione brasiliana a difesa delle vittime di amianto, fondata da\r\n      Fernanda Giannasi nel 1995. L'ultima sentenza del tribunale, nel Novembre del 2021, ha ordinato alla compagnia di pagare le\r\n      ");
-    			span3 = element("span");
-    			span3.textContent = "spese mediche";
-    			t9 = text(" per i prossimi 30 anni a tutti i lavoratori che abbiano manifestato problemi di salute \"associabili all'amianto\".");
-    			t10 = space();
+    			if (default_slot) default_slot.c();
+    			t = space();
     			create_component(actions.$$.fragment);
-    			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$8, 41, 62, 1817);
-    			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$8, 43, 6, 2012);
-    			add_location(br0, file$8, 45, 6, 2131);
-    			add_location(br1, file$8, 45, 12, 2137);
-    			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$8, 46, 47, 2192);
-    			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$8, 48, 6, 2438);
-    			add_location(div, file$8, 39, 4, 1586);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, t0);
-    			append_dev(div, span0);
-    			append_dev(div, t2);
-    			append_dev(div, span1);
-    			append_dev(div, t4);
-    			append_dev(div, br0);
-    			append_dev(div, br1);
-    			append_dev(div, t5);
-    			append_dev(div, span2);
-    			append_dev(div, t7);
-    			append_dev(div, span3);
-    			append_dev(div, t9);
-    			insert_dev(target, t10, anchor);
+    			if (default_slot) {
+    				default_slot.m(target, anchor);
+    			}
+
+    			insert_dev(target, t, anchor);
     			mount_component(actions, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
+    			if (default_slot) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 2048)) {
+    					update_slot_base(
+    						default_slot,
+    						default_slot_template,
+    						ctx,
+    						/*$$scope*/ ctx[11],
+    						!current
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[11])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[11], dirty, null),
+    						null
+    					);
+    				}
+    			}
+
     			const actions_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope, dialogLabel, href*/ 2144) {
     				actions_changes.$$scope = { dirty, ctx };
     			}
 
@@ -17192,16 +16938,18 @@
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(default_slot, local);
     			transition_in(actions.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(default_slot, local);
     			transition_out(actions.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
-    			if (detaching) detach_dev(t10);
+    			if (default_slot) default_slot.d(detaching);
+    			if (detaching) detach_dev(t);
     			destroy_component(actions, detaching);
     		}
     	};
@@ -17210,32 +16958,25 @@
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(39:2) <Content class=\\\"mdc-typography--body1 flex-column-2\\\">",
+    		source: "(43:2) <Content class=\\\"mdc-typography--body1 flex-column-2\\\" style=\\\"padding: 4vw 0 0 0;\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:0) <Dialog bind:open aria-labelledby="large-scroll-title" aria-describedby="large-scroll-content" class="dialog" surface$style="width: 85vw; height: 180vw">
+    // (34:0) <Dialog    bind:open    aria-labelledby="large-scroll-title"    aria-describedby="large-scroll-content"    class="dialog"    surface$style="max-height: 100%;    min-height: 100%; max-width:85vw; min-width:85vw; padding: 4vw;"  >
     function create_default_slot$1(ctx) {
-    	let title_1;
-    	let t;
+    	let div;
+    	let t0;
+    	let t1;
     	let content;
     	let current;
-
-    	title_1 = new Title({
-    			props: {
-    				class: "mdc-typography--headline3",
-    				$$slots: { default: [create_default_slot_3] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
 
     	content = new Content$1({
     			props: {
     				class: "mdc-typography--body1 flex-column-2",
+    				style: "padding: 4vw 0 0 0;",
     				$$slots: { default: [create_default_slot_1$1] },
     				$$scope: { ctx }
     			},
@@ -17244,27 +16985,25 @@
 
     	const block = {
     		c: function create() {
-    			create_component(title_1.$$.fragment);
-    			t = space();
+    			div = element("div");
+    			t0 = text(/*title*/ ctx[1]);
+    			t1 = space();
     			create_component(content.$$.fragment);
+    			attr_dev(div, "class", "mdc-typography--headline3");
+    			add_location(div, file$8, 41, 2, 1320);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(title_1, target, anchor);
-    			insert_dev(target, t, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t0);
+    			insert_dev(target, t1, anchor);
     			mount_component(content, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const title_1_changes = {};
-
-    			if (dirty & /*$$scope, title*/ 258) {
-    				title_1_changes.$$scope = { dirty, ctx };
-    			}
-
-    			title_1.$set(title_1_changes);
+    			if (!current || dirty & /*title*/ 2) set_data_dev(t0, /*title*/ ctx[1]);
     			const content_changes = {};
 
-    			if (dirty & /*$$scope*/ 256) {
+    			if (dirty & /*$$scope, dialogLabel, href*/ 2144) {
     				content_changes.$$scope = { dirty, ctx };
     			}
 
@@ -17272,18 +17011,16 @@
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(title_1.$$.fragment, local);
     			transition_in(content.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(title_1.$$.fragment, local);
     			transition_out(content.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(title_1, detaching);
-    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(t1);
     			destroy_component(content, detaching);
     		}
     	};
@@ -17292,7 +17029,7 @@
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(37:0) <Dialog bind:open aria-labelledby=\\\"large-scroll-title\\\" aria-describedby=\\\"large-scroll-content\\\" class=\\\"dialog\\\" surface$style=\\\"width: 85vw; height: 180vw\\\">",
+    		source: "(34:0) <Dialog    bind:open    aria-labelledby=\\\"large-scroll-title\\\"    aria-describedby=\\\"large-scroll-content\\\"    class=\\\"dialog\\\"    surface$style=\\\"max-height: 100%;    min-height: 100%; max-width:85vw; min-width:85vw; padding: 4vw;\\\"  >",
     		ctx
     	});
 
@@ -17309,27 +17046,27 @@
     	card = new Card({
     			props: {
     				class: "dialog-card " + /*direction*/ ctx[4],
-    				$$slots: { default: [create_default_slot_4] },
+    				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
     	function dialog_open_binding(value) {
-    		/*dialog_open_binding*/ ctx[7](value);
+    		/*dialog_open_binding*/ ctx[10](value);
     	}
 
     	let dialog_props = {
     		"aria-labelledby": "large-scroll-title",
     		"aria-describedby": "large-scroll-content",
     		class: "dialog",
-    		surface$style: "width: 85vw; height: 180vw",
+    		surface$style: "max-height: 100%;\r\n  min-height: 100%; max-width:85vw; min-width:85vw; padding: 4vw;",
     		$$slots: { default: [create_default_slot$1] },
     		$$scope: { ctx }
     	};
 
-    	if (/*open*/ ctx[5] !== void 0) {
-    		dialog_props.open = /*open*/ ctx[5];
+    	if (/*open*/ ctx[7] !== void 0) {
+    		dialog_props.open = /*open*/ ctx[7];
     	}
 
     	dialog = new Dialog({ props: dialog_props, $$inline: true });
@@ -17354,20 +17091,20 @@
     			const card_changes = {};
     			if (dirty & /*direction*/ 16) card_changes.class = "dialog-card " + /*direction*/ ctx[4];
 
-    			if (dirty & /*$$scope, open, buttonLabel, direction, subtitle, title, src*/ 319) {
+    			if (dirty & /*$$scope, open, buttonLabel, subtitle, title, src*/ 2191) {
     				card_changes.$$scope = { dirty, ctx };
     			}
 
     			card.$set(card_changes);
     			const dialog_changes = {};
 
-    			if (dirty & /*$$scope, title*/ 258) {
+    			if (dirty & /*$$scope, dialogLabel, href, title*/ 2146) {
     				dialog_changes.$$scope = { dirty, ctx };
     			}
 
-    			if (!updating_open && dirty & /*open*/ 32) {
+    			if (!updating_open && dirty & /*open*/ 128) {
     				updating_open = true;
-    				dialog_changes.open = /*open*/ ctx[5];
+    				dialog_changes.open = /*open*/ ctx[7];
     				add_flush_callback(() => updating_open = false);
     			}
 
@@ -17404,20 +17141,20 @@
 
     function instance$8($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
-    	validate_slots('DialogCard', slots, []);
-    	let { src, title, subtitle, buttonLabel, direction = "" } = $$props;
+    	validate_slots('DialogCard', slots, ['default']);
+    	let { src, title, subtitle, buttonLabel, direction, dialogLabel = "", href = "" } = $$props;
     	var open = false;
-    	const writable_props = ['src', 'title', 'subtitle', 'buttonLabel', 'direction'];
+    	const writable_props = ['src', 'title', 'subtitle', 'buttonLabel', 'direction', 'dialogLabel', 'href'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<DialogCard> was created with unknown prop '${key}'`);
     	});
 
-    	const click_handler = () => $$invalidate(5, open = true);
+    	const click_handler = () => $$invalidate(7, open = true);
 
     	function dialog_open_binding(value) {
     		open = value;
-    		$$invalidate(5, open);
+    		$$invalidate(7, open);
     	}
 
     	$$self.$$set = $$props => {
@@ -17426,6 +17163,9 @@
     		if ('subtitle' in $$props) $$invalidate(2, subtitle = $$props.subtitle);
     		if ('buttonLabel' in $$props) $$invalidate(3, buttonLabel = $$props.buttonLabel);
     		if ('direction' in $$props) $$invalidate(4, direction = $$props.direction);
+    		if ('dialogLabel' in $$props) $$invalidate(5, dialogLabel = $$props.dialogLabel);
+    		if ('href' in $$props) $$invalidate(6, href = $$props.href);
+    		if ('$$scope' in $$props) $$invalidate(11, $$scope = $$props.$$scope);
     	};
 
     	$$self.$capture_state = () => ({
@@ -17443,6 +17183,8 @@
     		subtitle,
     		buttonLabel,
     		direction,
+    		dialogLabel,
+    		href,
     		open
     	});
 
@@ -17452,7 +17194,9 @@
     		if ('subtitle' in $$props) $$invalidate(2, subtitle = $$props.subtitle);
     		if ('buttonLabel' in $$props) $$invalidate(3, buttonLabel = $$props.buttonLabel);
     		if ('direction' in $$props) $$invalidate(4, direction = $$props.direction);
-    		if ('open' in $$props) $$invalidate(5, open = $$props.open);
+    		if ('dialogLabel' in $$props) $$invalidate(5, dialogLabel = $$props.dialogLabel);
+    		if ('href' in $$props) $$invalidate(6, href = $$props.href);
+    		if ('open' in $$props) $$invalidate(7, open = $$props.open);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -17465,9 +17209,13 @@
     		subtitle,
     		buttonLabel,
     		direction,
+    		dialogLabel,
+    		href,
     		open,
+    		slots,
     		click_handler,
-    		dialog_open_binding
+    		dialog_open_binding,
+    		$$scope
     	];
     }
 
@@ -17480,7 +17228,9 @@
     			title: 1,
     			subtitle: 2,
     			buttonLabel: 3,
-    			direction: 4
+    			direction: 4,
+    			dialogLabel: 5,
+    			href: 6
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -17507,6 +17257,10 @@
 
     		if (/*buttonLabel*/ ctx[3] === undefined && !('buttonLabel' in props)) {
     			console.warn("<DialogCard> was created without expected prop 'buttonLabel'");
+    		}
+
+    		if (/*direction*/ ctx[4] === undefined && !('direction' in props)) {
+    			console.warn("<DialogCard> was created without expected prop 'direction'");
     		}
     	}
 
@@ -17549,45 +17303,91 @@
     	set direction(value) {
     		throw new Error("<DialogCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get dialogLabel() {
+    		throw new Error("<DialogCard>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set dialogLabel(value) {
+    		throw new Error("<DialogCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get href() {
+    		throw new Error("<DialogCard>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set href(value) {
+    		throw new Error("<DialogCard>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\Minacu\Cards.svelte generated by Svelte v3.46.6 */
     const file$7 = "src\\Minacu\\Cards.svelte";
 
-    // (92:6) <Actions>
+    // (70:2) <DialogCard      src={"img/minacu-court.png"}      title={"Le infinite battaglie legali"}      subtitle={"Come le vittime hanno cercato giustizia contro i danni della miniera"}      buttonLabel={"Scopri di più"}      direction={"left-card"}      dialogLabel={"Approfondisci l'inchiesta"}      href={"https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L"}    >
     function create_default_slot_1(ctx) {
-    	let custombutton;
-    	let current;
-
-    	custombutton = new CustomButton({
-    			props: {
-    				direction: "right-button",
-    				label: "Approfondisci l'inchiesta",
-    				href: "https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L"
-    			},
-    			$$inline: true
-    		});
+    	let div;
+    	let t0;
+    	let span0;
+    	let t2;
+    	let span1;
+    	let t4;
+    	let br0;
+    	let br1;
+    	let t5;
+    	let span2;
+    	let t7;
+    	let span3;
+    	let t9;
 
     	const block = {
     		c: function create() {
-    			create_component(custombutton.$$.fragment);
+    			div = element("div");
+    			t0 = text("Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore politico,\r\n      scegliendo sindaci, consiglieri e sacerdoti schierati a ");
+    			span0 = element("span");
+    			span0.textContent = "difesa dell'amianto";
+    			t2 = text(". Denigrare pubblicamente SAMA può essere\r\n      considerato tabù da alcuni residenti, infatti, in migliaia hanno tranquillamente firmato\r\n      ");
+    			span1 = element("span");
+    			span1.textContent = "accordi";
+    			t4 = text("\r\n      con la compagnia per ottenere un risarcimento sui danni sanitari.\r\n      ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t5 = text("\r\n      La causa in corso è portata avanti dalla ");
+    			span2 = element("span");
+    			span2.textContent = "ABREA";
+    			t7 = text(", associazione brasiliana a difesa delle vittime di amianto, fondata da\r\n      Fernanda Giannasi nel 1995. L'ultima sentenza del tribunale, nel Novembre del 2021, ha ordinato alla compagnia di pagare le\r\n      ");
+    			span3 = element("span");
+    			span3.textContent = "spese mediche";
+    			t9 = text(" per i prossimi 30 anni a tutti i lavoratori che abbiano manifestato problemi di salute \"associabili all'amianto\".");
+    			attr_dev(span0, "class", "highlight");
+    			add_location(span0, file$7, 80, 62, 4572);
+    			attr_dev(span1, "class", "highlight");
+    			add_location(span1, file$7, 82, 6, 4767);
+    			add_location(br0, file$7, 84, 6, 4886);
+    			add_location(br1, file$7, 84, 12, 4892);
+    			attr_dev(span2, "class", "highlight");
+    			add_location(span2, file$7, 85, 47, 4947);
+    			attr_dev(span3, "class", "highlight");
+    			add_location(span3, file$7, 87, 6, 5193);
+    			add_location(div, file$7, 78, 4, 4341);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(custombutton, target, anchor);
-    			current = true;
-    		},
-    		p: noop,
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(custombutton.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(custombutton.$$.fragment, local);
-    			current = false;
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t0);
+    			append_dev(div, span0);
+    			append_dev(div, t2);
+    			append_dev(div, span1);
+    			append_dev(div, t4);
+    			append_dev(div, br0);
+    			append_dev(div, br1);
+    			append_dev(div, t5);
+    			append_dev(div, span2);
+    			append_dev(div, t7);
+    			append_dev(div, span3);
+    			append_dev(div, t9);
     		},
     		d: function destroy(detaching) {
-    			destroy_component(custombutton, detaching);
+    			if (detaching) detach_dev(div);
     		}
     	};
 
@@ -17595,132 +17395,106 @@
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(92:6) <Actions>",
+    		source: "(70:2) <DialogCard      src={\\\"img/minacu-court.png\\\"}      title={\\\"Le infinite battaglie legali\\\"}      subtitle={\\\"Come le vittime hanno cercato giustizia contro i danni della miniera\\\"}      buttonLabel={\\\"Scopri di più\\\"}      direction={\\\"left-card\\\"}      dialogLabel={\\\"Approfondisci l'inchiesta\\\"}      href={\\\"https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L\\\"}    >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (78:2) <Dialog>
+    // (92:2) <DialogCard      src={"img/minacu-evandra.jpg"}      title={"Evandra Vieira Brito"}      subtitle={"Vedova di un ex dipendente di SAMA"}      buttonLabel={"Leggi la testimonianza"}      direction={"right-card"}      dialogLabel={"Leggi l'articolo"}      href={"https://ejatlas.org/conflict/amianto-mining-in-minacu-goias"}    >
     function create_default_slot(ctx) {
-    	let content;
+    	let div;
     	let t0;
-    	let div1;
-    	let div0;
+    	let br0;
     	let t1;
     	let span0;
     	let t3;
-    	let span1;
-    	let t5;
-    	let br0;
-    	let br1;
-    	let t6;
     	let span2;
+    	let t4;
+    	let span1;
+    	let t6;
+    	let t7;
+    	let br1;
+    	let br2;
     	let t8;
     	let span3;
     	let t10;
+    	let span5;
     	let t11;
-    	let actions;
-    	let current;
-
-    	content = new Content({
-    			props: { id: "large-scroll-content" },
-    			$$inline: true
-    		});
-
-    	actions = new Actions({
-    			props: {
-    				$$slots: { default: [create_default_slot_1] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
+    	let span4;
+    	let t13;
+    	let t14;
 
     	const block = {
     		c: function create() {
-    			create_component(content.$$.fragment);
-    			t0 = space();
-    			div1 = element("div");
-    			div0 = element("div");
-    			t1 = text("Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore\r\n        politico, scegliendo sindaci, consiglieri e sacerdoti schierati a ");
-    			span0 = element("span");
-    			span0.textContent = "difesa dell'amianto";
-    			t3 = text(". Denigrare pubblicamente SAMA può\r\n        essere considerato tabù da alcuni residenti, infatti, in migliaia hanno tranquillamente firmato\r\n        ");
-    			span1 = element("span");
-    			span1.textContent = "accordi";
-    			t5 = text("\r\n        con la compagnia per ottenere un risarcimento sui danni sanitari.\r\n        ");
+    			div = element("div");
+    			t0 = text("Nel cosiddetto \"letto di polvere\", luogo in cui il minerale veniva separato, gli operai, tra i quali molte donne, erano coperti di polvere.");
     			br0 = element("br");
-    			br1 = element("br");
-    			t6 = text("\r\n        La causa in corso è portata avanti dalla ");
+    			t1 = text("\r\n      Ce ne dà una testimonianza chiara ");
+    			span0 = element("span");
+    			span0.textContent = "Evandra Vieira Brito";
+    			t3 = text(", che ha perso il marito (un ex dipendente di SAMA) a causa di un\r\n      cancro nel 2009, ricordando:\r\n      ");
     			span2 = element("span");
-    			span2.textContent = "ABREA";
-    			t8 = text(", associazione brasiliana a difesa delle vittime di amianto, fondata da\r\n        Fernanda Giannasi nel 1995. L'ultima sentenza del tribunale, nel Novembre del 2021, ha ordinato alla compagnia di pagare le\r\n        ");
+    			t4 = text("\"C'erano circa 20 ragazze coperte dalla polvere. Sono ");
+    			span1 = element("span");
+    			span1.textContent = "morte tutte";
+    			t6 = text(" dopo aver vomitato sangue\"");
+    			t7 = text(".\r\n      ");
+    			br1 = element("br");
+    			br2 = element("br");
+    			t8 = text("\r\n      Nonostante questo tipo di testimonianze, gruppi favorevoli alla miniera hanno dichiarato che\r\n      ");
     			span3 = element("span");
-    			span3.textContent = "spese mediche";
-    			t10 = text(" per i prossimi 30 anni a tutti i lavoratori che abbiano manifestato problemi di salute \"associabili all'amianto\".");
-    			t11 = space();
-    			create_component(actions.$$.fragment);
+    			span3.textContent = "\"il modo in cui viene estratto l'amianto a Minaçu non è dannoso per la salute\"";
+    			t10 = text(" e che\r\n      ");
+    			span5 = element("span");
+    			t11 = text("\"l'azienda rispetta tutte le leggi relative alla ");
+    			span4 = element("span");
+    			span4.textContent = "salute sul lavoro";
+    			t13 = text("\"");
+    			t14 = text(". Affermano inoltre che le\r\n      persone che si ammalano in miniera in questo momento è perché si sono ammalate a causa del lavoro svolto precedentemente presso un'altra miniera e sono\r\n      successivamente emigrate per lavoro a Cana Brava.");
+    			add_location(br0, file$7, 101, 145, 5871);
     			attr_dev(span0, "class", "highlight");
-    			add_location(span0, file$7, 82, 74, 4565);
+    			add_location(span0, file$7, 102, 40, 5919);
     			attr_dev(span1, "class", "highlight");
-    			add_location(span1, file$7, 84, 8, 4764);
-    			add_location(br0, file$7, 86, 8, 4887);
-    			add_location(br1, file$7, 86, 14, 4893);
-    			attr_dev(span2, "class", "highlight");
-    			add_location(span2, file$7, 87, 49, 4950);
-    			attr_dev(span3, "class", "highlight");
-    			add_location(span3, file$7, 89, 8, 5200);
-    			add_location(div0, file$7, 80, 6, 4330);
-    			attr_dev(div1, "class", "mdc-typography--body1 hidden right-align flex-column-2");
-    			add_location(div1, file$7, 79, 4, 4254);
+    			add_location(span1, file$7, 104, 81, 6154);
+    			attr_dev(span2, "class", "italic");
+    			add_location(span2, file$7, 104, 6, 6079);
+    			add_location(br1, file$7, 105, 6, 6239);
+    			add_location(br2, file$7, 105, 12, 6245);
+    			attr_dev(span3, "class", "italic");
+    			add_location(span3, file$7, 107, 6, 6359);
+    			attr_dev(span4, "class", "highlight");
+    			add_location(span4, file$7, 108, 76, 6549);
+    			attr_dev(span5, "class", "italic");
+    			add_location(span5, file$7, 108, 6, 6479);
+    			add_location(div, file$7, 100, 4, 5719);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(content, target, anchor);
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, div0);
-    			append_dev(div0, t1);
-    			append_dev(div0, span0);
-    			append_dev(div0, t3);
-    			append_dev(div0, span1);
-    			append_dev(div0, t5);
-    			append_dev(div0, br0);
-    			append_dev(div0, br1);
-    			append_dev(div0, t6);
-    			append_dev(div0, span2);
-    			append_dev(div0, t8);
-    			append_dev(div0, span3);
-    			append_dev(div0, t10);
-    			append_dev(div1, t11);
-    			mount_component(actions, div1, null);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const actions_changes = {};
-
-    			if (dirty & /*$$scope*/ 4) {
-    				actions_changes.$$scope = { dirty, ctx };
-    			}
-
-    			actions.$set(actions_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(content.$$.fragment, local);
-    			transition_in(actions.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(content.$$.fragment, local);
-    			transition_out(actions.$$.fragment, local);
-    			current = false;
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t0);
+    			append_dev(div, br0);
+    			append_dev(div, t1);
+    			append_dev(div, span0);
+    			append_dev(div, t3);
+    			append_dev(div, span2);
+    			append_dev(span2, t4);
+    			append_dev(span2, span1);
+    			append_dev(span2, t6);
+    			append_dev(div, t7);
+    			append_dev(div, br1);
+    			append_dev(div, br2);
+    			append_dev(div, t8);
+    			append_dev(div, span3);
+    			append_dev(div, t10);
+    			append_dev(div, span5);
+    			append_dev(span5, t11);
+    			append_dev(span5, span4);
+    			append_dev(span5, t13);
+    			append_dev(div, t14);
     		},
     		d: function destroy(detaching) {
-    			destroy_component(content, detaching);
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(div1);
-    			destroy_component(actions);
+    			if (detaching) detach_dev(div);
     		}
     	};
 
@@ -17728,7 +17502,7 @@
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(78:2) <Dialog>",
+    		source: "(92:2) <DialogCard      src={\\\"img/minacu-evandra.jpg\\\"}      title={\\\"Evandra Vieira Brito\\\"}      subtitle={\\\"Vedova di un ex dipendente di SAMA\\\"}      buttonLabel={\\\"Leggi la testimonianza\\\"}      direction={\\\"right-card\\\"}      dialogLabel={\\\"Leggi l'articolo\\\"}      href={\\\"https://ejatlas.org/conflict/amianto-mining-in-minacu-goias\\\"}    >",
     		ctx
     	});
 
@@ -17787,9 +17561,9 @@
     	let contentcard1;
     	let t32;
     	let div7;
-    	let dialogcard;
+    	let dialogcard0;
     	let t33;
-    	let dialog;
+    	let dialogcard1;
     	let current;
 
     	contentcard0 = new ContentCard({
@@ -17834,19 +17608,30 @@
     			$$inline: true
     		});
 
-    	dialogcard = new DialogCard({
+    	dialogcard0 = new DialogCard({
     			props: {
     				src: "img/minacu-court.png",
     				title: "Le infinite battaglie legali",
     				subtitle: "Come le vittime hanno cercato giustizia contro i danni della miniera",
     				buttonLabel: "Scopri di più",
-    				direction: "left-card"
+    				direction: "left-card",
+    				dialogLabel: "Approfondisci l'inchiesta",
+    				href: "https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L",
+    				$$slots: { default: [create_default_slot_1] },
+    				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	dialog = new Dialog({
+    	dialogcard1 = new DialogCard({
     			props: {
+    				src: "img/minacu-evandra.jpg",
+    				title: "Evandra Vieira Brito",
+    				subtitle: "Vedova di un ex dipendente di SAMA",
+    				buttonLabel: "Leggi la testimonianza",
+    				direction: "right-card",
+    				dialogLabel: "Leggi l'articolo",
+    				href: "https://ejatlas.org/conflict/amianto-mining-in-minacu-goias",
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
@@ -17915,9 +17700,9 @@
     			create_component(contentcard1.$$.fragment);
     			t32 = space();
     			div7 = element("div");
-    			create_component(dialogcard.$$.fragment);
+    			create_component(dialogcard0.$$.fragment);
     			t33 = space();
-    			create_component(dialog.$$.fragment);
+    			create_component(dialogcard1.$$.fragment);
     			attr_dev(div0, "class", "mdc-typography--headline3 uppercase");
     			set_style(div0, "margin-top", "12vw");
     			add_location(div0, file$7, 11, 0, 386);
@@ -17958,7 +17743,7 @@
     			add_location(div5, file$7, 42, 2, 2205);
     			attr_dev(div6, "class", "content svelte-lrh810");
     			add_location(div6, file$7, 41, 0, 2180);
-    			attr_dev(div7, "class", "flex-row-4");
+    			attr_dev(div7, "class", "flex-column-4");
     			set_style(div7, "margin-top", "4vw");
     			add_location(div7, file$7, 68, 0, 3892);
     		},
@@ -18017,19 +17802,26 @@
     			mount_component(contentcard1, div6, null);
     			insert_dev(target, t32, anchor);
     			insert_dev(target, div7, anchor);
-    			mount_component(dialogcard, div7, null);
+    			mount_component(dialogcard0, div7, null);
     			append_dev(div7, t33);
-    			mount_component(dialog, div7, null);
+    			mount_component(dialogcard1, div7, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			const dialog_changes = {};
+    			const dialogcard0_changes = {};
 
     			if (dirty & /*$$scope*/ 4) {
-    				dialog_changes.$$scope = { dirty, ctx };
+    				dialogcard0_changes.$$scope = { dirty, ctx };
     			}
 
-    			dialog.$set(dialog_changes);
+    			dialogcard0.$set(dialogcard0_changes);
+    			const dialogcard1_changes = {};
+
+    			if (dirty & /*$$scope*/ 4) {
+    				dialogcard1_changes.$$scope = { dirty, ctx };
+    			}
+
+    			dialogcard1.$set(dialogcard1_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -18037,8 +17829,8 @@
     			transition_in(custombutton0.$$.fragment, local);
     			transition_in(custombutton1.$$.fragment, local);
     			transition_in(contentcard1.$$.fragment, local);
-    			transition_in(dialogcard.$$.fragment, local);
-    			transition_in(dialog.$$.fragment, local);
+    			transition_in(dialogcard0.$$.fragment, local);
+    			transition_in(dialogcard1.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -18046,8 +17838,8 @@
     			transition_out(custombutton0.$$.fragment, local);
     			transition_out(custombutton1.$$.fragment, local);
     			transition_out(contentcard1.$$.fragment, local);
-    			transition_out(dialogcard.$$.fragment, local);
-    			transition_out(dialog.$$.fragment, local);
+    			transition_out(dialogcard0.$$.fragment, local);
+    			transition_out(dialogcard1.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -18062,8 +17854,8 @@
     			destroy_component(contentcard1);
     			if (detaching) detach_dev(t32);
     			if (detaching) detach_dev(div7);
-    			destroy_component(dialogcard);
-    			destroy_component(dialog);
+    			destroy_component(dialogcard0);
+    			destroy_component(dialogcard1);
     		}
     	};
 

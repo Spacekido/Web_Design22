@@ -7,7 +7,9 @@
     title,
     subtitle,
     buttonLabel,
-    direction = "";
+    direction,
+    dialogLabel = "",
+    href = "";
 
   var open = false;
 </script>
@@ -21,45 +23,33 @@
     </Content>
     <Actions fullBleed style="min-height: 0;">
       <Button class="dialog-card-button">
-        <!-- /* TODO cambiare icona per card mobile al posto della freccia */ -->
-        {#if direction === "left-card"}
-          <Label class="mdc-typography--body2 bold">{buttonLabel}</Label>
-          <i class="material-icons" aria-hidden="true">arrow_forward</i>
-        {:else if direction === "right-card"}
-          <i class="material-icons" aria-hidden="true">arrow_back</i>
-          <Label class="mdc-typography--body2 bold">{buttonLabel}</Label>
-        {/if}
+        <Label class="mdc-typography--body2 bold">{buttonLabel}</Label>
+        <i class="material-icons" aria-hidden="true">open_in_new</i>
       </Button>
     </Actions>
   </PrimaryAction>
 </Card>
 
-<Dialog bind:open aria-labelledby="large-scroll-title" aria-describedby="large-scroll-content" class="dialog" surface$style="width: 85vw; height: 180vw">
-  <Title class="mdc-typography--headline3">{title}</Title>
-  <Content class="mdc-typography--body1 flex-column-2">
-    <div>
-      Quando l'industria dell'amianto era forte a Minaçu, SAMA ha finanziato eventi culturali, religiosi e sportivi, ed è stato un importante donatore politico,
-      scegliendo sindaci, consiglieri e sacerdoti schierati a <span class="highlight">difesa dell'amianto</span>. Denigrare pubblicamente SAMA può essere
-      considerato tabù da alcuni residenti, infatti, in migliaia hanno tranquillamente firmato
-      <span class="highlight">accordi</span>
-      con la compagnia per ottenere un risarcimento sui danni sanitari.
-      <br /><br />
-      La causa in corso è portata avanti dalla <span class="highlight">ABREA</span>, associazione brasiliana a difesa delle vittime di amianto, fondata da
-      Fernanda Giannasi nel 1995. L'ultima sentenza del tribunale, nel Novembre del 2021, ha ordinato alla compagnia di pagare le
-      <span class="highlight">spese mediche</span> per i prossimi 30 anni a tutti i lavoratori che abbiano manifestato problemi di salute "associabili all'amianto".
-    </div>
-    <Actions class="flex-row-2">
+<!-- TODO il dialog si apre con focus sulla fine, magari metterlo all'inizio -->
+<Dialog
+  bind:open
+  aria-labelledby="large-scroll-title"
+  aria-describedby="large-scroll-content"
+  class="dialog"
+  surface$style="max-height: 100%;
+  min-height: 100%; max-width:85vw; min-width:85vw; padding: 4vw;"
+>
+  <div class="mdc-typography--headline3">{title}</div>
+  <Content class="mdc-typography--body1 flex-column-2" style="padding: 4vw 0 0 0;">
+    <!-- contiene l'elemento di testo passato dal padre -->
+    <slot />
+    <Actions class="dialog-actions">
       <CustomButton direction={"right-button"} label={"Chiudi"} />
-      <CustomButton
-        direction={"right-button"}
-        label={"Approfondisci l'inchiesta"}
-        href={"https://www.reuters.com/article/brazil-mining-environment-asbestos-idINL8N2T241L"}
-      />
+      <CustomButton direction={"right-button"} label={dialogLabel} {href} />
     </Actions>
   </Content>
 </Dialog>
 
-<!-- TODO sistemare dimensioni statiche nel dialog -->
 <style>
   img {
     max-height: 14vw;
@@ -68,17 +58,19 @@
     font-size: 1.5vw;
   }
   :global(.dialog-card) {
-    max-width: 25vw;
-    height: 100%;
+    display: none;
   }
-  :global(.left-card) {
+  :global(.dialog) {
+    display: none;
+  }
+  /* :global(.left-card) {
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
   }
   :global(.right-card) {
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
-  }
+  } */
   :global(.dialog-card-button) {
     padding: 0 1.6vw 0.8vw 1.6vw;
   }
@@ -93,12 +85,20 @@
     :global(.dialog-card) {
       max-width: 85vw;
       height: 100%;
+      display: flex;
     }
     :global(.dialog-card-button) {
       padding: 0 4vw 3vw 4vw;
     }
     :global(.dialog) {
       text-align: start;
+      padding: 14vw 4vw 4vw 4vw;
+    }
+    :global(.mdc-dialog--open) {
+      display: flex;
+    }
+    :global(.dialog-actions) {
+      padding: 0;
     }
   }
 </style>
