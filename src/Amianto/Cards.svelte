@@ -7,7 +7,7 @@
   <div class="mdc-typography--body1" style="padding-top: 1vw; padding-bottom: 1.8vw;">
     Lasciati guidare nel viaggio attraverso i quattro <span class="highlight">gironi</span> infernali.
     <br />Le <span class="highlight">città</span> che incontrerai ti mostreranno quanta influenza abbia avuto l'amianto in tutto il mondo.
-    <br />Ad accompagnarti troverai gli <span class="highlight">uomini</span> che di più hanno sofferto, e potrai ascoltare le loro storie.
+    <br />Ad accompagnarti troverai le <span class="highlight">persone</span> che di più hanno sofferto, e potrai ascoltare le loro storie.
   </div>
 </div>
 <div id="link-cards" style="">

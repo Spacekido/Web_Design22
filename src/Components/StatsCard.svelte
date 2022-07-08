@@ -15,6 +15,12 @@
   :global(.stats-card) {
     width: 14vw;
     padding: 1vw;
-    border-radius: 3vw !important;
+    border-radius: 4vw !important;
+  }
+  @media screen and (max-width: 450px) {
+    :global(.stats-card) {
+      width: 60vw;
+      padding: 6vw;
+    }
   }
 </style>

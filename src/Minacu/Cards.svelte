@@ -2,11 +2,6 @@
   import CustomButton from "../Components/CustomButton.svelte";
   import ContentCard from "../Components/ContentCard.svelte";
   import DialogCard from "../Components/DialogCard.svelte";
-  import Dialog, { Title, Content, Actions } from "@smui/dialog";
-  import Button, { Label } from "@smui/button";
-
-  var dialog1 = false,
-    dialog2 = false;
 </script>
 
 <div class="mdc-typography--headline3 uppercase" style="margin-top: 12vw;">Come si sono schierati i cittadini con ideologie differenti?</div>

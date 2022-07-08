@@ -45,7 +45,9 @@
     <slot />
     <Actions class="dialog-actions">
       <CustomButton direction={"right-button"} label={"Chiudi"} />
-      <CustomButton direction={"right-button"} label={dialogLabel} {href} />
+      {#if dialogLabel !== ""}
+        <CustomButton direction={"right-button"} label={dialogLabel} {href} />
+      {/if}
     </Actions>
   </Content>
 </Dialog>
@@ -63,14 +65,6 @@
   :global(.dialog) {
     display: none;
   }
-  /* :global(.left-card) {
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
-  :global(.right-card) {
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-  } */
   :global(.dialog-card-button) {
     padding: 0 1.6vw 0.8vw 1.6vw;
   }

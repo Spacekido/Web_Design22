@@ -67,7 +67,6 @@
       <MinacuCards />
     </div>
   </div>
-  <!-- 
 
   <div id="section2-3">
     <img class="background-lg" src="img/background-2-3.png" alt="" />
@@ -163,7 +162,7 @@
     <div id="content6-2">
       <BeiguaCards />
     </div>
-  </div> -->
+  </div>
 
   <!-- <Footer /> -->
 </main>
@@ -255,6 +254,8 @@
       position: absolute;
       z-index: 2;
     }
+
+    /* TODO da rimuovere, servono a impaginare senza immagine di sfondo */
     #section1-1 {
       margin-top: 50vw;
     }
@@ -271,8 +272,43 @@
       margin-top: 380vw;
     }
     #section2-3 {
+      margin-top: 250vw;
+    }
+    #section3-1 {
       margin-top: 500vw;
     }
+    #section3-2 {
+      margin-top: 380vw;
+    }
+    #section3-3 {
+      margin-top: 250vw;
+    }
+    #section4-1 {
+      margin-top: 150vw;
+    }
+    #section4-2 {
+      margin-top: 450vw;
+    }
+    #section4-3 {
+      margin-top: 250vw;
+    }
+    #section5-1 {
+      margin-top: 200vw;
+    }
+    #section5-2 {
+      margin-top: 500vw;
+    }
+    #section5-3 {
+      margin-top: 400vw;
+    }
+    #section6-1 {
+      margin-top: 150vw;
+    }
+    #section6-2 {
+      margin-top: 470vw;
+    }
+
+    /* TODO fine della parte da rimuovere */
     #content1-1 {
       top: 4vw;
       gap: 4vw;

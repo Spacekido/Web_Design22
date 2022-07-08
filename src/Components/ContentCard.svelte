@@ -58,7 +58,6 @@
     img {
       max-height: 70vw;
     }
-    /* cambiare icona per card mobile al posto della freccia */
     i {
       font-size: 8vw;
     }

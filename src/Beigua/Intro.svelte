@@ -2,7 +2,7 @@
   import CustomButton from "../Components/CustomButton.svelte";
 </script>
 
-<div class="mdc-typography--headline2 uppercase">Parco del Beigua, Liguria</div>
+<div class="mdc-typography--headline1 uppercase">Parco del Beigua, Liguria</div>
 
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">Potrebbe succedere anche a noi?</div>
@@ -26,8 +26,8 @@
   <div class="mdc-typography--headline4 uppercase primary">Cosa sono le pietre verdi?</div>
   <div class="mdc-typography--body1">
     Le <span class="italic">"Pietre verdi"</span> rappresentano i frammenti di un antico fondale oceanico successivamente compresso ed emerso in seguito ad
-    imponenti movimenti della crosta terreste. Tali rocce spesso contengono <span class="highlight">fibre di amianto</span> e, pertanto, è
-    importante conoscere dove possono essere trovate, soprattutto in tema di gestione ed utilizzo delle terre e rocce da scavo.
+    imponenti movimenti della crosta terreste. Tali rocce spesso contengono <span class="highlight">fibre di amianto</span> e, pertanto, è importante conoscere
+    dove possono essere trovate, soprattutto in tema di gestione ed utilizzo delle terre e rocce da scavo.
     <br /><br />
     La <span class="highlight">cartografia</span> sotto riportata raffigura i territori in cui, in relazione alle rocce riconosciute in affioramento o
     subaffioramento, potrebbero rinvenirsi concentrazioni di <span class="highlight">minerali asbestiformi</span> con alte probabilità.

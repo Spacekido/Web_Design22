@@ -2,7 +2,7 @@
   import CustomButton from "../Components/CustomButton.svelte";
 </script>
 
-<div class="mdc-typography--headline2 uppercase">Asbest, Russia</div>
+<div class="mdc-typography--headline1 uppercase">Asbest, Russia</div>
 <div class="left">
   <div class="mdc-typography--headline4 uppercase">Storia del passato</div>
   <div class="mdc-typography--body1">
