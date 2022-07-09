@@ -164,7 +164,7 @@
     </div>
   </div>
 
-  <!-- <Footer /> -->
+  <Footer />
 </main>
 
 <style>
@@ -270,6 +270,7 @@
     }
     #section2-2 {
       margin-top: 380vw;
+      z-index: 3; /*per fare in modo che il dialog rimanga sopra le stats*/
     }
     #section2-3 {
       margin-top: 250vw;
@@ -279,6 +280,7 @@
     }
     #section3-2 {
       margin-top: 380vw;
+      z-index: 3; /*per fare in modo che il dialog rimanga sopra le stats*/
     }
     #section3-3 {
       margin-top: 250vw;
@@ -288,6 +290,7 @@
     }
     #section4-2 {
       margin-top: 450vw;
+      z-index: 3; /*per fare in modo che il dialog rimanga sopra le stats*/
     }
     #section4-3 {
       margin-top: 250vw;
@@ -297,6 +300,7 @@
     }
     #section5-2 {
       margin-top: 500vw;
+      z-index: 3; /*per fare in modo che il dialog rimanga sopra le stats*/
     }
     #section5-3 {
       margin-top: 400vw;
@@ -306,6 +310,7 @@
     }
     #section6-2 {
       margin-top: 470vw;
+      height: 1100px; /*per mettere il footer in fondo alla pagina*/
     }
 
     /* TODO fine della parte da rimuovere */
