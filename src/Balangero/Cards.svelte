@@ -11,7 +11,7 @@
     src={"img/balangero-berrino.jpg"}
     title={"Dott. Franco Berrino"}
     subtitle={"Laureatosi in medicina all'Università di Torino nel 1969 e specializzatosi in anatomia patologica, si è poi dedicato all'epidemiologia dei tumori."}
-    buttonLabel={"Scopri la sua testimonianza"}
+    buttonLabel={"Leggi la testimonianza"}
     direction={"left-card"}
   />
 
@@ -71,7 +71,7 @@
     src={"img/balangero-berrino.jpg"}
     title={"Dott. Franco Berrino"}
     subtitle={"Laureatosi in medicina all'Università di Torino nel 1969 e specializzatosi in anatomia patologica, si è poi dedicato all'epidemiologia dei tumori."}
-    buttonLabel={"Scopri la sua testimonianza"}
+    buttonLabel={"Leggi la testimonianza"}
     direction={"left-card"}
     dialogLabel={"Leggi l'intervista"}
     href={"https://www.corriere.it/cook/news/21_maggio_10/franco-berrino-vivo-solitudine-la-morte-mia-moglie-jo-b48c0c7c-a78d-11eb-b37e-07dee681b819.shtml"}
