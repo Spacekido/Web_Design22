@@ -29,7 +29,7 @@
   :global(.link-card-content) {
     padding: 1vw;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     img {
       max-height: 50vw;
     }

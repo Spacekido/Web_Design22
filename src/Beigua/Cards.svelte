@@ -119,8 +119,8 @@
   </DialogCard>
 </div>
 
-<div>
-  <div class="mdc-typography--headline3 uppercase" style="margin-top: 10vw;">E noi, vogliamo dare vita a questo inferno?</div>
+<div class="logo">
+  <div class="mdc-typography--headline3 uppercase">E noi, vogliamo dare vita a questo inferno?</div>
   <img src="img/logo.png" alt="Logo" />
 </div>
 
@@ -135,14 +135,23 @@
     gap: 4vw;
     margin-top: 4vw;
   }
-  @media screen and (max-width: 450px) {
+  .logo {
+    margin-top: 10vw;
+  }
+  @media screen and (max-width: 600px) {
     .content {
       display: none;
     }
-
     #content-beigua1,
     #content-beigua2 {
       display: none;
+    }
+    img {
+      margin-top: 8vw;
+      width: 40vw;
+    }
+    .logo {
+      margin-top: 20vw;
     }
   }
 </style>

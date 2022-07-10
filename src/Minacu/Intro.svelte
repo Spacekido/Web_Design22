@@ -41,7 +41,7 @@
     text-align: right;
     margin: 1vw 2vw 0 18vw;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     .left {
       margin: 8vw 8vw 0 0;
     }

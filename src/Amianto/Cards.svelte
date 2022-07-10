@@ -46,7 +46,7 @@
     flex-direction: row;
     gap: 2vw;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     #link-cards {
       flex-direction: column;
       gap: 4vw;

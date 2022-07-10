@@ -27,7 +27,7 @@
     border-bottom-left-radius: 30px;
     height: 3vw;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     :global(.left-button) {
       height: 10vw;
     }

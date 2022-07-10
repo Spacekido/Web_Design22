@@ -20,8 +20,8 @@
     produzione di amianto. Non tutte le nazioni però hanno bandito questo materiale: Russia, Cina, Brasile e Canada sono gli attuali maggiori
     <span class="highlight">produttori</span> di amianto.
     <br /><br />
-    L'estrazione di amianto rimane ancora oggi uno dei maggiori argomenti di discussione sul campo legislativo e su quello etico. Attraverso questo viaggio
-    metaforico nell'<span class="highlight">Inferno</span>, avrai modo di scoprire l'impatto che questo minerale ha avuto in tutto il mondo, dal suo controverso
+    L'estrazione di amianto rimane ancora oggi uno dei maggiori argomenti di discussione sul campo legislativo e su quello etico. Attraverso questo viaggio metaforico
+    nell'<span class="highlight">Inferno</span>, avrai modo di scoprire l'impatto che questo minerale ha avuto in tutto il mondo, dal suo controverso
     <span class="highlight">passato</span> alle sue conseguenze letali sul <span class="highlight">presente</span>.
   </div>
 </div>
@@ -35,7 +35,7 @@
     text-align: right;
     margin-left: 10%;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     .right {
       margin-top: 8vw;
     }

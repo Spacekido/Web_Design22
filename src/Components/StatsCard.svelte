@@ -17,7 +17,7 @@
     padding: 1vw;
     border-radius: 4vw !important;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     :global(.stats-card) {
       width: 60vw;
       padding: 6vw;

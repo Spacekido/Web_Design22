@@ -25,7 +25,7 @@
     margin-right: 0.6vw !important;
     font-size: 1.4vw !important;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     :global(.custom-FABExtended) {
       height: 14vw !important;
       padding-left: 3vw !important;

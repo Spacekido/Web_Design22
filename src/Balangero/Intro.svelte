@@ -40,7 +40,7 @@
     text-align: right;
     margin: 23vw 0 0 26vw;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     .left {
       margin: 8vw 8vw 0 0;
     }

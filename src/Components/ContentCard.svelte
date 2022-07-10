@@ -54,7 +54,7 @@
     padding: 0 1.6vw 0.8vw 1.6vw;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     img {
       max-height: 70vw;
     }

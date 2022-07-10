@@ -115,7 +115,7 @@
     gap: 4vw;
     margin-top: 4vw;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     .content {
       display: none;
     }

@@ -35,7 +35,7 @@
 
   <div id="section1-2">
     <img class="background-lg" src="img/background-1-2.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-1-2-sm.png" alt="" />
     <div id="content1-2">
       <IntroIntro />
     </div>
@@ -43,7 +43,7 @@
 
   <div id="section1-3">
     <img class="background-lg" src="img/background-1-3.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-1-3-sm.png" alt="" />
     <div id="content1-3">
       <IntroCards />
       <div style="margin-top: 2vw;">
@@ -54,7 +54,7 @@
 
   <div id="section2-1">
     <img class="background-lg" src="img/background-2-1.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-2-1-sm.png" alt="" />
     <div id="content2-1">
       <MinacuIntro />
     </div>
@@ -62,7 +62,7 @@
 
   <div id="section2-2">
     <img class="background-lg" src="img/background-2-2.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-2-2-sm.png" alt="" />
     <div id="content2-2">
       <MinacuCards />
     </div>
@@ -70,7 +70,7 @@
 
   <div id="section2-3">
     <img class="background-lg" src="img/background-2-3.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-2-3-sm.png" alt="" />
     <div id="content2-3">
       <MinacuStats />
     </div>
@@ -78,7 +78,7 @@
 
   <div id="section3-1">
     <img class="background-lg" src="img/background-3-1.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-3-1-sm.png" alt="" />
     <div id="content3-1">
       <BalangeroIntro />
     </div>
@@ -86,7 +86,7 @@
 
   <div id="section3-2">
     <img class="background-lg" src="img/background-3-2.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-3-2-sm.png" alt="" />
     <div id="content3-2">
       <BalangeroCards />
     </div>
@@ -94,7 +94,7 @@
 
   <div id="section3-3">
     <img class="background-lg" src="img/background-3-3.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-3-3-sm.png" alt="" />
     <div id="content3-3">
       <BalangeroStats />
     </div>
@@ -102,7 +102,7 @@
 
   <div id="section4-1">
     <img class="background-lg" src="img/background-4-1.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-4-1-sm.png" alt="" />
     <div id="content4-1">
       <LibbyIntro />
     </div>
@@ -110,7 +110,7 @@
 
   <div id="section4-2">
     <img class="background-lg" src="img/background-4-2.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-4-2-sm.png" alt="" />
     <div id="content4-2">
       <LibbyCards />
     </div>
@@ -118,7 +118,7 @@
 
   <div id="section4-3">
     <img class="background-lg" src="img/background-4-3.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-4-3-sm.png" alt="" />
     <div id="content4-3">
       <LibbyStats />
     </div>
@@ -126,7 +126,7 @@
 
   <div id="section5-1">
     <img class="background-lg" src="img/background-5-1.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-5-1-sm.png" alt="" />
     <div id="content5-1">
       <AsbestIntro />
     </div>
@@ -134,7 +134,7 @@
 
   <div id="section5-2">
     <img class="background-lg" src="img/background-5-2.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-5-2-sm.png" alt="" />
     <div id="content5-2">
       <AsbestCards />
     </div>
@@ -142,7 +142,7 @@
 
   <div id="section5-3">
     <img class="background-lg" src="img/background-5-3.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-5-3-sm.png" alt="" />
     <div id="content5-3">
       <AsbestStats />
     </div>
@@ -150,7 +150,7 @@
 
   <div id="section6-1">
     <img class="background-lg" src="img/background-6-1.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-6-1-sm.png" alt="" />
     <div id="content6-1">
       <BeiguaIntro />
     </div>
@@ -158,7 +158,7 @@
 
   <div id="section6-2">
     <img class="background-lg" src="img/background-6-2.png" alt="" />
-    <img class="background-sm" src="img/background-1-1-sm.png" alt="" />
+    <img class="background-sm" src="img/background-6-2-sm.png" alt="" />
     <div id="content6-2">
       <BeiguaCards />
     </div>
@@ -232,7 +232,7 @@
     margin-top: 30vw;
     padding-top: 15vw;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     .background-lg {
       z-index: 1;
       width: 100%;
@@ -254,68 +254,17 @@
       position: absolute;
       z-index: 2;
     }
-
-    /* TODO da rimuovere, servono a impaginare senza immagine di sfondo */
-    #section1-1 {
-      margin-top: 50vw;
-    }
-    #section1-2 {
-      margin-top: 100vw;
-    }
-    #section1-3 {
-      margin-top: 300vw;
-    }
-    #section2-1 {
-      margin-top: 470vw;
-    }
-    #section2-2 {
-      margin-top: 380vw;
-      z-index: 3; /*per fare in modo che il dialog rimanga sopra le stats*/
-    }
-    #section2-3 {
-      margin-top: 250vw;
-    }
-    #section3-1 {
-      margin-top: 500vw;
-    }
-    #section3-2 {
-      margin-top: 380vw;
-      z-index: 3; /*per fare in modo che il dialog rimanga sopra le stats*/
-    }
-    #section3-3 {
-      margin-top: 250vw;
-    }
-    #section4-1 {
-      margin-top: 150vw;
-    }
-    #section4-2 {
-      margin-top: 450vw;
-      z-index: 3; /*per fare in modo che il dialog rimanga sopra le stats*/
-    }
-    #section4-3 {
-      margin-top: 250vw;
-    }
-    #section5-1 {
-      margin-top: 200vw;
-    }
+    #section2-2,
+    #section3-2,
+    #section4-2,
     #section5-2 {
-      margin-top: 500vw;
       z-index: 3; /*per fare in modo che il dialog rimanga sopra le stats*/
-    }
-    #section5-3 {
-      margin-top: 400vw;
-    }
-    #section6-1 {
-      margin-top: 150vw;
     }
     #section6-2 {
-      margin-top: 470vw;
       height: 1100px; /*per mettere il footer in fondo alla pagina*/
     }
-
-    /* TODO fine della parte da rimuovere */
     #content1-1 {
-      top: 4vw;
+      top: 56vw;
       gap: 4vw;
     }
     #content1-2 {
@@ -324,6 +273,30 @@
     }
     #content1-3 {
       padding-top: 6vw;
+    }
+    #content2-1 {
+      margin-top: 40vw;
+      padding-top: 25vw;
+      padding-bottom: 10vw;
+    }
+    #content3-1 {
+      margin-top: 210vw;
+      padding-top: 25vw;
+    }
+    #content3-3 {
+      margin-top: 10vw;
+    }
+    #content4-1 {
+      margin-top: 20vw;
+      padding-top: 25vw;
+    }
+    #content5-1 {
+      margin-top: 60vw;
+      padding-top: 25vw;
+    }
+    #content6-1 {
+      margin-top: 40vw;
+      padding-top: 25vw;
     }
   }
 </style>

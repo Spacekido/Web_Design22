@@ -24,7 +24,7 @@
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content3-1">Balangero</Link></Section>
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content4-1">Libby</Link></Section>
     <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content5-1">Asbest</Link></Section>
-    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#section6-1">Il futuro</Link></Section>
+    <Section class="mdc-typography--headline6" style="justify-content: center;"><Link href="#content6-1">Il futuro</Link></Section>
   </Row>
   <LinearProgress {progress} />
 </TopAppBar>
@@ -33,7 +33,7 @@
   :global(#row) {
     height: 3.5vw;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     :global(#row) {
       height: 10vw;
     }

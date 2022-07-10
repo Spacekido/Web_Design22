@@ -20,7 +20,7 @@
     flex-direction: row;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     .stats-container {
       flex-direction: column;
     }
