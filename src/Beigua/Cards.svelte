@@ -117,11 +117,10 @@
       >.
     </div>
   </DialogCard>
-</div>
-
-<div class="logo">
-  <div class="mdc-typography--headline3 uppercase">E noi, vogliamo dare vita a questo inferno?</div>
-  <img src="img/logo.png" alt="Logo" />
+  <div class="logo">
+    <div class="mdc-typography--headline3 uppercase">E noi, vogliamo dare vita a questo inferno?</div>
+    <img src="img/logo.png" alt="Logo" />
+  </div>
 </div>
 
 <style>

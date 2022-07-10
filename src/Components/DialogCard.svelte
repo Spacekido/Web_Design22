@@ -21,7 +21,7 @@
       <div class="mdc-typography--body2 highlight">{title}</div>
       <div class="mdc-typography--body2">{subtitle}</div>
     </Content>
-    <Actions fullBleed style="min-height: 0;">
+    <Actions fullBleed style="min-height: 0; padding: 0;">
       <Button class="dialog-card-button">
         <Label class="mdc-typography--body2 bold">{buttonLabel}</Label>
         <i class="material-icons" aria-hidden="true">open_in_new</i>

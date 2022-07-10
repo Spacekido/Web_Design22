@@ -260,9 +260,6 @@
     #section5-2 {
       z-index: 3; /*per fare in modo che il dialog rimanga sopra le stats*/
     }
-    #section6-2 {
-      height: 1100px; /*per mettere il footer in fondo alla pagina*/
-    }
     #content1-1 {
       top: 56vw;
       gap: 4vw;
