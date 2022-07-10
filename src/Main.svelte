@@ -265,7 +265,7 @@
       gap: 4vw;
     }
     #content1-2 {
-      padding-top: 8vw;
+      padding-top: 15vw;
       gap: 8vw;
     }
     #content1-3 {
